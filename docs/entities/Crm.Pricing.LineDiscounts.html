@@ -125,47 +125,47 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#description">Description</a></td>
 <td>string (50) <strong>nullable</strong></td>
-<td>The description of the discount that is shown to the operator when they should choose between different discounts[Filter(like)]</td>
+<td>The description of the discount that is shown to the operator when they should choose between different discounts<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></td>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></td>
-<td>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ORD] [Introduced in version 23.1.2.8]</td>
+<td>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.<code>Required</code> <code>Default(&amp;quot;1&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 23.1.2.8</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#discountpercent">DiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>The discount percent that should be applied if all the matching criteria are met.[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>The discount percent that should be applied if all the matching criteria are met.<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Starting date of validity of the discount. NULL means no from date restriction[Filter(eq;ge;le)]</td>
+<td>Starting date of validity of the discount. NULL means no from date restriction<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Line Discount is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.2.5]</td>
+<td>Indicates whether the current Line Discount is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.2.5</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#maxquantity">MaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Apply the discount only if the quantity sold is equal to or less than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
+<td>Apply the discount only if the quantity sold is equal to or less than the specified here.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#minquantity">MinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Apply the discount only if the quantity sold is equal to or more than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</td>
+<td>Apply the discount only if the quantity sold is equal to or more than the specified here.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></td>
 <td><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></td>
-<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.[Required] [Default(3)]</td>
+<td>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.<code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.LineDiscounts.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever[Filter(eq;ge;le)]</td>
+<td>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever<code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +280,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<p>The description of the discount that is shown to the operator when they should choose between different discounts[Filter(like)]</p>
+<p>The description of the discount that is shown to the operator when they should choose between different discounts<code>Filter(like)</code></p>
 <p>Type: <strong>string (50) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -288,7 +288,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>50</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="discountlevel">DiscountLevel</h3>
-<p>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ORD] [Introduced in version 23.1.2.8]</p>
+<p>Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.<code>Required</code> <code>Default(&amp;quot;1&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ORD</code> <code>Introduced in version 23.1.2.8</code></p>
 <p>Type: <strong><a href="Crm.Pricing.LineDiscounts.html#discountlevel">DiscountLevel</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -321,7 +321,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>One</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="discountpercent">DiscountPercent</h3>
-<p>The discount percent that should be applied if all the matching criteria are met.[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>The discount percent that should be applied if all the matching criteria are met.<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -329,14 +329,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of validity of the discount. NULL means no from date restriction[Filter(eq;ge;le)]</p>
+<p>Starting date of validity of the discount. NULL means no from date restriction<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Line Discount is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.2.5]</p>
+<p>Indicates whether the current Line Discount is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 24.1.2.5</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -344,21 +344,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<p>Apply the discount only if the quantity sold is equal to or less than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
+<p>Apply the discount only if the quantity sold is equal to or less than the specified here.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<p>Apply the discount only if the quantity sold is equal to or more than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]</p>
+<p>Apply the discount only if the quantity sold is equal to or more than the specified here.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.[Required] [Default(3)]</p>
+<p>The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.<code>Required</code> <code>Default(3)</code></p>
 <p>Type: <strong><a href="Crm.Pricing.LineDiscounts.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for Priority properties<br>
@@ -398,7 +398,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>3</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever[Filter(eq;ge;le)]</p>
+<p>Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

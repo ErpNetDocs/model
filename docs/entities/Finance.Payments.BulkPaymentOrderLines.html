@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#direction">Direction</a></td>
-<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)]</td>
+<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#duedate">DueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The due date of the payment. NULL means there is no due date[Filter(ge;le)]</td>
+<td>The due date of the payment. NULL means there is no due date<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#installmentnumber">InstallmentNumber</a></td>
@@ -141,12 +141,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#invoiceamount">InvoiceAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></td>
-<td>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency]</td>
+<td>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)<code>Currency: InvoiceAmountCurrency</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#isamountwithvat">IsAmountWithVAT</a></td>
 <td>boolean</td>
-<td>Is_Amount_With_VAT=1 if the requested amount includes VAT[Required] [Default(true)] [Filter(eq)]</td>
+<td>Is_Amount_With_VAT=1 if the requested amount includes VAT<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#notes">Notes</a></td>
@@ -156,22 +156,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refdocumentdate">RefDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the base document. NULL means that it is unknown[Filter(ge;le)]</td>
+<td>The date of the base document. NULL means that it is unknown<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refdocumentno">RefDocumentNo</a></td>
 <td>string (20)</td>
-<td>The number of the document which is the basis for the payment[Required]</td>
+<td>The number of the document which is the basis for the payment<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoiceapplydate">RefInvoiceApplyDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(ge;le)]</td>
+<td>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.[Filter(ge;le)]</td>
+<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Payments.BulkPaymentOrderLines.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>Total amount that should be payed[Currency: TotalAmountCurrency] [Required] [Default(0)]</td>
+<td>Total amount that should be payed<code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -298,7 +298,7 @@ Allowed Values (Finance.Payments.BulkPaymentOrderLinesRepository.BillTo Enum Mem
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)]</p>
+<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Finance.Payments.BulkPaymentOrderLines.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.BulkPaymentOrderLines.md#direction) data attribute<br>
@@ -326,7 +326,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Outgoing</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>The due date of the payment. NULL means there is no due date[Filter(ge;le)]</p>
+<p>The due date of the payment. NULL means there is no due date<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -340,14 +340,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="invoiceamount">InvoiceAmount</h3>
-<p>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)[Currency: InvoiceAmountCurrency]</p>
+<p>The specified invoice amount. (the invoice amount converted to the Total_Amount_Currency_Id must be equal to the Total_Amount)<code>Currency: InvoiceAmountCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isamountwithvat">IsAmountWithVAT</h3>
-<p>Is_Amount_With_VAT=1 if the requested amount includes VAT[Required] [Default(true)] [Filter(eq)]</p>
+<p>Is_Amount_With_VAT=1 if the requested amount includes VAT<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -363,14 +363,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
-<p>The date of the base document. NULL means that it is unknown[Filter(ge;le)]</p>
+<p>The date of the base document. NULL means that it is unknown<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
-<p>The number of the document which is the basis for the payment[Required]</p>
+<p>The number of the document which is the basis for the payment<code>Required</code></p>
 <p>Type: <strong>string (20)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -378,14 +378,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refinvoiceapplydate">RefInvoiceApplyDate</h3>
-<p>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.[Filter(ge;le)]</p>
+<p>The apply date of the related invoice. Not specified when the payment order isn't related to any invoice or the apply date is unknown.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
-<p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.[Filter(ge;le)]</p>
+<p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -400,7 +400,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
-<p>Total amount that should be payed[Currency: TotalAmountCurrency] [Required] [Default(0)]</p>
+<p>Total amount that should be payed<code>Currency: TotalAmountCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

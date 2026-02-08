@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount (14, 2)](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment[Currency: DeferredPayment<br />MinimalAmmount<br />Currency] [Required] 
+| [DeferredPayment<br />MinimalAmmount](Crm.Sales.DocumentTypePaymentOptions.md#deferredpaymentminimalammount) | [Amount (14, 2)](../data-types.md#amount) | The minimal order total amount, which an order must have in order to use deferred payment`Currency: DeferredPayment<br />MinimalAmmount<br />Currency` `Required` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### DeferredPaymentMinimalAmmount
 
-The minimal order total amount, which an order must have in order to use deferred payment[Currency: DeferredPaymentMinimalAmmountCurrency] [Required]
+The minimal order total amount, which an order must have in order to use deferred payment`Currency: DeferredPaymentMinimalAmmountCurrency` `Required`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  

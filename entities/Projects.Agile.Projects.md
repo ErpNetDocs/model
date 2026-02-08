@@ -35,14 +35,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsiderWipLimit](Projects.Agile.Projects.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
-| [Description](Projects.Agile.Projects.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project.[Filter(like)] [Introduced in version 25.1.1.48] 
-| [InProgressWipLimit](Projects.Agile.Projects.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
-| [IsActive](Projects.Agile.Projects.md#isactive) | boolean | Is the project active for new cases?[Required] [Default(true)] [Filter(eq)] 
-| [IsTemplate](Projects.Agile.Projects.md#istemplate) | boolean | Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.[Required] [Default(false)] [Filter(eq)] 
-| [Name](Projects.Agile.Projects.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project[Required] [Filter(like)] 
-| [ReadyWipLimit](Projects.Agile.Projects.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38] 
-| [<s>WipLimit</s>](Projects.Agile.Projects.md#wiplimit) | int32 __nullable__ | **OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state[Obsolete] [Filter(eq)] [Obsoleted in version 25.1.1.38] 
+| [ConsiderWipLimit](Projects.Agile.Projects.md#considerwiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [Description](Projects.Agile.Projects.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project.`Filter(like)` `Introduced in version 25.1.1.48` 
+| [InProgressWipLimit](Projects.Agile.Projects.md#inprogresswiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [IsActive](Projects.Agile.Projects.md#isactive) | boolean | Is the project active for new cases?`Required` `Default(true)` `Filter(eq)` 
+| [IsTemplate](Projects.Agile.Projects.md#istemplate) | boolean | Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.`Required` `Default(false)` `Filter(eq)` 
+| [Name](Projects.Agile.Projects.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project`Required` `Filter(like)` 
+| [ReadyWipLimit](Projects.Agile.Projects.md#readywiplimit) | int32 __nullable__ | When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38` 
+| [<s>WipLimit</s>](Projects.Agile.Projects.md#wiplimit) | int32 __nullable__ | **OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state`Obsolete` `Filter(eq)` `Obsoleted in version 25.1.1.38` 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### ConsiderWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to CONSIDER state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the project.[Filter(like)] [Introduced in version 25.1.1.48]
+Description of the project.`Filter(like)` `Introduced in version 25.1.1.48`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### InProgressWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to IN PROGRESS state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Is the project active for new cases?[Required] [Default(true)] [Filter(eq)]
+Is the project active for new cases?`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### IsTemplate
 
-Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.[Required] [Default(false)] [Filter(eq)]
+Specifies whether the project is template for new projects of the same type. Template projects can be managed as normal projects. Only one project can be template for any given project type. Cases and other data are copied from the template project when creating a new project.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the project[Required] [Filter(like)]
+Multi-language name of the project`Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### ReadyWipLimit
 
-When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.[Filter(eq;ge;le)] [Introduced in version 25.1.1.38]
+When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to READY state.`Filter(eq;ge;le)` `Introduced in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -144,7 +144,7 @@ Show in UI: **ShownByDefault**
 
 ### WipLimit
 
-**OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state[Obsolete] [Filter(eq)] [Obsoleted in version 25.1.1.38]
+**OBSOLETE! Do not use!** When set, specifies the work-in-progress (WIP) limit. The limit is for number of cases, which can progress to Active state`Obsolete` `Filter(eq)` `Obsoleted in version 25.1.1.38`
 
 Type: **int32 __nullable__**  
 Category: **System**  

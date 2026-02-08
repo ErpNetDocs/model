@@ -133,17 +133,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#expectedweight">ExpectedWeight</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. [Filter(eq;ge;le)]</td>
+<td>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the logistic unit is currently active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 23.1.2.11]</td>
+<td>Indicates whether the logistic unit is currently active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.11</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#measuredweight">MeasuredWeight</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
-<td>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. [Filter(eq;ge;le)]</td>
+<td>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#notes">Notes</a></td>
@@ -153,7 +153,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Common.LogisticUnits.html#serialcode">SerialCode</a></td>
 <td>string (32)</td>
-<td>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.[Required] [Filter(multi eq;like)] [ORD]</td>
+<td>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.<code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -250,14 +250,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="expectedweight">ExpectedWeight</h3>
-<p>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. [Filter(eq;ge;le)]</p>
+<p>Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the logistic unit is currently active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 23.1.2.11]</p>
+<p>Indicates whether the logistic unit is currently active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.2.11</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="measuredweight">MeasuredWeight</h3>
-<p>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. [Filter(eq;ge;le)]</p>
+<p>Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -280,7 +280,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serialcode">SerialCode</h3>
-<p>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.[Required] [Filter(multi eq;like)] [ORD]</p>
+<p>Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.<code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

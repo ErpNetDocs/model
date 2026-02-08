@@ -36,9 +36,9 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes 
-| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21] 
-| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Exact time at which the transaction for the current asset occurs.[Required] [Filter(multi eq;ge;le)] 
-| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction type for the current asset.[Required] [Filter(multi eq;like)] 
+| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21` 
+| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Exact time at which the transaction for the current asset occurs.`Required` `Filter(multi eq;ge;le)` 
+| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction type for the current asset.`Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfPeriods
 
-Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21]
+Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Front-End Recalc Expressions:
 `obj.CalculateNumberOfPeriods( obj.RentalAsset, obj.TransactionTimestamp, obj.TransactionType, obj.LeaseContract)`
 ### TransactionTimestamp
 
-Exact time at which the transaction for the current asset occurs.[Required] [Filter(multi eq;ge;le)]
+Exact time at which the transaction for the current asset occurs.`Required` `Filter(multi eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionType
 
-Transaction type for the current asset.[Required] [Filter(multi eq;like)]
+Transaction type for the current asset.`Required` `Filter(multi eq;like)`
 
 Type: **[TransactionType](Applications.Rental.TransactionLines.md#transactiontype)**  
 Category: **System**  

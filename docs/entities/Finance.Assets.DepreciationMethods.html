@@ -121,37 +121,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></td>
-<td>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table[Required] [Default(&quot;STL&quot;)]</td>
+<td>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table<code>Required</code> <code>Default(&amp;quot;STL&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#factor">Factor</a></td>
 <td>decimal (5, 3)</td>
-<td>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor[Required] [Default(1)]</td>
+<td>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor<code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#issystem">IsSystem</a></td>
 <td>boolean</td>
-<td>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#monthsinaperiod">MonthsInAPeriod</a></td>
 <td>int32</td>
-<td>Number of equal valued months calculated with single application of the function[Required] [Default(12)]</td>
+<td>Number of equal valued months calculated with single application of the function<code>Required</code> <code>Default(12)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Multilanguage string[Required] [Filter(like)]</td>
+<td>Multilanguage string<code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
 <td><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></td>
-<td>Determines when the depreciation starts and when it ends[Required]</td>
+<td>Determines when the depreciation starts and when it ends<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.DepreciationMethods.html#startfromnextmonth">StartFromNextMonth</a></td>
 <td>boolean</td>
-<td>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.[Required] [Default(true)] [ReadOnly]</td>
+<td>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.<code>Required</code> <code>Default(true)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -199,7 +199,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="depreciationfunction">DepreciationFunction</h3>
-<p>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table[Required] [Default(&quot;STL&quot;)]</p>
+<p>Basic mathematical depreciation function used to calculate asset depreciation. STL=Straight Line, SYD=Sum of Years Digits, FAC=Depreciation change by factor, TAB=User defined with table<code>Required</code> <code>Default(&amp;quot;STL&amp;quot;)</code></p>
 <p>Type: <strong><a href="Finance.Assets.DepreciationMethods.html#depreciationfunction">DepreciationFunction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DepreciationFunction</code>(Finance.Assets.DepreciationMethods.md#depreciationfunction) data attribute<br>
@@ -235,7 +235,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>StraightLine</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="factor">Factor</h3>
-<p>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor[Required] [Default(1)]</p>
+<p>Factor used in factor depreciation function. Factor &lt; 1 means declining depreciation; &gt;1 - increasing. The depreciation is multiplied for each period by the factor<code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong>decimal (5, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -243,7 +243,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issystem">IsSystem</h3>
-<p>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Is_System is True for those depreciation methods that are managed by the system via update procedures and cannot be edited by the user.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -251,7 +251,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="monthsinaperiod">MonthsInAPeriod</h3>
-<p>Number of equal valued months calculated with single application of the function[Required] [Default(12)]</p>
+<p>Number of equal valued months calculated with single application of the function<code>Required</code> <code>Default(12)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -259,14 +259,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>12</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multilanguage string[Required] [Filter(like)]</p>
+<p>Multilanguage string<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="perioddeterminationmethod">PeriodDeterminationMethod</h3>
-<p>Determines when the depreciation starts and when it ends[Required]</p>
+<p>Determines when the depreciation starts and when it ends<code>Required</code></p>
 <p>Type: <strong><a href="Finance.Assets.DepreciationMethods.html#perioddeterminationmethod">PeriodDeterminationMethod</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PeriodDeterminationMethod</code>(Finance.Assets.DepreciationMethods.md#perioddeterminationmethod) data attribute<br>
@@ -297,7 +297,7 @@ Allowed Values (Finance.Assets.DepreciationMethodsRepository.PeriodDetermination
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startfromnextmonth">StartFromNextMonth</h3>
-<p>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.[Required] [Default(true)] [ReadOnly]</p>
+<p>When true, denotes that the depreciation starts from the month, following the month of deployment. When false, the depreciation starts from the same month.<code>Required</code> <code>Default(true)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#foldername">FolderName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Multi-language folder name[Required] [Filter(eq;like)]</td>
+<td>Multi-language folder name<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#serverfolderid">ServerFolderID</a></td>
 <td>string (256) <strong>nullable</strong></td>
-<td>ID of the folder on the mail server in the format of the mail server[Filter(eq)]</td>
+<td>ID of the folder on the mail server in the format of the mail server<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#syncstate">SyncState</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a></td>
 <td><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> <strong>nullable</strong></td>
-<td>When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash.[Filter(eq)] [ReadOnly]</td>
+<td>When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash.<code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -204,14 +204,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="foldername">FolderName</h3>
-<p>Multi-language folder name[Required] [Filter(eq;like)]</p>
+<p>Multi-language folder name<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="serverfolderid">ServerFolderID</h3>
-<p>ID of the folder on the mail server in the format of the mail server[Filter(eq)]</p>
+<p>ID of the folder on the mail server in the format of the mail server<code>Filter(eq)</code></p>
 <p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -227,7 +227,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="systempurpose">SystemPurpose</h3>
-<p>When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash.[Filter(eq)] [ReadOnly]</p>
+<p>When not NULL means that the folder has special system designation. Designations are: Mailbox, Inbox, Drafts, Outbox, Sent, Trash.<code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Applications.Mail.BoxFolders.html#systempurpose">SystemPurpose</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemPurpose</code>(Applications.Mail.BoxFolders.md#systempurpose) data attribute<br>

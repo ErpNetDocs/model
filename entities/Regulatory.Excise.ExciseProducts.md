@@ -45,7 +45,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Regulatory.Excise.ExciseProducts.md#code) | string (32) | The unique code of the ExciseProduct. `Required` `Filter(multi eq;like)` `ORD` 
-| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string[Required] [Filter(like)] 
+| [Name](Regulatory.Excise.ExciseProducts.md#name) | [MultilanguageString (500)](../data-types.md#multilanguagestring) | Multilanguage string`Required` `Filter(like)` 
 
 ## References
 
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage string[Required] [Filter(like)]
+Multilanguage string`Required` `Filter(like)`
 
 Type: **[MultilanguageString (500)](../data-types.md#multilanguagestring)**  
 Category: **System**  

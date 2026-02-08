@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConditionFilterXml](Systems.Documents.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.[Unit: obj.DocumentType.EntityName] [Required] 
+| [ConditionFilterXml](Systems.Documents.DocumentTypeSecurityConditions.md#conditionfilterxml) | dataaccessfilter | Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.`Unit: obj.DocumentType.EntityName` `Required` 
 | [Description](Systems.Documents.DocumentTypeSecurityConditions.md#description) | string (254) | The description of this DocumentTypeSecurity<br />Condition. `Required` `Filter(eq;like)` 
-| [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.[Required] [Default(3)] [Filter(ge;le)] 
+| [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | [Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority) | Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.`Required` `Default(3)` `Filter(ge;le)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### ConditionFilterXml
 
-Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.[Unit: obj.DocumentType.EntityName] [Required]
+Specifies the documents, for which the current rule is applicable. The XML filter is compared against new documents and the rule is applicable when they match.`Unit: obj.DocumentType.EntityName` `Required`
 
 Type: **dataaccessfilter**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.[Required] [Default(3)] [Filter(ge;le)]
+Priority of the rule against other rules, which are also applicable. Only the highest priority rule is selected.`Required` `Default(3)` `Filter(ge;le)`
 
 Type: **[Priority](Systems.Documents.DocumentTypeSecurityConditions.md#priority)**  
 Category: **System**  

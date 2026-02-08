@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetedMaterialAmount](Projects.Classic.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount[Currency: ProjectTask.Project.BudgetingCurrency] 
-| [LineNumber](Projects.Classic.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes[Required] [Default(0)] 
-| [Quantity](Projects.Classic.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material[Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Projects.Classic.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [ReadOnly] 
+| [BudgetedMaterialAmount](Projects.Classic.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount`Currency: ProjectTask.Project.BudgetingCurrency` 
+| [LineNumber](Projects.Classic.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes`Required` `Default(0)` 
+| [Quantity](Projects.Classic.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material`Unit: QuantityUnit` `Required` `Default(1)` 
+| [QuantityBase](Projects.Classic.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `ReadOnly` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### BudgetedMaterialAmount
 
-Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount[Currency: ProjectTask.Project.BudgetingCurrency]
+Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount`Currency: ProjectTask.Project.BudgetingCurrency`
 
 Type: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.MaterialProduct != null), obj.CalculateBudgetMaterialAmount( obj.Quantity), new Amount( 0, obj.ProjectTask.Project.BudgetingCurrency))`
 ### LineNumber
 
-Line number within the task, increased in steps of 10. Used for sorting purposes[Required] [Default(0)]
+Line number within the task, increased in steps of 10. Used for sorting purposes`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -90,7 +90,7 @@ Front-End Recalc Expressions:
 `( obj.ProjectTask.Materials.Select( c => c.LineNumber).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Quantity
 
-The required quantity of the material[Unit: QuantityUnit] [Required] [Default(1)]
+The required quantity of the material`Unit: QuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (9, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement unit of the Material.[Required] [Default(0)] [ReadOnly]
+The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `ReadOnly`
 
 Type: **decimal (9, 3)**  
 Category: **System**  

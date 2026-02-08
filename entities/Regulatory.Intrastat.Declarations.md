@@ -61,25 +61,25 @@ Aggregate Tree
 | [CompleteTime](Regulatory.Intrastat.Declarations.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Regulatory.Intrastat.Declarations.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Regulatory.Intrastat.Declarations.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | Specifies whether this is a regular or corrective declaration[Required] [Default(&quot;R&quot;)] [Filter(eq)] 
-| [DeclareStatisticalValues](Regulatory.Intrastat.Declarations.md#declarestatisticalvalues) | boolean | Does the declaration contain statistical values? 1=Yes; 0=No[Required] [Default(false)] [Filter(multi eq)] 
+| [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | [DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction) | Specifies whether this is a regular or corrective declaration`Required` `Default(&quot;R&quot;)` `Filter(eq)` 
+| [DeclareStatisticalValues](Regulatory.Intrastat.Declarations.md#declarestatisticalvalues) | boolean | Does the declaration contain statistical values? 1=Yes; 0=No`Required` `Default(false)` `Filter(multi eq)` 
 | [DocumentDate](Regulatory.Intrastat.Declarations.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Regulatory.Intrastat.Declarations.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Regulatory.Intrastat.Declarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Intrastat.Declarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Intrastat.Declarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Regulatory.Intrastat.Declarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | The flow direction of the goods[Required] [Filter(eq)] 
-| [<s>IsReleased</s>](Regulatory.Intrastat.Declarations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
-| [IsSingleExecution](Regulatory.Intrastat.Declarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | [GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection) | The flow direction of the goods`Required` `Filter(eq)` 
+| [<s>IsReleased</s>](Regulatory.Intrastat.Declarations.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Regulatory.Intrastat.Declarations.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Regulatory.Intrastat.Declarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Intrastat.Declarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Intrastat.Declarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PostalCode](Regulatory.Intrastat.Declarations.md#postalcode) | string (64) | Тhe postal code part of the submitter’s addres[Required] 
+| [PostalCode](Regulatory.Intrastat.Declarations.md#postalcode) | string (64) | Тhe postal code part of the submitter’s addres`Required` 
 | [ReadOnly](Regulatory.Intrastat.Declarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Regulatory.Intrastat.Declarations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Regulatory.Intrastat.Declarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | Month, for which the declaration is prepared[Required] [Filter(eq)] 
-| [ReferenceYear](Regulatory.Intrastat.Declarations.md#referenceyear) | int16 | Year, for which the declaration is prepared[Required] [Filter(eq)] 
+| [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | [ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth) | Month, for which the declaration is prepared`Required` `Filter(eq)` 
+| [ReferenceYear](Regulatory.Intrastat.Declarations.md#referenceyear) | int16 | Year, for which the declaration is prepared`Required` `Filter(eq)` 
 | [ReleaseTime](Regulatory.Intrastat.Declarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Intrastat.Declarations.md#state) | [DocumentState](Regulatory.Intrastat.Declarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Regulatory.Intrastat.Declarations.md#statetagsattribute) | string | Specifies the state of the document. 
@@ -210,7 +210,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeclarationFunction
 
-Specifies whether this is a regular or corrective declaration[Required] [Default(&quot;R&quot;)] [Filter(eq)]
+Specifies whether this is a regular or corrective declaration`Required` `Default(&quot;R&quot;)` `Filter(eq)`
 
 Type: **[DeclarationFunction](Regulatory.Intrastat.Declarations.md#declarationfunction)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### DeclareStatisticalValues
 
-Does the declaration contain statistical values? 1=Yes; 0=No[Required] [Default(false)] [Filter(multi eq)]
+Does the declaration contain statistical values? 1=Yes; 0=No`Required` `Default(false)` `Filter(multi eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -308,7 +308,7 @@ Show in UI: **HiddenByDefault**
 
 ### GoodsFlowDirection
 
-The flow direction of the goods[Required] [Filter(eq)]
+The flow direction of the goods`Required` `Filter(eq)`
 
 Type: **[GoodsFlowDirection](Regulatory.Intrastat.Declarations.md#goodsflowdirection)**  
 Category: **System**  
@@ -326,7 +326,7 @@ Show in UI: **ShownByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -337,7 +337,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -378,7 +378,7 @@ Show in UI: **HiddenByDefault**
 
 ### PostalCode
 
-Тhe postal code part of the submitter’s addres[Required]
+Тhe postal code part of the submitter’s addres`Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -422,7 +422,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReferenceMonth
 
-Month, for which the declaration is prepared[Required] [Filter(eq)]
+Month, for which the declaration is prepared`Required` `Filter(eq)`
 
 Type: **[ReferenceMonth](Regulatory.Intrastat.Declarations.md#referencemonth)**  
 Category: **System**  
@@ -450,7 +450,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferenceYear
 
-Year, for which the declaration is prepared[Required] [Filter(eq)]
+Year, for which the declaration is prepared`Required` `Filter(eq)`
 
 Type: **int16**  
 Category: **System**  

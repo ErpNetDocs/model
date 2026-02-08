@@ -57,15 +57,15 @@ Aggregate Tree
 | [DocumentNotes](Logistics.Inventory.StoreOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Logistics.Inventory.StoreOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DriverName](Logistics.Inventory.StoreOrders.md#drivername) | string (64) __nullable__ | The name of the driver, who will deliver the stocks. 
-| [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur.[Required] [Default(Today)] [Filter(ge;le)] [ORD] 
+| [DueDate](Logistics.Inventory.StoreOrders.md#duedate) | datetime | The final date, when the store transaction should occur.`Required` `Default(Today)` `Filter(ge;le)` `ORD` 
 | [EntityName](Logistics.Inventory.StoreOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Logistics.Inventory.StoreOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
-| [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)] 
+| [<s>IsReleased</s>](Logistics.Inventory.StoreOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Logistics.Inventory.StoreOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrders.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE`Required` `Default(&quot;R&quot;)` `Filter(multi eq)` 
 | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Inventory.StoreOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PlannedCompletionDate](Logistics.Inventory.StoreOrders.md#plannedcompletiondate) | datetime __nullable__ | Date, when the quantities are expected to be completely issued/received[Filter(ge;le)] 
-| [PlannedReleaseDate](Logistics.Inventory.StoreOrders.md#plannedreleasedate) | datetime __nullable__ | Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.[Filter(ge;le)] 
+| [PlannedCompletionDate](Logistics.Inventory.StoreOrders.md#plannedcompletiondate) | datetime __nullable__ | Date, when the quantities are expected to be completely issued/received`Filter(ge;le)` 
+| [PlannedReleaseDate](Logistics.Inventory.StoreOrders.md#plannedreleasedate) | datetime __nullable__ | Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.`Filter(ge;le)` 
 | [PlanningOnly](Logistics.Inventory.StoreOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Inventory.StoreOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Logistics.Inventory.StoreOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -73,7 +73,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Inventory.StoreOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Inventory.StoreOrders.md#state) | [DocumentState](Logistics.Inventory.StoreOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Inventory.StoreOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [Status](Logistics.Inventory.StoreOrders.md#status) | string (1) | P=Planned; F=Firm planned; R=Released; C=Completed[Required] [Default(&quot;P&quot;)] 
+| [Status](Logistics.Inventory.StoreOrders.md#status) | string (1) | P=Planned; F=Firm planned; R=Released; C=Completed`Required` `Default(&quot;P&quot;)` 
 | [TempTransportCompanyName](Logistics.Inventory.StoreOrders.md#temptransportcompanyname) | string (64) __nullable__ | Obsolete. Not used. 
 | [VehicleRegNumber](Logistics.Inventory.StoreOrders.md#vehicleregnumber) | string (32) __nullable__ | Obsolete. Not used. 
 | [Void](Logistics.Inventory.StoreOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -262,7 +262,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-The final date, when the store transaction should occur.[Required] [Default(Today)] [Filter(ge;le)] [ORD]
+The final date, when the store transaction should occur.`Required` `Default(Today)` `Filter(ge;le)` `ORD`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -296,7 +296,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -307,7 +307,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -318,7 +318,7 @@ Show in UI: **HiddenByDefault**
 
 ### MovementType
 
-Store order movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)]
+Store order movement type. R=RECEIPT, I=ISSUE`Required` `Default(&quot;R&quot;)` `Filter(multi eq)`
 
 Type: **[MovementType](Logistics.Inventory.StoreOrders.md#movementtype)**  
 Category: **System**  
@@ -356,7 +356,7 @@ Show in UI: **HiddenByDefault**
 
 ### PlannedCompletionDate
 
-Date, when the quantities are expected to be completely issued/received[Filter(ge;le)]
+Date, when the quantities are expected to be completely issued/received`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -366,7 +366,7 @@ Show in UI: **ShownByDefault**
 
 ### PlannedReleaseDate
 
-Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.[Filter(ge;le)]
+Date, when the respective store transaction document is scheduled to be released to the supplier or manufacturing. This is respected by all PAB (projected available balance) and ATP (available to promise) calculations as the date on which the store transaction is scheduled to occur.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -464,7 +464,7 @@ Show in UI: **HiddenByDefault**
 
 ### Status
 
-P=Planned; F=Firm planned; R=Released; C=Completed[Required] [Default(&quot;P&quot;)]
+P=Planned; F=Firm planned; R=Released; C=Completed`Required` `Default(&quot;P&quot;)`
 
 Type: **string (1)**  
 Category: **System**  

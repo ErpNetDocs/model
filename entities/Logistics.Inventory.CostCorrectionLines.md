@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#basecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Base Cost field of the transaction line.[Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#costcorrectionamount) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Amount field of the transaction line.[Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)] 
-| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#productcostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line.[Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)] 
-| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#storecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line.[Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)] 
+| [BaseCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#basecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Base Cost field of the transaction line.`Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [CostCorrectionAmount](Logistics.Inventory.CostCorrectionLines.md#costcorrectionamount) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Amount field of the transaction line.`Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)` 
+| [ProductCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#productcostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Product Cost field of the transaction line.`Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)` 
+| [StoreCostAdjustment](Logistics.Inventory.CostCorrectionLines.md#storecostadjustment) | [Amount (14, 2)](../data-types.md#amount) | The amount of correction (plus or minus) for the Store Cost field of the transaction line.`Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### BaseCostAdjustment
 
-The amount of correction (plus or minus) for the Base Cost field of the transaction line.[Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+The amount of correction (plus or minus) for the Base Cost field of the transaction line.`Currency: TransactionLine.TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCorrectionAmount
 
-The amount of correction (plus or minus) for the Amount field of the transaction line.[Currency: TransactionLine.TransactionObj.DocumentCurrency] [Required] [Default(0)]
+The amount of correction (plus or minus) for the Amount field of the transaction line.`Currency: TransactionLine.TransactionObj.DocumentCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCostAdjustment
 
-The amount of correction (plus or minus) for the Product Cost field of the transaction line.[Currency: TransactionLine.Product.CostingCurrency] [Required] [Default(0)]
+The amount of correction (plus or minus) for the Product Cost field of the transaction line.`Currency: TransactionLine.Product.CostingCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### StoreCostAdjustment
 
-The amount of correction (plus or minus) for the Store Cost field of the transaction line.[Currency: TransactionLine.TransactionObj.Store.Currency] [Required] [Default(0)]
+The amount of correction (plus or minus) for the Store Cost field of the transaction line.`Currency: TransactionLine.TransactionObj.Store.Currency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  

@@ -42,7 +42,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | Specifies the amount type from the Vat Entry which will be accumulated[Required] [Filter(multi eq)] 
+| [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | [AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory) | Specifies the amount type from the Vat Entry which will be accumulated`Required` `Filter(multi eq)` 
 | [Notes](Regulatory.Vat.BoxTypeDealTypes.md#notes) | string (max) __nullable__ | Notes for this BoxTypeDealType. 
 
 ## References
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### AmountCategory
 
-Specifies the amount type from the Vat Entry which will be accumulated[Required] [Filter(multi eq)]
+Specifies the amount type from the Vat Entry which will be accumulated`Required` `Filter(multi eq)`
 
 Type: **[AmountCategory](Regulatory.Vat.BoxTypeDealTypes.md#amountcategory)**  
 Category: **System**  

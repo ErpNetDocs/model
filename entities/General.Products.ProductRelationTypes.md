@@ -35,10 +35,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.ProductRelationTypes.md#code) | string (16) | Code of the relation type.[Required] [Filter(like)] [ORD] 
-| [Name](General.Products.ProductRelationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the relation type.[Required] [Filter(eq;like)] 
-| [Notes](General.Products.ProductRelationTypes.md#notes) | string (max) __nullable__ | Notes[Filter(like)] 
-| [SystemType](General.Products.ProductRelationTypes.md#systemtype) | [SystemType](General.Products.ProductRelationTypes.md#systemtype) | System type of the relation type.[Required] [Default(&quot;GEN&quot;)] [Filter(eq)] 
+| [Code](General.Products.ProductRelationTypes.md#code) | string (16) | Code of the relation type.`Required` `Filter(like)` `ORD` 
+| [Name](General.Products.ProductRelationTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the relation type.`Required` `Filter(eq;like)` 
+| [Notes](General.Products.ProductRelationTypes.md#notes) | string (max) __nullable__ | Notes`Filter(like)` 
+| [SystemType](General.Products.ProductRelationTypes.md#systemtype) | [SystemType](General.Products.ProductRelationTypes.md#systemtype) | System type of the relation type.`Required` `Default(&quot;GEN&quot;)` `Filter(eq)` 
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### Code
 
-Code of the relation type.[Required] [Filter(like)] [ORD]
+Code of the relation type.`Required` `Filter(like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the relation type.[Required] [Filter(eq;like)]
+Name of the relation type.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes[Filter(like)]
+Notes`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemType
 
-System type of the relation type.[Required] [Default(&quot;GEN&quot;)] [Filter(eq)]
+System type of the relation type.`Required` `Default(&quot;GEN&quot;)` `Filter(eq)`
 
 Type: **[SystemType](General.Products.ProductRelationTypes.md#systemtype)**  
 Category: **System**  

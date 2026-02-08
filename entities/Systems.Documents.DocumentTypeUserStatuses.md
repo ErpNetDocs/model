@@ -44,12 +44,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Documents.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents[Required] [Default(true)] [Filter(eq)] 
-| [DisplayOrder](Systems.Documents.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type[Required] [Filter(ge;le)] 
+| [Active](Systems.Documents.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents`Required` `Default(true)` `Filter(eq)` 
+| [DisplayOrder](Systems.Documents.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type`Required` `Filter(ge;le)` 
 | [Instructions](Systems.Documents.DocumentTypeUserStatuses.md#instructions) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Instructions what should be done when this user status is active (Rich Text) 
-| [IsExitStatus](Systems.Documents.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released[Required] [Default(true)] [Filter(eq)] 
-| [State](Systems.Documents.DocumentTypeUserStatuses.md#state) | [DocumentState](Systems.Documents.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound[Required] [Filter(eq)] 
-| [UserStatusName](Systems.Documents.DocumentTypeUserStatuses.md#userstatusname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Multi-language name of the user status[Required] [Filter(eq;like)] 
+| [IsExitStatus](Systems.Documents.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released`Required` `Default(true)` `Filter(eq)` 
+| [State](Systems.Documents.DocumentTypeUserStatuses.md#state) | [DocumentState](Systems.Documents.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound`Required` `Filter(eq)` 
+| [UserStatusName](Systems.Documents.DocumentTypeUserStatuses.md#userstatusname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Multi-language name of the user status`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### Active
 
-Is the user status active for applying to documents[Required] [Default(true)] [Filter(eq)]
+Is the user status active for applying to documents`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### DisplayOrder
 
-Consecutive display order of the status, with regard to other statuses within the same document type[Required] [Filter(ge;le)]
+Consecutive display order of the status, with regard to other statuses within the same document type`Required` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### IsExitStatus
 
-True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released[Required] [Default(true)] [Filter(eq)]
+True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-The system state to which this user status is bound[Required] [Filter(eq)]
+The system state to which this user status is bound`Required` `Filter(eq)`
 
 Type: **[DocumentState](Systems.Documents.DocumentTypeUserStatuses.md#state)**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### UserStatusName
 
-Multi-language name of the user status[Required] [Filter(eq;like)]
+Multi-language name of the user status`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Category: **System**  

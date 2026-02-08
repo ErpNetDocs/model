@@ -45,8 +45,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CustomPropertyValue](Regulatory.Saft.ProfileTaxCodeByAccounts.md#custompropertyvalue) | string (254) __nullable__ | The specific value of the selected analytic custom property for which this mapping applies.[Filter(like)] 
-| [Notes](Regulatory.Saft.ProfileTaxCodeByAccounts.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).[Filter(like)] 
+| [CustomPropertyValue](Regulatory.Saft.ProfileTaxCodeByAccounts.md#custompropertyvalue) | string (254) __nullable__ | The specific value of the selected analytic custom property for which this mapping applies.`Filter(like)` 
+| [Notes](Regulatory.Saft.ProfileTaxCodeByAccounts.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)` 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### CustomPropertyValue
 
-The specific value of the selected analytic custom property for which this mapping applies.[Filter(like)]
+The specific value of the selected analytic custom property for which this mapping applies.`Filter(like)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).[Filter(like)]
+Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

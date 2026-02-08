@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of solution[Required] [Filter(like)] 
+| [Name](Crm.Marketing.CompetitorSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of solution`Required` `Filter(like)` 
 | [Notes](Crm.Marketing.CompetitorSolutions.md#notes) | string (max) __nullable__ | Notes for this CompetitorSolution. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### Name
 
-Name of solution[Required] [Filter(like)]
+Name of solution`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

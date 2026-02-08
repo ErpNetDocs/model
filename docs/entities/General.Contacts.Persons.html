@@ -135,12 +135,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Persons.html#birthdate">BirthDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Birth date. NULL means unknown[Filter(ge;le)]</td>
+<td>Birth date. NULL means unknown<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#city">City</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>City from the legal registration address for the person[Filter(like)]</td>
+<td>City from the legal registration address for the person<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#creationtime">CreationTime</a></td>
@@ -155,12 +155,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Persons.html#firstname">FirstName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>First name of the person.[Filter(eq;like)]</td>
+<td>First name of the person.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#gender">Gender</a></td>
 <td><a href="General.Contacts.Persons.html#gender">Gender</a> <strong>nullable</strong></td>
-<td>Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided[Filter(eq)]</td>
+<td>Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#gln">GLN</a></td>
@@ -175,17 +175,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Persons.html#lastname">LastName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Last name of the person.[Filter(eq;like)]</td>
+<td>Last name of the person.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#middlename">MiddleName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></td>
-<td>Middle name of the person.[Filter(eq;like)]</td>
+<td>Middle name of the person.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#nationalnumber">NationalNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Government assigned unique personal number. NULL means unknown[Filter(eq;like)]</td>
+<td>Government assigned unique personal number. NULL means unknown<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#notes">Notes</a></td>
@@ -240,12 +240,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Persons.html#passportissuingdate">PassportIssuingDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date of issuing the passport. NULL means unknown[Filter(ge;le)]</td>
+<td>Date of issuing the passport. NULL means unknown<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#passportnumber">PassportNumber</a></td>
 <td>string (14) <strong>nullable</strong></td>
-<td>Current passport number. NULL means unknown[Filter(eq)]</td>
+<td>Current passport number. NULL means unknown<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Persons.html#title">Title</a></td>
@@ -392,14 +392,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="birthdate">BirthDate</h3>
-<p>Birth date. NULL means unknown[Filter(ge;le)]</p>
+<p>Birth date. NULL means unknown<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="city">City</h3>
-<p>City from the legal registration address for the person[Filter(like)]</p>
+<p>City from the legal registration address for the person<code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -421,14 +421,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="firstname">FirstName</h3>
-<p>First name of the person.[Filter(eq;like)]</p>
+<p>First name of the person.<code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="gender">Gender</h3>
-<p>Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided[Filter(eq)]</p>
+<p>Person gender. M=Male;F=Female;O=Other;N=Prefer not to say;NULL=not known/not provided<code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.Persons.html#gender">Gender</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Gender</code>(General.Contacts.Persons.md#gender) data attribute<br>
@@ -480,21 +480,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastname">LastName</h3>
-<p>Last name of the person.[Filter(eq;like)]</p>
+<p>Last name of the person.<code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="middlename">MiddleName</h3>
-<p>Middle name of the person.[Filter(eq;like)]</p>
+<p>Middle name of the person.<code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (64)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="nationalnumber">NationalNumber</h3>
-<p>Government assigned unique personal number. NULL means unknown[Filter(eq;like)]</p>
+<p>Government assigned unique personal number. NULL means unknown<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -615,14 +615,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="passportissuingdate">PassportIssuingDate</h3>
-<p>Date of issuing the passport. NULL means unknown[Filter(ge;le)]</p>
+<p>Date of issuing the passport. NULL means unknown<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="passportnumber">PassportNumber</h3>
-<p>Current passport number. NULL means unknown[Filter(eq)]</p>
+<p>Current passport number. NULL means unknown<code>Filter(eq)</code></p>
 <p>Type: <strong>string (14) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

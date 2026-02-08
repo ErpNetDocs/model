@@ -43,7 +43,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsDefault](General.Products.MeasurementCategories.md#isdefault) | boolean | 1=This category is the default category; 0=otherwise[Required] [Default(false)] [Filter(eq)] 
+| [IsDefault](General.Products.MeasurementCategories.md#isdefault) | boolean | 1=This category is the default category; 0=otherwise`Required` `Default(false)` `Filter(eq)` 
 | [Name](General.Products.MeasurementCategories.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of this MeasurementCategory. `Required` `Filter(eq;like)` 
 
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### IsDefault
 
-1=This category is the default category; 0=otherwise[Required] [Default(false)] [Filter(eq)]
+1=This category is the default category; 0=otherwise`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

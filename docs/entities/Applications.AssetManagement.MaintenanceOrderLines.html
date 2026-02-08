@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the maintenance order.[Required]</td>
+<td>Consecutive line number, unique within the maintenance order.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicedate">NextServiceDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.[Filter(ge;le)]</td>
+<td>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.AssetManagement.MaintenanceOrderLines.html#nextservicetrackedparametervalue">NextServiceTracked<br>ParameterValue</a></td>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the maintenance order.[Required]</p>
+<p>Consecutive line number, unique within the maintenance order.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -212,7 +212,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.MaintenanceOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="nextservicedate">NextServiceDate</h3>
-<p>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.[Filter(ge;le)]</p>
+<p>Specifies, that the maintenance required a specific date for the next maintenance. NULL means that default scheduling should be used.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

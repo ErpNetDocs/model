@@ -122,22 +122,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#policycontent">PolicyContent</a></td>
 <td>string (max)</td>
-<td>Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.[Required] [Filter(like)]</td>
+<td>Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.<code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#state">State</a></td>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#state">State</a></td>
-<td>Lifecycle state of the revision.[Required] [Default(&quot;DRF&quot;)]</td>
+<td>Lifecycle state of the revision.<code>Required</code> <code>Default(&amp;quot;DRF&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#validfrom">ValidFrom</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date from which this revision is intended to apply. Required when State = Published or Retired.[Filter(eq;ge;le)]</td>
+<td>Date from which this revision is intended to apply. Required when State = Published or Retired.<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="HumanResources.Governance.GovernancePolicyRevisions.html#validto">ValidTo</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.[Filter(eq;ge;le)]</td>
+<td>Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.<code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +187,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="policycontent">PolicyContent</h3>
-<p>Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.[Required] [Filter(like)]</p>
+<p>Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (max)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -195,7 +195,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>Lifecycle state of the revision.[Required] [Default(&quot;DRF&quot;)]</p>
+<p>Lifecycle state of the revision.<code>Required</code> <code>Default(&amp;quot;DRF&amp;quot;)</code></p>
 <p>Type: <strong><a href="HumanResources.Governance.GovernancePolicyRevisions.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(HumanResources.Governance.GovernancePolicyRevisions.md#state) data attribute<br>
@@ -239,14 +239,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Draft</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfrom">ValidFrom</h3>
-<p>Date from which this revision is intended to apply. Required when State = Published or Retired.[Filter(eq;ge;le)]</p>
+<p>Date from which this revision is intended to apply. Required when State = Published or Retired.<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validto">ValidTo</h3>
-<p>Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.[Filter(eq;ge;le)]</p>
+<p>Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

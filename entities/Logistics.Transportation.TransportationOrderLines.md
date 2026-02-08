@@ -43,11 +43,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents.[Required] 
+| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents.`Required` 
 | [LineNo](Logistics.Transportation.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
 | [Notes](Logistics.Transportation.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` 
 | [PalletsCount](Logistics.Transportation.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. 
-| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)] 
+| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)` 
 | [VolumeCbm](Logistics.Transportation.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. 
 | [WeightKg](Logistics.Transportation.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. 
 
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### ContentsDescription
 
-Textual description of the cargo contents.[Required]
+Textual description of the cargo contents.`Required`
 
 Type: **string (128)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)`
 
 Type: **int32 __nullable__**  
 Category: **System**  

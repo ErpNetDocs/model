@@ -132,7 +132,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#fullpath">FullPath</a></td>
 <td>string (4000) <strong>nullable</strong></td>
-<td>Full path to this item in the form /root/child1/../leaf/[Filter(eq;like)] [ReadOnly]</td>
+<td>Full path to this item in the form /root/child1/../leaf/<code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.SalesForce.SalesPersonGroups.html#name">Name</a></td>
@@ -218,7 +218,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, o =&gt; ( o.Parent == obj.Parent), IIF( ( obj.Parent != null), ( obj.Parent.Code + &quot;00&quot;), &quot;00000&quot;))</code></p>
 <h3 id="fullpath">FullPath</h3>
-<p>Full path to this item in the form /root/child1/../leaf/[Filter(eq;like)] [ReadOnly]</p>
+<p>Full path to this item in the form /root/child1/../leaf/<code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (4000) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

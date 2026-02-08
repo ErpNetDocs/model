@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#enddate">EndDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>End date to which the agreedment for the service or product holds.[Filter(ge;le)]</td>
+<td>End date to which the agreedment for the service or product holds.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity of the agreed servcice or product[Unit: QuantityUnit] [Required]</td>
+<td>Quantity of the agreed servcice or product<code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceAgreementServices.html#startdate">StartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Start date from which the agreedment for the service or product holds.[Filter(ge;le)]</td>
+<td>Start date from which the agreedment for the service or product holds.<code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,14 +201,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="enddate">EndDate</h3>
-<p>End date to which the agreedment for the service or product holds.[Filter(ge;le)]</p>
+<p>End date to which the agreedment for the service or product holds.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,14 +219,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ServiceAgreement.Services.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the agreed servcice or product[Unit: QuantityUnit] [Required]</p>
+<p>Quantity of the agreed servcice or product<code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="startdate">StartDate</h3>
-<p>Start date from which the agreedment for the service or product holds.[Filter(ge;le)]</p>
+<p>Start date from which the agreedment for the service or product holds.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

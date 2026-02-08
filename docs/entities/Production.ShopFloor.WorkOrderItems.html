@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#completiondate">CompletionDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date, when the item should be completed. NULL means that there is no constraint for completion date[Filter(ge;le)]</td>
+<td>The date, when the item should be completed. NULL means that there is no constraint for completion date<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,12 +130,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>The order of the line within the work order.[Required] [Filter(eq;like)]</td>
+<td>The order of the line within the work order.<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#lotsize">LotSize</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity produced in one production run[Unit: ProducedQuantityUnit] [Required] [Default(1)]</td>
+<td>Quantity produced in one production run<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#notes">Notes</a></td>
@@ -150,42 +150,42 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)]</td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></td>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></td>
-<td>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest[Required] [Default(3)]</td>
+<td>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest<code>Required</code> <code>Default(3)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#producedquantity">ProducedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The quantity produced in the operation.[Unit: ProducedQuantityUnit] [Required] [Default(1)]</td>
+<td>The quantity produced in the operation.<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#producedquantitybase">ProducedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Produced Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
+<td>The equivalence of Produced Quantity in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#releasedate">ReleaseDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production[Filter(ge;le)]</td>
+<td>The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the production of this item is scheduled to end[Filter(ge;le)]</td>
+<td>Date and time when the production of this item is scheduled to end<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItems.html#scheduledstartdatetime">ScheduledStartDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Date and time when the production of this item is scheduled to begin[Filter(ge;le)]</td>
+<td>Date and time when the production of this item is scheduled to begin<code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="completiondate">CompletionDate</h3>
-<p>The date, when the item should be completed. NULL means that there is no constraint for completion date[Filter(ge;le)]</p>
+<p>The date, when the item should be completed. NULL means that there is no constraint for completion date<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -320,7 +320,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>The order of the line within the work order.[Required] [Filter(eq;like)]</p>
+<p>The order of the line within the work order.<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -331,7 +331,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.WorkOrder.Items.Select( c =&gt; c.LineOrd).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="lotsize">LotSize</h3>
-<p>Quantity produced in one production run[Unit: ProducedQuantityUnit] [Required] [Default(1)]</p>
+<p>Quantity produced in one production run<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -355,14 +355,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Filter(eq)]</p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.<code>Filter(eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest[Required] [Default(3)]</p>
+<p>Priority of the production of the item. Initially inherits the priority of the work order. 1=Lowest ... 5=Highest<code>Required</code> <code>Default(3)</code></p>
 <p>Type: <strong><a href="Production.ShopFloor.WorkOrderItems.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Production.ShopFloor.WorkOrderItems.md#priority) data attribute<br>
@@ -402,7 +402,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>3</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="producedquantity">ProducedQuantity</h3>
-<p>The quantity produced in the operation.[Unit: ProducedQuantityUnit] [Required] [Default(1)]</p>
+<p>The quantity produced in the operation.<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -412,7 +412,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>new Quantity( obj.Recipe.ProduceQuantity.Value, obj.ProducedQuantity.Unit)</code></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
-<p>The equivalence of Produced Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
+<p>The equivalence of Produced Quantity in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -423,7 +423,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedQuantityBase)</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Produced Quantity Base.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -434,7 +434,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity != null) AndAlso ( obj.ProducedQuantityUnit != null)) AndAlso ( obj.Product != null)), obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product), obj.ProducedStandardQuantityBase)</code></p>
 <h3 id="releasedate">ReleaseDate</h3>
-<p>The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production[Filter(ge;le)]</p>
+<p>The date, when the item is released to production. NULL means that still there is no plan when the item will be released to production<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -445,14 +445,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.WorkOrder.ReleaseDate</code></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
-<p>Date and time when the production of this item is scheduled to end[Filter(ge;le)]</p>
+<p>Date and time when the production of this item is scheduled to end<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="scheduledstartdatetime">ScheduledStartDateTime</h3>
-<p>Date and time when the production of this item is scheduled to begin[Filter(ge;le)]</p>
+<p>Date and time when the production of this item is scheduled to begin<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

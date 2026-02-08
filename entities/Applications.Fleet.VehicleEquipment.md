@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. NULL when the equipment is still installed on the vehicle[Filter(ge;le)] 
+| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. NULL when the equipment is still installed on the vehicle`Filter(ge;le)` 
 | [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment 
-| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment[Required] [Default(1)] [Filter(ge;le)] 
-| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment[Required] [Filter(ge;le)] 
+| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment`Required` `Default(1)` `Filter(ge;le)` 
+| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment`Required` `Filter(ge;le)` 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### EndDate
 
-The date when the equipment was removed. NULL when the equipment is still installed on the vehicle[Filter(ge;le)]
+The date when the equipment was removed. NULL when the equipment is still installed on the vehicle`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-Quantity of the equipment[Required] [Default(1)] [Filter(ge;le)]
+Quantity of the equipment`Required` `Default(1)` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDate
 
-The installation date of the equipment[Required] [Filter(ge;le)]
+The installation date of the equipment`Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  

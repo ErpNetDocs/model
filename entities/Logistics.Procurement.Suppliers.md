@@ -37,13 +37,13 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Logistics.Procurement.Suppliers.md#creationtime) | datetime __nullable__ | Date and time when the Supplier was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Procurement.Suppliers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Supplier. `Filter(like)` `ReadOnly` 
-| [DefaultDeliveryTermDays](Logistics.Procurement.Suppliers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sending the purchase order[Required] [Default(0)] 
-| [DefaultPaymentStartDays](Logistics.Procurement.Suppliers.md#defaultpaymentstartdays) | int32 | Number of days until the payment becomes executable. 0 means that the payment is executable at all times.[Required] [Default(0)] 
-| [DefaultPaymentTermDays](Logistics.Procurement.Suppliers.md#defaultpaymenttermdays) | int32 | Default payment term in days, starting from the date of receiving the invoice[Required] [Default(0)] 
-| [FromDate](Logistics.Procurement.Suppliers.md#fromdate) | datetime __nullable__ | The date on which this party became a supplier or the date, when the supplier contract was signed.[Filter(ge;le)] 
-| [IsActive](Logistics.Procurement.Suppliers.md#isactive) | boolean | Indicates whether the current supplier is active.[Required] [Default(true)] [Filter(eq)] 
-| [Number](Logistics.Procurement.Suppliers.md#number) | string (16) __nullable__ | The unique supplier number.[Filter(eq;like)] [ORD] 
-| [ThruDate](Logistics.Procurement.Suppliers.md#thrudate) | datetime __nullable__ | The date (inclusive) on which this party ceased to be a supplier.[Filter(ge;le)] 
+| [DefaultDeliveryTermDays](Logistics.Procurement.Suppliers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sending the purchase order`Required` `Default(0)` 
+| [DefaultPaymentStartDays](Logistics.Procurement.Suppliers.md#defaultpaymentstartdays) | int32 | Number of days until the payment becomes executable. 0 means that the payment is executable at all times.`Required` `Default(0)` 
+| [DefaultPaymentTermDays](Logistics.Procurement.Suppliers.md#defaultpaymenttermdays) | int32 | Default payment term in days, starting from the date of receiving the invoice`Required` `Default(0)` 
+| [FromDate](Logistics.Procurement.Suppliers.md#fromdate) | datetime __nullable__ | The date on which this party became a supplier or the date, when the supplier contract was signed.`Filter(ge;le)` 
+| [IsActive](Logistics.Procurement.Suppliers.md#isactive) | boolean | Indicates whether the current supplier is active.`Required` `Default(true)` `Filter(eq)` 
+| [Number](Logistics.Procurement.Suppliers.md#number) | string (16) __nullable__ | The unique supplier number.`Filter(eq;like)` `ORD` 
+| [ThruDate](Logistics.Procurement.Suppliers.md#thrudate) | datetime __nullable__ | The date (inclusive) on which this party ceased to be a supplier.`Filter(ge;le)` 
 | [UpdateTime](Logistics.Procurement.Suppliers.md#updatetime) | datetime __nullable__ | Date and time when the Supplier was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Logistics.Procurement.Suppliers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Supplier. `Filter(like)` `ReadOnly` 
 
@@ -97,7 +97,7 @@ Show in UI: **HiddenByDefault**
 
 ### DefaultDeliveryTermDays
 
-Default term in days for goods delivery, starting at the day of sending the purchase order[Required] [Default(0)]
+Default term in days for goods delivery, starting at the day of sending the purchase order`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentStartDays
 
-Number of days until the payment becomes executable. 0 means that the payment is executable at all times.[Required] [Default(0)]
+Number of days until the payment becomes executable. 0 means that the payment is executable at all times.`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### DefaultPaymentTermDays
 
-Default payment term in days, starting from the date of receiving the invoice[Required] [Default(0)]
+Default payment term in days, starting from the date of receiving the invoice`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-The date on which this party became a supplier or the date, when the supplier contract was signed.[Filter(ge;le)]
+The date on which this party became a supplier or the date, when the supplier contract was signed.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current supplier is active.[Required] [Default(true)] [Filter(eq)]
+Indicates whether the current supplier is active.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-The unique supplier number.[Filter(eq;like)] [ORD]
+The unique supplier number.`Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -166,7 +166,7 @@ Back-End Default Expression:
 
 ### ThruDate
 
-The date (inclusive) on which this party ceased to be a supplier.[Filter(ge;le)]
+The date (inclusive) on which this party ceased to be a supplier.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

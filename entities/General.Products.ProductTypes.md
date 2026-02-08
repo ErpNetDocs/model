@@ -37,13 +37,13 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](General.Products.ProductTypes.md#code) | string (16) | The unique code of the ProductType. `Required` `Filter(eq;like)` `ORD` 
-| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups.[Required] [Default(false)] [Filter(eq)] 
-| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | Determines whether assets are acquired or retired when products from this type are purchased or sold.[Required] [Default(false)] [Filter(eq)] 
-| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | 1 when the product corresponds to service used in service documents (like service activities)[Required] [Default(false)] [Filter(eq)] 
-| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | Determines whether for the products of this type can be created service agreements.[Required] [Default(false)] [Filter(eq)] 
-| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | Determines whether the products from this type are shipped after sales.[Required] [Default(false)] [Filter(eq)] 
-| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | 1=The products of this type are stocked in a warehouse; 0=otherwise (services)[Required] [Default(true)] [Filter(eq)] 
-| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received.[Required] [Default(false)] 
+| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups.`Required` `Default(false)` `Filter(eq)` 
+| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | Determines whether assets are acquired or retired when products from this type are purchased or sold.`Required` `Default(false)` `Filter(eq)` 
+| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | 1 when the product corresponds to service used in service documents (like service activities)`Required` `Default(false)` `Filter(eq)` 
+| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | Determines whether for the products of this type can be created service agreements.`Required` `Default(false)` `Filter(eq)` 
+| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | Determines whether the products from this type are shipped after sales.`Required` `Default(false)` `Filter(eq)` 
+| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | 1=The products of this type are stocked in a warehouse; 0=otherwise (services)`Required` `Default(true)` `Filter(eq)` 
+| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received.`Required` `Default(false)` 
 | [Name](General.Products.ProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ProductType. `Required` `Filter(eq;like)` 
 
 
@@ -85,7 +85,7 @@ Back-End Default Expression:
 
 ### IsDefault
 
-When checked specifies that this type is set by default for new products unless another type is specified in the product groups.[Required] [Default(false)] [Filter(eq)]
+When checked specifies that this type is set by default for new products unless another type is specified in the product groups.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsFixedAsset
 
-Determines whether assets are acquired or retired when products from this type are purchased or sold.[Required] [Default(false)] [Filter(eq)]
+Determines whether assets are acquired or retired when products from this type are purchased or sold.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### IsServiceActivityService
 
-1 when the product corresponds to service used in service documents (like service activities)[Required] [Default(false)] [Filter(eq)]
+1 when the product corresponds to service used in service documents (like service activities)`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### IsServiced
 
-Determines whether for the products of this type can be created service agreements.[Required] [Default(false)] [Filter(eq)]
+Determines whether for the products of this type can be created service agreements.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### IsShipped
 
-Determines whether the products from this type are shipped after sales.[Required] [Default(false)] [Filter(eq)]
+Determines whether the products from this type are shipped after sales.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### IsStocked
 
-1=The products of this type are stocked in a warehouse; 0=otherwise (services)[Required] [Default(true)] [Filter(eq)]
+1=The products of this type are stocked in a warehouse; 0=otherwise (services)`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### LotAutoCreation
 
-If checked specifies that lots are automatically created by the receiving orders with which the products are received.[Required] [Default(false)]
+If checked specifies that lots are automatically created by the receiving orders with which the products are received.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

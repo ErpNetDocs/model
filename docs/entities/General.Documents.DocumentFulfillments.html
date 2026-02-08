@@ -127,12 +127,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact time in UTC, when the fulfillment was created in the system.[Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]</td>
+<td>The exact time in UTC, when the fulfillment was created in the system.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#destinationentityname">DestinationEntityName</a></td>
 <td>string (64)</td>
-<td>The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.[Required] [Default(&quot;&quot;)] [Filter(eq)] [Introduced in version 22.1.4.7]</td>
+<td>The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.<code>Required</code> <code>Default(&amp;quot;&amp;quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.4.7</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#documentlineid">DocumentLineId</a></td>
@@ -142,32 +142,32 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></td>
 <td><a href="General.Documents.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></td>
-<td>Type of fulfillment: P=Planned; C=Completed.[Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
+<td>Type of fulfillment: P=Planned; C=Completed.<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#isfinal">IsFinal</a></td>
 <td>boolean</td>
-<td>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.[Required] [Filter(eq)]</td>
+<td>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.<code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#lineno">LineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.[Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26]</td>
+<td>Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.<code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#linetype">LineType</a></td>
 <td>string (1)</td>
-<td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.[Required] [Default(&quot;L&quot;)] [Filter(multi eq)] [Introduced in version 21.1.1.26]</td>
+<td>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.<code>Required</code> <code>Default(&amp;quot;L&amp;quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#quantitybase">QuantityBase</a></td>
 <td>decimal (12, 3)</td>
-<td>Fulfilled quantity in the base measurement unit of the product.[Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</td>
+<td>Fulfilled quantity in the base measurement unit of the product.<code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentFulfillments.html#standardquantity">StandardQuantity</a></td>
 <td>decimal (12, 3)</td>
-<td>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.[Required] [Introduced in version 22.1.4.52]</td>
+<td>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.<code>Required</code> <code>Introduced in version 22.1.4.52</code></td>
 </tr>
 </tbody>
 </table>
@@ -247,7 +247,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact time in UTC, when the fulfillment was created in the system.[Required] [Default(NowUtc)] [Filter(multi eq;ge;le)]</p>
+<p>The exact time in UTC, when the fulfillment was created in the system.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationentityname">DestinationEntityName</h3>
-<p>The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.[Required] [Default(&quot;&quot;)] [Filter(eq)] [Introduced in version 22.1.4.7]</p>
+<p>The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.<code>Required</code> <code>Default(&amp;quot;&amp;quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 22.1.4.7</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -271,7 +271,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fulfillmenttype">FulfillmentType</h3>
-<p>Type of fulfillment: P=Planned; C=Completed.[Required] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
+<p>Type of fulfillment: P=Planned; C=Completed.<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p>Type: <strong><a href="General.Documents.DocumentFulfillments.html#fulfillmenttype">FulfillmentType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>FulfillmentType</code>(General.Documents.DocumentFulfillments.md#fulfillmenttype) data attribute<br>
@@ -298,21 +298,21 @@ Allowed Values (General.Documents.DocumentFulfillmentsRepository.FulfillmentType
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isfinal">IsFinal</h3>
-<p>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.[Required] [Filter(eq)]</p>
+<p>Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.<code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.[Filter(multi eq;ge;le)] [Introduced in version 21.1.1.26]</p>
+<p>Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.<code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linetype">LineType</h3>
-<p>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.[Required] [Default(&quot;L&quot;)] [Filter(multi eq)] [Introduced in version 21.1.1.26]</p>
+<p>Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.<code>Required</code> <code>Default(&amp;quot;L&amp;quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 21.1.1.26</code></p>
 <p>Type: <strong>string (1)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -321,14 +321,14 @@ Maximum Length: <strong>1</strong><br>
 Default Value: <strong>L</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Fulfilled quantity in the base measurement unit of the product.[Required] [Filter(multi eq;ge;le)] [Introduced in version 21.1.1.33]</p>
+<p>Fulfilled quantity in the base measurement unit of the product.<code>Required</code> <code>Filter(multi eq;ge;le)</code> <code>Introduced in version 21.1.1.33</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardquantity">StandardQuantity</h3>
-<p>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.[Required] [Introduced in version 22.1.4.52]</p>
+<p>The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.<code>Required</code> <code>Introduced in version 22.1.4.52</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

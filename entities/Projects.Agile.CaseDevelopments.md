@@ -37,10 +37,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ActionDescription](Projects.Agile.CaseDevelopments.md#actiondescription) | string | Specifies the latest action, dependent on DevelopmentType. 
-| [CreationTimeUtc](Projects.Agile.CaseDevelopments.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the development was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly] 
-| [Description](Projects.Agile.CaseDevelopments.md#description) | string (max) __nullable__ | Detailed description of the development.[Filter(like)] 
-| [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | Type of the development - Edit, Assignment, Resolve, etc.[Required] [Default(&quot;EDT&quot;)] [Filter(multi eq)] [ReadOnly] 
-| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state.[Filter(multi eq)] [ReadOnly] 
+| [CreationTimeUtc](Projects.Agile.CaseDevelopments.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the development was created`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` 
+| [Description](Projects.Agile.CaseDevelopments.md#description) | string (max) __nullable__ | Detailed description of the development.`Filter(like)` 
+| [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | [DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype) | Type of the development - Edit, Assignment, Resolve, etc.`Required` `Default(&quot;EDT&quot;)` `Filter(multi eq)` `ReadOnly` 
+| [NewSystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) | [SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__ | When the development incurred changing the state of the case, contains the new state.`Filter(multi eq)` `ReadOnly` 
 
 ## References
 
@@ -74,7 +74,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the development was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD] [ReadOnly]
+The exact date and time (in UTC) when the development was created`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Detailed description of the development.[Filter(like)]
+Detailed description of the development.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### DevelopmentType
 
-Type of the development - Edit, Assignment, Resolve, etc.[Required] [Default(&quot;EDT&quot;)] [Filter(multi eq)] [ReadOnly]
+Type of the development - Edit, Assignment, Resolve, etc.`Required` `Default(&quot;EDT&quot;)` `Filter(multi eq)` `ReadOnly`
 
 Type: **[DevelopmentType](Projects.Agile.CaseDevelopments.md#developmenttype)**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### NewSystemState
 
-When the development incurred changing the state of the case, contains the new state.[Filter(multi eq)] [ReadOnly]
+When the development incurred changing the state of the case, contains the new state.`Filter(multi eq)` `ReadOnly`
 
 Type: **[SystemState](Projects.Agile.CaseDevelopments.md#newsystemstate) __nullable__**  
 Category: **System**  

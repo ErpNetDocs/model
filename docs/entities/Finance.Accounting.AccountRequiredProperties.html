@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html#keyorder">KeyOrder</a></td>
 <td>int32</td>
-<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.[Required]</td>
+<td>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountRequiredProperties.html#keyproperty">KeyProperty</a></td>
 <td>boolean</td>
-<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes[Required] [Default(true)] [Filter(eq)]</td>
+<td>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="keyorder">KeyOrder</h3>
-<p>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.[Required]</p>
+<p>The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -192,7 +192,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.Account.RequiredProperties.Select( c =&gt; c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="keyproperty">KeyProperty</h3>
-<p>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes[Required] [Default(true)] [Filter(eq)]</p>
+<p>Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>

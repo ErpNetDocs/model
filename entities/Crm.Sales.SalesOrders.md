@@ -56,40 +56,40 @@ Aggregate Tree
 | [AdjustmentTime](Crm.Sales.SalesOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Sales.SalesOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AmountToPay](Crm.Sales.SalesOrders.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. 
-| [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document.[Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53] 
+| [ApplyTradeConditions](Crm.Sales.SalesOrders.md#applytradeconditions) | boolean __nullable__ | Specifies whether the system should apply standard pricing and discounts to this document.`Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53` 
 | [CompleteTime](Crm.Sales.SalesOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Crm.Sales.SalesOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Crm.Sales.SalesOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [CreditLimitOverride](Crm.Sales.SalesOrders.md#creditlimitoverride) | boolean | Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables[Required] [Default(false)] [Filter(eq)] 
-| [CustomerPurchaseOrderDate](Crm.Sales.SalesOrders.md#customerpurchaseorderdate) | date __nullable__ | Date of the customer's purchase order[Filter(ge;le)] 
-| [CustomerPurchaseOrderNo](Crm.Sales.SalesOrders.md#customerpurchaseorderno) | string (20) __nullable__ | Reference number of the customer's purchase order[Filter(eq;like)] [ORD] 
+| [CreditLimitOverride](Crm.Sales.SalesOrders.md#creditlimitoverride) | boolean | Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables`Required` `Default(false)` `Filter(eq)` 
+| [CustomerPurchaseOrderDate](Crm.Sales.SalesOrders.md#customerpurchaseorderdate) | date __nullable__ | Date of the customer's purchase order`Filter(ge;le)` 
+| [CustomerPurchaseOrderNo](Crm.Sales.SalesOrders.md#customerpurchaseorderno) | string (20) __nullable__ | Reference number of the customer's purchase order`Filter(eq;like)` `ORD` 
 | [DeliveryTermsCode](Crm.Sales.SalesOrders.md#deliverytermscode) | [DeliveryTerms](Crm.Sales.SalesOrders.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting 
 | [DocumentDate](Crm.Sales.SalesOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Crm.Sales.SalesOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Crm.Sales.SalesOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Crm.Sales.SalesOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Crm.Sales.SalesOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1] 
-| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date __nullable__ | When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1] 
+| [FiscalSalesNumber](Crm.Sales.SalesOrders.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.`Filter(multi eq;like)` `ReadOnly` `Introduced in version 19.1` 
+| [FromDate](Crm.Sales.SalesOrders.md#fromdate) | date __nullable__ | When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.`Filter(ge;le)` `Introduced in version 20.1` 
 | [FullState](Crm.Sales.SalesOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
-| [<s>IsReleased</s>](Crm.Sales.SalesOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
-| [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
-| [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | 1 when the order is valid (e.g. released and not void). Used for internal processing.[Required] [Default(false)] [ReadOnly] 
+| [<s>IsReleased</s>](Crm.Sales.SalesOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
+| [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | 1 when the order is valid (e.g. released and not void). Used for internal processing.`Required` `Default(false)` `ReadOnly` 
 | [<s>Notes</s>](Crm.Sales.SalesOrders.md#notes) | string (254) __nullable__ | **OBSOLETE! Do not use!** Notes for this SalesOrder. `Obsolete` `Obsoleted in version 24.1.1.4` 
 | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Crm.Sales.SalesOrders.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Crm.Sales.SalesOrders.md#paymentduedate) | datetime __nullable__ | The last term for the payment of the sales order[Filter(ge;le)] 
-| [PaymentDueStartDate](Crm.Sales.SalesOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment.[Filter(ge;le)] 
+| [PaymentDueDate](Crm.Sales.SalesOrders.md#paymentduedate) | datetime __nullable__ | The last term for the payment of the sales order`Filter(ge;le)` 
+| [PaymentDueStartDate](Crm.Sales.SalesOrders.md#paymentduestartdate) | datetime __nullable__ | The date when the payment becomes due for documents with one installment.`Filter(ge;le)` 
 | [PlanningOnly](Crm.Sales.SalesOrders.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Crm.Sales.SalesOrders.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Crm.Sales.SalesOrders.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Crm.Sales.SalesOrders.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReleaseTime](Crm.Sales.SalesOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date __nullable__ | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.[Filter(ge;le)] 
+| [RequiredDeliveryDate](Crm.Sales.SalesOrders.md#requireddeliverydate) | date __nullable__ | The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.`Filter(ge;le)` 
 | [State](Crm.Sales.SalesOrders.md#state) | [DocumentState](Crm.Sales.SalesOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Crm.Sales.SalesOrders.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ToDate](Crm.Sales.SalesOrders.md#todate) | date __nullable__ | When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1] 
+| [ToDate](Crm.Sales.SalesOrders.md#todate) | date __nullable__ | When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.`Filter(ge;le)` `Introduced in version 20.1` 
 | [TotalLineAmount](Crm.Sales.SalesOrders.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. 
 | [Void](Crm.Sales.SalesOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Crm.Sales.SalesOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -216,7 +216,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyTradeConditions
 
-Specifies whether the system should apply standard pricing and discounts to this document.[Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53]
+Specifies whether the system should apply standard pricing and discounts to this document.`Default(true)` `Filter(eq)` `Introduced in version 25.1.2.53`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -261,7 +261,7 @@ Show in UI: **HiddenByDefault**
 
 ### CreditLimitOverride
 
-Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables[Required] [Default(false)] [Filter(eq)]
+Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -272,7 +272,7 @@ Show in UI: **ShownByDefault**
 
 ### CustomerPurchaseOrderDate
 
-Date of the customer's purchase order[Filter(ge;le)]
+Date of the customer's purchase order`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -282,7 +282,7 @@ Show in UI: **HiddenByDefault**
 
 ### CustomerPurchaseOrderNo
 
-Reference number of the customer's purchase order[Filter(eq;like)] [ORD]
+Reference number of the customer's purchase order`Filter(eq;like)` `ORD`
 
 Type: **string (20) __nullable__**  
 Indexed: **True**  
@@ -382,7 +382,7 @@ Show in UI: **CannotBeShown**
 
 ### FiscalSalesNumber
 
-Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1]
+Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.`Filter(multi eq;like)` `ReadOnly` `Introduced in version 19.1`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -393,7 +393,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]
+When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.`Filter(ge;le)` `Introduced in version 20.1`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -478,7 +478,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -489,7 +489,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -500,7 +500,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsValidField
 
-1 when the order is valid (e.g. released and not void). Used for internal processing.[Required] [Default(false)] [ReadOnly]
+1 when the order is valid (e.g. released and not void). Used for internal processing.`Required` `Default(false)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -541,7 +541,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-The last term for the payment of the sales order[Filter(ge;le)]
+The last term for the payment of the sales order`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -553,7 +553,7 @@ Front-End Recalc Expressions:
 `obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentTermDays != 0), obj.ShipToCustomer.DefaultPaymentTermDays, obj.Customer.DefaultPaymentTermDays), Double))`
 ### PaymentDueStartDate
 
-The date when the payment becomes due for documents with one installment.[Filter(ge;le)]
+The date when the payment becomes due for documents with one installment.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -619,7 +619,7 @@ Show in UI: **HiddenByDefault**
 
 ### RequiredDeliveryDate
 
-The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.[Filter(ge;le)]
+The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -666,7 +666,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToDate
 
-When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]
+When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.`Filter(ge;le)` `Introduced in version 20.1`
 
 Type: **date __nullable__**  
 Category: **System**  

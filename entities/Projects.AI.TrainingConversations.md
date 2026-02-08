@@ -34,10 +34,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Projects.AI.TrainingConversations.md#creationtimeutc) | datetime | The date and time (UTC) when the conversation was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] 
-| [LastUpdateTimeUtc](Projects.AI.TrainingConversations.md#lastupdatetimeutc) | datetime | Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.[Required] [Filter(ge;le)] [ORD] [ReadOnly] 
+| [CreationTimeUtc](Projects.AI.TrainingConversations.md#creationtimeutc) | datetime | The date and time (UTC) when the conversation was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` 
+| [LastUpdateTimeUtc](Projects.AI.TrainingConversations.md#lastupdatetimeutc) | datetime | Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.`Required` `Filter(ge;le)` `ORD` `ReadOnly` 
 | [Notes](Projects.AI.TrainingConversations.md#notes) | string (max) __nullable__ | Notes for this training conversation 
-| [Origin](Projects.AI.TrainingConversations.md#origin) | [Origin](Projects.AI.TrainingConversations.md#origin) | Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.[Required] [Default(&quot;USR&quot;)] [Filter(multi eq)] [ReadOnly] 
+| [Origin](Projects.AI.TrainingConversations.md#origin) | [Origin](Projects.AI.TrainingConversations.md#origin) | Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.`Required` `Default(&quot;USR&quot;)` `Filter(multi eq)` `ReadOnly` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### CreationTimeUtc
 
-The date and time (UTC) when the conversation was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly]
+The date and time (UTC) when the conversation was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.[Required] [Filter(ge;le)] [ORD] [ReadOnly]
+Time when the conversation or any messages in it were created or last modified. Can be used to track changes to the whole aggregate.`Required` `Filter(ge;le)` `ORD` `ReadOnly`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### Origin
 
-Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.[Required] [Default(&quot;USR&quot;)] [Filter(multi eq)] [ReadOnly]
+Denotes how (based on what other object) was the conversation initially created. Possible values - User-entered, Chat, Calendar, etc.`Required` `Default(&quot;USR&quot;)` `Filter(multi eq)` `ReadOnly`
 
 Type: **[Origin](Projects.AI.TrainingConversations.md#origin)**  
 Category: **System**  

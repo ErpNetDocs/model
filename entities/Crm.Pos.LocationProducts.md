@@ -36,13 +36,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GrossPrice](Crm.Pos.LocationProducts.md#grossprice) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.[Currency: Product.ProductCurrency] [Introduced in version 26.2.1.26] 
+| [GrossPrice](Crm.Pos.LocationProducts.md#grossprice) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.`Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26` 
 | [MaxQuantity](Crm.Pos.LocationProducts.md#maxquantity) | decimal (10, 3) __nullable__ | Maximum target on-hand quantity for this product in this POS location. Used to calculate replenishment need (MaxQuantity - CurrentOnHand). 
 | [MinQuantity](Crm.Pos.LocationProducts.md#minquantity) | decimal (10, 3) __nullable__ | Minimum desired on-hand quantity for this product in this POS location. Used for basic replenishment and stock alerts. 
 | [Placement](Crm.Pos.LocationProducts.md#placement) | string (254) __nullable__ | Free-text description of default placement 
-| [Status](Crm.Pos.LocationProducts.md#status) | [Status](Crm.Pos.LocationProducts.md#status) | Listing state[Required] [Filter(multi eq)] 
-| [ValidFrom](Crm.Pos.LocationProducts.md#validfrom) | date __nullable__ | Begining of validity[Filter(eq;ge;le)] 
-| [ValidTo](Crm.Pos.LocationProducts.md#validto) | date __nullable__ | End of validity[Filter(eq;ge;le)] 
+| [Status](Crm.Pos.LocationProducts.md#status) | [Status](Crm.Pos.LocationProducts.md#status) | Listing state`Required` `Filter(multi eq)` 
+| [ValidFrom](Crm.Pos.LocationProducts.md#validfrom) | date __nullable__ | Begining of validity`Filter(eq;ge;le)` 
+| [ValidTo](Crm.Pos.LocationProducts.md#validto) | date __nullable__ | End of validity`Filter(eq;ge;le)` 
 
 ## References
 
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### GrossPrice
 
-Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.[Currency: Product.ProductCurrency] [Introduced in version 26.2.1.26]
+Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.`Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26`
 
 Type: **[Amount (18, 4)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Listing state[Required] [Filter(multi eq)]
+Listing state`Required` `Filter(multi eq)`
 
 Type: **[Status](Crm.Pos.LocationProducts.md#status)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-Begining of validity[Filter(eq;ge;le)]
+Begining of validity`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-End of validity[Filter(eq;ge;le)]
+End of validity`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

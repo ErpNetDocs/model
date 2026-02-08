@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime | When the procedure was completed.[Required] [Filter(eq;ge;le)] [ReadOnly] 
-| [StartedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#startedatutc) | datetime | When the procedure was started.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly] 
-| [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | Current status.[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)] 
+| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime | When the procedure was completed.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [StartedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#startedatutc) | datetime | When the procedure was started.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
+| [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | Current status.`Required` `Default(&quot;NEW&quot;)` `Filter(multi eq)` 
 
 ## References
 
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### CompletedAtUtc
 
-When the procedure was completed.[Required] [Filter(eq;ge;le)] [ReadOnly]
+When the procedure was completed.`Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### StartedAtUtc
 
-When the procedure was started.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]
+When the procedure was started.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Current status.[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)]
+Current status.`Required` `Default(&quot;NEW&quot;)` `Filter(multi eq)`
 
 Type: **[Status](Projects.Procedures.OperationalProcedureExecutions.md#status)**  
 Category: **System**  

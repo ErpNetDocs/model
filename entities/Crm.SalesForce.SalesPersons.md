@@ -43,9 +43,9 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CommissionPercent](Crm.SalesForce.SalesPersons.md#commissionpercent) | decimal (7, 6) __nullable__ | The percentage (0..1) of commission percent. NULL means that there is no commission percent. 
 | [CommissionPolicyId](Crm.SalesForce.SalesPersons.md#commissionpolicyid) | guid __nullable__ | Current commission policy for the sales person. null means there is no commission policy. `Filter(multi eq)` 
-| [ContractEndDate](Crm.SalesForce.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. NULL when the sales person is still active.[Filter(ge;le)] 
-| [ContractStartDate](Crm.SalesForce.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. NULL when it is unknown.[Filter(ge;le)] 
-| [IsActive](Crm.SalesForce.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.[Required] [Default(true)] [Filter(eq)] 
+| [ContractEndDate](Crm.SalesForce.SalesPersons.md#contractenddate) | datetime __nullable__ | The ending date of the contract with the sales person. NULL when the sales person is still active.`Filter(ge;le)` 
+| [ContractStartDate](Crm.SalesForce.SalesPersons.md#contractstartdate) | datetime __nullable__ | The starting date of the contract with the sales person. NULL when it is unknown.`Filter(ge;le)` 
+| [IsActive](Crm.SalesForce.SalesPersons.md#isactive) | boolean | Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.`Required` `Default(true)` `Filter(eq)` 
 
 ## References
 
@@ -92,7 +92,7 @@ Show in UI: **CannotBeShown**
 
 ### ContractEndDate
 
-The ending date of the contract with the sales person. NULL when the sales person is still active.[Filter(ge;le)]
+The ending date of the contract with the sales person. NULL when the sales person is still active.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### ContractStartDate
 
-The starting date of the contract with the sales person. NULL when it is unknown.[Filter(ge;le)]
+The starting date of the contract with the sales person. NULL when it is unknown.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.[Required] [Default(true)] [Filter(eq)]
+Specifies whether the sales person is active and should be included in the list when choosing sales person through drop-downs, lists, etc.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

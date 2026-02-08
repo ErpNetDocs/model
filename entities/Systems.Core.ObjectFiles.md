@@ -32,21 +32,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessPermission](Systems.Core.ObjectFiles.md#accesspermission) | [AccessPermission](Systems.Core.ObjectFiles.md#accesspermission) | Indicates who has permission to access this file.[Required] [Default(&quot;IN&quot;)] [Filter(multi eq)] [Introduced in version 24.1.4.56] 
-| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.[Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1] 
-| [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [Introduced in version 20.1] 
+| [AccessPermission](Systems.Core.ObjectFiles.md#accesspermission) | [AccessPermission](Systems.Core.ObjectFiles.md#accesspermission) | Indicates who has permission to access this file.`Required` `Default(&quot;IN&quot;)` `Filter(multi eq)` `Introduced in version 24.1.4.56` 
+| [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | [ContentLocation](Systems.Core.ObjectFiles.md#contentlocation) | The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.`Required` `Default(&quot;EMB&quot;)` `Filter(multi eq)` `Introduced in version 20.1` 
+| [CreationTimeUtc](Systems.Core.ObjectFiles.md#creationtimeutc) | datetime | Time (in UTC), when the file was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `Introduced in version 20.1` 
 | [EmbeddedFileContents](Systems.Core.ObjectFiles.md#embeddedfilecontents) | byte[] __nullable__ | Contains the contents of the file, when it is embedded in the database. NULL for linked files 
-| [EmbeddedThumbnailContents](Systems.Core.ObjectFiles.md#embeddedthumbnailcontents) | byte[] __nullable__ | Contains the compressed and/or resized contents of the file if applicable.[ReadOnly] [Introduced in version 24.1.1.85] 
-| [FileName](Systems.Core.ObjectFiles.md#filename) | string (254) | The file name of the linked or embedded file[Required] [Filter(eq;like)] 
-| [FileSizeBytes](Systems.Core.ObjectFiles.md#filesizebytes) | int32 __nullable__ | The file size in bytes. If empty the file size is unknown.[Introduced in version 22.1.5.46] 
-| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated.[Required] [Default(NowUtc)] [Filter(ge;le)] [Introduced in version 20.1] 
-| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (1024) __nullable__ | When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files[Filter(eq;like)] 
-| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media.[Introduced in version 20.1] 
-| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (128) __nullable__ | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.[Introduced in version 20.1] 
-| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media.[Introduced in version 20.1] 
+| [EmbeddedThumbnailContents](Systems.Core.ObjectFiles.md#embeddedthumbnailcontents) | byte[] __nullable__ | Contains the compressed and/or resized contents of the file if applicable.`ReadOnly` `Introduced in version 24.1.1.85` 
+| [FileName](Systems.Core.ObjectFiles.md#filename) | string (254) | The file name of the linked or embedded file`Required` `Filter(eq;like)` 
+| [FileSizeBytes](Systems.Core.ObjectFiles.md#filesizebytes) | int32 __nullable__ | The file size in bytes. If empty the file size is unknown.`Introduced in version 22.1.5.46` 
+| [LastUpdateTimeUtc](Systems.Core.ObjectFiles.md#lastupdatetimeutc) | datetime | Time (in UTC), when the file was last updated.`Required` `Default(NowUtc)` `Filter(ge;le)` `Introduced in version 20.1` 
+| [LinkedFilePath](Systems.Core.ObjectFiles.md#linkedfilepath) | string (1024) __nullable__ | When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files`Filter(eq;like)` 
+| [MediaHeight](Systems.Core.ObjectFiles.md#mediaheight) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media.`Introduced in version 20.1` 
+| [MediaType](Systems.Core.ObjectFiles.md#mediatype) | string (128) __nullable__ | For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.`Introduced in version 20.1` 
+| [MediaWidth](Systems.Core.ObjectFiles.md#mediawidth) | int32 __nullable__ | Used (non-null) only for media files. Specifies the width for displaying the media.`Introduced in version 20.1` 
 | [Notes](Systems.Core.ObjectFiles.md#notes) | string (max) __nullable__ | User notes for the file attachment 
-| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (32) __nullable__ | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.[Filter(eq)] 
-| [Section](Systems.Core.ObjectFiles.md#section) | string (64) __nullable__ | A section name used to group files[Introduced in version 21.1.1.84] 
+| [PurposeCode](Systems.Core.ObjectFiles.md#purposecode) | string (32) __nullable__ | Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.`Filter(eq)` 
+| [Section](Systems.Core.ObjectFiles.md#section) | string (64) __nullable__ | A section name used to group files`Introduced in version 21.1.1.84` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### AccessPermission
 
-Indicates who has permission to access this file.[Required] [Default(&quot;IN&quot;)] [Filter(multi eq)] [Introduced in version 24.1.4.56]
+Indicates who has permission to access this file.`Required` `Default(&quot;IN&quot;)` `Filter(multi eq)` `Introduced in version 24.1.4.56`
 
 Type: **[AccessPermission](Systems.Core.ObjectFiles.md#accesspermission)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentLocation
 
-The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.[Required] [Default(&quot;EMB&quot;)] [Filter(multi eq)] [Introduced in version 20.1]
+The location of the file contents. EMB=Embedded in the database; URL=Internet URL; FSL=File system link.`Required` `Default(&quot;EMB&quot;)` `Filter(multi eq)` `Introduced in version 20.1`
 
 Type: **[ContentLocation](Systems.Core.ObjectFiles.md#contentlocation)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-Time (in UTC), when the file was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [Introduced in version 20.1]
+Time (in UTC), when the file was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `Introduced in version 20.1`
 
 Type: **datetime**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### EmbeddedThumbnailContents
 
-Contains the compressed and/or resized contents of the file if applicable.[ReadOnly] [Introduced in version 24.1.1.85]
+Contains the compressed and/or resized contents of the file if applicable.`ReadOnly` `Introduced in version 24.1.1.85`
 
 Type: **byte[] __nullable__**  
 Category: **Delay Loaded Attributes**  
@@ -144,7 +144,7 @@ Show in UI: **HiddenByDefault**
 
 ### FileName
 
-The file name of the linked or embedded file[Required] [Filter(eq;like)]
+The file name of the linked or embedded file`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### FileSizeBytes
 
-The file size in bytes. If empty the file size is unknown.[Introduced in version 22.1.5.46]
+The file size in bytes. If empty the file size is unknown.`Introduced in version 22.1.5.46`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -165,7 +165,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-Time (in UTC), when the file was last updated.[Required] [Default(NowUtc)] [Filter(ge;le)] [Introduced in version 20.1]
+Time (in UTC), when the file was last updated.`Required` `Default(NowUtc)` `Filter(ge;le)` `Introduced in version 20.1`
 
 Type: **datetime**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### LinkedFilePath
 
-When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files[Filter(eq;like)]
+When the file is linked, contains the full path (including the file name) to the linked file. NULL for embedded files`Filter(eq;like)`
 
 Type: **string (1024) __nullable__**  
 Category: **System**  
@@ -187,7 +187,7 @@ Show in UI: **ShownByDefault**
 
 ### MediaHeight
 
-Used (non-null) only for media files. Specifies the width for displaying the media.[Introduced in version 20.1]
+Used (non-null) only for media files. Specifies the width for displaying the media.`Introduced in version 20.1`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -197,7 +197,7 @@ Show in UI: **ShownByDefault**
 
 ### MediaType
 
-For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.[Introduced in version 20.1]
+For media files, contains the Media Type as per the IANA registry (formerly known as the MIME Type). NULL for non-media files.`Introduced in version 20.1`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -208,7 +208,7 @@ Show in UI: **ShownByDefault**
 
 ### MediaWidth
 
-Used (non-null) only for media files. Specifies the width for displaying the media.[Introduced in version 20.1]
+Used (non-null) only for media files. Specifies the width for displaying the media.`Introduced in version 20.1`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### PurposeCode
 
-Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.[Filter(eq)]
+Code, designating the usage purpose of the file. The meaning of each code is up to the application with the exception of 'default/image', which is standartised as the default image for many types of objects.`Filter(eq)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -240,7 +240,7 @@ Show in UI: **ShownByDefault**
 
 ### Section
 
-A section name used to group files[Introduced in version 21.1.1.84]
+A section name used to group files`Introduced in version 21.1.1.84`
 
 Type: **string (64) __nullable__**  
 Category: **System**  

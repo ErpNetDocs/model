@@ -120,17 +120,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantity">ConfirmedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.[Unit: QuantityUnit]</td>
+<td>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.<code>Unit: QuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedquantitybase">ConfirmedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit]</td>
+<td>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#confirmedstandardquantitybase">ConfirmedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -140,12 +140,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>Checked if this receiving order should prohibit further receiving order for the purchase order line.[Required] [Default(false)]</td>
+<td>Checked if this receiving order should prohibit further receiving order for the purchase order line.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The total amount for the line. Equals to Quantity * Price_Per_Unit[Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</td>
+<td>The total amount for the line. Equals to Quantity * Price_Per_Unit<code>Currency: ReceivingOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#lineno">LineNo</a></td>
@@ -160,27 +160,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#priceperunit">PricePerUnit</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></td>
-<td>The unit price of the received products, in the documents currency.[Currency: ReceivingOrder.DocumentCurrency] [Default(0)]</td>
+<td>The unit price of the received products, in the documents currency.<code>Currency: ReceivingOrder.DocumentCurrency</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.[Required]</td>
+<td>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The received quantity.[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>The received quantity.<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Quantity, in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+<td>The equivalence of Quantity, in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Procurement.ReceivingOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
 </table>
@@ -285,14 +285,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="confirmedquantity">ConfirmedQuantity</h3>
-<p>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.[Unit: QuantityUnit]</p>
+<p>The final confirmed received quantity, after adjustments. It is used in all calculations for the order. Usually changed with adjustments to the receivemnt order, in regard to the warehouse receipt or the invoice. When null, its value is equal to Quantity.<code>Unit: QuantityUnit</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="confirmedquantitybase">ConfirmedQuantityBase</h3>
-<p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit]</p>
+<p>The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -301,7 +301,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ConfirmedQuantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConfirmedQuantityBase, obj.ConfirmedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="confirmedstandardquantitybase">ConfirmedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -317,7 +317,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>Checked if this receiving order should prohibit further receiving order for the purchase order line.[Required] [Default(false)]</p>
+<p>Checked if this receiving order should prohibit further receiving order for the purchase order line.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -325,7 +325,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>The total amount for the line. Equals to Quantity * Price_Per_Unit[Currency: ReceivingOrder.DocumentCurrency] [Required] [Default(0)]</p>
+<p>The total amount for the line. Equals to Quantity * Price_Per_Unit<code>Currency: ReceivingOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -356,7 +356,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priceperunit">PricePerUnit</h3>
-<p>The unit price of the received products, in the documents currency.[Currency: ReceivingOrder.DocumentCurrency] [Default(0)]</p>
+<p>The unit price of the received products, in the documents currency.<code>Currency: ReceivingOrder.DocumentCurrency</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -366,7 +366,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.PurchaseProductPrice.GetPurchasePrice( obj.QuantityUnit, obj.ReceivingOrder.CurrencyDirectory, obj.ReceivingOrder.DocumentCurrency)</code></p>
 <h3 id="productdescription">ProductDescription</h3>
-<p>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.[Required]</p>
+<p>The name of the received product, initially copied from the name in the product definition. The field can be edited by the user.<code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -377,7 +377,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.Name</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>The received quantity.[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>The received quantity.<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -385,7 +385,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity, in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+<p>The equivalence of Quantity, in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -396,7 +396,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

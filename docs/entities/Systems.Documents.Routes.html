@@ -126,52 +126,52 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Routes.html#activationdate">ActivationDate</a></td>
 <td>date</td>
-<td>The date from which (including) the route is active. The date is matched against the document date of the generating document.[Required] [Default(Today)] [Filter(ge;le)]</td>
+<td>The date from which (including) the route is active. The date is matched against the document date of the generating document.<code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#active">Active</a></td>
 <td>boolean</td>
-<td>1 if the route is active, otherwise 0.[Required] [Default(true)] [Filter(eq)]</td>
+<td>1 if the route is active, otherwise 0.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></td>
 <td><a href="Systems.Documents.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></td>
-<td>Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.[Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</td>
+<td>Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.<code>Required</code> <code>Default(&amp;quot;B&amp;quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#allowobsoletegeneration">AllowObsoleteGeneration</a></td>
 <td>boolean</td>
-<td>Allows the usage of unsupported generation procedures (marked as obsolete)[Required] [Default(false)]</td>
+<td>Allows the usage of unsupported generation procedures (marked as obsolete)<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#conditionfilterxml">ConditionFilterXML</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>Contains filter condition, which the document must match in order to execute the route.[Unit: obj.DocumentType.EntityName]</td>
+<td>Contains filter condition, which the document must match in order to execute the route.<code>Unit: obj.DocumentType.EntityName</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#conditionstatesbitmask">ConditionStatesBitMask</a></td>
 <td><a href="Systems.Documents.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></td>
-<td>The system states for which to execute the specified route.[Required] [Default(0)] [Filter(like)]</td>
+<td>The system states for which to execute the specified route.<code>Required</code> <code>Default(0)</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></td>
 <td><a href="Systems.Documents.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></td>
-<td>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;[Required] [Default(&quot;A&quot;)]</td>
+<td>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;<code>Required</code> <code>Default(&amp;quot;A&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#deactivationdate">DeactivationDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.[Filter(ge;le)]</td>
+<td>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#destinationstate">DestinationState</a></td>
 <td><a href="Systems.Documents.Routes.html#destinationstate">DocumentState</a></td>
-<td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed[Required]</td>
+<td>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#negativeconditionfilterxml">NegativeConditionFilterXml</a></td>
 <td>dataaccessfilter <strong>nullable</strong></td>
-<td>The negative condition should NOT be matched by the document in order to execute the route.[Unit: obj.DocumentType.EntityName]</td>
+<td>The negative condition should NOT be matched by the document in order to execute the route.<code>Unit: obj.DocumentType.EntityName</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#notes">Notes</a></td>
@@ -181,27 +181,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
 <td><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
-<td>Determines the default relationship type between the generated document and the parent document.[Required] [Default(&quot;S&quot;)]</td>
+<td>Determines the default relationship type between the generated document and the parent document.<code>Required</code> <code>Default(&amp;quot;S&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#procedurename">ProcedureName</a></td>
 <td>string (254)</td>
-<td>The system code of the generation procedure, which must be executed by the route.[Required]</td>
+<td>The system code of the generation procedure, which must be executed by the route.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#processevent">ProcessEvent</a></td>
 <td>string (254)</td>
-<td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.[Required] [Filter(eq)]</td>
+<td>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.<code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#readonly">ReadOnly</a></td>
 <td>boolean</td>
-<td>Indicates wheather the destination document shoul be read only. 1 - the destination document is read only[Required] [Default(false)]</td>
+<td>Indicates wheather the destination document shoul be read only. 1 - the destination document is read only<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.Routes.html#schemaxml"><s>SchemaXML</s></a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> Not used.[Obsolete] [Obsoleted in version 22.1.6.61]</td>
+<td><strong>OBSOLETE! Do not use!</strong> Not used.<code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 </tbody>
 </table>
@@ -318,7 +318,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="activationdate">ActivationDate</h3>
-<p>The date from which (including) the route is active. The date is matched against the document date of the generating document.[Required] [Default(Today)] [Filter(ge;le)]</p>
+<p>The date from which (including) the route is active. The date is matched against the document date of the generating document.<code>Required</code> <code>Default(Today)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -326,7 +326,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="active">Active</h3>
-<p>1 if the route is active, otherwise 0.[Required] [Default(true)] [Filter(eq)]</p>
+<p>1 if the route is active, otherwise 0.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -334,7 +334,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowedgenerationtypes">AllowedGenerationTypes</h3>
-<p>Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.[Required] [Default(&quot;B&quot;)] [Filter(multi eq)]</p>
+<p>Determines the possible types of the generation of the destination document - automatic generation, manually trigerred generation or both.<code>Required</code> <code>Default(&amp;quot;B&amp;quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html#allowedgenerationtypes">AllowedGenerationTypes</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>AllowedGenerationTypes</code>(Systems.Documents.Routes.md#allowedgenerationtypes) data attribute<br>
@@ -366,7 +366,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>BothAutoAndManually</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowobsoletegeneration">AllowObsoleteGeneration</h3>
-<p>Allows the usage of unsupported generation procedures (marked as obsolete)[Required] [Default(false)]</p>
+<p>Allows the usage of unsupported generation procedures (marked as obsolete)<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -374,14 +374,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionfilterxml">ConditionFilterXML</h3>
-<p>Contains filter condition, which the document must match in order to execute the route.[Unit: obj.DocumentType.EntityName]</p>
+<p>Contains filter condition, which the document must match in order to execute the route.<code>Unit: obj.DocumentType.EntityName</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conditionstatesbitmask">ConditionStatesBitMask</h3>
-<p>The system states for which to execute the specified route.[Required] [Default(0)] [Filter(like)]</p>
+<p>The system states for which to execute the specified route.<code>Required</code> <code>Default(0)</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html#conditionstatesbitmask">DocumentStateFlags</a></strong><br>
 Category: <strong>System</strong><br>
 Enumeration of document system states that can be combined in bit mask<br>
@@ -429,7 +429,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="connectedpartycondition">ConnectedPartyCondition</h3>
-<p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;[Required] [Default(&quot;A&quot;)]</p>
+<p>A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;<code>Required</code> <code>Default(&amp;quot;A&amp;quot;)</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html#connectedpartycondition">ConnectedPartyCondition</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ConnectedPartyCondition</code>(Systems.Documents.Routes.md#connectedpartycondition) data attribute<br>
@@ -461,14 +461,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>AnyParty</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="deactivationdate">DeactivationDate</h3>
-<p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.[Filter(ge;le)]</p>
+<p>The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="destinationstate">DestinationState</h3>
-<p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed[Required]</p>
+<p>0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed<code>Required</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html#destinationstate">DocumentState</a></strong><br>
 Category: <strong>System</strong><br>
 Enumeration of document system states<br>
@@ -515,7 +515,7 @@ Allowed Values (General.Documents.DocumentState Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="negativeconditionfilterxml">NegativeConditionFilterXml</h3>
-<p>The negative condition should NOT be matched by the document in order to execute the route.[Unit: obj.DocumentType.EntityName]</p>
+<p>The negative condition should NOT be matched by the document in order to execute the route.<code>Unit: obj.DocumentType.EntityName</code></p>
 <p>Type: <strong>dataaccessfilter <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -530,7 +530,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentdocumentrelationshiptype">ParentDocumentRelationshipType</h3>
-<p>Determines the default relationship type between the generated document and the parent document.[Required] [Default(&quot;S&quot;)]</p>
+<p>Determines the default relationship type between the generated document and the parent document.<code>Required</code> <code>Default(&amp;quot;S&amp;quot;)</code></p>
 <p>Type: <strong><a href="Systems.Documents.Routes.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></strong><br>
 Category: <strong>System</strong><br>
 Relationship between parent and child documents<br>
@@ -562,7 +562,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Subtask</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="procedurename">ProcedureName</h3>
-<p>The system code of the generation procedure, which must be executed by the route.[Required]</p>
+<p>The system code of the generation procedure, which must be executed by the route.<code>Required</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -570,7 +570,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="processevent">ProcessEvent</h3>
-<p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.[Required] [Filter(eq)]</p>
+<p>Event which triggers the route. Usually the event is change of state. Every document entity may define own custom events as well.<code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -578,7 +578,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="readonly">ReadOnly</h3>
-<p>Indicates wheather the destination document shoul be read only. 1 - the destination document is read only[Required] [Default(false)]</p>
+<p>Indicates wheather the destination document shoul be read only. 1 - the destination document is read only<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -586,7 +586,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="schemaxml">SchemaXML</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Not used.[Obsolete] [Obsoleted in version 22.1.6.61]</p>
+<p><strong>OBSOLETE! Do not use!</strong> Not used.<code>Obsolete</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

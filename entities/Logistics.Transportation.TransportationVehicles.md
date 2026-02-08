@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Transportation.TransportationVehicles.md#code) | string (16) | The unique code (or call sign) of this transportation vehicle.[Required] [Filter(eq;like)] [ORD] 
+| [Code](Logistics.Transportation.TransportationVehicles.md#code) | string (16) | The unique code (or call sign) of this transportation vehicle.`Required` `Filter(eq;like)` `ORD` 
 | [MaxCargoWeightKg](Logistics.Transportation.TransportationVehicles.md#maxcargoweightkg) | int32 __nullable__ | The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced. 
 | [MaxPalletsCount](Logistics.Transportation.TransportationVehicles.md#maxpalletscount) | int32 __nullable__ | The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced. 
 | [Notes](Logistics.Transportation.TransportationVehicles.md#notes) | string (max) __nullable__ | Notes for this TransportationVehicle. 
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### Code
 
-The unique code (or call sign) of this transportation vehicle.[Required] [Filter(eq;like)] [ORD]
+The unique code (or call sign) of this transportation vehicle.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  

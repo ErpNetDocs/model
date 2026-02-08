@@ -45,18 +45,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowedValuesEntityName](Systems.Bpm.CustomProperties.md#allowedvaluesentityname) | string (64) __nullable__ | When not NULL, specifies that the allowed values are retrieved from the specified entity[Filter(eq)] 
-| [AllowedValuesFilterXML](Systems.Bpm.CustomProperties.md#allowedvaluesfilterxml) | dataaccessfilter __nullable__ | When not NULL specifies the filter to apply when extracting allowed values from entity[Unit: obj.AllowedValuesEntityName] 
-| [Code](Systems.Bpm.CustomProperties.md#code) | string (40) | Unique property code.[Required] [Filter(multi eq;like)] [ORD] 
-| [EntityName](Systems.Bpm.CustomProperties.md#entityname) | string (64) | The entity for which the property is applicable.[Required] [Filter(eq)] [ORD] 
-| [Hint](Systems.Bpm.CustomProperties.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the property.[Filter(multi eq;like)] [Introduced in version 20.1] 
-| [IsActive](Systems.Bpm.CustomProperties.md#isactive) | boolean | Indicates whether this custom property is active[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.3.19] 
+| [AllowedValuesEntityName](Systems.Bpm.CustomProperties.md#allowedvaluesentityname) | string (64) __nullable__ | When not NULL, specifies that the allowed values are retrieved from the specified entity`Filter(eq)` 
+| [AllowedValuesFilterXML](Systems.Bpm.CustomProperties.md#allowedvaluesfilterxml) | dataaccessfilter __nullable__ | When not NULL specifies the filter to apply when extracting allowed values from entity`Unit: obj.AllowedValuesEntityName` 
+| [Code](Systems.Bpm.CustomProperties.md#code) | string (40) | Unique property code.`Required` `Filter(multi eq;like)` `ORD` 
+| [EntityName](Systems.Bpm.CustomProperties.md#entityname) | string (64) | The entity for which the property is applicable.`Required` `Filter(eq)` `ORD` 
+| [Hint](Systems.Bpm.CustomProperties.md#hint) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The hint, which is displayed alongside the property.`Filter(multi eq;like)` `Introduced in version 20.1` 
+| [IsActive](Systems.Bpm.CustomProperties.md#isactive) | boolean | Indicates whether this custom property is active`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.3.19` 
 | [KeyOrder](Systems.Bpm.CustomProperties.md#keyorder) | byte __nullable__ | When not null, indicates, that the property is a key property and contains the property consequtive position withing the entity. Used for BI and other analysis 
-| [LimitToAllowedValues](Systems.Bpm.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value.[Required] [Default(false)] [Filter(eq)] 
+| [LimitToAllowedValues](Systems.Bpm.CustomProperties.md#limittoallowedvalues) | boolean | When true, allows the property to be set only to allowed value. When false, the property can have any value.`Required` `Default(false)` `Filter(eq)` 
 | [MaskLength](Systems.Bpm.CustomProperties.md#masklength) | int16 __nullable__ | Limits te length of the property value to the specified number of characters. Null means no limitation 
 | [Name](Systems.Bpm.CustomProperties.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CustomProperty. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.CustomProperties.md#notes) | string (max) __nullable__ | Notes for this CustomProperty. `Introduced in version 20.1` 
-| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.[Required] [Default(&quot;T&quot;)] 
+| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.`Required` `Default(&quot;T&quot;)` 
 
 ## References
 
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### AllowedValuesEntityName
 
-When not NULL, specifies that the allowed values are retrieved from the specified entity[Filter(eq)]
+When not NULL, specifies that the allowed values are retrieved from the specified entity`Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### AllowedValuesFilterXML
 
-When not NULL specifies the filter to apply when extracting allowed values from entity[Unit: obj.AllowedValuesEntityName]
+When not NULL specifies the filter to apply when extracting allowed values from entity`Unit: obj.AllowedValuesEntityName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique property code.[Required] [Filter(multi eq;like)] [ORD]
+Unique property code.`Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (40)**  
 Indexed: **True**  
@@ -126,7 +126,7 @@ Back-End Default Expression:
 
 ### EntityName
 
-The entity for which the property is applicable.[Required] [Filter(eq)] [ORD]
+The entity for which the property is applicable.`Required` `Filter(eq)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -138,7 +138,7 @@ Show in UI: **HiddenByDefault**
 
 ### Hint
 
-The hint, which is displayed alongside the property.[Filter(multi eq;like)] [Introduced in version 20.1]
+The hint, which is displayed alongside the property.`Filter(multi eq;like)` `Introduced in version 20.1`
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this custom property is active[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.3.19]
+Indicates whether this custom property is active`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.3.19`
 
 Type: **boolean**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **ShownByDefault**
 
 ### LimitToAllowedValues
 
-When true, allows the property to be set only to allowed value. When false, the property can have any value.[Required] [Default(false)] [Filter(eq)]
+When true, allows the property to be set only to allowed value. When false, the property can have any value.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyType
 
-Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.[Required] [Default(&quot;T&quot;)]
+Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.`Required` `Default(&quot;T&quot;)`
 
 Type: **[PropertyType](Systems.Bpm.CustomProperties.md#propertytype)**  
 Category: **System**  

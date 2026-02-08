@@ -161,7 +161,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></td>
-<td>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).[Required] [ReadOnly]</td>
+<td>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).<code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#creationtime">CreationTime</a></td>
@@ -206,27 +206,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isscrap">IsScrap</a></td>
 <td>boolean</td>
-<td>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.[Required] [Default(false)] [Filter(eq)]</td>
+<td>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#isvalidfield">IsValidField</a></td>
 <td>boolean</td>
-<td>Managed by the system and used only for integrity purposes. Do not use.[Required] [Default(false)] [ReadOnly]</td>
+<td>Managed by the system and used only for integrity purposes. Do not use.<code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></td>
 <td><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></td>
-<td>Transaction movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)]</td>
+<td>Transaction movement type. R=RECEIPT, I=ISSUE<code>Required</code> <code>Default(&amp;quot;R&amp;quot;)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreTransactions.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -558,7 +558,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="costsource">CostSource</h3>
-<p>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).[Required] [ReadOnly]</p>
+<p>Determines whether the cost in the transaction is taken from the store availability (usually this is the case for issue transactions) or the cost must be specified in the transaction itself (usually for receipt transactions).<code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html#costsource">CostSource</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>CostSource</code>(Logistics.Inventory.StoreTransactions.md#costsource) data attribute<br>
@@ -657,7 +657,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -665,7 +665,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isscrap">IsScrap</h3>
-<p>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.[Required] [Default(false)] [Filter(eq)]</p>
+<p>0=Non-scrap; 1=Scrap operation. Only store issue operations can be scrap.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -673,7 +673,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -681,7 +681,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isvalidfield">IsValidField</h3>
-<p>Managed by the system and used only for integrity purposes. Do not use.[Required] [Default(false)] [ReadOnly]</p>
+<p>Managed by the system and used only for integrity purposes. Do not use.<code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -689,7 +689,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="movementtype">MovementType</h3>
-<p>Transaction movement type. R=RECEIPT, I=ISSUE[Required] [Default(&quot;R&quot;)] [Filter(multi eq)]</p>
+<p>Transaction movement type. R=RECEIPT, I=ISSUE<code>Required</code> <code>Default(&amp;quot;R&amp;quot;)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.StoreTransactions.html#movementtype">MovementType</a></strong><br>
 Category: <strong>System</strong><br>
 Specifies the movement type (direction) of a warehouse document.<br>

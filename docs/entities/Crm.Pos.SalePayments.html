@@ -122,27 +122,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Amount paid (in Amount Currency).[Currency: AmountCurrency] [Required] [Filter(eq;ge;le)]</td>
+<td>Amount paid (in Amount Currency).<code>Currency: AmountCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#amountbase">AmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
-<td>Amount in base currency.[Currency: PosSale.Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</td>
+<td>Amount in base currency.<code>Currency: PosSale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#createdat">CreatedAt</a></td>
 <td>datetime</td>
-<td>Timestamp of the payment event.[Required] [Default(Now)] [Filter(eq;ge;le)]</td>
+<td>Timestamp of the payment event.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#notes">Notes</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>Notes for the sale payment.[Filter(like)]</td>
+<td>Notes for the sale payment.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.SalePayments.html#reference">Reference</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Optional external reference (e.g. card transaction ID).[Filter(eq;like)]</td>
+<td>Optional external reference (e.g. card transaction ID).<code>Filter(eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,21 +202,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>Amount paid (in Amount Currency).[Currency: AmountCurrency] [Required] [Filter(eq;ge;le)]</p>
+<p>Amount paid (in Amount Currency).<code>Currency: AmountCurrency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="amountbase">AmountBase</h3>
-<p>Amount in base currency.[Currency: PosSale.Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]</p>
+<p>Amount in base currency.<code>Currency: PosSale.Location.EnterpriseCompany.BaseCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (12, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="createdat">CreatedAt</h3>
-<p>Timestamp of the payment event.[Required] [Default(Now)] [Filter(eq;ge;le)]</p>
+<p>Timestamp of the payment event.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -224,7 +224,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the sale payment.[Filter(like)]</p>
+<p>Notes for the sale payment.<code>Filter(like)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -232,7 +232,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reference">Reference</h3>
-<p>Optional external reference (e.g. card transaction ID).[Filter(eq;like)]</p>
+<p>Optional external reference (e.g. card transaction ID).<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

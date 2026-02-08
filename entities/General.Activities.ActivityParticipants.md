@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services.[Filter(multi eq;like)] [Introduced in version 24.1.4.87] 
+| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services.`Filter(multi eq;like)` `Introduced in version 24.1.4.87` 
 | [Notes](General.Activities.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
-| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity.[Required] [Default(1)] 
+| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity.`Required` `Default(1)` 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Email
 
-Participant email. Used to identify the participant and is required when syncing with external services.[Filter(multi eq;like)] [Introduced in version 24.1.4.87]
+Participant email. Used to identify the participant and is required when syncing with external services.`Filter(multi eq;like)` `Introduced in version 24.1.4.87`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### WorkLoadPercent
 
-The planned work load of the participant for this activity.[Required] [Default(1)]
+The planned work load of the participant for this activity.`Required` `Default(1)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  

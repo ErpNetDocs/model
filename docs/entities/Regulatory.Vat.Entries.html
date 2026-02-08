@@ -159,17 +159,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#amountbase">AmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Amount of the operation without the tax in base currency.[Currency: BaseCurrency] [Required]</td>
+<td>Amount of the operation without the tax in base currency.<code>Currency: BaseCurrency</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#applydate">ApplyDate</a></td>
 <td>date</td>
-<td>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)]</td>
+<td>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#cashreportingmode">CashReportingMode</a></td>
 <td>boolean</td>
-<td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)]</td>
+<td>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#completetime">CompleteTime</a></td>
@@ -214,7 +214,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#entrytype">EntryType</a></td>
 <td><a href="Regulatory.Vat.Entries.html#entrytype">EntryType</a></td>
-<td>Type of the VAT entry. S=Sales, P=Purchases.[Required] [Filter(eq)] [ORD]</td>
+<td>Type of the VAT entry. S=Sales, P=Purchases.<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#fullstate">FullState</a></td>
@@ -224,12 +224,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#parentdocumentrelationshiptype">ParentDocument<br>RelationshipType</a></td>
@@ -254,7 +254,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#referenceddocumentno">ReferencedDocumentNo</a></td>
 <td>string (20)</td>
-<td>Number of the document that represents the operation that caused this entry.[Required] [Filter(eq)]</td>
+<td>Number of the document that represents the operation that caused this entry.<code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#referencedocumentno">ReferenceDocumentNo</a></td>
@@ -269,7 +269,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#registrationvatnumber">RegistrationVATNumber</a></td>
 <td>string (16)</td>
-<td>VAT number by registration (or national number) for the party specified by Party_Id.[Required] [Filter(eq)]</td>
+<td>VAT number by registration (or national number) for the party specified by Party_Id.<code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#releasetime">ReleaseTime</a></td>
@@ -289,7 +289,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#vatamountbase">VATAmountBase</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount of the tax for the operation in base currency.[Currency: BaseCurrency] [Required]</td>
+<td>The amount of the tax for the operation in base currency.<code>Currency: BaseCurrency</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Vat.Entries.html#void">Void</a></td>
@@ -559,14 +559,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="amountbase">AmountBase</h3>
-<p>Amount of the operation without the tax in base currency.[Currency: BaseCurrency] [Required]</p>
+<p>Amount of the operation without the tax in base currency.<code>Currency: BaseCurrency</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applydate">ApplyDate</h3>
-<p>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)]</p>
+<p>Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.<code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -577,7 +577,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate</code></p>
 <h3 id="cashreportingmode">CashReportingMode</h3>
-<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)]</p>
+<p>When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -651,7 +651,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="entrytype">EntryType</h3>
-<p>Type of the VAT entry. S=Sales, P=Purchases.[Required] [Filter(eq)] [ORD]</p>
+<p>Type of the VAT entry. S=Sales, P=Purchases.<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong><a href="Regulatory.Vat.Entries.html#entrytype">EntryType</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -688,7 +688,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -696,7 +696,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -759,7 +759,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="referenceddocumentno">ReferencedDocumentNo</h3>
-<p>Number of the document that represents the operation that caused this entry.[Required] [Filter(eq)]</p>
+<p>Number of the document that represents the operation that caused this entry.<code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (20)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -785,7 +785,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="registrationvatnumber">RegistrationVATNumber</h3>
-<p>VAT number by registration (or national number) for the party specified by Party_Id.[Required] [Filter(eq)]</p>
+<p>VAT number by registration (or national number) for the party specified by Party_Id.<code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -857,7 +857,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="vatamountbase">VATAmountBase</h3>
-<p>The amount of the tax for the operation in base currency.[Currency: BaseCurrency] [Required]</p>
+<p>The amount of the tax for the operation in base currency.<code>Currency: BaseCurrency</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

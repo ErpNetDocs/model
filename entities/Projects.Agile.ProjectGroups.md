@@ -35,10 +35,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Agile.ProjectGroups.md#code) | string (16) | Unique code of the project group.[Required] [Filter(multi eq)] 
-| [Description](Projects.Agile.ProjectGroups.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Description of the project group.[Filter(like)] 
-| [IsActive](Projects.Agile.ProjectGroups.md#isactive) | boolean | Indicates whether the current project group is active.[Required] [Default(true)] [Filter(eq)] 
-| [Name](Projects.Agile.ProjectGroups.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project group.[Required] [Filter(eq;like)] 
+| [Code](Projects.Agile.ProjectGroups.md#code) | string (16) | Unique code of the project group.`Required` `Filter(multi eq)` 
+| [Description](Projects.Agile.ProjectGroups.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Description of the project group.`Filter(like)` 
+| [IsActive](Projects.Agile.ProjectGroups.md#isactive) | boolean | Indicates whether the current project group is active.`Required` `Default(true)` `Filter(eq)` 
+| [Name](Projects.Agile.ProjectGroups.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the project group.`Required` `Filter(eq;like)` 
 
 
 ## System Attributes
@@ -57,7 +57,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the project group.[Required] [Filter(multi eq)]
+Unique code of the project group.`Required` `Filter(multi eq)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -68,7 +68,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the project group.[Filter(like)]
+Description of the project group.`Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current project group is active.[Required] [Default(true)] [Filter(eq)]
+Indicates whether the current project group is active.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the project group.[Required] [Filter(eq;like)]
+Multi-language name of the project group.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  

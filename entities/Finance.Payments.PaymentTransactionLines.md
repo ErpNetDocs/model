@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#allowoverpayment) | boolean | If checked specifies that overpayment is allowed for the payment order in the line.[Required] [Default(false)] 
-| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | Paid amount  in the payment currency [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)] 
-| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | Covered amount in the currency of payment order[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)] 
+| [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#allowoverpayment) | boolean | If checked specifies that overpayment is allowed for the payment order in the line.`Required` `Default(false)` 
+| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | Paid amount  in the payment currency `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` 
+| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | Covered amount in the currency of payment order`Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
 | [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (254) __nullable__ | Notes for this PaymentTransactionLine. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### AllowOverpayment
 
-If checked specifies that overpayment is allowed for the payment order in the line.[Required] [Default(false)]
+If checked specifies that overpayment is allowed for the payment order in the line.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Amount
 
-Paid amount  in the payment currency [Currency: PaymentTransaction.TotalAmountCurrency] [Required] [Default(0)]
+Paid amount  in the payment currency `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)`
 
 Type: **[Amount (10, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -86,7 +86,7 @@ Front-End Recalc Expressions:
 `obj.CoveredOrderAmount.ConvertTo( obj.PaymentTransaction.TotalAmountCurrency, obj.PaymentTransaction.CurrencyDirectory)`
 ### CoveredOrderAmount
 
-Covered amount in the currency of payment order[Currency: PaymentOrder.TotalAmountCurrency] [Required] [Default(0)]
+Covered amount in the currency of payment order`Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)`
 
 Type: **[Amount (10, 2)](../data-types.md#amount)**  
 Category: **System**  

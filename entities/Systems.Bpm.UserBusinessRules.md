@@ -39,14 +39,14 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Systems.Bpm.UserBusinessRules.md#code) | string (16) | The unique code of the UserBusinessRule. `Required` `Filter(eq;like)` `ORD` 
 | [Icon](Systems.Bpm.UserBusinessRules.md#icon) | byte[] __nullable__ | Visual icon of the rule. Valid formats are: .JPG, .PNG, .SVG, .ICO 
-| [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated.[Required] [Default(false)] [Filter(eq)] 
-| [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).[Required] [Default(&quot;BKE&quot;)] [Filter(multi eq)] 
+| [IsActive](Systems.Bpm.UserBusinessRules.md#isactive) | boolean | Specifies whether the rule is activated.`Required` `Default(false)` `Filter(eq)` 
+| [Layer](Systems.Bpm.UserBusinessRules.md#layer) | [Layer](Systems.Bpm.UserBusinessRules.md#layer) | Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).`Required` `Default(&quot;BKE&quot;)` `Filter(multi eq)` 
 | [Name](Systems.Bpm.UserBusinessRules.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this UserBusinessRule. `Required` `Filter(like)` 
 | [Notes](Systems.Bpm.UserBusinessRules.md#notes) | string (max) __nullable__ | Notes for this UserBusinessRule. 
-| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string (128) | The name of the repository, for which this business rule is defined.[Required] [Filter(eq;like)] 
-| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions.[Required] [Default(&quot;Integrated&quot;)] 
+| [RepositoryName](Systems.Bpm.UserBusinessRules.md#repositoryname) | string (128) | The name of the repository, for which this business rule is defined.`Required` `Filter(eq;like)` 
+| [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | [ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage) | The programming language used to define the rule actions.`Required` `Default(&quot;Integrated&quot;)` 
 | [ScriptText](Systems.Bpm.UserBusinessRules.md#scripttext) | string (max) __nullable__ | The program code used to define the rule actions. 
-| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean __nullable__ | Specifies, that the rule can be manually started by the user.[Default(false)] [Filter(eq)] 
+| [UserStartable](Systems.Bpm.UserBusinessRules.md#userstartable) | boolean __nullable__ | Specifies, that the rule can be manually started by the user.`Default(false)` `Filter(eq)` 
 
 
 ## System Attributes
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the rule is activated.[Required] [Default(false)] [Filter(eq)]
+Specifies whether the rule is activated.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Layer
 
-Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).[Required] [Default(&quot;BKE&quot;)] [Filter(multi eq)]
+Specifies in which layers the rule will be available. The available events and actions depend on the chosen layer.  Allowed values: FTE=Front-End, BKE=BackEnd, COM=Common (both).`Required` `Default(&quot;BKE&quot;)` `Filter(multi eq)`
 
 Type: **[Layer](Systems.Bpm.UserBusinessRules.md#layer)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### RepositoryName
 
-The name of the repository, for which this business rule is defined.[Required] [Filter(eq;like)]
+The name of the repository, for which this business rule is defined.`Required` `Filter(eq;like)`
 
 Type: **string (128)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### ScriptLanguage
 
-The programming language used to define the rule actions.[Required] [Default(&quot;Integrated&quot;)]
+The programming language used to define the rule actions.`Required` `Default(&quot;Integrated&quot;)`
 
 Type: **[ScriptLanguage](Systems.Bpm.UserBusinessRules.md#scriptlanguage)**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### UserStartable
 
-Specifies, that the rule can be manually started by the user.[Default(false)] [Filter(eq)]
+Specifies, that the rule can be manually started by the user.`Default(false)` `Filter(eq)`
 
 Type: **boolean __nullable__**  
 Category: **System**  

@@ -125,22 +125,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Starting date of validity of the price[Filter(eq;ge;le)]</td>
+<td>Starting date of validity of the price<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the current Product price is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]</td>
+<td>Indicates whether the current Product price is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#maxquantity">MaxQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Maximum quantity for which this price is valid in the Price_Quantity_<br>Measurement_Unit[<br>Unit: PriceQuantityMeasurement<br>Unit] [Filter(eq;ge;le)]</td>
+<td>Maximum quantity for which this price is valid in the Price_Quantity_<br>Measurement_Unit<code>&lt;br /&gt;Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#minquantity">MinQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
-<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)[Unit: PriceQuantityMeasurement<br>Unit] [Filter(eq;ge;le)]</td>
+<td>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)<code>Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#notes">Notes</a></td>
@@ -150,22 +150,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#price">Price</a></td>
 <td><a href="../data-types.html#amount">Amount (13, 5)</a></td>
-<td>Price in the specified currency and for the specified quantity[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</td>
+<td>Price in the specified currency and for the specified quantity<code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#pricequantity">PriceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a></td>
-<td>The quantity of the product for which the price is specified[Unit: PriceQuantityMeasurement<br>Unit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>The quantity of the product for which the price is specified<code>Unit: PriceQuantityMeasurement&lt;br /&gt;Unit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#priority">Priority</a></td>
 <td><a href="Crm.Pricing.ProductPrices.html#priority">Priority</a></td>
-<td>Priority of the price comparative to other prices. Only the highest priority price is applied.[Required] [Default(2)] [Filter(multi eq)]</td>
+<td>Priority of the price comparative to other prices. Only the highest priority price is applied.<code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pricing.ProductPrices.html#thrudate">ThruDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Ending date (inclusive) of the validity of the price[Filter(eq;ge;le)]</td>
+<td>Ending date (inclusive) of the validity of the price<code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -285,14 +285,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="fromdate">FromDate</h3>
-<p>Starting date of validity of the price[Filter(eq;ge;le)]</p>
+<p>Starting date of validity of the price<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the current Product price is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]</p>
+<p>Indicates whether the current Product price is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.0.18</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -300,14 +300,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="maxquantity">MaxQuantity</h3>
-<p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit[Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
+<p>Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit<code>Unit: PriceQuantityMeasurementUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="minquantity">MinQuantity</h3>
-<p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)[Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]</p>
+<p>Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)<code>Unit: PriceQuantityMeasurementUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -322,7 +322,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="price">Price</h3>
-<p>Price in the specified currency and for the specified quantity[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]</p>
+<p>Price in the specified currency and for the specified quantity<code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (13, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -330,7 +330,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="pricequantity">PriceQuantity</h3>
-<p>The quantity of the product for which the price is specified[Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>The quantity of the product for which the price is specified<code>Unit: PriceQuantityMeasurementUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -338,7 +338,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the price comparative to other prices. Only the highest priority price is applied.[Required] [Default(2)] [Filter(multi eq)]</p>
+<p>Priority of the price comparative to other prices. Only the highest priority price is applied.<code>Required</code> <code>Default(2)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Crm.Pricing.ProductPrices.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for Priority properties<br>
@@ -378,7 +378,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>2</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>Ending date (inclusive) of the validity of the price[Filter(eq;ge;le)]</p>
+<p>Ending date (inclusive) of the validity of the price<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

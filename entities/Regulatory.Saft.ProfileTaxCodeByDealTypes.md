@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).[Filter(like)] 
+| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)` 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).[Filter(like)]
+Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

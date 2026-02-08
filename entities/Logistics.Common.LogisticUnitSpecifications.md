@@ -46,10 +46,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Common.LogisticUnitSpecifications.md#code) | string (32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.[Required] [Filter(multi eq;like)] 
-| [Name](Logistics.Common.LogisticUnitSpecifications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).[Filter(eq;like)] 
+| [Code](Logistics.Common.LogisticUnitSpecifications.md#code) | string (32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.`Required` `Filter(multi eq;like)` 
+| [Name](Logistics.Common.LogisticUnitSpecifications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).`Filter(eq;like)` 
 | [Notes](Logistics.Common.LogisticUnitSpecifications.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitSpecification. 
-| [Value](Logistics.Common.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.[Filter(eq;like)] 
+| [Value](Logistics.Common.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.`Filter(eq;like)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### Code
 
-The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.[Required] [Filter(multi eq;like)]
+The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.`Required` `Filter(multi eq;like)`
 
 Type: **string (32)**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).[Filter(eq;like)]
+Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).`Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.[Filter(eq;like)]
+Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.`Filter(eq;like)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  

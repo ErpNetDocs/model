@@ -126,52 +126,52 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#createdon">CreatedOn</a></td>
 <td>datetime</td>
-<td>The time when the exchange is created.[Required] [Filter(ge;le)] [ReadOnly]</td>
+<td>The time when the exchange is created.<code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#drivername">DriverName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the exchange program/procedure, which actuates the exchange operation.[Default(&quot;JSON_FILE&quot;)] [Filter(eq)]</td>
+<td>The name of the exchange program/procedure, which actuates the exchange operation.<code>Default(&amp;quot;JSON_FILE&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#exchangedon">ExchangedOn</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time (in UTC) of the exchange.[Filter(ge;le)]</td>
+<td>The time (in UTC) of the exchange.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#exchangelog">ExchangeLog</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>General log of the last transfer attempt. Messages for the individual objects are kept with the objects.[Filter(like)]</td>
+<td>General log of the last transfer attempt. Messages for the individual objects are kept with the objects.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#externaladdress">ExternalAddress</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.[Filter(like)]</td>
+<td>Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#keepuntil">KeepUntil</a></td>
 <td>date</td>
-<td>Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).[Required] [Filter(ge;le)]</td>
+<td>Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#mode">Mode</a></td>
 <td><a href="Systems.Exchange.DataExchanges.html#mode">Mode</a></td>
-<td>Operation mode of the exchange.[Required] [Default(&quot;E&quot;)] [Filter(eq)]</td>
+<td>Operation mode of the exchange.<code>Required</code> <code>Default(&amp;quot;E&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#name">Name</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the package. Can be empty if naming is not important.[Filter(eq;like)]</td>
+<td>The name of the package. Can be empty if naming is not important.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the exchange.[Filter(like)]</td>
+<td>Notes for the exchange.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchanges.html#state">State</a></td>
 <td><a href="Systems.Exchange.DataExchanges.html#state">State</a></td>
-<td>State of the exchange.[Required] [Default(&quot;PRE&quot;)] [Filter(eq)]</td>
+<td>State of the exchange.<code>Required</code> <code>Default(&amp;quot;PRE&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -258,7 +258,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="createdon">CreatedOn</h3>
-<p>The time when the exchange is created.[Required] [Filter(ge;le)] [ReadOnly]</p>
+<p>The time when the exchange is created.<code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -267,7 +267,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>DateTime.UtcNow</code></p>
 <h3 id="drivername">DriverName</h3>
-<p>The name of the exchange program/procedure, which actuates the exchange operation.[Default(&quot;JSON_FILE&quot;)] [Filter(eq)]</p>
+<p>The name of the exchange program/procedure, which actuates the exchange operation.<code>Default(&amp;quot;JSON_FILE&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -276,14 +276,14 @@ Maximum Length: <strong>64</strong><br>
 Default Value: <strong>JSON_FILE</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="exchangedon">ExchangedOn</h3>
-<p>The time (in UTC) of the exchange.[Filter(ge;le)]</p>
+<p>The time (in UTC) of the exchange.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="exchangelog">ExchangeLog</h3>
-<p>General log of the last transfer attempt. Messages for the individual objects are kept with the objects.[Filter(like)]</p>
+<p>General log of the last transfer attempt. Messages for the individual objects are kept with the objects.<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -291,7 +291,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="externaladdress">ExternalAddress</h3>
-<p>Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.[Filter(like)]</p>
+<p>Address of the external resource from/to which the date is transferred. The value is dependent on the exchange driver.<code>Filter(like)</code></p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -299,7 +299,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="keepuntil">KeepUntil</h3>
-<p>Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).[Required] [Filter(ge;le)]</p>
+<p>Specify the date until which this package info will be kept. After the date, the package will be automatically purged (deleted).<code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -308,7 +308,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>DateTime.Now.AddMonths( 3).Date</code></p>
 <h3 id="mode">Mode</h3>
-<p>Operation mode of the exchange.[Required] [Default(&quot;E&quot;)] [Filter(eq)]</p>
+<p>Operation mode of the exchange.<code>Required</code> <code>Default(&amp;quot;E&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchanges.html#mode">Mode</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Mode</code>(Systems.Exchange.DataExchanges.md#mode) data attribute<br>
@@ -336,7 +336,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Export</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>The name of the package. Can be empty if naming is not important.[Filter(eq;like)]</p>
+<p>The name of the package. Can be empty if naming is not important.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -344,7 +344,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the exchange.[Filter(like)]</p>
+<p>Notes for the exchange.<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -352,7 +352,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>State of the exchange.[Required] [Default(&quot;PRE&quot;)] [Filter(eq)]</p>
+<p>State of the exchange.<code>Required</code> <code>Default(&amp;quot;PRE&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchanges.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Systems.Exchange.DataExchanges.md#state) data attribute<br>

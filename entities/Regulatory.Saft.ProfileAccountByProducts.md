@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.[Required] [Default(&quot;D&quot;)] [Filter(eq)] [Introduced in version 26.2.1.9] 
-| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.[Required] [Default(&quot;S&quot;)] [Filter(eq)] [Introduced in version 26.2.1.9] 
-| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.[Filter(like)] 
+| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.`Required` `Default(&quot;D&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` 
+| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.`Required` `Default(&quot;S&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` 
+| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.`Filter(like)` 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T invoice lines.[Required] [Default(&quot;D&quot;)] [Filter(eq)] [Introduced in version 26.2.1.9]
+Debit/credit indicator for SAF-T invoice lines.`Required` `Default(&quot;D&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9`
 
 Type: **[DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityKind
 
-Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.[Required] [Default(&quot;S&quot;)] [Filter(eq)] [Introduced in version 26.2.1.9]
+Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.`Required` `Default(&quot;S&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9`
 
 Type: **[EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments about the mapping.[Filter(like)]
+Additional information or comments about the mapping.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

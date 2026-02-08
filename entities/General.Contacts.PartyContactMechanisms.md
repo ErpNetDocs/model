@@ -37,14 +37,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [ContactMechanismType](General.Contacts.PartyContactMechanisms.md#contactmechanismtype) | [ContactMechanismType](General.Contacts.PartyContactMechanisms.md#contactmechanismtype) | A=Address; E=e-mail; T=Telephone. `Required` `Default("A")` `Filter(multi eq)` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) 
-| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime __nullable__ | The first date when the contact mechanism was valid. NULL means unknown date[Default(Today)] [Filter(eq;ge;le)] 
-| [IsActive](General.Contacts.PartyContactMechanisms.md#isactive) | boolean | True if the contact mechanism is currently active and can be used to contact the party.[Required] [Default(true)] [Filter(eq)] 
-| [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | 1 - when this is the default contact mechanism for this party; 0 - otherwise[Required] [Default(false)] [Filter(eq)] 
-| [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party.[Required] 
+| [FromDate](General.Contacts.PartyContactMechanisms.md#fromdate) | datetime __nullable__ | The first date when the contact mechanism was valid. NULL means unknown date`Default(Today)` `Filter(eq;ge;le)` 
+| [IsActive](General.Contacts.PartyContactMechanisms.md#isactive) | boolean | True if the contact mechanism is currently active and can be used to contact the party.`Required` `Default(true)` `Filter(eq)` 
+| [IsDefault](General.Contacts.PartyContactMechanisms.md#isdefault) | boolean | 1 - when this is the default contact mechanism for this party; 0 - otherwise`Required` `Default(false)` `Filter(eq)` 
+| [LineOrd](General.Contacts.PartyContactMechanisms.md#lineord) | int32 | Consecutive number of the contact information. The number is unique within the party.`Required` 
 | [Name](General.Contacts.PartyContactMechanisms.md#name) | string (254) | Contact mechanism description. `Required` `Filter(eq;like)` (Inherited from [ContactMechanisms](General.Contacts.ContactMechanisms.md)) 
-| [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If 1 then Don't use the mechanism for solicitation purposes[Required] [Default(false)] [Filter(eq)] 
+| [NonSolicitation](General.Contacts.PartyContactMechanisms.md#nonsolicitation) | boolean | If 1 then Don't use the mechanism for solicitation purposes`Required` `Default(false)` `Filter(eq)` 
 | [Notes](General.Contacts.PartyContactMechanisms.md#notes) | string (254) __nullable__ | Notes for this PartyContactMechanism. 
-| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime __nullable__ | The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid[Filter(eq;ge;le)] 
+| [ThruDate](General.Contacts.PartyContactMechanisms.md#thrudate) | datetime __nullable__ | The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid`Filter(eq;ge;le)` 
 
 ## References
 
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-The first date when the contact mechanism was valid. NULL means unknown date[Default(Today)] [Filter(eq;ge;le)]
+The first date when the contact mechanism was valid. NULL means unknown date`Default(Today)` `Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True if the contact mechanism is currently active and can be used to contact the party.[Required] [Default(true)] [Filter(eq)]
+True if the contact mechanism is currently active and can be used to contact the party.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-1 - when this is the default contact mechanism for this party; 0 - otherwise[Required] [Default(false)] [Filter(eq)]
+1 - when this is the default contact mechanism for this party; 0 - otherwise`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-Consecutive number of the contact information. The number is unique within the party.[Required]
+Consecutive number of the contact information. The number is unique within the party.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### NonSolicitation
 
-If 1 then Don't use the mechanism for solicitation purposes[Required] [Default(false)] [Filter(eq)]
+If 1 then Don't use the mechanism for solicitation purposes`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid[Filter(eq;ge;le)]
+The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

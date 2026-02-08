@@ -122,12 +122,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#granttimeutc">GrantTimeUtc</a></td>
 <td>datetime</td>
-<td>The time (in UTC) when the authorization was granted.[Required] [Default(NowUtc)] [Filter(ge;le)]</td>
+<td>The time (in UTC) when the authorization was granted.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#isrevoked">IsRevoked</a></td>
 <td>boolean</td>
-<td>Specifies whether the grant is explicitly revoked.[Required] [Default(false)]</td>
+<td>Specifies whether the grant is explicitly revoked.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#notes">Notes</a></td>
@@ -137,12 +137,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#validfromutc">ValidFromUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The start of the validitiy of the authorization. NULL means that there is no restriction.[Filter(ge;le)]</td>
+<td>The start of the validitiy of the authorization. NULL means that there is no restriction.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.TrustedApplicationAuthorizations.html#validuntilutc">ValidUntilUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time (in UTC) when the grant expires. NULL means that there is no time restriction.[Filter(ge;le)]</td>
+<td>The time (in UTC) when the grant expires. NULL means that there is no time restriction.<code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -202,7 +202,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="granttimeutc">GrantTimeUtc</h3>
-<p>The time (in UTC) when the authorization was granted.[Required] [Default(NowUtc)] [Filter(ge;le)]</p>
+<p>The time (in UTC) when the authorization was granted.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -210,7 +210,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isrevoked">IsRevoked</h3>
-<p>Specifies whether the grant is explicitly revoked.[Required] [Default(false)]</p>
+<p>Specifies whether the grant is explicitly revoked.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -226,14 +226,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validfromutc">ValidFromUtc</h3>
-<p>The start of the validitiy of the authorization. NULL means that there is no restriction.[Filter(ge;le)]</p>
+<p>The start of the validitiy of the authorization. NULL means that there is no restriction.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="validuntilutc">ValidUntilUtc</h3>
-<p>The time (in UTC) when the grant expires. NULL means that there is no time restriction.[Filter(ge;le)]</p>
+<p>The time (in UTC) when the grant expires. NULL means that there is no time restriction.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

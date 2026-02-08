@@ -50,7 +50,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#activitiescreated) | boolean | 1 if the related activites are already created. Related activity can be created for each member of the target group.[Required] [Default(false)] 
+| [ActivitiesCreated](Crm.Marketing.MarketingActivities.md#activitiescreated) | boolean | 1 if the related activites are already created. Related activity can be created for each member of the target group.`Required` `Default(false)` 
 | [AdjustmentNumber](Crm.Marketing.MarketingActivities.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Crm.Marketing.MarketingActivities.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Crm.Marketing.MarketingActivities.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -64,7 +64,7 @@ Aggregate Tree
 | [DocumentVersion](Crm.Marketing.MarketingActivities.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EndTime](Crm.Marketing.MarketingActivities.md#endtime) | datetime __nullable__ | Currently planned ending time of the task. `Filter(ge;le)` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [EntityName](Crm.Marketing.MarketingActivities.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency[Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [ForecastedCost](Crm.Marketing.MarketingActivities.md#forecastedcost) | [Amount (18, 0)](../data-types.md#amount) | Forecasted cost of the activity in base currency`Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 | [FullState](Crm.Marketing.MarketingActivities.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [<s>IsReleased</s>](Crm.Marketing.MarketingActivities.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated. `Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` (Inherited from [Activities](General.Activities.Activities.md)) 
 | [IsSingleExecution](Crm.Marketing.MarketingActivities.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Activities](General.Activities.Activities.md)) 
@@ -155,7 +155,7 @@ Aggregate Tree
 
 ### ActivitiesCreated
 
-1 if the related activites are already created. Related activity can be created for each member of the target group.[Required] [Default(false)]
+1 if the related activites are already created. Related activity can be created for each member of the target group.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -308,7 +308,7 @@ Show in UI: **CannotBeShown**
 
 ### ForecastedCost
 
-Forecasted cost of the activity in base currency[Currency: EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Forecasted cost of the activity in base currency`Currency: EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (18, 0)](../data-types.md#amount)**  
 Category: **System**  

@@ -123,27 +123,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#capacity">Capacity</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Optional: number of simultaneous uses (e.g., seating for 4)[Filter(eq;ge;le)]</td>
+<td>Optional: number of simultaneous uses (e.g., seating for 4)<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#code">Code</a></td>
 <td>string (16)</td>
-<td>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.[Required] [Filter(eq;like)] [ORD]</td>
+<td>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the POS execution resource is currently active.[Required] [Default(true)] [Filter(eq)]</td>
+<td>Indicates whether the POS execution resource is currently active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Human readable resource name, e.g. 'Table 5', 'Room 58'.[Required] [Filter(like)]</td>
+<td>Human readable resource name, e.g. 'Table 5', 'Room 58'.<code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.ExecutionResources.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes for the execution resource.[Filter(like)]</td>
+<td>Notes for the execution resource.<code>Filter(like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -198,14 +198,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="capacity">Capacity</h3>
-<p>Optional: number of simultaneous uses (e.g., seating for 4)[Filter(eq;ge;le)]</p>
+<p>Optional: number of simultaneous uses (e.g., seating for 4)<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="code">Code</h3>
-<p>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.[Required] [Filter(eq;like)] [ORD]</p>
+<p>Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -214,7 +214,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the POS execution resource is currently active.[Required] [Default(true)] [Filter(eq)]</p>
+<p>Indicates whether the POS execution resource is currently active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -222,14 +222,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Human readable resource name, e.g. 'Table 5', 'Room 58'.[Required] [Filter(like)]</p>
+<p>Human readable resource name, e.g. 'Table 5', 'Room 58'.<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes for the execution resource.[Filter(like)]</p>
+<p>Notes for the execution resource.<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>

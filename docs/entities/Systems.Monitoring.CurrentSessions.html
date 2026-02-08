@@ -122,70 +122,70 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#absoluteexpirationtime">AbsoluteExpirationTime</a></td>
 <td>datetime</td>
-<td>Absolute expiration time of the session. Not empty if the session is created by a service appllication.[Required] [Filter(ge;le)] [ORD]</td>
+<td>Absolute expiration time of the session. Not empty if the session is created by a service appllication.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#applications">Applications</a></td>
 <td>string (64)</td>
-<td>A comma separated list of client applications that share this session.[Required] [Filter(eq;like)] [ORD]</td>
+<td>A comma separated list of client applications that share this session.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#currentrequestscount">CurrentRequestsCount</a></td>
 <td>int32</td>
-<td>The requests count in the time of the request.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The requests count in the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#device">Device</a></td>
 <td>string (64)</td>
-<td>The name of the user's device.[Required] [Filter(eq;like)] [ORD]</td>
+<td>The name of the user's device.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#downloadmb">DownloadMB</a></td>
 <td>decimal (12, 3)</td>
-<td>The downloaded megabytes at the time of the request.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The downloaded megabytes at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#lastrequesttime">LastRequestTime</a></td>
 <td>datetime</td>
-<td>The last request time.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The last request time.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#sessionid">SessionId</a></td>
 <td>string (64)</td>
-<td>The id of the session.[Required] [Filter(eq)] [Introduced in version 26.1.4.3]</td>
+<td>The id of the session.<code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.4.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>The login time of the session.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The login time of the session.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#totalrequestscount">TotalRequestsCount</a></td>
 <td>int64</td>
-<td>The total request count at the time of the request.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The total request count at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#uploadmb">UploadMB</a></td>
 <td>decimal (12, 3)</td>
-<td>The uploaded megabytes at the time of the request.[Required] [Filter(ge;le)] [ORD]</td>
+<td>The uploaded megabytes at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.CurrentSessions.html#userlogin">UserLogin</a></td>
 <td>string (64)</td>
-<td>The user login name.[Required] [Introduced in version 26.1.4.3]</td>
+<td>The user login name.<code>Required</code> <code>Introduced in version 26.1.4.3</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="absoluteexpirationtime">AbsoluteExpirationTime</h3>
-<p>Absolute expiration time of the session. Not empty if the session is created by a service appllication.[Required] [Filter(ge;le)] [ORD]</p>
+<p>Absolute expiration time of the session. Not empty if the session is created by a service appllication.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="applications">Applications</h3>
-<p>A comma separated list of client applications that share this session.[Required] [Filter(eq;like)] [ORD]</p>
+<p>A comma separated list of client applications that share this session.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -193,14 +193,14 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currentrequestscount">CurrentRequestsCount</h3>
-<p>The requests count in the time of the request.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The requests count in the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="device">Device</h3>
-<p>The name of the user's device.[Required] [Filter(eq;like)] [ORD]</p>
+<p>The name of the user's device.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -208,21 +208,21 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="downloadmb">DownloadMB</h3>
-<p>The downloaded megabytes at the time of the request.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The downloaded megabytes at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastrequesttime">LastRequestTime</h3>
-<p>The last request time.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The last request time.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sessionid">SessionId</h3>
-<p>The id of the session.[Required] [Filter(eq)] [Introduced in version 26.1.4.3]</p>
+<p>The id of the session.<code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 26.1.4.3</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -230,28 +230,28 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="starttime">StartTime</h3>
-<p>The login time of the session.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The login time of the session.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalrequestscount">TotalRequestsCount</h3>
-<p>The total request count at the time of the request.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The total request count at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int64</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uploadmb">UploadMB</h3>
-<p>The uploaded megabytes at the time of the request.[Required] [Filter(ge;le)] [ORD]</p>
+<p>The uploaded megabytes at the time of the request.<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>decimal (12, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="userlogin">UserLogin</h3>
-<p>The user login name.[Required] [Introduced in version 26.1.4.3]</p>
+<p>The user login name.<code>Required</code> <code>Introduced in version 26.1.4.3</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

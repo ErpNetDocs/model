@@ -34,9 +34,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Projects.Classic.TaskTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Multilanguage description of the task type. 
-| [DisplayOrder](Projects.Classic.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top).[Required] [Default(1)] 
+| [DisplayOrder](Projects.Classic.TaskTypes.md#displayorder) | int32 | Display order position of the task. Lowest numbers are shown first (on top).`Required` `Default(1)` 
 | [Icon](Projects.Classic.TaskTypes.md#icon) | byte[] __nullable__ | Icon representing the task type. Preferrably 32x32 pixels. 
-| [Name](Projects.Classic.TaskTypes.md#name) | [MultilanguageString (max)](../data-types.md#multilanguagestring) | The multilanguage task type name.[Required] [Filter(multi eq;like)] 
+| [Name](Projects.Classic.TaskTypes.md#name) | [MultilanguageString (max)](../data-types.md#multilanguagestring) | The multilanguage task type name.`Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### DisplayOrder
 
-Display order position of the task. Lowest numbers are shown first (on top).[Required] [Default(1)]
+Display order position of the task. Lowest numbers are shown first (on top).`Required` `Default(1)`
 
 Type: **int32**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The multilanguage task type name.[Required] [Filter(multi eq;like)]
+The multilanguage task type name.`Required` `Filter(multi eq;like)`
 
 Type: **[MultilanguageString (max)](../data-types.md#multilanguagestring)**  
 Category: **System**  

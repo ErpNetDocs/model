@@ -35,15 +35,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference.[Required] [Filter(eq;like)] [ORD] 
-| [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | Storage format of the content.[Required] [Default(&quot;MKD&quot;)] [Filter(eq)] 
-| [CreationTimeUtc](Projects.Procedures.OperationalProcedures.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the procedure was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly] 
-| [EntityType](Projects.Procedures.OperationalProcedures.md#entitytype) | string (128) __nullable__ | Name of entity to which the procedure applies[Filter(eq)] 
-| [LastUpdateTimeUtc](Projects.Procedures.OperationalProcedures.md#lastupdatetimeutc) | datetime | The exact date and time (in UTC) when the procedure was last updated.[Required] [Filter(eq;ge;le)] [ReadOnly] 
-| [Notes](Projects.Procedures.OperationalProcedures.md#notes) | string (max) __nullable__ | Notes for the procedure.[Filter(like)] 
-| [ProcedureContent](Projects.Procedures.OperationalProcedures.md#procedurecontent) | string (max) __nullable__ | The content of the procedure.[Filter(like)] 
-| [Status](Projects.Procedures.OperationalProcedures.md#status) | [Status](Projects.Procedures.OperationalProcedures.md#status) | Lifecycle state (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(multi eq)] 
-| [Title](Projects.Procedures.OperationalProcedures.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Procedure name.[Required] [Filter(like)] 
+| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD` 
+| [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | Storage format of the content.`Required` `Default(&quot;MKD&quot;)` `Filter(eq)` 
+| [CreationTimeUtc](Projects.Procedures.OperationalProcedures.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the procedure was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
+| [EntityType](Projects.Procedures.OperationalProcedures.md#entitytype) | string (128) __nullable__ | Name of entity to which the procedure applies`Filter(eq)` 
+| [LastUpdateTimeUtc](Projects.Procedures.OperationalProcedures.md#lastupdatetimeutc) | datetime | The exact date and time (in UTC) when the procedure was last updated.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [Notes](Projects.Procedures.OperationalProcedures.md#notes) | string (max) __nullable__ | Notes for the procedure.`Filter(like)` 
+| [ProcedureContent](Projects.Procedures.OperationalProcedures.md#procedurecontent) | string (max) __nullable__ | The content of the procedure.`Filter(like)` 
+| [Status](Projects.Procedures.OperationalProcedures.md#status) | [Status](Projects.Procedures.OperationalProcedures.md#status) | Lifecycle state (Draft/Active/Obsolete).`Required` `Default(&quot;DRF&quot;)` `Filter(multi eq)` 
+| [Title](Projects.Procedures.OperationalProcedures.md#title) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Procedure name.`Required` `Filter(like)` 
 
 ## References
 
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### Code
 
-Short unique code for search/reference.[Required] [Filter(eq;like)] [ORD]
+Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### ContentFormat
 
-Storage format of the content.[Required] [Default(&quot;MKD&quot;)] [Filter(eq)]
+Storage format of the content.`Required` `Default(&quot;MKD&quot;)` `Filter(eq)`
 
 Type: **[ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The exact date and time (in UTC) when the procedure was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]
+The exact date and time (in UTC) when the procedure was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-Name of entity to which the procedure applies[Filter(eq)]
+Name of entity to which the procedure applies`Filter(eq)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### LastUpdateTimeUtc
 
-The exact date and time (in UTC) when the procedure was last updated.[Required] [Filter(eq;ge;le)] [ReadOnly]
+The exact date and time (in UTC) when the procedure was last updated.`Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the procedure.[Filter(like)]
+Notes for the procedure.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### ProcedureContent
 
-The content of the procedure.[Filter(like)]
+The content of the procedure.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **ShownByDefault**
 
 ### Status
 
-Lifecycle state (Draft/Active/Obsolete).[Required] [Default(&quot;DRF&quot;)] [Filter(multi eq)]
+Lifecycle state (Draft/Active/Obsolete).`Required` `Default(&quot;DRF&quot;)` `Filter(multi eq)`
 
 Type: **[Status](Projects.Procedures.OperationalProcedures.md#status)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### Title
 
-Procedure name.[Required] [Filter(like)]
+Procedure name.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  

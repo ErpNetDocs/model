@@ -49,7 +49,7 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Procurement.PurchaseInvoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Logistics.Procurement.PurchaseInvoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Logistics.Procurement.PurchaseInvoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)] 
+| [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.`Required` `Filter(ge;le)` 
 | [CompleteTime](Logistics.Procurement.PurchaseInvoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Logistics.Procurement.PurchaseInvoices.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Logistics.Procurement.PurchaseInvoices.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -63,10 +63,10 @@ Aggregate Tree
 | [FullState](Logistics.Procurement.PurchaseInvoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
 | [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoices.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
-| [<s>IsReleased</s>](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61] 
-| [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [<s>IsReleased</s>](Logistics.Procurement.PurchaseInvoices.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
+| [IsSingleExecution](Logistics.Procurement.PurchaseInvoices.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Logistics.Procurement.PurchaseInvoices.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. NULL means to use the default [Filter(ge;le)] 
+| [PaymentDueDate](Logistics.Procurement.PurchaseInvoices.md#paymentduedate) | datetime __nullable__ | Due date for paying the invoice. NULL means to use the default `Filter(ge;le)` 
 | [PlanningOnly](Logistics.Procurement.PurchaseInvoices.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Logistics.Procurement.PurchaseInvoices.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Logistics.Procurement.PurchaseInvoices.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -74,7 +74,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Procurement.PurchaseInvoices.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Logistics.Procurement.PurchaseInvoices.md#state) | [DocumentState](Logistics.Procurement.PurchaseInvoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Logistics.Procurement.PurchaseInvoices.md#statetagsattribute) | string | Specifies the state of the document. 
-| [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)] [Filter(multi eq)] 
+| [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.`Required` `Default(false)` `Filter(multi eq)` 
 | [VATNotes](Logistics.Procurement.PurchaseInvoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. 
 | [Void](Logistics.Procurement.PurchaseInvoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Logistics.Procurement.PurchaseInvoices.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -181,7 +181,7 @@ Show in UI: **HiddenByDefault**
 
 ### ApplyDate
 
-Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.[Required] [Filter(ge;le)]
+Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.`Required` `Filter(ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -400,7 +400,7 @@ Front-End Recalc Expressions:
 `obj.Lines.Select( c => PurchaseInvoiceLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### IsReleased
 
-**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean**  
 Category: **System**  
@@ -411,7 +411,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsSingleExecution
 
-Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  
@@ -441,7 +441,7 @@ Show in UI: **HiddenByDefault**
 
 ### PaymentDueDate
 
-Due date for paying the invoice. NULL means to use the default [Filter(ge;le)]
+Due date for paying the invoice. NULL means to use the default `Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -541,7 +541,7 @@ Show in UI: **HiddenByDefault**
 
 ### VATCashReportingMode
 
-When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.[Required] [Default(false)] [Filter(multi eq)]
+When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.`Required` `Default(false)` `Filter(multi eq)`
 
 Type: **boolean**  
 Category: **System**  

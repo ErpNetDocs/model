@@ -42,11 +42,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application[Filter(multi eq)] 
-| [Name](Systems.Core.Reports.md#name) | string (254) | The name of the report[Required] [Filter(eq;like)] 
+| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application`Filter(multi eq)` 
+| [Name](Systems.Core.Reports.md#name) | string (254) | The name of the report`Required` `Filter(eq;like)` 
 | [Notes](Systems.Core.Reports.md#notes) | string (512) __nullable__ | Notes for this Report. 
-| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only.[Required] [Default(false)] [Filter(eq)] 
-| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The primary query for the report. This is the base query for the custom data source.[Required] [Filter(eq)] 
+| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only.`Required` `Default(false)` `Filter(eq)` 
+| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The primary query for the report. This is the base query for the custom data source.`Required` `Filter(eq)` 
 | [ReportBinaryLayout](Systems.Core.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout 
 | [ReportLayout](Systems.Core.Reports.md#reportlayout) | string (max) __nullable__ | The way that the report will appear on the screen or on paper. 
 | [TemplateFilterXml](Systems.Core.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report. 
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### LayoutFormat
 
-Format specifier of the layout. Recognized by the application[Filter(multi eq)]
+Format specifier of the layout. Recognized by the application`Filter(multi eq)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-The name of the report[Required] [Filter(eq;like)]
+The name of the report`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### OneRow
 
-True means that report can be used for one-row forms only. False means that the report can be used for navigators only.[Required] [Default(false)] [Filter(eq)]
+True means that report can be used for one-row forms only. False means that the report can be used for navigators only.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### QueryName
 
-The primary query for the report. This is the base query for the custom data source.[Required] [Filter(eq)]
+The primary query for the report. This is the base query for the custom data source.`Required` `Filter(eq)`
 
 Type: **string (128)**  
 Category: **System**  

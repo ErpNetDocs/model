@@ -36,8 +36,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string (450) | The key, which the provider provided for logging the user.[Required] [Filter(multi eq)] 
-| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain.[Required] [Filter(eq)] [Introduced in version 20.1] 
+| [ProviderKey](Systems.Security.UserProviderLogins.md#providerkey) | string (450) | The key, which the provider provided for logging the user.`Required` `Filter(multi eq)` 
+| [ProviderName](Systems.Security.UserProviderLogins.md#providername) | [ProviderName](Systems.Security.UserProviderLogins.md#providername) | The system name of the authentication provider. It should be already registered for the domain.`Required` `Filter(eq)` `Introduced in version 20.1` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### ProviderKey
 
-The key, which the provider provided for logging the user.[Required] [Filter(multi eq)]
+The key, which the provider provided for logging the user.`Required` `Filter(multi eq)`
 
 Type: **string (450)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ProviderName
 
-The system name of the authentication provider. It should be already registered for the domain.[Required] [Filter(eq)] [Introduced in version 20.1]
+The system name of the authentication provider. It should be already registered for the domain.`Required` `Filter(eq)` `Introduced in version 20.1`
 
 Type: **[ProviderName](Systems.Security.UserProviderLogins.md#providername)**  
 Category: **System**  

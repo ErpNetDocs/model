@@ -34,10 +34,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset.[Required] [Filter(ge;le)] 
-| [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset.[Required] [Filter(ge;le)] 
-| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan.[Required] [Filter(eq)] 
-| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
+| [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset.`Required` `Filter(ge;le)` 
+| [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset.`Required` `Filter(ge;le)` 
+| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan.`Required` `Filter(eq)` 
+| [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### DepreciationEndDate
 
-End date of the depreciation plan for this asset.[Required] [Filter(ge;le)]
+End date of the depreciation plan for this asset.`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### DepreciationStartDate
 
-Start date of the depreciation plan for this asset.[Required] [Filter(ge;le)]
+Start date of the depreciation plan for this asset.`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the depreciation plan.[Required] [Filter(eq)]
+Consecutive number of the line within the depreciation plan.`Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -104,7 +104,7 @@ Front-End Recalc Expressions:
 `( obj.DepreciationPlan.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### PlanDepreciationValue
 
-The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  

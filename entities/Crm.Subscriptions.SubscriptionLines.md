@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription.[Required] [Filter(eq)] [ORD] 
+| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription.`Required` `Filter(eq)` `ORD` 
 | [Notes](Crm.Subscriptions.SubscriptionLines.md#notes) | string (max) __nullable__ | Notes for this SubscriptionLine. 
-| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed.[Unit: QuantityUnit] [Required] [Filter(ge;le)] 
-| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line.[Default(0)] 
+| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed.`Unit: QuantityUnit` `Required` `Filter(ge;le)` 
+| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line.`Default(0)` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line within the subscription.[Required] [Filter(eq)] [ORD]
+Consecutive number of the line within the subscription.`Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity, which should be billed.[Unit: QuantityUnit] [Required] [Filter(ge;le)]
+The quantity, which should be billed.`Unit: QuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### SpecificDiscountPercent
 
-The specific discount to apply for this line.[Default(0)]
+The specific discount to apply for this line.`Default(0)`
 
 Type: **decimal (7, 6) __nullable__**  
 Category: **System**  

@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the consumed quantity issued from the store.[Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly] 
-| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line.[Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [ConsumedCost](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedcost) | [Amount (14, 2)](../data-types.md#amount) | Cost of the consumed quantity issued from the store.`Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly` 
+| [ConsumedQuantity](Production.ShopFloor.OutputOrderDistributedMaterialConsumptions.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Part of the quantity in the consumption order line which was used for the product in the output order line.`Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### ConsumedCost
 
-Cost of the consumed quantity issued from the store.[Currency: ConsumptionOrderLine.GetIssueCurrency()] [Required] [Default(0)] [ReadOnly]
+Cost of the consumed quantity issued from the store.`Currency: ConsumptionOrderLine.GetIssueCurrency()` `Required` `Default(0)` `ReadOnly`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantity
 
-Part of the quantity in the consumption order line which was used for the product in the output order line.[Unit: ConsumptionOrderLine.ConsumedQuantityUnit] [Required] [Default(0)] [ReadOnly]
+Part of the quantity in the consumption order line which was used for the product in the output order line.`Unit: ConsumptionOrderLine.ConsumedQuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

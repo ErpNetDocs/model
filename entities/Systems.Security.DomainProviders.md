@@ -39,9 +39,9 @@ Aggregate Root:
 | [ClientID](Systems.Security.DomainProviders.md#clientid) | string (254) __nullable__ | This is the Client_ID of our registration within the provider. 
 | [ClientSecret](Systems.Security.DomainProviders.md#clientsecret) | string (254) __nullable__ | This is the password, which we, as a client app, use to access the authentication provider. 
 | [DisplayName](Systems.Security.DomainProviders.md#displayname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Specifies the (multi-language) display name of the button in the login form. Especially useful for multi-tenant providers. 
-| [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain.[Required] [Default(true)] [Filter(eq)] 
+| [IsActive](Systems.Security.DomainProviders.md#isactive) | boolean | Specifies whether the provider is currently active for the domain.`Required` `Default(true)` `Filter(eq)` 
 | [Notes](Systems.Security.DomainProviders.md#notes) | string (max) __nullable__ | Notes for this DomainProvider. 
-| [ProviderName](Systems.Security.DomainProviders.md#providername) | [ProviderName](Systems.Security.DomainProviders.md#providername) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.[Required] [Filter(eq)] 
+| [ProviderName](Systems.Security.DomainProviders.md#providername) | [ProviderName](Systems.Security.DomainProviders.md#providername) | The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.`Required` `Filter(eq)` 
 | [TenantID](Systems.Security.DomainProviders.md#tenantid) | string (254) __nullable__ | When the authentication provider is multi-tenant, this specifies the tenant ID. For example, Google, Facebook and Microsoft are singe-tenant, while AzureAD is multi-tenant. 
 
 ## References
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the provider is currently active for the domain.[Required] [Default(true)] [Filter(eq)]
+Specifies whether the provider is currently active for the domain.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### ProviderName
 
-The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.[Required] [Filter(eq)]
+The system name of the user authentication provider. For example GOOGLE, FACEBOOK, MICROSOFT, AZUREAD, ERPNET, etc.`Required` `Filter(eq)`
 
 Type: **[ProviderName](Systems.Security.DomainProviders.md#providername)**  
 Category: **System**  

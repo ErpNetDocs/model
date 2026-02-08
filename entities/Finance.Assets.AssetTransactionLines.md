@@ -35,17 +35,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepreciationValue](Finance.Assets.AssetTransactionLines.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#depreciationvaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#negativereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#negativereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation[Required] [Default(&quot;ADJ&quot;)] [Filter(multi eq)] 
-| [PositiveReserveValue](Finance.Assets.AssetTransactionLines.md#positivereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#positivereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [PurchaseValue](Finance.Assets.AssetTransactionLines.md#purchasevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [PurchaseValueBase](Finance.Assets.AssetTransactionLines.md#purchasevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
-| [SalvageValue](Finance.Assets.AssetTransactionLines.md#salvagevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)] 
-| [SalvageValueBase](Finance.Assets.AssetTransactionLines.md#salvagevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)] 
+| [DepreciationValue](Finance.Assets.AssetTransactionLines.md#depreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [DepreciationValueBase](Finance.Assets.AssetTransactionLines.md#depreciationvaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the depreciation value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [NegativeReserveValue](Finance.Assets.AssetTransactionLines.md#negativereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [NegativeReserveValueBase](Finance.Assets.AssetTransactionLines.md#negativereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the negative reserve after asset valuations (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | [OperationType](Finance.Assets.AssetTransactionLines.md#operationtype) | Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation`Required` `Default(&quot;ADJ&quot;)` `Filter(multi eq)` 
+| [PositiveReserveValue](Finance.Assets.AssetTransactionLines.md#positivereservevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [PositiveReserveValueBase](Finance.Assets.AssetTransactionLines.md#positivereservevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the value of the positive reserve after asset valuations (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [PurchaseValue](Finance.Assets.AssetTransactionLines.md#purchasevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [PurchaseValueBase](Finance.Assets.AssetTransactionLines.md#purchasevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the purchase value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
+| [SalvageValue](Finance.Assets.AssetTransactionLines.md#salvagevalue) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)` 
+| [SalvageValueBase](Finance.Assets.AssetTransactionLines.md#salvagevaluebase) | [Amount (14, 2)](../data-types.md#amount) | Change in the salvage value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### DepreciationValue
 
-Change in the depreciation value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+Change in the depreciation value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -82,7 +82,7 @@ Front-End Recalc Expressions:
 `obj.DepreciationValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### DepreciationValueBase
 
-Change in the depreciation value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Change in the depreciation value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Front-End Recalc Expressions:
 `obj.DepreciationValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### NegativeReserveValue
 
-Change in the value of the negative reserve after asset valuations (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+Change in the value of the negative reserve after asset valuations (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -108,7 +108,7 @@ Front-End Recalc Expressions:
 `obj.NegativeReserveValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### NegativeReserveValueBase
 
-Change in the value of the negative reserve after asset valuations (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Change in the value of the negative reserve after asset valuations (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Front-End Recalc Expressions:
 `obj.NegativeReserveValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### OperationType
 
-Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation[Required] [Default(&quot;ADJ&quot;)] [Filter(multi eq)]
+Type of the current asset operation: PUR = Purchase, SLS = Sale, DEP = Depreciation, ADJ = Adjustment, REV = Reevaluation`Required` `Default(&quot;ADJ&quot;)` `Filter(multi eq)`
 
 Type: **[OperationType](Finance.Assets.AssetTransactionLines.md#operationtype)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### PositiveReserveValue
 
-Change in the value of the positive reserve after asset valuations (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+Change in the value of the positive reserve after asset valuations (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -156,7 +156,7 @@ Front-End Recalc Expressions:
 `obj.PositiveReserveValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### PositiveReserveValueBase
 
-Change in the value of the positive reserve after asset valuations (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Change in the value of the positive reserve after asset valuations (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -169,7 +169,7 @@ Front-End Recalc Expressions:
 `obj.PositiveReserveValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### PurchaseValue
 
-Change in the purchase value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+Change in the purchase value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -182,7 +182,7 @@ Front-End Recalc Expressions:
 `obj.PurchaseValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### PurchaseValueBase
 
-Change in the purchase value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Change in the purchase value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -195,7 +195,7 @@ Front-End Recalc Expressions:
 `obj.PurchaseValue.ConvertTo( obj.Asset.EnterpriseCompany.BaseCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### SalvageValue
 
-Change in the salvage value of the asset (in the currency of the asset).[Currency: Asset.ValuationCurrency] [Required] [Default(0)]
+Change in the salvage value of the asset (in the currency of the asset).`Currency: Asset.ValuationCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -208,7 +208,7 @@ Front-End Recalc Expressions:
 `obj.SalvageValueBase.ConvertTo( obj.Asset.ValuationCurrency, obj.AssetTransaction.CurrencyDirectory)`
 ### SalvageValueBase
 
-Change in the salvage value of the asset (in the currency of the asset's enterprise company).[Currency: Asset.EnterpriseCompany.BaseCurrency] [Required] [Default(0)]
+Change in the salvage value of the asset (in the currency of the asset's enterprise company).`Currency: Asset.EnterpriseCompany.BaseCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  

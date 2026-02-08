@@ -44,7 +44,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.SalesForce.SalesPersonGroups.md#code) | string (64) | The unique code of the SalesPersonGroup. `Required` `Filter(eq;like)` `ORD` 
-| [FullPath](Crm.SalesForce.SalesPersonGroups.md#fullpath) | string (4000) __nullable__ | Full path to this item in the form /root/child1/../leaf/[Filter(eq;like)] [ReadOnly] 
+| [FullPath](Crm.SalesForce.SalesPersonGroups.md#fullpath) | string (4000) __nullable__ | Full path to this item in the form /root/child1/../leaf/`Filter(eq;like)` `ReadOnly` 
 | [Name](Crm.SalesForce.SalesPersonGroups.md#name) | string (128) | The name of this SalesPersonGroup. `Required` `Filter(eq;like)` 
 
 ## References
@@ -86,7 +86,7 @@ Back-End Default Expression:
 
 ### FullPath
 
-Full path to this item in the form /root/child1/../leaf/[Filter(eq;like)] [ReadOnly]
+Full path to this item in the form /root/child1/../leaf/`Filter(eq;like)` `ReadOnly`
 
 Type: **string (4000) __nullable__**  
 Category: **System**  

@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? 1-active for choosing; 0-otherwise[Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the crew (multilanguage)[Required] [Filter(eq;like)] 
+| [Active](Applications.Fleet.Crews.md#active) | boolean | Is the crew active? 1-active for choosing; 0-otherwise`Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Fleet.Crews.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the crew (multilanguage)`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Active
 
-Is the crew active? 1-active for choosing; 0-otherwise[Required] [Default(true)] [Filter(eq)]
+Is the crew active? 1-active for choosing; 0-otherwise`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the crew (multilanguage)[Required] [Filter(eq;like)]
+The name of the crew (multilanguage)`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

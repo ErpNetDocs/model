@@ -41,15 +41,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GLN](General.Contacts.Parties.md#gln) | string (13) __nullable__ | Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.[Filter(multi eq)] [ORD] 
-| [IsActive](General.Contacts.Parties.md#isactive) | boolean | Specifies whether the current party is active in the system or not.[Required] [Default(true)] [Filter(eq)] 
-| [PartyCode](General.Contacts.Parties.md#partycode) | string (16) | The unique code of the party[Required] [Filter(multi eq;like)] [ORD] [ReadOnly] 
+| [GLN](General.Contacts.Parties.md#gln) | string (13) __nullable__ | Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.`Filter(multi eq)` `ORD` 
+| [IsActive](General.Contacts.Parties.md#isactive) | boolean | Specifies whether the current party is active in the system or not.`Required` `Default(true)` `Filter(eq)` 
+| [PartyCode](General.Contacts.Parties.md#partycode) | string (16) | The unique code of the party`Required` `Filter(multi eq;like)` `ORD` `ReadOnly` 
 | [PartyCreationTime](General.Contacts.Parties.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` 
 | [PartyCreationUser](General.Contacts.Parties.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` 
-| [PartyName](General.Contacts.Parties.md#partyname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the party[Required] [Filter(eq;like)] [ReadOnly] 
+| [PartyName](General.Contacts.Parties.md#partyname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the party`Required` `Filter(eq;like)` `ReadOnly` 
 | [PartyNotes](General.Contacts.Parties.md#partynotes) | string (254) __nullable__ | Notes for this Party. 
-| [PartyType](General.Contacts.Parties.md#partytype) | [PartyType](General.Contacts.Parties.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division[Required] [Default(&quot;P&quot;)] [Filter(multi eq)] 
-| [PartyUniqueNumber](General.Contacts.Parties.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies).[Filter(eq;like)] [ReadOnly] 
+| [PartyType](General.Contacts.Parties.md#partytype) | [PartyType](General.Contacts.Parties.md#partytype) | Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division`Required` `Default(&quot;P&quot;)` `Filter(multi eq)` 
+| [PartyUniqueNumber](General.Contacts.Parties.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies).`Filter(eq;like)` `ReadOnly` 
 | [PartyUpdateTime](General.Contacts.Parties.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` 
 | [PartyUpdateUser](General.Contacts.Parties.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` 
 
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### GLN
 
-Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.[Filter(multi eq)] [ORD]
+Global Location Number - provides the global supply chain solution for the identification of physical locations and legal entities. Used by EDI (Electronic Data Interchange) systems.`Filter(multi eq)` `ORD`
 
 Type: **string (13) __nullable__**  
 Indexed: **True**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the current party is active in the system or not.[Required] [Default(true)] [Filter(eq)]
+Specifies whether the current party is active in the system or not.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyCode
 
-The unique code of the party[Required] [Filter(multi eq;like)] [ORD] [ReadOnly]
+The unique code of the party`Required` `Filter(multi eq;like)` `ORD` `ReadOnly`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -149,7 +149,7 @@ Show in UI: **HiddenByDefault**
 
 ### PartyName
 
-The name of the party[Required] [Filter(eq;like)] [ReadOnly]
+The name of the party`Required` `Filter(eq;like)` `ReadOnly`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  
@@ -171,7 +171,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyType
 
-Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division[Required] [Default(&quot;P&quot;)] [Filter(multi eq)]
+Type of party. Currently supported are P=Person, C=Company, S=Store, L=Company Location, V=Division`Required` `Default(&quot;P&quot;)` `Filter(multi eq)`
 
 Type: **[PartyType](General.Contacts.Parties.md#partytype)**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyUniqueNumber
 
-Unique number of the party (National number for persons, Registration number for companies).[Filter(eq;like)] [ReadOnly]
+Unique number of the party (National number for persons, Registration number for companies).`Filter(eq;like)` `ReadOnly`
 
 Type: **string (16) __nullable__**  
 Category: **System**  

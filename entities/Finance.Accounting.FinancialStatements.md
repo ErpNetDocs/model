@@ -36,8 +36,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement.[Required] [Filter(eq;like)] [ORD] 
-| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement.[Required] [Filter(eq;like)] 
+| [Code](Finance.Accounting.FinancialStatements.md#code) | string (3) | Unique identifying code of the financial statement.`Required` `Filter(eq;like)` `ORD` 
+| [Name](Finance.Accounting.FinancialStatements.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement.`Required` `Filter(eq;like)` 
 
 
 ## System Attributes
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### Code
 
-Unique identifying code of the financial statement.[Required] [Filter(eq;like)] [ORD]
+Unique identifying code of the financial statement.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (3)**  
 Indexed: **True**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the financial statement.[Required] [Filter(eq;like)]
+Name of the financial statement.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

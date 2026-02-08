@@ -34,8 +34,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletionDate](Projects.Agile.ProjectMilestones.md#completiondate) | date __nullable__ | Planned completion date for the milestone[Filter(eq;ge;le)] 
-| [IsActive](Projects.Agile.ProjectMilestones.md#isactive) | boolean | Specifies whether the milestone is active for new cases[Required] [Default(true)] [Filter(eq)] 
+| [CompletionDate](Projects.Agile.ProjectMilestones.md#completiondate) | date __nullable__ | Planned completion date for the milestone`Filter(eq;ge;le)` 
+| [IsActive](Projects.Agile.ProjectMilestones.md#isactive) | boolean | Specifies whether the milestone is active for new cases`Required` `Default(true)` `Filter(eq)` 
 | [Name](Projects.Agile.ProjectMilestones.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ProjectMilestone. `Required` `Filter(like)` 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### CompletionDate
 
-Planned completion date for the milestone[Filter(eq;ge;le)]
+Planned completion date for the milestone`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the milestone is active for new cases[Required] [Default(true)] [Filter(eq)]
+Specifies whether the milestone is active for new cases`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 21.1.3.13] 
-| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store.[Required] [Default(false)] 
-| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin[Required] [Filter(like)] 
+| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13` 
+| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store.`Required` `Default(false)` 
+| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin`Required` `Filter(like)` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current store bin is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 21.1.3.13]
+Indicates whether the current store bin is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13`
 
 Type: **boolean**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-True, when this is the default storage bin for the specified store.[Required] [Default(false)]
+True, when this is the default storage bin for the specified store.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the store bin[Required] [Filter(like)]
+Name of the store bin`Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

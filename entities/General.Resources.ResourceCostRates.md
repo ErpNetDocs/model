@@ -35,11 +35,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](General.Resources.ResourceCostRates.md#fromdate) | date | Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.[Required] [Filter(eq;ge;le)] 
+| [FromDate](General.Resources.ResourceCostRates.md#fromdate) | date | Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.`Required` `Filter(eq;ge;le)` 
 | [Notes](General.Resources.ResourceCostRates.md#notes) | string (max) __nullable__ | Notes for this ResourceCostRate. 
-| [OvertimeRatePerHour](General.Resources.ResourceCostRates.md#overtimerateperhour) | [Amount (12, 4)](../data-types.md#amount) __nullable__ | The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.[Currency: Resource.CostingCurrency] [Filter(eq;like)] 
-| [PerUseCost](General.Resources.ResourceCostRates.md#perusecost) | [Amount (12, 2)](../data-types.md#amount) | One-time cost for each usage of the resource in the resources costing currency.[Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)] 
-| [StandardRatePerHour](General.Resources.ResourceCostRates.md#standardrateperhour) | [Amount (12, 4)](../data-types.md#amount) | The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.[Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)] 
+| [OvertimeRatePerHour](General.Resources.ResourceCostRates.md#overtimerateperhour) | [Amount (12, 4)](../data-types.md#amount) __nullable__ | The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.`Currency: Resource.CostingCurrency` `Filter(eq;like)` 
+| [PerUseCost](General.Resources.ResourceCostRates.md#perusecost) | [Amount (12, 2)](../data-types.md#amount) | One-time cost for each usage of the resource in the resources costing currency.`Currency: Resource.CostingCurrency` `Required` `Default(0)` `Filter(eq;like)` 
+| [StandardRatePerHour](General.Resources.ResourceCostRates.md#standardrateperhour) | [Amount (12, 4)](../data-types.md#amount) | The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.`Currency: Resource.CostingCurrency` `Required` `Filter(eq;like)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### FromDate
 
-Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.[Required] [Filter(eq;ge;le)]
+Starting date of validity of the cost rate. The rate is valid until the next cost rate record with later date is defined.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### OvertimeRatePerHour
 
-The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.[Currency: Resource.CostingCurrency] [Filter(eq;like)]
+The overtime cost of the resource per hour in the resources costing currency. The overtime rate specifies the cost of the resource, when it is used outside the normal working schedule. NULL means that there is no special overtime rate and the standard rate should be applied.`Currency: Resource.CostingCurrency` `Filter(eq;like)`
 
 Type: **[Amount (12, 4)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### PerUseCost
 
-One-time cost for each usage of the resource in the resources costing currency.[Currency: Resource.CostingCurrency] [Required] [Default(0)] [Filter(eq;like)]
+One-time cost for each usage of the resource in the resources costing currency.`Currency: Resource.CostingCurrency` `Required` `Default(0)` `Filter(eq;like)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardRatePerHour
 
-The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.[Currency: Resource.CostingCurrency] [Required] [Filter(eq;like)]
+The standard cost per hour of the resource in the resources costing currency. The standard cost is applied for resource usage during the normal working hours.`Currency: Resource.CostingCurrency` `Required` `Filter(eq;like)`
 
 Type: **[Amount (12, 4)](../data-types.md#amount)**  
 Category: **System**  

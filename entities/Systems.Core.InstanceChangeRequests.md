@@ -33,17 +33,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | The type of change requested for the enterprise company.[Required] [Filter(multi eq)] 
-| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (20, 10) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.[Filter(eq)] [Introduced in version 26.1.4.51] 
-| [EffectiveDate](Systems.Core.InstanceChangeRequests.md#effectivedate) | date | The date from which the change is effective. Might differ from execution date.[Required] [Filter(eq;ge;le)] 
-| [ExecutionDate](Systems.Core.InstanceChangeRequests.md#executiondate) | date | The date on which the change should be initiated.[Required] [Filter(eq;ge;le)] 
-| [Notes](Systems.Core.InstanceChangeRequests.md#notes) | string (max) __nullable__ | Notes[Filter(like)] 
-| [ProgressDate](Systems.Core.InstanceChangeRequests.md#progressdate) | date __nullable__ | The date up to which the data is updated in the database. Updated by the batch job.[Filter(eq;ge;le)] 
-| [ProgressPercent](Systems.Core.InstanceChangeRequests.md#progresspercent) | decimal (5, 2) __nullable__ | Progress, updated by the batch job.[Filter(ge;le)] 
-| [ReferenceNo](Systems.Core.InstanceChangeRequests.md#referenceno) | string (32) __nullable__ | Text for internal reference of the change request.[Filter(eq)] 
-| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number.[Required] [Filter(eq)] [ORD] 
-| [SettingsJson](Systems.Core.InstanceChangeRequests.md#settingsjson) | string (max) __nullable__ | Additional settings for the change; expressed in Json. The format depends on the change kind[Filter(like)] 
-| [State](Systems.Core.InstanceChangeRequests.md#state) | [State](Systems.Core.InstanceChangeRequests.md#state) | Current state of the request.[Required] [Default(&quot;DRF&quot;)] [Filter(eq)] 
+| [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | The type of change requested for the enterprise company.`Required` `Filter(multi eq)` 
+| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (20, 10) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.`Filter(eq)` `Introduced in version 26.1.4.51` 
+| [EffectiveDate](Systems.Core.InstanceChangeRequests.md#effectivedate) | date | The date from which the change is effective. Might differ from execution date.`Required` `Filter(eq;ge;le)` 
+| [ExecutionDate](Systems.Core.InstanceChangeRequests.md#executiondate) | date | The date on which the change should be initiated.`Required` `Filter(eq;ge;le)` 
+| [Notes](Systems.Core.InstanceChangeRequests.md#notes) | string (max) __nullable__ | Notes`Filter(like)` 
+| [ProgressDate](Systems.Core.InstanceChangeRequests.md#progressdate) | date __nullable__ | The date up to which the data is updated in the database. Updated by the batch job.`Filter(eq;ge;le)` 
+| [ProgressPercent](Systems.Core.InstanceChangeRequests.md#progresspercent) | decimal (5, 2) __nullable__ | Progress, updated by the batch job.`Filter(ge;le)` 
+| [ReferenceNo](Systems.Core.InstanceChangeRequests.md#referenceno) | string (32) __nullable__ | Text for internal reference of the change request.`Filter(eq)` 
+| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number.`Required` `Filter(eq)` `ORD` 
+| [SettingsJson](Systems.Core.InstanceChangeRequests.md#settingsjson) | string (max) __nullable__ | Additional settings for the change; expressed in Json. The format depends on the change kind`Filter(like)` 
+| [State](Systems.Core.InstanceChangeRequests.md#state) | [State](Systems.Core.InstanceChangeRequests.md#state) | Current state of the request.`Required` `Default(&quot;DRF&quot;)` `Filter(eq)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### ChangeKind
 
-The type of change requested for the enterprise company.[Required] [Filter(multi eq)]
+The type of change requested for the enterprise company.`Required` `Filter(multi eq)`
 
 Type: **[ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind)**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### CurrencyRate
 
-Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.[Filter(eq)] [Introduced in version 26.1.4.51]
+Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.`Filter(eq)` `Introduced in version 26.1.4.51`
 
 Type: **decimal (20, 10) __nullable__**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### EffectiveDate
 
-The date from which the change is effective. Might differ from execution date.[Required] [Filter(eq;ge;le)]
+The date from which the change is effective. Might differ from execution date.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionDate
 
-The date on which the change should be initiated.[Required] [Filter(eq;ge;le)]
+The date on which the change should be initiated.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes[Filter(like)]
+Notes`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### ProgressDate
 
-The date up to which the data is updated in the database. Updated by the batch job.[Filter(eq;ge;le)]
+The date up to which the data is updated in the database. Updated by the batch job.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -141,7 +141,7 @@ Show in UI: **ShownByDefault**
 
 ### ProgressPercent
 
-Progress, updated by the batch job.[Filter(ge;le)]
+Progress, updated by the batch job.`Filter(ge;le)`
 
 Type: **decimal (5, 2) __nullable__**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### ReferenceNo
 
-Text for internal reference of the change request.[Filter(eq)]
+Text for internal reference of the change request.`Filter(eq)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### RequestNo
 
-Global consequtive request number.[Required] [Filter(eq)] [ORD]
+Global consequtive request number.`Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Indexed: **True**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 ### SettingsJson
 
-Additional settings for the change; expressed in Json. The format depends on the change kind[Filter(like)]
+Additional settings for the change; expressed in Json. The format depends on the change kind`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-Current state of the request.[Required] [Default(&quot;DRF&quot;)] [Filter(eq)]
+Current state of the request.`Required` `Default(&quot;DRF&quot;)` `Filter(eq)`
 
 Type: **[State](Systems.Core.InstanceChangeRequests.md#state)**  
 Category: **System**  

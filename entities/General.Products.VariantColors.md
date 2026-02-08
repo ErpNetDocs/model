@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.VariantColors.md#code) | string (8) | Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.[Required] [Filter(eq;like)] [ORD] 
+| [Code](General.Products.VariantColors.md#code) | string (8) | Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.`Required` `Filter(eq;like)` `ORD` 
 | [Name](General.Products.VariantColors.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this VariantColor. `Required` `Filter(eq;like)` 
 
 
@@ -54,7 +54,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.[Required] [Filter(eq;like)] [ORD]
+Unique code of the color. Used to generate parts of bar-codes and in other coding schemes.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (8)**  
 Indexed: **True**  

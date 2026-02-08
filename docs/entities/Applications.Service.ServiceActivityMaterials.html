@@ -120,27 +120,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#coveredbyguarantee">CoveredByGuarantee</a></td>
 <td>boolean</td>
-<td>True when the used material is covered by the guarantee.[Required] [Default(false)]</td>
+<td>True when the used material is covered by the guarantee.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</td>
+<td>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity of the product, that was used[Unit: QuantityUnit] [Required]</td>
+<td>Quantity of the product, that was used<code>Unit: QuantityUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</td>
+<td>The equivalence of Quantity in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Service.ServiceActivityMaterials.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +242,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="coveredbyguarantee">CoveredByGuarantee</h3>
-<p>True when the used material is covered by the guarantee.[Required] [Default(false)]</p>
+<p>True when the used material is covered by the guarantee.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -250,7 +250,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]</p>
+<p>Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -261,14 +261,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.ServiceActivity.Materials.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity of the product, that was used[Unit: QuantityUnit] [Required]</p>
+<p>Quantity of the product, that was used<code>Unit: QuantityUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]</p>
+<p>The equivalence of Quantity in the base measurement category of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -279,7 +279,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

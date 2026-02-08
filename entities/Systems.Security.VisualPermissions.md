@@ -33,11 +33,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Security.VisualPermissions.md#applicationname) | string (64) | The application for which the permission is specified[Required] [Filter(eq)] 
-| [ElementName](Systems.Security.VisualPermissions.md#elementname) | string (4000) __nullable__ | Optionally, the element from the panel which will be secured[Filter(eq)] 
-| [FormName](Systems.Security.VisualPermissions.md#formname) | string (128) __nullable__ | Optionally, the form which will be secured[Filter(eq)] 
-| [OperationName](Systems.Security.VisualPermissions.md#operationname) | string (64) __nullable__ | Optionally, the operation on the element which will be secured[Filter(eq)] 
-| [PanelName](Systems.Security.VisualPermissions.md#panelname) | string (128) __nullable__ | Optionally, the panel from the form which will be secured[Filter(eq)] 
+| [ApplicationName](Systems.Security.VisualPermissions.md#applicationname) | string (64) | The application for which the permission is specified`Required` `Filter(eq)` 
+| [ElementName](Systems.Security.VisualPermissions.md#elementname) | string (4000) __nullable__ | Optionally, the element from the panel which will be secured`Filter(eq)` 
+| [FormName](Systems.Security.VisualPermissions.md#formname) | string (128) __nullable__ | Optionally, the form which will be secured`Filter(eq)` 
+| [OperationName](Systems.Security.VisualPermissions.md#operationname) | string (64) __nullable__ | Optionally, the operation on the element which will be secured`Filter(eq)` 
+| [PanelName](Systems.Security.VisualPermissions.md#panelname) | string (128) __nullable__ | Optionally, the panel from the form which will be secured`Filter(eq)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### ApplicationName
 
-The application for which the permission is specified[Required] [Filter(eq)]
+The application for which the permission is specified`Required` `Filter(eq)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### ElementName
 
-Optionally, the element from the panel which will be secured[Filter(eq)]
+Optionally, the element from the panel which will be secured`Filter(eq)`
 
 Type: **string (4000) __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### FormName
 
-Optionally, the form which will be secured[Filter(eq)]
+Optionally, the form which will be secured`Filter(eq)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### OperationName
 
-Optionally, the operation on the element which will be secured[Filter(eq)]
+Optionally, the operation on the element which will be secured`Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### PanelName
 
-Optionally, the panel from the form which will be secured[Filter(eq)]
+Optionally, the panel from the form which will be secured`Filter(eq)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  

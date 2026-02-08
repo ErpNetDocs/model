@@ -35,20 +35,20 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Logistics.Inventory.StoreOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [ForOrdering](Logistics.Inventory.StoreOrderLines.md#forordering) | boolean | Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied [Required] [Default(false)] 
+| [ForOrdering](Logistics.Inventory.StoreOrderLines.md#forordering) | boolean | Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied `Required` `Default(false)` 
 | [GuaranteePeriodDays](Logistics.Inventory.StoreOrderLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
-| [LineCost](Logistics.Inventory.StoreOrderLines.md#linecost) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost[Currency: StoreOrder.DocumentCurrency] 
-| [LineNo](Logistics.Inventory.StoreOrderLines.md#lineno) | int32 | Serial record order[Required] [Filter(eq)] 
+| [LineCost](Logistics.Inventory.StoreOrderLines.md#linecost) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost`Currency: StoreOrder.DocumentCurrency` 
+| [LineNo](Logistics.Inventory.StoreOrderLines.md#lineno) | int32 | Serial record order`Required` `Filter(eq)` 
 | [LotNumber](Logistics.Inventory.StoreOrderLines.md#lotnumber) | string (16) __nullable__ | Obsolete. Not used. 
 | [Notes](Logistics.Inventory.StoreOrderLines.md#notes) | string (254) __nullable__ | Notes for this StoreOrderLine. 
 | [ParentLineId](Logistics.Inventory.StoreOrderLines.md#parentlineid) | guid __nullable__ | Id of the line of the parent document, which generated the store order. null for user-entered store orders or if not applicable. `Filter(multi eq)` 
-| [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)] 
-| [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)] 
-| [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for receipt/issue[Unit: QuantityUnit] [Required] [Default(0)] 
-| [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] 
-| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product. It is written in the transaction lines created for the current line.[Filter(ge;le)] [ReadOnly] 
-| [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Cost for 1 unit of measure in the currency of the document[Currency: StoreOrder.DocumentCurrency] 
+| [ParentLineNo](Logistics.Inventory.StoreOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)` 
+| [PersistLot](Logistics.Inventory.StoreOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.`Required` `Default(false)` `Filter(eq)` 
+| [Quantity](Logistics.Inventory.StoreOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for receipt/issue`Unit: QuantityUnit` `Required` `Default(0)` 
+| [QuantityBase](Logistics.Inventory.StoreOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly` 
+| [StandardQuantityBase](Logistics.Inventory.StoreOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [TransactionTimestamp](Logistics.Inventory.StoreOrderLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product. It is written in the transaction lines created for the current line.`Filter(ge;le)` `ReadOnly` 
+| [UnitCost](Logistics.Inventory.StoreOrderLines.md#unitcost) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Cost for 1 unit of measure in the currency of the document`Currency: StoreOrder.DocumentCurrency` 
 
 ## References
 
@@ -89,7 +89,7 @@ Show in UI: **HiddenByDefault**
 
 ### ForOrdering
 
-Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied [Required] [Default(false)]
+Specifies that the quantity of the product can be less than free to use quantity, because the product will be supplied `Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -112,7 +112,7 @@ Front-End Recalc Expressions:
 `IIF( obj.Product.ProductType.IsServiced, obj.Product.GuaranteePeriodDays, null)`
 ### LineCost
 
-Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost[Currency: StoreOrder.DocumentCurrency]
+Total cost for the line in the currency of the document. Equals Quantity * Unit_Cost`Currency: StoreOrder.DocumentCurrency`
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Serial record order[Required] [Filter(eq)]
+Serial record order`Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **CannotBeShown**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **HiddenByDefault**
 
 ### PersistLot
 
-If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)]
+If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-Quantity ordered for receipt/issue[Unit: QuantityUnit] [Required] [Default(0)]
+Quantity ordered for receipt/issue`Unit: QuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -201,7 +201,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]
+Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -217,7 +217,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -232,7 +232,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TransactionTimestamp
 
-Exact time when the transaction changes the cost of the product. It is written in the transaction lines created for the current line.[Filter(ge;le)] [ReadOnly]
+Exact time when the transaction changes the cost of the product. It is written in the transaction lines created for the current line.`Filter(ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -242,7 +242,7 @@ Show in UI: **HiddenByDefault**
 
 ### UnitCost
 
-Cost for 1 unit of measure in the currency of the document[Currency: StoreOrder.DocumentCurrency]
+Cost for 1 unit of measure in the currency of the document`Currency: StoreOrder.DocumentCurrency`
 
 Type: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  

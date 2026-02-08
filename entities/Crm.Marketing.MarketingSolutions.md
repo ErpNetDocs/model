@@ -36,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Crm.Marketing.MarketingSolutions.md#code) | string (32) | The unique code of the MarketingSolution. `Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Marketing.MarketingSolutions.md#isactive) | boolean | Indicates whether the current Marketing solution is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
+| [IsActive](Crm.Marketing.MarketingSolutions.md#isactive) | boolean | Indicates whether the current Marketing solution is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
 | [Name](Crm.Marketing.MarketingSolutions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this MarketingSolution. `Required` `Filter(eq;like)` 
 | [Notes](Crm.Marketing.MarketingSolutions.md#notes) | string (max) __nullable__ | Notes for this MarketingSolution. 
 
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Marketing solution is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
+Indicates whether the current Marketing solution is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  

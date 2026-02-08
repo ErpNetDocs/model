@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal (10, 0) | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.[Required] [Default(0)] 
-| [ExpiryDate](Production.Technologies.PrincipalRecipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.[Filter(ge;le)] 
-| [Name](Production.Technologies.PrincipalRecipes.md#name) | string (64) | Name of the principal recipe[Required] [Filter(like)] 
+| [DurationHour](Production.Technologies.PrincipalRecipes.md#durationhour) | decimal (10, 0) | The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.`Required` `Default(0)` 
+| [ExpiryDate](Production.Technologies.PrincipalRecipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.`Filter(ge;le)` 
+| [Name](Production.Technologies.PrincipalRecipes.md#name) | string (64) | Name of the principal recipe`Required` `Filter(like)` 
 | [Notes](Production.Technologies.PrincipalRecipes.md#notes) | string (254) __nullable__ | User comments for the principal recipe. 
-| [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Suggested quantity to produce. Usually it is equal to 1[Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [ReleaseDate](Production.Technologies.PrincipalRecipes.md#releasedate) | datetime | The date, when the recipe model is released for use[Required] [Default(Today)] [Filter(ge;le)] 
-| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.[Required] [Default(0)] 
+| [ProduceQuantity](Production.Technologies.PrincipalRecipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Suggested quantity to produce. Usually it is equal to 1`Unit: ProduceUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [ReleaseDate](Production.Technologies.PrincipalRecipes.md#releasedate) | datetime | The date, when the recipe model is released for use`Required` `Default(Today)` `Filter(ge;le)` 
+| [ScrapRate](Production.Technologies.PrincipalRecipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.`Required` `Default(0)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### DurationHour
 
-The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.[Required] [Default(0)]
+The approximate duration of the operation (for the specified quantities) in seconds. This is pure operation time and excludes setup time.`Required` `Default(0)`
 
 Type: **decimal (10, 0)**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **CannotBeShown**
 
 ### ExpiryDate
 
-The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.[Filter(ge;le)]
+The last date, when the recipe should be used. NULL means that there is no expiry date yet and the recipe model is still active.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the principal recipe[Required] [Filter(like)]
+Name of the principal recipe`Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### ProduceQuantity
 
-Suggested quantity to produce. Usually it is equal to 1[Unit: ProduceUnit] [Required] [Default(1)] [Filter(ge;le)]
+Suggested quantity to produce. Usually it is equal to 1`Unit: ProduceUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### ReleaseDate
 
-The date, when the recipe model is released for use[Required] [Default(Today)] [Filter(ge;le)]
+The date, when the recipe model is released for use`Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.[Required] [Default(0)]
+The percentage (0..1) of scrap usually occurring during the production operations. Specifying this leads to inflated requirements of all raw materials for the recipe.`Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  

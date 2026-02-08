@@ -39,7 +39,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.[Required] [Default(0)] 
+| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.`Required` `Default(0)` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### CoveredInvoiceAmount
 
-Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.[Required] [Default(0)]
+Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.`Required` `Default(0)`
 
 Type: **decimal (14, 2)**  
 Category: **System**  

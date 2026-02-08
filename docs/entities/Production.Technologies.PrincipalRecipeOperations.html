@@ -131,7 +131,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Consecutive line number within the principal recipe.[Required]</td>
+<td>Consecutive line number within the principal recipe.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
-<td>Time to move the lot to the next operation in minutes[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>Time to move the lot to the next operation in minutes<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#notes">Notes</a></td>
@@ -156,17 +156,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
-<td>Duration of the operation for one piece in the standard measurement unit of the product[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>Duration of the operation for one piece in the standard measurement unit of the product<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
-<td>Standard rate of scrap during the operation[Required] [Default(0)]</td>
+<td>Standard rate of scrap during the operation<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
-<td>Time needed to setup the equipment[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>Time needed to setup the equipment<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#tooling">Tooling</a></td>
@@ -176,12 +176,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#usequantity">UseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>Quantity of the workgroup resource that should be allocated for the operation<code>Unit: UseQuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.Technologies.PrincipalRecipeOperations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
-<td>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Consecutive line number within the principal recipe.[Required]</p>
+<p>Consecutive line number within the principal recipe.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -289,7 +289,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<p>Time to move the lot to the next operation in minutes[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>Time to move the lot to the next operation in minutes<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -317,7 +317,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Operation.Description</code></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<p>Duration of the operation for one piece in the standard measurement unit of the product[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>Duration of the operation for one piece in the standard measurement unit of the product<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -327,7 +327,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Operation.RunTimeMinutes</code></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Standard rate of scrap during the operation[Required] [Default(0)]</p>
+<p>Standard rate of scrap during the operation<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -335,7 +335,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<p>Time needed to setup the equipment[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>Time needed to setup the equipment<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -353,7 +353,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
-<p>Quantity of the workgroup resource that should be allocated for the operation[Unit: UseQuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>Quantity of the workgroup resource that should be allocated for the operation<code>Unit: UseQuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -363,7 +363,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Operation.UseQuantityBase</code></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>Wait time (drying, cooling, etc.) after the operation in minutes<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

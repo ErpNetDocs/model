@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is used.[Unit: ConsumableQuantityUnit] [Required] 
+| [ConsumableQuantity](Applications.Rental.AssetConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is used.`Unit: ConsumableQuantityUnit` `Required` 
 | [Notes](Applications.Rental.AssetConsumables.md#notes) | string (max) __nullable__ | Notes for this AssetConsumable. 
 
 ## References
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### ConsumableQuantity
 
-Specifies what quantity of the current consumable is used.[Unit: ConsumableQuantityUnit] [Required]
+Specifies what quantity of the current consumable is used.`Unit: ConsumableQuantityUnit` `Required`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  

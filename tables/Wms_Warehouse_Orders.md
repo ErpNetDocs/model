@@ -15,6 +15,7 @@ Contains order for internal warehouse operation or plan for execution of warehou
 
 | Name | Type | Description |
 | - | - | --- |
+|[Additional_Details_Json](#additional_details_json)|`nvarchar(max)` |Stores additional information for the Warehouse Order in JSON format. The field is intended as a universal container for process-specific data and is populated automatically by the system.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
@@ -23,6 +24,36 @@ Contains order for internal warehouse operation or plan for execution of warehou
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` |When set, denotes that the whole order is assigned to the specified worker.|
 
 ## Columns
+
+### Additional_Details_Json
+
+
+Stores additional information for the Warehouse Order in JSON format. The field is intended as a universal container for process-specific data and is populated automatically by the system.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Document_Id
 

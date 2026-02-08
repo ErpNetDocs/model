@@ -36,17 +36,17 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Logistics.Procurement.PurchaseInvoiceLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
 | [DeliveryTermsCode](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) | [DeliveryTerms](Logistics.Procurement.PurchaseInvoiceLines.md#deliverytermscode) __nullable__ | Mode of delivery, like CIF, FOB, etc. Used also in Intrastat reporting 
-| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatapplydate) | datetime __nullable__ | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.[Filter(ge;le)] 
+| [IntrastatApplyDate](Logistics.Procurement.PurchaseInvoiceLines.md#intrastatapplydate) | datetime __nullable__ | Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.`Filter(ge;le)` 
 | [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
 | [IntrastatTransportModeCode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) | [TransportMode](Logistics.Procurement.PurchaseInvoiceLines.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
-| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total invoiced amount for this line in the document currency of the invoice.[Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
-| [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice.[Required] 
+| [LineAmount](Logistics.Procurement.PurchaseInvoiceLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | The total invoiced amount for this line in the document currency of the invoice.`Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)` 
+| [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice.`Required` 
 | [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string (254) __nullable__ | Notes for this PurchaseInvoiceLine. 
-| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user.[Required] 
-| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The invoiced quantity.[Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
-| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the invoiced item in the document currency of the invoice.[Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)] 
+| [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user.`Required` 
+| [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The invoiced quantity.`Unit: QuantityUnit` `Required` `Default(1)` 
+| [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
+| [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [UnitPrice](Logistics.Procurement.PurchaseInvoiceLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the invoiced item in the document currency of the invoice.`Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)` 
 
 ## References
 
@@ -121,7 +121,7 @@ Front-End Recalc Expressions:
 `obj.PurchaseInvoice.DeliveryTermsCode`
 ### IntrastatApplyDate
 
-Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.[Filter(ge;le)]
+Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -200,7 +200,7 @@ Front-End Recalc Expressions:
 `obj.PurchaseInvoice.IntrastatTransportModeCode`
 ### LineAmount
 
-The total invoiced amount for this line in the document currency of the invoice.[Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
+The total invoiced amount for this line in the document currency of the invoice.`Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -211,7 +211,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number within the invoice.[Required]
+Consecutive line number within the invoice.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -237,7 +237,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductName
 
-The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user.[Required]
+The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user.`Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -252,7 +252,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ProductDescription, obj.Product.Name)`
 ### Quantity
 
-The invoiced quantity.[Unit: QuantityUnit] [Required] [Default(1)]
+The invoiced quantity.`Unit: QuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -265,7 +265,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ConfirmedQuantity.IfNullThen( obj.ReceivingOrderLine.Quantity), obj.Quantity)`
 ### QuantityBase
 
-The equivalence of Quantity in the base measurement category of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The equivalence of Quantity in the base measurement category of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -280,7 +280,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -295,7 +295,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### UnitPrice
 
-The unit price of the invoiced item in the document currency of the invoice.[Currency: PurchaseInvoice.DocumentCurrency] [Required] [Default(0)]
+The unit price of the invoiced item in the document currency of the invoice.`Currency: PurchaseInvoice.DocumentCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 5)](../data-types.md#amount)**  
 Category: **System**  

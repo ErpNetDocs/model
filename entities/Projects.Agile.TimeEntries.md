@@ -33,11 +33,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created.[Required] [Filter(eq;ge;le)] [ORD] 
+| [Date](Projects.Agile.TimeEntries.md#date) | date | The date for which the time entry is created.`Required` `Filter(eq;ge;le)` `ORD` 
 | [DurationHours](Projects.Agile.TimeEntries.md#durationhours) | decimal (0, 0) | Total duration of the logged time (in hours). [ReadOnly] 
-| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.[Filter(eq;ge;le)] 
-| [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes[Filter(like)] 
-| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user.[Required] [Filter(eq;ge;le)] [ORD] 
+| [EndTime](Projects.Agile.TimeEntries.md#endtime) | time __nullable__ | The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.`Filter(eq;ge;le)` 
+| [Notes](Projects.Agile.TimeEntries.md#notes) | string (max) __nullable__ | Notes`Filter(like)` 
+| [StartTime](Projects.Agile.TimeEntries.md#starttime) | time | The start time of the logged work. Stored in the local time zone of the user.`Required` `Filter(eq;ge;le)` `ORD` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### Date
 
-The date for which the time entry is created.[Required] [Filter(eq;ge;le)] [ORD]
+The date for which the time entry is created.`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **date**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTime
 
-The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.[Filter(eq;ge;le)]
+The ending time of the logged work. Stored in the local time zone of the user. Empty value when the work is still in progress.`Filter(eq;ge;le)`
 
 Type: **time __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes[Filter(like)]
+Notes`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The start time of the logged work. Stored in the local time zone of the user.[Required] [Filter(eq;ge;le)] [ORD]
+The start time of the logged work. Stored in the local time zone of the user.`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **time**  
 Category: **System**  

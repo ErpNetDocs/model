@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instoreavailablequantity">InStoreAvailableQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></td>
-<td>The quantity found in store (in Quantity Unit). NULL means that count was not performed.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]</td>
+<td>The quantity found in store (in Quantity Unit). NULL means that count was not performed.<code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instorelocation">InStoreLocation</a></td>
@@ -136,12 +136,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#instoreprice">InStorePrice</a></td>
 <td>decimal (15, 5) <strong>nullable</strong></td>
-<td>Price displayed in store.[Filter(eq;ge;le)]</td>
+<td>Price displayed in store.<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]</td>
+<td>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#notes">Notes</a></td>
@@ -151,7 +151,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Marketing.MarketingActivityLines.html#orderquantity">OrderQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></td>
-<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]</td>
+<td>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.<code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoreavailablequantity">InStoreAvailableQuantity</h3>
-<p>The quantity found in store (in Quantity Unit). NULL means that count was not performed.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]</p>
+<p>The quantity found in store (in Quantity Unit). NULL means that count was not performed.<code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (10, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -248,14 +248,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="instoreprice">InStorePrice</h3>
-<p>Price displayed in store.[Filter(eq;ge;le)]</p>
+<p>Price displayed in store.<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (15, 5) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]</p>
+<p>Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.<code>Required</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -274,7 +274,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderquantity">OrderQuantity</h3>
-<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]</p>
+<p>Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.<code>Unit: OrderQuantityUnit</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (15, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

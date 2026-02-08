@@ -45,12 +45,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ComponentNo](General.Products.CompositeProductComponents.md#componentno) | int32 | Consecutive number of the component within this composite product.[Required] [Filter(multi eq)] 
-| [FromDate](General.Products.CompositeProductComponents.md#fromdate) | date __nullable__ | When set, specifies the activation date of the component for this product.[Filter(eq;ge;le)] 
-| [IsActive](General.Products.CompositeProductComponents.md#isactive) | boolean | Indicates whether the component is currently active for this composite product.[Required] [Default(true)] [Filter(eq)] 
+| [ComponentNo](General.Products.CompositeProductComponents.md#componentno) | int32 | Consecutive number of the component within this composite product.`Required` `Filter(multi eq)` 
+| [FromDate](General.Products.CompositeProductComponents.md#fromdate) | date __nullable__ | When set, specifies the activation date of the component for this product.`Filter(eq;ge;le)` 
+| [IsActive](General.Products.CompositeProductComponents.md#isactive) | boolean | Indicates whether the component is currently active for this composite product.`Required` `Default(true)` `Filter(eq)` 
 | [Notes](General.Products.CompositeProductComponents.md#notes) | string (max) __nullable__ | Notes for this composite product component. 
-| [Quantity](General.Products.CompositeProductComponents.md#quantity) | decimal (12, 3) | The number of packages of this component that are needed to compose the product.[Required] [Default(1)] [Filter(multi eq;ge;le)] 
-| [ToDate](General.Products.CompositeProductComponents.md#todate) | date __nullable__ | When set, specifies the de-activation date of the component for this product.[Filter(eq;ge;le)] 
+| [Quantity](General.Products.CompositeProductComponents.md#quantity) | decimal (12, 3) | The number of packages of this component that are needed to compose the product.`Required` `Default(1)` `Filter(multi eq;ge;le)` 
+| [ToDate](General.Products.CompositeProductComponents.md#todate) | date __nullable__ | When set, specifies the de-activation date of the component for this product.`Filter(eq;ge;le)` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### ComponentNo
 
-Consecutive number of the component within this composite product.[Required] [Filter(multi eq)]
+Consecutive number of the component within this composite product.`Required` `Filter(multi eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Front-End Recalc Expressions:
 `( obj.CompositeProduct.CompositeProductComponents.Select( c => c.ComponentNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### FromDate
 
-When set, specifies the activation date of the component for this product.[Filter(eq;ge;le)]
+When set, specifies the activation date of the component for this product.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the component is currently active for this composite product.[Required] [Default(true)] [Filter(eq)]
+Indicates whether the component is currently active for this composite product.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The number of packages of this component that are needed to compose the product.[Required] [Default(1)] [Filter(multi eq;ge;le)]
+The number of packages of this component that are needed to compose the product.`Required` `Default(1)` `Filter(multi eq;ge;le)`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -131,7 +131,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-When set, specifies the de-activation date of the component for this product.[Filter(eq;ge;le)]
+When set, specifies the de-activation date of the component for this product.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

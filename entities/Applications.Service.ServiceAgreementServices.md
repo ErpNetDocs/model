@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Service.ServiceAgreementServices.md#enddate) | datetime __nullable__ | End date to which the agreedment for the service or product holds.[Filter(ge;le)] 
-| [LineNo](Applications.Service.ServiceAgreementServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] 
-| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed servcice or product[Unit: QuantityUnit] [Required] 
-| [StartDate](Applications.Service.ServiceAgreementServices.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the service or product holds.[Filter(ge;le)] 
+| [EndDate](Applications.Service.ServiceAgreementServices.md#enddate) | datetime __nullable__ | End date to which the agreedment for the service or product holds.`Filter(ge;le)` 
+| [LineNo](Applications.Service.ServiceAgreementServices.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required` 
+| [Quantity](Applications.Service.ServiceAgreementServices.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity of the agreed servcice or product`Unit: QuantityUnit` `Required` 
+| [StartDate](Applications.Service.ServiceAgreementServices.md#startdate) | datetime __nullable__ | Start date from which the agreedment for the service or product holds.`Filter(ge;le)` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### EndDate
 
-End date to which the agreedment for the service or product holds.[Filter(ge;le)]
+End date to which the agreedment for the service or product holds.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceAgreement.Services.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### Quantity
 
-Quantity of the agreed servcice or product[Unit: QuantityUnit] [Required]
+Quantity of the agreed servcice or product`Unit: QuantityUnit` `Required`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDate
 
-Start date from which the agreedment for the service or product holds.[Filter(ge;le)]
+Start date from which the agreedment for the service or product holds.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

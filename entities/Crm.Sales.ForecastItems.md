@@ -41,9 +41,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](Crm.Sales.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period[Required] [Filter(ge;le)] 
-| [IsActive](Crm.Sales.ForecastItems.md#isactive) | boolean | Indicates whether the current Forecast item is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
-| [Quantity](Crm.Sales.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)] 
+| [Date](Crm.Sales.ForecastItems.md#date) | datetime | The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period`Required` `Filter(ge;le)` 
+| [IsActive](Crm.Sales.ForecastItems.md#isactive) | boolean | Indicates whether the current Forecast item is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Quantity](Crm.Sales.ForecastItems.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The forecasted sales quantity in the base measurement category of the product`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Date
 
-The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period[Required] [Filter(ge;le)]
+The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Forecast item is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
+Indicates whether the current Forecast item is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The forecasted sales quantity in the base measurement category of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [Filter(ge;le)]
+The forecasted sales quantity in the base measurement category of the product`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

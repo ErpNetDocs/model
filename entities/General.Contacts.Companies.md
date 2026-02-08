@@ -43,14 +43,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BranchNumber](General.Contacts.Companies.md#branchnumber) | int32 | Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.[Required] [Default(0)] [Filter(eq)] 
-| [City](General.Contacts.Companies.md#city) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The city in which the company is registered.[Filter(like)] 
+| [BranchNumber](General.Contacts.Companies.md#branchnumber) | int32 | Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.`Required` `Default(0)` `Filter(eq)` 
+| [City](General.Contacts.Companies.md#city) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | The city in which the company is registered.`Filter(like)` 
 | [CreationTime](General.Contacts.Companies.md#creationtime) | datetime __nullable__ | Date and time when the Company was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](General.Contacts.Companies.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Company. `Filter(like)` `ReadOnly` 
 | [GLN](General.Contacts.Companies.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.Companies.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [IsVATCashReporting<br />Registered](General.Contacts.Companies.md#isvatcashreportingregistered) | boolean | When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.[Required] [Default(false)] 
-| [IsVATRegistered](General.Contacts.Companies.md#isvatregistered) | boolean | Determines whether the company is included in VAT registers.[Required] [Default(false)] 
+| [IsVATCashReporting<br />Registered](General.Contacts.Companies.md#isvatcashreportingregistered) | boolean | When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.`Required` `Default(false)` 
+| [IsVATRegistered](General.Contacts.Companies.md#isvatregistered) | boolean | Determines whether the company is included in VAT registers.`Required` `Default(false)` 
 | [Name](General.Contacts.Companies.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The name of this Company. `Filter(eq;like)` 
 | [PartyCode](General.Contacts.Companies.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.Companies.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -61,11 +61,11 @@ Aggregate Tree
 | [PartyUniqueNumber](General.Contacts.Companies.md#partyuniquenumber) | string (16) __nullable__ | Unique number of the party (National number for persons, Registration number for companies). `Filter(eq;like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateTime](General.Contacts.Companies.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](General.Contacts.Companies.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [RegistrationNumber](General.Contacts.Companies.md#registrationnumber) | string (16) __nullable__ | Unique, government-assigned registration number. NULL means unknown[Filter(eq;like)] [ORD] 
-| [RegistrationPrimaryAddress](General.Contacts.Companies.md#registrationprimaryaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The primary registration address of the company.[Filter(like)] 
-| [RegistrationType](General.Contacts.Companies.md#registrationtype) | [MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__ | Legal registration type - like LTD., PLC, etc. NULL means unknown[Filter(eq)] 
-| [RegistrationVATNumber](General.Contacts.Companies.md#registrationvatnumber) | string (16) __nullable__ | VAT registration number where applicable. NULL means that VAT number is not applicable or unknown[Filter(eq)] [ORD] 
-| [ResponsiblePersonName](General.Contacts.Companies.md#responsiblepersonname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Name of the primary responsible person of the company.[Filter(like)] 
+| [RegistrationNumber](General.Contacts.Companies.md#registrationnumber) | string (16) __nullable__ | Unique, government-assigned registration number. NULL means unknown`Filter(eq;like)` `ORD` 
+| [RegistrationPrimaryAddress](General.Contacts.Companies.md#registrationprimaryaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The primary registration address of the company.`Filter(like)` 
+| [RegistrationType](General.Contacts.Companies.md#registrationtype) | [MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__ | Legal registration type - like LTD., PLC, etc. NULL means unknown`Filter(eq)` 
+| [RegistrationVATNumber](General.Contacts.Companies.md#registrationvatnumber) | string (16) __nullable__ | VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq)` `ORD` 
+| [ResponsiblePersonName](General.Contacts.Companies.md#responsiblepersonname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Name of the primary responsible person of the company.`Filter(like)` 
 | [UpdateTime](General.Contacts.Companies.md#updatetime) | datetime __nullable__ | Date and time when the Company was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Contacts.Companies.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Company. `Filter(like)` `ReadOnly` 
 
@@ -109,7 +109,7 @@ Aggregate Tree
 
 ### BranchNumber
 
-Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.[Required] [Default(0)] [Filter(eq)]
+Branch number of the company. Companies with equal names and/or registration numbers can be inserted only if their branch numbers are different.`Required` `Default(0)` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### City
 
-The city in which the company is registered.[Filter(like)]
+The city in which the company is registered.`Filter(like)`
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -174,7 +174,7 @@ Show in UI: **ShownByDefault**
 
 ### IsVATCashReportingRegistered
 
-When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.[Required] [Default(false)]
+When enabled indicates that the company is registered for VAT cash accounting and use this mode in the preparation of VAT records.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -185,7 +185,7 @@ Show in UI: **ShownByDefault**
 
 ### IsVATRegistered
 
-Determines whether the company is included in VAT registers.[Required] [Default(false)]
+Determines whether the company is included in VAT registers.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -319,7 +319,7 @@ Show in UI: **HiddenByDefault**
 
 ### RegistrationNumber
 
-Unique, government-assigned registration number. NULL means unknown[Filter(eq;like)] [ORD]
+Unique, government-assigned registration number. NULL means unknown`Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -331,7 +331,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationPrimaryAddress
 
-The primary registration address of the company.[Filter(like)]
+The primary registration address of the company.`Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -341,7 +341,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationType
 
-Legal registration type - like LTD., PLC, etc. NULL means unknown[Filter(eq)]
+Legal registration type - like LTD., PLC, etc. NULL means unknown`Filter(eq)`
 
 Type: **[MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -351,7 +351,7 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationVATNumber
 
-VAT registration number where applicable. NULL means that VAT number is not applicable or unknown[Filter(eq)] [ORD]
+VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -363,7 +363,7 @@ Show in UI: **ShownByDefault**
 
 ### ResponsiblePersonName
 
-Name of the primary responsible person of the company.[Filter(like)]
+Name of the primary responsible person of the company.`Filter(like)`
 
 Type: **[MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  

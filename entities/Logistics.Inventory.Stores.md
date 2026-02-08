@@ -44,15 +44,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active[Obsolete] [Obsoleted in version 22.1.6.61] 
+| [<s>Active</s>](Logistics.Inventory.Stores.md#active) | boolean __nullable__ | **OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active`Obsolete` `Obsoleted in version 22.1.6.61` 
 | [Code](Logistics.Inventory.Stores.md#code) | string (16) | The unique code of the Store. `Required` `Filter(eq;like)` `ORD` 
 | [CreationTime](Logistics.Inventory.Stores.md#creationtime) | datetime __nullable__ | Date and time when the Store was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Logistics.Inventory.Stores.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Store. `Filter(like)` `ReadOnly` 
 | [DefaultSupplyStoreId](Logistics.Inventory.Stores.md#defaultsupplystoreid) | guid __nullable__ | The store from which goods are usually supplied to this store. `Filter(multi eq)` 
 | [GLN](Logistics.Inventory.Stores.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](Logistics.Inventory.Stores.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the store[Required] [Filter(like)] 
-| [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.[Required] [Default(0)] [Filter(eq)] 
+| [Name](Logistics.Inventory.Stores.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the store`Required` `Filter(like)` 
+| [NumberOfDimensions](Logistics.Inventory.Stores.md#numberofdimensions) | int32 | Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.`Required` `Default(0)` `Filter(eq)` 
 | [PartyCode](Logistics.Inventory.Stores.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](Logistics.Inventory.Stores.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](Logistics.Inventory.Stores.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -63,7 +63,7 @@ Aggregate Tree
 | [PartyUpdateTime](Logistics.Inventory.Stores.md#partyupdatetime) | datetime __nullable__ | Date and time when the Party was last updated. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyUpdateUser](Logistics.Inventory.Stores.md#partyupdateuser) | string (64) __nullable__ | Login name of the user, who last updated the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [SchemaXML](Logistics.Inventory.Stores.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
-| [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.[Required] [Default(true)] 
+| [Unmanaged](Logistics.Inventory.Stores.md#unmanaged) | boolean | If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.`Required` `Default(true)` 
 | [UpdateTime](Logistics.Inventory.Stores.md#updatetime) | datetime __nullable__ | Date and time when the Store was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Logistics.Inventory.Stores.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Store. `Filter(like)` `ReadOnly` 
 
@@ -116,7 +116,7 @@ Aggregate Tree
 
 ### Active
 
-**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active[Obsolete] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** Obsolete - Use Gen_Parties.Is_Active`Obsolete` `Obsoleted in version 22.1.6.61`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the store[Required] [Filter(like)]
+Name of the store`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -204,7 +204,7 @@ Show in UI: **ShownByDefault**
 
 ### NumberOfDimensions
 
-Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.[Required] [Default(0)] [Filter(eq)]
+Number of dimensions in the coordinate system of the storage bins. 0 means single-bin store. Currently, this is only stored for information and is not used for automatical generation of store bins, as it was intended.`Required` `Default(0)` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -338,7 +338,7 @@ Show in UI: **CannotBeShown**
 
 ### Unmanaged
 
-If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.[Required] [Default(true)]
+If checked, allows direct execution of the store orders if the respective document route is activated. Otherwise store orders must be executed through the execution navigator or manually.`Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  

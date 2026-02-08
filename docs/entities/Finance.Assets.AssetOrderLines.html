@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#assetvalue">AssetValue</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Value of the acquired or retired asset.[Currency: AssetValueCurrency] [Required] [Default(0)]</td>
+<td>Value of the acquired or retired asset.<code>Currency: AssetValueCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 18.2]</td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.<code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Assets.AssetOrderLines.html#quantity">Quantity</a></td>
 <td>int32</td>
-<td>Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.[Required] [Default(0)]</td>
+<td>Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.<code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="assetvalue">AssetValue</h3>
-<p>Value of the acquired or retired asset.[Currency: AssetValueCurrency] [Required] [Default(0)]</p>
+<p>Value of the acquired or retired asset.<code>Currency: AssetValueCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -209,14 +209,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 18.2]</p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.<code>Introduced in version 18.2</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.[Required] [Default(0)]</p>
+<p>Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

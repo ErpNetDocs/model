@@ -33,8 +33,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column.[Required] [Filter(eq)] 
-| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column.[Required] [Filter(eq)] [ORD] 
+| [ColumnName](Systems.Security.ColumnPermissions.md#columnname) | string (128) | The name of the secured column.`Required` `Filter(eq)` 
+| [TableName](Systems.Security.ColumnPermissions.md#tablename) | string (128) | The table in which is the secured column.`Required` `Filter(eq)` `ORD` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Tree
 
 ### ColumnName
 
-The name of the secured column.[Required] [Filter(eq)]
+The name of the secured column.`Required` `Filter(eq)`
 
 Type: **string (128)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### TableName
 
-The table in which is the secured column.[Required] [Filter(eq)] [ORD]
+The table in which is the secured column.`Required` `Filter(eq)` `ORD`
 
 Type: **string (128)**  
 Indexed: **True**  

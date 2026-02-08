@@ -43,11 +43,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pricing.PriceTypes.md#code) | string (16) | Short identification code of the price type.[Required] [Filter(eq)] [ORD] 
-| [IsActive](Crm.Pricing.PriceTypes.md#isactive) | boolean | Indicates whether the current Price type is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
-| [Name](Crm.Pricing.PriceTypes.md#name) | string (254) | Full name of the price type.[Required] [Filter(eq;like)] 
+| [Code](Crm.Pricing.PriceTypes.md#code) | string (16) | Short identification code of the price type.`Required` `Filter(eq)` `ORD` 
+| [IsActive](Crm.Pricing.PriceTypes.md#isactive) | boolean | Indicates whether the current Price type is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Name](Crm.Pricing.PriceTypes.md#name) | string (254) | Full name of the price type.`Required` `Filter(eq;like)` 
 | [Notes](Crm.Pricing.PriceTypes.md#notes) | string (max) __nullable__ | Notes for this PriceType. 
-| [OrdinalPos](Crm.Pricing.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types.[Required] [ORD] 
+| [OrdinalPos](Crm.Pricing.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types.`Required` `ORD` 
 
 
 ## System Attributes
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### Code
 
-Short identification code of the price type.[Required] [Filter(eq)] [ORD]
+Short identification code of the price type.`Required` `Filter(eq)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Price type is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
+Indicates whether the current Price type is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Full name of the price type.[Required] [Filter(eq;like)]
+Full name of the price type.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### OrdinalPos
 
-Priority position of the price type, with respect to the other price types.[Required] [ORD]
+Priority position of the price type, with respect to the other price types.`Required` `ORD`
 
 Type: **int32**  
 Indexed: **True**  

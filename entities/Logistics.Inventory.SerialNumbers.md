@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string (40) | The serial number text[Required] [Filter(multi eq;like)] 
+| [SerialNumberField](Logistics.Inventory.SerialNumbers.md#serialnumberfield) | string (40) | The serial number text`Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -57,7 +57,7 @@ Aggregate Root:
 
 ### SerialNumberField
 
-The serial number text[Required] [Filter(multi eq;like)]
+The serial number text`Required` `Filter(multi eq;like)`
 
 Type: **string (40)**  
 Category: **System**  

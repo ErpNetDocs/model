@@ -28,8 +28,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [QuantityBaseAvailable](Logistics.Wms.WarehouseAvailability.md#quantitybaseavailable) | decimal (38, 3) | Currently available quantity in base measurement unit.[Required] [Filter(eq;ge;le)] [Introduced in version 22.1.5.25] 
-| [StandardQuantityAvailable](Logistics.Wms.WarehouseAvailability.md#standardquantityavailable) | decimal (38, 3) | Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces.[Required] [Filter(eq;ge;le)] [Introduced in version 22.1.5.25] 
+| [QuantityBaseAvailable](Logistics.Wms.WarehouseAvailability.md#quantitybaseavailable) | decimal (38, 3) | Currently available quantity in base measurement unit.`Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25` 
+| [StandardQuantityAvailable](Logistics.Wms.WarehouseAvailability.md#standardquantityavailable) | decimal (38, 3) | Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces.`Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25` 
 
 ## References
 
@@ -48,7 +48,7 @@ Aggregate Tree
 
 ### QuantityBaseAvailable
 
-Currently available quantity in base measurement unit.[Required] [Filter(eq;ge;le)] [Introduced in version 22.1.5.25]
+Currently available quantity in base measurement unit.`Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25`
 
 Type: **decimal (38, 3)**  
 Category: **System**  
@@ -58,7 +58,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantityAvailable
 
-Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces.[Required] [Filter(eq;ge;le)] [Introduced in version 22.1.5.25]
+Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces.`Required` `Filter(eq;ge;le)` `Introduced in version 22.1.5.25`
 
 Type: **decimal (38, 3)**  
 Category: **System**  

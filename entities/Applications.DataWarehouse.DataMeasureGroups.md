@@ -35,8 +35,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string (16) | Unique group code.[Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string (254) | Group name (multilanguage).[Required] [Filter(eq;like)] 
+| [Code](Applications.DataWarehouse.DataMeasureGroups.md#code) | string (16) | Unique group code.`Required` `Filter(eq;like)` `ORD` 
+| [Name](Applications.DataWarehouse.DataMeasureGroups.md#name) | string (254) | Group name (multilanguage).`Required` `Filter(eq;like)` 
 | [Notes](Applications.DataWarehouse.DataMeasureGroups.md#notes) | string (max) __nullable__ | Notes for this DataMeasureGroup. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### Code
 
-Unique group code.[Required] [Filter(eq;like)] [ORD]
+Unique group code.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Group name (multilanguage).[Required] [Filter(eq;like)]
+Group name (multilanguage).`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  

@@ -34,14 +34,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Consumed quantity in the operation.[Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)] 
-| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).[Required] [Filter(eq)] [ReadOnly] 
+| [ConsumedQuantity](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Consumed quantity in the operation.`Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)` 
+| [ConsumedQuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The requested quantity equivalence in the base measurement category of the requested material.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [ConsumedStandard<br />QuantityBase](Production.ShopFloor.ConsumptionOrderLines.md#consumedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | [ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype) | Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).`Required` `Filter(eq)` `ReadOnly` 
 | [CurrentBalanceBase](Production.ShopFloor.ConsumptionOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order[Required] 
+| [LineOrd](Production.ShopFloor.ConsumptionOrderLines.md#lineord) | int32 | Non-unique line number within the order`Required` 
 | [Notes](Production.ShopFloor.ConsumptionOrderLines.md#notes) | string (max) __nullable__ | Notes for this ConsumptionOrderLine. 
-| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime __nullable__ | The scheduled date, when the material is needed.[Filter(ge;le)] 
+| [ScheduledDateTime](Production.ShopFloor.ConsumptionOrderLines.md#scheduleddatetime) | datetime __nullable__ | The scheduled date, when the material is needed.`Filter(ge;le)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### ConsumedQuantity
 
-Consumed quantity in the operation.[Unit: ConsumedQuantityUnit] [Required] [Filter(ge;le)]
+Consumed quantity in the operation.`Unit: ConsumedQuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -83,7 +83,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.ConsumedQuantityUnit == null), null, IIF( ( obj.WorkOrderItemIngredient != null), obj.WorkOrderItemIngredient.GetSumConsumedQuantity( obj.ConsumedQuantityUnit), obj.ConsumedQuantity))`
 ### ConsumedQuantityBase
 
-The requested quantity equivalence in the base measurement category of the requested material.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+The requested quantity equivalence in the base measurement category of the requested material.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -113,7 +113,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.ConsumedQuantity == null) OrElse ( obj.ConsumedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ConsumedStandardQuantityBase, obj.ConsumedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### ConsumptionType
 
-Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).[Required] [Filter(eq)] [ReadOnly]
+Determines whether the material cost is distributed among all produced products, or only one (specified in the Work Order Item Ingredient).`Required` `Filter(eq)` `ReadOnly`
 
 Type: **[ConsumptionType](Production.ShopFloor.ConsumptionOrderLines.md#consumptiontype)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-Non-unique line number within the order[Required]
+Non-unique line number within the order`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -169,7 +169,7 @@ Show in UI: **HiddenByDefault**
 
 ### ScheduledDateTime
 
-The scheduled date, when the material is needed.[Filter(ge;le)]
+The scheduled date, when the material is needed.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

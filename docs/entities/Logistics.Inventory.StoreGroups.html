@@ -127,7 +127,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#fullpath"><s>FullPath</s></a></td>
 <td>string (25) <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.[Obsolete] [Filter(eq;like)] [ORD] [ReadOnly] [Obsoleted in version 23.1.2.3]</td>
+<td><strong>OBSOLETE! Do not use!</strong> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.<code>Obsolete</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> <code>Obsoleted in version 23.1.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#name">Name</a></td>
@@ -137,7 +137,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Logistics.Inventory.StoreGroups.html#parentfullpath"><s>ParentFullPath</s></a></td>
 <td>string (25) <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.[Obsolete] [Filter(eq;like)] [ReadOnly] [Obsoleted in version 23.1.2.3]</td>
+<td><strong>OBSOLETE! Do not use!</strong> The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.<code>Obsolete</code> <code>Filter(eq;like)</code> <code>ReadOnly</code> <code>Obsoleted in version 23.1.2.3</code></td>
 </tr>
 </tbody>
 </table>
@@ -222,7 +222,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>obj.IncMax( o =&gt; o.Code, o =&gt; ( o.Parent == obj.Parent), &quot;000&quot;)</code></p>
 <h3 id="fullpath">FullPath</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.[Obsolete] [Filter(eq;like)] [ORD] [ReadOnly] [Obsoleted in version 23.1.2.3]</p>
+<p><strong>OBSOLETE! Do not use!</strong> The full path to the store group in a dot separated, non-leading dot format. For example: 001.005.008.<code>Obsolete</code> <code>Filter(eq;like)</code> <code>ORD</code> <code>ReadOnly</code> <code>Obsoleted in version 23.1.2.3</code></p>
 <p>Type: <strong>string (25) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -238,7 +238,7 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentfullpath">ParentFullPath</h3>
-<p><strong>OBSOLETE! Do not use!</strong> The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.[Obsolete] [Filter(eq;like)] [ReadOnly] [Obsoleted in version 23.1.2.3]</p>
+<p><strong>OBSOLETE! Do not use!</strong> The full path to the parent store group. It is stored in a dot separated, non-leading dot format. For example: 001.005.<code>Obsolete</code> <code>Filter(eq;like)</code> <code>ReadOnly</code> <code>Obsoleted in version 23.1.2.3</code></p>
 <p>Type: <strong>string (25) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>

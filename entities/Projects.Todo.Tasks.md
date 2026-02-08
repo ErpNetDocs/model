@@ -34,14 +34,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedDateTimeUtc](Projects.Todo.Tasks.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task was completed.[Filter(eq;ge;le)] [ReadOnly] 
-| [CreationTimeUtc](Projects.Todo.Tasks.md#creationtimeutc) | datetime | Indicates (in UTC) when the task was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [ReadOnly] [Introduced in version 26.1.4.61] 
-| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished.[Filter(eq;ge;le)] [ORD] 
-| [Importance](Projects.Todo.Tasks.md#importance) | [Importance](Projects.Todo.Tasks.md#importance) | The importance of the task.[Required] [Default(&quot;N&quot;)] [Filter(eq)] 
+| [CompletedDateTimeUtc](Projects.Todo.Tasks.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task was completed.`Filter(eq;ge;le)` `ReadOnly` 
+| [CreationTimeUtc](Projects.Todo.Tasks.md#creationtimeutc) | datetime | Indicates (in UTC) when the task was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61` 
+| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished.`Filter(eq;ge;le)` `ORD` 
+| [Importance](Projects.Todo.Tasks.md#importance) | [Importance](Projects.Todo.Tasks.md#importance) | The importance of the task.`Required` `Default(&quot;N&quot;)` `Filter(eq)` 
 | [Notes](Projects.Todo.Tasks.md#notes) | string (max) __nullable__ | Notes for this Task. `Introduced in version 23.1.1.48` 
-| [RemindTimeUtc](Projects.Todo.Tasks.md#remindtimeutc) | datetime __nullable__ | When to remind the assigned user for the task (in UTC).[Filter(eq;ge;le)] [Introduced in version 23.1.1.51] 
-| [State](Projects.Todo.Tasks.md#state) | [State](Projects.Todo.Tasks.md#state) | Indicates the current task state.[Required] [Default(&quot;N&quot;)] [Filter(multi eq)] 
-| [Title](Projects.Todo.Tasks.md#title) | string (254) | A brief description of the task.[Required] [Filter(like)] 
+| [RemindTimeUtc](Projects.Todo.Tasks.md#remindtimeutc) | datetime __nullable__ | When to remind the assigned user for the task (in UTC).`Filter(eq;ge;le)` `Introduced in version 23.1.1.51` 
+| [State](Projects.Todo.Tasks.md#state) | [State](Projects.Todo.Tasks.md#state) | Indicates the current task state.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)` 
+| [Title](Projects.Todo.Tasks.md#title) | string (254) | A brief description of the task.`Required` `Filter(like)` 
 
 ## References
 
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### CompletedDateTimeUtc
 
-Indicates (in UTC) when the task was completed.[Filter(eq;ge;le)] [ReadOnly]
+Indicates (in UTC) when the task was completed.`Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-Indicates (in UTC) when the task was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ORD] [ReadOnly] [Introduced in version 26.1.4.61]
+Indicates (in UTC) when the task was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61`
 
 Type: **datetime**  
 Indexed: **True**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### DueDate
 
-Indicates when the task should be finished.[Filter(eq;ge;le)] [ORD]
+Indicates when the task should be finished.`Filter(eq;ge;le)` `ORD`
 
 Type: **date __nullable__**  
 Indexed: **True**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Importance
 
-The importance of the task.[Required] [Default(&quot;N&quot;)] [Filter(eq)]
+The importance of the task.`Required` `Default(&quot;N&quot;)` `Filter(eq)`
 
 Type: **[Importance](Projects.Todo.Tasks.md#importance)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### RemindTimeUtc
 
-When to remind the assigned user for the task (in UTC).[Filter(eq;ge;le)] [Introduced in version 23.1.1.51]
+When to remind the assigned user for the task (in UTC).`Filter(eq;ge;le)` `Introduced in version 23.1.1.51`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -149,7 +149,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-Indicates the current task state.[Required] [Default(&quot;N&quot;)] [Filter(multi eq)]
+Indicates the current task state.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)`
 
 Type: **[State](Projects.Todo.Tasks.md#state)**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **HiddenByDefault**
 
 ### Title
 
-A brief description of the task.[Required] [Filter(like)]
+A brief description of the task.`Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

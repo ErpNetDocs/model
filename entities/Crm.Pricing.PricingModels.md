@@ -35,9 +35,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal (6, 5) | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price[Required] [Default(0)] 
-| [IsActive](Crm.Pricing.PricingModels.md#isactive) | boolean | Indicates whether the current Pricing model is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
-| [Name](Crm.Pricing.PricingModels.md#name) | string (254) | The name of the pricing model[Required] [Filter(eq;like)] 
+| [DefaultMarginPercent](Crm.Pricing.PricingModels.md#defaultmarginpercent) | decimal (6, 5) | Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price`Required` `Default(0)` 
+| [IsActive](Crm.Pricing.PricingModels.md#isactive) | boolean | Indicates whether the current Pricing model is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [Name](Crm.Pricing.PricingModels.md#name) | string (254) | The name of the pricing model`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### DefaultMarginPercent
 
-Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price[Required] [Default(0)]
+Default margin between standard cost and standard price. The margin is applied to the products when calculating standard price`Required` `Default(0)`
 
 Type: **decimal (6, 5)**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Pricing model is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
+Indicates whether the current Pricing model is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -92,7 +92,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the pricing model[Required] [Filter(eq;like)]
+The name of the pricing model`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  

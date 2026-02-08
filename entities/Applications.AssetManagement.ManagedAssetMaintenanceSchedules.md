@@ -37,7 +37,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetMaintenance<br />Schedule. 
-| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 __nullable__ | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.[Filter(multi eq;ge;le)] 
+| [ParameterChangeDelta](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#parameterchangedelta) | int32 __nullable__ | The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.`Filter(multi eq;ge;le)` 
 | [ScheduleDays](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#scheduledays) | int32 __nullable__ | Number of days between planned maintenances. NULL means that the schedule is not planned based on days. 
 | [ScheduleMonths](Applications.AssetManagement.ManagedAssetMaintenanceSchedules.md#schedulemonths) | int32 __nullable__ | Number of months between planned maintenances. NULL means that the schedule is not planned based on months. 
 
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### ParameterChangeDelta
 
-The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.[Filter(multi eq;ge;le)]
+The value of the tracked parameter change between planned maintenances. The tracked parameter is determined based on the Maintenance Type. NULL means, that the maintenances are not planned, based on parameter change.`Filter(multi eq;ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  

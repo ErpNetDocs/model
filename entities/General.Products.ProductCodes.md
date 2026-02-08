@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents.[Required] [Default(true)] [Filter(eq)] 
-| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string (32) | The code of the product in the specified coding system[Required] [Filter(eq;like)] [ORD] 
+| [Active](General.Products.ProductCodes.md#active) | boolean | True when the code is active and can be selected in new documents.`Required` `Default(true)` `Filter(eq)` 
+| [ProductCodeField](General.Products.ProductCodes.md#productcodefield) | string (32) | The code of the product in the specified coding system`Required` `Filter(eq;like)` `ORD` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Active
 
-True when the code is active and can be selected in new documents.[Required] [Default(true)] [Filter(eq)]
+True when the code is active and can be selected in new documents.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### ProductCodeField
 
-The code of the product in the specified coding system[Required] [Filter(eq;like)] [ORD]
+The code of the product in the specified coding system`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  

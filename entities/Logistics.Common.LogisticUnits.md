@@ -46,11 +46,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ExpectedWeight](Logistics.Common.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. [Filter(eq;ge;le)] 
-| [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 23.1.2.11] 
-| [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. [Filter(eq;ge;le)] 
+| [ExpectedWeight](Logistics.Common.LogisticUnits.md#expectedweight) | decimal (12, 3) __nullable__ | Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. `Filter(eq;ge;le)` 
+| [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11` 
+| [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. `Filter(eq;ge;le)` 
 | [Notes](Logistics.Common.LogisticUnits.md#notes) | string (max) __nullable__ | Notes for this LogisticUnit. `Filter(like)` 
-| [SerialCode](Logistics.Common.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.[Required] [Filter(multi eq;like)] [ORD] 
+| [SerialCode](Logistics.Common.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.`Required` `Filter(multi eq;like)` `ORD` 
 
 ## References
 
@@ -84,7 +84,7 @@ Aggregate Tree
 
 ### ExpectedWeight
 
-Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. [Filter(eq;ge;le)]
+Expected weight of the unit, in the measurement unit, specified in the Logistic Unit Type. Used for planning purposes. NULL means unknown. `Filter(eq;ge;le)`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the logistic unit is currently active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 23.1.2.11]
+Indicates whether the logistic unit is currently active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11`
 
 Type: **boolean**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasuredWeight
 
-Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. [Filter(eq;ge;le)]
+Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. `Filter(eq;ge;le)`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialCode
 
-Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.[Required] [Filter(multi eq;like)] [ORD]
+Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.`Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  

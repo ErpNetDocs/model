@@ -37,8 +37,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.[Default(true)] [Filter(eq)] 
-| [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location.[Required] [Filter(multi eq;like)] 
+| [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.`Default(true)` `Filter(eq)` 
+| [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location.`Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.[Default(true)] [Filter(eq)]
+Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.`Default(true)` `Filter(eq)`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### PosLocationCode
 
-Unique (with the enterprise company) code of this POS location.[Required] [Filter(multi eq;like)]
+Unique (with the enterprise company) code of this POS location.`Required` `Filter(multi eq;like)`
 
 Type: **string (16)**  
 Category: **System**  

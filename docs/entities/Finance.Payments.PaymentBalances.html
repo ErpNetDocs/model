@@ -122,67 +122,67 @@ Show in UI:  ShownByDefault</p>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#direction">Direction</a></td>
 <td><a href="Finance.Payments.PaymentBalances.html#direction">Direction</a></td>
-<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Direction]</td>
+<td>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Direction</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#duedate">DueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The due date of the payment. NULL means there is no due date[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Due_Date]</td>
+<td>The due date of the payment. NULL means there is no due date<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#duestartdate">DueStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date at which the payment becomes executable. NULL means the payment is executable at all times.[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Due_Start_Date]</td>
+<td>The date at which the payment becomes executable. NULL means the payment is executable at all times.<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#duestatus">DueStatus</a></td>
 <td><a href="Finance.Payments.PaymentBalances.html#duestatus">DueStatus</a></td>
-<td>Due status of requested payment[Required] [Filter(multi eq)] [Introduced in version 25.1.2.74]</td>
+<td>Due status of requested payment<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.74</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#isinvoiced">IsInvoiced</a></td>
 <td>boolean</td>
-<td>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.[Required] [Filter(multi eq)]</td>
+<td>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.<code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#orderamount">OrderAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The total amount that should be paid.[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Total_Amount]</td>
+<td>The total amount that should be paid.<code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#paidamount">PaidAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (38, 2)</a></td>
-<td>The paid amount. Taken from released payment transactions.[Currency: Currency] [Required] [Filter(eq;ge;le)]</td>
+<td>The paid amount. Taken from released payment transactions.<code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#paymentstatus">PaymentStatus</a></td>
 <td><a href="Finance.Payments.PaymentBalances.html#paymentstatus">PaymentStatus</a></td>
-<td>Payment Status	[Required] [Filter(multi eq)] [Introduced in version 25.1.2.76]</td>
+<td>Payment Status	<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refdocumentdate">RefDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Ref_Document_Date]</td>
+<td>The date of the original document. NULL means that it is unknown<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refdocumentno">RefDocumentNo</a></td>
 <td>string (20)</td>
-<td>The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Ref_Document_No]</td>
+<td>The number of the document which has created the payment order and is the basis for the payment<code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refinvoicedocumentdate">RefInvoiceDocumentDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date]</td>
+<td>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#refinvoicedocumentno">RefInvoiceDocumentNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.[Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No]</td>
+<td>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.<code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Payments.PaymentBalances.html#remainingamount">RemainingAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 2)</a></td>
-<td>The amount that remains to be paid.[Currency: Currency] [Required] [Filter(eq;ge;le)] [Introduced in version 25.1.2.79]</td>
+<td>The amount that remains to be paid.<code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.79</code></td>
 </tr>
 </tbody>
 </table>
@@ -245,7 +245,7 @@ Show in UI:  ShownByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="direction">Direction</h3>
-<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).[Required] [Default(&quot;I&quot;)] [Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Direction]</p>
+<p>Indicates whether the remaining balance is an incoming receivable (to be collected) or an outgoing payable (to be paid).<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Direction</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(Finance.Payments.PaymentBalances.md#direction) data attribute<br>
@@ -274,7 +274,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Outgoing</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>The due date of the payment. NULL means there is no due date[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Due_Date]</p>
+<p>The due date of the payment. NULL means there is no due date<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Date</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Due_Date</strong><br>
@@ -282,7 +282,7 @@ Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duestartdate">DueStartDate</h3>
-<p>The date at which the payment becomes executable. NULL means the payment is executable at all times.[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Due_Start_Date]</p>
+<p>The date at which the payment becomes executable. NULL means the payment is executable at all times.<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Due_Start_Date</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Due_Start_Date</strong><br>
@@ -290,7 +290,7 @@ Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duestatus">DueStatus</h3>
-<p>Due status of requested payment[Required] [Filter(multi eq)] [Introduced in version 25.1.2.74]</p>
+<p>Due status of requested payment<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.74</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#duestatus">DueStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>DueStatus</code>(Finance.Payments.PaymentBalances.md#duestatus) data attribute<br>
@@ -329,14 +329,14 @@ Allowed Values (Finance.Payments.PaymentBalancesRepository.DueStatus Enum Member
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isinvoiced">IsInvoiced</h3>
-<p>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.[Required] [Filter(multi eq)]</p>
+<p>When Is_Invoiced = true, then in the view results will be included only the Payment Orders which do have a RefInvoiceDocument. If Is_Invoiced = false, then in the view results will be included only the Payment Orders which do NOT have a RefInvoiceDocument.<code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="orderamount">OrderAmount</h3>
-<p>The total amount that should be paid.[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Total_Amount]</p>
+<p>The total amount that should be paid.<code>Currency: Currency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Total_Amount</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Total_Amount</strong><br>
@@ -345,14 +345,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paidamount">PaidAmount</h3>
-<p>The paid amount. Taken from released payment transactions.[Currency: Currency] [Required] [Filter(eq;ge;le)]</p>
+<p>The paid amount. Taken from released payment transactions.<code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (38, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymentstatus">PaymentStatus</h3>
-<p>Payment Status	[Required] [Filter(multi eq)] [Introduced in version 25.1.2.76]</p>
+<p>Payment Status	<code>Required</code> <code>Filter(multi eq)</code> <code>Introduced in version 25.1.2.76</code></p>
 <p>Type: <strong><a href="Finance.Payments.PaymentBalances.html#paymentstatus">PaymentStatus</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>PaymentStatus</code>(Finance.Payments.PaymentBalances.md#paymentstatus) data attribute<br>
@@ -391,7 +391,7 @@ Allowed Values (Finance.Payments.PaymentBalancesRepository.PaymentStatus Enum Me
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="refdocumentdate">RefDocumentDate</h3>
-<p>The date of the original document. NULL means that it is unknown[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Ref_Document_Date]</p>
+<p>The date of the original document. NULL means that it is unknown<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_Date</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_Date</strong><br>
@@ -403,7 +403,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentDate</code></p>
 <h3 id="refdocumentno">RefDocumentNo</h3>
-<p>The number of the document which has created the payment order and is the basis for the payment[Required] [Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Ref_Document_No]</p>
+<p>The number of the document which has created the payment order and is the basis for the payment<code>Required</code> <code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Document_No</code></p>
 <p>Type: <strong>string (20)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Document_No</strong><br>
@@ -416,7 +416,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefDocument.DocumentNo</code></p>
 <h3 id="refinvoicedocumentdate">RefInvoiceDocumentDate</h3>
-<p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.[Filter(eq;ge;le)] [Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date]</p>
+<p>The date of the related invoice. NULL means that the payment order isn't related to any invoice or the date is unknown.<code>Filter(eq;ge;le)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_Date</strong><br>
@@ -428,7 +428,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentDate</code></p>
 <h3 id="refinvoicedocumentno">RefInvoiceDocumentNo</h3>
-<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.[Filter(eq)] [Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No]</p>
+<p>The number of the invoice which has created or is related to the payment order and is the basis for the payment. NULL means that the payment order isn't created or related to any invoice.<code>Filter(eq)</code> <code>Inherited from Cash_Payment_Orders_Table.Ref_Invoice_Document_No</code></p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cash_Payment_Orders_Table.Ref_Invoice_Document_No</strong><br>
@@ -441,7 +441,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.RefInvoiceDocument.DocumentNo</code></p>
 <h3 id="remainingamount">RemainingAmount</h3>
-<p>The amount that remains to be paid.[Currency: Currency] [Required] [Filter(eq;ge;le)] [Introduced in version 25.1.2.79]</p>
+<p>The amount that remains to be paid.<code>Currency: Currency</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 25.1.2.79</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

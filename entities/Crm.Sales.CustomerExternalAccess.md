@@ -40,9 +40,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.[Default(30)] [Filter(eq;ge;le)] 
+| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.`Default(30)` `Filter(eq;ge;le)` 
 | [Notes](Crm.Sales.CustomerExternalAccess.md#notes) | string (max) __nullable__ | Notes for this External Access. 
-| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access.[Required] [Default(&quot;L30&quot;)] [Filter(eq)] 
+| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access.`Required` `Default(&quot;L30&quot;)` `Filter(eq)` 
 
 ## References
 
@@ -65,7 +65,7 @@ Aggregate Root:
 
 ### DaysBackAccess
 
-The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.[Default(30)] [Filter(eq;ge;le)]
+The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.`Default(30)` `Filter(eq;ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Role
 
-The role of the user, defines the granted access.[Required] [Default(&quot;L30&quot;)] [Filter(eq)]
+The role of the user, defines the granted access.`Required` `Default(&quot;L30&quot;)` `Filter(eq)`
 
 Type: **[Role](Crm.Sales.CustomerExternalAccess.md#role)**  
 Category: **System**  

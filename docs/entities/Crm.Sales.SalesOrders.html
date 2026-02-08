@@ -164,7 +164,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#applytradeconditions">ApplyTradeConditions</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>Specifies whether the system should apply standard pricing and discounts to this document.[Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53]</td>
+<td>Specifies whether the system should apply standard pricing and discounts to this document.<code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#completetime">CompleteTime</a></td>
@@ -184,17 +184,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#creditlimitoverride">CreditLimitOverride</a></td>
 <td>boolean</td>
-<td>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables[Required] [Default(false)] [Filter(eq)]</td>
+<td>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customerpurchaseorderdate">CustomerPurchaseOrderDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Date of the customer's purchase order[Filter(ge;le)]</td>
+<td>Date of the customer's purchase order<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#customerpurchaseorderno">CustomerPurchaseOrderNo</a></td>
 <td>string (20) <strong>nullable</strong></td>
-<td>Reference number of the customer's purchase order[Filter(eq;like)] [ORD]</td>
+<td>Reference number of the customer's purchase order<code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#deliverytermscode">DeliveryTermsCode</a></td>
@@ -229,12 +229,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fiscalsalesnumber">FiscalSalesNumber</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1]</td>
+<td>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.<code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fromdate">FromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</td>
+<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#fullstate">FullState</a></td>
@@ -254,17 +254,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
-<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</td>
+<td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#issingleexecution">IsSingleExecution</a></td>
 <td>boolean</td>
-<td>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#isvalidfield">IsValidField</a></td>
 <td>boolean</td>
-<td>1 when the order is valid (e.g. released and not void). Used for internal processing.[Required] [Default(false)] [ReadOnly]</td>
+<td>1 when the order is valid (e.g. released and not void). Used for internal processing.<code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#notes"><s>Notes</s></a></td>
@@ -279,12 +279,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymentduedate">PaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The last term for the payment of the sales order[Filter(ge;le)]</td>
+<td>The last term for the payment of the sales order<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#paymentduestartdate">PaymentDueStartDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date when the payment becomes due for documents with one installment.[Filter(ge;le)]</td>
+<td>The date when the payment becomes due for documents with one installment.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#planningonly">PlanningOnly</a></td>
@@ -314,7 +314,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.[Filter(ge;le)]</td>
+<td>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#state">State</a></td>
@@ -329,7 +329,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</td>
+<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrders.html#totallineamount">TotalLineAmount</a></td>
@@ -711,7 +711,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="applytradeconditions">ApplyTradeConditions</h3>
-<p>Specifies whether the system should apply standard pricing and discounts to this document.[Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53]</p>
+<p>Specifies whether the system should apply standard pricing and discounts to this document.<code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -744,7 +744,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creditlimitoverride">CreditLimitOverride</h3>
-<p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables[Required] [Default(false)] [Filter(eq)]</p>
+<p>Allows the sales order to be released even in the case of violations of credit limit or presence of overdue receivables<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -752,14 +752,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customerpurchaseorderdate">CustomerPurchaseOrderDate</h3>
-<p>Date of the customer's purchase order[Filter(ge;le)]</p>
+<p>Date of the customer's purchase order<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="customerpurchaseorderno">CustomerPurchaseOrderNo</h3>
-<p>Reference number of the customer's purchase order[Filter(eq;like)] [ORD]</p>
+<p>Reference number of the customer's purchase order<code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (20) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -880,7 +880,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="fiscalsalesnumber">FiscalSalesNumber</h3>
-<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.[Filter(multi eq;like)] [ReadOnly] [Introduced in version 19.1]</p>
+<p>Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.<code>Filter(multi eq;like)</code> <code>ReadOnly</code> <code>Introduced in version 19.1</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
@@ -888,7 +888,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</p>
+<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1054,7 +1054,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
 <h3 id="isreleased">IsReleased</h3>
-<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated[Obsolete] [Required] [Default(false)] [Filter(eq)] [ReadOnly] [Obsoleted in version 22.1.6.61]</p>
+<p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1062,7 +1062,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="issingleexecution">IsSingleExecution</h3>
-<p>Specifies whether the document is a single execution of its order document.[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Specifies whether the document is a single execution of its order document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -1070,7 +1070,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="isvalidfield">IsValidField</h3>
-<p>1 when the order is valid (e.g. released and not void). Used for internal processing.[Required] [Default(false)] [ReadOnly]</p>
+<p>1 when the order is valid (e.g. released and not void). Used for internal processing.<code>Required</code> <code>Default(false)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -1117,7 +1117,7 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentduedate">PaymentDueDate</h3>
-<p>The last term for the payment of the sales order[Filter(ge;le)]</p>
+<p>The last term for the payment of the sales order<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1126,7 +1126,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DocumentDate.AddDays( Convert( IIF( ( obj.ShipToCustomer.DefaultPaymentTermDays != 0), obj.ShipToCustomer.DefaultPaymentTermDays, obj.Customer.DefaultPaymentTermDays), Double))</code></p>
 <h3 id="paymentduestartdate">PaymentDueStartDate</h3>
-<p>The date when the payment becomes due for documents with one installment.[Filter(ge;le)]</p>
+<p>The date when the payment becomes due for documents with one installment.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1174,7 +1174,7 @@ Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.[Filter(ge;le)]</p>
+<p>The required delivery date for all lines in the sales order. Initially calculated, based on either the Ship To Customer or Customer delivery term.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -1239,7 +1239,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</p>
+<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

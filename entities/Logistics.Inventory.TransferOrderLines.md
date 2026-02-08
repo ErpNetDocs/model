@@ -35,14 +35,14 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Logistics.Inventory.TransferOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [DueDateIn](Logistics.Inventory.TransferOrderLines.md#duedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)] 
-| [DueDateOut](Logistics.Inventory.TransferOrderLines.md#duedateout) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)] 
-| [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised[Required] 
+| [DueDateIn](Logistics.Inventory.TransferOrderLines.md#duedatein) | datetime | The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header`Required` `Filter(ge;le)` 
+| [DueDateOut](Logistics.Inventory.TransferOrderLines.md#duedateout) | datetime | When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header`Required` `Filter(ge;le)` 
+| [LineOrd](Logistics.Inventory.TransferOrderLines.md#lineord) | int32 | Line ordinal position within the transaction. Duplicates are allowed, but not advised`Required` 
 | [Notes](Logistics.Inventory.TransferOrderLines.md#notes) | string (254) __nullable__ | Notes for this TransferOrderLine. 
-| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for transfer[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line[Currency: TransferOrder.DocumentCurrency] 
+| [Quantity](Logistics.Inventory.TransferOrderLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity ordered for transfer`Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Inventory.TransferOrderLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
+| [StandardQuantityBase](Logistics.Inventory.TransferOrderLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [StandardUnitPrice](Logistics.Inventory.TransferOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the transfer order line`Currency: TransferOrder.DocumentCurrency` 
 
 ## References
 
@@ -83,7 +83,7 @@ Show in UI: **HiddenByDefault**
 
 ### DueDateIn
 
-The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]
+The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -98,7 +98,7 @@ Front-End Recalc Expressions:
 `obj.TransferOrder.DefaultDueDateIn`
 ### DueDateOut
 
-When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]
+When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -113,7 +113,7 @@ Front-End Recalc Expressions:
 `obj.TransferOrder.DefaultDueDateOut`
 ### LineOrd
 
-Line ordinal position within the transaction. Duplicates are allowed, but not advised[Required]
+Line ordinal position within the transaction. Duplicates are allowed, but not advised`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-Quantity ordered for transfer[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]
+Quantity ordered for transfer`Unit: QuantityUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
+Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -165,7 +165,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -180,7 +180,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardUnitPrice
 
-Standard unit price of the product during the creation of the transfer order line[Currency: TransferOrder.DocumentCurrency]
+Standard unit price of the product during the creation of the transfer order line`Currency: TransferOrder.DocumentCurrency`
 
 Type: **[Amount (14, 5)](../data-types.md#amount) __nullable__**  
 Category: **System**  

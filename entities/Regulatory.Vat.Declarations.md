@@ -67,7 +67,7 @@ Aggregate Tree
 | [DocumentNotes](Regulatory.Vat.Declarations.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Vat.Declarations.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Vat.Declarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [FromDate](Regulatory.Vat.Declarations.md#fromdate) | date | Start date of the period fot which the VAT declaration is made.[Required] [Filter(eq;ge;le)] 
+| [FromDate](Regulatory.Vat.Declarations.md#fromdate) | date | Start date of the period fot which the VAT declaration is made.`Required` `Filter(eq;ge;le)` 
 | [FullState](Regulatory.Vat.Declarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Regulatory.Vat.Declarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Vat.Declarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Vat.Declarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -77,7 +77,7 @@ Aggregate Tree
 | [ReleaseTime](Regulatory.Vat.Declarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Vat.Declarations.md#state) | [DocumentState](Regulatory.Vat.Declarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [StateTagsAttribute](Regulatory.Vat.Declarations.md#statetagsattribute) | string | Specifies the state of the document. 
-| [ToDate](Regulatory.Vat.Declarations.md#todate) | date | End date of the period fot which the VAT declaration is made.[Required] [Filter(eq;ge;le)] 
+| [ToDate](Regulatory.Vat.Declarations.md#todate) | date | End date of the period fot which the VAT declaration is made.`Required` `Filter(eq;ge;le)` 
 | [Void](Regulatory.Vat.Declarations.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidReason](Regulatory.Vat.Declarations.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [VoidTime](Regulatory.Vat.Declarations.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -262,7 +262,7 @@ Show in UI: **CannotBeShown**
 
 ### FromDate
 
-Start date of the period fot which the VAT declaration is made.[Required] [Filter(eq;ge;le)]
+Start date of the period fot which the VAT declaration is made.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -389,7 +389,7 @@ Show in UI: **HiddenByDefault**
 
 ### ToDate
 
-End date of the period fot which the VAT declaration is made.[Required] [Filter(eq;ge;le)]
+End date of the period fot which the VAT declaration is made.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  

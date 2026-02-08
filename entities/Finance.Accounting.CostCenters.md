@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Finance.Accounting.CostCenters.md#isactive) | boolean | Indicates whether the current Cost Center is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.0.7] 
+| [IsActive](Finance.Accounting.CostCenters.md#isactive) | boolean | Indicates whether the current Cost Center is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.7` 
 | [Name](Finance.Accounting.CostCenters.md#name) | string (254) | The name of this CostCenter. `Required` `Filter(like)` 
 | [Notes](Finance.Accounting.CostCenters.md#notes) | string (254) __nullable__ | Notes for this CostCenter. 
-| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal (18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.[Required] [Default(1)] 
+| [RelativeWeight](Finance.Accounting.CostCenters.md#relativeweight) | decimal (18, 4) | The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.`Required` `Default(1)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current Cost Center is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.0.7]
+Indicates whether the current Cost Center is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.0.7`
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### RelativeWeight
 
-The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.[Required] [Default(1)]
+The weight of this cost center, relative to the other cost centers within the same parent. The weight is used during cost distribution calculations. The sum of weights of all cost centers within a parent does not need to be 100, the ratio of total weight over weight is used.`Required` `Default(1)`
 
 Type: **decimal (18, 4)**  
 Category: **System**  

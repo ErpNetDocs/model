@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26] 
-| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource[Required] [Filter(like)] 
+| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
+| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource`Required` `Filter(like)` 
 | [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production[Required] [Default(0)] 
-| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. [Unit: SetupScrapUnit] [Required] [Default(0)] 
-| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.[Currency: ResourceCurrency] 
-| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.[Currency: ResourceCurrency] 
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production`Required` `Default(0)` 
+| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. `Unit: SetupScrapUnit` `Required` `Default(0)` 
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.`Currency: ResourceCurrency` 
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.`Currency: ResourceCurrency` 
 
 ## References
 
@@ -72,7 +72,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]
+Indicates whether the current resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
 
 Type: **boolean**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the resource[Required] [Filter(like)]
+Name of the resource`Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupDurationHours
 
-The usual duration of setup when changing production[Required] [Default(0)]
+The usual duration of setup when changing production`Required` `Default(0)`
 
 Type: **decimal (6, 2)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### SetupScrapQuantity
 
-The usual quantity of fixed scrap occurring when changing production. [Unit: SetupScrapUnit] [Required] [Default(0)]
+The usual quantity of fixed scrap occurring when changing production. `Unit: SetupScrapUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardCostPerHour
 
-Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.[Currency: ResourceCurrency]
+Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.`Currency: ResourceCurrency`
 
 Type: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardPricePerHour
 
-Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.[Currency: ResourceCurrency]
+Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.`Currency: ResourceCurrency`
 
 Type: **[Amount (18, 6)](../data-types.md#amount) __nullable__**  
 Category: **System**  

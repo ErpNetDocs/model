@@ -36,20 +36,20 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [ChoiceGroupName](Crm.Presales.OfferLines.md#choicegroupname) | string (60) __nullable__ | Name of a group of alternative lines, only one of which can be selected for ordering. Lines are grouped based on the exact name of the Choice Group. 
 | [CurrentBalanceBase](Crm.Presales.OfferLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [DeliveryTermDays](Crm.Presales.OfferLines.md#deliverytermdays) | int32 | Delivery term in days. When required delivery date is specified it takes precedence.[Required] [Default(0)] 
+| [DeliveryTermDays](Crm.Presales.OfferLines.md#deliverytermdays) | int32 | Delivery term in days. When required delivery date is specified it takes precedence.`Required` `Default(0)` 
 | [GuaranteePeriodDays](Crm.Presales.OfferLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
-| [IsSelected](Crm.Presales.OfferLines.md#isselected) | boolean | 1 when the line is selected for further processing (ordering), 0 otherwise.[Required] [Default(true)] 
-| [LineAmount](Crm.Presales.OfferLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.[Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
-| [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#linecustomdiscountpercent) | decimal (7, 6) | Operator defined discount percentage, specified for this line.[Required] [Default(0)] 
+| [IsSelected](Crm.Presales.OfferLines.md#isselected) | boolean | 1 when the line is selected for further processing (ordering), 0 otherwise.`Required` `Default(true)` 
+| [LineAmount](Crm.Presales.OfferLines.md#lineamount) | [Amount (14, 2)](../data-types.md#amount) | Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.`Currency: Offer.DocumentCurrency` `Required` `Default(0)` 
+| [LineCustomDiscountPercent](Crm.Presales.OfferLines.md#linecustomdiscountpercent) | decimal (7, 6) | Operator defined discount percentage, specified for this line.`Required` `Default(0)` 
 | [LineNo](Crm.Presales.OfferLines.md#lineno) | int32 | Line number, unique within the Offer. Usually is increasing number like 10, 20, 30, ... when initially entering the Offer (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
-| [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal (7, 6) | The discount percentage, applied through the standard discount policy.[Required] [Default(0)] [ReadOnly] 
+| [LineStandardDiscount<br />Percent](Crm.Presales.OfferLines.md#linestandarddiscountpercent) | decimal (7, 6) | The discount percentage, applied through the standard discount policy.`Required` `Default(0)` `ReadOnly` 
 | [Notes](Crm.Presales.OfferLines.md#notes) | string (max) __nullable__ | Notes for this OfferLine. 
-| [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product.[Required] [Filter(like)] 
-| [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity offered.[Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date __nullable__ | Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.[Filter(ge;le)] 
-| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [UnitPrice](Crm.Presales.OfferLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity.[Currency: Offer.DocumentCurrency] [Required] [Default(0)] 
+| [ProductDescription](Crm.Presales.OfferLines.md#productdescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The description of the offered product. Initially copied from the name of the offered product.`Required` `Filter(like)` 
+| [Quantity](Crm.Presales.OfferLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity offered.`Unit: QuantityUnit` `Required` `Default(1)` 
+| [QuantityBase](Crm.Presales.OfferLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalent of Quantity in the base measurement unit of the Product`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [RequiredDeliveryDate](Crm.Presales.OfferLines.md#requireddeliverydate) | date __nullable__ | Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.`Filter(ge;le)` 
+| [StandardQuantityBase](Crm.Presales.OfferLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [UnitPrice](Crm.Presales.OfferLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | The unit price of the offered product. It is specified in the measurement unit of Quantity.`Currency: Offer.DocumentCurrency` `Required` `Default(0)` 
 | [Variant](Crm.Presales.OfferLines.md#variant) | string (60) __nullable__ | Name or number of variant of the whole offer. When multiple lines have the same variant, they are selected for ordering together. 
 
 ## References
@@ -100,7 +100,7 @@ Show in UI: **HiddenByDefault**
 
 ### DeliveryTermDays
 
-Delivery term in days. When required delivery date is specified it takes precedence.[Required] [Default(0)]
+Delivery term in days. When required delivery date is specified it takes precedence.`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -123,7 +123,7 @@ Front-End Recalc Expressions:
 `obj.Product.GuaranteePeriodDays`
 ### IsSelected
 
-1 when the line is selected for further processing (ordering), 0 otherwise.[Required] [Default(true)]
+1 when the line is selected for further processing (ordering), 0 otherwise.`Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineAmount
 
-Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.[Currency: Offer.DocumentCurrency] [Required] [Default(0)]
+Amount for the line in the currency of the parent document. Usually equals Quantity * Unit_Price. When Quantity = 0, Unit Price is undefined and this contains the total line amount.`Currency: Offer.DocumentCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, ( ( ( obj.Quantity.Value * obj.UnitPrice) * ( 1 - obj.LineStandardDiscountPercent)) * ( 1 - obj.LineCustomDiscountPercent)).Round( ))`
 ### LineCustomDiscountPercent
 
-Operator defined discount percentage, specified for this line.[Required] [Default(0)]
+Operator defined discount percentage, specified for this line.`Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -176,7 +176,7 @@ Front-End Recalc Expressions:
 `( obj.Offer.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStandardDiscountPercent
 
-The discount percentage, applied through the standard discount policy.[Required] [Default(0)] [ReadOnly]
+The discount percentage, applied through the standard discount policy.`Required` `Default(0)` `ReadOnly`
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -203,7 +203,7 @@ Show in UI: **HiddenByDefault**
 
 ### ProductDescription
 
-The description of the offered product. Initially copied from the name of the offered product.[Required] [Filter(like)]
+The description of the offered product. Initially copied from the name of the offered product.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -218,7 +218,7 @@ Front-End Recalc Expressions:
 `obj.Product.Name`
 ### Quantity
 
-Quantity offered.[Unit: QuantityUnit] [Required] [Default(1)]
+Quantity offered.`Unit: QuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -229,7 +229,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The equivalent of Quantity in the base measurement unit of the Product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+The equivalent of Quantity in the base measurement unit of the Product`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -244,7 +244,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### RequiredDeliveryDate
 
-Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.[Filter(ge;le)]
+Date, when the delivery is required. Alternative to Delivery Term Days. When NULL, Delivery Term Days is used.`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -260,7 +260,7 @@ Front-End Recalc Expressions:
 `obj.Offer.RequiredDeliveryDate`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -275,7 +275,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### UnitPrice
 
-The unit price of the offered product. It is specified in the measurement unit of Quantity.[Currency: Offer.DocumentCurrency] [Required] [Default(0)]
+The unit price of the offered product. It is specified in the measurement unit of Quantity.`Currency: Offer.DocumentCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 5)](../data-types.md#amount)**  
 Category: **System**  

@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableEndTime](Production.Resources.Capacity.md#availableendtime) | datetime | End of availability period during Calendar_Date[Required] [Filter(ge;le)] 
-| [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, available to production[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] 
-| [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date[Required] [Filter(ge;le)] 
-| [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period[Required] [Filter(ge;le)] 
+| [AvailableEndTime](Production.Resources.Capacity.md#availableendtime) | datetime | End of availability period during Calendar_Date`Required` `Filter(ge;le)` 
+| [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, available to production`Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` 
+| [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date`Required` `Filter(ge;le)` 
+| [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period`Required` `Filter(ge;le)` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### AvailableEndTime
 
-End of availability period during Calendar_Date[Required] [Filter(ge;le)]
+End of availability period during Calendar_Date`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableQuantity
 
-Quantity of the resource, available to production[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required]
+Quantity of the resource, available to production`Unit: WorkgroupResource.Resource.PrimaryUnit` `Required`
 
 Type: **[Quantity (9, 0)](../data-types.md#quantity)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableStartTime
 
-Start of availability period during Calendar_Date[Required] [Filter(ge;le)]
+Start of availability period during Calendar_Date`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### CalendarDate
 
-Date of the availability period[Required] [Filter(ge;le)]
+Date of the availability period`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  

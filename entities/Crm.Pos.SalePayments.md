@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency).[Currency: AmountCurrency] [Required] [Filter(eq;ge;le)] 
-| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency.[Currency: PosSale.Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)] 
-| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event.[Required] [Default(Now)] [Filter(eq;ge;le)] 
-| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment.[Filter(like)] 
-| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID).[Filter(eq;like)] 
+| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency).`Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` 
+| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency.`Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
+| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event.`Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment.`Filter(like)` 
+| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID).`Filter(eq;like)` 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Amount
 
-Amount paid (in Amount Currency).[Currency: AmountCurrency] [Required] [Filter(eq;ge;le)]
+Amount paid (in Amount Currency).`Currency: AmountCurrency` `Required` `Filter(eq;ge;le)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountBase
 
-Amount in base currency.[Currency: PosSale.Location.EnterpriseCompany.BaseCurrency] [Required] [Filter(eq)]
+Amount in base currency.`Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### CreatedAt
 
-Timestamp of the payment event.[Required] [Default(Now)] [Filter(eq;ge;le)]
+Timestamp of the payment event.`Required` `Default(Now)` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Notes for the sale payment.[Filter(like)]
+Notes for the sale payment.`Filter(like)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### Reference
 
-Optional external reference (e.g. card transaction ID).[Filter(eq;like)]
+Optional external reference (e.g. card transaction ID).`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  

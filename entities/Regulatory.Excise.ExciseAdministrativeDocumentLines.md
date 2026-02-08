@@ -45,16 +45,16 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrentBalanceBase](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [ExciseAlcoholicStrength](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.[Introduced in version 21.1.3.97] 
-| [ExciseAmount](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) | The excise amount [Currency: ExciseAdministrative<br />Document.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94] 
-| [ExciseAmountBase](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 4) | The excise amount in base currency[Unit: ExciseAdministrative<br />Document.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94] 
-| [ExciseDutyRateValue](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. NULL means not assigned yet.[Introduced in version 21.1.3.97] 
-| [ExciseQuantity](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.[Unit: ExciseQuantityUnit] [Required] [Introduced in version 22.1.6.58] 
-| [LineNo](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document.[Required] [Filter(multi eq)] 
+| [ExciseAlcoholicStrength](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisealcoholicstrength) | decimal (5, 2) __nullable__ | The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.`Introduced in version 21.1.3.97` 
+| [ExciseAmount](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#exciseamount) | [Amount (14, 2)](../data-types.md#amount) | The excise amount `Currency: ExciseAdministrative<br />Document.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
+| [ExciseAmountBase](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#exciseamountbase) | decimal (14, 4) | The excise amount in base currency`Unit: ExciseAdministrative<br />Document.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94` 
+| [ExciseDutyRateValue](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisedutyratevalue) | decimal (10, 6) __nullable__ | The rate which should be applied for the specified product and purpose. NULL means not assigned yet.`Introduced in version 21.1.3.97` 
+| [ExciseQuantity](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.`Unit: ExciseQuantityUnit` `Required` `Introduced in version 22.1.6.58` 
+| [LineNo](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#lineno) | int32 | Consecutive line number within the document.`Required` `Filter(multi eq)` 
 | [Notes](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#notes) | string (max) __nullable__ | Notes for this ExciseAdministrative<br />DocumentLine. 
-| [ParentLineNo](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.[Filter(multi eq)] [Introduced in version 22.1.4.9] 
-| [Quantity](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity being sold, in the measurement unit, specified in Quantity Unit.[Unit: QuantityUnit] [Required] [Default(1)] 
-| [QuantityBase](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity in base measurement category for the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] 
+| [ParentLineNo](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.`Filter(multi eq)` `Introduced in version 22.1.4.9` 
+| [Quantity](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity being sold, in the measurement unit, specified in Quantity Unit.`Unit: QuantityUnit` `Required` `Default(1)` 
+| [QuantityBase](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity in base measurement category for the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
 
 ## References
 
@@ -96,7 +96,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExciseAlcoholicStrength
 
-The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.[Introduced in version 21.1.3.97]
+The alcoholic strength, which will be used for Excise reporting purposes. NULL  if the product is not subject to alcoholic Excise reporting.`Introduced in version 21.1.3.97`
 
 Type: **decimal (5, 2) __nullable__**  
 Category: **System**  
@@ -108,7 +108,7 @@ Front-End Recalc Expressions:
 `obj.GetNewAlcoholicStrength( obj.MeasuringTransaction, obj.Product)`
 ### ExciseAmount
 
-The excise amount [Currency: ExciseAdministrativeDocument.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]
+The excise amount `Currency: ExciseAdministrativeDocument.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Front-End Recalc Expressions:
 `new Amount( ( obj.ExciseAmountBase * ( obj.ExciseDutyRateValue ?? 0)), obj.ExciseAdministrativeDocument.BaseCurrency)`
 ### ExciseAmountBase
 
-The excise amount in base currency[Unit: ExciseAdministrativeDocument.BaseCurrency] [Required] [Default(0)] [Filter(eq;ge;le)] [Introduced in version 21.1.3.94]
+The excise amount in base currency`Unit: ExciseAdministrativeDocument.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` `Introduced in version 21.1.3.94`
 
 Type: **decimal (14, 4)**  
 Category: **System**  
@@ -134,7 +134,7 @@ Front-End Recalc Expressions:
 `obj.CalculateExciseAmountBase( obj.ExciseProduct, obj.ExciseQuantity, obj.ExciseAlcoholicStrength).IfNullThen( obj.ExciseAmountBase)`
 ### ExciseDutyRateValue
 
-The rate which should be applied for the specified product and purpose. NULL means not assigned yet.[Introduced in version 21.1.3.97]
+The rate which should be applied for the specified product and purpose. NULL means not assigned yet.`Introduced in version 21.1.3.97`
 
 Type: **decimal (10, 6) __nullable__**  
 Category: **System**  
@@ -146,7 +146,7 @@ Front-End Recalc Expressions:
 `obj.ExciseDutyRate.ExciseDutyRateField`
 ### ExciseQuantity
 
-The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.[Unit: ExciseQuantityUnit] [Required] [Introduced in version 22.1.6.58]
+The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.`Unit: ExciseQuantityUnit` `Required` `Introduced in version 22.1.6.58`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Front-End Recalc Expressions:
 `obj.QuantityBase.ConvertTo( obj.ExciseQuantityUnit, obj.Product)`
 ### LineNo
 
-Consecutive line number within the document.[Required] [Filter(multi eq)]
+Consecutive line number within the document.`Required` `Filter(multi eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -184,7 +184,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.[Filter(multi eq)] [Introduced in version 22.1.4.9]
+The number of the line within the parent document, which the current line executes. Null when the current line does not execute line.`Filter(multi eq)` `Introduced in version 22.1.4.9`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-The quantity being sold, in the measurement unit, specified in Quantity Unit.[Unit: QuantityUnit] [Required] [Default(1)]
+The quantity being sold, in the measurement unit, specified in Quantity Unit.`Unit: QuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-The quantity in base measurement category for the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]
+The quantity in base measurement category for the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  

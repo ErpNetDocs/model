@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.WorkgroupResources.md#active) | boolean | Indicates whether the current workgroup resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26] 
-| [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources[Unit: Resource.PrimaryUnit] [Required] [Default(0)] 
+| [Active](Production.Resources.WorkgroupResources.md#active) | boolean | Indicates whether the current workgroup resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
+| [AvailableQuantity](Production.Resources.WorkgroupResources.md#availablequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources`Unit: Resource.PrimaryUnit` `Required` `Default(0)` 
 | [Notes](Production.Resources.WorkgroupResources.md#notes) | string (254) __nullable__ | User notes for the workgroup resource 
 
 ## References
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the current workgroup resource is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]
+Indicates whether the current workgroup resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
 
 Type: **boolean**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### AvailableQuantity
 
-Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources[Unit: Resource.PrimaryUnit] [Required] [Default(0)]
+Quantity available of the resource in this workgroup. The measurement unit is specified in Prd_Resources`Unit: Resource.PrimaryUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

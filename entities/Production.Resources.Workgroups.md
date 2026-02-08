@@ -36,12 +36,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26] 
-| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **OBSOLETE! Do not use!** Not used.[Obsolete] [Obsoleted in version 22.1.6.61] 
-| [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.[Default(&quot;&quot;)] [Filter(eq)] 
-| [Name](Production.Resources.Workgroups.md#name) | string (64) | Name of the workgroup[Required] [Filter(like)] 
+| [Active](Production.Resources.Workgroups.md#active) | boolean | Indicates whether the current workgroup is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
+| [<s>CostCurrency</s>](Production.Resources.Workgroups.md#costcurrency) | string (3) __nullable__ | **OBSOLETE! Do not use!** Not used.`Obsolete` `Obsoleted in version 22.1.6.61` 
+| [FullPath](Production.Resources.Workgroups.md#fullpath) | string (254) __nullable__ | The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.`Default(&quot;&quot;)` `Filter(eq)` 
+| [Name](Production.Resources.Workgroups.md#name) | string (64) | Name of the workgroup`Required` `Filter(like)` 
 | [Notes](Production.Resources.Workgroups.md#notes) | string (254) __nullable__ | User notes for the workgroup 
-| [Parent](Production.Resources.Workgroups.md#parent) | string (255) | Path-like parent workgroup name[Required] [Default(&quot;/&quot;)] [Filter(eq;like)] [ORD] 
+| [Parent](Production.Resources.Workgroups.md#parent) | string (255) | Path-like parent workgroup name`Required` `Default(&quot;/&quot;)` `Filter(eq;like)` `ORD` 
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Active
 
-Indicates whether the current workgroup is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.26]
+Indicates whether the current workgroup is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26`
 
 Type: **boolean**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### CostCurrency
 
-**OBSOLETE! Do not use!** Not used.[Obsolete] [Obsoleted in version 22.1.6.61]
+**OBSOLETE! Do not use!** Not used.`Obsolete` `Obsoleted in version 22.1.6.61`
 
 Type: **string (3) __nullable__**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **CannotBeShown**
 
 ### FullPath
 
-The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.[Default(&quot;&quot;)] [Filter(eq)]
+The full path to the current node, represented with slash ('/') as leading, trailing and separator character. Example: '/rootnode/subnode/'.`Default(&quot;&quot;)` `Filter(eq)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-Name of the workgroup[Required] [Filter(like)]
+Name of the workgroup`Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Parent
 
-Path-like parent workgroup name[Required] [Default(&quot;/&quot;)] [Filter(eq;like)] [ORD]
+Path-like parent workgroup name`Required` `Default(&quot;/&quot;)` `Filter(eq;like)` `ORD`
 
 Type: **string (255)**  
 Indexed: **True**  

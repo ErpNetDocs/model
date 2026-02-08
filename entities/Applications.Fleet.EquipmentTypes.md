@@ -33,7 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Applications.Fleet.EquipmentTypes.md#name) | string (254) | Name of the equipment type[Required] [Filter(eq;like)] 
+| [Name](Applications.Fleet.EquipmentTypes.md#name) | string (254) | Name of the equipment type`Required` `Filter(eq;like)` 
 
 
 ## System Attributes
@@ -52,7 +52,7 @@ Aggregate Tree
 
 ### Name
 
-Name of the equipment type[Required] [Filter(eq;like)]
+Name of the equipment type`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  

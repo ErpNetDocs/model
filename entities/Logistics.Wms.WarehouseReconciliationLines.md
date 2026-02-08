@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document.[Required] [Filter(eq)] [ORD] 
+| [LineNo](Logistics.Wms.WarehouseReconciliationLines.md#lineno) | int32 | Consecutive number of the line in the document.`Required` `Filter(eq)` `ORD` 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line in the document.[Required] [Filter(eq)] [ORD]
+Consecutive number of the line in the document.`Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Category: **System**  

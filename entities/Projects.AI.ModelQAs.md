@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer.[Required] [Filter(like)] 
-| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly] 
-| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated.[Filter(eq;ge;le)] [ReadOnly] 
-| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds.[Required] [Default(true)] [Filter(eq)] 
+| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer.`Required` `Filter(like)` 
+| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
+| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated.`Filter(eq;ge;le)` `ReadOnly` 
+| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds.`Required` `Default(true)` `Filter(eq)` 
 | [Notes](Projects.AI.ModelQAs.md#notes) | string (max) __nullable__ | Notes for this ModelQA. 
-| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.[Required] [Default(&quot;T&quot;)] [Filter(eq)] 
-| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question.[Required] [Filter(like)] 
-| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA.[Required] 
+| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.`Required` `Default(&quot;T&quot;)` `Filter(eq)` 
+| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question.`Required` `Filter(like)` 
+| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA.`Required` 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### Answer
 
-Desired answer.[Required] [Filter(like)]
+Desired answer.`Required` `Filter(like)`
 
 Type: **string (max)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The time when the QA was created.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] [ReadOnly]
+The time when the QA was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### DeactivatonTimeUtc
 
-The time when the QA was deactivated.[Filter(eq;ge;le)] [ReadOnly]
+The time when the QA was deactivated.`Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether to include this QA in future builds.[Required] [Default(true)] [Filter(eq)]
+Indicates whether to include this QA in future builds.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### QAType
 
-Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.[Required] [Default(&quot;T&quot;)] [Filter(eq)]
+Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.`Required` `Default(&quot;T&quot;)` `Filter(eq)`
 
 Type: **[QAType](Projects.AI.ModelQAs.md#qatype)**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### Question
 
-User question.[Required] [Filter(like)]
+User question.`Required` `Filter(like)`
 
 Type: **string (max)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### Section
 
-Free text organizational section of the QA.[Required]
+Free text organizational section of the QA.`Required`
 
 Type: **string (128)**  
 Category: **System**  

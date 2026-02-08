@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#availableresources">AvailableResources</a></td>
 <td>decimal (12, 2)</td>
-<td>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.[Required] [Default(1)]</td>
+<td>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.<code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#fromdate">FromDate</a></td>
 <td>date</td>
-<td>The date from which availability starts.[Required] [Filter(ge;le)]</td>
+<td>The date from which availability starts.<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Resources.ResourceAvailability.html#todate">ToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date to which the availability continues. When NULL, the availability continues infinitely.[Filter(ge;le)]</td>
+<td>The date to which the availability continues. When NULL, the availability continues infinitely.<code>Filter(ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +181,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="availableresources">AvailableResources</h3>
-<p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.[Required] [Default(1)]</p>
+<p>The quantity of the resource, available for the specified period. For non-discrete resources, this number can contain fractions. When several availability periods for a resource overlap, the total availability is the sum of all.<code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong>decimal (12, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -189,14 +189,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>1</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The date from which availability starts.[Required] [Filter(ge;le)]</p>
+<p>The date from which availability starts.<code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="todate">ToDate</h3>
-<p>The date to which the availability continues. When NULL, the availability continues infinitely.[Filter(ge;le)]</p>
+<p>The date to which the availability continues. When NULL, the availability continues infinitely.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

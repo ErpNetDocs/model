@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line.[Unit: ServiceAgreementService.QuantityUnit] [Required] [Default(0)] [ReadOnly] 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line.`Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### AgreedQuantity
 
-Quantity from the service agreement service line that is accounted for this service activity service line.[Unit: ServiceAgreementService.QuantityUnit] [Required] [Default(0)] [ReadOnly]
+Quantity from the service agreement service line that is accounted for this service activity service line.`Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

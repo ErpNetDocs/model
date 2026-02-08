@@ -130,7 +130,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>Checked if this shipment order should prohibit further shipment orders for the sales order line.[Required] [Default(false)] [Filter(eq)]</td>
+<td>Checked if this shipment order should prohibit further shipment orders for the sales order line.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#grossweightkg">GrossWeightkg</a></td>
@@ -155,7 +155,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Line number, unique for the shipment[Required]</td>
+<td>Line number, unique for the shipment<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#netweightkg">NetWeightkg</a></td>
@@ -180,7 +180,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#persistlot">PersistLot</a></td>
 <td>boolean</td>
-<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)]</td>
+<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#product">Product</a></td>
@@ -190,17 +190,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity to be shipped[Unit: QuantityUnit] [Required] [Default(1)]</td>
+<td>The quantity to be shipped<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The equivalence of Quantity in the base measurement category of the product.[Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+<td>The equivalence of Quantity in the base measurement category of the product.<code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Shipment.ShipmentOrderLines.html#volumel">Volumel</a></td>
@@ -309,7 +309,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>Checked if this shipment order should prohibit further shipment orders for the sales order line.[Required] [Default(false)] [Filter(eq)]</p>
+<p>Checked if this shipment order should prohibit further shipment orders for the sales order line.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -347,7 +347,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineno">LineNo</h3>
-<p>Line number, unique for the shipment[Required]</p>
+<p>Line number, unique for the shipment<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -387,7 +387,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="persistlot">PersistLot</h3>
-<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)]</p>
+<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -402,7 +402,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity to be shipped[Unit: QuantityUnit] [Required] [Default(1)]</p>
+<p>The quantity to be shipped<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -412,7 +412,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>new Quantity( obj.ParentSalesOrderLine.Quantity.Value, obj.QuantityUnit)</code></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalence of Quantity in the base measurement category of the product.[Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+<p>The equivalence of Quantity in the base measurement category of the product.<code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -423,7 +423,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

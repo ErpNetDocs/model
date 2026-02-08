@@ -126,22 +126,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">DueDateFormMethod</a></td>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></td>
-<td>Method to determine the payment due date.[Required]</td>
+<td>Method to determine the payment due date.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#installmentnumber">InstallmentNumber</a></td>
 <td>int32</td>
-<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.[Required]</td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#paymenttermdays">PaymentTermDays</a></td>
 <td>int32</td>
-<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.[Required] [Default(0)]</td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#remainder">Remainder</a></td>
 <td>boolean</td>
-<td>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.[Required] [Default(false)]</td>
+<td>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( obj.Remainder, null, obj.AmountPercent)</code></p>
 <h3 id="duedateformmethod">DueDateFormMethod</h3>
-<p>Method to determine the payment due date.[Required]</p>
+<p>Method to determine the payment due date.<code>Required</code></p>
 <p>Type: <strong><a href="Crm.Sales.DefaultSalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for PaymentPlanDueDateSource properties<br>
@@ -259,7 +259,7 @@ Allowed Values (Crm.Sales.PaymentPlanDueDateSource Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
-<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.[Required]</p>
+<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -270,7 +270,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.DocumentType.DefaultSalesOrderPaymentPlans.Select( c =&gt; c.InstallmentNumber).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="paymenttermdays">PaymentTermDays</h3>
-<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.[Required] [Default(0)]</p>
+<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -282,7 +282,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
 <h3 id="remainder">Remainder</h3>
-<p>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.[Required] [Default(false)]</p>
+<p>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' amounts in the payment plan.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

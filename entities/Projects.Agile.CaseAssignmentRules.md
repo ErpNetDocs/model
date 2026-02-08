@@ -33,14 +33,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.[Required] [Default(&quot;SUS&quot;)] [Filter(multi eq;like)] [Introduced in version 25.1.3.29] 
-| [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. NULL means no from date restriction.[Filter(eq;ge;le)] 
-| [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active.[Required] [Default(true)] [Filter(eq)] 
-| [Notes](Projects.Agile.CaseAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule.[Filter(like)] 
-| [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | Priority when multiple rules match the criteria.[Required] [Default(&quot;3&quot;)] [Filter(eq)] 
-| [RuleNo](Projects.Agile.CaseAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule.[Required] [Filter(eq)] [ORD] 
-| [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__ | The system state to which the rule applies. NULL means the rule applies to all user states.[Filter(multi eq)] 
-| [ToDate](Projects.Agile.CaseAssignmentRules.md#todate) | date __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.[Filter(eq;ge;le)] 
+| [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | [AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind) | Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.`Required` `Default(&quot;SUS&quot;)` `Filter(multi eq;like)` `Introduced in version 25.1.3.29` 
+| [FromDate](Projects.Agile.CaseAssignmentRules.md#fromdate) | date __nullable__ | Starting date of rule validity. NULL means no from date restriction.`Filter(eq;ge;le)` 
+| [IsActive](Projects.Agile.CaseAssignmentRules.md#isactive) | boolean | Indicates whether the current rule is active.`Required` `Default(true)` `Filter(eq)` 
+| [Notes](Projects.Agile.CaseAssignmentRules.md#notes) | string (max) __nullable__ | Additional information or comments related to the rule.`Filter(like)` 
+| [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | [Priority](Projects.Agile.CaseAssignmentRules.md#priority) | Priority when multiple rules match the criteria.`Required` `Default(&quot;3&quot;)` `Filter(eq)` 
+| [RuleNo](Projects.Agile.CaseAssignmentRules.md#ruleno) | int32 | Consecutive number of the rule.`Required` `Filter(eq)` `ORD` 
+| [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) | [SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__ | The system state to which the rule applies. NULL means the rule applies to all user states.`Filter(multi eq)` 
+| [ToDate](Projects.Agile.CaseAssignmentRules.md#todate) | date __nullable__ | Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.`Filter(eq;ge;le)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Tree
 
 ### AssignmentKind
 
-Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.[Required] [Default(&quot;SUS&quot;)] [Filter(multi eq;like)] [Introduced in version 25.1.3.29]
+Specifies the logic for determining who should be assigned to the case. If 'Specific User' is selected, the user specified in the 'Assign To User' field will be assigned. Otherwise, the assignee is determined based on predefined users responsible for the project, project area, case, and others.`Required` `Default(&quot;SUS&quot;)` `Filter(multi eq;like)` `Introduced in version 25.1.3.29`
 
 Type: **[AssignmentKind](Projects.Agile.CaseAssignmentRules.md#assignmentkind)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting date of rule validity. NULL means no from date restriction.[Filter(eq;ge;le)]
+Starting date of rule validity. NULL means no from date restriction.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current rule is active.[Required] [Default(true)] [Filter(eq)]
+Indicates whether the current rule is active.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information or comments related to the rule.[Filter(like)]
+Additional information or comments related to the rule.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority when multiple rules match the criteria.[Required] [Default(&quot;3&quot;)] [Filter(eq)]
+Priority when multiple rules match the criteria.`Required` `Default(&quot;3&quot;)` `Filter(eq)`
 
 Type: **[Priority](Projects.Agile.CaseAssignmentRules.md#priority)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### RuleNo
 
-Consecutive number of the rule.[Required] [Filter(eq)] [ORD]
+Consecutive number of the rule.`Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Indexed: **True**  
@@ -163,7 +163,7 @@ Front-End Recalc Expressions:
 `obj.SetRuleNo( )`
 ### SystemState
 
-The system state to which the rule applies. NULL means the rule applies to all user states.[Filter(multi eq)]
+The system state to which the rule applies. NULL means the rule applies to all user states.`Filter(multi eq)`
 
 Type: **[SystemState](Projects.Agile.CaseAssignmentRules.md#systemstate) __nullable__**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.[Filter(eq;ge;le)]
+Ending date (inclusive) of rule validity. NULL means that the rule is valid forever.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

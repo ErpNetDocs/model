@@ -34,8 +34,8 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Applications.Service.ServiceTypes.md#description) | string (max) __nullable__ | The description of this ServiceType. 
-| [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)] 
-| [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | This service will be used when service agreement is automaticaly generated[Required] [Default(false)] [Filter(eq)] 
+| [IsActive](Applications.Service.ServiceTypes.md#isactive) | boolean | True when the service type is currently active and selectable in new documents.`Required` `Default(true)` `Filter(eq)` 
+| [IsDefault](Applications.Service.ServiceTypes.md#isdefault) | boolean | This service will be used when service agreement is automaticaly generated`Required` `Default(false)` `Filter(eq)` 
 | [Name](Applications.Service.ServiceTypes.md#name) | string (254) | The name of this ServiceType. `Required` `Filter(like)` 
 
 ## References
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-True when the service type is currently active and selectable in new documents.[Required] [Default(true)] [Filter(eq)]
+True when the service type is currently active and selectable in new documents.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-This service will be used when service agreement is automaticaly generated[Required] [Default(false)] [Filter(eq)]
+This service will be used when service agreement is automaticaly generated`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

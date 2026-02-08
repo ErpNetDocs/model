@@ -38,10 +38,10 @@ Aggregate Tree
 | [CustomHeader](Crm.Pos.FiscalReceiptTemplates.md#customheader) | string (256) __nullable__ | User-defined header printed at the beginning of the document (interpolated string). 
 | [CustomRowFooter](Crm.Pos.FiscalReceiptTemplates.md#customrowfooter) | string (256) __nullable__ | User-defined footer printed after each row (interpolated string). 
 | [CustomRowHeader](Crm.Pos.FiscalReceiptTemplates.md#customrowheader) | string (256) __nullable__ | User-defined header printed before each row (interpolated string). 
-| [PrintSystemHeader](Crm.Pos.FiscalReceiptTemplates.md#printsystemheader) | boolean | Denotes whether to print the system-defined header for the document.[Required] [Default(true)] [Filter(eq)] 
-| [PrintSystemRowHeader](Crm.Pos.FiscalReceiptTemplates.md#printsystemrowheader) | boolean | Denotes whether to print the system-defined header for each row.[Required] [Default(true)] [Filter(eq)] 
-| [TemplateKind](Crm.Pos.FiscalReceiptTemplates.md#templatekind) | [TemplateKind](Crm.Pos.FiscalReceiptTemplates.md#templatekind) | Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.[Required] [Default(&quot;S&quot;)] [Filter(multi eq)] [Introduced in version 24.1.5.7] 
-| [TemplateName](Crm.Pos.FiscalReceiptTemplates.md#templatename) | string (64) | The unique name of the printing template.[Required] [Filter(eq;like)] [ORD] 
+| [PrintSystemHeader](Crm.Pos.FiscalReceiptTemplates.md#printsystemheader) | boolean | Denotes whether to print the system-defined header for the document.`Required` `Default(true)` `Filter(eq)` 
+| [PrintSystemRowHeader](Crm.Pos.FiscalReceiptTemplates.md#printsystemrowheader) | boolean | Denotes whether to print the system-defined header for each row.`Required` `Default(true)` `Filter(eq)` 
+| [TemplateKind](Crm.Pos.FiscalReceiptTemplates.md#templatekind) | [TemplateKind](Crm.Pos.FiscalReceiptTemplates.md#templatekind) | Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.`Required` `Default(&quot;S&quot;)` `Filter(multi eq)` `Introduced in version 24.1.5.7` 
+| [TemplateName](Crm.Pos.FiscalReceiptTemplates.md#templatename) | string (64) | The unique name of the printing template.`Required` `Filter(eq;like)` `ORD` 
 
 
 ## System Attributes
@@ -104,7 +104,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintSystemHeader
 
-Denotes whether to print the system-defined header for the document.[Required] [Default(true)] [Filter(eq)]
+Denotes whether to print the system-defined header for the document.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### PrintSystemRowHeader
 
-Denotes whether to print the system-defined header for each row.[Required] [Default(true)] [Filter(eq)]
+Denotes whether to print the system-defined header for each row.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### TemplateKind
 
-Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.[Required] [Default(&quot;S&quot;)] [Filter(multi eq)] [Introduced in version 24.1.5.7]
+Specifies the entity type, for which the template can be used. Template strings can refer to the attributes of the specified entity type.`Required` `Default(&quot;S&quot;)` `Filter(multi eq)` `Introduced in version 24.1.5.7`
 
 Type: **[TemplateKind](Crm.Pos.FiscalReceiptTemplates.md#templatekind)**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### TemplateName
 
-The unique name of the printing template.[Required] [Filter(eq;like)] [ORD]
+The unique name of the printing template.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  

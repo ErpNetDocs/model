@@ -34,21 +34,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Monitoring.InstanceStatistics.md#applicationname) | string (128) __nullable__ | The application (if applicable) for which we are recording stats.[Filter(eq;like)] 
-| [Avg](Systems.Monitoring.InstanceStatistics.md#avg) | int32 __nullable__ | The avg value of the stat for the time period.[Filter(ge;le)] 
-| [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences.[Required] [Filter(ge;le)] 
-| [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests).[Required] 
-| [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies.[Required] [Filter(eq;like)] 
-| [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period.[Filter(ge;le)] 
+| [ApplicationName](Systems.Monitoring.InstanceStatistics.md#applicationname) | string (128) __nullable__ | The application (if applicable) for which we are recording stats.`Filter(eq;like)` 
+| [Avg](Systems.Monitoring.InstanceStatistics.md#avg) | int32 __nullable__ | The avg value of the stat for the time period.`Filter(ge;le)` 
+| [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences.`Required` `Filter(ge;le)` 
+| [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests).`Required` 
+| [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies.`Required` `Filter(eq;like)` 
+| [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period.`Filter(ge;le)` 
 | [ObjectName](Systems.Monitoring.InstanceStatistics.md#objectname) | string (256) __nullable__ | Name of the object or operation (depending on the statistic type). 
-| [StatisticDate](Systems.Monitoring.InstanceStatistics.md#statisticdate) | date | The date (in UTC time) for which we are storing the statistics.[Required] [Filter(eq;ge;le)] [ORD] 
-| [StatisticFromTimeUtc](Systems.Monitoring.InstanceStatistics.md#statisticfromtimeutc) | time | The starting of the time period within the date.[Required] [Filter(ge;le)] 
-| [StatisticToTimeUtc](Systems.Monitoring.InstanceStatistics.md#statistictotimeutc) | time | The ending of the time period within the date.[Required] [Filter(ge;le)] 
-| [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site[Required] [Filter(multi eq)] [ORD] 
-| [SubType](Systems.Monitoring.InstanceStatistics.md#subtype) | string (64) | Kind of stat (depending on the type).[Required] [Filter(eq)] 
-| [Total](Systems.Monitoring.InstanceStatistics.md#total) | int32 | The total of the stat for the time period.[Required] [Filter(ge;le)] 
-| [UnitOfMeasure](Systems.Monitoring.InstanceStatistics.md#unitofmeasure) | string (10) | Unit of measure for Total and Max.[Required] [Filter(eq)] 
-| [Value](Systems.Monitoring.InstanceStatistics.md#value) | string (64) __nullable__ | Holds the metric in text when numeric fields can't represent it.[Introduced in version 26.2.0.73] 
+| [StatisticDate](Systems.Monitoring.InstanceStatistics.md#statisticdate) | date | The date (in UTC time) for which we are storing the statistics.`Required` `Filter(eq;ge;le)` `ORD` 
+| [StatisticFromTimeUtc](Systems.Monitoring.InstanceStatistics.md#statisticfromtimeutc) | time | The starting of the time period within the date.`Required` `Filter(ge;le)` 
+| [StatisticToTimeUtc](Systems.Monitoring.InstanceStatistics.md#statistictotimeutc) | time | The ending of the time period within the date.`Required` `Filter(ge;le)` 
+| [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site`Required` `Filter(multi eq)` `ORD` 
+| [SubType](Systems.Monitoring.InstanceStatistics.md#subtype) | string (64) | Kind of stat (depending on the type).`Required` `Filter(eq)` 
+| [Total](Systems.Monitoring.InstanceStatistics.md#total) | int32 | The total of the stat for the time period.`Required` `Filter(ge;le)` 
+| [UnitOfMeasure](Systems.Monitoring.InstanceStatistics.md#unitofmeasure) | string (10) | Unit of measure for Total and Max.`Required` `Filter(eq)` 
+| [Value](Systems.Monitoring.InstanceStatistics.md#value) | string (64) __nullable__ | Holds the metric in text when numeric fields can't represent it.`Introduced in version 26.2.0.73` 
 
 
 ## System Attributes
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### ApplicationName
 
-The application (if applicable) for which we are recording stats.[Filter(eq;like)]
+The application (if applicable) for which we are recording stats.`Filter(eq;like)`
 
 Type: **string (128) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### Avg
 
-The avg value of the stat for the time period.[Filter(ge;le)]
+The avg value of the stat for the time period.`Filter(ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Count
 
-Number of occurrences.[Required] [Filter(ge;le)]
+Number of occurrences.`Required` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### ExcludeFromSummary
 
-Denotes that the stat should be excluded from summarization queries (for example long polling requests).[Required]
+Denotes that the stat should be excluded from summarization queries (for example long polling requests).`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### InstanceName
 
-The name of the instance to which this statistic applies.[Required] [Filter(eq;like)]
+The name of the instance to which this statistic applies.`Required` `Filter(eq;like)`
 
 Type: **string (128)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### Max
 
-The max value of the stat within the time period.[Filter(ge;le)]
+The max value of the stat within the time period.`Filter(ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticDate
 
-The date (in UTC time) for which we are storing the statistics.[Required] [Filter(eq;ge;le)] [ORD]
+The date (in UTC time) for which we are storing the statistics.`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **date**  
 Indexed: **True**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticFromTimeUtc
 
-The starting of the time period within the date.[Required] [Filter(ge;le)]
+The starting of the time period within the date.`Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  
@@ -161,7 +161,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticToTimeUtc
 
-The ending of the time period within the date.[Required] [Filter(ge;le)]
+The ending of the time period within the date.`Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  
@@ -171,7 +171,7 @@ Show in UI: **ShownByDefault**
 
 ### StatisticType
 
-The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site[Required] [Filter(multi eq)] [ORD]
+The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site`Required` `Filter(multi eq)` `ORD`
 
 Type: **[StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype)**  
 Indexed: **True**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### SubType
 
-Kind of stat (depending on the type).[Required] [Filter(eq)]
+Kind of stat (depending on the type).`Required` `Filter(eq)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### Total
 
-The total of the stat for the time period.[Required] [Filter(ge;le)]
+The total of the stat for the time period.`Required` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -215,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### UnitOfMeasure
 
-Unit of measure for Total and Max.[Required] [Filter(eq)]
+Unit of measure for Total and Max.`Required` `Filter(eq)`
 
 Type: **string (10)**  
 Category: **System**  
@@ -226,7 +226,7 @@ Show in UI: **ShownByDefault**
 
 ### Value
 
-Holds the metric in text when numeric fields can't represent it.[Introduced in version 26.2.0.73]
+Holds the metric in text when numeric fields can't represent it.`Introduced in version 26.2.0.73`
 
 Type: **string (64) __nullable__**  
 Category: **System**  

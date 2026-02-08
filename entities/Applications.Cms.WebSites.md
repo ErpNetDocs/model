@@ -42,9 +42,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseUrl](Applications.Cms.WebSites.md#baseurl) | string (256) __nullable__ | The base url (address) of the web site.[Filter(like)] 
-| [IsPublished](Applications.Cms.WebSites.md#ispublished) | boolean | Specifies whether the site is published for public Internet access.[Required] [Default(false)] [Filter(eq)] 
-| [Name](Applications.Cms.WebSites.md#name) | string (256) | Multilanguage web site name[Required] [Filter(like)] 
+| [BaseUrl](Applications.Cms.WebSites.md#baseurl) | string (256) __nullable__ | The base url (address) of the web site.`Filter(like)` 
+| [IsPublished](Applications.Cms.WebSites.md#ispublished) | boolean | Specifies whether the site is published for public Internet access.`Required` `Default(false)` `Filter(eq)` 
+| [Name](Applications.Cms.WebSites.md#name) | string (256) | Multilanguage web site name`Required` `Filter(like)` 
 
 ## References
 
@@ -77,7 +77,7 @@ Aggregate Tree
 
 ### BaseUrl
 
-The base url (address) of the web site.[Filter(like)]
+The base url (address) of the web site.`Filter(like)`
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPublished
 
-Specifies whether the site is published for public Internet access.[Required] [Default(false)] [Filter(eq)]
+Specifies whether the site is published for public Internet access.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage web site name[Required] [Filter(like)]
+Multilanguage web site name`Required` `Filter(like)`
 
 Type: **string (256)**  
 Category: **System**  

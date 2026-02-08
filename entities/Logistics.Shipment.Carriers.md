@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date __nullable__ | The ending date of the agreement with this carrier. NULL for agreements which are still active.[Filter(eq;ge;le)] 
-| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier.[Required] [Default(Today)] [Filter(eq;ge;le)] 
-| [Code](Logistics.Shipment.Carriers.md#code) | string (16) | Unique carrier code (or call sign). The code is unique within all enterprise companies.[Required] [Filter(eq;like)] [ORD] 
-| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active.[Required] [Default(true)] [Filter(eq)] 
+| [AgreementEndDate](Logistics.Shipment.Carriers.md#agreementenddate) | date __nullable__ | The ending date of the agreement with this carrier. NULL for agreements which are still active.`Filter(eq;ge;le)` 
+| [AgreementStartDate](Logistics.Shipment.Carriers.md#agreementstartdate) | date | The start date of the agreement with this carrier.`Required` `Default(Today)` `Filter(eq;ge;le)` 
+| [Code](Logistics.Shipment.Carriers.md#code) | string (16) | Unique carrier code (or call sign). The code is unique within all enterprise companies.`Required` `Filter(eq;like)` `ORD` 
+| [IsActive](Logistics.Shipment.Carriers.md#isactive) | boolean | Specifies whether the carrier agreement is active.`Required` `Default(true)` `Filter(eq)` 
 | [Notes](Logistics.Shipment.Carriers.md#notes) | string (max) __nullable__ | Notes for this Carrier. 
 
 ## References
@@ -63,7 +63,7 @@ Aggregate Tree
 
 ### AgreementEndDate
 
-The ending date of the agreement with this carrier. NULL for agreements which are still active.[Filter(eq;ge;le)]
+The ending date of the agreement with this carrier. NULL for agreements which are still active.`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### AgreementStartDate
 
-The start date of the agreement with this carrier.[Required] [Default(Today)] [Filter(eq;ge;le)]
+The start date of the agreement with this carrier.`Required` `Default(Today)` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique carrier code (or call sign). The code is unique within all enterprise companies.[Required] [Filter(eq;like)] [ORD]
+Unique carrier code (or call sign). The code is unique within all enterprise companies.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Specifies whether the carrier agreement is active.[Required] [Default(true)] [Filter(eq)]
+Specifies whether the carrier agreement is active.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

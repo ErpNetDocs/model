@@ -36,7 +36,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Applications.Rental.AssetTypes.md#notes) | string (max) __nullable__ | Notes for this AssetType. `Filter(like)` 
-| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string (254) | The name of the rental asset type.[Required] [Filter(like)] 
+| [RentalAssetTypeName](Applications.Rental.AssetTypes.md#rentalassettypename) | string (254) | The name of the rental asset type.`Required` `Filter(like)` 
 
 
 ## System Attributes
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAssetTypeName
 
-The name of the rental asset type.[Required] [Filter(like)]
+The name of the rental asset type.`Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

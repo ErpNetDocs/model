@@ -41,15 +41,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.Pricing.LineDiscounts.md#description) | string (50) __nullable__ | The description of the discount that is shown to the operator when they should choose between different discounts[Filter(like)] 
-| [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ORD] [Introduced in version 23.1.2.8] 
-| [DiscountPercent](Crm.Pricing.LineDiscounts.md#discountpercent) | decimal (7, 6) | The discount percent that should be applied if all the matching criteria are met.[Required] [Default(0)] [Filter(ge;le)] 
-| [FromDate](Crm.Pricing.LineDiscounts.md#fromdate) | datetime __nullable__ | Starting date of validity of the discount. NULL means no from date restriction[Filter(eq;ge;le)] 
-| [IsActive](Crm.Pricing.LineDiscounts.md#isactive) | boolean | Indicates whether the current Line Discount is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.2.5] 
-| [MaxQuantity](Crm.Pricing.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [MinQuantity](Crm.Pricing.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [Priority](Crm.Pricing.LineDiscounts.md#priority) | [Priority](Crm.Pricing.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.[Required] [Default(3)] 
-| [ThruDate](Crm.Pricing.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever[Filter(eq;ge;le)] 
+| [Description](Crm.Pricing.LineDiscounts.md#description) | string (50) __nullable__ | The description of the discount that is shown to the operator when they should choose between different discounts`Filter(like)` 
+| [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ORD` `Introduced in version 23.1.2.8` 
+| [DiscountPercent](Crm.Pricing.LineDiscounts.md#discountpercent) | decimal (7, 6) | The discount percent that should be applied if all the matching criteria are met.`Required` `Default(0)` `Filter(ge;le)` 
+| [FromDate](Crm.Pricing.LineDiscounts.md#fromdate) | datetime __nullable__ | Starting date of validity of the discount. NULL means no from date restriction`Filter(eq;ge;le)` 
+| [IsActive](Crm.Pricing.LineDiscounts.md#isactive) | boolean | Indicates whether the current Line Discount is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.2.5` 
+| [MaxQuantity](Crm.Pricing.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.Pricing.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [Priority](Crm.Pricing.LineDiscounts.md#priority) | [Priority](Crm.Pricing.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.`Required` `Default(3)` 
+| [ThruDate](Crm.Pricing.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever`Filter(eq;ge;le)` 
 
 ## References
 
@@ -84,7 +84,7 @@ Aggregate Tree
 
 ### Description
 
-The description of the discount that is shown to the operator when they should choose between different discounts[Filter(like)]
+The description of the discount that is shown to the operator when they should choose between different discounts`Filter(like)`
 
 Type: **string (50) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### DiscountLevel
 
-Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ORD] [Introduced in version 23.1.2.8]
+Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ORD` `Introduced in version 23.1.2.8`
 
 Type: **[DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel)**  
 Indexed: **True**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### DiscountPercent
 
-The discount percent that should be applied if all the matching criteria are met.[Required] [Default(0)] [Filter(ge;le)]
+The discount percent that should be applied if all the matching criteria are met.`Required` `Default(0)` `Filter(ge;le)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Starting date of validity of the discount. NULL means no from date restriction[Filter(eq;ge;le)]
+Starting date of validity of the discount. NULL means no from date restriction`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Line Discount is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.2.5]
+Indicates whether the current Line Discount is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.2.5`
 
 Type: **boolean**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### MaxQuantity
 
-Apply the discount only if the quantity sold is equal to or less than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+Apply the discount only if the quantity sold is equal to or less than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### MinQuantity
 
-Apply the discount only if the quantity sold is equal to or more than the specified here.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+Apply the discount only if the quantity sold is equal to or more than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.[Required] [Default(3)]
+The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.`Required` `Default(3)`
 
 Type: **[Priority](Crm.Pricing.LineDiscounts.md#priority)**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever[Filter(eq;ge;le)]
+Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

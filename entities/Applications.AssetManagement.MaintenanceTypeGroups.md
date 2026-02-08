@@ -35,8 +35,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string (16) | Unique code of the group.[Required] [Filter(eq;like)] [ORD] 
-| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the group.[Required] [Filter(eq;like)] 
+| [Code](Applications.AssetManagement.MaintenanceTypeGroups.md#code) | string (16) | Unique code of the group.`Required` `Filter(eq;like)` `ORD` 
+| [Name](Applications.AssetManagement.MaintenanceTypeGroups.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the group.`Required` `Filter(eq;like)` 
 | [Notes](Applications.AssetManagement.MaintenanceTypeGroups.md#notes) | string (max) __nullable__ | Notes for this MaintenanceTypeGroup. 
 
 ## References
@@ -62,7 +62,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the group.[Required] [Filter(eq;like)] [ORD]
+Unique code of the group.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multilanguage name of the group.[Required] [Filter(eq;like)]
+Multilanguage name of the group.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

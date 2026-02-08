@@ -35,12 +35,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineEndDateTime](Applications.Service.ServiceAgreementLines.md#lineenddatetime) | datetime | The ending date and time of the agreement coverage for the current line.[Required] [Filter(ge;le)] 
-| [LineNo](Applications.Service.ServiceAgreementLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)] 
-| [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line.[Required] [Filter(ge;le)] 
+| [LineEndDateTime](Applications.Service.ServiceAgreementLines.md#lineenddatetime) | datetime | The ending date and time of the agreement coverage for the current line.`Required` `Filter(ge;le)` 
+| [LineNo](Applications.Service.ServiceAgreementLines.md#lineno) | int32 | Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required` `Filter(eq)` 
+| [LineStartDateTime](Applications.Service.ServiceAgreementLines.md#linestartdatetime) | datetime | The starting date and time of the agreement coverage for the current line.`Required` `Filter(ge;le)` 
 | [Notes](Applications.Service.ServiceAgreementLines.md#notes) | string (254) __nullable__ | Notes for this ServiceAgreementLine. 
-| [ParentLineNo](Applications.Service.ServiceAgreementLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Introduced in version 22.1.5.18] 
-| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement[Required] [Default(1)] [Filter(ge;le)] 
+| [ParentLineNo](Applications.Service.ServiceAgreementLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.`Introduced in version 22.1.5.18` 
+| [Quantity](Applications.Service.ServiceAgreementLines.md#quantity) | decimal (14, 3) | The quantity of the service object that is included in the agreement`Required` `Default(1)` `Filter(ge;le)` 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Root:
 
 ### LineEndDateTime
 
-The ending date and time of the agreement coverage for the current line.[Required] [Filter(ge;le)]
+The ending date and time of the agreement coverage for the current line.`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -81,7 +81,7 @@ Front-End Recalc Expressions:
 `obj.ServiceAgreement.EndDateTime`
 ### LineNo
 
-Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]
+Consecutive line number, unique within the document. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -96,7 +96,7 @@ Front-End Recalc Expressions:
 `( obj.ServiceAgreement.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### LineStartDateTime
 
-The starting date and time of the agreement coverage for the current line.[Required] [Filter(ge;le)]
+The starting date and time of the agreement coverage for the current line.`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.[Introduced in version 22.1.5.18]
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute another line.`Introduced in version 22.1.5.18`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity of the service object that is included in the agreement[Required] [Default(1)] [Filter(ge;le)]
+The quantity of the service object that is included in the agreement`Required` `Default(1)` `Filter(ge;le)`
 
 Type: **decimal (14, 3)**  
 Category: **System**  

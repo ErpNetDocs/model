@@ -35,12 +35,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AutoUpdateToLatestBuild](Projects.AI.Models.md#autoupdatetolatestbuild) | boolean | Indicates whether to automatically update Conversation Build to the latest successful build.[Required] [Default(true)] 
-| [BuildAssistant](Projects.AI.Models.md#buildassistant) | boolean | Specifies whether the model should produce an AI assistant.[Required] [Default(true)] [Introduced in version 24.1.5.31] 
-| [IsDefault](Projects.AI.Models.md#isdefault) | boolean | Specifies whether this is the default model which will handle AI prompts.[Required] [Default(false)] [Filter(eq)] [Introduced in version 24.1.3.23] 
-| [Name](Projects.AI.Models.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the model.[Required] [Filter(like)] 
+| [AutoUpdateToLatestBuild](Projects.AI.Models.md#autoupdatetolatestbuild) | boolean | Indicates whether to automatically update Conversation Build to the latest successful build.`Required` `Default(true)` 
+| [BuildAssistant](Projects.AI.Models.md#buildassistant) | boolean | Specifies whether the model should produce an AI assistant.`Required` `Default(true)` `Introduced in version 24.1.5.31` 
+| [IsDefault](Projects.AI.Models.md#isdefault) | boolean | Specifies whether this is the default model which will handle AI prompts.`Required` `Default(false)` `Filter(eq)` `Introduced in version 24.1.3.23` 
+| [Name](Projects.AI.Models.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the model.`Required` `Filter(like)` 
 | [Notes](Projects.AI.Models.md#notes) | string (max) __nullable__ | Notes for this Model. 
-| [SystemMessage](Projects.AI.Models.md#systemmessage) | string (max) __nullable__ | Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.[Introduced in version 24.1.3.7] 
+| [SystemMessage](Projects.AI.Models.md#systemmessage) | string (max) __nullable__ | Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.`Introduced in version 24.1.3.7` 
 
 ## References
 
@@ -74,7 +74,7 @@ Aggregate Tree
 
 ### AutoUpdateToLatestBuild
 
-Indicates whether to automatically update Conversation Build to the latest successful build.[Required] [Default(true)]
+Indicates whether to automatically update Conversation Build to the latest successful build.`Required` `Default(true)`
 
 Type: **boolean**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### BuildAssistant
 
-Specifies whether the model should produce an AI assistant.[Required] [Default(true)] [Introduced in version 24.1.5.31]
+Specifies whether the model should produce an AI assistant.`Required` `Default(true)` `Introduced in version 24.1.5.31`
 
 Type: **boolean**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Specifies whether this is the default model which will handle AI prompts.[Required] [Default(false)] [Filter(eq)] [Introduced in version 24.1.3.23]
+Specifies whether this is the default model which will handle AI prompts.`Required` `Default(false)` `Filter(eq)` `Introduced in version 24.1.3.23`
 
 Type: **boolean**  
 Indexed: **True**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the model.[Required] [Filter(like)]
+Multi-language name of the model.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemMessage
 
-Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.[Introduced in version 24.1.3.7]
+Provides system message to the chat bot. The system message sets the mood and is the primary instruction for the bot.`Introduced in version 24.1.3.7`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

@@ -36,10 +36,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](HumanResources.Governance.GovernancePolicies.md#code) | string (32) | Human-friendly unique identifier (e.g. HR-REMOTE-WORK).[Required] [Filter(eq;like)] [ORD] 
-| [IsActive](HumanResources.Governance.GovernancePolicies.md#isactive) | boolean | Indicates whether the policy is active as a concept.[Required] [Default(true)] [Filter(eq)] 
-| [Name](HumanResources.Governance.GovernancePolicies.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Policy name as spoken by users (e.g. "Remote Work Policy").[Required] [Filter(like)] 
-| [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | Classification of the policy.[Required] [Filter(eq)] 
+| [Code](HumanResources.Governance.GovernancePolicies.md#code) | string (32) | Human-friendly unique identifier (e.g. HR-REMOTE-WORK).`Required` `Filter(eq;like)` `ORD` 
+| [IsActive](HumanResources.Governance.GovernancePolicies.md#isactive) | boolean | Indicates whether the policy is active as a concept.`Required` `Default(true)` `Filter(eq)` 
+| [Name](HumanResources.Governance.GovernancePolicies.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Policy name as spoken by users (e.g. "Remote Work Policy").`Required` `Filter(like)` 
+| [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | [PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind) | Classification of the policy.`Required` `Filter(eq)` 
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Tree
 
 ### Code
 
-Human-friendly unique identifier (e.g. HR-REMOTE-WORK).[Required] [Filter(eq;like)] [ORD]
+Human-friendly unique identifier (e.g. HR-REMOTE-WORK).`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the policy is active as a concept.[Required] [Default(true)] [Filter(eq)]
+Indicates whether the policy is active as a concept.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Policy name as spoken by users (e.g. "Remote Work Policy").[Required] [Filter(like)]
+Policy name as spoken by users (e.g. "Remote Work Policy").`Required` `Filter(like)`
 
 Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### PolicyKind
 
-Classification of the policy.[Required] [Filter(eq)]
+Classification of the policy.`Required` `Filter(eq)`
 
 Type: **[PolicyKind](HumanResources.Governance.GovernancePolicies.md#policykind)**  
 Category: **System**  

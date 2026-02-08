@@ -122,7 +122,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#applytradeconditions">ApplyTradeConditions</a></td>
 <td>boolean</td>
-<td>Specifies whether the system should apply standard pricing and discounts to this line.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53]</td>
+<td>Specifies whether the system should apply standard pricing and discounts to this line.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#bonusprogramamount">BonusProgramAmount</a></td>
@@ -147,17 +147,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicaldatajson">HistoricalDataJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale.[Introduced in version 19.1]</td>
+<td>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale.<code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#historicalunitcost">HistoricalUnitCost</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></td>
-<td>Used for returning of goods that are sold before the exploitation of the system[Currency: SalesOrder.DocumentCurrency] [Filter(eq;ge;le)]</td>
+<td>Used for returning of goods that are sold before the exploitation of the system<code>Currency: SalesOrder.DocumentCurrency</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#intrastatapplydate">IntrastatApplyDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.[Filter(ge;le)] [Introduced in version 21.1.3.83]</td>
+<td>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.<code>Filter(ge;le)</code> <code>Introduced in version 21.1.3.83</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#intrastattransactionnaturecode">IntrastatTransaction<br>NatureCode</a></td>
@@ -177,7 +177,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#level1discountpercent">Level1DiscountPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>The percent of the level 1 discount.[ReadOnly] [Introduced in version 23.1.2.56]</td>
+<td>The percent of the level 1 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.56</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#level2discountamount">Level2DiscountAmount</a></td>
@@ -187,7 +187,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#level2discountpercent">Level2DiscountPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>The percent of the level 2 discount.[ReadOnly] [Introduced in version 23.1.2.8]</td>
+<td>The percent of the level 2 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.8</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#level3discountamount">Level3DiscountAmount</a></td>
@@ -197,37 +197,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#level3discountpercent">Level3DiscountPercent</a></td>
 <td>decimal (7, 6) <strong>nullable</strong></td>
-<td>The percent of the level 3 discount.[ReadOnly] [Introduced in version 23.1.2.8]</td>
+<td>The percent of the level 3 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.8</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#lineamount">LineAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts[Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</td>
+<td>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linecustomdiscountpercent">LineCustomDiscountPercent</a></td>
 <td>decimal (7, 6)</td>
-<td>User-defined discount for the line[Required] [Default(0)] [Filter(ge;le)]</td>
+<td>User-defined discount for the line<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linefromdate">LineFromDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</td>
+<td>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#lineno">LineNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the line within the sales order[Required] [Filter(eq)] [ORD]</td>
+<td>Consecutive number of the line within the sales order<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linestandarddiscountpercent">LineStandardDiscount<br>Percent</a></td>
 <td>decimal (7, 6)</td>
-<td>Standard discount percent for the line. It is calculated by accumulating in cascade the line discounts at all levels.[Required] [Default(0)] [ReadOnly]</td>
+<td>Standard discount percent for the line. It is calculated by accumulating in cascade the line discounts at all levels.<code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#linetodate">LineToDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</td>
+<td>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#notes">Notes</a></td>
@@ -237,17 +237,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#parentlineno">ParentLineNo</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]</td>
+<td>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#persistlot">PersistLot</a></td>
 <td>boolean</td>
-<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)]</td>
+<td>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#productdescription">ProductDescription</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>The name of the sold product at the time the sale was made[Required] [Filter(like)]</td>
+<td>The name of the sold product at the time the sale was made<code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#promotionalpackageamount">PromotionalPackageAmount</a></td>
@@ -257,37 +257,37 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The quantity sold[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>The quantity sold<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The equivalent of Quantity in the base measurement category of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</td>
+<td>The equivalent of Quantity in the base measurement category of the product<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#requestedquantity">RequestedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></td>
-<td>Quantity requested by customer[Unit: QuantityUnit]</td>
+<td>Quantity requested by customer<code>Unit: QuantityUnit</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#requireddeliverydate">RequiredDeliveryDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The required (contracted) delivery date for the line[Filter(ge;le)]</td>
+<td>The required (contracted) delivery date for the line<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></td>
-<td>Standard unit price of the product during the creation of the sales order line[Currency: SalesOrder.DocumentCurrency] [ReadOnly]</td>
+<td>Standard unit price of the product during the creation of the sales order line<code>Currency: SalesOrder.DocumentCurrency</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
-<td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId[Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</td>
+<td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -447,7 +447,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applytradeconditions">ApplyTradeConditions</h3>
-<p>Specifies whether the system should apply standard pricing and discounts to this line.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.2.53]</p>
+<p>Specifies whether the system should apply standard pricing and discounts to this line.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.2.53</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -554,7 +554,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.Product != null), obj.Product.GuaranteePeriodDays, obj.GuaranteePeriodDays)</code></p>
 <h3 id="historicaldatajson">HistoricalDataJson</h3>
-<p>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale.[Introduced in version 19.1]</p>
+<p>Used only for lines, which are returns. It is a JSON-formatted string, containing data from the original sale.<code>Introduced in version 19.1</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -562,14 +562,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="historicalunitcost">HistoricalUnitCost</h3>
-<p>Used for returning of goods that are sold before the exploitation of the system[Currency: SalesOrder.DocumentCurrency] [Filter(eq;ge;le)]</p>
+<p>Used for returning of goods that are sold before the exploitation of the system<code>Currency: SalesOrder.DocumentCurrency</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="intrastatapplydate">IntrastatApplyDate</h3>
-<p>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.[Filter(ge;le)] [Introduced in version 21.1.3.83]</p>
+<p>Specifies in which period for Intrastat declaration must be included the current operation. Used only when the invoice is issued in different period than the one, that the operation must be included. If not set the document date is used.<code>Filter(ge;le)</code> <code>Introduced in version 21.1.3.83</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -737,7 +737,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="level1discountpercent">Level1DiscountPercent</h3>
-<p>The percent of the level 1 discount.[ReadOnly] [Introduced in version 23.1.2.56]</p>
+<p>The percent of the level 1 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.56</code></p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -753,7 +753,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="level2discountpercent">Level2DiscountPercent</h3>
-<p>The percent of the level 2 discount.[ReadOnly] [Introduced in version 23.1.2.8]</p>
+<p>The percent of the level 2 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.8</code></p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -769,7 +769,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="level3discountpercent">Level3DiscountPercent</h3>
-<p>The percent of the level 3 discount.[ReadOnly] [Introduced in version 23.1.2.8]</p>
+<p>The percent of the level 3 discount.<code>ReadOnly</code> <code>Introduced in version 23.1.2.8</code></p>
 <p>Type: <strong>decimal (7, 6) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -778,7 +778,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.Level3Discount != null), Convert( obj.Level3Discount.DiscountPercent, Object), null)</code></p>
 <h3 id="lineamount">LineAmount</h3>
-<p>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts[Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</p>
+<p>The total amount for the line. Equals to Quantity * Unit_Price, less the discounts<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -790,7 +790,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.UnitPrice == null)) OrElse ( ( obj.Quantity.Value == 0) AndAlso ( obj.UnitPrice.Value == 0))), obj.LineAmount, obj.CalculateLineAmount( obj.Quantity, obj.UnitPrice, obj.LineStandardDiscountPercent, obj.LineCustomDiscountPercent))</code></p>
 <h3 id="linecustomdiscountpercent">LineCustomDiscountPercent</h3>
-<p>User-defined discount for the line[Required] [Default(0)] [Filter(ge;le)]</p>
+<p>User-defined discount for the line<code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -798,7 +798,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="linefromdate">LineFromDate</h3>
-<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</p>
+<p>When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -809,7 +809,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SalesOrder.FromDate</code></p>
 <h3 id="lineno">LineNo</h3>
-<p>Consecutive number of the line within the sales order[Required] [Filter(eq)] [ORD]</p>
+<p>Consecutive number of the line within the sales order<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -820,7 +820,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.SalesOrder.Lines.Select( c =&gt; c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)</code></p>
 <h3 id="linestandarddiscountpercent">LineStandardDiscountPercent</h3>
-<p>Standard discount percent for the line. It is calculated by accumulating in cascade the line discounts at all levels.[Required] [Default(0)] [ReadOnly]</p>
+<p>Standard discount percent for the line. It is calculated by accumulating in cascade the line discounts at all levels.<code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -832,7 +832,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.DetermineLineStandardDiscountPercent( obj.Product, obj.BonusProgram, obj.PromotionalPackage, obj.ReturnForSalesOrderLine, obj.Level1Discount, obj.Level2Discount, obj.Level3Discount)</code></p>
 <h3 id="linetodate">LineToDate</h3>
-<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.[Filter(ge;le)] [Introduced in version 20.1]</p>
+<p>When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.<code>Filter(ge;le)</code> <code>Introduced in version 20.1</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -851,14 +851,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="parentlineno">ParentLineNo</h3>
-<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.[Filter(eq)]</p>
+<p>The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.<code>Filter(eq)</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="persistlot">PersistLot</h3>
-<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.[Required] [Default(false)] [Filter(eq)]</p>
+<p>If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -870,7 +870,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( ( obj.Lot != null) AndAlso obj.SalesOrder.Customer.PersistSalesOrdersLots)</code></p>
 <h3 id="productdescription">ProductDescription</h3>
-<p>The name of the sold product at the time the sale was made[Required] [Filter(like)]</p>
+<p>The name of the sold product at the time the sale was made<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -888,7 +888,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The quantity sold[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>The quantity sold<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -896,7 +896,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>The equivalent of Quantity in the base measurement category of the product[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required]</p>
+<p>The equivalent of Quantity in the base measurement category of the product<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -907,14 +907,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="requestedquantity">RequestedQuantity</h3>
-<p>Quantity requested by customer[Unit: QuantityUnit]</p>
+<p>Quantity requested by customer<code>Unit: QuantityUnit</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="requireddeliverydate">RequiredDeliveryDate</h3>
-<p>The required (contracted) delivery date for the line[Filter(ge;le)]</p>
+<p>The required (contracted) delivery date for the line<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -925,7 +925,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SalesOrder.RequiredDeliveryDate</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (12, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -936,7 +936,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardunitprice">StandardUnitPrice</h3>
-<p>Standard unit price of the product during the creation of the sales order line[Currency: SalesOrder.DocumentCurrency] [ReadOnly]</p>
+<p>Standard unit price of the product during the creation of the sales order line<code>Currency: SalesOrder.DocumentCurrency</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -947,7 +947,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.SalesOrder.DocumentCurrency, obj.SalesOrder.CurrencyDirectory)</code></p>
 <h3 id="unitprice">UnitPrice</h3>
-<p>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId[Currency: SalesOrder.DocumentCurrency] [Required] [Default(0)]</p>
+<p>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

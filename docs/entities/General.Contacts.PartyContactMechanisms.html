@@ -127,22 +127,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#fromdate">FromDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The first date when the contact mechanism was valid. NULL means unknown date[Default(Today)] [Filter(eq;ge;le)]</td>
+<td>The first date when the contact mechanism was valid. NULL means unknown date<code>Default(Today)</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>True if the contact mechanism is currently active and can be used to contact the party.[Required] [Default(true)] [Filter(eq)]</td>
+<td>True if the contact mechanism is currently active and can be used to contact the party.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#isdefault">IsDefault</a></td>
 <td>boolean</td>
-<td>1 - when this is the default contact mechanism for this party; 0 - otherwise[Required] [Default(false)] [Filter(eq)]</td>
+<td>1 - when this is the default contact mechanism for this party; 0 - otherwise<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Consecutive number of the contact information. The number is unique within the party.[Required]</td>
+<td>Consecutive number of the contact information. The number is unique within the party.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#name">Name</a></td>
@@ -152,7 +152,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#nonsolicitation">NonSolicitation</a></td>
 <td>boolean</td>
-<td>If 1 then Don't use the mechanism for solicitation purposes[Required] [Default(false)] [Filter(eq)]</td>
+<td>If 1 then Don't use the mechanism for solicitation purposes<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#notes">Notes</a></td>
@@ -162,7 +162,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Contacts.PartyContactMechanisms.html#thrudate">ThruDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid[Filter(eq;ge;le)]</td>
+<td>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid<code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -293,7 +293,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Address</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="fromdate">FromDate</h3>
-<p>The first date when the contact mechanism was valid. NULL means unknown date[Default(Today)] [Filter(eq;ge;le)]</p>
+<p>The first date when the contact mechanism was valid. NULL means unknown date<code>Default(Today)</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDate</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>True if the contact mechanism is currently active and can be used to contact the party.[Required] [Default(true)] [Filter(eq)]</p>
+<p>True if the contact mechanism is currently active and can be used to contact the party.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -309,7 +309,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isdefault">IsDefault</h3>
-<p>1 - when this is the default contact mechanism for this party; 0 - otherwise[Required] [Default(false)] [Filter(eq)]</p>
+<p>1 - when this is the default contact mechanism for this party; 0 - otherwise<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -317,7 +317,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Consecutive number of the contact information. The number is unique within the party.[Required]</p>
+<p>Consecutive number of the contact information. The number is unique within the party.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -336,7 +336,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="nonsolicitation">NonSolicitation</h3>
-<p>If 1 then Don't use the mechanism for solicitation purposes[Required] [Default(false)] [Filter(eq)]</p>
+<p>If 1 then Don't use the mechanism for solicitation purposes<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -352,7 +352,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="thrudate">ThruDate</h3>
-<p>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid[Filter(eq;ge;le)]</p>
+<p>The last date on which the contact mechanism was valid for the party. NULL if the contact mechanism is still valid<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

@@ -122,72 +122,72 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Presales.Leads.html#companyname">CompanyName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The name of the company, which the person works for (in relation to the current lead).[Filter(eq;like)]</td>
+<td>The name of the company, which the person works for (in relation to the current lead).<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#creationtimestamputc">CreationTimestampUtc</a></td>
 <td>datetime</td>
-<td>System assigned date and time (in UTC), when the lead was initially created.[Required] [Filter(ge;le)] [ReadOnly]</td>
+<td>System assigned date and time (in UTC), when the lead was initially created.<code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#mqltimestamputc">MQLTimestampUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).[Filter(ge;le)] [ReadOnly]</td>
+<td>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).<code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information or comments.[Filter(like)] [Introduced in version 25.1.2.6]</td>
+<td>Additional information or comments.<code>Filter(like)</code> <code>Introduced in version 25.1.2.6</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personemail">PersonEmail</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The email address of the sales lead person.[Filter(eq;like)]</td>
+<td>The email address of the sales lead person.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personfirstname">PersonFirstName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The first name of the person, representing the sales lead.[Filter(eq;like)]</td>
+<td>The first name of the person, representing the sales lead.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personlastname">PersonLastName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The last name of the person, representing the sales lead.[Filter(eq;like)]</td>
+<td>The last name of the person, representing the sales lead.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personmobilephone">PersonMobilePhone</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The mobile phone of the sales lead person.[Filter(like)]</td>
+<td>The mobile phone of the sales lead person.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personsalutation">PersonSalutation</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>Salutation for the sales lead person.[Filter(eq;like)]</td>
+<td>Salutation for the sales lead person.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personwebprofile">PersonWebProfile</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.[Filter(like)]</td>
+<td>Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#personworkphone">PersonWorkPhone</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The work phone of the sales lead person.[Filter(like)]</td>
+<td>The work phone of the sales lead person.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#roleincompany">RoleInCompany</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>The role of the person in the company.[Filter(eq;like)]</td>
+<td>The role of the person in the company.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#sqltimestamputc">SQLTimestampUtc</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.[Filter(ge;le)] [ReadOnly]</td>
+<td>System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.<code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Presales.Leads.html#systemstage">SystemStage</a></td>
 <td><a href="Crm.Presales.Leads.html#systemstage">SystemStage</a></td>
-<td>The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)] [ReadOnly]</td>
+<td>The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)<code>Required</code> <code>Default(&amp;quot;NEW&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -312,7 +312,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="companyname">CompanyName</h3>
-<p>The name of the company, which the person works for (in relation to the current lead).[Filter(eq;like)]</p>
+<p>The name of the company, which the person works for (in relation to the current lead).<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -320,7 +320,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimestamputc">CreationTimestampUtc</h3>
-<p>System assigned date and time (in UTC), when the lead was initially created.[Required] [Filter(ge;le)] [ReadOnly]</p>
+<p>System assigned date and time (in UTC), when the lead was initially created.<code>Required</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -329,14 +329,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Back-End Default Expression:<br>
 <code>IIF( ( obj.MQLTimestampUtc == null), Convert( DateTime.UtcNow, Nullable</code>1), obj.MQLTimestampUtc)`</p>
 <h3 id="mqltimestamputc">MQLTimestampUtc</h3>
-<p>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).[Filter(ge;le)] [ReadOnly]</p>
+<p>System assigned date and time (in UTC), when the lead was first promoted to Marketing Qualified Lead (MQL).<code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional information or comments.[Filter(like)] [Introduced in version 25.1.2.6]</p>
+<p>Additional information or comments.<code>Filter(like)</code> <code>Introduced in version 25.1.2.6</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -344,7 +344,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personemail">PersonEmail</h3>
-<p>The email address of the sales lead person.[Filter(eq;like)]</p>
+<p>The email address of the sales lead person.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -352,7 +352,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personfirstname">PersonFirstName</h3>
-<p>The first name of the person, representing the sales lead.[Filter(eq;like)]</p>
+<p>The first name of the person, representing the sales lead.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -360,7 +360,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personlastname">PersonLastName</h3>
-<p>The last name of the person, representing the sales lead.[Filter(eq;like)]</p>
+<p>The last name of the person, representing the sales lead.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -368,7 +368,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personmobilephone">PersonMobilePhone</h3>
-<p>The mobile phone of the sales lead person.[Filter(like)]</p>
+<p>The mobile phone of the sales lead person.<code>Filter(like)</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -376,7 +376,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personsalutation">PersonSalutation</h3>
-<p>Salutation for the sales lead person.[Filter(eq;like)]</p>
+<p>Salutation for the sales lead person.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -384,7 +384,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personwebprofile">PersonWebProfile</h3>
-<p>Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.[Filter(like)]</p>
+<p>Web address (including protocol like https) of the personal profile in a social or professional network. The address itself, as it is full valid Internet address, contains also the network name.<code>Filter(like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -392,7 +392,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="personworkphone">PersonWorkPhone</h3>
-<p>The work phone of the sales lead person.[Filter(like)]</p>
+<p>The work phone of the sales lead person.<code>Filter(like)</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -400,7 +400,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="roleincompany">RoleInCompany</h3>
-<p>The role of the person in the company.[Filter(eq;like)]</p>
+<p>The role of the person in the company.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -408,14 +408,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sqltimestamputc">SQLTimestampUtc</h3>
-<p>System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.[Filter(ge;le)] [ReadOnly]</p>
+<p>System assigned date and time (in UTC), when the lead was first promoted to Sales Qualified Lead.<code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemstage">SystemStage</h3>
-<p>The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Default(&quot;NEW&quot;)] [Filter(multi eq)] [ReadOnly]</p>
+<p>The system stage of the lead - New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)<code>Required</code> <code>Default(&amp;quot;NEW&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Crm.Presales.Leads.html#systemstage">SystemStage</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemStage</code>(Crm.Presales.Leads.md#systemstage) data attribute<br>

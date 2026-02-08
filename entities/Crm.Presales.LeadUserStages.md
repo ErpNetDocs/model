@@ -37,10 +37,10 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Code](Crm.Presales.LeadUserStages.md#code) | string (32) | The unique code of the LeadUserStage. `Required` `Filter(eq;like)` `ORD` 
 | [Description](Crm.Presales.LeadUserStages.md#description) | string (max) __nullable__ | Description of the user stage. Displayed to the end-user upon stage selection. 
-| [IsActive](Crm.Presales.LeadUserStages.md#isactive) | boolean | Indicates whether the current Lead's User Stage is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.4.62] 
-| [Name](Crm.Presales.LeadUserStages.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the user stage.[Required] [Filter(like)] 
+| [IsActive](Crm.Presales.LeadUserStages.md#isactive) | boolean | Indicates whether the current Lead's User Stage is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.4.62` 
+| [Name](Crm.Presales.LeadUserStages.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the user stage.`Required` `Filter(like)` 
 | [Notes](Crm.Presales.LeadUserStages.md#notes) | string (max) __nullable__ | Notes for this LeadUserStage. 
-| [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Filter(multi eq)] 
+| [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | [SystemStage](Crm.Presales.LeadUserStages.md#systemstage) | The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)`Required` `Filter(multi eq)` 
 
 
 ## System Attributes
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Lead's User Stage is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.4.62]
+Indicates whether the current Lead's User Stage is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.4.62`
 
 Type: **boolean**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Multi-language name of the user stage.[Required] [Filter(like)]
+Multi-language name of the user stage.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -114,7 +114,7 @@ Show in UI: **ShownByDefault**
 
 ### SystemStage
 
-The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)[Required] [Filter(multi eq)]
+The system stage, on which the user stage is based. System stages are New, Qualifying, Marketing Qualified Lead, Sales Qualified Lead, Closed. (NEW, QUA, MQL, SQL, CLO)`Required` `Filter(multi eq)`
 
 Type: **[SystemStage](Crm.Presales.LeadUserStages.md#systemstage)**  
 Category: **System**  

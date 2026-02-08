@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Number or code of this company employee's contract. One employee can have more than one contract with particular company.[Filter(eq;like)] [ORD] 
-| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid.[Filter(ge;le)] 
-| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown.[Filter(ge;le)] 
-| [IsActive](General.Contacts.CompanyEmployees.md#isactive) | boolean | Indicates whether the current Employee is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.5.22] 
+| [ContractCode](General.Contacts.CompanyEmployees.md#contractcode) | string (16) __nullable__ | Number or code of this company employee's contract. One employee can have more than one contract with particular company.`Filter(eq;like)` `ORD` 
+| [ContractEndDate](General.Contacts.CompanyEmployees.md#contractenddate) | datetime __nullable__ | End date of the employee contract, null if the contract is still valid.`Filter(ge;le)` 
+| [ContractStartDate](General.Contacts.CompanyEmployees.md#contractstartdate) | datetime __nullable__ | Start date of the employee contract. Null if it is unkown.`Filter(ge;le)` 
+| [IsActive](General.Contacts.CompanyEmployees.md#isactive) | boolean | Indicates whether the current Employee is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` 
 | [Notes](General.Contacts.CompanyEmployees.md#notes) | string (254) __nullable__ | Notes for this CompanyEmployee. 
 
 ## References
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### ContractCode
 
-Number or code of this company employee's contract. One employee can have more than one contract with particular company.[Filter(eq;like)] [ORD]
+Number or code of this company employee's contract. One employee can have more than one contract with particular company.`Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Back-End Default Expression:
 
 ### ContractEndDate
 
-End date of the employee contract, null if the contract is still valid.[Filter(ge;le)]
+End date of the employee contract, null if the contract is still valid.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ContractStartDate
 
-Start date of the employee contract. Null if it is unkown.[Filter(ge;le)]
+Start date of the employee contract. Null if it is unkown.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the current Employee is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 24.1.5.22]
+Indicates whether the current Employee is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22`
 
 Type: **boolean**  
 Category: **System**  

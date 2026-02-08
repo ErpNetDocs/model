@@ -43,18 +43,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholDegree](Regulatory.Excise.MeasuringTransactions.md#alcoholdegree) | decimal (5, 2) __nullable__ | For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.[Filter(multi eq;ge;le)] 
-| [AlcoholDensity](Regulatory.Excise.MeasuringTransactions.md#alcoholdensity) | int32 __nullable__ | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.[Filter(multi eq;ge;le)] 
-| [AlcoholTemperature](Regulatory.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 __nullable__ | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.[Filter(multi eq;ge;le)] 
-| [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT.[Required] 
-| [EndTimeUtc](Regulatory.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time).[Required] [Filter(eq;ge;le)] 
-| [MeasuringDeviceCode](Regulatory.Excise.MeasuringTransactions.md#measuringdevicecode) | string (32) | The code of the measuring device, used to measure the transaction.[Required] [Filter(multi eq;like)] [ORD] 
+| [AlcoholDegree](Regulatory.Excise.MeasuringTransactions.md#alcoholdegree) | decimal (5, 2) __nullable__ | For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.`Filter(multi eq;ge;le)` 
+| [AlcoholDensity](Regulatory.Excise.MeasuringTransactions.md#alcoholdensity) | int32 __nullable__ | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.`Filter(multi eq;ge;le)` 
+| [AlcoholTemperature](Regulatory.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 __nullable__ | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.`Filter(multi eq;ge;le)` 
+| [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT.`Required` 
+| [EndTimeUtc](Regulatory.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` 
+| [MeasuringDeviceCode](Regulatory.Excise.MeasuringTransactions.md#measuringdevicecode) | string (32) | The code of the measuring device, used to measure the transaction.`Required` `Filter(multi eq;like)` `ORD` 
 | [Notes](Regulatory.Excise.MeasuringTransactions.md#notes) | string (max) __nullable__ | Notes for this MeasuringTransaction. 
-| [Quantity](Regulatory.Excise.MeasuringTransactions.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, measured with this transaction.[Unit: QuantityUnit] [Required] [Filter(eq;ge;le)] 
-| [StartTimeUtc](Regulatory.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time).[Required] [Filter(eq;ge;le)] 
-| [TotalCounterEnd](Regulatory.Excise.MeasuringTransactions.md#totalcounterend) | decimal (12, 3) __nullable__ | Total counter value at the end of the transaction[Introduced in version 23.1.1.42] 
-| [TotalCounterStart](Regulatory.Excise.MeasuringTransactions.md#totalcounterstart) | decimal (12, 3) __nullable__ | Total counter value at the start of the transaction[Introduced in version 23.1.1.42] 
-| [TransactionNumber](Regulatory.Excise.MeasuringTransactions.md#transactionnumber) | string (32) | Transaction number, unique for the measuring device.[Required] [Filter(multi eq;like)] 
+| [Quantity](Regulatory.Excise.MeasuringTransactions.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, measured with this transaction.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
+| [StartTimeUtc](Regulatory.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` 
+| [TotalCounterEnd](Regulatory.Excise.MeasuringTransactions.md#totalcounterend) | decimal (12, 3) __nullable__ | Total counter value at the end of the transaction`Introduced in version 23.1.1.42` 
+| [TotalCounterStart](Regulatory.Excise.MeasuringTransactions.md#totalcounterstart) | decimal (12, 3) __nullable__ | Total counter value at the start of the transaction`Introduced in version 23.1.1.42` 
+| [TransactionNumber](Regulatory.Excise.MeasuringTransactions.md#transactionnumber) | string (32) | Transaction number, unique for the measuring device.`Required` `Filter(multi eq;like)` 
 
 ## References
 
@@ -81,7 +81,7 @@ Aggregate Tree
 
 ### AlcoholDegree
 
-For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.[Filter(multi eq;ge;le)]
+For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.`Filter(multi eq;ge;le)`
 
 Type: **decimal (5, 2) __nullable__**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### AlcoholDensity
 
-For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.[Filter(multi eq;ge;le)]
+For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.`Filter(multi eq;ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### AlcoholTemperature
 
-For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.[Filter(multi eq;ge;le)]
+For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.`Filter(multi eq;ge;le)`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-The direction of the transaction - IN/OUT.[Required]
+The direction of the transaction - IN/OUT.`Required`
 
 Type: **[Direction](Regulatory.Excise.MeasuringTransactions.md#direction)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTimeUtc
 
-Ending time of the transaction (in UTC time).[Required] [Filter(eq;ge;le)]
+Ending time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -139,7 +139,7 @@ Show in UI: **ShownByDefault**
 
 ### MeasuringDeviceCode
 
-The code of the measuring device, used to measure the transaction.[Required] [Filter(multi eq;like)] [ORD]
+The code of the measuring device, used to measure the transaction.`Required` `Filter(multi eq;like)` `ORD`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The quantity of the product, measured with this transaction.[Unit: QuantityUnit] [Required] [Filter(eq;ge;le)]
+The quantity of the product, measured with this transaction.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTimeUtc
 
-Starting time of the transaction (in UTC time).[Required] [Filter(eq;ge;le)]
+Starting time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalCounterEnd
 
-Total counter value at the end of the transaction[Introduced in version 23.1.1.42]
+Total counter value at the end of the transaction`Introduced in version 23.1.1.42`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -192,7 +192,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalCounterStart
 
-Total counter value at the start of the transaction[Introduced in version 23.1.1.42]
+Total counter value at the start of the transaction`Introduced in version 23.1.1.42`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 ### TransactionNumber
 
-Transaction number, unique for the measuring device.[Required] [Filter(multi eq;like)]
+Transaction number, unique for the measuring device.`Required` `Filter(multi eq;like)`
 
 Type: **string (32)**  
 Category: **System**  

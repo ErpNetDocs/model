@@ -36,8 +36,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Procedures.OperationalProcedureChecklistTemplates.md#notes) | string (max) __nullable__ | Notes for the template.[Filter(like)] 
-| [SeqNo](Projects.Procedures.OperationalProcedureChecklistTemplates.md#seqno) | int32 | Order of inclusion.[Required] [Filter(eq)] [ORD] 
+| [Notes](Projects.Procedures.OperationalProcedureChecklistTemplates.md#notes) | string (max) __nullable__ | Notes for the template.`Filter(like)` 
+| [SeqNo](Projects.Procedures.OperationalProcedureChecklistTemplates.md#seqno) | int32 | Order of inclusion.`Required` `Filter(eq)` `ORD` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### Notes
 
-Notes for the template.[Filter(like)]
+Notes for the template.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -71,7 +71,7 @@ Show in UI: **ShownByDefault**
 
 ### SeqNo
 
-Order of inclusion.[Required] [Filter(eq)] [ORD]
+Order of inclusion.`Required` `Filter(eq)` `ORD`
 
 Type: **int32**  
 Category: **System**  

@@ -125,7 +125,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#cancelled">Cancelled</a></td>
 <td>boolean</td>
-<td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.[Required] [Default(false)] [Filter(eq)]</td>
+<td>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#creationtime">CreationTime</a></td>
@@ -135,27 +135,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#documentevent">DocumentEvent</a></td>
 <td>string (254)</td>
-<td>The type of the document event that is scheduled to be processed[Required] [ReadOnly]</td>
+<td>The type of the document event that is scheduled to be processed<code>Required</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#lastprocessstatus">LastProcessStatus</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.[ReadOnly]</td>
+<td>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.<code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#lastprocesstime">LastProcessTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The time of the last attempt to process the event[Filter(ge;le)] [ReadOnly]</td>
+<td>The time of the last attempt to process the event<code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#processed">Processed</a></td>
 <td>boolean</td>
-<td>Indicates wheather the event is already processed or not[Required] [Default(false)] [Filter(eq)] [ReadOnly]</td>
+<td>Indicates wheather the event is already processed or not<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#state">State</a></td>
 <td><a href="Systems.Monitoring.ScheduledDocumentEvents.html#state">State</a></td>
-<td>The state of the document for which the event will be processed[Required] [ReadOnly]</td>
+<td>The state of the document for which the event will be processed<code>Required</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -225,7 +225,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="cancelled">Cancelled</h3>
-<p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.[Required] [Default(false)] [Filter(eq)]</p>
+<p>When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -241,7 +241,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentevent">DocumentEvent</h3>
-<p>The type of the document event that is scheduled to be processed[Required] [ReadOnly]</p>
+<p>The type of the document event that is scheduled to be processed<code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -249,7 +249,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastprocessstatus">LastProcessStatus</h3>
-<p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.[ReadOnly]</p>
+<p>Status/information of the last attemp to process the event. Usually shows the cause in case of failure.<code>ReadOnly</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,14 +257,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastprocesstime">LastProcessTime</h3>
-<p>The time of the last attempt to process the event[Filter(ge;le)] [ReadOnly]</p>
+<p>The time of the last attempt to process the event<code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="processed">Processed</h3>
-<p>Indicates wheather the event is already processed or not[Required] [Default(false)] [Filter(eq)] [ReadOnly]</p>
+<p>Indicates wheather the event is already processed or not<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -272,7 +272,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>The state of the document for which the event will be processed[Required] [ReadOnly]</p>
+<p>The state of the document for which the event will be processed<code>Required</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Monitoring.ScheduledDocumentEvents.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Systems.Monitoring.ScheduledDocumentEvents.md#state) data attribute<br>

@@ -36,7 +36,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Name](General.Resources.WorkSchedules.md#name) | string (64) | The name of this WorkSchedule. `Required` `Filter(like)` 
 | [NumberOfDays](General.Resources.WorkSchedules.md#numberofdays) | int16 __nullable__ | Number of days in a recurring period. Valid only when Recurrence_Type=D 
-| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month[Required] [Filter(multi eq)] 
+| [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | [RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype) | D=recurring each X days; W=recurring each week; M=recurring each month`Required` `Filter(multi eq)` 
 
 
 ## System Attributes
@@ -82,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### RecurrenceType
 
-D=recurring each X days; W=recurring each week; M=recurring each month[Required] [Filter(multi eq)]
+D=recurring each X days; W=recurring each week; M=recurring each month`Required` `Filter(multi eq)`
 
 Type: **[RecurrenceType](General.Resources.WorkSchedules.md#recurrencetype)**  
 Category: **System**  

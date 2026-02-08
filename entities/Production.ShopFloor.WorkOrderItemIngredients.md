@@ -35,12 +35,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified. 
-| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material, which will be used for setup.[Unit: UsedQuantityUnit] [Required] [Default(0)] 
-| [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item.[Required] [Filter(eq;like)] 
+| [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material, which will be used for setup.`Unit: UsedQuantityUnit` `Required` `Default(0)` 
+| [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item.`Required` `Filter(eq;like)` 
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemIngredient. 
-| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material consumed in the operation.[Unit: UsedQuantityUnit] [Required] [Default(1)] 
-| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material.[Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
-| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.[Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
+| [UsedQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material consumed in the operation.`Unit: UsedQuantityUnit` `Required` `Default(1)` 
+| [UsedQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The equivalence of Used Quantity in the base measurement category of the material.`Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
+| [UsedStandardQuantityBase](Production.ShopFloor.WorkOrderItemIngredients.md#usedstandardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.`Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
 
 ## References
 
@@ -95,7 +95,7 @@ Front-End Recalc Expressions:
 `IIF( ( obj.WorkOrderItem != null), null, obj.DistributeBy)`
 ### FixedScrapQuantity
 
-The quantity of the material, which will be used for setup.[Unit: UsedQuantityUnit] [Required] [Default(0)]
+The quantity of the material, which will be used for setup.`Unit: UsedQuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### LineOrd
 
-The order of the line within the item.[Required] [Filter(eq;like)]
+The order of the line within the item.`Required` `Filter(eq;like)`
 
 Type: **int32**  
 Category: **System**  
@@ -132,7 +132,7 @@ Show in UI: **HiddenByDefault**
 
 ### UsedQuantity
 
-The quantity of the material consumed in the operation.[Unit: UsedQuantityUnit] [Required] [Default(1)]
+The quantity of the material consumed in the operation.`Unit: UsedQuantityUnit` `Required` `Default(1)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### UsedQuantityBase
 
-The equivalence of Used Quantity in the base measurement category of the material.[Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+The equivalence of Used Quantity in the base measurement category of the material.`Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Material != null) AndAlso ( obj.UsedQuantity != null)) AndAlso ( obj.UsedQuantityUnit != null)), obj.UsedQuantity.ConvertTo( obj.Material.BaseUnit, obj.Material), obj.UsedQuantityBase)`
 ### UsedStandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.[Unit: Material.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions of the product. Used to measure the execution. NULL means to take the value from Used Quantity Base.`Unit: Material.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

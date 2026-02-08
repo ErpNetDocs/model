@@ -35,10 +35,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Service.ServiceObjects.md#isactive) | boolean | Indicates whether the current service object is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.53] 
+| [IsActive](Applications.Service.ServiceObjects.md#isactive) | boolean | Indicates whether the current service object is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53` 
 | [Name](Applications.Service.ServiceObjects.md#name) | string (254) | The name of this ServiceObject. `Required` `Filter(eq;like)` 
 | [Notes](Applications.Service.ServiceObjects.md#notes) | string (254) __nullable__ | Notes for this ServiceObject. 
-| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced.[Filter(like)] 
+| [SerialNumber](Applications.Service.ServiceObjects.md#serialnumber) | string (32) __nullable__ | The serial number of the item, that is being serviced.`Filter(like)` 
 
 ## References
 
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### IsActive
 
-Indicates whether the current service object is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 22.1.5.53]
+Indicates whether the current service object is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.53`
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-The serial number of the item, that is being serviced.[Filter(like)]
+The serial number of the item, that is being serviced.`Filter(like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  

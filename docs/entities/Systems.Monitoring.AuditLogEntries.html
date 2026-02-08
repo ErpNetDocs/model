@@ -127,7 +127,7 @@ Max level:  0 - Do not track changes</p>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#applicationname">ApplicationName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The client application that triggered the events. Null when unknown or N/A.[Filter(eq;like)]</td>
+<td>The client application that triggered the events. Null when unknown or N/A.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#details">Details</a></td>
@@ -142,27 +142,27 @@ Max level:  0 - Do not track changes</p>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#entityname">EntityName</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>The entity, which is being referenced by the events. Null when unknown or N/A.[Filter(eq;like)]</td>
+<td>The entity, which is being referenced by the events. Null when unknown or N/A.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventclass">EventClass</a></td>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventclass">EventClass</a></td>
-<td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes.[Required] [Filter(multi eq)]</td>
+<td>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes.<code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventname">EventName</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>Specific event or method name. Contents depend on the Event Type. Null when N/A.[Filter(eq;like)]</td>
+<td>Specific event or method name. Contents depend on the Event Type. Null when N/A.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventtimeutc">EventTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in Utc) when the event occurred.[Required] [Default(Now)] [Filter(ge;le)] [ORD]</td>
+<td>The exact date and time (in Utc) when the event occurred.<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></td>
 <td><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></td>
-<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline.[Required] [Filter(multi eq)]</td>
+<td>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline.<code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -232,7 +232,7 @@ Max level:  0 - Do not track changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="applicationname">ApplicationName</h3>
-<p>The client application that triggered the events. Null when unknown or N/A.[Filter(eq;like)]</p>
+<p>The client application that triggered the events. Null when unknown or N/A.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -254,7 +254,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entityname">EntityName</h3>
-<p>The entity, which is being referenced by the events. Null when unknown or N/A.[Filter(eq;like)]</p>
+<p>The entity, which is being referenced by the events. Null when unknown or N/A.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="eventclass">EventClass</h3>
-<p>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes.[Required] [Filter(multi eq)]</p>
+<p>The event primary classification, which shows the source of the event. E=Entity methods; A=Auth events; S=Server events; P=Presence changes.<code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Monitoring.AuditLogEntries.html#eventclass">EventClass</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>EventClass</code>(Systems.Monitoring.AuditLogEntries.md#eventclass) data attribute<br>
@@ -297,7 +297,7 @@ Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Mem
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="eventname">EventName</h3>
-<p>Specific event or method name. Contents depend on the Event Type. Null when N/A.[Filter(eq;like)]</p>
+<p>Specific event or method name. Contents depend on the Event Type. Null when N/A.<code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -305,7 +305,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="eventtimeutc">EventTimeUtc</h3>
-<p>The exact date and time (in Utc) when the event occurred.[Required] [Default(Now)] [Filter(ge;le)] [ORD]</p>
+<p>The exact date and time (in Utc) when the event occurred.<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -314,7 +314,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="eventtype">EventType</h3>
-<p>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline.[Required] [Filter(multi eq)]</p>
+<p>Detailed action type. EID=Read one record by Id; ELD=Load many records; EUP=Update data; EDE=Delete record; EMT=Call method; ETH=Other entity event; AIN=Login; AOU=Log out; AUP=Sign Up; AFL=Login failed; APW=Change password; ATH=Other auth event; STH=Other server event; PSA=Change presence to Available; PSD=Change presence to DND; PSB=Change presence to Busy; PSW=Change presence to Away; PSO=Change presence to Offline.<code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Monitoring.AuditLogEntries.html#eventtype">EventType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>EventType</code>(Systems.Monitoring.AuditLogEntries.md#eventtype) data attribute<br>

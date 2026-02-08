@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreateForInvoicedAmounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createforinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is invoiced.[Required] 
-| [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.[Required] 
-| [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | 1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.[Required] 
-| [UpdateForInvoices](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#updateforinvoices) | boolean | Update the payment order when invoices are issued for any of the sales orders lines.[Required] 
+| [CreateForInvoicedAmounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createforinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is invoiced.`Required` 
+| [CreateForNotInvoiced<br />Amounts](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#createfornotinvoicedamounts) | boolean | 1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.`Required` 
+| [IsAmountWithVAT](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#isamountwithvat) | boolean | 1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.`Required` 
+| [UpdateForInvoices](Crm.Sales.SalesOrderPaymentOrdersTemplates.md#updateforinvoices) | boolean | Update the payment order when invoices are issued for any of the sales orders lines.`Required` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### CreateForInvoicedAmounts
 
-1 to add to the payment order, the part of the amount of the sales order, which is invoiced.[Required]
+1 to add to the payment order, the part of the amount of the sales order, which is invoiced.`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### CreateForNotInvoicedAmounts
 
-1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.[Required]
+1 to add to the payment order, the part of the amount of the sales order, which is not included in any invoice.`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAmountWithVAT
 
-1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.[Required]
+1 to indicate that the parent document includes VAT and the generated the payment order should be with Is Amount With VAT = 1. This setting DOES NOT affect whether the generated amount should include VAT or not, it simply sets the flag in the generated order.`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### UpdateForInvoices
 
-Update the payment order when invoices are issued for any of the sales orders lines.[Required]
+Update the payment order when invoices are issued for any of the sales orders lines.`Required`
 
 Type: **boolean**  
 Category: **System**  

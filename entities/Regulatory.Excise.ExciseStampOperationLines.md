@@ -45,10 +45,10 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EndNumber](Regulatory.Excise.ExciseStampOperationLines.md#endnumber) | string (30) __nullable__ | The end number of the sequence of excise stamps that are processed with the current operation. 
-| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.[Required] 
+| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.`Required` 
 | [Notes](Regulatory.Excise.ExciseStampOperationLines.md#notes) | string (max) __nullable__ | Notes for this ExciseStampOperationLine. 
-| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 22.1.6.32] 
-| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation.[Default(0)] 
+| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 22.1.6.32` 
+| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation.`Default(0)` 
 | [StartNumber](Regulatory.Excise.ExciseStampOperationLines.md#startnumber) | string (30) __nullable__ | The start number of the sequence of excise stamps that are processed with the current operation. 
 
 ## References
@@ -89,7 +89,7 @@ Front-End Recalc Expressions:
 `Format( "{0}", Convert( ( ( Convert( Parse( obj.StartNumber), Nullable`1) + Convert( obj.Quantity, Nullable`1)) - Convert( Convert( 1, Int64), Nullable`1)), Object)).PadLeft( obj.StartNumber.Trim( ).Length, 0)`
 ### LineNo
 
-Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.[Required]
+Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 22.1.6.32]
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 22.1.6.32`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The number of excise stamps that are processed with the current operation.[Default(0)]
+The number of excise stamps that are processed with the current operation.`Default(0)`
 
 Type: **int32 __nullable__**  
 Category: **System**  

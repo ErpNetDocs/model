@@ -111,19 +111,19 @@ Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="attributes">Attributes</h2>
 <p>| Name | Type | Description |
 | ---- | ---- | --- |
-| <a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a> | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.[Required] [Default(0)] [Introduced in version 22.1.6.66]
+| <a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a> | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.<code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code>
 | <a href="Logistics.Inventory.Lots.html#description">Description</a> | <a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong> | The description of this Lot.
-| <a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a> | datetime <strong>nullable</strong> | Expiry date for this lot.[Filter(ge;le)]
+| <a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a> | datetime <strong>nullable</strong> | Expiry date for this lot.<code>Filter(ge;le)</code>
 | <a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a> | string (50) <strong>nullable</strong> | The license number for this lot. Null when license number is N/A or unknown.
 | <a href="Logistics.Inventory.Lots.html#number">Number</a> | string (30) | The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code>
 | <a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a> | guid <strong>nullable</strong> | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code>
-| <a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a> | string (30) <strong>nullable</strong> | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.[Filter(like)]
-| <a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a> | date <strong>nullable</strong> | The date of the first receipt of products in this lot.[Filter(ge;le)] [ReadOnly]
+| <a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a> | string (30) <strong>nullable</strong> | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.<code>Filter(like)</code>
+| <a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a> | date <strong>nullable</strong> | The date of the first receipt of products in this lot.<code>Filter(ge;le)</code> <code>ReadOnly</code>
 | <a href="Logistics.Inventory.Lots.html#status">Status</a> | <a href="Logistics.Inventory.Lots.html#status">Status</a> | Status of the warehouse lot. Minus statuses describe blocked conditions.
 -3 blocked for document (sales or service order)
 -2 blocked for party
 -1 blocked for inspection
-0 free to use[Required] [Default(0)] [Filter(multi eq)]</p>
+0 free to use<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></p>
 <h2 id="references">References</h2>
 <table>
 <thead>
@@ -210,7 +210,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="alcoholicstrength">AlcoholicStrength</h3>
-<p>Percentage of pure alcohol used in excise duty reporting.[Required] [Default(0)] [Introduced in version 22.1.6.66]</p>
+<p>Percentage of pure alcohol used in excise duty reporting.<code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code></p>
 <p>Type: <strong>decimal (5, 2)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -225,7 +225,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="expirydate">ExpiryDate</h3>
-<p>Expiry date for this lot.[Filter(ge;le)]</p>
+<p>Expiry date for this lot.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -257,7 +257,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="purchaselotnumber">PurchaseLotNumber</h3>
-<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.[Filter(like)]</p>
+<p>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.<code>Filter(like)</code></p>
 <p>Type: <strong>string (30) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -265,7 +265,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>30</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="receiptdate">ReceiptDate</h3>
-<p>The date of the first receipt of products in this lot.[Filter(ge;le)] [ReadOnly]</p>
+<p>The date of the first receipt of products in this lot.<code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -276,7 +276,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 -3 blocked for document (sales or service order)
 -2 blocked for party
 -1 blocked for inspection
-0 free to use[Required] [Default(0)] [Filter(multi eq)]</p>
+0 free to use<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Logistics.Inventory.Lots.html#status">Status</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Status</code>(Logistics.Inventory.Lots.md#status) data attribute<br>

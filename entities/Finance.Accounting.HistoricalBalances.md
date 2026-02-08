@@ -28,11 +28,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date.[Currency: Currency] [Required] 
-| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date.[Currency: EnterpriseCompany.BaseCurrency] [Required] 
-| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date.[Currency: EnterpriseCompany.ReportingCurrency] [Required] 
-| [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data.[Required] [Filter(eq)] 
-| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances.[Required] [Filter(eq;like)] 
+| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date.`Currency: Currency` `Required` 
+| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency` `Required` 
+| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency` `Required` 
+| [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data.`Required` `Filter(eq)` 
+| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances.`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -49,7 +49,7 @@ Aggregate Tree
 
 ### Balance
 
-Account balance in the original accounting currency as of the selected date.[Currency: Currency] [Required]
+Account balance in the original accounting currency as of the selected date.`Currency: Currency` `Required`
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -59,7 +59,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Account balance in the company’s base currency as of the selected date.[Currency: EnterpriseCompany.BaseCurrency] [Required]
+Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency` `Required`
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Account balance in the reporting currency as of the selected date.[Currency: EnterpriseCompany.ReportingCurrency] [Required]
+Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency` `Required`
 
 Type: **[Amount (19, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Date
 
-The report shows balances as of this date. This is a required filter; if not set, the view returns no data.[Required] [Filter(eq)]
+The report shows balances as of this date. This is a required filter; if not set, the view returns no data.`Required` `Filter(eq)`
 
 Type: **date**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Combined analytical dimensions key used for grouping and filtering account balances.[Required] [Filter(eq;like)]
+Combined analytical dimensions key used for grouping and filtering account balances.`Required` `Filter(eq;like)`
 
 Type: **string (64)**  
 Category: **System**  

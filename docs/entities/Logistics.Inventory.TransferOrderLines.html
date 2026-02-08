@@ -125,17 +125,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#duedatein">DueDateIn</a></td>
 <td>datetime</td>
-<td>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]</td>
+<td>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#duedateout">DueDateOut</a></td>
 <td>datetime</td>
-<td>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]</td>
+<td>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Line ordinal position within the transaction. Duplicates are allowed, but not advised[Required]</td>
+<td>Line ordinal position within the transaction. Duplicates are allowed, but not advised<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#notes">Notes</a></td>
@@ -145,22 +145,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity ordered for transfer[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</td>
+<td>Quantity ordered for transfer<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</td>
+<td>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.TransferOrderLines.html#standardunitprice">StandardUnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></td>
-<td>Standard unit price of the product during the creation of the transfer order line[Currency: TransferOrder.DocumentCurrency]</td>
+<td>Standard unit price of the product during the creation of the transfer order line<code>Currency: TransferOrder.DocumentCurrency</code></td>
 </tr>
 </tbody>
 </table>
@@ -262,7 +262,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="duedatein">DueDateIn</h3>
-<p>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]</p>
+<p>The date, when the goods are expected to be received in the destination warehouse. Initially copied from the transfer header<code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -273,7 +273,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.TransferOrder.DefaultDueDateIn</code></p>
 <h3 id="duedateout">DueDateOut</h3>
-<p>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header[Required] [Filter(ge;le)]</p>
+<p>When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header<code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -284,7 +284,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.TransferOrder.DefaultDueDateOut</code></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Line ordinal position within the transaction. Duplicates are allowed, but not advised[Required]</p>
+<p>Line ordinal position within the transaction. Duplicates are allowed, but not advised<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -303,7 +303,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>Quantity ordered for transfer[Unit: QuantityUnit] [Required] [Default(1)] [Filter(ge;le)]</p>
+<p>Quantity ordered for transfer<code>Unit: QuantityUnit</code> <code>Required</code> <code>Default(1)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -311,7 +311,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]</p>
+<p>Quantity in the base (default) measurement unit of the Item (calculated at the time of last update of the current store order line). Should be updated in parallel with each Quantity update<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -322,7 +322,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -333,7 +333,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardunitprice">StandardUnitPrice</h3>
-<p>Standard unit price of the product during the creation of the transfer order line[Currency: TransferOrder.DocumentCurrency]</p>
+<p>Standard unit price of the product during the creation of the transfer order line<code>Currency: TransferOrder.DocumentCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -126,12 +126,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Documents.DocumentDistributedAmounts.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>The amount which has beed distributed over the current line. The amount is in the currency of the document.[Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</td>
+<td>The amount which has beed distributed over the current line. The amount is in the currency of the document.<code>Currency: GetDocumentCurrency()</code> <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentDistributedAmounts.html#baseamount">BaseAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). [Currency: GetDocumentCurrency()] [Introduced in version 22.1.4.44]</td>
+<td>The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). <code>Currency: GetDocumentCurrency()</code> <code>Introduced in version 22.1.4.44</code></td>
 </tr>
 <tr>
 <td><a href="General.Documents.DocumentDistributedAmounts.html#documentlineid">DocumentLineId</a></td>
@@ -196,14 +196,14 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>The amount which has beed distributed over the current line. The amount is in the currency of the document.[Currency: GetDocumentCurrency()] [Required] [Filter(ge;le)]</p>
+<p>The amount which has beed distributed over the current line. The amount is in the currency of the document.<code>Currency: GetDocumentCurrency()</code> <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="baseamount">BaseAmount</h3>
-<p>The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). [Currency: GetDocumentCurrency()] [Introduced in version 22.1.4.44]</p>
+<p>The calculated base amount for the line in document currency. The base amount is the base, over which the additional amounts are calculated. Null if the base amount is not stored (for amounts distributed in older versions of the system). <code>Currency: GetDocumentCurrency()</code> <code>Introduced in version 22.1.4.44</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

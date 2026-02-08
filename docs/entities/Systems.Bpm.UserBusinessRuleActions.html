@@ -121,12 +121,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actionno">ActionNo</a></td>
 <td>int32</td>
-<td>Consecutive number of the action, unique within the business rule.[Required]</td>
+<td>Consecutive number of the action, unique within the business rule.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></td>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></td>
-<td>Specifies the type of action to perform.[Required]</td>
+<td>Specifies the type of action to perform.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Bpm.UserBusinessRuleActions.html#parameter1type">Parameter1Type</a></td>
@@ -206,7 +206,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actionno">ActionNo</h3>
-<p>Consecutive number of the action, unique within the business rule.[Required]</p>
+<p>Consecutive number of the action, unique within the business rule.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -217,7 +217,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>( obj.UserBusinessRule.Actions.Select( c =&gt; c.ActionNo).DefaultIfEmpty( 0).Max( ) + 1)</code></p>
 <h3 id="actiontype">ActionType</h3>
-<p>Specifies the type of action to perform.[Required]</p>
+<p>Specifies the type of action to perform.<code>Required</code></p>
 <p>Type: <strong><a href="Systems.Bpm.UserBusinessRuleActions.html#actiontype">ActionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ActionType</code>(Systems.Bpm.UserBusinessRuleActions.md#actiontype) data attribute<br>

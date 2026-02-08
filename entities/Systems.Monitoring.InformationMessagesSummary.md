@@ -37,17 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Count](Systems.Monitoring.InformationMessagesSummary.md#count) | int32 | Total number of messages[Required] [Filter(eq;ge;le)] [ORD] 
-| [Process](Systems.Monitoring.InformationMessagesSummary.md#process) | string (254) | Process description for message.[Required] [Filter(eq;like)] [ORD] 
-| [SizeMB](Systems.Monitoring.InformationMessagesSummary.md#sizemb) | int64 | Total used size for message type in Megabytes.[Required] [Filter(eq;ge;le)] [ORD] 
-| [Year](Systems.Monitoring.InformationMessagesSummary.md#year) | string (30) | The year to which the current data refers.[Required] [Filter(eq;like)] [ORD] [Introduced in version 24.1.3.32] 
+| [Count](Systems.Monitoring.InformationMessagesSummary.md#count) | int32 | Total number of messages`Required` `Filter(eq;ge;le)` `ORD` 
+| [Process](Systems.Monitoring.InformationMessagesSummary.md#process) | string (254) | Process description for message.`Required` `Filter(eq;like)` `ORD` 
+| [SizeMB](Systems.Monitoring.InformationMessagesSummary.md#sizemb) | int64 | Total used size for message type in Megabytes.`Required` `Filter(eq;ge;le)` `ORD` 
+| [Year](Systems.Monitoring.InformationMessagesSummary.md#year) | string (30) | The year to which the current data refers.`Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32` 
 
 
 ## Attribute Details
 
 ### Count
 
-Total number of messages[Required] [Filter(eq;ge;le)] [ORD]
+Total number of messages`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -57,7 +57,7 @@ Show in UI: **ShownByDefault**
 
 ### Process
 
-Process description for message.[Required] [Filter(eq;like)] [ORD]
+Process description for message.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (254)**  
 Category: **System**  
@@ -68,7 +68,7 @@ Show in UI: **ShownByDefault**
 
 ### SizeMB
 
-Total used size for message type in Megabytes.[Required] [Filter(eq;ge;le)] [ORD]
+Total used size for message type in Megabytes.`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **int64**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### Year
 
-The year to which the current data refers.[Required] [Filter(eq;like)] [ORD] [Introduced in version 24.1.3.32]
+The year to which the current data refers.`Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32`
 
 Type: **string (30)**  
 Category: **System**  

@@ -41,11 +41,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed[Required] [Filter(eq;ge;le)] 
-| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'[Required] [Filter(ge;le)] 
-| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed[Required] [Default(0)] [Filter(ge;le)] 
+| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed`Required` `Filter(eq;ge;le)` 
+| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'`Required` `Filter(ge;le)` 
+| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed`Required` `Default(0)` `Filter(ge;le)` 
 | [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval 
-| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'[Required] [Filter(ge;le)] 
+| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'`Required` `Filter(ge;le)` 
 | [State](General.Activities.ActivityTimeIntervals.md#state) | [DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. NULL when the state is unknown. 
 
 ## References
@@ -73,7 +73,7 @@ Aggregate Tree
 
 ### Date
 
-The date on which the work was performed[Required] [Filter(eq;ge;le)]
+The date on which the work was performed`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### EndTime
 
-The ending time of the time interval within 'Date'[Required] [Filter(ge;le)]
+The ending time of the time interval within 'Date'`Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionCompletePercent
 
-Percent of task completed[Required] [Default(0)] [Filter(ge;le)]
+Percent of task completed`Required` `Default(0)` `Filter(ge;le)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The starting time of the time interval within 'Date'[Required] [Filter(ge;le)]
+The starting time of the time interval within 'Date'`Required` `Filter(ge;le)`
 
 Type: **time**  
 Category: **System**  

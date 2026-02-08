@@ -121,27 +121,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#accesstokenkey">AccessTokenKey</a></td>
 <td>string (256)</td>
-<td>The unique key of the token[Required] [Filter(multi eq)] [ORD]</td>
+<td>The unique key of the token<code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#actor">Actor</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>For whom the token was issued (might be user email)[Filter(multi eq)]</td>
+<td>For whom the token was issued (might be user email)<code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#client">Client</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>The client application[Filter(multi eq)]</td>
+<td>The client application<code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#consumedtimestamp">ConsumedTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When it was used up (for one-time grants).[Filter(ge;le)]</td>
+<td>When it was used up (for one-time grants).<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#creationtimestamp">CreationTimestamp</a></td>
 <td>datetime</td>
-<td>When the token was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD]</td>
+<td>When the token was created<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#data">Data</a></td>
@@ -156,27 +156,27 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#expiretimestamp">ExpireTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When the token expires[Filter(ge;le)]</td>
+<td>When the token expires<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#lastusedtimestamp">LastUsedTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates when the token was last used.[Filter(ge;le)] [Introduced in version 26.2.0.18]</td>
+<td>Indicates when the token was last used.<code>Filter(ge;le)</code> <code>Introduced in version 26.2.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#scopes">Scopes</a></td>
 <td>string (256) <strong>nullable</strong></td>
-<td>Space-separated list of permissions granted to this token.[Introduced in version 26.2.0.18]</td>
+<td>Space-separated list of permissions granted to this token.<code>Introduced in version 26.2.0.18</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#session">Session</a></td>
 <td>string (128) <strong>nullable</strong></td>
-<td>Session parameter[Filter(multi eq)]</td>
+<td>Session parameter<code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Security.AccessTokens.html#type">Type</a></td>
 <td>string (64)</td>
-<td>Type of the token - reference_token, refresh_token, etc.[Required]</td>
+<td>Type of the token - reference_token, refresh_token, etc.<code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -246,7 +246,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="accesstokenkey">AccessTokenKey</h3>
-<p>The unique key of the token[Required] [Filter(multi eq)] [ORD]</p>
+<p>The unique key of the token<code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (256)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="actor">Actor</h3>
-<p>For whom the token was issued (might be user email)[Filter(multi eq)]</p>
+<p>For whom the token was issued (might be user email)<code>Filter(multi eq)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -263,7 +263,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="client">Client</h3>
-<p>The client application[Filter(multi eq)]</p>
+<p>The client application<code>Filter(multi eq)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -271,14 +271,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="consumedtimestamp">ConsumedTimestamp</h3>
-<p>When it was used up (for one-time grants).[Filter(ge;le)]</p>
+<p>When it was used up (for one-time grants).<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtimestamp">CreationTimestamp</h3>
-<p>When the token was created[Required] [Default(NowUtc)] [Filter(ge;le)] [ORD]</p>
+<p>When the token was created<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -302,21 +302,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="expiretimestamp">ExpireTimestamp</h3>
-<p>When the token expires[Filter(ge;le)]</p>
+<p>When the token expires<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lastusedtimestamp">LastUsedTimestamp</h3>
-<p>Indicates when the token was last used.[Filter(ge;le)] [Introduced in version 26.2.0.18]</p>
+<p>Indicates when the token was last used.<code>Filter(ge;le)</code> <code>Introduced in version 26.2.0.18</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scopes">Scopes</h3>
-<p>Space-separated list of permissions granted to this token.[Introduced in version 26.2.0.18]</p>
+<p>Space-separated list of permissions granted to this token.<code>Introduced in version 26.2.0.18</code></p>
 <p>Type: <strong>string (256) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -324,7 +324,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>256</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="session">Session</h3>
-<p>Session parameter[Filter(multi eq)]</p>
+<p>Session parameter<code>Filter(multi eq)</code></p>
 <p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="type">Type</h3>
-<p>Type of the token - reference_token, refresh_token, etc.[Required]</p>
+<p>Type of the token - reference_token, refresh_token, etc.<code>Required</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

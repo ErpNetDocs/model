@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributedAmountBase](Finance.Cost.DistributionResults.md#distributedamountbase) | [Amount (14, 5)](../data-types.md#amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.[Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required] 
-| [LineNo](Finance.Cost.DistributionResults.md#lineno) | int32 | Consecutive line number (within the cost distribution document) of the result.[Required] 
-| [OutputLineNo](Finance.Cost.DistributionResults.md#outputlineno) | int32 | The line number (within the document) of the output over which the cost is distributed.[Required] 
+| [DistributedAmountBase](Finance.Cost.DistributionResults.md#distributedamountbase) | [Amount (14, 5)](../data-types.md#amount) | The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.`Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required` 
+| [LineNo](Finance.Cost.DistributionResults.md#lineno) | int32 | Consecutive line number (within the cost distribution document) of the result.`Required` 
+| [OutputLineNo](Finance.Cost.DistributionResults.md#outputlineno) | int32 | The line number (within the document) of the output over which the cost is distributed.`Required` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Root:
 
 ### DistributedAmountBase
 
-The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.[Currency: CostDistribution.EnterpriseCompany.BaseCurrency] [Required]
+The amount (in base currency) of the distributed cost. The amount is calculated for the combination of output and cost type.`Currency: CostDistribution.EnterpriseCompany.BaseCurrency` `Required`
 
 Type: **[Amount (14, 5)](../data-types.md#amount)**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number (within the cost distribution document) of the result.[Required]
+Consecutive line number (within the cost distribution document) of the result.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -85,7 +85,7 @@ Front-End Recalc Expressions:
 `( obj.CostDistribution.Results.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 10)`
 ### OutputLineNo
 
-The line number (within the document) of the output over which the cost is distributed.[Required]
+The line number (within the document) of the output over which the cost is distributed.`Required`
 
 Type: **int32**  
 Category: **System**  

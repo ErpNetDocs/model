@@ -45,7 +45,7 @@ Aggregate Tree
 | [BillTo](General.Contacts.CompanyLocations.md#billto) | [BillTo](General.Contacts.CompanyLocations.md#billto) __nullable__ | If filled indicates which party is billed for the amounts from documents that require payments. This setting is used in sales documents when the company and the location are customers. 
 | [GLN](General.Contacts.CompanyLocations.md#gln) | string (13) __nullable__ | Global Location Number used by EDI systems. `Filter(multi eq)` `ORD` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [IsActive](General.Contacts.CompanyLocations.md#isactive) | boolean | Specifies whether the current party is active in the system or not. `Required` `Default(true)` `Filter(eq)` (Inherited from [Parties](General.Contacts.Parties.md)) 
-| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the company location.[Required] [Filter(eq;like)] 
+| [LocationName](General.Contacts.CompanyLocations.md#locationname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the company location.`Required` `Filter(eq;like)` 
 | [PartyCode](General.Contacts.CompanyLocations.md#partycode) | string (16) | The unique code of the party. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationTime](General.Contacts.CompanyLocations.md#partycreationtime) | datetime __nullable__ | Date and time when the Party was created. `Filter(ge;le)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
 | [PartyCreationUser](General.Contacts.CompanyLocations.md#partycreationuser) | string (64) __nullable__ | Login name of the user, who created the Party. `Filter(like)` `ReadOnly` (Inherited from [Parties](General.Contacts.Parties.md)) 
@@ -137,7 +137,7 @@ Show in UI: **ShownByDefault**
 
 ### LocationName
 
-The name of the company location.[Required] [Filter(eq;like)]
+The name of the company location.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

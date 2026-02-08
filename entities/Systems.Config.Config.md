@@ -42,11 +42,11 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Systems.Config.Config.md#description) | string (254) __nullable__ | The description of this Config. `Filter(like)` 
-| [IsActive](Systems.Config.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account.[Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1] 
-| [KeyPath](Systems.Config.Config.md#keypath) | string (128) | Full path of the configuration option[Required] [Filter(eq;like)] [ORD] 
-| [KeyValue](Systems.Config.Config.md#keyvalue) | string (max) __nullable__ | The value of the configuration option[Filter(eq;like)] 
-| [UserLogin](Systems.Config.Config.md#userlogin) | string (64) __nullable__ | If not NULL, the configuration option is specific to the user[Filter(eq;like)] 
-| [UserMachine](Systems.Config.Config.md#usermachine) | string (64) __nullable__ | If not NULL, the configuration option is specific to the machine[Filter(eq;like)] 
+| [IsActive](Systems.Config.Config.md#isactive) | boolean | Indicates whether this config entry is active. Inactive config entries are not taken into account.`Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1` 
+| [KeyPath](Systems.Config.Config.md#keypath) | string (128) | Full path of the configuration option`Required` `Filter(eq;like)` `ORD` 
+| [KeyValue](Systems.Config.Config.md#keyvalue) | string (max) __nullable__ | The value of the configuration option`Filter(eq;like)` 
+| [UserLogin](Systems.Config.Config.md#userlogin) | string (64) __nullable__ | If not NULL, the configuration option is specific to the user`Filter(eq;like)` 
+| [UserMachine](Systems.Config.Config.md#usermachine) | string (64) __nullable__ | If not NULL, the configuration option is specific to the machine`Filter(eq;like)` 
 
 
 ## System Attributes
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this config entry is active. Inactive config entries are not taken into account.[Required] [Default(true)] [Filter(eq)] [Introduced in version 19.1]
+Indicates whether this config entry is active. Inactive config entries are not taken into account.`Required` `Default(true)` `Filter(eq)` `Introduced in version 19.1`
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### KeyPath
 
-Full path of the configuration option[Required] [Filter(eq;like)] [ORD]
+Full path of the configuration option`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (128)**  
 Indexed: **True**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### KeyValue
 
-The value of the configuration option[Filter(eq;like)]
+The value of the configuration option`Filter(eq;like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### UserLogin
 
-If not NULL, the configuration option is specific to the user[Filter(eq;like)]
+If not NULL, the configuration option is specific to the user`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### UserMachine
 
-If not NULL, the configuration option is specific to the machine[Filter(eq;like)]
+If not NULL, the configuration option is specific to the machine`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  

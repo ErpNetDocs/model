@@ -121,22 +121,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasedivisor">ConvertToBaseDivisor</a></td>
 <td>decimal (9, 3)</td>
-<td>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]</td>
+<td>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#converttobasemultiplier">ConvertToBaseMultiplier</a></td>
 <td>decimal (9, 3)</td>
-<td>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]</td>
+<td>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#destquantity">DestQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity in some of the base units, that equals Source_Quantity[Unit: DestQuantityUnit] [Required] [Default(1)]</td>
+<td>Quantity in some of the base units, that equals Source_Quantity<code>Unit: DestQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.ProductDimensions.html#sourcequantity">SourceQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>The quantity in the non-base unit[Unit: SourceQuantityUnit] [Required] [Default(1)]</td>
+<td>The quantity in the non-base unit<code>Unit: SourceQuantityUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="converttobasedivisor">ConvertToBaseDivisor</h3>
-<p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]</p>
+<p>This was intended to be the divisor, but due to a historical bug actually contains the multiplier of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.<code>Required</code></p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -210,7 +210,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Back-End Default Expression:<br>
 <code>( ( obj.DestQuantity.Value * obj.DestQuantityUnit.Multiplier) * obj.SourceQuantityUnit.Divisor)</code></p>
 <h3 id="converttobasemultiplier">ConvertToBaseMultiplier</h3>
-<p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.[Required]</p>
+<p>This was intended to be the multiplier, but due to a historical bug actually contains the divisor of the convertion ratio from the non-base measurement category to the base measurement category. This should be automatically calculated by the system.<code>Required</code></p>
 <p>Type: <strong>decimal (9, 3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -219,7 +219,7 @@ Show in UI: <strong>CannotBeShown</strong></p>
 <p>Back-End Default Expression:<br>
 <code>( ( obj.SourceQuantity.Value * obj.SourceQuantityUnit.Multiplier) * obj.DestQuantityUnit.Divisor)</code></p>
 <h3 id="destquantity">DestQuantity</h3>
-<p>Quantity in some of the base units, that equals Source_Quantity[Unit: DestQuantityUnit] [Required] [Default(1)]</p>
+<p>Quantity in some of the base units, that equals Source_Quantity<code>Unit: DestQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -227,7 +227,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="sourcequantity">SourceQuantity</h3>
-<p>The quantity in the non-base unit[Unit: SourceQuantityUnit] [Required] [Default(1)]</p>
+<p>The quantity in the non-base unit<code>Unit: SourceQuantityUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

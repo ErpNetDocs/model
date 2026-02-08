@@ -36,12 +36,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports.[Required] [Default(true)] [Filter(eq)] 
+| [IsActive](Applications.Rental.Assets.md#isactive) | boolean | True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports.`Required` `Default(true)` `Filter(eq)` 
 | [Notes](Applications.Rental.Assets.md#notes) | string (max) __nullable__ | Notes for this Asset. 
-| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string (20) | Unique rental asset code[Required] [Filter(eq;like)] [ORD] 
-| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string (254) | The name of the rental asset.[Required] [Filter(like)] 
-| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Standard default amount of the guarantee that is set for this asset when leased.[Currency: StandardGuarantee<br />AmountCurrency] [Filter(multi eq)] 
-| [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured.[Filter(multi eq)] 
+| [RentalAssetCode](Applications.Rental.Assets.md#rentalassetcode) | string (20) | Unique rental asset code`Required` `Filter(eq;like)` `ORD` 
+| [RentalAssetName](Applications.Rental.Assets.md#rentalassetname) | string (254) | The name of the rental asset.`Required` `Filter(like)` 
+| [StandardGuaranteeAmount](Applications.Rental.Assets.md#standardguaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Standard default amount of the guarantee that is set for this asset when leased.`Currency: StandardGuarantee<br />AmountCurrency` `Filter(multi eq)` 
+| [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) | [TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured.`Filter(multi eq)` 
 
 ## References
 
@@ -81,7 +81,7 @@ Aggregate Tree
 
 ### IsActive
 
-True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports.[Required] [Default(true)] [Filter(eq)]
+True if the asset is currently active and may be used in new documents. Deactivated assets are used only in reports.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAssetCode
 
-Unique rental asset code[Required] [Filter(eq;like)] [ORD]
+Unique rental asset code`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (20)**  
 Indexed: **True**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### RentalAssetName
 
-The name of the rental asset.[Required] [Filter(like)]
+The name of the rental asset.`Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -126,7 +126,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardGuaranteeAmount
 
-Standard default amount of the guarantee that is set for this asset when leased.[Currency: StandardGuaranteeAmountCurrency] [Filter(multi eq)]
+Standard default amount of the guarantee that is set for this asset when leased.`Currency: StandardGuaranteeAmountCurrency` `Filter(multi eq)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -136,7 +136,7 @@ Show in UI: **ShownByDefault**
 
 ### TimePeriodType
 
-Specifies the unit by which the periods of renting of this asset are measured.[Filter(multi eq)]
+Specifies the unit by which the periods of renting of this asset are measured.`Filter(multi eq)`
 
 Type: **[TimePeriodType](Applications.Rental.Assets.md#timeperiodtype) __nullable__**  
 Category: **System**  

@@ -126,7 +126,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#documentevent">DocumentEvent</a></td>
 <td>string (254)</td>
-<td>The event which will trigger the notification[Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]</td>
+<td>The event which will trigger the notification<code>Required</code> <code>Default(&amp;quot;StateChanging&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#filterxml">FilterXML</a></td>
@@ -136,17 +136,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statebitmask">StateBitMask</a></td>
 <td>int32</td>
-<td>The document states that will trigger the event[Required] [Default(0)]</td>
+<td>The document states that will trigger the event<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></td>
-<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '<em>'[Required] [Default(&quot;</em>&quot;)]</td>
+<td>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'<code>Required</code> <code>Default(&amp;quot;*&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Documents.DocumentTypeNotifications.html#toemailaddresslist">ToEmailAddressList</a></td>
 <td>string (2048)</td>
-<td>List of E-mail addresses to be notified[Required]</td>
+<td>List of E-mail addresses to be notified<code>Required</code></td>
 </tr>
 </tbody>
 </table>
@@ -201,7 +201,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentevent">DocumentEvent</h3>
-<p>The event which will trigger the notification[Required] [Default(&quot;StateChanging&quot;)] [Filter(eq)]</p>
+<p>The event which will trigger the notification<code>Required</code> <code>Default(&amp;quot;StateChanging&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -218,7 +218,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statebitmask">StateBitMask</h3>
-<p>The document states that will trigger the event[Required] [Default(0)]</p>
+<p>The document states that will trigger the event<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -226,7 +226,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="statuschangedirection">StatusChangeDirection</h3>
-<p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '<em>'[Required] [Default(&quot;</em>&quot;)]</p>
+<p>Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'<code>Required</code> <code>Default(&amp;quot;*&amp;quot;)</code></p>
 <p>Type: <strong><a href="Systems.Documents.DocumentTypeNotifications.html#statuschangedirection">StatusChangeDirection</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>StatusChangeDirection</code>(Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) data attribute<br>
@@ -262,7 +262,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>AnyChange</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="toemailaddresslist">ToEmailAddressList</h3>
-<p>List of E-mail addresses to be notified[Required]</p>
+<p>List of E-mail addresses to be notified<code>Required</code></p>
 <p>Type: <strong>string (2048)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -136,17 +136,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#abcclass">ABCClass</a></td>
 <td><a href="General.Products.Products.html#abcclass">ABCClass</a></td>
-<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.[Required] [Default(&quot;B &quot;)] [Filter(eq)]</td>
+<td>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.<code>Required</code> <code>Default(&amp;quot;B &amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#active">Active</a></td>
 <td>boolean</td>
-<td>1 if the product is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]</td>
+<td>1 if the product is active, 0 - not to list in combo boxes for choosing in new documents<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#allowvariablemeasurementratios">AllowVariableMeasurement<br>Ratios</a></td>
 <td>boolean</td>
-<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.[Required] [Default(false)] [Filter(eq)]</td>
+<td>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#catalogdescriptionhtml">CatalogDescriptionHtml</a></td>
@@ -181,7 +181,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
 <td><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></td>
-<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)[Required] [Default(&quot;M&quot;)]</td>
+<td>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)<code>Required</code> <code>Default(&amp;quot;M&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#guaranteeperioddays">GuaranteePeriodDays</a></td>
@@ -191,12 +191,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#isfeatured">IsFeatured</a></td>
 <td>boolean</td>
-<td>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.[Required] [Default(false)] [Filter(eq)]</td>
+<td>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#isserialized">IsSerialized</a></td>
 <td>boolean</td>
-<td>1 if the parts use/require serial numbers[Required] [Default(false)] [Filter(eq)]</td>
+<td>1 if the parts use/require serial numbers<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#lotsissue">LotsIssue</a></td>
@@ -206,12 +206,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#manufacturingpolicy">ManufacturingPolicy</a></td>
 <td>string (3)</td>
-<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-<br>Order[Required] [Default(&quot;MTS&quot;)]</td>
+<td>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-<br>Order<code>Required</code> <code>Default(&amp;quot;MTS&amp;quot;)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalespriceperlot">MinimalSalesPricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></td>
-<td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.[Currency: CostingCurrency]</td>
+<td>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.<code>Currency: CostingCurrency</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#minimalsalesquantitybase">MinimalSalesQuantityBase</a></td>
@@ -221,12 +221,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></td>
-<td>Name of the item[Required] [Filter(eq;like)]</td>
+<td>Name of the item<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#partnumber">PartNumber</a></td>
 <td>string (32)</td>
-<td>Unique part number of the product[Required] [Filter(multi eq;like)] [ORD]</td>
+<td>Unique part number of the product<code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#planningdemandtimefencedays">PlanningDemand<br>TimeFenceDays</a></td>
@@ -246,32 +246,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
-<td>Default scrap rate for the recipe, when this product is used as ingredient[Required] [Default(0)]</td>
+<td>Default scrap rate for the recipe, when this product is used as ingredient<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#shortname">ShortName</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a> <strong>nullable</strong></td>
-<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.[Filter(eq;like)]</td>
+<td>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#showincatalog">ShowInCatalog</a></td>
 <td>boolean</td>
-<td>Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.[Required] [Default(false)] [Filter(multi eq)]</td>
+<td>Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.<code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardcostperlot">StandardCostPerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
-<td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_<br>Id[Currency: ProductCurrency] [Required] [Default(0)]</td>
+<td>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_<br>Id<code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardlotsizebase">StandardLotSizeBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price[Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</td>
+<td>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price<code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#standardpriceperlot">StandardPricePerLot</a></td>
 <td><a href="../data-types.html#amount">Amount (18, 4)</a></td>
-<td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_<br>Id[Currency: ProductCurrency] [Required] [Default(0)]</td>
+<td>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_<br>Id<code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="General.Products.Products.html#supplyschemaid">SupplySchemaId</a></td>
@@ -291,7 +291,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Products.Products.html#uselots">UseLots</a></td>
 <td><a href="General.Products.Products.html#uselots">UseLots</a></td>
-<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.[Required] [Default(&quot;A&quot;)]</td>
+<td>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.<code>Required</code> <code>Default(&amp;quot;A&amp;quot;)</code></td>
 </tr>
 </tbody>
 </table>
@@ -498,7 +498,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="abcclass">ABCClass</h3>
-<p>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.[Required] [Default(&quot;B &quot;)] [Filter(eq)]</p>
+<p>Product importance classification, where A are the most important and C - the least important products. Usually used as user filtering condition when previewing results of the procurement planning process.<code>Required</code> <code>Default(&amp;quot;B &amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html#abcclass">ABCClass</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ABCClass</code>(General.Products.Products.md#abcclass) data attribute<br>
@@ -530,7 +530,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>B</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="active">Active</h3>
-<p>1 if the product is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]</p>
+<p>1 if the product is active, 0 - not to list in combo boxes for choosing in new documents<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -538,7 +538,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="allowvariablemeasurementratios">AllowVariableMeasurementRatios</h3>
-<p>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.[Required] [Default(false)] [Filter(eq)]</p>
+<p>Allow variable (dynamic) measurement ratios for each transaction. If specified, each store transaction could specify non-standard measurement ratio between the used measurement unit and the base unit.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -614,7 +614,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="flushingmethod">FlushingMethod</h3>
-<p>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)[Required] [Default(&quot;M&quot;)]</p>
+<p>Consumption method for work orders. M=Manual, using Consuption Journals, F=Forward (on release), B=Backward (on finish)<code>Required</code> <code>Default(&amp;quot;M&amp;quot;)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html#flushingmethod">FlushingMethod</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>FlushingMethod</code>(General.Products.Products.md#flushingmethod) data attribute<br>
@@ -653,7 +653,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isfeatured">IsFeatured</h3>
-<p>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.[Required] [Default(false)] [Filter(eq)]</p>
+<p>Specifies whether the product should be presented at the title space in promotional materials, web pages, etc.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -661,7 +661,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isserialized">IsSerialized</h3>
-<p>1 if the parts use/require serial numbers[Required] [Default(false)] [Filter(eq)]</p>
+<p>1 if the parts use/require serial numbers<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -700,7 +700,7 @@ Allowed Values (General.Products.ProductsRepository.LotsIssue Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="manufacturingpolicy">ManufacturingPolicy</h3>
-<p>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order[Required] [Default(&quot;MTS&quot;)]</p>
+<p>Manufacturing policy controls the procurement planing system actions for this product. Allowed values are MTS=Make-To-Stock; MTO=Make-To-Order; ATO=Assemble-To-Order<code>Required</code> <code>Default(&amp;quot;MTS&amp;quot;)</code></p>
 <p>Type: <strong>string (3)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -709,7 +709,7 @@ Maximum Length: <strong>3</strong><br>
 Default Value: <strong>MTS</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="minimalsalespriceperlot">MinimalSalesPricePerLot</h3>
-<p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.[Currency: CostingCurrency]</p>
+<p>Minimal allowed price for sales of this product. The price is for one standard lot and in the costing currency of the product. The minimum is enforced upon planning and/or releasing a document. NULL means that there is no minimal sales price enforcement.<code>Currency: CostingCurrency</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -723,7 +723,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Name of the item[Required] [Filter(eq;like)]</p>
+<p>Name of the item<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -731,7 +731,7 @@ Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="partnumber">PartNumber</h3>
-<p>Unique part number of the product[Required] [Filter(multi eq;like)] [ORD]</p>
+<p>Unique part number of the product<code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (32)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -761,7 +761,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Default scrap rate for the recipe, when this product is used as ingredient[Required] [Default(0)]</p>
+<p>Default scrap rate for the recipe, when this product is used as ingredient<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -769,14 +769,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="shortname">ShortName</h3>
-<p>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.[Filter(eq;like)]</p>
+<p>Short name of the product. Used for space-constrained devices, like mobile phones, fiscal printers, etc.<code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (128)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="showincatalog">ShowInCatalog</h3>
-<p>Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.[Required] [Default(false)] [Filter(multi eq)]</p>
+<p>Specifies whether to show the product in catalogs, referring to the product group of the product. 0=Do not show; 1=Show.<code>Required</code> <code>Default(false)</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
@@ -784,7 +784,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardcostperlot">StandardCostPerLot</h3>
-<p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id[Currency: ProductCurrency] [Required] [Default(0)]</p>
+<p>Standard cost for one standard lot of the product in the currency, specified by Costing_Currency_Id<code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -792,7 +792,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardlotsizebase">StandardLotSizeBase</h3>
-<p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price[Unit: BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]</p>
+<p>The size of a standard lot, expressed in the base measurement unit of the product. Used for Standard_Cost and Standard_Price<code>Unit: BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -800,7 +800,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="standardpriceperlot">StandardPricePerLot</h3>
-<p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id[Currency: ProductCurrency] [Required] [Default(0)]</p>
+<p>Standard sales price (used if no special price is defined) for one standard lot of the product in the currency, specified by Costing_Currency_Id<code>Currency: ProductCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (18, 4)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -829,7 +829,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="uselots">UseLots</h3>
-<p>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.[Required] [Default(&quot;A&quot;)]</p>
+<p>Specifies whether the use of lots for this product in store documents is required or is unallowed or is allowed while not required.<code>Required</code> <code>Default(&amp;quot;A&amp;quot;)</code></p>
 <p>Type: <strong><a href="General.Products.Products.html#uselots">UseLots</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>UseLots</code>(General.Products.Products.md#uselots) data attribute<br>

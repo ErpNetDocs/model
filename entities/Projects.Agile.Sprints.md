@@ -34,12 +34,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivatedAt](Projects.Agile.Sprints.md#activatedat) | datetime __nullable__ | Timestamp when the sprint was activated.[Filter(eq;ge;le)] 
-| [EndDate](Projects.Agile.Sprints.md#enddate) | date | End date of the sprint’s timebox.[Required] [Filter(eq;ge;le)] 
-| [Goal](Projects.Agile.Sprints.md#goal) | string (500) __nullable__ | Short description of the main objectives or focus for the sprint.[Filter(eq;like)] 
-| [Name](Projects.Agile.Sprints.md#name) | string (100) | Human-readable sprint name, e.g. “Sprint 14”[Required] [Filter(eq;like)] 
-| [StartDate](Projects.Agile.Sprints.md#startdate) | date | Start date of the sprint’s timebox.[Required] [Filter(eq;ge;le)] 
-| [State](Projects.Agile.Sprints.md#state) | [State](Projects.Agile.Sprints.md#state) | Current sprint status: Planned, Active, Completed, Cancelled.[Required] [Default(&quot;PLN&quot;)] [Filter(multi eq)] [ReadOnly] 
+| [ActivatedAt](Projects.Agile.Sprints.md#activatedat) | datetime __nullable__ | Timestamp when the sprint was activated.`Filter(eq;ge;le)` 
+| [EndDate](Projects.Agile.Sprints.md#enddate) | date | End date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` 
+| [Goal](Projects.Agile.Sprints.md#goal) | string (500) __nullable__ | Short description of the main objectives or focus for the sprint.`Filter(eq;like)` 
+| [Name](Projects.Agile.Sprints.md#name) | string (100) | Human-readable sprint name, e.g. “Sprint 14”`Required` `Filter(eq;like)` 
+| [StartDate](Projects.Agile.Sprints.md#startdate) | date | Start date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` 
+| [State](Projects.Agile.Sprints.md#state) | [State](Projects.Agile.Sprints.md#state) | Current sprint status: Planned, Active, Completed, Cancelled.`Required` `Default(&quot;PLN&quot;)` `Filter(multi eq)` `ReadOnly` 
 
 ## References
 
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### ActivatedAt
 
-Timestamp when the sprint was activated.[Filter(eq;ge;le)]
+Timestamp when the sprint was activated.`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### EndDate
 
-End date of the sprint’s timebox.[Required] [Filter(eq;ge;le)]
+End date of the sprint’s timebox.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -85,7 +85,7 @@ Show in UI: **ShownByDefault**
 
 ### Goal
 
-Short description of the main objectives or focus for the sprint.[Filter(eq;like)]
+Short description of the main objectives or focus for the sprint.`Filter(eq;like)`
 
 Type: **string (500) __nullable__**  
 Category: **System**  
@@ -96,7 +96,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Human-readable sprint name, e.g. “Sprint 14”[Required] [Filter(eq;like)]
+Human-readable sprint name, e.g. “Sprint 14”`Required` `Filter(eq;like)`
 
 Type: **string (100)**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### StartDate
 
-Start date of the sprint’s timebox.[Required] [Filter(eq;ge;le)]
+Start date of the sprint’s timebox.`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 ### State
 
-Current sprint status: Planned, Active, Completed, Cancelled.[Required] [Default(&quot;PLN&quot;)] [Filter(multi eq)] [ReadOnly]
+Current sprint status: Planned, Active, Completed, Cancelled.`Required` `Default(&quot;PLN&quot;)` `Filter(multi eq)` `ReadOnly`
 
 Type: **[State](Projects.Agile.Sprints.md#state)**  
 Category: **System**  

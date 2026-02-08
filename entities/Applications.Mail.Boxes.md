@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving[Required] [Default(true)] [Filter(eq)] 
-| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box[Required] [Filter(eq)] 
-| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | 1 when this is the default mailbox for the user.[Required] [Default(true)] [Filter(eq)] 
-| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | 1 when the mailbox messages are stored in encrypted format[Required] [Default(false)] [Filter(eq)] 
-| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset[Required] [Default(false)] [Filter(eq)] [ReadOnly] 
+| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving`Required` `Default(true)` `Filter(eq)` 
+| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box`Required` `Filter(eq)` 
+| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | 1 when this is the default mailbox for the user.`Required` `Default(true)` `Filter(eq)` 
+| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | 1 when the mailbox messages are stored in encrypted format`Required` `Default(false)` `Filter(eq)` 
+| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server 
 | [SentItemsFolderName](Applications.Mail.Boxes.md#sentitemsfoldername) | string (254) __nullable__ | The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne). 
 | [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### Active
 
-True when the mail box is active for mail sinchronization, sending and receiving[Required] [Default(true)] [Filter(eq)]
+True when the mail box is active for mail sinchronization, sending and receiving`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### EmailAddress
 
-The email address associated with this mail box[Required] [Filter(eq)]
+The email address associated with this mail box`Required` `Filter(eq)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-1 when this is the default mailbox for the user.[Required] [Default(true)] [Filter(eq)]
+1 when this is the default mailbox for the user.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### IsEncrypted
 
-1 when the mailbox messages are stored in encrypted format[Required] [Default(false)] [Filter(eq)]
+1 when the mailbox messages are stored in encrypted format`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### ResetOnNextSync
 
-Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset[Required] [Default(false)] [Filter(eq)] [ReadOnly]
+Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset`Required` `Default(false)` `Filter(eq)` `ReadOnly`
 
 Type: **boolean**  
 Category: **System**  

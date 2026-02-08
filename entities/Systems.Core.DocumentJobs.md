@@ -44,12 +44,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](Systems.Core.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed.[Unit: obj.DocumentType.EntityName] [Required] 
+| [FilterXml](Systems.Core.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed.`Unit: obj.DocumentType.EntityName` `Required` 
 | [IsActive](Systems.Core.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [JobConfigurations](Systems.Core.DocumentJobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [JobType](Systems.Core.DocumentJobs.md#jobtype) | [JobType](Systems.Core.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [Name](Systems.Core.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [NewState](Systems.Core.DocumentJobs.md#newstate) | [DocumentState](Systems.Core.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter.[Required] 
+| [NewState](Systems.Core.DocumentJobs.md#newstate) | [DocumentState](Systems.Core.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter.`Required` 
 | [Notes](Systems.Core.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [RunOnIdle](Systems.Core.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
 | [Schedule](Systems.Core.DocumentJobs.md#schedule) | [Schedule](Systems.Core.DocumentJobs.md#schedule) | Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
@@ -78,7 +78,7 @@ Aggregate Tree
 
 ### FilterXml
 
-Specifies the documents, whose state will be changed.[Unit: obj.DocumentType.EntityName] [Required]
+Specifies the documents, whose state will be changed.`Unit: obj.DocumentType.EntityName` `Required`
 
 Type: **dataaccessfilter**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### NewState
 
-Specifies the state, which should be set to the documents, matching the filter.[Required]
+Specifies the state, which should be set to the documents, matching the filter.`Required`
 
 Type: **[DocumentState](Systems.Core.DocumentJobs.md#newstate)**  
 Category: **System**  

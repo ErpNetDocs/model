@@ -38,7 +38,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Logistics.Wms.Warehouses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the warehouse (multilanguage).[Required] [Filter(eq;like)] 
+| [Name](Logistics.Wms.Warehouses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the warehouse (multilanguage).`Required` `Filter(eq;like)` 
 | [Notes](Logistics.Wms.Warehouses.md#notes) | string (max) __nullable__ | Notes for this Warehouse. 
 
 
@@ -67,7 +67,7 @@ Aggregate Tree
 
 ### Name
 
-Name of the warehouse (multilanguage).[Required] [Filter(eq;like)]
+Name of the warehouse (multilanguage).`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

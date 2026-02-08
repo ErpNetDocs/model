@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [KeyOrder](Finance.Accounting.AccountRequiredProperties.md#keyorder) | int32 | The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.[Required] 
-| [KeyProperty](Finance.Accounting.AccountRequiredProperties.md#keyproperty) | boolean | Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes[Required] [Default(true)] [Filter(eq)] 
+| [KeyOrder](Finance.Accounting.AccountRequiredProperties.md#keyorder) | int32 | The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.`Required` 
+| [KeyProperty](Finance.Accounting.AccountRequiredProperties.md#keyproperty) | boolean | Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes`Required` `Default(true)` `Filter(eq)` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### KeyOrder
 
-The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.[Required]
+The key order determines in which order the values and descriptions of the properties will form the item (grouping) key and description.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.Account.RequiredProperties.Select( c => c.KeyOrder).DefaultIfEmpty( 0).Max( ) + 1)`
 ### KeyProperty
 
-Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes[Required] [Default(true)] [Filter(eq)]
+Key properties particiate in forming the grouping key, which is the smallest unit of calculation for account balance. Non-key properties simply serve for comment and clarification purposes`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  

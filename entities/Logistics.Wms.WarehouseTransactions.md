@@ -33,14 +33,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (12, 3) __nullable__ | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.[Filter(eq;ge;le)] 
-| [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime | The creation time in UTC.[Required] [Default(NowUtc)] [Filter(eq;ge;le)] 
-| [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT.[Required] [Default(&quot;I&quot;)] [Filter(eq)] 
-| [IsAutoAccepted](Logistics.Wms.WarehouseTransactions.md#isautoaccepted) | boolean | Auto-flag indicating that the product was accepted as correct without being physically counted.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 26.1.3.87] 
-| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.[Required] [Default(0)] [Filter(multi eq;ge;le)] 
-| [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9] 
-| [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9] 
-| [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | The type of the task (operation), which was transacted.[Required] [Filter(multi eq)] [Introduced in version 22.1.6.15] 
+| [CatchQuantity](Logistics.Wms.WarehouseTransactions.md#catchquantity) | decimal (12, 3) __nullable__ | Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.`Filter(eq;ge;le)` 
+| [CreationTimeUtc](Logistics.Wms.WarehouseTransactions.md#creationtimeutc) | datetime | The creation time in UTC.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
+| [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | [Direction](Logistics.Wms.WarehouseTransactions.md#direction) | Direction of the transaction - I=IN, O=OUT.`Required` `Default(&quot;I&quot;)` `Filter(eq)` 
+| [IsAutoAccepted](Logistics.Wms.WarehouseTransactions.md#isautoaccepted) | boolean | Auto-flag indicating that the product was accepted as correct without being physically counted.`Required` `Default(false)` `Filter(eq)` `ReadOnly` `Introduced in version 26.1.3.87` 
+| [Quantity](Logistics.Wms.WarehouseTransactions.md#quantity) | decimal (12, 3) | The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.`Required` `Default(0)` `Filter(multi eq;ge;le)` 
+| [QuantityBase](Logistics.Wms.WarehouseTransactions.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity in the base measurement unit of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
+| [StandardQuantity](Logistics.Wms.WarehouseTransactions.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9` 
+| [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | [TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype) | The type of the task (operation), which was transacted.`Required` `Filter(multi eq)` `Introduced in version 22.1.6.15` 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Tree
 
 ### CatchQuantity
 
-Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.[Filter(eq;ge;le)]
+Catch (measured) quantity for the transaction. Positive values indicate transactions. Negative values are used for adjustments. NULL when catch measurement is not configured for the product.`Filter(eq;ge;le)`
 
 Type: **decimal (12, 3) __nullable__**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### CreationTimeUtc
 
-The creation time in UTC.[Required] [Default(NowUtc)] [Filter(eq;ge;le)]
+The creation time in UTC.`Required` `Default(NowUtc)` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-Direction of the transaction - I=IN, O=OUT.[Required] [Default(&quot;I&quot;)] [Filter(eq)]
+Direction of the transaction - I=IN, O=OUT.`Required` `Default(&quot;I&quot;)` `Filter(eq)`
 
 Type: **[Direction](Logistics.Wms.WarehouseTransactions.md#direction)**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **ShownByDefault**
 
 ### IsAutoAccepted
 
-Auto-flag indicating that the product was accepted as correct without being physically counted.[Required] [Default(false)] [Filter(eq)] [ReadOnly] [Introduced in version 26.1.3.87]
+Auto-flag indicating that the product was accepted as correct without being physically counted.`Required` `Default(false)` `Filter(eq)` `ReadOnly` `Introduced in version 26.1.3.87`
 
 Type: **boolean**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.[Required] [Default(0)] [Filter(multi eq;ge;le)]
+The transacted net change in quantity. Positive values indicate transactions. Negative values are used for adjustments.`Required` `Default(0)` `Filter(multi eq;ge;le)`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]
+Quantity in the base measurement unit of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantity
 
-The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Introduced in version 22.1.5.9]
+The theoretical quantity according to the current measurement dimensions of the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Introduced in version 22.1.5.9`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### TaskType
 
-The type of the task (operation), which was transacted.[Required] [Filter(multi eq)] [Introduced in version 22.1.6.15]
+The type of the task (operation), which was transacted.`Required` `Filter(multi eq)` `Introduced in version 22.1.6.15`
 
 Type: **[TaskType](Logistics.Wms.WarehouseTransactions.md#tasktype)**  
 Category: **System**  

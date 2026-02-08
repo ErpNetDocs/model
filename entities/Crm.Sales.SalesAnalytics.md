@@ -32,12 +32,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentDate](Crm.Sales.SalesAnalytics.md#documentdate) | date | Date to group for[Required] [Filter(ge;le)] [ORD] 
-| [LineAmount](Crm.Sales.SalesAnalytics.md#lineamount) | decimal (38, 2) | Line Amount for date[Required] 
-| [LineDiscountAmount](Crm.Sales.SalesAnalytics.md#linediscountamount) | decimal (38, 2) | Discount over Line Amount for Date[Required] 
-| [QuantityBase](Crm.Sales.SalesAnalytics.md#quantitybase) | decimal (38, 3) | Base Quantity for Date[Required] 
+| [DocumentDate](Crm.Sales.SalesAnalytics.md#documentdate) | date | Date to group for`Required` `Filter(ge;le)` `ORD` 
+| [LineAmount](Crm.Sales.SalesAnalytics.md#lineamount) | decimal (38, 2) | Line Amount for date`Required` 
+| [LineDiscountAmount](Crm.Sales.SalesAnalytics.md#linediscountamount) | decimal (38, 2) | Discount over Line Amount for Date`Required` 
+| [QuantityBase](Crm.Sales.SalesAnalytics.md#quantitybase) | decimal (38, 3) | Base Quantity for Date`Required` 
 | [SalesAnalyticId](Crm.Sales.SalesAnalytics.md#salesanalyticid) | guid | Row Id. `Required` `Filter(multi eq)` 
-| [StandardQuantityBase](Crm.Sales.SalesAnalytics.md#standardquantitybase) | decimal (38, 3) | Standard Base Quantity for Date[Required] 
+| [StandardQuantityBase](Crm.Sales.SalesAnalytics.md#standardquantitybase) | decimal (38, 3) | Standard Base Quantity for Date`Required` 
 
 ## References
 
@@ -60,7 +60,7 @@ Aggregate Tree
 
 ### DocumentDate
 
-Date to group for[Required] [Filter(ge;le)] [ORD]
+Date to group for`Required` `Filter(ge;le)` `ORD`
 
 Type: **date**  
 Category: **System**  
@@ -70,7 +70,7 @@ Show in UI: **ShownByDefault**
 
 ### LineAmount
 
-Line Amount for date[Required]
+Line Amount for date`Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### LineDiscountAmount
 
-Discount over Line Amount for Date[Required]
+Discount over Line Amount for Date`Required`
 
 Type: **decimal (38, 2)**  
 Category: **System**  
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Base Quantity for Date[Required]
+Base Quantity for Date`Required`
 
 Type: **decimal (38, 3)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### StandardQuantityBase
 
-Standard Base Quantity for Date[Required]
+Standard Base Quantity for Date`Required`
 
 Type: **decimal (38, 3)**  
 Category: **System**  

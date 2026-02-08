@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | 1 if the vehicle set is active for choosing; 0 - otherwise[Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set[Required] [Filter(eq;like)] 
+| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | 1 if the vehicle set is active for choosing; 0 - otherwise`Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### Active
 
-1 if the vehicle set is active for choosing; 0 - otherwise[Required] [Default(true)] [Filter(eq)]
+1 if the vehicle set is active for choosing; 0 - otherwise`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -75,7 +75,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the vehicle set[Required] [Filter(eq;like)]
+Name of the vehicle set`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (128)](../data-types.md#multilanguagestring)**  
 Category: **System**  

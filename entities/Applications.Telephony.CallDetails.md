@@ -33,12 +33,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string (80) | The voice number of the party, which received the call[Required] [Filter(eq;like)] 
-| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call[Required] [Filter(eq;like)] 
-| [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS[Required] [Default(&quot;P&quot;)] [Filter(eq)] 
+| [CalledPartyNumber](Applications.Telephony.CallDetails.md#calledpartynumber) | string (80) | The voice number of the party, which received the call`Required` `Filter(eq;like)` 
+| [CallingPartyNumber](Applications.Telephony.CallDetails.md#callingpartynumber) | string (80) | The voice number of the originating party of the call`Required` `Filter(eq;like)` 
+| [CallType](Applications.Telephony.CallDetails.md#calltype) | [CallType](Applications.Telephony.CallDetails.md#calltype) | P=Phone; V=Video; M=Message/SMS`Required` `Default(&quot;P&quot;)` `Filter(eq)` 
 | [CallUniqueId](Applications.Telephony.CallDetails.md#calluniqueid) | string (32) __nullable__ | The unique id of the call, as reported by the telephone central. NULL when the central did not report unique Id. Used for integration purposes 
-| [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds)[Required] [Default(0)] [Filter(ge;le)] 
-| [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call[Required] [Filter(ge;le)] 
+| [DurationSeconds](Applications.Telephony.CallDetails.md#durationseconds) | int32 | The duration of the call (in seconds)`Required` `Default(0)` `Filter(ge;le)` 
+| [StartTime](Applications.Telephony.CallDetails.md#starttime) | datetime | The starting date and time of the call`Required` `Filter(ge;le)` 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### CalledPartyNumber
 
-The voice number of the party, which received the call[Required] [Filter(eq;like)]
+The voice number of the party, which received the call`Required` `Filter(eq;like)`
 
 Type: **string (80)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### CallingPartyNumber
 
-The voice number of the originating party of the call[Required] [Filter(eq;like)]
+The voice number of the originating party of the call`Required` `Filter(eq;like)`
 
 Type: **string (80)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### CallType
 
-P=Phone; V=Video; M=Message/SMS[Required] [Default(&quot;P&quot;)] [Filter(eq)]
+P=Phone; V=Video; M=Message/SMS`Required` `Default(&quot;P&quot;)` `Filter(eq)`
 
 Type: **[CallType](Applications.Telephony.CallDetails.md#calltype)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **ShownByDefault**
 
 ### DurationSeconds
 
-The duration of the call (in seconds)[Required] [Default(0)] [Filter(ge;le)]
+The duration of the call (in seconds)`Required` `Default(0)` `Filter(ge;le)`
 
 Type: **int32**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### StartTime
 
-The starting date and time of the call[Required] [Filter(ge;le)]
+The starting date and time of the call`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  

@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Geography.Areas.md#code) | string (16) | The area code.[Required] [Filter(eq;like)] [ORD] 
-| [FullPath](General.Geography.Areas.md#fullpath) | string (254) __nullable__ | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'[Filter(eq;like)] [ReadOnly] 
-| [Name](General.Geography.Areas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The area name.[Required] [Filter(eq;like)] 
+| [Code](General.Geography.Areas.md#code) | string (16) | The area code.`Required` `Filter(eq;like)` `ORD` 
+| [FullPath](General.Geography.Areas.md#fullpath) | string (254) __nullable__ | Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'`Filter(eq;like)` `ReadOnly` 
+| [Name](General.Geography.Areas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The area name.`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Tree
 
 ### Code
 
-The area code.[Required] [Filter(eq;like)] [ORD]
+The area code.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Back-End Default Expression:
 
 ### FullPath
 
-Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'[Filter(eq;like)] [ReadOnly]
+Full path to the area, starting with '/' and containing the area codes of all parent areas using '/' as separator and terminator. For example root area with code 'BG' would have full path = '/BG/'`Filter(eq;like)` `ReadOnly`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **HiddenByDefault**
 
 ### Name
 
-The area name.[Required] [Filter(eq;like)]
+The area name.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  

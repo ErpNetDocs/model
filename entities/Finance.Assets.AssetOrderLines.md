@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset.[Currency: AssetValueCurrency] [Required] [Default(0)] 
-| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 18.2] 
-| [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.[Required] [Default(0)] 
+| [AssetValue](Finance.Assets.AssetOrderLines.md#assetvalue) | [Amount (14, 2)](../data-types.md#amount) | Value of the acquired or retired asset.`Currency: AssetValueCurrency` `Required` `Default(0)` 
+| [ParentLineNo](Finance.Assets.AssetOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 18.2` 
+| [Quantity](Finance.Assets.AssetOrderLines.md#quantity) | int32 | Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.`Required` `Default(0)` 
 
 ## References
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### AssetValue
 
-Value of the acquired or retired asset.[Currency: AssetValueCurrency] [Required] [Default(0)]
+Value of the acquired or retired asset.`Currency: AssetValueCurrency` `Required` `Default(0)`
 
 Type: **[Amount (14, 2)](../data-types.md#amount)**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentLineNo
 
-The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.[Introduced in version 18.2]
+The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 18.2`
 
 Type: **int32 __nullable__**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.[Required] [Default(0)]
+Indicates the execution of the current operation: 1 - the operation is applied, 0 - no change, -1 - the operation is cancelled.`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  

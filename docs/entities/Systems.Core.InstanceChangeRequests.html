@@ -121,57 +121,57 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#changekind">ChangeKind</a></td>
 <td><a href="Systems.Core.InstanceChangeRequests.html#changekind">ChangeKind</a></td>
-<td>The type of change requested for the enterprise company.[Required] [Filter(multi eq)]</td>
+<td>The type of change requested for the enterprise company.<code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#currencyrate">CurrencyRate</a></td>
 <td>decimal (20, 10) <strong>nullable</strong></td>
-<td>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.[Filter(eq)] [Introduced in version 26.1.4.51]</td>
+<td>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.<code>Filter(eq)</code> <code>Introduced in version 26.1.4.51</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#effectivedate">EffectiveDate</a></td>
 <td>date</td>
-<td>The date from which the change is effective. Might differ from execution date.[Required] [Filter(eq;ge;le)]</td>
+<td>The date from which the change is effective. Might differ from execution date.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#executiondate">ExecutionDate</a></td>
 <td>date</td>
-<td>The date on which the change should be initiated.[Required] [Filter(eq;ge;le)]</td>
+<td>The date on which the change should be initiated.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes[Filter(like)]</td>
+<td>Notes<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#progressdate">ProgressDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>The date up to which the data is updated in the database. Updated by the batch job.[Filter(eq;ge;le)]</td>
+<td>The date up to which the data is updated in the database. Updated by the batch job.<code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#progresspercent">ProgressPercent</a></td>
 <td>decimal (5, 2) <strong>nullable</strong></td>
-<td>Progress, updated by the batch job.[Filter(ge;le)]</td>
+<td>Progress, updated by the batch job.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#referenceno">ReferenceNo</a></td>
 <td>string (32) <strong>nullable</strong></td>
-<td>Text for internal reference of the change request.[Filter(eq)]</td>
+<td>Text for internal reference of the change request.<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#requestno">RequestNo</a></td>
 <td>int32</td>
-<td>Global consequtive request number.[Required] [Filter(eq)] [ORD]</td>
+<td>Global consequtive request number.<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#settingsjson">SettingsJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional settings for the change; expressed in Json. The format depends on the change kind[Filter(like)]</td>
+<td>Additional settings for the change; expressed in Json. The format depends on the change kind<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.InstanceChangeRequests.html#state">State</a></td>
 <td><a href="Systems.Core.InstanceChangeRequests.html#state">State</a></td>
-<td>Current state of the request.[Required] [Default(&quot;DRF&quot;)] [Filter(eq)]</td>
+<td>Current state of the request.<code>Required</code> <code>Default(&amp;quot;DRF&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -251,7 +251,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="changekind">ChangeKind</h3>
-<p>The type of change requested for the enterprise company.[Required] [Filter(multi eq)]</p>
+<p>The type of change requested for the enterprise company.<code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Core.InstanceChangeRequests.html#changekind">ChangeKind</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>ChangeKind</code>(Systems.Core.InstanceChangeRequests.md#changekind) data attribute<br>
@@ -282,28 +282,28 @@ Allowed Values (Systems.Core.InstanceChangeRequestsRepository.ChangeKind Enum Me
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="currencyrate">CurrencyRate</h3>
-<p>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.[Filter(eq)] [Introduced in version 26.1.4.51]</p>
+<p>Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.<code>Filter(eq)</code> <code>Introduced in version 26.1.4.51</code></p>
 <p>Type: <strong>decimal (20, 10) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="effectivedate">EffectiveDate</h3>
-<p>The date from which the change is effective. Might differ from execution date.[Required] [Filter(eq;ge;le)]</p>
+<p>The date from which the change is effective. Might differ from execution date.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="executiondate">ExecutionDate</h3>
-<p>The date on which the change should be initiated.[Required] [Filter(eq;ge;le)]</p>
+<p>The date on which the change should be initiated.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes[Filter(like)]</p>
+<p>Notes<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -311,21 +311,21 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="progressdate">ProgressDate</h3>
-<p>The date up to which the data is updated in the database. Updated by the batch job.[Filter(eq;ge;le)]</p>
+<p>The date up to which the data is updated in the database. Updated by the batch job.<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="progresspercent">ProgressPercent</h3>
-<p>Progress, updated by the batch job.[Filter(ge;le)]</p>
+<p>Progress, updated by the batch job.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>decimal (5, 2) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="referenceno">ReferenceNo</h3>
-<p>Text for internal reference of the change request.[Filter(eq)]</p>
+<p>Text for internal reference of the change request.<code>Filter(eq)</code></p>
 <p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -333,7 +333,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>32</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="requestno">RequestNo</h3>
-<p>Global consequtive request number.[Required] [Filter(eq)] [ORD]</p>
+<p>Global consequtive request number.<code>Required</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -341,7 +341,7 @@ Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
-<p>Additional settings for the change; expressed in Json. The format depends on the change kind[Filter(like)]</p>
+<p>Additional settings for the change; expressed in Json. The format depends on the change kind<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -349,7 +349,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="state">State</h3>
-<p>Current state of the request.[Required] [Default(&quot;DRF&quot;)] [Filter(eq)]</p>
+<p>Current state of the request.<code>Required</code> <code>Default(&amp;quot;DRF&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Core.InstanceChangeRequests.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Systems.Core.InstanceChangeRequests.md#state) data attribute<br>

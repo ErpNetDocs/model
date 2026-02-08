@@ -44,7 +44,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Name](Systems.Documents.Sequences.md#name) | string (50) | The name of this Sequence. `Required` `Filter(like)` 
-| [SimultaneousTransactions](Systems.Documents.Sequences.md#simultaneoustransactions) | boolean | When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.[Required] [Default(false)] 
+| [SimultaneousTransactions](Systems.Documents.Sequences.md#simultaneoustransactions) | boolean | When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.`Required` `Default(false)` 
 
 
 ## System Attributes
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### SimultaneousTransactions
 
-When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.[Required] [Default(false)]
+When false, specifies that the users will wait in a queue for a single numbering sequence generator. When true, the system will allow parallel numbering, by using any of the available sequence generators. However, parallel numbering has the drawback that, if no sequence generator is free, it will immediately throw exception, instead of waiting. So before setting to true, make sure that enough sequence generators are available.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

@@ -121,17 +121,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#actualenddatetime">ActualEndDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date/time when the operation has completed. NULL means that the operation is not completed.[Filter(ge;le)]</td>
+<td>The date/time when the operation has completed. NULL means that the operation is not completed.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#actualstartdatetime">ActualStartDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date/time when the operation has started. NULL means that the has not started yet[Filter(ge;le)]</td>
+<td>The date/time when the operation has started. NULL means that the has not started yet<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Order of the line within the work order routing[Required] [Filter(eq;like)]</td>
+<td>Order of the line within the work order routing<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#minimumconcurrentstarttimeminutes">MinimumConcurrent<br>StartTimeMinutes</a></td>
@@ -141,7 +141,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#movetimeminutes">MoveTimeMinutes</a></td>
 <td>int32</td>
-<td>Time to move the lot to the next operation in minutes[Required] [Default(0)]</td>
+<td>Time to move the lot to the next operation in minutes<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#notes">Notes</a></td>
@@ -156,27 +156,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#runtimeminutes">RunTimeMinutes</a></td>
 <td>int32</td>
-<td>Time for production of one lot of the produced item in minutes[Required] [Default(0)]</td>
+<td>Time for production of one lot of the produced item in minutes<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scheduledenddatetime">ScheduledEndDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)[Filter(ge;le)]</td>
+<td>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scheduledstartdatetime">ScheduledStartDateTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)[Filter(ge;le)]</td>
+<td>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#scraprate">ScrapRate</a></td>
 <td>decimal (7, 6)</td>
-<td>Projected scrap rate of the operation[Required] [Default(0)]</td>
+<td>Projected scrap rate of the operation<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#setuptimeminutes">SetupTimeMinutes</a></td>
 <td>int32</td>
-<td>Time needed to setup the equipment in minutes[Required] [Default(0)]</td>
+<td>Time needed to setup the equipment in minutes<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#tooling">Tooling</a></td>
@@ -186,12 +186,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#usequantity">UseQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (9, 3)</a></td>
-<td>Quantity of the resource, that should be allocated for the operation[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</td>
+<td>Quantity of the resource, that should be allocated for the operation<code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.WorkOrderItemOperations.html#waittimeminutes">WaitTimeMinutes</a></td>
 <td>int32</td>
-<td>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)]</td>
+<td>Wait time (drying, cooling, etc.) after the operation in minutes<code>Required</code> <code>Default(0)</code></td>
 </tr>
 </tbody>
 </table>
@@ -268,21 +268,21 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="actualenddatetime">ActualEndDateTime</h3>
-<p>The date/time when the operation has completed. NULL means that the operation is not completed.[Filter(ge;le)]</p>
+<p>The date/time when the operation has completed. NULL means that the operation is not completed.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="actualstartdatetime">ActualStartDateTime</h3>
-<p>The date/time when the operation has started. NULL means that the has not started yet[Filter(ge;le)]</p>
+<p>The date/time when the operation has started. NULL means that the has not started yet<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Order of the line within the work order routing[Required] [Filter(eq;like)]</p>
+<p>Order of the line within the work order routing<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -300,7 +300,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="movetimeminutes">MoveTimeMinutes</h3>
-<p>Time to move the lot to the next operation in minutes[Required] [Default(0)]</p>
+<p>Time to move the lot to the next operation in minutes<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -326,7 +326,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Operation.Name</code></p>
 <h3 id="runtimeminutes">RunTimeMinutes</h3>
-<p>Time for production of one lot of the produced item in minutes[Required] [Default(0)]</p>
+<p>Time for production of one lot of the produced item in minutes<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -334,21 +334,21 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scheduledenddatetime">ScheduledEndDateTime</h3>
-<p>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)[Filter(ge;le)]</p>
+<p>The date/time when the operation is scheduled to complete. NULL means that there is still no plan when the operation will finish (for new orders only)<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scheduledstartdatetime">ScheduledStartDateTime</h3>
-<p>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)[Filter(ge;le)]</p>
+<p>The date/time when the operation is planned to start. NULL means that there is still no plan when to start the operaion (only for new work orders)<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="scraprate">ScrapRate</h3>
-<p>Projected scrap rate of the operation[Required] [Default(0)]</p>
+<p>Projected scrap rate of the operation<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>decimal (7, 6)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -356,7 +356,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="setuptimeminutes">SetupTimeMinutes</h3>
-<p>Time needed to setup the equipment in minutes[Required] [Default(0)]</p>
+<p>Time needed to setup the equipment in minutes<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -372,7 +372,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="usequantity">UseQuantity</h3>
-<p>Quantity of the resource, that should be allocated for the operation[Unit: WorkgroupResource.Resource.PrimaryUnit] [Required] [Default(1)]</p>
+<p>Quantity of the resource, that should be allocated for the operation<code>Unit: WorkgroupResource.Resource.PrimaryUnit</code> <code>Required</code> <code>Default(1)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (9, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -380,7 +380,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waittimeminutes">WaitTimeMinutes</h3>
-<p>Wait time (drying, cooling, etc.) after the operation in minutes[Required] [Default(0)]</p>
+<p>Wait time (drying, cooling, etc.) after the operation in minutes<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

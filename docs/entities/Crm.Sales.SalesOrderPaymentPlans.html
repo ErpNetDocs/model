@@ -121,7 +121,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#amount">Amount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
-<td>Amount to be payed.[Currency: SalesOrder.DocumentCurrency] [Required]</td>
+<td>Amount to be payed.<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#amountpercent">AmountPercent</a></td>
@@ -131,22 +131,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#duedateformmethod">DueDateFormMethod</a></td>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></td>
-<td>Method to determine the payment due date.[Required]</td>
+<td>Method to determine the payment due date.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduedate">ExplicitPaymentDueDate</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method.[Filter(ge;le)]</td>
+<td>Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#explicitpaymentduestartdate">ExplicitPayment<br>DueStartDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.[Filter(ge;le)]</td>
+<td>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#installmentnumber">InstallmentNumber</a></td>
 <td>int32</td>
-<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.[Required]</td>
+<td>Consequtive installment number. Used for identifying different payments generated according this payment plan.<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#notes">Notes</a></td>
@@ -156,22 +156,22 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentamount">PaymentAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></td>
-<td>The amount the customer is expected to pay in that specific payment currency.[Currency: PaymentCurrency] [Filter(eq;ge;le)] [Introduced in version 26.2.0.53]</td>
+<td>The amount the customer is expected to pay in that specific payment currency.<code>Currency: PaymentCurrency</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.0.53</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymentstartdays">PaymentStartDays</a></td>
 <td>int32</td>
-<td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.[Required] [Default(0)]</td>
+<td>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#paymenttermdays">PaymentTermDays</a></td>
 <td>int32</td>
-<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.[Required] [Default(0)]</td>
+<td>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesOrderPaymentPlans.html#remainder">Remainder</a></td>
 <td>boolean</td>
-<td>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan.[Required] [Default(false)]</td>
+<td>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan.<code>Required</code> <code>Default(false)</code></td>
 </tr>
 </tbody>
 </table>
@@ -241,7 +241,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="amount">Amount</h3>
-<p>Amount to be payed.[Currency: SalesOrder.DocumentCurrency] [Required]</p>
+<p>Amount to be payed.<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -257,7 +257,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedateformmethod">DueDateFormMethod</h3>
-<p>Method to determine the payment due date.[Required]</p>
+<p>Method to determine the payment due date.<code>Required</code></p>
 <p>Type: <strong><a href="Crm.Sales.SalesOrderPaymentPlans.html#duedateformmethod">PaymentPlanDueDateSource</a></strong><br>
 Category: <strong>System</strong><br>
 Generic enum type for PaymentPlanDueDateSource properties<br>
@@ -296,7 +296,7 @@ Allowed Values (Crm.Sales.PaymentPlanDueDateSource Enum Members)</p>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="explicitpaymentduedate">ExplicitPaymentDueDate</h3>
-<p>Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method.[Filter(ge;le)]</p>
+<p>Explicitly specified payment due date. Must be filled if and only if explicitly setting the date is chosen in due date form method.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -305,7 +305,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueDate)</code></p>
 <h3 id="explicitpaymentduestartdate">ExplicitPaymentDueStartDate</h3>
-<p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.[Filter(ge;le)]</p>
+<p>Explicitly specified date on which the payment becomes executable. Can be specified only when date formation method is 'Set explicit date'.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -314,7 +314,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( Convert( obj.DueDateFormMethod, Int32) != 0), null, obj.ExplicitPaymentDueStartDate)</code></p>
 <h3 id="installmentnumber">InstallmentNumber</h3>
-<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.[Required]</p>
+<p>Consequtive installment number. Used for identifying different payments generated according this payment plan.<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -333,7 +333,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="paymentamount">PaymentAmount</h3>
-<p>The amount the customer is expected to pay in that specific payment currency.[Currency: PaymentCurrency] [Filter(eq;ge;le)] [Introduced in version 26.2.0.53]</p>
+<p>The amount the customer is expected to pay in that specific payment currency.<code>Currency: PaymentCurrency</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.0.53</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 2)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -342,7 +342,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( obj.PaymentCurrency == null), null, IIF( ( ( obj.Amount != null) OrElse True), obj.SetPaymentAmount( ), obj.PaymentAmount))</code></p>
 <h3 id="paymentstartdays">PaymentStartDays</h3>
-<p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.[Required] [Default(0)]</p>
+<p>Number of days until the payment becomes executable. The days are counted, starting with the date, specified by due date formation method.<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -350,7 +350,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttermdays">PaymentTermDays</h3>
-<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.[Required] [Default(0)]</p>
+<p>Payment term in days, which are to be added to form the payment due date. 0 means that the date determined by the due date form method and the explicit payment due date is taken as due date.<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -362,7 +362,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( Convert( obj.DueDateFormMethod, Int32) == 3) OrElse ( Convert( obj.DueDateFormMethod, Int32) == 4)), 0, obj.PaymentTermDays)</code></p>
 <h3 id="remainder">Remainder</h3>
-<p>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan.[Required] [Default(false)]</p>
+<p>Indicates whether this amount is the remainder of the document - e. g. the total amount of the sales order minus explicitly specified by 'Amount percent' or 'Amount' columns amounts in the payment plan.<code>Required</code> <code>Default(false)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

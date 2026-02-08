@@ -36,8 +36,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template.[Required] [Filter(eq)] 
-| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template.[Required] [Filter(like)] 
+| [CostTemplateCode](Finance.Cost.Templates.md#costtemplatecode) | string (16) | Unique code of the cost template.`Required` `Filter(eq)` 
+| [CostTemplateName](Finance.Cost.Templates.md#costtemplatename) | string (254) | Name of the cost template.`Required` `Filter(like)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### CostTemplateCode
 
-Unique code of the cost template.[Required] [Filter(eq)]
+Unique code of the cost template.`Required` `Filter(eq)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -80,7 +80,7 @@ Show in UI: **ShownByDefault**
 
 ### CostTemplateName
 
-Name of the cost template.[Required] [Filter(like)]
+Name of the cost template.`Required` `Filter(like)`
 
 Type: **string (254)**  
 Category: **System**  

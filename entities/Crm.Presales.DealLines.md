@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal[Required] [Filter(eq)] 
+| [LineNo](Crm.Presales.DealLines.md#lineno) | int32 | Consecutive number of the line within the deal`Required` `Filter(eq)` 
 | [Notes](Crm.Presales.DealLines.md#notes) | string (max) __nullable__ | Notes 
-| [Quantity](Crm.Presales.DealLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)[Unit: QuantityUnit] 
+| [Quantity](Crm.Presales.DealLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)`Unit: QuantityUnit` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### LineNo
 
-Consecutive number of the line within the deal[Required] [Filter(eq)]
+Consecutive number of the line within the deal`Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### Quantity
 
-When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)[Unit: QuantityUnit]
+When not NULL, specifies the quantity, which the client can potentially buy (with measurement unit specified in Quantity Unit)`Unit: QuantityUnit`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  

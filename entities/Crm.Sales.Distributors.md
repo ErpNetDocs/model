@@ -45,7 +45,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FlatCommisionPercentage](Crm.Sales.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations[Required] [Default(0)] 
+| [FlatCommisionPercentage](Crm.Sales.Distributors.md#flatcommisionpercentage) | decimal (7, 6) | Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressi<br />ve/qunatity considerations`Required` `Default(0)` 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### FlatCommisionPercentage
 
-Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations[Required] [Default(0)]
+Not-zero if commision percentage should be applyied to all sales, regardless of product/discount/progressive/qunatity considerations`Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  

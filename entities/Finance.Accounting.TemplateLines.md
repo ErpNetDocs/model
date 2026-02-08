@@ -35,18 +35,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string (64) | The name of the column within the amount rowset where the amount is located[Required] 
+| [AmountColumnName](Finance.Accounting.TemplateLines.md#amountcolumnname) | string (64) | The name of the column within the amount rowset where the amount is located`Required` 
 | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) | [AmountCondition](Finance.Accounting.TemplateLines.md#amountcondition) __nullable__ | Condition for the amount. The line is accounted only when the condition is matched. The condition can be one of: NULL - no condition, the line should be accounted unconditionally; '+' - The amount should be positive; '-' - The amount should be negative. The amount is matched as returned from the source, before applying the Multiplier. 
 | [AmountRowId](Finance.Accounting.TemplateLines.md#amountrowid) | guid __nullable__ | The id of the row from the amount rowset where the amount is located. null means to account one by one for all rows within the rowset. `Filter(multi eq)` 
 | [AmountRowName](Finance.Accounting.TemplateLines.md#amountrowname) | string (254) __nullable__ | The name of definition, specified in Amount_Row_Id. NULL means that no Amount_Row_Id is specified or there is no name 
-| [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter __nullable__ | Filter that further specifies which rows from the amount rowset determine the amount[Unit: obj.GetAmountSource<br />FilterEntityName()] 
-| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string (64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.[Required] 
-| [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter __nullable__ | The line is accounted only when the filter is satisfied compared with the source document header[Unit: obj.Template.Route.DocumentType.EntityName] 
-| [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines.[Required] 
-| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal (18, 6) | Factor by which the amount from the source will be multiplied.[Required] [Default(1)] 
+| [AmountSourceFilter](Finance.Accounting.TemplateLines.md#amountsourcefilter) | dataaccessfilter __nullable__ | Filter that further specifies which rows from the amount rowset determine the amount`Unit: obj.GetAmountSource<br />FilterEntityName()` 
+| [AmountSourceName](Finance.Accounting.TemplateLines.md#amountsourcename) | string (64) | The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.`Required` 
+| [FilterXML](Finance.Accounting.TemplateLines.md#filterxml) | dataaccessfilter __nullable__ | The line is accounted only when the filter is satisfied compared with the source document header`Unit: obj.Template.Route.DocumentType.EntityName` 
+| [LineNo](Finance.Accounting.TemplateLines.md#lineno) | int32 | Consecutive number of the line within the template. Determines the order of execution of the template lines.`Required` 
+| [Multiplier](Finance.Accounting.TemplateLines.md#multiplier) | decimal (18, 6) | Factor by which the amount from the source will be multiplied.`Required` `Default(1)` 
 | [Notes](Finance.Accounting.TemplateLines.md#notes) | string (254) __nullable__ | Notes for this TemplateLine. 
-| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime __nullable__ | Start date from which the accounting template line is valid[Filter(multi eq;ge;le)] 
-| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime __nullable__ | End date to which the accounting template line is valid[Filter(multi eq;ge;le)] 
+| [ValidFromDate](Finance.Accounting.TemplateLines.md#validfromdate) | datetime __nullable__ | Start date from which the accounting template line is valid`Filter(multi eq;ge;le)` 
+| [ValidToDate](Finance.Accounting.TemplateLines.md#validtodate) | datetime __nullable__ | End date to which the accounting template line is valid`Filter(multi eq;ge;le)` 
 
 ## References
 
@@ -76,7 +76,7 @@ Aggregate Root:
 
 ### AmountColumnName
 
-The name of the column within the amount rowset where the amount is located[Required]
+The name of the column within the amount rowset where the amount is located`Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### AmountSourceFilter
 
-Filter that further specifies which rows from the amount rowset determine the amount[Unit: obj.GetAmountSourceFilterEntityName()]
+Filter that further specifies which rows from the amount rowset determine the amount`Unit: obj.GetAmountSourceFilterEntityName()`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **HiddenByDefault**
 
 ### AmountSourceName
 
-The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.[Required]
+The source rowset for the amount. For example: DocLines, DocHeader, Additional Amounts, Stock Types, etc.`Required`
 
 Type: **string (64)**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### FilterXML
 
-The line is accounted only when the filter is satisfied compared with the source document header[Unit: obj.Template.Route.DocumentType.EntityName]
+The line is accounted only when the filter is satisfied compared with the source document header`Unit: obj.Template.Route.DocumentType.EntityName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the template. Determines the order of execution of the template lines.[Required]
+Consecutive number of the line within the template. Determines the order of execution of the template lines.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -171,7 +171,7 @@ Front-End Recalc Expressions:
 `( obj.Template.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Multiplier
 
-Factor by which the amount from the source will be multiplied.[Required] [Default(1)]
+Factor by which the amount from the source will be multiplied.`Required` `Default(1)`
 
 Type: **decimal (18, 6)**  
 Category: **System**  
@@ -193,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFromDate
 
-Start date from which the accounting template line is valid[Filter(multi eq;ge;le)]
+Start date from which the accounting template line is valid`Filter(multi eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -203,7 +203,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidToDate
 
-End date to which the accounting template line is valid[Filter(multi eq;ge;le)]
+End date to which the accounting template line is valid`Filter(multi eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

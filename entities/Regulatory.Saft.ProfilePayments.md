@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines.[Required] [Filter(eq)] 
-| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction.[Required] [Filter(eq)] 
-| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None.[Required] [Filter(eq)] 
+| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines.`Required` `Filter(eq)` 
+| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction.`Required` `Filter(eq)` 
+| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None.`Required` `Filter(eq)` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### DebitCreditIndicator
 
-Debit/credit indicator for SAF-T payment lines.[Required] [Filter(eq)]
+Debit/credit indicator for SAF-T payment lines.`Required` `Filter(eq)`
 
 Type: **[DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator)**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-Payment direction.[Required] [Filter(eq)]
+Payment direction.`Required` `Filter(eq)`
 
 Type: **[Direction](Regulatory.Saft.ProfilePayments.md#direction)**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### PartyType
 
-Counterparty type to be populated in SAF-T: Supplier, Customer, None.[Required] [Filter(eq)]
+Counterparty type to be populated in SAF-T: Supplier, Customer, None.`Required` `Filter(eq)`
 
 Type: **[PartyType](Regulatory.Saft.ProfilePayments.md#partytype)**  
 Category: **System**  

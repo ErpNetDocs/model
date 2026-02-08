@@ -36,12 +36,12 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Code](Finance.Assets.Assets.md#code) | string (20) | The unique code of the Asset. `Required` `Filter(eq;like)` `ORD` 
-| [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime __nullable__ | Date, when the asset is first deployed. Not specified if the asset is not deployed yet.[Filter(ge;le)] 
-| [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.[Required] [Default(true)] [Filter(eq)] 
+| [DeploymentDate](Finance.Assets.Assets.md#deploymentdate) | datetime __nullable__ | Date, when the asset is first deployed. Not specified if the asset is not deployed yet.`Filter(ge;le)` 
+| [IsActive](Finance.Assets.Assets.md#isactive) | boolean | Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.`Required` `Default(true)` `Filter(eq)` 
 | [Name](Finance.Assets.Assets.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this Asset. `Required` `Filter(like)` 
 | [Notes](Finance.Assets.Assets.md#notes) | string (254) __nullable__ | Notes for this Asset. 
-| [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset.[Required] [Filter(ge;le)] 
-| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset.[Filter(eq)] 
+| [PurchaseDate](Finance.Assets.Assets.md#purchasedate) | datetime | Original purchase date of the asset.`Required` `Filter(ge;le)` 
+| [SerialNumber](Finance.Assets.Assets.md#serialnumber) | string (30) __nullable__ | Serial number of the asset.`Filter(eq)` 
 
 ## References
 
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 ### DeploymentDate
 
-Date, when the asset is first deployed. Not specified if the asset is not deployed yet.[Filter(ge;le)]
+Date, when the asset is first deployed. Not specified if the asset is not deployed yet.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.[Required] [Default(true)] [Filter(eq)]
+Checked if the assets is active and can be used in documents. The inactive assets can be used only for reports.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -125,7 +125,7 @@ Show in UI: **ShownByDefault**
 
 ### PurchaseDate
 
-Original purchase date of the asset.[Required] [Filter(ge;le)]
+Original purchase date of the asset.`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### SerialNumber
 
-Serial number of the asset.[Filter(eq)]
+Serial number of the asset.`Filter(eq)`
 
 Type: **string (30) __nullable__**  
 Category: **System**  

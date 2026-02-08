@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is given.[Unit: ConsumableQuantityUnit] [Required] [Default(0)] 
-| [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line.[Required] [Filter(eq;ge;le)] 
+| [ConsumableQuantity](Applications.Rental.LeaseContractLineConsumables.md#consumablequantity) | [Quantity (12, 3)](../data-types.md#quantity) | Specifies what quantity of the current consumable is given.`Unit: ConsumableQuantityUnit` `Required` `Default(0)` 
+| [LineNo](Applications.Rental.LeaseContractLineConsumables.md#lineno) | int32 | Consecutive number of the consumable within the lease contract line.`Required` `Filter(eq;ge;le)` 
 
 ## References
 
@@ -61,7 +61,7 @@ Aggregate Root:
 
 ### ConsumableQuantity
 
-Specifies what quantity of the current consumable is given.[Unit: ConsumableQuantityUnit] [Required] [Default(0)]
+Specifies what quantity of the current consumable is given.`Unit: ConsumableQuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -72,7 +72,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the consumable within the lease contract line.[Required] [Filter(eq;ge;le)]
+Consecutive number of the consumable within the lease contract line.`Required` `Filter(eq;ge;le)`
 
 Type: **int32**  
 Category: **System**  

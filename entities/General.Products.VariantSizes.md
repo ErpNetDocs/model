@@ -34,8 +34,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.VariantSizes.md#code) | string (8) | Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.[Required] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.VariantSizes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the variant size.[Required] [Filter(eq;like)] 
+| [Code](General.Products.VariantSizes.md#code) | string (8) | Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.`Required` `Filter(eq;like)` `ORD` 
+| [Name](General.Products.VariantSizes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the variant size.`Required` `Filter(eq;like)` 
 
 
 ## System Attributes
@@ -54,7 +54,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.[Required] [Filter(eq;like)] [ORD]
+Unique code of the size. Used to generate parts of bar-codes and in other coding schemes.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (8)**  
 Indexed: **True**  
@@ -66,7 +66,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the variant size.[Required] [Filter(eq;like)]
+The name of the variant size.`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Indexed: **True**  

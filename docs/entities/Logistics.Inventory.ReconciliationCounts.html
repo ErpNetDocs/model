@@ -122,27 +122,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact time (UTC) the product was counted[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly]</td>
+<td>The exact time (UTC) the product was counted<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Additional information for the Count.[Introduced in version 24.1.5.37]</td>
+<td>Additional information for the Count.<code>Introduced in version 24.1.5.37</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The counted quantity in the default measurement unit of the product[Unit: QuantityUnit] [Required] [Filter(ge;le)]</td>
+<td>The counted quantity in the default measurement unit of the product<code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#quantitybase">QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]</td>
+<td>Quantity in the base measurement unit of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Inventory.ReconciliationCounts.html#standardquantitybase">StandardQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></td>
 </tr>
 </tbody>
 </table>
@@ -212,7 +212,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact time (UTC) the product was counted[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly]</p>
+<p>The exact time (UTC) the product was counted<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -220,7 +220,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Additional information for the Count.[Introduced in version 24.1.5.37]</p>
+<p>Additional information for the Count.<code>Introduced in version 24.1.5.37</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -228,14 +228,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
-<p>The counted quantity in the default measurement unit of the product[Unit: QuantityUnit] [Required] [Filter(ge;le)]</p>
+<p>The counted quantity in the default measurement unit of the product<code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantitybase">QuantityBase</h3>
-<p>Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]</p>
+<p>Quantity in the base measurement unit of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -247,7 +247,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="standardquantitybase">StandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly] [Introduced in version 25.1.1.42]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.42</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BarCode](General.Products.ProductVariants.md#barcode) | string (16) __nullable__ | When specified, it contains a bar code which uniquely identifies the product variant.[Filter(eq;like)] [ORD] 
-| [Code](General.Products.ProductVariants.md#code) | string (16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.[Required] [Filter(eq;like)] [ReadOnly] 
-| [Name](General.Products.ProductVariants.md#name) | [MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__ | Product variant name. It is the concatenation of the names of the color, size and style.[ReadOnly] 
-| [ShortCode](General.Products.ProductVariants.md#shortcode) | string (32) __nullable__ | Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).[Filter(eq;like)] [Introduced in version 23.1.1.19] 
+| [BarCode](General.Products.ProductVariants.md#barcode) | string (16) __nullable__ | When specified, it contains a bar code which uniquely identifies the product variant.`Filter(eq;like)` `ORD` 
+| [Code](General.Products.ProductVariants.md#code) | string (16) | The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.`Required` `Filter(eq;like)` `ReadOnly` 
+| [Name](General.Products.ProductVariants.md#name) | [MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__ | Product variant name. It is the concatenation of the names of the color, size and style.`ReadOnly` 
+| [ShortCode](General.Products.ProductVariants.md#shortcode) | string (32) __nullable__ | Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).`Filter(eq;like)` `Introduced in version 23.1.1.19` 
 
 ## References
 
@@ -64,7 +64,7 @@ Aggregate Root:
 
 ### BarCode
 
-When specified, it contains a bar code which uniquely identifies the product variant.[Filter(eq;like)] [ORD]
+When specified, it contains a bar code which uniquely identifies the product variant.`Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.[Required] [Filter(eq;like)] [ReadOnly]
+The code of the variant. The code is unique within the Product. It is the concatenation of the codes of the color, size and style.`Required` `Filter(eq;like)` `ReadOnly`
 
 Type: **string (16)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Product variant name. It is the concatenation of the names of the color, size and style.[ReadOnly]
+Product variant name. It is the concatenation of the names of the color, size and style.`ReadOnly`
 
 Type: **[MultilanguageString (512)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
@@ -102,7 +102,7 @@ Front-End Recalc Expressions:
 `Join( " ", new [] {obj.VariantColor.Name, obj.VariantSize.Name, obj.VariantStyle.Name})`
 ### ShortCode
 
-Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).[Filter(eq;like)] [Introduced in version 23.1.1.19]
+Short code of the variant, that is unique within the Product. Usually used as a data element in data encoded barcodes (e.g., GS1-128 barcodes).`Filter(eq;like)` `Introduced in version 23.1.1.19`
 
 Type: **string (32) __nullable__**  
 Category: **System**  

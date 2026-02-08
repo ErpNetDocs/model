@@ -36,14 +36,14 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [BackgroundColor](General.Products.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
 | [BackgroundImage](General.Products.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed. 
-| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right.[Required] [Default(&quot;L&quot;)] 
-| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom.[Required] [Default(&quot;T&quot;)] 
-| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.[Required] [Default(&quot;R&quot;)] 
-| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code.[Required] 
+| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right.`Required` `Default(&quot;L&quot;)` 
+| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom.`Required` `Default(&quot;T&quot;)` 
+| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.`Required` `Default(&quot;R&quot;)` 
+| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code.`Required` 
 | [FooterHtml](General.Products.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer. 
 | [HeaderHtml](General.Products.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header. 
 | [Logo](General.Products.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
-| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage).[Required] 
+| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage).`Required` 
 | [Notes](General.Products.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
 
 ## References
@@ -90,7 +90,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundPositionHorizontal
 
-Horizontal position of the Background Image. L=Left, C=Center, R=Right.[Required] [Default(&quot;L&quot;)]
+Horizontal position of the Background Image. L=Left, C=Center, R=Right.`Required` `Default(&quot;L&quot;)`
 
 Type: **[BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundPositionVertical
 
-Vertical position of the Background Image. T=Top, C=Center, B=Bottom.[Required] [Default(&quot;T&quot;)]
+Vertical position of the Background Image. T=Top, C=Center, B=Bottom.`Required` `Default(&quot;T&quot;)`
 
 Type: **[BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical)**  
 Category: **System**  
@@ -130,7 +130,7 @@ Show in UI: **ShownByDefault**
 
 ### BackgroundRepeat
 
-Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.[Required] [Default(&quot;R&quot;)]
+Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.`Required` `Default(&quot;R&quot;)`
 
 Type: **[BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat)**  
 Category: **System**  
@@ -151,7 +151,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Unique catalog code.[Required]
+Unique catalog code.`Required`
 
 Type: **string (16)**  
 Category: **System**  
@@ -194,7 +194,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Product catalog name (multilanguage).[Required]
+Product catalog name (multilanguage).`Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  

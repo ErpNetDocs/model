@@ -41,15 +41,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price[Filter(eq;ge;le)] 
-| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18] 
-| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit[<br />Unit: PriceQuantityMeasurement<br />Unit] [Filter(eq;ge;le)] 
-| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)[Unit: PriceQuantityMeasurement<br />Unit] [Filter(eq;ge;le)] 
+| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price`Filter(eq;ge;le)` 
+| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
+| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit`<br />Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
+| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)`Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
 | [Notes](Crm.Pricing.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. `Filter(like)` 
-| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)] 
-| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified[Unit: PriceQuantityMeasurement<br />Unit] [Required] [Default(1)] [Filter(ge;le)] 
-| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied.[Required] [Default(2)] [Filter(multi eq)] 
-| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price[Filter(eq;ge;le)] 
+| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity`Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
+| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified`Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
+| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied.`Required` `Default(2)` `Filter(multi eq)` 
+| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price`Filter(eq;ge;le)` 
 
 ## References
 
@@ -85,7 +85,7 @@ Aggregate Tree
 
 ### FromDate
 
-Starting date of validity of the price[Filter(eq;ge;le)]
+Starting date of validity of the price`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsActive
 
-Indicates whether the current Product price is active.[Required] [Default(true)] [Filter(eq)] [Introduced in version 25.1.0.18]
+Indicates whether the current Product price is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18`
 
 Type: **boolean**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### MaxQuantity
 
-Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit[Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
+Maximum quantity for which this price is valid in the Price_Quantity_Measurement_Unit`Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -116,7 +116,7 @@ Show in UI: **HiddenByDefault**
 
 ### MinQuantity
 
-Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)[Unit: PriceQuantityMeasurementUnit] [Filter(eq;ge;le)]
+Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)`Unit: PriceQuantityMeasurementUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -137,7 +137,7 @@ Show in UI: **HiddenByDefault**
 
 ### Price
 
-Price in the specified currency and for the specified quantity[Currency: Currency] [Required] [Default(0)] [Filter(eq;ge;le)]
+Price in the specified currency and for the specified quantity`Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)`
 
 Type: **[Amount (13, 5)](../data-types.md#amount)**  
 Category: **System**  
@@ -148,7 +148,7 @@ Show in UI: **ShownByDefault**
 
 ### PriceQuantity
 
-The quantity of the product for which the price is specified[Unit: PriceQuantityMeasurementUnit] [Required] [Default(1)] [Filter(ge;le)]
+The quantity of the product for which the price is specified`Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)` `Filter(ge;le)`
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -159,7 +159,7 @@ Show in UI: **HiddenByDefault**
 
 ### Priority
 
-Priority of the price comparative to other prices. Only the highest priority price is applied.[Required] [Default(2)] [Filter(multi eq)]
+Priority of the price comparative to other prices. Only the highest priority price is applied.`Required` `Default(2)` `Filter(multi eq)`
 
 Type: **[Priority](Crm.Pricing.ProductPrices.md#priority)**  
 Category: **System**  
@@ -181,7 +181,7 @@ Show in UI: **ShownByDefault**
 
 ### ThruDate
 
-Ending date (inclusive) of the validity of the price[Filter(eq;ge;le)]
+Ending date (inclusive) of the validity of the price`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

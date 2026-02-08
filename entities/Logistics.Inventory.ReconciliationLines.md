@@ -34,14 +34,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#availablequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Available quantity (in base measurement unit) to the date of the reconciliation.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] 
+| [AvailableQuantityBase](Logistics.Inventory.ReconciliationLines.md#availablequantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Available quantity (in base measurement unit) to the date of the reconciliation.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` 
 | [CurrentBalanceBase](Logistics.Inventory.ReconciliationLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [LineOrd](Logistics.Inventory.ReconciliationLines.md#lineord) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested[Required] 
+| [LineOrd](Logistics.Inventory.ReconciliationLines.md#lineord) | int32 | The ordinal position of the line within the document. Duplicates are allowed, but not suggested`Required` 
 | [Notes](Logistics.Inventory.ReconciliationLines.md#notes) | string (254) __nullable__ | Notes for this ReconciliationLine. 
-| [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, [Unit: QuantityUnit] [Required] [Filter(ge;le)] 
-| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)] 
-| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2] 
-| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product.[Filter(ge;le)] 
+| [Quantity](Logistics.Inventory.ReconciliationLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, `Unit: QuantityUnit` `Required` `Filter(ge;le)` 
+| [QuantityBase](Logistics.Inventory.ReconciliationLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity found at the reconciliation, expressed in base measurement units`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)` 
+| [StandardQuantityBase](Logistics.Inventory.ReconciliationLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
+| [TransactionTimestamp](Logistics.Inventory.ReconciliationLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product.`Filter(ge;le)` 
 
 ## References
 
@@ -73,7 +73,7 @@ Aggregate Root:
 
 ### AvailableQuantityBase
 
-Available quantity (in base measurement unit) to the date of the reconciliation.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly]
+Available quantity (in base measurement unit) to the date of the reconciliation.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **HiddenByDefault**
 
 ### LineOrd
 
-The ordinal position of the line within the document. Duplicates are allowed, but not suggested[Required]
+The ordinal position of the line within the document. Duplicates are allowed, but not suggested`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -119,7 +119,7 @@ Show in UI: **HiddenByDefault**
 
 ### Quantity
 
-Quantity found at the reconciliation, [Unit: QuantityUnit] [Required] [Filter(ge;le)]
+Quantity found at the reconciliation, `Unit: QuantityUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### QuantityBase
 
-Quantity found at the reconciliation, expressed in base measurement units[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Filter(ge;le)]
+Quantity found at the reconciliation, expressed in base measurement units`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(ge;le)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -144,7 +144,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.QuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### StandardQuantityBase
 
-The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]
+The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -159,7 +159,7 @@ Front-End Recalc Expressions:
 `IIF( ( ( ( obj.Quantity == null) OrElse ( obj.QuantityUnit == null)) OrElse ( obj.Product == null)), obj.StandardQuantityBase, obj.Quantity.ConvertTo( obj.Product.BaseUnit, obj.Product))`
 ### TransactionTimestamp
 
-Exact time when the transaction changes the cost of the product.[Filter(ge;le)]
+Exact time when the transaction changes the cost of the product.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  

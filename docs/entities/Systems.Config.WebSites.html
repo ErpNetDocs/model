@@ -126,12 +126,12 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebSites.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Indicates whether the web site is active and will be instantiated upon next web server restart.[Required] [Default(true)] [Filter(eq)]</td>
+<td>Indicates whether the web site is active and will be instantiated upon next web server restart.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#isprivate">IsPrivate</a></td>
 <td>boolean</td>
-<td>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.[Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.0.8]</td>
+<td>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#notes">Notes</a></td>
@@ -141,22 +141,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Config.WebSites.html#relativeurl">RelativeUrl</a></td>
 <td>string (254) <strong>nullable</strong></td>
-<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.[Filter(eq)]</td>
+<td>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.<code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#settingsjson">SettingsJson</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.[Introduced in version 23.1.0.37]</td>
+<td>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.<code>Introduced in version 23.1.0.37</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#uin">Uin</a></td>
 <td>string (64) <strong>nullable</strong></td>
-<td>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance. [Introduced in version 24.1.5.42]</td>
+<td>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance. <code>Introduced in version 24.1.5.42</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></td>
 <td><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></td>
-<td>The type of web site - Api, Client Center, Id, etc.[Required] [Filter(multi eq)]</td>
+<td>The type of web site - Api, Client Center, Id, etc.<code>Required</code> <code>Filter(multi eq)</code></td>
 </tr>
 </tbody>
 </table>
@@ -231,7 +231,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="isactive">IsActive</h3>
-<p>Indicates whether the web site is active and will be instantiated upon next web server restart.[Required] [Default(true)] [Filter(eq)]</p>
+<p>Indicates whether the web site is active and will be instantiated upon next web server restart.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -239,7 +239,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isprivate">IsPrivate</h3>
-<p>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.[Required] [Default(false)] [Filter(eq)] [Introduced in version 23.1.0.8]</p>
+<p>Specifies that the web site address will not be publicly listed. The web site itself will still be publicly accessible; only its URL would not be listed in the auto-discovery service.<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>Introduced in version 23.1.0.8</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -255,7 +255,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="relativeurl">RelativeUrl</h3>
-<p>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.[Filter(eq)]</p>
+<p>The relative Url of the site. This is the text after the first slash after the protocol and host name. The text should not include the protocol and host name. NULL means that the site will be hosted as the root site in the speicified web host.<code>Filter(eq)</code></p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -263,7 +263,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="settingsjson">SettingsJson</h3>
-<p>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.[Introduced in version 23.1.0.37]</p>
+<p>The field specifies the JSON settings for this website. NULL means that there are no specific settings for this website.<code>Introduced in version 23.1.0.37</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -271,7 +271,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="uin">Uin</h3>
-<p>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance. [Introduced in version 24.1.5.42]</p>
+<p>For multi-instance databases, specifies the instance on which to start the web site. The instance is specified by its UIN (Unique Instance Name). When NULL (which is the default and suggested value), the site will be started on the primary instance. <code>Introduced in version 24.1.5.42</code></p>
 <p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -279,7 +279,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="websitetype">WebSiteType</h3>
-<p>The type of web site - Api, Client Center, Id, etc.[Required] [Filter(multi eq)]</p>
+<p>The type of web site - Api, Client Center, Id, etc.<code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong><a href="Systems.Config.WebSites.html#websitetype">WebSiteType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>WebSiteType</code>(Systems.Config.WebSites.md#websitetype) data attribute<br>

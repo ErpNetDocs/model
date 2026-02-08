@@ -33,13 +33,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ColumnName](Systems.Core.DataEntryDefaultValues.md#columnname) | string (64) | The column for which the default is specified[Required] [Filter(eq)] 
-| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#conditionformname) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if Form_Name equals the specified value[Filter(eq)] [ORD] 
-| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#conditionuserlogin) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if User_Login equals this value[Filter(eq)] 
-| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#conditionusermachine) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if User_Machine equals this value[Filter(eq)] 
+| [ColumnName](Systems.Core.DataEntryDefaultValues.md#columnname) | string (64) | The column for which the default is specified`Required` `Filter(eq)` 
+| [ConditionFormName](Systems.Core.DataEntryDefaultValues.md#conditionformname) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if Form_Name equals the specified value`Filter(eq)` `ORD` 
+| [ConditionUserLogin](Systems.Core.DataEntryDefaultValues.md#conditionuserlogin) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if User_Login equals this value`Filter(eq)` 
+| [ConditionUserMachine](Systems.Core.DataEntryDefaultValues.md#conditionusermachine) | string (64) __nullable__ | If not NULL specifies that the default should be applied only if User_Machine equals this value`Filter(eq)` 
 | [DefaultValueField](Systems.Core.DataEntryDefaultValues.md#defaultvaluefield) | string (254) __nullable__ | The default value for Column_Name. Should be applied only if the other conditions are met. NULL specifies NULL default 
-| [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string (64) __nullable__ | When not null, specifies the panel for which the default value applies.[Filter(eq;like)] 
-| [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string (64) __nullable__ | The table, containing the column for which the default value is specified.[Filter(eq)] 
+| [PanelName](Systems.Core.DataEntryDefaultValues.md#panelname) | string (64) __nullable__ | When not null, specifies the panel for which the default value applies.`Filter(eq;like)` 
+| [TableName](Systems.Core.DataEntryDefaultValues.md#tablename) | string (64) __nullable__ | The table, containing the column for which the default value is specified.`Filter(eq)` 
 
 ## References
 
@@ -66,7 +66,7 @@ Aggregate Tree
 
 ### ColumnName
 
-The column for which the default is specified[Required] [Filter(eq)]
+The column for which the default is specified`Required` `Filter(eq)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionFormName
 
-If not NULL specifies that the default should be applied only if Form_Name equals the specified value[Filter(eq)] [ORD]
+If not NULL specifies that the default should be applied only if Form_Name equals the specified value`Filter(eq)` `ORD`
 
 Type: **string (64) __nullable__**  
 Indexed: **True**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionUserLogin
 
-If not NULL specifies that the default should be applied only if User_Login equals this value[Filter(eq)]
+If not NULL specifies that the default should be applied only if User_Login equals this value`Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionUserMachine
 
-If not NULL specifies that the default should be applied only if User_Machine equals this value[Filter(eq)]
+If not NULL specifies that the default should be applied only if User_Machine equals this value`Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 ### PanelName
 
-When not null, specifies the panel for which the default value applies.[Filter(eq;like)]
+When not null, specifies the panel for which the default value applies.`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 ### TableName
 
-The table, containing the column for which the default value is specified.[Filter(eq)]
+The table, containing the column for which the default value is specified.`Filter(eq)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  

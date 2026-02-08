@@ -45,13 +45,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters.[Required] [Filter(eq;like)] 
-| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence.[Required] [Filter(eq;like)] 
-| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person.[Required] [Filter(eq;like)] 
-| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries.[Required] [Filter(eq;like)] 
-| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group.[Required] [Default(5)] [Filter(eq)] 
-| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file.[Filter(like)] 
-| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed.[Required] [Default(&quot;COM&quot;)] [Filter(eq)] 
+| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters.`Required` `Filter(eq;like)` 
+| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence.`Required` `Filter(eq;like)` 
+| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person.`Required` `Filter(eq;like)` 
+| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries.`Required` `Filter(eq;like)` 
+| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group.`Required` `Default(5)` `Filter(eq)` 
+| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file.`Filter(like)` 
+| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed.`Required` `Default(&quot;COM&quot;)` `Filter(eq)` 
 
 ## References
 
@@ -77,7 +77,7 @@ Aggregate Root:
 
 ### ContactPerson
 
-Contact person for SAF-T-related matters.[Required] [Filter(eq;like)]
+Contact person for SAF-T-related matters.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonEmail
 
-Email address for SAF-T correspondence.[Required] [Filter(eq;like)]
+Email address for SAF-T correspondence.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonJobTitle
 
-Official job title of the contact person.[Required] [Filter(eq;like)]
+Official job title of the contact person.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -110,7 +110,7 @@ Show in UI: **ShownByDefault**
 
 ### ContactPersonPhone
 
-Phone number for inquiries.[Required] [Filter(eq;like)]
+Phone number for inquiries.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### IsPartOfGroup
 
-Indicate whether the company is part of a group.[Required] [Default(5)] [Filter(eq)]
+Indicate whether the company is part of a group.`Required` `Default(5)` `Filter(eq)`
 
 Type: **[IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup)**  
 Category: **System**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Internal notes, not included in the SAF-T file.[Filter(like)]
+Internal notes, not included in the SAF-T file.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -154,7 +154,7 @@ Show in UI: **ShownByDefault**
 
 ### TaxAccountingBasis
 
-Accounting basis: accrual, cash, or mixed.[Required] [Default(&quot;COM&quot;)] [Filter(eq)]
+Accounting basis: accrual, cash, or mixed.`Required` `Default(&quot;COM&quot;)` `Filter(eq)`
 
 Type: **[TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis)**  
 Category: **System**  

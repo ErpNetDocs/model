@@ -34,9 +34,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation.[Unit: QuantityUnit] [Required] [Default(0)] 
-| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation.[Unit: QuantityUnit] [Required] [Default(0)] 
-| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation.[Unit: QuantityUnit] [Required] [Default(0)] 
+| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation.`Unit: QuantityUnit` `Required` `Default(0)` 
+| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation.`Unit: QuantityUnit` `Required` `Default(0)` 
+| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation.`Unit: QuantityUnit` `Required` `Default(0)` 
 | [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
 | [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. 
 
@@ -67,7 +67,7 @@ Aggregate Root:
 
 ### ConsumedQuantityForRun
 
-The consumed quantity of the material for the operation.[Unit: QuantityUnit] [Required] [Default(0)]
+The consumed quantity of the material for the operation.`Unit: QuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantityForScrap
 
-The scrapped quantity of the material for this operation.[Unit: QuantityUnit] [Required] [Default(0)]
+The scrapped quantity of the material for this operation.`Unit: QuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### ConsumedQuantityForSetup
 
-The consumed quantity of the material while setting up the operation.[Unit: QuantityUnit] [Required] [Default(0)]
+The consumed quantity of the material while setting up the operation.`Unit: QuantityUnit` `Required` `Default(0)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  

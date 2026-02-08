@@ -35,12 +35,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.DataWarehouse.DataMeasures.md#code) | string (16) | Unique measure code.[Required] [Filter(eq;like)] [ORD] 
-| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal (3, 2) | The plus or minus percent, by which the goal can be missed, but still considered achieved.[Required] [Default(0.2)] [Filter(eq)] 
-| [HorizontalTrend<br />SpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal (3, 2) | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.[Required] [Default(0.01)] [Filter(eq)] 
-| [Name](Applications.DataWarehouse.DataMeasures.md#name) | string (254) | The name of the measure (multilanguage).[Required] [Filter(eq;like)] 
+| [Code](Applications.DataWarehouse.DataMeasures.md#code) | string (16) | Unique measure code.`Required` `Filter(eq;like)` `ORD` 
+| [GreenZoneSpreadPercent](Applications.DataWarehouse.DataMeasures.md#greenzonespreadpercent) | decimal (3, 2) | The plus or minus percent, by which the goal can be missed, but still considered achieved.`Required` `Default(0.2)` `Filter(eq)` 
+| [HorizontalTrend<br />SpreadPercent](Applications.DataWarehouse.DataMeasures.md#horizontaltrendspreadpercent) | decimal (3, 2) | The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.`Required` `Default(0.01)` `Filter(eq)` 
+| [Name](Applications.DataWarehouse.DataMeasures.md#name) | string (254) | The name of the measure (multilanguage).`Required` `Filter(eq;like)` 
 | [Notes](Applications.DataWarehouse.DataMeasures.md#notes) | string (max) __nullable__ | Notes for this DataMeasure. 
-| [Period](Applications.DataWarehouse.DataMeasures.md#period) | [Period](Applications.DataWarehouse.DataMeasures.md#period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.[Required] [Default(&quot;Q&quot;)] [Filter(eq)] 
+| [Period](Applications.DataWarehouse.DataMeasures.md#period) | [Period](Applications.DataWarehouse.DataMeasures.md#period) | The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.`Required` `Default(&quot;Q&quot;)` `Filter(eq)` 
 
 ## References
 
@@ -65,7 +65,7 @@ Aggregate Tree
 
 ### Code
 
-Unique measure code.[Required] [Filter(eq;like)] [ORD]
+Unique measure code.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -77,7 +77,7 @@ Show in UI: **ShownByDefault**
 
 ### GreenZoneSpreadPercent
 
-The plus or minus percent, by which the goal can be missed, but still considered achieved.[Required] [Default(0.2)] [Filter(eq)]
+The plus or minus percent, by which the goal can be missed, but still considered achieved.`Required` `Default(0.2)` `Filter(eq)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### HorizontalTrendSpreadPercent
 
-The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.[Required] [Default(0.01)] [Filter(eq)]
+The change in percents, which is considered neutral. Higher positive/negative changes are considered positive/negative trends.`Required` `Default(0.01)` `Filter(eq)`
 
 Type: **decimal (3, 2)**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the measure (multilanguage).[Required] [Filter(eq;like)]
+The name of the measure (multilanguage).`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -121,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### Period
 
-The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.[Required] [Default(&quot;Q&quot;)] [Filter(eq)]
+The period for which the data is collected. D=Day, M=Month, Q=Quarter, Y=Year.`Required` `Default(&quot;Q&quot;)` `Filter(eq)`
 
 Type: **[Period](Applications.DataWarehouse.DataMeasures.md#period)**  
 Category: **System**  

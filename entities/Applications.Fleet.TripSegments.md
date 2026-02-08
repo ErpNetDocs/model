@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime __nullable__ | The ending date and time of the travel on the segment[Filter(ge;le)] 
+| [EndingTimestamp](Applications.Fleet.TripSegments.md#endingtimestamp) | datetime __nullable__ | The ending date and time of the travel on the segment`Filter(ge;le)` 
 | [Mileage](Applications.Fleet.TripSegments.md#mileage) | decimal (9, 0) __nullable__ | Mileage of the route segment. The mileage is measured in the operational units of the vehicle even when it is not miles or kilometers. NULL means unknown mileage 
 | [Notes](Applications.Fleet.TripSegments.md#notes) | string (254) __nullable__ | Notes for the segment 
-| [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment[Required] [Filter(ge;le)] 
+| [StartingTimestamp](Applications.Fleet.TripSegments.md#startingtimestamp) | datetime | The starting date and time of the travel on the segment`Required` `Filter(ge;le)` 
 
 ## References
 
@@ -62,7 +62,7 @@ Aggregate Root:
 
 ### EndingTimestamp
 
-The ending date and time of the travel on the segment[Filter(ge;le)]
+The ending date and time of the travel on the segment`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 ### StartingTimestamp
 
-The starting date and time of the travel on the segment[Required] [Filter(ge;le)]
+The starting date and time of the travel on the segment`Required` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  

@@ -35,19 +35,19 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CanAdminister](Systems.Security.GroupAccessKeys.md#canadminister) | boolean | When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.[Required] [Default(false)] 
-| [CanDelete](Systems.Security.GroupAccessKeys.md#candelete) | boolean | When true, the group is granted with delete permission for the entity, protected by the access key.[Required] 
-| [CanUpdate](Systems.Security.GroupAccessKeys.md#canupdate) | boolean | When true, the group is granted with update permission for the entity, protected by the access key.[Required] 
-| [Permission1](Systems.Security.GroupAccessKeys.md#permission1) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission10](Systems.Security.GroupAccessKeys.md#permission10) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission2](Systems.Security.GroupAccessKeys.md#permission2) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission3](Systems.Security.GroupAccessKeys.md#permission3) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission4](Systems.Security.GroupAccessKeys.md#permission4) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission5](Systems.Security.GroupAccessKeys.md#permission5) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission6](Systems.Security.GroupAccessKeys.md#permission6) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission7](Systems.Security.GroupAccessKeys.md#permission7) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission8](Systems.Security.GroupAccessKeys.md#permission8) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
-| [Permission9](Systems.Security.GroupAccessKeys.md#permission9) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)] 
+| [CanAdminister](Systems.Security.GroupAccessKeys.md#canadminister) | boolean | When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.`Required` `Default(false)` 
+| [CanDelete](Systems.Security.GroupAccessKeys.md#candelete) | boolean | When true, the group is granted with delete permission for the entity, protected by the access key.`Required` 
+| [CanUpdate](Systems.Security.GroupAccessKeys.md#canupdate) | boolean | When true, the group is granted with update permission for the entity, protected by the access key.`Required` 
+| [Permission1](Systems.Security.GroupAccessKeys.md#permission1) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission10](Systems.Security.GroupAccessKeys.md#permission10) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission2](Systems.Security.GroupAccessKeys.md#permission2) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission3](Systems.Security.GroupAccessKeys.md#permission3) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission4](Systems.Security.GroupAccessKeys.md#permission4) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission5](Systems.Security.GroupAccessKeys.md#permission5) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission6](Systems.Security.GroupAccessKeys.md#permission6) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission7](Systems.Security.GroupAccessKeys.md#permission7) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission8](Systems.Security.GroupAccessKeys.md#permission8) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
+| [Permission9](Systems.Security.GroupAccessKeys.md#permission9) | boolean | When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)` 
 
 ## References
 
@@ -70,7 +70,7 @@ Aggregate Root:
 
 ### CanAdminister
 
-When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with administrative permission (allowance to change access key) for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### CanDelete
 
-When true, the group is granted with delete permission for the entity, protected by the access key.[Required]
+When true, the group is granted with delete permission for the entity, protected by the access key.`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### CanUpdate
 
-When true, the group is granted with update permission for the entity, protected by the access key.[Required]
+When true, the group is granted with update permission for the entity, protected by the access key.`Required`
 
 Type: **boolean**  
 Category: **System**  
@@ -101,7 +101,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission1
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission10
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission2
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -134,7 +134,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission3
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission4
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission5
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -167,7 +167,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission6
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -178,7 +178,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission7
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -189,7 +189,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission8
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -200,7 +200,7 @@ Show in UI: **ShownByDefault**
 
 ### Permission9
 
-When true, the group is granted with entity-specific permission for the entity, protected by the access key.[Required] [Default(false)]
+When true, the group is granted with entity-specific permission for the entity, protected by the access key.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

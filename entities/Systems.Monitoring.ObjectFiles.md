@@ -37,18 +37,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvgFileSizeMB](Systems.Monitoring.ObjectFiles.md#avgfilesizemb) | decimal (12, 3) | Average file size in megabytes[Required] [Filter(eq;ge;le)] [ORD] 
-| [EntityType](Systems.Monitoring.ObjectFiles.md#entitytype) | string (64) | The entity type to which the files are bound[Required] [Filter(eq;like)] [ORD] 
-| [FilesCount](Systems.Monitoring.ObjectFiles.md#filescount) | int32 | Total number of files[Required] [Filter(eq;ge;le)] [ORD] 
-| [TotalSizeMB](Systems.Monitoring.ObjectFiles.md#totalsizemb) | decimal (12, 3) | Total size of the files in megabytes[Required] [Filter(eq;ge;le)] [ORD] 
-| [Year](Systems.Monitoring.ObjectFiles.md#year) | string (30) | Year of files creation[Required] [Filter(eq;like)] [ORD] 
+| [AvgFileSizeMB](Systems.Monitoring.ObjectFiles.md#avgfilesizemb) | decimal (12, 3) | Average file size in megabytes`Required` `Filter(eq;ge;le)` `ORD` 
+| [EntityType](Systems.Monitoring.ObjectFiles.md#entitytype) | string (64) | The entity type to which the files are bound`Required` `Filter(eq;like)` `ORD` 
+| [FilesCount](Systems.Monitoring.ObjectFiles.md#filescount) | int32 | Total number of files`Required` `Filter(eq;ge;le)` `ORD` 
+| [TotalSizeMB](Systems.Monitoring.ObjectFiles.md#totalsizemb) | decimal (12, 3) | Total size of the files in megabytes`Required` `Filter(eq;ge;le)` `ORD` 
+| [Year](Systems.Monitoring.ObjectFiles.md#year) | string (30) | Year of files creation`Required` `Filter(eq;like)` `ORD` 
 
 
 ## Attribute Details
 
 ### AvgFileSizeMB
 
-Average file size in megabytes[Required] [Filter(eq;ge;le)] [ORD]
+Average file size in megabytes`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -58,7 +58,7 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-The entity type to which the files are bound[Required] [Filter(eq;like)] [ORD]
+The entity type to which the files are bound`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### FilesCount
 
-Total number of files[Required] [Filter(eq;ge;le)] [ORD]
+Total number of files`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **int32**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### TotalSizeMB
 
-Total size of the files in megabytes[Required] [Filter(eq;ge;le)] [ORD]
+Total size of the files in megabytes`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **decimal (12, 3)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### Year
 
-Year of files creation[Required] [Filter(eq;like)] [ORD]
+Year of files creation`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (30)**  
 Category: **System**  

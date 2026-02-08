@@ -41,11 +41,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommodityCodeField](Regulatory.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature[Required] [Filter(eq;like)] [ORD] 
-| [Description](Regulatory.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature[Required] [Filter(like)] 
-| [SupplementaryUnit](Regulatory.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations[Required] 
-| [ValidFrom](Regulatory.Intrastat.CommodityCodes.md#validfrom) | date __nullable__ | The starting date of validity of this code.[Filter(ge;le)] 
-| [ValidTo](Regulatory.Intrastat.CommodityCodes.md#validto) | date __nullable__ | The ending date of validity of this code.[Filter(ge;le)] 
+| [CommodityCodeField](Regulatory.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature`Required` `Filter(eq;like)` `ORD` 
+| [Description](Regulatory.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature`Required` `Filter(like)` 
+| [SupplementaryUnit](Regulatory.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations`Required` 
+| [ValidFrom](Regulatory.Intrastat.CommodityCodes.md#validfrom) | date __nullable__ | The starting date of validity of this code.`Filter(ge;le)` 
+| [ValidTo](Regulatory.Intrastat.CommodityCodes.md#validto) | date __nullable__ | The ending date of validity of this code.`Filter(ge;le)` 
 
 
 ## System Attributes
@@ -64,7 +64,7 @@ Aggregate Tree
 
 ### CommodityCodeField
 
-Product code from the Intrastat Combined nomenclature[Required] [Filter(eq;like)] [ORD]
+Product code from the Intrastat Combined nomenclature`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (8)**  
 Indexed: **True**  
@@ -76,7 +76,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description of the product code from the Intrastat Combined nomenclature[Required] [Filter(like)]
+Description of the product code from the Intrastat Combined nomenclature`Required` `Filter(like)`
 
 Type: **[MultilanguageString (4000)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### SupplementaryUnit
 
-If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations[Required]
+If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations`Required`
 
 Type: **string (16)**  
 Category: **System**  
@@ -97,7 +97,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidFrom
 
-The starting date of validity of this code.[Filter(ge;le)]
+The starting date of validity of this code.`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -107,7 +107,7 @@ Show in UI: **ShownByDefault**
 
 ### ValidTo
 
-The ending date of validity of this code.[Filter(ge;le)]
+The ending date of validity of this code.`Filter(ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

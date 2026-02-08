@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry.[Filter(like)] 
+| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry.`Filter(like)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional information or comments for this entry.[Filter(like)]
+Additional information or comments for this entry.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (32) __nullable__ | The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.[Filter(multi eq;like)] 
-| [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.[Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)] 
-| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.[Filter(multi eq;like)] 
-| [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records.[Required] [Default(true)] [Filter(multi eq)] 
+| [DeviceRegistrationNo](Crm.Pos.Devices.md#deviceregistrationno) | string (32) __nullable__ | The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.`Filter(multi eq;like)` 
+| [DeviceType](Crm.Pos.Devices.md#devicetype) | [DeviceType](Crm.Pos.Devices.md#devicetype) | Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.`Required` `Default(&quot;OTH&quot;)` `Filter(multi eq)` 
+| [ElectronicAddress](Crm.Pos.Devices.md#electronicaddress) | string (254) __nullable__ | The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.`Filter(multi eq;like)` 
+| [IsActive](Crm.Pos.Devices.md#isactive) | boolean | Indicates whether the device is currently active and can be choosen from drop-downs in new records.`Required` `Default(true)` `Filter(multi eq)` 
 | [ProtocolName](Crm.Pos.Devices.md#protocolname) | [ProtocolName](Crm.Pos.Devices.md#protocolname) __nullable__ | The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed. 
 | [SettingsJson](Crm.Pos.Devices.md#settingsjson) | string (max) __nullable__ | Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device. 
 
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### DeviceRegistrationNo
 
-The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.[Filter(multi eq;like)]
+The unique registration number of the device, assigned by the manufacturer. NULL means the number is unknown or N/A.`Filter(multi eq;like)`
 
 Type: **string (32) __nullable__**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### DeviceType
 
-Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.[Required] [Default(&quot;OTH&quot;)] [Filter(multi eq)]
+Type of the POS device. PAY=Payment Terminal; CSH=Cash Drawer; FIP=Fiscal Printer; OTH=Other.`Required` `Default(&quot;OTH&quot;)` `Filter(multi eq)`
 
 Type: **[DeviceType](Crm.Pos.Devices.md#devicetype)**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### ElectronicAddress
 
-The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.[Filter(multi eq;like)]
+The absolute address (Internet or other) which can be used for electronic communication with the device. The address should contain communication protocol/type, colon, space, then the actual address. Addresses, which are local to a specific computer, should also include the computer name. For example: "COM: PC_WORK1:COM1", "HTTP: https://<addr>", etc.`Filter(multi eq;like)`
 
 Type: **string (254) __nullable__**  
 Category: **System**  
@@ -106,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether the device is currently active and can be choosen from drop-downs in new records.[Required] [Default(true)] [Filter(multi eq)]
+Indicates whether the device is currently active and can be choosen from drop-downs in new records.`Required` `Default(true)` `Filter(multi eq)`
 
 Type: **boolean**  
 Category: **System**  

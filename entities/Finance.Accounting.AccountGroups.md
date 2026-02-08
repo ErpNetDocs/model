@@ -35,10 +35,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Description](Finance.Accounting.AccountGroups.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The description of this AccountGroup. 
-| [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | 1 means that the account group won't be used any more and should not appear in combo boxes[Required] [Default(false)] [Filter(eq)] 
-| [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (256) __nullable__ | Full path to the group. Contains delimited list of group numbers of parent groups[Filter(like)] 
-| [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString (160)](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group[Required] [Filter(like)] 
-| [Number](Finance.Accounting.AccountGroups.md#number) | string (30) | Unique account group number. May contain characters, if required[Required] [Filter(like)] [ORD] 
+| [Discontinued](Finance.Accounting.AccountGroups.md#discontinued) | boolean | 1 means that the account group won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)` 
+| [FullPath](Finance.Accounting.AccountGroups.md#fullpath) | string (256) __nullable__ | Full path to the group. Contains delimited list of group numbers of parent groups`Filter(like)` 
+| [Name](Finance.Accounting.AccountGroups.md#name) | [MultilanguageString (160)](../data-types.md#multilanguagestring) | Account group name, required. Must be unique within the parent group`Required` `Filter(like)` 
+| [Number](Finance.Accounting.AccountGroups.md#number) | string (30) | Unique account group number. May contain characters, if required`Required` `Filter(like)` `ORD` 
 
 ## References
 
@@ -73,7 +73,7 @@ Show in UI: **ShownByDefault**
 
 ### Discontinued
 
-1 means that the account group won't be used any more and should not appear in combo boxes[Required] [Default(false)] [Filter(eq)]
+1 means that the account group won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -84,7 +84,7 @@ Show in UI: **ShownByDefault**
 
 ### FullPath
 
-Full path to the group. Contains delimited list of group numbers of parent groups[Filter(like)]
+Full path to the group. Contains delimited list of group numbers of parent groups`Filter(like)`
 
 Type: **string (256) __nullable__**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **CannotBeShown**
 
 ### Name
 
-Account group name, required. Must be unique within the parent group[Required] [Filter(like)]
+Account group name, required. Must be unique within the parent group`Required` `Filter(like)`
 
 Type: **[MultilanguageString (160)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-Unique account group number. May contain characters, if required[Required] [Filter(like)] [ORD]
+Unique account group number. May contain characters, if required`Required` `Filter(like)` `ORD`
 
 Type: **string (30)**  
 Indexed: **True**  

@@ -45,7 +45,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](General.Activities.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.[Required] [Default(1)] 
+| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)` 
 
 ## References
 
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### ResourceUsagePercent
 
-The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.[Required] [Default(1)]
+The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)`
 
 Type: **decimal (18, 4)**  
 Category: **System**  

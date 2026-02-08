@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments.[Filter(like)] 
+| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments.`Filter(like)` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### Notes
 
-Additional information or comments.[Filter(like)]
+Additional information or comments.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  

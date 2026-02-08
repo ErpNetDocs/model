@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ResetTransactions<br />StateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.[Required] [Default(false)] [Filter(eq)] 
-| [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#scheduledocumentevents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession.[Required] [Default(false)] 
+| [ResetTransactions<br />StateOnReleasing](Logistics.Inventory.CostCorrectionsOptions.md#resettransactionsstateonreleasing) | boolean | When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.`Required` `Default(false)` `Filter(eq)` 
+| [ScheduleDocumentEvents](Logistics.Inventory.CostCorrectionsOptions.md#scheduledocumentevents) | boolean | Indicates wheather the document events caused by the cost correction should be scheduled for later procession.`Required` `Default(false)` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### ResetTransactionsStateOnReleasing
 
-When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.[Required] [Default(false)] [Filter(eq)]
+When true, the stock transactions state are re-set when the cost correction is released. The idea is to notify these documents, so that they have chance to re-generate their sub-documents.`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -69,7 +69,7 @@ Show in UI: **ShownByDefault**
 
 ### ScheduleDocumentEvents
 
-Indicates wheather the document events caused by the cost correction should be scheduled for later procession.[Required] [Default(false)]
+Indicates wheather the document events caused by the cost correction should be scheduled for later procession.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

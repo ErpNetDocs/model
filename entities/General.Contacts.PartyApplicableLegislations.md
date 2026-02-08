@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.[Required] [Filter(multi eq)] [ORD] 
+| [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.`Required` `Filter(multi eq)` `ORD` 
 | [Notes](General.Contacts.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` 
 
 ## References
@@ -68,7 +68,7 @@ Aggregate Root:
 
 ### ApplicableLegislation
 
-A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.[Required] [Filter(multi eq)] [ORD]
+A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.`Required` `Filter(multi eq)` `ORD`
 
 Type: **[ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation)**  
 Category: **System**  

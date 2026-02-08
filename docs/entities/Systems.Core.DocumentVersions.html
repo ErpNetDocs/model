@@ -125,37 +125,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#documentdata">DocumentData</a></td>
 <td>byte[] <strong>nullable</strong></td>
-<td>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).[ReadOnly]</td>
+<td>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).<code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#documentdataformat">DocumentDataFormat</a></td>
 <td>string (1)</td>
-<td>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.[Required] [Default(&quot;U&quot;)] [ReadOnly]</td>
+<td>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.<code>Required</code> <code>Default(&amp;quot;U&amp;quot;)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#documentdataxml">DocumentDataXML</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).[ReadOnly]</td>
+<td>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).<code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#state">State</a></td>
 <td><a href="Systems.Core.DocumentVersions.html#state">State</a></td>
-<td>The state of the document by the time it was saved[Required] [Default(0)] [Filter(multi eq)] [ReadOnly]</td>
+<td>The state of the document by the time it was saved<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#updatetime">UpdateTime</a></td>
 <td>datetime</td>
-<td>The date and time when this version was saved[Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</td>
+<td>The date and time when this version was saved<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#updateuser">UpdateUser</a></td>
 <td>string (64)</td>
-<td>The login name of the user that saved this version[Required] [Filter(eq;like)] [ReadOnly]</td>
+<td>The login name of the user that saved this version<code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.DocumentVersions.html#version">Version</a></td>
 <td>int32</td>
-<td>The version number that is stored in this row[Required] [Filter(eq;ge;le)] [ReadOnly]</td>
+<td>The version number that is stored in this row<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -220,14 +220,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdata">DocumentData</h3>
-<p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).[ReadOnly]</p>
+<p>Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).<code>ReadOnly</code></p>
 <p>Type: <strong>byte[] <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="documentdataformat">DocumentDataFormat</h3>
-<p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.[Required] [Default(&quot;U&quot;)] [ReadOnly]</p>
+<p>The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.<code>Required</code> <code>Default(&amp;quot;U&amp;quot;)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (1)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -236,7 +236,7 @@ Maximum Length: <strong>1</strong><br>
 Default Value: <strong>U</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="documentdataxml">DocumentDataXML</h3>
-<p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).[ReadOnly]</p>
+<p>The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).<code>ReadOnly</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -244,7 +244,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>CannotBeShown</strong></p>
 <h3 id="state">State</h3>
-<p>The state of the document by the time it was saved[Required] [Default(0)] [Filter(multi eq)] [ReadOnly]</p>
+<p>The state of the document by the time it was saved<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Systems.Core.DocumentVersions.html#state">State</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>State</code>(Systems.Core.DocumentVersions.md#state) data attribute<br>
@@ -292,7 +292,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="updatetime">UpdateTime</h3>
-<p>The date and time when this version was saved[Required] [Default(Now)] [Filter(ge;le)] [ORD] [ReadOnly]</p>
+<p>The date and time when this version was saved<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ORD</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -301,7 +301,7 @@ Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="updateuser">UpdateUser</h3>
-<p>The login name of the user that saved this version[Required] [Filter(eq;like)] [ReadOnly]</p>
+<p>The login name of the user that saved this version<code>Required</code> <code>Filter(eq;like)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>string (64)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -309,7 +309,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="version">Version</h3>
-<p>The version number that is stored in this row[Required] [Filter(eq;ge;le)] [ReadOnly]</p>
+<p>The version number that is stored in this row<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

@@ -126,17 +126,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#numberofperiods">NumberOfPeriods</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21]</td>
+<td>Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.<code>Filter(eq;ge;le)</code> <code>Introduced in version 24.1.5.21</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime</td>
-<td>Exact time at which the transaction for the current asset occurs.[Required] [Filter(multi eq;ge;le)]</td>
+<td>Exact time at which the transaction for the current asset occurs.<code>Required</code> <code>Filter(multi eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></td>
 <td><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></td>
-<td>Transaction type for the current asset.[Required] [Filter(multi eq;like)]</td>
+<td>Transaction type for the current asset.<code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
 </tbody>
 </table>
@@ -209,7 +209,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="numberofperiods">NumberOfPeriods</h3>
-<p>Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.[Filter(eq;ge;le)] [Introduced in version 24.1.5.21]</p>
+<p>Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.<code>Filter(eq;ge;le)</code> <code>Introduced in version 24.1.5.21</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -218,14 +218,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.CalculateNumberOfPeriods( obj.RentalAsset, obj.TransactionTimestamp, obj.TransactionType, obj.LeaseContract)</code></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Exact time at which the transaction for the current asset occurs.[Required] [Filter(multi eq;ge;le)]</p>
+<p>Exact time at which the transaction for the current asset occurs.<code>Required</code> <code>Filter(multi eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="transactiontype">TransactionType</h3>
-<p>Transaction type for the current asset.[Required] [Filter(multi eq;like)]</p>
+<p>Transaction type for the current asset.<code>Required</code> <code>Filter(multi eq;like)</code></p>
 <p>Type: <strong><a href="Applications.Rental.TransactionLines.html#transactiontype">TransactionType</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>TransactionType</code>(Applications.Rental.TransactionLines.md#transactiontype) data attribute<br>

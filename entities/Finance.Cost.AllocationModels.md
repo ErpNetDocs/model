@@ -33,7 +33,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name[Required] 
+| [CostAllocationModelName](Finance.Cost.AllocationModels.md#costallocationmodelname) | string (254) | Multilanguage allocation model name`Required` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Tree
 
 ### CostAllocationModelName
 
-Multilanguage allocation model name[Required]
+Multilanguage allocation model name`Required`
 
 Type: **string (254)**  
 Category: **System**  

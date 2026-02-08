@@ -126,32 +126,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#description">Description</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a> <strong>nullable</strong></td>
-<td>Short explanation for this state, visible to users when selected.[Filter(like)] [Introduced in version 26.1.4.39]</td>
+<td>Short explanation for this state, visible to users when selected.<code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#isactive">IsActive</a></td>
 <td>boolean</td>
-<td>Specifies whether the user state can be set to cases.[Required] [Default(true)] [Filter(eq)]</td>
+<td>Specifies whether the user state can be set to cases.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#name">Name</a></td>
 <td><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></td>
-<td>Multi-language name of the user state.[Required] [Filter(eq;like)]</td>
+<td>Multi-language name of the user state.<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#notes">Notes</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Notes[Filter(like)] [Introduced in version 26.1.4.39]</td>
+<td>Notes<code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#ord">Ord</a></td>
 <td>int32</td>
-<td>Unique ordinal position of the state within the system state.[Required] [Filter(eq;ge;le)] [ORD]</td>
+<td>Unique ordinal position of the state within the system state.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></td>
-<td>The system state, which this state extends.[Required] [Filter(multi eq)] [ORD]</td>
+<td>The system state, which this state extends.<code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></td>
 </tr>
 </tbody>
 </table>
@@ -216,14 +216,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="description">Description</h3>
-<p>Short explanation for this state, visible to users when selected.[Filter(like)] [Introduced in version 26.1.4.39]</p>
+<p>Short explanation for this state, visible to users when selected.<code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isactive">IsActive</h3>
-<p>Specifies whether the user state can be set to cases.[Required] [Default(true)] [Filter(eq)]</p>
+<p>Specifies whether the user state can be set to cases.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -231,14 +231,14 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
-<p>Multi-language name of the user state.[Required] [Filter(eq;like)]</p>
+<p>Multi-language name of the user state.<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (256)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="notes">Notes</h3>
-<p>Notes[Filter(like)] [Introduced in version 26.1.4.39]</p>
+<p>Notes<code>Filter(like)</code> <code>Introduced in version 26.1.4.39</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -246,7 +246,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="ord">Ord</h3>
-<p>Unique ordinal position of the state within the system state.[Required] [Filter(eq;ge;le)] [ORD]</p>
+<p>Unique ordinal position of the state within the system state.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int32</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
@@ -258,7 +258,7 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.SetUserStateOrd( obj.SystemState)</code></p>
 <h3 id="systemstate">SystemState</h3>
-<p>The system state, which this state extends.[Required] [Filter(multi eq)] [ORD]</p>
+<p>The system state, which this state extends.<code>Required</code> <code>Filter(multi eq)</code> <code>ORD</code></p>
 <p>Type: <strong><a href="Projects.Agile.UserStates.html#systemstate">SystemState</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>

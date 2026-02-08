@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type.[Required] 
-| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.[Required] [Default(false)] 
+| [PropertyNo](General.Products.ProductTypePurchaseInvoiceLineProperties.md#propertyno) | int32 | The consecutive number (position) of the property within the current product type.`Required` 
+| [Required](General.Products.ProductTypePurchaseInvoiceLineProperties.md#required) | boolean | True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.`Required` `Default(false)` 
 
 ## References
 
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### PropertyNo
 
-The consecutive number (position) of the property within the current product type.[Required]
+The consecutive number (position) of the property within the current product type.`Required`
 
 Type: **int32**  
 Category: **System**  
@@ -74,7 +74,7 @@ Front-End Recalc Expressions:
 `( obj.ProductType.PurchaseInvoiceLineProperties.Select( c => c.PropertyNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Required
 
-True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.[Required] [Default(false)]
+True when the property is required, when creating new purchase invoice lines. False when this only suggests the usage of the property.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

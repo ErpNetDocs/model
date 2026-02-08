@@ -35,9 +35,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service.[Required] [Filter(eq;like)] [ORD] 
-| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates whether this service is currently used.[Required] [Default(true)] [Filter(eq)] 
-| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service.[Required] [Filter(eq;like)] 
+| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service.`Required` `Filter(eq;like)` `ORD` 
+| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates whether this service is currently used.`Required` `Default(true)` `Filter(eq)` 
+| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service.`Required` `Filter(eq;like)` 
 
 ## References
 
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### Code
 
-Unique code of the service.[Required] [Filter(eq;like)] [ORD]
+Unique code of the service.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (16)**  
 Indexed: **True**  
@@ -84,7 +84,7 @@ Back-End Default Expression:
 
 ### IsActive
 
-Indicates whether this service is currently used.[Required] [Default(true)] [Filter(eq)]
+Indicates whether this service is currently used.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -95,7 +95,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the service.[Required] [Filter(eq;like)]
+The name of the service.`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  

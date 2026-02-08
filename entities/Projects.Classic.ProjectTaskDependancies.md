@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)[Required] [Default(&quot;FS&quot;)] 
+| [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | [DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype) | FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)`Required` `Default(&quot;FS&quot;)` 
 
 ## References
 
@@ -58,7 +58,7 @@ Aggregate Root:
 
 ### DependancyType
 
-FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)[Required] [Default(&quot;FS&quot;)]
+FS=Finish-to-Start;SS=Start-to-Start;FF=Finish-to-Finish;SF=Start-to-Finish;SY=Sync (all types in the same time)`Required` `Default(&quot;FS&quot;)`
 
 Type: **[DependancyType](Projects.Classic.ProjectTaskDependancies.md#dependancytype)**  
 Category: **System**  

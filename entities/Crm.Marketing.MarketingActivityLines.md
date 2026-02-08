@@ -36,12 +36,12 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CompetitorPrice](Crm.Marketing.MarketingActivityLines.md#competitorprice) | decimal (15, 5) __nullable__ | Price of the competitor 
-| [InStoreAvailableQuantity](Crm.Marketing.MarketingActivityLines.md#instoreavailablequantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | The quantity found in store (in Quantity Unit). NULL means that count was not performed.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)] 
+| [InStoreAvailableQuantity](Crm.Marketing.MarketingActivityLines.md#instoreavailablequantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | The quantity found in store (in Quantity Unit). NULL means that count was not performed.`Unit: OrderQuantityUnit` `Filter(eq;ge;le)` 
 | [InStoreLocation](Crm.Marketing.MarketingActivityLines.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. 
-| [InStorePrice](Crm.Marketing.MarketingActivityLines.md#instoreprice) | decimal (15, 5) __nullable__ | Price displayed in store.[Filter(eq;ge;le)] 
-| [LineNo](Crm.Marketing.MarketingActivityLines.md#lineno) | int32 | Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)] 
+| [InStorePrice](Crm.Marketing.MarketingActivityLines.md#instoreprice) | decimal (15, 5) __nullable__ | Price displayed in store.`Filter(eq;ge;le)` 
+| [LineNo](Crm.Marketing.MarketingActivityLines.md#lineno) | int32 | Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required` `Filter(eq)` 
 | [Notes](Crm.Marketing.MarketingActivityLines.md#notes) | string (max) __nullable__ | Notes for this MarketingActivityLine. 
-| [OrderQuantity](Crm.Marketing.MarketingActivityLines.md#orderquantity) | [Quantity (15, 3)](../data-types.md#quantity) __nullable__ | Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)] 
+| [OrderQuantity](Crm.Marketing.MarketingActivityLines.md#orderquantity) | [Quantity (15, 3)](../data-types.md#quantity) __nullable__ | Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.`Unit: OrderQuantityUnit` `Filter(eq;ge;le)` 
 
 ## References
 
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### InStoreAvailableQuantity
 
-The quantity found in store (in Quantity Unit). NULL means that count was not performed.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]
+The quantity found in store (in Quantity Unit). NULL means that count was not performed.`Unit: OrderQuantityUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 
 ### InStorePrice
 
-Price displayed in store.[Filter(eq;ge;le)]
+Price displayed in store.`Filter(eq;ge;le)`
 
 Type: **decimal (15, 5) __nullable__**  
 Category: **System**  
@@ -109,7 +109,7 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.[Required] [Filter(eq)]
+Consecutive line number, unique within the marketing activity. Usually is increasing in steps of 10, like in 10, 20, 30, etc.`Required` `Filter(eq)`
 
 Type: **int32**  
 Category: **System**  
@@ -135,7 +135,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderQuantity
 
-Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.[Unit: OrderQuantityUnit] [Filter(eq;ge;le)]
+Recommended quantity (in Quantity Unit) for  new order as a result of the marketing activity. NULL means that there is no specific recommendation.`Unit: OrderQuantityUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (15, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  

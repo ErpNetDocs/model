@@ -56,7 +56,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccrueExciseDuty](Regulatory.Excise.ExciseAdministrativeDocuments.md#accrueexciseduty) | boolean | Accrue Excise Duty[Required] [Default(false)] [Filter(eq)] [Introduced in version 22.1.5.62] 
+| [AccrueExciseDuty](Regulatory.Excise.ExciseAdministrativeDocuments.md#accrueexciseduty) | boolean | Accrue Excise Duty`Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62` 
 | [AdjustmentNumber](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [AdjustmentUser](Regulatory.Excise.ExciseAdministrativeDocuments.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -64,14 +64,14 @@ Aggregate Tree
 | [CompleteTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationTime](Regulatory.Excise.ExciseAdministrativeDocuments.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [CreationUser](Regulatory.Excise.ExciseAdministrativeDocuments.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [Direction](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | [MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | Indicates whether the document is Receipt or Issue of the Tax Wharehouse[Required] [Default(&quot;I&quot;)] [Filter(multi eq)] [Introduced in version 22.1.5.53] 
+| [Direction](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | [MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction) | Indicates whether the document is Receipt or Issue of the Tax Wharehouse`Required` `Default(&quot;I&quot;)` `Filter(multi eq)` `Introduced in version 22.1.5.53` 
 | [DocumentDate](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentVersion](Regulatory.Excise.ExciseAdministrativeDocuments.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Regulatory.Excise.ExciseAdministrativeDocuments.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Regulatory.Excise.ExciseAdministrativeDocuments.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
-| [IsDeferredSubmission](Regulatory.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document.[Required] [Default(false)] 
+| [IsDeferredSubmission](Regulatory.Excise.ExciseAdministrativeDocuments.md#isdeferredsubmission) | boolean | Indicates whether the movement has begun under the cover of a paper administrative document.`Required` `Default(false)` 
 | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Excise.ExciseAdministrativeDocuments.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [PlanningOnly](Regulatory.Excise.ExciseAdministrativeDocuments.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Regulatory.Excise.ExciseAdministrativeDocuments.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -147,7 +147,7 @@ Aggregate Tree
 
 ### AccrueExciseDuty
 
-Accrue Excise Duty[Required] [Default(false)] [Filter(eq)] [Introduced in version 22.1.5.62]
+Accrue Excise Duty`Required` `Default(false)` `Filter(eq)` `Introduced in version 22.1.5.62`
 
 Type: **boolean**  
 Category: **System**  
@@ -233,7 +233,7 @@ Show in UI: **HiddenByDefault**
 
 ### Direction
 
-Indicates whether the document is Receipt or Issue of the Tax Wharehouse[Required] [Default(&quot;I&quot;)] [Filter(multi eq)] [Introduced in version 22.1.5.53]
+Indicates whether the document is Receipt or Issue of the Tax Wharehouse`Required` `Default(&quot;I&quot;)` `Filter(multi eq)` `Introduced in version 22.1.5.53`
 
 Type: **[MovementType](Regulatory.Excise.ExciseAdministrativeDocuments.md#direction)**  
 Category: **System**  
@@ -320,7 +320,7 @@ Show in UI: **HiddenByDefault**
 
 ### IsDeferredSubmission
 
-Indicates whether the movement has begun under the cover of a paper administrative document.[Required] [Default(false)]
+Indicates whether the movement has begun under the cover of a paper administrative document.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  

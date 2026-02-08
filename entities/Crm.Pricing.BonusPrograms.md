@@ -43,23 +43,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Pricing.BonusPrograms.md#active) | boolean __nullable__ | General condition if the bonus is active. The other conditions are verified only for active bonus programs[Default(true)] [Filter(eq)] 
-| [BonusAction](Crm.Pricing.BonusPrograms.md#bonusaction) | [BonusAction](Crm.Pricing.BonusPrograms.md#bonusaction) | If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.[Required] [Default(&quot;D&quot;)] [Filter(multi eq)] 
+| [Active](Crm.Pricing.BonusPrograms.md#active) | boolean __nullable__ | General condition if the bonus is active. The other conditions are verified only for active bonus programs`Default(true)` `Filter(eq)` 
+| [BonusAction](Crm.Pricing.BonusPrograms.md#bonusaction) | [BonusAction](Crm.Pricing.BonusPrograms.md#bonusaction) | If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.`Required` `Default(&quot;D&quot;)` `Filter(multi eq)` 
 | [BonusDocumentAmountPercent](Crm.Pricing.BonusPrograms.md#bonusdocumentamountpercent) | decimal (7, 6) __nullable__ | The percent of the document amount that is rewarded. Should be NULL if and only if the bonus document amount is NULL 
-| [BonusLineDiscountPercent](Crm.Pricing.BonusPrograms.md#bonuslinediscountpercent) | decimal (7, 6) | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)[Required] [Default(0)] 
-| [BonusProductQuantity](Crm.Pricing.BonusPrograms.md#bonusproductquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL[Unit: BonusProductQuantityUnit] 
-| [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Pricing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] 
-| [ConditionCustomerFilterXML](Crm.Pricing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties[Unit: Crm.Sales.CustomersRepository.TableName] 
-| [ConditionDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.BonusPrograms.md#conditiondistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics[Unit: Marketing.DistributionChannels<br />Repository.TableName] 
-| [ConditionFromDate](Crm.Pricing.BonusPrograms.md#conditionfromdate) | datetime __nullable__ | Starting date of the bonus. NULL means that there is no starting date restriction[Filter(eq;ge;le)] 
-| [ConditionMaxAmount](Crm.Pricing.BonusPrograms.md#conditionmaxamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
-| [ConditionMaxQuantity](Crm.Pricing.BonusPrograms.md#conditionmaxquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [ConditionMinAmount](Crm.Pricing.BonusPrograms.md#conditionminamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)] 
-| [ConditionMinQuantity](Crm.Pricing.BonusPrograms.md#conditionminquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)] 
-| [ConditionShipTo<br />CustomerFilter<br />XML](Crm.Pricing.BonusPrograms.md#conditionshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics[Unit: Crm.Sales.CustomersRepository.TableName] 
-| [ConditionToDate](Crm.Pricing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction[Filter(eq;ge;le)] 
-| [Name](Crm.Pricing.BonusPrograms.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the bonus program[Required] [Filter(eq;like)] 
-| [Priority](Crm.Pricing.BonusPrograms.md#priority) | [Priority](Crm.Pricing.BonusPrograms.md#priority) | Priority of the bonus program comparative to the other bonus programs.[Required] [Default(2)] [Filter(multi eq)] 
+| [BonusLineDiscountPercent](Crm.Pricing.BonusPrograms.md#bonuslinediscountpercent) | decimal (7, 6) | The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)`Required` `Default(0)` 
+| [BonusProductQuantity](Crm.Pricing.BonusPrograms.md#bonusproductquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL`Unit: BonusProductQuantityUnit` 
+| [BonusProductQuantity<br />MultiplierForEach<br />LotSize](Crm.Pricing.BonusPrograms.md#bonusproductquantitymultiplierforeachlotsize) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` 
+| [ConditionCustomerFilterXML](Crm.Pricing.BonusPrograms.md#conditioncustomerfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties`Unit: Crm.Sales.CustomersRepository.TableName` 
+| [ConditionDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.BonusPrograms.md#conditiondistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics`Unit: Marketing.DistributionChannels<br />Repository.TableName` 
+| [ConditionFromDate](Crm.Pricing.BonusPrograms.md#conditionfromdate) | datetime __nullable__ | Starting date of the bonus. NULL means that there is no starting date restriction`Filter(eq;ge;le)` 
+| [ConditionMaxAmount](Crm.Pricing.BonusPrograms.md#conditionmaxamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus`Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
+| [ConditionMaxQuantity](Crm.Pricing.BonusPrograms.md#conditionmaxquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [ConditionMinAmount](Crm.Pricing.BonusPrograms.md#conditionminamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus`Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)` 
+| [ConditionMinQuantity](Crm.Pricing.BonusPrograms.md#conditionminquantity) | [Quantity (12, 3)](../data-types.md#quantity) __nullable__ | When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
+| [ConditionShipTo<br />CustomerFilter<br />XML](Crm.Pricing.BonusPrograms.md#conditionshiptocustomerfilterxml) | dataaccessfilter __nullable__ | When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics`Unit: Crm.Sales.CustomersRepository.TableName` 
+| [ConditionToDate](Crm.Pricing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction`Filter(eq;ge;le)` 
+| [Name](Crm.Pricing.BonusPrograms.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the bonus program`Required` `Filter(eq;like)` 
+| [Priority](Crm.Pricing.BonusPrograms.md#priority) | [Priority](Crm.Pricing.BonusPrograms.md#priority) | Priority of the bonus program comparative to the other bonus programs.`Required` `Default(2)` `Filter(multi eq)` 
 
 ## References
 
@@ -104,7 +104,7 @@ Aggregate Tree
 
 ### Active
 
-General condition if the bonus is active. The other conditions are verified only for active bonus programs[Default(true)] [Filter(eq)]
+General condition if the bonus is active. The other conditions are verified only for active bonus programs`Default(true)` `Filter(eq)`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -115,7 +115,7 @@ Show in UI: **ShownByDefault**
 
 ### BonusAction
 
-If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.[Required] [Default(&quot;D&quot;)] [Filter(multi eq)]
+If the bonus is a product, then Bonus Product, Bonus Product Quantity and Bonus Product Quantity Unit fields should be filled in. If the bonus is a discount, the Bonus Line Discount Percent should be filled in. Product - add product to the order, Discount – replace the standard discount, Cascade discount - apply after the standard discount.`Required` `Default(&quot;D&quot;)` `Filter(multi eq)`
 
 Type: **[BonusAction](Crm.Pricing.BonusPrograms.md#bonusaction)**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **CannotBeShown**
 
 ### BonusLineDiscountPercent
 
-The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)[Required] [Default(0)]
+The percent discount to be applied to bonus lines. Used only for bonus programs with Action = D (Discount) and Action = C (Cascade discount)`Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  
@@ -156,7 +156,7 @@ Show in UI: **ShownByDefault**
 
 ### BonusProductQuantity
 
-The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL[Unit: BonusProductQuantityUnit]
+The quantity rewarded of the bonus product. Should be not NULL if and only when the bonus product is not NULL`Unit: BonusProductQuantityUnit`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -166,7 +166,7 @@ Show in UI: **ShownByDefault**
 
 ### BonusProductQuantityMultiplierForEachLotSize
 
-When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit]
+When not NULL, specifies that the bonus quantity should be multiplied for each of the specified lot size. Can be non-NULL only when condition product is specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -176,7 +176,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionCustomerFilterXML
 
-When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties[Unit: Crm.Sales.CustomersRepository.TableName]
+When not NULL, specifies that the bonus should be applied only to customers who meet the specified criteria. The criteria could include custom properties`Unit: Crm.Sales.CustomersRepository.TableName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -186,7 +186,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionDistributionChannelFilterXML
 
-When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics[Unit: Marketing.DistributionChannelsRepository.TableName]
+When not NULL, specifies that the bonus should be applied only when the distribution channel of the sales order has the specified characteristics`Unit: Marketing.DistributionChannelsRepository.TableName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -196,7 +196,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionFromDate
 
-Starting date of the bonus. NULL means that there is no starting date restriction[Filter(eq;ge;le)]
+Starting date of the bonus. NULL means that there is no starting date restriction`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -206,7 +206,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionMaxAmount
 
-If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]
+If not NULL specifies the maximal amount for which the bonus is valid. NULL means that there is no maximal amount condition for the bonus`Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -216,7 +216,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionMaxQuantity
 
-When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+When not NULL, specifies condition for the bonus - maximal quantity of the condition product. If the condition product is null, this cannot be specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -226,7 +226,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionMinAmount
 
-If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus[Currency: ConditionDocumentCurrency] [Filter(eq;ge;le)]
+If not NULL specifies the minimal amount for which the bonus is valid. NULL means that there is no minimal amount condition for the bonus`Currency: ConditionDocumentCurrency` `Filter(eq;ge;le)`
 
 Type: **[Amount (12, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
@@ -236,7 +236,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionMinQuantity
 
-When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified[Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit] [Filter(eq;ge;le)]
+When not NULL, specifies condition for the bonus - minimal quantity of the condition product. If the condition product is null, this cannot be specified`Unit: ConditionProduct.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -246,7 +246,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionShipToCustomerFilterXML
 
-When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics[Unit: Crm.Sales.CustomersRepository.TableName]
+When not NULL, specifies that the bonus should be applied only when shipping to customer with the specified characteristics`Unit: Crm.Sales.CustomersRepository.TableName`
 
 Type: **dataaccessfilter __nullable__**  
 Category: **System**  
@@ -256,7 +256,7 @@ Show in UI: **ShownByDefault**
 
 ### ConditionToDate
 
-Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction[Filter(eq;ge;le)]
+Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction`Filter(eq;ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -266,7 +266,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the bonus program[Required] [Filter(eq;like)]
+The name of the bonus program`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -276,7 +276,7 @@ Show in UI: **ShownByDefault**
 
 ### Priority
 
-Priority of the bonus program comparative to the other bonus programs.[Required] [Default(2)] [Filter(multi eq)]
+Priority of the bonus program comparative to the other bonus programs.`Required` `Default(2)` `Filter(multi eq)`
 
 Type: **[Priority](Crm.Pricing.BonusPrograms.md#priority)**  
 Category: **System**  

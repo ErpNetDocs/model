@@ -37,15 +37,15 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [CreationTime](Production.Technologies.Recipes.md#creationtime) | datetime __nullable__ | Date and time when the Recipe was created. `Filter(ge;le)` `ReadOnly` 
 | [CreationUser](Production.Technologies.Recipes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Recipe. `Filter(like)` `ReadOnly` 
-| [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. NULL means that the recipe might still be in use[Filter(ge;le)] 
-| [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date[Required] [Default(false)] [Filter(eq)] 
-| [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.[Required] [Filter(like)] 
+| [ExpiryDate](Production.Technologies.Recipes.md#expirydate) | datetime __nullable__ | The last date, when the recipe should be used. NULL means that the recipe might still be in use`Filter(ge;le)` 
+| [IsDefault](Production.Technologies.Recipes.md#isdefault) | boolean | Default for period: Release_Date - Expiry_Date`Required` `Default(false)` `Filter(eq)` 
+| [Name](Production.Technologies.Recipes.md#name) | string (64) | The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.`Required` `Filter(like)` 
 | [Notes](Production.Technologies.Recipes.md#notes) | string (254) __nullable__ | User comments for the recipe 
-| [Price](Production.Technologies.Recipes.md#price) | [Amount (18, 4)](../data-types.md#amount) | The price for the specified Produce_Quantity[Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount (18, 4)](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base)[Currency: Product.CostingCurrency] [Required] [Default(0)] 
-| [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)] 
-| [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production[Required] [Default(Today)] [Filter(ge;le)] 
-| [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe[Required] [Default(0)] 
+| [Price](Production.Technologies.Recipes.md#price) | [Amount (18, 4)](../data-types.md#amount) | The price for the specified Produce_Quantity`Currency: Product.CostingCurrency` `Required` `Default(0)` 
+| [PricePerLot](Production.Technologies.Recipes.md#priceperlot) | [Amount (18, 4)](../data-types.md#amount) | Price for one lot of the product (according to Lot_Size_Quantity_Base)`Currency: Product.CostingCurrency` `Required` `Default(0)` 
+| [ProduceQuantity](Production.Technologies.Recipes.md#producequantity) | [Quantity (18, 3)](../data-types.md#quantity) | Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)` 
+| [ReleaseDate](Production.Technologies.Recipes.md#releasedate) | datetime | The date, when the recipe was released to production`Required` `Default(Today)` `Filter(ge;le)` 
+| [ScrapRate](Production.Technologies.Recipes.md#scraprate) | decimal (7, 6) | The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe`Required` `Default(0)` 
 | [UpdateTime](Production.Technologies.Recipes.md#updatetime) | datetime __nullable__ | Date and time when the Recipe was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](Production.Technologies.Recipes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Recipe. `Filter(like)` `ReadOnly` 
 
@@ -103,7 +103,7 @@ Show in UI: **HiddenByDefault**
 
 ### ExpiryDate
 
-The last date, when the recipe should be used. NULL means that the recipe might still be in use[Filter(ge;le)]
+The last date, when the recipe should be used. NULL means that the recipe might still be in use`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### IsDefault
 
-Default for period: Release_Date - Expiry_Date[Required] [Default(false)] [Filter(eq)]
+Default for period: Release_Date - Expiry_Date`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -124,7 +124,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.[Required] [Filter(like)]
+The name of the recipe. When there is only 1 recipe, it is often equal to the product name. However, when there are multiple recipes for one product, the name is used for diferentiation.`Required` `Filter(like)`
 
 Type: **string (64)**  
 Category: **System**  
@@ -146,7 +146,7 @@ Show in UI: **ShownByDefault**
 
 ### Price
 
-The price for the specified Produce_Quantity[Currency: Product.CostingCurrency] [Required] [Default(0)]
+The price for the specified Produce_Quantity`Currency: Product.CostingCurrency` `Required` `Default(0)`
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -157,7 +157,7 @@ Show in UI: **ShownByDefault**
 
 ### PricePerLot
 
-Price for one lot of the product (according to Lot_Size_Quantity_Base)[Currency: Product.CostingCurrency] [Required] [Default(0)]
+Price for one lot of the product (according to Lot_Size_Quantity_Base)`Currency: Product.CostingCurrency` `Required` `Default(0)`
 
 Type: **[Amount (18, 4)](../data-types.md#amount)**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### ProduceQuantity
 
-Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(1)]
+Lot size. This is the produced quantity in one production run. The quantity is measured in the primary unit of Product_Id`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(1)`
 
 Type: **[Quantity (18, 3)](../data-types.md#quantity)**  
 Category: **System**  
@@ -179,7 +179,7 @@ Show in UI: **ShownByDefault**
 
 ### ReleaseDate
 
-The date, when the recipe was released to production[Required] [Default(Today)] [Filter(ge;le)]
+The date, when the recipe was released to production`Required` `Default(Today)` `Filter(ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 ### ScrapRate
 
-The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe[Required] [Default(0)]
+The percentage (0..1) of scrap usually occurring during the operation. Specifying this leads to inflated requirements of all raw materials for this recipe`Required` `Default(0)`
 
 Type: **decimal (7, 6)**  
 Category: **System**  

@@ -39,18 +39,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](General.Products.ProductGroups.md#active) | boolean | 1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)] 
+| [Active](General.Products.ProductGroups.md#active) | boolean | 1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents`Required` `Default(true)` `Filter(eq)` 
 | [Code](General.Products.ProductGroups.md#code) | string (16) | The unique code of the ProductGroup. `Required` `Filter(eq;like)` `ORD` 
-| [ConfiguratorCreatesRecipe](General.Products.ProductGroups.md#configuratorcreatesrecipe) | boolean | Whether the product configurator should create one default recipe. 1=yes;0=no[Required] [Default(false)] 
-| [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly[Required] [Default(0)] 
-| [FullPath](General.Products.ProductGroups.md#fullpath) | string (254) | Full tree path in the form /parent/.../leaf/. Contains the group codes.[Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD] 
-| [Name](General.Products.ProductGroups.md#name) | [MultilanguageString (180)](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent[Required] [Filter(eq;like)] 
+| [ConfiguratorCreatesRecipe](General.Products.ProductGroups.md#configuratorcreatesrecipe) | boolean | Whether the product configurator should create one default recipe. 1=yes;0=no`Required` `Default(false)` 
+| [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | [ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus) | Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly`Required` `Default(0)` 
+| [FullPath](General.Products.ProductGroups.md#fullpath) | string (254) | Full tree path in the form /parent/.../leaf/. Contains the group codes.`Required` `Default(&quot;&quot;)` `Filter(eq;like)` `ORD` 
+| [Name](General.Products.ProductGroups.md#name) | [MultilanguageString (180)](../data-types.md#multilanguagestring) | Group name should be unique among the other groups within the same parent`Required` `Filter(eq;like)` 
 | [NextPartNumber](General.Products.ProductGroups.md#nextpartnumber) | string (16) __nullable__ | Contains the next part number to be auto-assigned to parts, created in the group or sub-groups 
-| [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (40) __nullable__ | Next serial number, that should be assigned to new produced items from this group or its subgroups.[Filter(eq;like)] 
+| [NextSerialNumber](General.Products.ProductGroups.md#nextserialnumber) | string (40) __nullable__ | Next serial number, that should be assigned to new produced items from this group or its subgroups.`Filter(eq;like)` 
 | [Notes](General.Products.ProductGroups.md#notes) | string (254) __nullable__ | User notes for the item group 
-| [<s>Parent</s>](General.Products.ProductGroups.md#parent) | string (254) | **OBSOLETE! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.[Obsolete] [Required] [Default(&quot;/&quot;)] [Filter(eq)] [Obsoleted in version 22.1.6.92] 
+| [<s>Parent</s>](General.Products.ProductGroups.md#parent) | string (254) | **OBSOLETE! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.`Obsolete` `Required` `Default(&quot;/&quot;)` `Filter(eq)` `Obsoleted in version 22.1.6.92` 
 | [Picture](General.Products.ProductGroups.md#picture) | byte[] __nullable__ | The picture of the product group 
-| [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture[Filter(ge;le)] [ReadOnly] 
+| [PictureLastUpdateTime](General.Products.ProductGroups.md#picturelastupdatetime) | datetime __nullable__ | Last update time of the Picture`Filter(ge;le)` `ReadOnly` 
 | [ProductDescriptionMask](General.Products.ProductGroups.md#productdescriptionmask) | [MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__ | When not NULL specifies mask for new product descriptions for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes 
 | [ProductNameMask](General.Products.ProductGroups.md#productnamemask) | [MultilanguageString (1000)](../data-types.md#multilanguagestring) __nullable__ | When not NULL specifies mask for new product names for this group and its sub-groups. The mask substitutes {0}..{n} with the appropriate custom attributes 
 | [UseLots](General.Products.ProductGroups.md#uselots) | [UseLots](General.Products.ProductGroups.md#uselots) __nullable__ | Specifies whether for the products from this group and its sub-groups the use of lots in store documents is required or is unallowed or is allowed while not required. 
@@ -90,7 +90,7 @@ Aggregate Tree
 
 ### Active
 
-1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents[Required] [Default(true)] [Filter(eq)]
+1 if the product group is active, 0 - not to list in combo boxes for choosing in new documents`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -116,7 +116,7 @@ Back-End Default Expression:
 
 ### ConfiguratorCreatesRecipe
 
-Whether the product configurator should create one default recipe. 1=yes;0=no[Required] [Default(false)]
+Whether the product configurator should create one default recipe. 1=yes;0=no`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -127,7 +127,7 @@ Show in UI: **ShownByDefault**
 
 ### ConfiguratorStatus
 
-Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly[Required] [Default(0)]
+Usage of product configurator for new products. 0=Product configurator cannot be used to create products in this group;1=The configurator can be used;2=The configurator should be used and products cannot be created directly`Required` `Default(0)`
 
 Type: **[ConfiguratorStatus](General.Products.ProductGroups.md#configuratorstatus)**  
 Category: **System**  
@@ -147,7 +147,7 @@ Show in UI: **ShownByDefault**
 
 ### FullPath
 
-Full tree path in the form /parent/.../leaf/. Contains the group codes.[Required] [Default(&quot;&quot;)] [Filter(eq;like)] [ORD]
+Full tree path in the form /parent/.../leaf/. Contains the group codes.`Required` `Default(&quot;&quot;)` `Filter(eq;like)` `ORD`
 
 Type: **string (254)**  
 Indexed: **True**  
@@ -162,7 +162,7 @@ Front-End Recalc Expressions:
 `Format( "{0}{1}/", IIF( ( obj.ParentGroup != null), obj.ParentGroup.FullPath, "/"), obj.Code)`
 ### Name
 
-Group name should be unique among the other groups within the same parent[Required] [Filter(eq;like)]
+Group name should be unique among the other groups within the same parent`Required` `Filter(eq;like)`
 
 Type: **[MultilanguageString (180)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -183,7 +183,7 @@ Show in UI: **ShownByDefault**
 
 ### NextSerialNumber
 
-Next serial number, that should be assigned to new produced items from this group or its subgroups.[Filter(eq;like)]
+Next serial number, that should be assigned to new produced items from this group or its subgroups.`Filter(eq;like)`
 
 Type: **string (40) __nullable__**  
 Category: **System**  
@@ -205,7 +205,7 @@ Show in UI: **ShownByDefault**
 
 ### Parent
 
-**OBSOLETE! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.[Obsolete] [Required] [Default(&quot;/&quot;)] [Filter(eq)] [Obsoleted in version 22.1.6.92]
+**OBSOLETE! Do not use!** Full tree path of the parent group in the form /parent/.../leaf/. Contains the group codes.`Obsolete` `Required` `Default(&quot;/&quot;)` `Filter(eq)` `Obsoleted in version 22.1.6.92`
 
 Type: **string (254)**  
 Category: **System**  
@@ -232,7 +232,7 @@ Show in UI: **ShownByDefault**
 
 ### PictureLastUpdateTime
 
-Last update time of the Picture[Filter(ge;le)] [ReadOnly]
+Last update time of the Picture`Filter(ge;le)` `ReadOnly`
 
 Type: **datetime __nullable__**  
 Category: **System**  

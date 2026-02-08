@@ -35,13 +35,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string (30) | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number[Required] [Filter(like)] [ReadOnly] 
-| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts.[Required] [Default(&quot;ACB&quot;)] 
+| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string (30) | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number`Required` `Filter(like)` `ReadOnly` 
+| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts.`Required` `Default(&quot;ACB&quot;)` 
 | [Description](Finance.Accounting.Accounts.md#description) | string (254) __nullable__ | The description of this Account. 
-| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | 1 means that the account won't be used any more and should not appear in combo boxes[Required] [Default(false)] [Filter(eq)] 
-| [LimitToBaseCurrency](Finance.Accounting.Accounts.md#limittobasecurrency) | boolean | When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.[Required] [Default(false)] [Filter(eq)] [Introduced in version 26.1.3.78] 
-| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The account name[Required] [Filter(like)] 
-| [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group[Required] [Filter(like)] 
+| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | 1 means that the account won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)` 
+| [LimitToBaseCurrency](Finance.Accounting.Accounts.md#limittobasecurrency) | boolean | When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78` 
+| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The account name`Required` `Filter(like)` 
+| [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group`Required` `Filter(like)` 
 
 ## References
 
@@ -74,7 +74,7 @@ Aggregate Tree
 
 ### AccountFullNumber
 
-The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number[Required] [Filter(like)] [ReadOnly]
+The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number`Required` `Filter(like)` `ReadOnly`
 
 Type: **string (30)**  
 Category: **System**  
@@ -87,7 +87,7 @@ Front-End Recalc Expressions:
 `( obj.AccountGroup.Number + obj.Number)`
 ### CurrencyValuationMethod
 
-Method for base currency valuation of non base currency amounts.[Required] [Default(&quot;ACB&quot;)]
+Method for base currency valuation of non base currency amounts.`Required` `Default(&quot;ACB&quot;)`
 
 Type: **[CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod)**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### Discontinued
 
-1 means that the account won't be used any more and should not appear in combo boxes[Required] [Default(false)] [Filter(eq)]
+1 means that the account won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -129,7 +129,7 @@ Show in UI: **ShownByDefault**
 
 ### LimitToBaseCurrency
 
-When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.[Required] [Default(false)] [Filter(eq)] [Introduced in version 26.1.3.78]
+When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78`
 
 Type: **boolean**  
 Category: **System**  
@@ -140,7 +140,7 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-The account name[Required] [Filter(like)]
+The account name`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### Number
 
-The number of the account, unique within the account group[Required] [Filter(like)]
+The number of the account, unique within the account group`Required` `Filter(like)`
 
 Type: **string (30)**  
 Category: **System**  

@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowExplicitNumbering](Systems.Documents.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.[Required] [Default(false)] 
-| [NextValue](Systems.Documents.SequenceGenerators.md#nextvalue) | string (16) | The next number that will be issued by the sequence[Required] [Default(&quot;0000000001&quot;)] 
-| [SequencePriority](Systems.Documents.SequenceGenerators.md#sequencepriority) | int32 | The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True[<br />Required] [Default(1)] 
+| [AllowExplicitNumbering](Systems.Documents.SequenceGenerators.md#allowexplicitnumbering) | boolean | Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.`Required` `Default(false)` 
+| [NextValue](Systems.Documents.SequenceGenerators.md#nextvalue) | string (16) | The next number that will be issued by the sequence`Required` `Default(&quot;0000000001&quot;)` 
+| [SequencePriority](Systems.Documents.SequenceGenerators.md#sequencepriority) | int32 | The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True`<br />Required` `Default(1)` 
 
 ## References
 
@@ -71,7 +71,7 @@ Aggregate Root:
 
 ### AllowExplicitNumbering
 
-Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.[Required] [Default(false)]
+Allows to assign numbers explicitely regardless of the next value of the generator. If numbers aren't assigned explicitely then the generator works as usual.`Required` `Default(false)`
 
 Type: **boolean**  
 Category: **System**  
@@ -82,7 +82,7 @@ Show in UI: **HiddenByDefault**
 
 ### NextValue
 
-The next number that will be issued by the sequence[Required] [Default(&quot;0000000001&quot;)]
+The next number that will be issued by the sequence`Required` `Default(&quot;0000000001&quot;)`
 
 Type: **string (16)**  
 Category: **System**  
@@ -94,7 +94,7 @@ Show in UI: **ShownByDefault**
 
 ### SequencePriority
 
-The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True[Required] [Default(1)]
+The priority in which the sequence is used, compared to other similar sequences. Used only for sequences, for which Simultaneous Transactions=True`Required` `Default(1)`
 
 Type: **int32**  
 Category: **System**  

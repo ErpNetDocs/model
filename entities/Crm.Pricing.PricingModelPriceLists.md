@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model[Required] 
+| [LineNo](Crm.Pricing.PricingModelPriceLists.md#lineno) | int32 | The consecutive number of this price list within the pricing model`Required` 
 | [MarginPercent](Crm.Pricing.PricingModelPriceLists.md#marginpercent) | decimal (6, 5) __nullable__ | Used, when the price will be automatically calculated as percentage difference from standard price. It is usually a negative value. NULL, when the price will not be automatically calculated in this way 
 
 ## References
@@ -59,7 +59,7 @@ Aggregate Root:
 
 ### LineNo
 
-The consecutive number of this price list within the pricing model[Required]
+The consecutive number of this price list within the pricing model`Required`
 
 Type: **int32**  
 Category: **System**  

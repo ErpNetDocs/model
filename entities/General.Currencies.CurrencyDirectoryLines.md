@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [RateDivisor](General.Currencies.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency[Required] [Default(1)] 
-| [RateMultiplier](General.Currencies.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency[Required] [Default(1)] 
+| [RateDivisor](General.Currencies.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` 
+| [RateMultiplier](General.Currencies.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` 
 
 ## References
 
@@ -68,7 +68,7 @@ Aggregate Root:
 
 ### RateDivisor
 
-The divisor for conversion from From_Currency to Directory.To_Currency[Required] [Default(1)]
+The divisor for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)`
 
 Type: **decimal (18, 6)**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### RateMultiplier
 
-The multiplier for conversion from From_Currency to Directory.To_Currency[Required] [Default(1)]
+The multiplier for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)`
 
 Type: **decimal (18, 6)**  
 Category: **System**  

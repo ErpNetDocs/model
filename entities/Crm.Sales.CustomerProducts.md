@@ -49,14 +49,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Sales.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. NULL when the initial date is unknown[Filter(eq;ge;le)] 
+| [FromDate](Crm.Sales.CustomerProducts.md#fromdate) | date __nullable__ | The initial date of the listing. NULL when the initial date is unknown`Filter(eq;ge;le)` 
 | [InStoreLocation](Crm.Sales.CustomerProducts.md#instorelocation) | string (32) __nullable__ | Location in store, like row, stand, etc. 
-| [InStoreMaxQuantity](Crm.Sales.CustomerProducts.md#instoremaxquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)] 
-| [InStoreMinQuantity](Crm.Sales.CustomerProducts.md#instoreminquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)] 
-| [IsActive](Crm.Sales.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active[Required] [Default(true)] [Filter(eq)] 
+| [InStoreMaxQuantity](Crm.Sales.CustomerProducts.md#instoremaxquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
+| [InStoreMinQuantity](Crm.Sales.CustomerProducts.md#instoreminquantity) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
+| [IsActive](Crm.Sales.CustomerProducts.md#isactive) | boolean | Indicates whether this customer product definition is active`Required` `Default(true)` `Filter(eq)` 
 | [Notes](Crm.Sales.CustomerProducts.md#notes) | string (254) __nullable__ | Notes for the listing 
-| [OrderMultiple](Crm.Sales.CustomerProducts.md#ordermultiple) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Determines the step when the system offers a quantity to order[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)] 
-| [ToDate](Crm.Sales.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. NULL when the final date is unknown[Filter(eq;ge;le)] 
+| [OrderMultiple](Crm.Sales.CustomerProducts.md#ordermultiple) | [Quantity (10, 3)](../data-types.md#quantity) __nullable__ | Determines the step when the system offers a quantity to order`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)` 
+| [ToDate](Crm.Sales.CustomerProducts.md#todate) | date __nullable__ | The final date of the listing. NULL when the final date is unknown`Filter(eq;ge;le)` 
 
 ## References
 
@@ -82,7 +82,7 @@ Aggregate Root:
 
 ### FromDate
 
-The initial date of the listing. NULL when the initial date is unknown[Filter(eq;ge;le)]
+The initial date of the listing. NULL when the initial date is unknown`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 ### InStoreMaxQuantity
 
-Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)]
+Maximum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 ### InStoreMinQuantity
 
-Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)]
+Minimum quantity maintained by the customer. Measurement unit is Product.MeasurementUnit`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 ### IsActive
 
-Indicates whether this customer product definition is active[Required] [Default(true)] [Filter(eq)]
+Indicates whether this customer product definition is active`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -145,7 +145,7 @@ Show in UI: **ShownByDefault**
 
 ### OrderMultiple
 
-Determines the step when the system offers a quantity to order[Unit: InStoreQuantityUnit] [Filter(eq;ge;le)]
+Determines the step when the system offers a quantity to order`Unit: InStoreQuantityUnit` `Filter(eq;ge;le)`
 
 Type: **[Quantity (10, 3)](../data-types.md#quantity) __nullable__**  
 Category: **System**  
@@ -155,7 +155,7 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-The final date of the listing. NULL when the final date is unknown[Filter(eq;ge;le)]
+The final date of the listing. NULL when the final date is unknown`Filter(eq;ge;le)`
 
 Type: **date __nullable__**  
 Category: **System**  

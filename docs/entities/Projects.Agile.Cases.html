@@ -128,32 +128,32 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#closedtimeutc">ClosedTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case was closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>Indicates the time (in UTC) when the case was closed.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#considertimeutc">ConsiderTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to consider state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.39]</td>
+<td>Indicates the time (in UTC) when the case has changed to consider state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.39</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#creationtimeutc">CreationTimeUtc</a></td>
 <td>datetime</td>
-<td>The exact date and time (in UTC) when the case was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>The exact date and time (in UTC) when the case was created.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#description">Description</a></td>
 <td>string (max) <strong>nullable</strong></td>
-<td>Description of the required work.[Filter(like)]</td>
+<td>Description of the required work.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#duedate">DueDate</a></td>
 <td>date <strong>nullable</strong></td>
-<td>Specified when the case has specific due date.[Filter(ge;le)]</td>
+<td>Specified when the case has specific due date.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#duetime">DueTime</a></td>
 <td>time <strong>nullable</strong></td>
-<td>Specified when the case has specific due time.[Filter(ge;le)]</td>
+<td>Specified when the case has specific due time.<code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#estimatedtimehours">EstimatedTimeHours</a></td>
@@ -168,7 +168,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#inprogresstimeutc">InProgressTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to in-progress state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>Indicates the time (in UTC) when the case has changed to in-progress state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#loggedtime">LoggedTime</a></td>
@@ -183,37 +183,37 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Projects.Agile.Cases.html#priority">Priority</a></td>
 <td><a href="Projects.Agile.Cases.html#priority">Priority</a></td>
-<td>Priority of the case, on a scale from 1 (highest) to 7 (lowest).[Required] [Default(7)] [Filter(eq)]</td>
+<td>Priority of the case, on a scale from 1 (highest) to 7 (lowest).<code>Required</code> <code>Default(7)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#readytimeutc">ReadyTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has become ready for execution.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>Indicates the time (in UTC) when the case has become ready for execution.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#resolvedtimeutc">ResolvedTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case was resolved.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>Indicates the time (in UTC) when the case was resolved.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#storypoints">StoryPoints</a></td>
 <td>int32 <strong>nullable</strong></td>
-<td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.[Filter(eq;ge;le)] [Introduced in version 26.1.4.53]</td>
+<td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
 <td><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></td>
-<td>The base state of the case.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ReadOnly]</td>
+<td>The base state of the case.<code>Required</code> <code>Default(&amp;quot;1&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#title">Title</a></td>
 <td>string (128)</td>
-<td>Case short title.[Required] [Filter(like)]</td>
+<td>Case short title.<code>Required</code> <code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="Projects.Agile.Cases.html#waitingtimeutc">WaitingTimeUTC</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Indicates the time (in UTC) when the case has changed to waiting state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</td>
+<td>Indicates the time (in UTC) when the case has changed to waiting state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 </tbody>
 </table>
@@ -350,21 +350,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="closedtimeutc">ClosedTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case was closed.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>Indicates the time (in UTC) when the case was closed.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="considertimeutc">ConsiderTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to consider state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.1.39]</p>
+<p>Indicates the time (in UTC) when the case has changed to consider state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.1.39</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="creationtimeutc">CreationTimeUtc</h3>
-<p>The exact date and time (in UTC) when the case was created.[Required] [Default(NowUtc)] [Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>The exact date and time (in UTC) when the case was created.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -372,7 +372,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="description">Description</h3>
-<p>Description of the required work.[Filter(like)]</p>
+<p>Description of the required work.<code>Filter(like)</code></p>
 <p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -380,14 +380,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duedate">DueDate</h3>
-<p>Specified when the case has specific due date.[Filter(ge;le)]</p>
+<p>Specified when the case has specific due date.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="duetime">DueTime</h3>
-<p>Specified when the case has specific due time.[Filter(ge;le)]</p>
+<p>Specified when the case has specific due time.<code>Filter(ge;le)</code></p>
 <p>Type: <strong>time <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -408,7 +408,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="inprogresstimeutc">InProgressTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to in-progress state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>Indicates the time (in UTC) when the case has changed to in-progress state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -430,7 +430,7 @@ Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="priority">Priority</h3>
-<p>Priority of the case, on a scale from 1 (highest) to 7 (lowest).[Required] [Default(7)] [Filter(eq)]</p>
+<p>Priority of the case, on a scale from 1 (highest) to 7 (lowest).<code>Required</code> <code>Default(7)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html#priority">Priority</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Priority</code>(Projects.Agile.Cases.md#priority) data attribute<br>
@@ -478,28 +478,28 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>7</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="readytimeutc">ReadyTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has become ready for execution.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>Indicates the time (in UTC) when the case has become ready for execution.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="resolvedtimeutc">ResolvedTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case was resolved.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>Indicates the time (in UTC) when the case was resolved.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="storypoints">StoryPoints</h3>
-<p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.[Filter(eq;ge;le)] [Introduced in version 26.1.4.53]</p>
+<p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="systemstate">SystemState</h3>
-<p>The base state of the case.[Required] [Default(&quot;1&quot;)] [Filter(multi eq)] [ReadOnly]</p>
+<p>The base state of the case.<code>Required</code> <code>Default(&amp;quot;1&amp;quot;)</code> <code>Filter(multi eq)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="Projects.Agile.Cases.html#systemstate">SystemState</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SystemState</code>(Projects.Agile.Cases.md#systemstate) data attribute<br>
@@ -547,7 +547,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>BACKLOG</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="title">Title</h3>
-<p>Case short title.[Required] [Filter(like)]</p>
+<p>Case short title.<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong>string (128)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
@@ -555,7 +555,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>128</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="waitingtimeutc">WaitingTimeUTC</h3>
-<p>Indicates the time (in UTC) when the case has changed to waiting state.[Filter(ge;le)] [ReadOnly] [Introduced in version 25.1.0.93]</p>
+<p>Indicates the time (in UTC) when the case has changed to waiting state.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>

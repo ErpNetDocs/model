@@ -120,7 +120,7 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#begindatetime"><s>BeginDateTime</s></a></td>
 <td>datetime <strong>nullable</strong></td>
-<td><strong>OBSOLETE! Do not use!</strong> Not used.[Obsolete] [Filter(ge;le)] [Obsoleted in version 22.1.6.61]</td>
+<td><strong>OBSOLETE! Do not use!</strong> Not used.<code>Obsolete</code> <code>Filter(ge;le)</code> <code>Obsoleted in version 22.1.6.61</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#currentbalancebase">CurrentBalanceBase</a></td>
@@ -130,17 +130,17 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#endtime">EndTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has ended[Required] [Default(Now)] [Filter(ge;le)]</td>
+<td>Date and time when the operation has ended<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#finished">Finished</a></td>
 <td>boolean</td>
-<td>1 if this output entry completes the operation. 0 if there might be more entries[Required] [Default(false)] [Filter(eq)]</td>
+<td>1 if this output entry completes the operation. 0 if there might be more entries<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#lineord">LineOrd</a></td>
 <td>int32</td>
-<td>Line number within the order[Required]</td>
+<td>Line number within the order<code>Required</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#notes">Notes</a></td>
@@ -150,27 +150,27 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantity">ProducedQuantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The processed quantity of the end product.[Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</td>
+<td>The processed quantity of the end product.<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedquantitybase">ProducedQuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The equivalence of Produced Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</td>
+<td>The equivalence of Produced Quantity in the base measurement unit of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#producedstandardquantitybase">ProducedStandard<br>QuantityBase</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
-<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</td>
+<td>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#starttime">StartTime</a></td>
 <td>datetime</td>
-<td>Date and time when the operation has began[Required] [Default(Now)] [Filter(ge;le)]</td>
+<td>Date and time when the operation has began<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="Production.ShopFloor.OutputOrderLines.html#transactiontimestamp">TransactionTimestamp</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.[Filter(ge;le)] [ReadOnly]</td>
+<td>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.<code>Filter(ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +302,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="begindatetime">BeginDateTime</h3>
-<p><strong>OBSOLETE! Do not use!</strong> Not used.[Obsolete] [Filter(ge;le)] [Obsoleted in version 22.1.6.61]</p>
+<p><strong>OBSOLETE! Do not use!</strong> Not used.<code>Obsolete</code> <code>Filter(ge;le)</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -316,7 +316,7 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="endtime">EndTime</h3>
-<p>Date and time when the operation has ended[Required] [Default(Now)] [Filter(ge;le)]</p>
+<p>Date and time when the operation has ended<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -324,7 +324,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="finished">Finished</h3>
-<p>1 if this output entry completes the operation. 0 if there might be more entries[Required] [Default(false)] [Filter(eq)]</p>
+<p>1 if this output entry completes the operation. 0 if there might be more entries<code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong>boolean</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
@@ -332,7 +332,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="lineord">LineOrd</h3>
-<p>Line number within the order[Required]</p>
+<p>Line number within the order<code>Required</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -351,7 +351,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="producedquantity">ProducedQuantity</h3>
-<p>The processed quantity of the end product.[Unit: ProducedQuantityUnit] [Required] [Default(0)] [Filter(ge;le)]</p>
+<p>The processed quantity of the end product.<code>Unit: ProducedQuantityUnit</code> <code>Required</code> <code>Default(0)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -359,7 +359,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="producedquantitybase">ProducedQuantityBase</h3>
-<p>The equivalence of Produced Quantity in the base measurement unit of the product.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [Default(0)] [ReadOnly]</p>
+<p>The equivalence of Produced Quantity in the base measurement unit of the product.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code> <code>ReadOnly</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -371,7 +371,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="producedstandardquantitybase">ProducedStandardQuantityBase</h3>
-<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.[Unit: Product.BaseMeasurementCategory.BaseUnit] [Required] [ReadOnly] [Introduced in version 18.2]</p>
+<p>The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Quantity using the measurement ratios.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>ReadOnly</code> <code>Introduced in version 18.2</code></p>
 <p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -382,7 +382,7 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>IIF( ( ( ( obj.ProducedQuantity == null) OrElse ( obj.ProducedQuantityUnit == null)) OrElse ( obj.Product == null)), obj.ProducedStandardQuantityBase, obj.ProducedQuantity.ConvertTo( obj.Product.BaseUnit, obj.Product))</code></p>
 <h3 id="starttime">StartTime</h3>
-<p>Date and time when the operation has began[Required] [Default(Now)] [Filter(ge;le)]</p>
+<p>Date and time when the operation has began<code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
@@ -390,7 +390,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="transactiontimestamp">TransactionTimestamp</h3>
-<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.[Filter(ge;le)] [ReadOnly]</p>
+<p>Sets the timestamp of the receipt store operations for this output order line. Used in completing output orders.<code>Filter(ge;le)</code> <code>ReadOnly</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
