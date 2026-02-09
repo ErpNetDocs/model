@@ -19,7 +19,7 @@ Warehouse Policies is a hierarchical system for applying policies to warehouse o
 |[From_Date](#from_date)|`date` |When set, specifies the activation date of the policy.|
 |[Importance](#importance)|`int` |The importance of the policy, relative to other applicable policies. Higher numbers indicate higher importance.|
 |[Note](#note)|`nvarchar(max)` |Notes|
-|[Policy_Kind](#policy_kind)|`char(3)` Allowed: `ALS`, `ALC`, `ATC`, `APC`, `AUC`, `DCL`, `GCP`, `GNS`, `KCL`, `RDS`, `RPS`, `RSS`, `ZTY`, `CRO`, `UOS`, `SOS`, `AOS`, `LUS`, `QOP`, `RAL`|The kind of policy, which is being applied.|
+|[Policy_Kind](#policy_kind)|`char(3)` Allowed: `ALS`, `ALC`, `ATC`, `APC`, `AUC`, `DCL`, `GCP`, `GNS`, `KCL`, `RDS`, `RPS`, `RSS`, `ZTY`, `CRO`, `UOS`, `SOS`, `AOS`, `LUS`, `QOP`, `RAL`, `CSL`|The kind of policy, which is being applied.|
 |[Product_Group_Id](#product_group_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product group only.|
 |[Product_Id](#product_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product only.|
 |[Product_Type_Id](#product_type_id)|`uniqueidentifier` |When set, specifies that the policy will apply to the specified product type only.|
@@ -173,7 +173,7 @@ The kind of policy, which is being applied.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`ALS`, `ALC`, `ATC`, `APC`, `AUC`, `DCL`, `GCP`, `GNS`, `KCL`, `RDS`, `RPS`, `RSS`, `ZTY`, `CRO`, `UOS`, `SOS`, `AOS`, `LUS`, `QOP`, `RAL`|
+|Allowed Values|`ALS`, `ALC`, `ATC`, `APC`, `AUC`, `DCL`, `GCP`, `GNS`, `KCL`, `RDS`, `RPS`, `RSS`, `ZTY`, `CRO`, `UOS`, `SOS`, `AOS`, `LUS`, `QOP`, `RAL`, `CSL`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

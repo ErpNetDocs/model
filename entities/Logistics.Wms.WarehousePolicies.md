@@ -144,6 +144,7 @@ Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Member
 | LogisticUnitScreen<br />Visibility | Always show, hide, or use the default behavior on the logistic unit screen when executing warehouse order lines.. Stored as 'LUS'. <br /> Database Value: 'LUS' <br /> Model Value: 17 <br /> Domain API Value: 'LogisticUnitScreen<br />Visibility' |
 | BarcodeScanEnters<br />QuantityOfOnePce | If no quantity is entered, scanning a barcode in the SCAN field enters 1 PCE.. Stored as 'QOP'. <br /> Database Value: 'QOP' <br /> Model Value: 18 <br /> Domain API Value: 'BarcodeScanEnters<br />QuantityOfOnePce' |
 | RoutingAlgorithm | RoutingAlgorithm value. Stored as 'RAL'. <br /> Database Value: 'RAL' <br /> Model Value: 19 <br /> Domain API Value: 'RoutingAlgorithm' |
+| CountingSplitLevel | Zone hierarchy level (0 = no split, single order; 1 = root, n > 1 = deeper levels) used to split Warehouse Orders in the reconciliation process.. Stored as 'CSL'. <br /> Database Value: 'CSL' <br /> Model Value: 20 <br /> Domain API Value: 'CountingSplitLevel' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

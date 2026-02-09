@@ -42,7 +42,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Wms.WarehouseReconciliationLines.md#document) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The owner document. Reconciliation document this line belongs to. `Required` `Filter(multi eq)` |
-| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | Warehouse location to be counted. |
+| [WarehouseLocation](Logistics.Wms.WarehouseReconciliationLines.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Warehouse location to be counted. |
 | [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationLines.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | Reconciliation document this line belongs to. |
 | [WarehouseWorker](Logistics.Wms.WarehouseReconciliationLines.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | Worker (human or robot) assigned to perform the counting. |
 | [WarehouseZone](Logistics.Wms.WarehouseReconciliationLines.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Zone used to determine which locations are included when taking availability/snapshot, and later to split the generated Warehouse Orders. The zone is maintained separately from the location and is used only for scope and splitting of orders. |
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 Warehouse location to be counted.
 
-Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
+Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable)**  
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
