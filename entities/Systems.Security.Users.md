@@ -19,6 +19,7 @@ Code Member: Login
 Name Member: Name  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
+Layout category By:  UserType  
 
 ## Track Changes  
 Min level:  3 - Track object and attribute changes  
