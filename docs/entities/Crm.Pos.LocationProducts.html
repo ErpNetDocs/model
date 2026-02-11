@@ -95,9 +95,8 @@ Base Table: Pos_Location_Products<br>
 Introduced In Version: 26.2.0.74<br>
 API access:  ReadWrite</p>
 <h2 id="visualization">Visualization</h2>
-<p>Display Format: {Location.PosLocationCode}<br>
-Search Members: Location.PosLocationCode<br>
-Name Member: Location.PosLocationCode<br>
+<p>Display Format: {Id}: {GrossPriceValue}<br>
+Search Members:<br>
 Category:  Definitions<br>
 Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
@@ -105,10 +104,10 @@ Show in UI:  ShownByDefault</p>
 Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Parent:<br>
-<a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a><br>
-Aggregate Root:<br>
-<a href="Crm.Pos.Locations.html">Crm.Pos.Locations</a></p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Crm.Pos.LocationProducts.html">Crm.Pos.LocationProducts</a></li>
+</ul>
 <h2 id="attributes">Attributes</h2>
 <table>
 <thead>
@@ -197,6 +196,21 @@ Aggregate Root:<br>
 <td><a href="Crm.Pos.LocationProducts.html#objectversion">ObjectVersion</a></td>
 <td>int32</td>
 <td>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.LocationProducts.html#externalid">ExternalId</a></td>
+<td>string</td>
+<td>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.LocationProducts.html#externalsystem">ExternalSystem</a></td>
+<td>string</td>
+<td>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</td>
+</tr>
+<tr>
+<td><a href="Crm.Pos.LocationProducts.html#aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</a></td>
+<td>datetime</td>
+<td>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.LocationProducts.html#displaytext">DisplayText</a></td>
@@ -294,6 +308,27 @@ Category: <strong>Extensible Data Object</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalid">ExternalId</h3>
+<p>The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="externalsystem">ExternalSystem</h3>
+<p>The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]</p>
+<p>Type: <strong>string</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="aggregatelastupdatetimeutc">AggregateLastUpdateTimeUtc</h3>
+<p>The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]</p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>Extensible Data Object</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="displaytext">DisplayText</h3>
 <p>Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.</p>
 <p>Type: <strong>string</strong><br>
@@ -308,7 +343,6 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
-<a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The listed product</p>

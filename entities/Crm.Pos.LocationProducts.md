@@ -14,9 +14,8 @@ Introduced In Version: 26.2.0.74
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Location.PosLocationCode}  
-Search Members: Location.PosLocationCode  
-Name Member: Location.PosLocationCode  
+Display Format: {Id}: {GrossPriceValue}  
+Search Members:   
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -27,10 +26,8 @@ Max level:  4 - Track object attribute and blob changes
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Parent:  
-[Crm.Pos.Locations](Crm.Pos.Locations.md)  
-Aggregate Root:  
-[Crm.Pos.Locations](Crm.Pos.Locations.md)  
+Aggregate Tree  
+* [Crm.Pos.LocationProducts](Crm.Pos.LocationProducts.md)  
 
 ## Attributes
 
@@ -58,6 +55,9 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Id](Crm.Pos.LocationProducts.md#id) | guid |  
 | [ObjectVersion](Crm.Pos.LocationProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
+| [ExternalId](Crm.Pos.LocationProducts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
+| [ExternalSystem](Crm.Pos.LocationProducts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
+| [AggregateLastUpdateTimeUtc](Crm.Pos.LocationProducts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
 | [DisplayText](Crm.Pos.LocationProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
 
 
@@ -162,6 +162,36 @@ Supported Filters: **NotFilterable**
 Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
 
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
@@ -183,7 +213,6 @@ Type: **[Locations](Crm.Pos.Locations.md)**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
-[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
 Show in UI: **ShownByDefault**  
 
 ### Product

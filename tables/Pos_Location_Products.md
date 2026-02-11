@@ -7,10 +7,6 @@ Entity: [Crm.Pos.LocationProducts](~/entities/Crm.Pos.LocationProducts.md)
 
 The listed products for sale for each POS location. Entity: Pos_Location_Products (Introduced in version 26.2.0.74)
 
-## Owner Tables Hierarchy
-
-* [Pos_Locations](Pos_Locations.md)
-
 ## Summary
 
 | Name | Type | Description |
@@ -74,7 +70,7 @@ The location for which the product is listed
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|yes|
+|Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
