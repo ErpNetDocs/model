@@ -15432,6 +15432,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/General.Contacts.PartyCommunications.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/General.Contacts.PartyCommunications.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/General.Contacts.PartyContactMechanisms.md",
       "output": {
         ".html": {
@@ -22825,6 +22835,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Cm_Contact_Mechanisms.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Cm_Party_Communications.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Cm_Party_Communications.html"
         }
       },
       "version": ""

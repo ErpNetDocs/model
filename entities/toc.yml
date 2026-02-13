@@ -592,6 +592,8 @@
       href: General.Contacts.PartyApplicableLegislations.md
     - name: PartyBankAccounts
       href: General.Contacts.PartyBankAccounts.md
+    - name: PartyCommunications
+      href: General.Contacts.PartyCommunications.md
     - name: PartyContactMechanisms
       href: General.Contacts.PartyContactMechanisms.md
     - name: PartyLocationNumbers

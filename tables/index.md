@@ -107,6 +107,7 @@
 * [Cm_Company_Locations](Cm_Company_Locations.md)
 * [Cm_Contact_Mechanism_Purposes](Cm_Contact_Mechanism_Purposes.md)
 * [Cm_Contact_Mechanisms](Cm_Contact_Mechanisms.md)
+* [Cm_Party_Communications](Cm_Party_Communications.md)
 * [Cm_Party_Contact_Mechanisms](Cm_Party_Contact_Mechanisms.md)
 * [Cm_Party_Relationship_Types](Cm_Party_Relationship_Types.md)
 * [Cm_Party_Relationships](Cm_Party_Relationships.md)

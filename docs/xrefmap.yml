@@ -916,6 +916,9 @@ references:
 - uid: General.Contacts.PartyBankAccounts
   name: General.Contacts.PartyBankAccounts
   href: entities/General.Contacts.PartyBankAccounts.html
+- uid: General.Contacts.PartyCommunications
+  name: General.Contacts.PartyCommunications
+  href: entities/General.Contacts.PartyCommunications.html
 - uid: General.Contacts.PartyContactMechanisms
   name: General.Contacts.PartyContactMechanisms
   href: entities/General.Contacts.PartyContactMechanisms.html

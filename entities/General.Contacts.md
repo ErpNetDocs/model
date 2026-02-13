@@ -14,6 +14,7 @@ uid: General.Contacts
 - [Parties](General.Contacts.Parties.md)  
 - [PartyApplicableLegislations](General.Contacts.PartyApplicableLegislations.md)  
 - [PartyBankAccounts](General.Contacts.PartyBankAccounts.md)  
+- [PartyCommunications](General.Contacts.PartyCommunications.md)  
 - [PartyContactMechanisms](General.Contacts.PartyContactMechanisms.md)  
 - [PartyLocationNumbers](General.Contacts.PartyLocationNumbers.md)  
 - [PartyPictures](General.Contacts.PartyPictures.md)  
