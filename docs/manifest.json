@@ -11732,6 +11732,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "business-rules/R39605.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39605.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "business-rules/R39606.md",
+      "output": {
+        ".html": {
+          "relative_path": "business-rules/R39606.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "data-types.md",
       "output": {
         ".html": {
