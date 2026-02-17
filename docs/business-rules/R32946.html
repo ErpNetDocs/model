@@ -92,79 +92,68 @@
 <tr>
 <th>Name</th>
 <th>Value</th>
-<th>Tagged</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Code</td>
 <td>R32946</td>
-<td></td>
 </tr>
 <tr>
 <td>Entity</td>
 <td><a class="xref" href="../entities/Communities.Social.Comments.html">Communities.Social.Comments</a></td>
-<td></td>
 </tr>
 <tr>
 <td>Name</td>
 <td>CreateMentionedUserFollow</td>
-<td></td>
 </tr>
 <tr>
 <td>Attribute</td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td>Layer</td>
 <td>Back-End</td>
-<td></td>
 </tr>
 <tr>
 <td>Events</td>
 <td>Commit</td>
-<td></td>
 </tr>
 <tr>
 <td>Priority</td>
 <td>Normal</td>
-<td></td>
 </tr>
 <tr>
 <td>Modify</td>
 <td>YES</td>
-<td></td>
 </tr>
 <tr>
 <td>Applicable Legislations</td>
 <td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
-<td></td>
 </tr>
 <tr>
 <td>Action</td>
 <td>If Comment_Text contains &quot;{Public_Users(&quot; , <br> then create a new Follow as follows: <br><br> - Follow.User = the User from the mention in the comment text {Public_Users(UserId).FullName} <br> - Follow.CreationTimeUtc =  NOW <br> - Follow.DataObject = SocialComments.DataObject  <br> - Follow.FollowLevel = Tagged</td>
-<td></td>
 </tr>
 <tr>
 <td>Description</td>
 <td>When a user is mentioned in a comment, the rule creates a follow for the mentioned user. In this way, the mentioned user will automatically follow the whole conversation and the object becomes his Favourite.</td>
-<td></td>
+</tr>
+<tr>
+<td>Follow level</td>
+<td>creates follow level Tagged</td>
 </tr>
 <tr>
 <td>Message</td>
 <td>-</td>
-<td></td>
 </tr>
 <tr>
 <td>Version</td>
 <td>Introduced: 22</td>
-<td></td>
 </tr>
 <tr>
 <td>Revocable</td>
 <td>NO</td>
-<td></td>
 </tr>
 </tbody>
 </table>

@@ -239,7 +239,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.Companies.html#registrationvatnumber">RegistrationVATNumber</a></td>
 <td>string (16) <strong>nullable</strong></td>
-<td>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown<code>Filter(eq)</code> <code>ORD</code></td>
+<td>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown<code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.Companies.html#responsiblepersonname">ResponsiblePersonName</a></td>
@@ -590,11 +590,11 @@ Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="registrationvatnumber">RegistrationVATNumber</h3>
-<p>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown<code>Filter(eq)</code> <code>ORD</code></p>
+<p>VAT registration number where applicable. NULL means that VAT number is not applicable or unknown<code>Filter(eq;like)</code> <code>ORD</code></p>
 <p>Type: <strong>string (16) <strong>nullable</strong></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
-Supported Filters: <strong>Equals</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>16</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>

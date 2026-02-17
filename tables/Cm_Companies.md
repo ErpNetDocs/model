@@ -561,6 +561,7 @@ VAT registration number where applicable. NULL means that VAT number is not appl
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|yes|
+|Like|None|no|no|
 
 ### Responsible_Person_Name
 

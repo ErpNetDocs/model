@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R33430 SocialComment - Create Follow When User Commented Object | ERP.net Domain Model </title>
+      <title>R39607 Dealer - Cannot Change Party | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R33430 SocialComment - Create Follow When User Commented Object | ERP.net Domain Model ">
+      <meta name="title" content="R39607 Dealer - Cannot Change Party | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R33430.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39607.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 id="r33430-socialcomment---create-follow-when-user-commented-object">R33430 SocialComment - Create Follow When User Commented Object</h1>
+<h1 id="r39607-dealer---cannot-change-party">R39607 Dealer - Cannot Change Party</h1>
 
 <table>
 <thead>
@@ -97,19 +97,19 @@
 <tbody>
 <tr>
 <td>Code</td>
-<td>R33430</td>
+<td>R39607</td>
 </tr>
 <tr>
 <td>Entity</td>
-<td><a class="xref" href="../entities/Communities.Social.Comments.html">Communities.Social.Comments</a></td>
+<td><a class="xref" href="../entities/Crm.Sales.Dealers.html">Crm.Sales.Dealers</a></td>
 </tr>
 <tr>
 <td>Name</td>
-<td>CreateFollowWhenUserCommentedObject</td>
+<td>CannotChangeParty</td>
 </tr>
 <tr>
 <td>Attribute</td>
-<td>-</td>
+<td>Party</td>
 </tr>
 <tr>
 <td>Layer</td>
@@ -125,31 +125,23 @@
 </tr>
 <tr>
 <td>Modify</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>Applicable Legislations</td>
-<td><a class="xref" href="https://erpnetdocs.github.io/tech/reference/country-specific-functionality.html">ALL // no condition needed</a></td>
+<td>NO</td>
 </tr>
 <tr>
 <td>Action</td>
-<td>If Social.Comment == NewComment, <br> then create a new Follow as follows: <br><br> - Follow.User = Social.Comment.User <br> - Follow.CreationTimeUtc =  NOW <br> - Follow.DataObject = Social.Comments.DataObject <br> - Follow.FollowLevel = Tagged</td>
+<td>Once specified, the Party reference cannot be changed.</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When a user comments on an object, the rule creates a follow for this user. In this way, the user will automatically follow the whole conversation.</td>
+<td>The rule prevents accidental reassignment of a Dealer record to a different Party and ensures consistency of the related settings, documents, reports, and integrations.</td>
 </tr>
 <tr>
 <td>Message</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Follow level</td>
-<td>creates follow level Tagged</td>
+<td>Field &quot;Party&quot; cannot be changed.</td>
 </tr>
 <tr>
 <td>Version</td>
-<td>Introduced:v.23</td>
+<td>Introduced:</td>
 </tr>
 <tr>
 <td>Revocable</td>
@@ -163,7 +155,7 @@ topic <a href="../templates/template-description-system-business-rules.html">Sys
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R33430.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39607.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

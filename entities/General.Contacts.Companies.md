@@ -64,7 +64,7 @@ Aggregate Tree
 | [RegistrationNumber](General.Contacts.Companies.md#registrationnumber) | string (16) __nullable__ | Unique, government-assigned registration number. NULL means unknown`Filter(eq;like)` `ORD` 
 | [RegistrationPrimaryAddress](General.Contacts.Companies.md#registrationprimaryaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The primary registration address of the company.`Filter(like)` 
 | [RegistrationType](General.Contacts.Companies.md#registrationtype) | [MultilanguageString (16)](../data-types.md#multilanguagestring) __nullable__ | Legal registration type - like LTD., PLC, etc. NULL means unknown`Filter(eq)` 
-| [RegistrationVATNumber](General.Contacts.Companies.md#registrationvatnumber) | string (16) __nullable__ | VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq)` `ORD` 
+| [RegistrationVATNumber](General.Contacts.Companies.md#registrationvatnumber) | string (16) __nullable__ | VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq;like)` `ORD` 
 | [ResponsiblePersonName](General.Contacts.Companies.md#responsiblepersonname) | [MultilanguageString (64)](../data-types.md#multilanguagestring) __nullable__ | Name of the primary responsible person of the company.`Filter(like)` 
 | [UpdateTime](General.Contacts.Companies.md#updatetime) | datetime __nullable__ | Date and time when the Company was last updated. `Filter(ge;le)` `ReadOnly` 
 | [UpdateUser](General.Contacts.Companies.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Company. `Filter(like)` `ReadOnly` 
@@ -351,12 +351,12 @@ Show in UI: **ShownByDefault**
 
 ### RegistrationVATNumber
 
-VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq)` `ORD`
+VAT registration number where applicable. NULL means that VAT number is not applicable or unknown`Filter(eq;like)` `ORD`
 
 Type: **string (16) __nullable__**  
 Indexed: **True**  
 Category: **System**  
-Supported Filters: **Equals**  
+Supported Filters: **Equals, Like**  
 Supports Order By: **True**  
 Maximum Length: **16**  
 Show in UI: **ShownByDefault**  
