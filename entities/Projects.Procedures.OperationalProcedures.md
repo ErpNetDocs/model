@@ -35,7 +35,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD` 
+| [Code](Projects.Procedures.OperationalProcedures.md#code) | string (32) | Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD` `ReadOnly` 
 | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | [ContentFormat](Projects.Procedures.OperationalProcedures.md#contentformat) | Storage format of the content.`Required` `Default(&quot;MKD&quot;)` `Filter(eq)` 
 | [CreationTimeUtc](Projects.Procedures.OperationalProcedures.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the procedure was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
 | [EntityType](Projects.Procedures.OperationalProcedures.md#entitytype) | string (128) __nullable__ | Name of entity to which the procedure applies`Filter(eq)` 
@@ -49,7 +49,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Projects.Procedures.OperationalProcedures.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) | The access key, containing the user permissions for this Operational Procedure. |
+| [AccessKey](Projects.Procedures.OperationalProcedures.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | The access key, containing the user permissions for this Operational Procedure. |
 | [OwnerRole](Projects.Procedures.OperationalProcedures.md#ownerrole) | [Roles](Systems.Security.Roles.md) (nullable) | Responsible role (content owner). |
 
 
@@ -75,7 +75,7 @@ Aggregate Tree
 
 ### Code
 
-Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD`
+Short unique code for search/reference.`Required` `Filter(eq;like)` `ORD` `ReadOnly`
 
 Type: **string (32)**  
 Indexed: **True**  
@@ -84,6 +84,9 @@ Supported Filters: **Equals, Like**
 Supports Order By: **True**  
 Maximum Length: **32**  
 Show in UI: **ShownByDefault**  
+
+Back-End Default Expression:  
+`obj.SetCode( )`
 
 ### ContentFormat
 
@@ -134,6 +137,9 @@ Category: **System**
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
+
+Back-End Default Expression:  
+`DateTime.UtcNow`
 
 ### Notes
 
@@ -253,10 +259,10 @@ Show in UI: **HiddenByDefault**
 
 The access key, containing the user permissions for this Operational Procedure.
 
-Type: **[AccessKeys](Systems.Security.AccessKeys.md)**  
+Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
+Show in UI: **CannotBeShown**  
 
 
 Remarks  

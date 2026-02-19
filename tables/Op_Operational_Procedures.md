@@ -12,7 +12,7 @@ Master record for an operational procedure (“how work is done”). Entity: Op_
 | Name | Type | Description |
 | - | - | --- |
 |[Access_Key_Id](#access_key_id)|`uniqueidentifier` |The access key, containing the user permissions for this Operational Procedure.|
-|[Code](#code)|`nvarchar(32)` |Short unique code for search/reference.|
+|[Code](#code)|`nvarchar(32)` Readonly|Short unique code for search/reference.|
 |[Content_Format](#content_format)|`char(3)` Allowed: `MKD`|Storage format of the content.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|The exact date and time (in UTC) when the procedure was created.|
 |[Entity_Type](#entity_type)|`nvarchar(128)` |Name of entity to which the procedure applies|
@@ -52,17 +52,17 @@ The access key, containing the user permissions for this Operational Procedure.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Access_Key_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Code
 
@@ -83,7 +83,7 @@ Short unique code for search/reference.
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|yes|
 |Summary Type|None|
@@ -187,7 +187,7 @@ Name of entity to which the procedure applies
 |Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
-|Is Entity Name|no|
+|Is Entity Name|yes|
 |Max Length|128|
 |Order|2147483647|
 |Ownership Reference|no|
@@ -380,7 +380,7 @@ The content of the procedure.
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(max) (Allows NULL)|
-|UI Memo Editor|no|
+|UI Memo Editor|yes|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|

@@ -187,7 +187,7 @@ Identifier of a warehouse zone, optionally entered in the reconciliation documen
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Warehouse_Zone_Id - Supported Filters
 

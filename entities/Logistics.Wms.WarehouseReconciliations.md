@@ -674,7 +674,7 @@ Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
+Show in UI: **CannotBeShown**  
 
 
 ## API Methods
