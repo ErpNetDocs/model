@@ -125,11 +125,13 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>For each Release of the ServiceAgreement: <br>
+<td><p>For each Release of the ServiceAgreement: <br>
 IF the old value in ServiceAgreementServices.Quantity != 0 <br>
 AND <br>
 the old value in ServiceAgreementServices.Quantity == ServiceActivity.DistributedServiceAgreementServices.AgreedQuantity<br>
-THEN throw an error</td>
+AND  ServiceAgreementServices.oldQuantity != ServiceAgreementServices.newQuantity <br></p>
+<p>THEN throw an error</p>
+</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
