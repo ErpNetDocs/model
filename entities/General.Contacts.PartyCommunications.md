@@ -4,7 +4,7 @@ uid: General.Contacts.PartyCommunications
 # General.Contacts.PartyCommunications
 
 
-Party Communications
+A “Communication timeline” centralizes emails, chats and internal notes with a specific Party.
 
 ## General
 Namespace: [General.Contacts](General.Contacts.md)  
@@ -33,24 +33,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Channel](General.Contacts.PartyCommunications.md#channel) | [Channel](General.Contacts.PartyCommunications.md#channel) | Channel`Required` `Default(&quot;EML&quot;)` `Filter(eq)` 
-| [CommunicationFrom](General.Contacts.PartyCommunications.md#communicationfrom) | string (254) | From`Required` `Filter(eq;like)` 
-| [CommunicationTo](General.Contacts.PartyCommunications.md#communicationto) | string (254) | To`Required` `Filter(eq;like)` 
-| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Conversation. `Filter(multi eq)` 
-| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) | Direction`Required` `Default(&quot;I&quot;)` `Filter(eq)` 
-| [Message](General.Contacts.PartyCommunications.md#message) | string (max) | Message`Required` `Filter(like)` 
-| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | Sub Channel`Required` `Default(&quot;OUT&quot;)` `Filter(eq)` 
-| [Subject](General.Contacts.PartyCommunications.md#subject) | string (254) | Subject`Required` `Filter(like)` 
-| [TimeLastUpdate](General.Contacts.PartyCommunications.md#timelastupdate) | datetime | Time Last Update`Required` `Filter(eq;ge;le)` 
-| [TimeOccurredAt](General.Contacts.PartyCommunications.md#timeoccurredat) | datetime | Time Occurred At`Required` `Filter(eq;ge;le)` 
+| [Channel](General.Contacts.PartyCommunications.md#channel) | [Channel](General.Contacts.PartyCommunications.md#channel) | Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)` 
+| [CommunicationFrom](General.Contacts.PartyCommunications.md#communicationfrom) | string (254) | Who the message is from (email/phone/identifier).`Required` `Filter(eq;like)` 
+| [CommunicationTo](General.Contacts.PartyCommunications.md#communicationto) | string (254) | Who the message is addressed to (main recipient)`Required` `Filter(eq;like)` 
+| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Conversation identifier to group messages into a single thread. `Filter(multi eq)` 
+| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) | Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)` 
+| [Message](General.Contacts.PartyCommunications.md#message) | string (max) __nullable__ | Full content of the message.`Filter(like)` 
+| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)` 
+| [Subject](General.Contacts.PartyCommunications.md#subject) | string (254) __nullable__ | Short title of the message.`Filter(like)` 
+| [TimeLastUpdate](General.Contacts.PartyCommunications.md#timelastupdate) | datetime | When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)` 
+| [TimeOccurredAt](General.Contacts.PartyCommunications.md#timeoccurredat) | datetime | When the message happened.`Required` `Filter(eq;ge;le)` 
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DataObject](General.Contacts.PartyCommunications.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | Data Object |
-| [ParentCommunicationLog](General.Contacts.PartyCommunications.md#parentcommunicationlog) | [PartyCommunications](General.Contacts.PartyCommunications.md) (nullable) | Parent Communication Log |
-| [Party](General.Contacts.PartyCommunications.md#party) | [Parties](General.Contacts.Parties.md) | Party |
+| [DataObject](General.Contacts.PartyCommunications.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | Which object this communication is about. |
+| [ParentCommunicationLog](General.Contacts.PartyCommunications.md#parentcommunicationlog) | [PartyCommunications](General.Contacts.PartyCommunications.md) (nullable) | Link to a previous communication (for reply/forward or sequence). |
+| [Party](General.Contacts.PartyCommunications.md#party) | [Parties](General.Contacts.Parties.md) | Which partner this communication is about. |
 
 
 ## System Attributes
@@ -69,7 +69,7 @@ Aggregate Tree
 
 ### Channel
 
-Channel`Required` `Default(&quot;EML&quot;)` `Filter(eq)`
+Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)`
 
 Type: **[Channel](General.Contacts.PartyCommunications.md#channel)**  
 Category: **System**  
@@ -89,7 +89,7 @@ Show in UI: **ShownByDefault**
 
 ### CommunicationFrom
 
-From`Required` `Filter(eq;like)`
+Who the message is from (email/phone/identifier).`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -100,7 +100,7 @@ Show in UI: **ShownByDefault**
 
 ### CommunicationTo
 
-To`Required` `Filter(eq;like)`
+Who the message is addressed to (main recipient)`Required` `Filter(eq;like)`
 
 Type: **string (254)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **ShownByDefault**
 
 ### ConversationId
 
-Conversation. `Filter(multi eq)`
+Conversation identifier to group messages into a single thread. `Filter(multi eq)`
 
 Type: **guid __nullable__**  
 Category: **System**  
@@ -120,7 +120,7 @@ Show in UI: **ShownByDefault**
 
 ### Direction
 
-Direction`Required` `Default(&quot;I&quot;)` `Filter(eq)`
+Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)`
 
 Type: **[Direction](General.Contacts.PartyCommunications.md#direction)**  
 Category: **System**  
@@ -139,9 +139,9 @@ Show in UI: **ShownByDefault**
 
 ### Message
 
-Message`Required` `Filter(like)`
+Full content of the message.`Filter(like)`
 
-Type: **string (max)**  
+Type: **string (max) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
@@ -150,7 +150,7 @@ Show in UI: **ShownByDefault**
 
 ### SubChannel
 
-Sub Channel`Required` `Default(&quot;OUT&quot;)` `Filter(eq)`
+Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)`
 
 Type: **[SubChannel](General.Contacts.PartyCommunications.md#subchannel)**  
 Category: **System**  
@@ -171,9 +171,9 @@ Show in UI: **ShownByDefault**
 
 ### Subject
 
-Subject`Required` `Filter(like)`
+Short title of the message.`Filter(like)`
 
-Type: **string (254)**  
+Type: **string (254) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 ### TimeLastUpdate
 
-Time Last Update`Required` `Filter(eq;ge;le)`
+When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -192,7 +192,7 @@ Show in UI: **ShownByDefault**
 
 ### TimeOccurredAt
 
-Time Occurred At`Required` `Filter(eq;ge;le)`
+When the message happened.`Required` `Filter(eq;ge;le)`
 
 Type: **datetime**  
 Category: **System**  
@@ -264,7 +264,7 @@ Show in UI: **HiddenByDefault**
 
 ### DataObject
 
-Data Object
+Which object this communication is about.
 
 Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
 Category: **System**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 ### ParentCommunicationLog
 
-Parent Communication Log
+Link to a previous communication (for reply/forward or sequence).
 
 Type: **[PartyCommunications](General.Contacts.PartyCommunications.md) (nullable)**  
 Category: **System**  
@@ -282,7 +282,7 @@ Show in UI: **ShownByDefault**
 
 ### Party
 
-Party
+Which partner this communication is about.
 
 Type: **[Parties](General.Contacts.Parties.md)**  
 Indexed: **True**  

@@ -11,28 +11,28 @@ Party Communications. Entity: Cm_Party_Communications (Introduced in version 26.
 
 | Name | Type | Description |
 | - | - | --- |
-|[Channel](#channel)|`char(3)` Allowed: `EML`, `MSG`, `NOT`|Channel|
-|[Communication_From](#communication_from)|`nvarchar(254)` |From|
-|[Communication_To](#communication_to)|`nvarchar(254)` |To|
-|[Conversation_Id](#conversation_id)|`uniqueidentifier` |Conversation|
-|[Data_Object_Id](#data_object_id)|`uniqueidentifier` |Data Object|
-|[Direction](#direction)|`char(1)` Allowed: `I`, `O`|Direction|
-|[Message](#message)|`nvarchar(max)` |Message|
-|[Parent_Communication_Log_Id](#parent_communication_log_id)|`uniqueidentifier` |Parent Communication Log|
-|[Party_Communication_Id](#party_communication_id)|`uniqueidentifier` `PK`|Party communication identifier|
-|[Party_Id](#party_id)|`uniqueidentifier` |Party|
+|[Channel](#channel)|`char(3)` Allowed: `EML`, `MSG`, `NOT`|Main channel of communication.|
+|[Communication_From](#communication_from)|`nvarchar(254)` |Who the message is from (email/phone/identifier).|
+|[Communication_To](#communication_to)|`nvarchar(254)` |Who the message is addressed to (main recipient)|
+|[Conversation_Id](#conversation_id)|`uniqueidentifier` |Conversation identifier to group messages into a single thread.|
+|[Data_Object_Id](#data_object_id)|`uniqueidentifier` |Which object this communication is about.|
+|[Direction](#direction)|`char(1)` Allowed: `I`, `O`|Direction: received or sent.|
+|[Message](#message)|`nvarchar(max)` |Full content of the message.|
+|[Parent_Communication_Log_Id](#parent_communication_log_id)|`uniqueidentifier` |Link to a previous communication (for reply/forward or sequence).|
+|[Party_Communication_Id](#party_communication_id)|`uniqueidentifier` `PK`|Unique identifier of communication message.|
+|[Party_Id](#party_id)|`uniqueidentifier` |Which partner this communication is about.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Sub_Channel](#sub_channel)|`char(3)` Allowed: `OUT`, `WHA`, `VBR`, `INT`|Sub Channel|
-|[Subject](#subject)|`nvarchar(254)` |Subject|
-|[Time_Last_Update](#time_last_update)|`datetime` |Time Last Update|
-|[Time_Occurred_At](#time_occurred_at)|`datetime` |Time Occurred At|
+|[Sub_Channel](#sub_channel)|`char(3)` Allowed: `OUT`, `WHA`, `VBR`, `INT`|Specific application source.|
+|[Subject](#subject)|`nvarchar(254)` |Short title of the message.|
+|[Time_Last_Update](#time_last_update)|`datetime` |When it was last updated/synced in ERP.|
+|[Time_Occurred_At](#time_occurred_at)|`datetime` |When the message happened.|
 
 ## Columns
 
 ### Channel
 
 
-Channel
+Main channel of communication.
 
 | Property | Value |
 | - | - |
@@ -69,7 +69,7 @@ Channel
 ### Communication_From
 
 
-From
+Who the message is from (email/phone/identifier).
 
 | Property | Value |
 | - | - |
@@ -106,7 +106,7 @@ From
 ### Communication_To
 
 
-To
+Who the message is addressed to (main recipient)
 
 | Property | Value |
 | - | - |
@@ -143,7 +143,7 @@ To
 ### Conversation_Id
 
 
-Conversation
+Conversation identifier to group messages into a single thread.
 
 | Property | Value |
 | - | - |
@@ -179,7 +179,7 @@ Conversation
 ### Data_Object_Id
 
 
-Data Object
+Which object this communication is about.
 
 | Property | Value |
 | - | - |
@@ -216,7 +216,7 @@ Data Object
 ### Direction
 
 
-Direction
+Direction: received or sent.
 
 | Property | Value |
 | - | - |
@@ -253,7 +253,7 @@ Direction
 ### Message
 
 
-Message
+Full content of the message.
 
 | Property | Value |
 | - | - |
@@ -274,7 +274,7 @@ Message
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(max)|
+|Type|nvarchar(max) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -289,7 +289,7 @@ Message
 ### Parent_Communication_Log_Id
 
 
-Parent Communication Log
+Link to a previous communication (for reply/forward or sequence).
 
 | Property | Value |
 | - | - |
@@ -326,7 +326,7 @@ Parent Communication Log
 ### Party_Communication_Id
 
 
-Party communication identifier
+Unique identifier of communication message.
 
 | Property | Value |
 | - | - |
@@ -363,7 +363,7 @@ Party communication identifier
 ### Party_Id
 
 
-Party
+Which partner this communication is about.
 
 | Property | Value |
 | - | - |
@@ -427,7 +427,7 @@ Party
 ### Sub_Channel
 
 
-Sub Channel
+Specific application source.
 
 | Property | Value |
 | - | - |
@@ -464,7 +464,7 @@ Sub Channel
 ### Subject
 
 
-Subject
+Short title of the message.
 
 | Property | Value |
 | - | - |
@@ -485,7 +485,7 @@ Subject
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -500,7 +500,7 @@ Subject
 ### Time_Last_Update
 
 
-Time Last Update
+When it was last updated/synced in ERP.
 
 | Property | Value |
 | - | - |
@@ -537,7 +537,7 @@ Time Last Update
 ### Time_Occurred_At
 
 
-Time Occurred At
+When the message happened.
 
 | Property | Value |
 | - | - |

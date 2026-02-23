@@ -429,7 +429,7 @@ Lifecycle state (Draft/Active/Obsolete).
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|DRF|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|3|
@@ -447,7 +447,7 @@ Lifecycle state (Draft/Active/Obsolete).
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Status - Supported Filters
 

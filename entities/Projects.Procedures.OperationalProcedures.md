@@ -181,7 +181,7 @@ Allowed Values (Projects.Procedures.OperationalProceduresRepository.Status Enum 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Default Value: **DRAFT**  
-Show in UI: **ShownByDefault**  
+Show in UI: **HiddenByDefault**  
 
 ### Title
 

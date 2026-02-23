@@ -87,7 +87,7 @@
         <article data-uid="General.Contacts.PartyCommunications">
 <h1 id="generalcontactspartycommunications">General.Contacts.PartyCommunications</h1>
 
-<p>Party Communications</p>
+<p>A “Communication timeline” centralizes emails, chats and internal notes with a specific Party.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="General.Contacts.html">General.Contacts</a><br>
 Repository: General.Contacts.PartyCommunications<br>
@@ -121,52 +121,52 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></td>
 <td><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></td>
-<td>Channel<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></td>
+<td>Main channel of communication.<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#communicationfrom">CommunicationFrom</a></td>
 <td>string (254)</td>
-<td>From<code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Who the message is from (email/phone/identifier).<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#communicationto">CommunicationTo</a></td>
 <td>string (254)</td>
-<td>To<code>Required</code> <code>Filter(eq;like)</code></td>
+<td>Who the message is addressed to (main recipient)<code>Required</code> <code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#conversationid">ConversationId</a></td>
 <td>guid <strong>nullable</strong></td>
-<td>Conversation. <code>Filter(multi eq)</code></td>
+<td>Conversation identifier to group messages into a single thread. <code>Filter(multi eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></td>
 <td><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></td>
-<td>Direction<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></td>
+<td>Direction: received or sent.<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#message">Message</a></td>
-<td>string (max)</td>
-<td>Message<code>Required</code> <code>Filter(like)</code></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Full content of the message.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></td>
 <td><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></td>
-<td>Sub Channel<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></td>
+<td>Specific application source.<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#subject">Subject</a></td>
-<td>string (254)</td>
-<td>Subject<code>Required</code> <code>Filter(like)</code></td>
+<td>string (254) <strong>nullable</strong></td>
+<td>Short title of the message.<code>Filter(like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#timelastupdate">TimeLastUpdate</a></td>
 <td>datetime</td>
-<td>Time Last Update<code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>When it was last updated/synced in ERP.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#timeoccurredat">TimeOccurredAt</a></td>
 <td>datetime</td>
-<td>Time Occurred At<code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>When the message happened.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 </tbody>
 </table>
@@ -183,17 +183,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
-<td>Data Object</td>
+<td>Which object this communication is about.</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#parentcommunicationlog">ParentCommunicationLog</a></td>
 <td><a href="General.Contacts.PartyCommunications.html">PartyCommunications</a> (nullable)</td>
-<td>Parent Communication Log</td>
+<td>Link to a previous communication (for reply/forward or sequence).</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#party">Party</a></td>
 <td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>Party</td>
+<td>Which partner this communication is about.</td>
 </tr>
 </tbody>
 </table>
@@ -241,7 +241,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="channel">Channel</h3>
-<p>Channel<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></p>
+<p>Main channel of communication.<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Channel</code>(General.Contacts.PartyCommunications.md#channel) data attribute<br>
@@ -273,7 +273,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Email</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="communicationfrom">CommunicationFrom</h3>
-<p>From<code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Who the message is from (email/phone/identifier).<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -281,7 +281,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="communicationto">CommunicationTo</h3>
-<p>To<code>Required</code> <code>Filter(eq;like)</code></p>
+<p>Who the message is addressed to (main recipient)<code>Required</code> <code>Filter(eq;like)</code></p>
 <p>Type: <strong>string (254)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
@@ -289,13 +289,13 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conversationid">ConversationId</h3>
-<p>Conversation. <code>Filter(multi eq)</code></p>
+<p>Conversation identifier to group messages into a single thread. <code>Filter(multi eq)</code></p>
 <p>Type: <strong>guid <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Direction<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></p>
+<p>Direction: received or sent.<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(General.Contacts.PartyCommunications.md#direction) data attribute<br>
@@ -323,15 +323,15 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Inbound</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="message">Message</h3>
-<p>Message<code>Required</code> <code>Filter(like)</code></p>
-<p>Type: <strong>string (max)</strong><br>
+<p>Full content of the message.<code>Filter(like)</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="subchannel">SubChannel</h3>
-<p>Sub Channel<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></p>
+<p>Specific application source.<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>SubChannel</code>(General.Contacts.PartyCommunications.md#subchannel) data attribute<br>
@@ -367,22 +367,22 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Outlook</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="subject">Subject</h3>
-<p>Subject<code>Required</code> <code>Filter(like)</code></p>
-<p>Type: <strong>string (254)</strong><br>
+<p>Short title of the message.<code>Filter(like)</code></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timelastupdate">TimeLastUpdate</h3>
-<p>Time Last Update<code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>When it was last updated/synced in ERP.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timeoccurredat">TimeOccurredAt</h3>
-<p>Time Occurred At<code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>When the message happened.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
@@ -432,19 +432,19 @@ Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
 <h3 id="dataobject">DataObject</h3>
-<p>Data Object</p>
+<p>Which object this communication is about.</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="parentcommunicationlog">ParentCommunicationLog</h3>
-<p>Parent Communication Log</p>
+<p>Link to a previous communication (for reply/forward or sequence).</p>
 <p>Type: <strong><a href="General.Contacts.PartyCommunications.html">PartyCommunications</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="party">Party</h3>
-<p>Party</p>
+<p>Which partner this communication is about.</p>
 <p>Type: <strong><a href="General.Contacts.Parties.html">Parties</a></strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>

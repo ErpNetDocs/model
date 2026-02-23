@@ -103,52 +103,52 @@
 <tr>
 <td><a href="#channel">Channel</a></td>
 <td><code>char(3)</code> Allowed: <code>EML</code>, <code>MSG</code>, <code>NOT</code></td>
-<td>Channel</td>
+<td>Main channel of communication.</td>
 </tr>
 <tr>
 <td><a href="#communication_from">Communication_From</a></td>
 <td><code>nvarchar(254)</code></td>
-<td>From</td>
+<td>Who the message is from (email/phone/identifier).</td>
 </tr>
 <tr>
 <td><a href="#communication_to">Communication_To</a></td>
 <td><code>nvarchar(254)</code></td>
-<td>To</td>
+<td>Who the message is addressed to (main recipient)</td>
 </tr>
 <tr>
 <td><a href="#conversation_id">Conversation_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Conversation</td>
+<td>Conversation identifier to group messages into a single thread.</td>
 </tr>
 <tr>
 <td><a href="#data_object_id">Data_Object_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Data Object</td>
+<td>Which object this communication is about.</td>
 </tr>
 <tr>
 <td><a href="#direction">Direction</a></td>
 <td><code>char(1)</code> Allowed: <code>I</code>, <code>O</code></td>
-<td>Direction</td>
+<td>Direction: received or sent.</td>
 </tr>
 <tr>
 <td><a href="#message">Message</a></td>
 <td><code>nvarchar(max)</code></td>
-<td>Message</td>
+<td>Full content of the message.</td>
 </tr>
 <tr>
 <td><a href="#parent_communication_log_id">Parent_Communication_Log_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Parent Communication Log</td>
+<td>Link to a previous communication (for reply/forward or sequence).</td>
 </tr>
 <tr>
 <td><a href="#party_communication_id">Party_Communication_Id</a></td>
 <td><code>uniqueidentifier</code> <code>PK</code></td>
-<td>Party communication identifier</td>
+<td>Unique identifier of communication message.</td>
 </tr>
 <tr>
 <td><a href="#party_id">Party_Id</a></td>
 <td><code>uniqueidentifier</code></td>
-<td>Party</td>
+<td>Which partner this communication is about.</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -158,28 +158,28 @@
 <tr>
 <td><a href="#sub_channel">Sub_Channel</a></td>
 <td><code>char(3)</code> Allowed: <code>OUT</code>, <code>WHA</code>, <code>VBR</code>, <code>INT</code></td>
-<td>Sub Channel</td>
+<td>Specific application source.</td>
 </tr>
 <tr>
 <td><a href="#subject">Subject</a></td>
 <td><code>nvarchar(254)</code></td>
-<td>Subject</td>
+<td>Short title of the message.</td>
 </tr>
 <tr>
 <td><a href="#time_last_update">Time_Last_Update</a></td>
 <td><code>datetime</code></td>
-<td>Time Last Update</td>
+<td>When it was last updated/synced in ERP.</td>
 </tr>
 <tr>
 <td><a href="#time_occurred_at">Time_Occurred_At</a></td>
 <td><code>datetime</code></td>
-<td>Time Occurred At</td>
+<td>When the message happened.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
 <h3 id="channel">Channel</h3>
-<p>Channel</p>
+<p>Main channel of communication.</p>
 <table>
 <thead>
 <tr>
@@ -302,7 +302,7 @@
 </tbody>
 </table>
 <h3 id="communication_from">Communication_From</h3>
-<p>From</p>
+<p>Who the message is from (email/phone/identifier).</p>
 <table>
 <thead>
 <tr>
@@ -427,7 +427,7 @@
 </tbody>
 </table>
 <h3 id="communication_to">Communication_To</h3>
-<p>To</p>
+<p>Who the message is addressed to (main recipient)</p>
 <table>
 <thead>
 <tr>
@@ -552,7 +552,7 @@
 </tbody>
 </table>
 <h3 id="conversation_id">Conversation_Id</h3>
-<p>Conversation</p>
+<p>Conversation identifier to group messages into a single thread.</p>
 <table>
 <thead>
 <tr>
@@ -671,7 +671,7 @@
 </tbody>
 </table>
 <h3 id="data_object_id">Data_Object_Id</h3>
-<p>Data Object</p>
+<p>Which object this communication is about.</p>
 <table>
 <thead>
 <tr>
@@ -794,7 +794,7 @@
 </tbody>
 </table>
 <h3 id="direction">Direction</h3>
-<p>Direction</p>
+<p>Direction: received or sent.</p>
 <table>
 <thead>
 <tr>
@@ -917,7 +917,7 @@
 </tbody>
 </table>
 <h3 id="message">Message</h3>
-<p>Message</p>
+<p>Full content of the message.</p>
 <table>
 <thead>
 <tr>
@@ -996,7 +996,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(max)</td>
+<td>nvarchar(max) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1036,7 +1036,7 @@
 </tbody>
 </table>
 <h3 id="parent_communication_log_id">Parent_Communication_Log_Id</h3>
-<p>Parent Communication Log</p>
+<p>Link to a previous communication (for reply/forward or sequence).</p>
 <table>
 <thead>
 <tr>
@@ -1159,7 +1159,7 @@
 </tbody>
 </table>
 <h3 id="party_communication_id">Party_Communication_Id</h3>
-<p>Party communication identifier</p>
+<p>Unique identifier of communication message.</p>
 <table>
 <thead>
 <tr>
@@ -1284,7 +1284,7 @@
 </tbody>
 </table>
 <h3 id="party_id">Party_Id</h3>
-<p>Party</p>
+<p>Which partner this communication is about.</p>
 <table>
 <thead>
 <tr>
@@ -1506,7 +1506,7 @@
 </tbody>
 </table>
 <h3 id="sub_channel">Sub_Channel</h3>
-<p>Sub Channel</p>
+<p>Specific application source.</p>
 <table>
 <thead>
 <tr>
@@ -1629,7 +1629,7 @@
 </tbody>
 </table>
 <h3 id="subject">Subject</h3>
-<p>Subject</p>
+<p>Short title of the message.</p>
 <table>
 <thead>
 <tr>
@@ -1708,7 +1708,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254)</td>
+<td>nvarchar(254) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1748,7 +1748,7 @@
 </tbody>
 </table>
 <h3 id="time_last_update">Time_Last_Update</h3>
-<p>Time Last Update</p>
+<p>When it was last updated/synced in ERP.</p>
 <table>
 <thead>
 <tr>
@@ -1873,7 +1873,7 @@
 </tbody>
 </table>
 <h3 id="time_occurred_at">Time_Occurred_At</h3>
-<p>Time Occurred At</p>
+<p>When the message happened.</p>
 <table>
 <thead>
 <tr>
