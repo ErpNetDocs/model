@@ -93,7 +93,7 @@ Aggregate Tree
 | [CurrencyDirectory](Regulatory.Excise.ExciseDeclarations.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Regulatory.Excise.ExciseDeclarations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Regulatory.Excise.ExciseDeclarations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Regulatory.Excise.ExciseDeclarations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Regulatory.Excise.ExciseDeclarations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Regulatory.Excise.ExciseDeclarations.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Regulatory.Excise.ExciseDeclarations.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Regulatory.Excise.ExciseDeclarations.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -585,7 +585,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  

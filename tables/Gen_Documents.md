@@ -26,7 +26,7 @@ Contains all documents issued by and to the enterprise. Entity: Gen_Documents
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc.|
 |[Document_Version](#document_version)|`int` Readonly|Consecutive version number, starting with 1. Each update produces a new version of the document.|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |The enterprise company which issued the document|
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used|
+|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |The branch of the enterprise company that issues the document.<br>|
 |[Entity_Name](#entity_name)|`nvarchar(64)` |The entity name of the document header.|
 |[From_Company_Division_Id](#from_company_division_id)|`uniqueidentifier` |The division of the company, issuing the document. NULL when the document is not issued by any specific division|
 |[From_Party_Id](#from_party_id)|`uniqueidentifier` |The party which issued the document|
@@ -596,7 +596,8 @@ The enterprise company which issued the document
 ### Enterprise_Company_Location_Id
 
 
-The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used
+The branch of the enterprise company that issues the document.
+
 
 | Property | Value |
 | - | - |

@@ -90,7 +90,7 @@ Aggregate Tree
 | [Dealer](Crm.Presales.Deals.md#dealer) | [Dealers](Crm.Sales.Dealers.md) (nullable) | The external dealer, which provided the opportunity |
 | [DocumentType](Crm.Presales.Deals.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Presales.Deals.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Crm.Presales.Deals.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Crm.Presales.Deals.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ExpectedRevenueCurrency](Crm.Presales.Deals.md#expectedrevenuecurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of Expected Revenue |
 | [FromCompanyDivision](Crm.Presales.Deals.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Crm.Presales.Deals.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -659,7 +659,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  

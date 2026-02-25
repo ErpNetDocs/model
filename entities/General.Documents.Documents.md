@@ -90,7 +90,11 @@ So, generally: Reference Date <= DocumentDate <= CreationTime.`Default(Today)` `
 | [CurrencyDirectory](General.Documents.Documents.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions |
 | [DocumentType](General.Documents.Documents.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. |
 | [EnterpriseCompany](General.Documents.Documents.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document |
-| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used |
+| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.
+ 
+The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.
+ 
+Even when the enterprise company operates with a single branch, it must be explicitly specified. |
 | [FromCompanyDivision](General.Documents.Documents.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. NULL when the document is not issued by any specific division |
 | [FromParty](General.Documents.Documents.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document |
 | [MasterDocument](General.Documents.Documents.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id |
@@ -550,7 +554,11 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used
+The branch of the enterprise company that issues the document.
+ 
+The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.
+ 
+Even when the enterprise company operates with a single branch, it must be explicitly specified.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  

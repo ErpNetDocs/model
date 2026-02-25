@@ -202,65 +202,23 @@ So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime.<code>Defaul
 <tr>
 <td><a href="General.Documents.Documents.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
 <td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
-<td>The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#fromcompanydivision">FromCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, issuing the document. NULL when the document is not issued by any specific division</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#fromparty">FromParty</a></td>
-<td><a href="General.Contacts.Parties.html">Parties</a></td>
-<td>The party which issued the document</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#masterdocument">MasterDocument</a></td>
-<td><a href="General.Documents.Documents.html">Documents</a></td>
-<td>In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#parent">Parent</a></td>
-<td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>In a multi-document tree, this is the direct parent document. If this is the root it is null. <code>Filter(multi eq)</code></td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#primecausedocument">PrimeCauseDocument</a></td>
-<td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document that is the prime cause for creation of the current document</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#responsibleperson">ResponsiblePerson</a></td>
-<td><a href="General.Contacts.Persons.html">Persons</a> (nullable)</td>
-<td>The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc.</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#reverseofdocument">ReverseOfDocument</a></td>
-<td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
-<td>The document which the current document is reverse of</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#sequence">Sequence</a></td>
-<td><a href="Systems.Documents.Sequences.html">Sequences</a> (nullable)</td>
-<td>The sequence that will be used to give new numbers to the documents of this type</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#tocompanydivision">ToCompanyDivision</a></td>
-<td><a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable)</td>
-<td>The division of the company, receiving the document. NULL when the document is not received by any specific division</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#toparty">ToParty</a></td>
-<td><a href="General.Contacts.Parties.html">Parties</a> (nullable)</td>
-<td>The party which should receive the document</td>
-</tr>
-<tr>
-<td><a href="General.Documents.Documents.html#userstatus">UserStatus</a></td>
-<td><a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable)</td>
-<td>The user status of this document if applicable for this document type. NULL means unknown or not yet set</td>
+<td>The branch of the enterprise company that issues the document.</td>
 </tr>
 </tbody>
 </table>
+<p>The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.</p>
+<p>Even when the enterprise company operates with a single branch, it must be explicitly specified. |
+| <a href="General.Documents.Documents.html#fromcompanydivision">FromCompanyDivision</a> | <a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable) | The division of the company, issuing the document. NULL when the document is not issued by any specific division |
+| <a href="General.Documents.Documents.html#fromparty">FromParty</a> | <a href="General.Contacts.Parties.html">Parties</a> | The party which issued the document |
+| <a href="General.Documents.Documents.html#masterdocument">MasterDocument</a> | <a href="General.Documents.Documents.html">Documents</a> | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id |
+| <a href="General.Documents.Documents.html#parent">Parent</a> | <a href="General.Documents.Documents.html">Documents</a> (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. <code>Filter(multi eq)</code> |
+| <a href="General.Documents.Documents.html#primecausedocument">PrimeCauseDocument</a> | <a href="General.Documents.Documents.html">Documents</a> (nullable) | The document that is the prime cause for creation of the current document |
+| <a href="General.Documents.Documents.html#responsibleperson">ResponsiblePerson</a> | <a href="General.Contacts.Persons.html">Persons</a> (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. |
+| <a href="General.Documents.Documents.html#reverseofdocument">ReverseOfDocument</a> | <a href="General.Documents.Documents.html">Documents</a> (nullable) | The document which the current document is reverse of |
+| <a href="General.Documents.Documents.html#sequence">Sequence</a> | <a href="Systems.Documents.Sequences.html">Sequences</a> (nullable) | The sequence that will be used to give new numbers to the documents of this type |
+| <a href="General.Documents.Documents.html#tocompanydivision">ToCompanyDivision</a> | <a href="General.Contacts.CompanyDivisions.html">CompanyDivisions</a> (nullable) | The division of the company, receiving the document. NULL when the document is not received by any specific division |
+| <a href="General.Documents.Documents.html#toparty">ToParty</a> | <a href="General.Contacts.Parties.html">Parties</a> (nullable) | The party which should receive the document |
+| <a href="General.Documents.Documents.html#userstatus">UserStatus</a> | <a href="Systems.Documents.DocumentTypeUserStatuses.html">DocumentTypeUserStatuses</a> (nullable) | The user status of this document if applicable for this document type. NULL means unknown or not yet set |</p>
 <h2 id="system-attributes">System Attributes</h2>
 <table>
 <thead>
@@ -725,7 +683,9 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
-<p>The enterprise company location which issued the document. NULL means that there is only one location within the enterprise company and locations are not used</p>
+<p>The branch of the enterprise company that issues the document.</p>
+<p>The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.</p>
+<p>Even when the enterprise company operates with a single branch, it must be explicitly specified.</p>
 <p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

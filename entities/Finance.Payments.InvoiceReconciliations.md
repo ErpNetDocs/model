@@ -87,7 +87,7 @@ Aggregate Tree
 | [DefaultPayment<br />TransactionDocument](Finance.Payments.InvoiceReconciliations.md#defaultpaymenttransactiondocument) | [Documents](General.Documents.Documents.md) (nullable) | Default payment transaction document for the lines. |
 | [DocumentType](Finance.Payments.InvoiceReconciliations.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Payments.InvoiceReconciliations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Finance.Payments.InvoiceReconciliations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Finance.Payments.InvoiceReconciliations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Finance.Payments.InvoiceReconciliations.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Finance.Payments.InvoiceReconciliations.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Finance.Payments.InvoiceReconciliations.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -564,7 +564,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  

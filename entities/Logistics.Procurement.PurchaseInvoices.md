@@ -95,7 +95,7 @@ Aggregate Tree
 | [DocumentCurrency](Logistics.Procurement.PurchaseInvoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. |
 | [DocumentType](Logistics.Procurement.PurchaseInvoices.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Procurement.PurchaseInvoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseInvoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseInvoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Procurement.PurchaseInvoices.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Procurement.PurchaseInvoices.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoices.md#intrastatdestinationregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document. |
@@ -779,7 +779,7 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The enterprise company location which issued the document. null means that there is only one location within the enterprise company and locations are not used. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document. . `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
