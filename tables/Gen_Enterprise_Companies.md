@@ -32,6 +32,8 @@ The companies in the enterprise that issue documents. Entity: Gen_Enterprise_Com
 |[Reporting_Currency_Rate](#reporting_currency_rate)|`decimal(18, 6)` |Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).|
 |[Reporting_Currency_Start_Date](#reporting_currency_start_date)|`date` |Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Saft_Last_Period_End_Date](#saft_last_period_end_date)|`date` |Indicates the end date of the most recently submitted SAF-T reporting period.|
+|[Saft_Last_Report_Time_UTC](#saft_last_report_time_utc)|`datetime` |Specifies the exact UTC timestamp when the last SAF-T file was generated/submitted.<br>Documents with ReleaseTime later than this timestamp are considered not yet reported and will be included in the next SAF-T file, if they meet the other selection criteria.|
 |[UI_Base_Color](#ui_base_color)|`int` |When not NULL, specifies the background color to use for visualization of the UI when the current enterprise company is selected. The color is in RGBA color format.|
 |[VAT_Document_Amount_Type_Id](#vat_document_amount_type_id)|`uniqueidentifier` |The document amount that is used to determine the amount of the VAT entries when they are generated.|
 
@@ -778,6 +780,79 @@ Defines the date from which the reporting currency is calculated using the excha
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Saft_Last_Period_End_Date
+
+
+Indicates the end date of the most recently submitted SAF-T reporting period.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Saft_Last_Period_End_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
+### Saft_Last_Report_Time_UTC
+
+
+Specifies the exact UTC timestamp when the last SAF-T file was generated/submitted.
+Documents with ReleaseTime later than this timestamp are considered not yet reported and will be included in the next SAF-T file, if they meet the other selection criteria.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Saft_Last_Report_Time_UTC - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
 
 ### UI_Base_Color
 

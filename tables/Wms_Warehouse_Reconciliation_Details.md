@@ -17,16 +17,19 @@ Contains detailed warehouse reconciliation data per location and product, includ
 | Name | Type | Description |
 | - | - | --- |
 |[Base_Unit_Id](#base_unit_id)|`uniqueidentifier` Readonly|The product’s base measurement unit.|
+|[Counted_Quantity](#counted_quantity)|`decimal(12, 3)` |The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.|
 |[Counted_Quantity_Base](#counted_quantity_base)|`decimal(12, 3)` |The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.|
 |[Last_Aggregated_At](#last_aggregated_at)|`datetime` Readonly|The date and time when the counted quantities were last aggregated into this line.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` Readonly|The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` Readonly|Batch/lot of the product, when applicable.|
 |[Product_Id](#product_id)|`uniqueidentifier` Readonly|The product stored at the specified warehouse location.|
+|[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` Readonly|The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.|
 |[Review_Status](#review_status)|`char(3)` Allowed: `CRT`, `STR`, `FIN`, `APR`, `RCN`, `CNL`|Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Serial_Number_Id](#serial_number_id)|`uniqueidentifier` Readonly|Serial number of the product, when serialized tracking is enabled.|
 |[Session](#session)|`int` Readonly|The counting session in which this result was recorded.|
 |[Snapshot_Date_Time](#snapshot_date_time)|`datetime` Readonly|The date and time when the availability snapshot for this line was created.|
+|[Snapshot_Quantity](#snapshot_quantity)|`decimal(12, 3)` Readonly|Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.|
 |[Snapshot_Quantity_Base](#snapshot_quantity_base)|`decimal(12, 3)` Readonly|The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.|
 |[Variant_Id](#variant_id)|`uniqueidentifier` Readonly|Product variant (e.g. size, color, configuration), when tracked.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` Readonly|The warehouse location included in the reconciliation.|
@@ -72,6 +75,43 @@ The product’s base measurement unit.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Counted_Quantity
+
+
+The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|18|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Counted_Quantity - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Counted_Quantity_Base
 
@@ -258,6 +298,43 @@ The product stored at the specified warehouse location.
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Quantity_Unit_Id
+
+
+The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|19|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Gen_Measurement_Units](Gen_Measurement_Units.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Quantity_Unit_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Review_Status
 
 
@@ -426,6 +503,43 @@ The date and time when the availability snapshot for this line was created.
 |Visible|yes|
 
 #### Snapshot_Date_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Snapshot_Quantity
+
+
+Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|0|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|17|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Snapshot_Quantity - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

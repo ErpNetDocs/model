@@ -8,6 +8,7 @@ uid: Systems.Monitoring
 - [AuditLogEntries](Systems.Monitoring.AuditLogEntries.md)  
 - [AuditLogSummary](Systems.Monitoring.AuditLogSummary.md)  
 - [CurrentSessions](Systems.Monitoring.CurrentSessions.md)  
+- [DBResourceUtilization](Systems.Monitoring.DBResourceUtilization.md)  
 - [ExecStats](Systems.Monitoring.ExecStats.md)  
 - [InformationMessages](Systems.Monitoring.InformationMessages.md)  
 - [InformationMessagesSummary](Systems.Monitoring.InformationMessagesSummary.md)  

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Systems.Monitoring.DBResourceUtilization (View) | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Systems.Monitoring.DBResourceUtilization (View) | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Monitoring.DBResourceUtilization.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Systems.Monitoring.DBResourceUtilization">
+<h1 id="systemsmonitoringdbresourceutilization-view">Systems.Monitoring.DBResourceUtilization (View)</h1>
+
+<p>Returns diagnostic execution metrics for database queries within a specific Query Store interval. Values are aggregated, normalized, and partially recalculated from Query Store views (query_store_runtime_stats_interval, query_store_runtime_stats, query_store_wait_stats). Useful for performance monitoring, workload analysis, and automated diagnostics.</p>
+<h2 id="general">General</h2>
+<p>Namespace: <a href="Systems.Monitoring.html">Systems.Monitoring</a><br>
+Repository: Systems.Monitoring.DBResourceUtilization<br>
+Introduced In Version: 26.2.1.65<br>
+API access:  ReadOnly</p>
+<h2 id="visualization">Visualization</h2>
+<p>Display Format: {RuntimeIntervalId}: {TimeSlotBeginUtc}<br>
+Search Members:<br>
+Category:  Views<br>
+Show in UI:  HiddenByDefault</p>
+<h2 id="aggregate">Aggregate</h2>
+<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
+<p>Aggregate Tree</p>
+<ul>
+<li><a href="Systems.Monitoring.DBResourceUtilization.html">Systems.Monitoring.DBResourceUtilization</a></li>
+</ul>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcorescpu">AvgCoresCPU</a></td>
+<td>double</td>
+<td>Normalized average CPU utilization by query executions in CPU-core units.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcorestotal">AvgCoresTotal</a></td>
+<td>double</td>
+<td>Normalized average query execution duration in CPU-core units.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcoreswaiting">AvgCoresWaiting</a></td>
+<td>double</td>
+<td>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgmemoryperquerymb">AvgMemoryperQueryMB</a></td>
+<td>double</td>
+<td>Average memory used per executed query.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgquerymemoryusagemb">AvgQueryMemoryUsageMB</a></td>
+<td>double</td>
+<td>Average SQL Server memory usage attributable to query execution (query memory grant usage).<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadmb">DiskReadMB</a></td>
+<td>double</td>
+<td>Total disk-read volume (MB) during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadthroughputmbps">DiskReadThroughputMBps</a></td>
+<td>double</td>
+<td>Average disk-read throughput (MB/s) during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#executioncount">ExecutionCount</a></td>
+<td>int64</td>
+<td>Total number of query executions during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#executionspersecond">ExecutionsperSecond</a></td>
+<td>double</td>
+<td>Average executions per second within the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#intervalcompletionratio">IntervalCompletionRatio</a></td>
+<td>double</td>
+<td>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.<code>Required</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#runtimeintervalid">RuntimeIntervalId</a></td>
+<td>int64</td>
+<td>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#timeslotbeginutc">TimeSlotBeginUtc</a></td>
+<td>datetime</td>
+<td>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#timeslotendutc">TimeSlotEndUtc</a></td>
+<td>datetime</td>
+<td>End timestamp of the interval in UTC.<code>Required</code> <code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#totaldurationms">TotalDurationms</a></td>
+<td>double</td>
+<td>Total duration (ms) of all completed executions in the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#totallogicalreads">TotalLogicalReads</a></td>
+<td>int64</td>
+<td>Total logical reads executed during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#totallogicalwrites">TotalLogicalWrites</a></td>
+<td>int64</td>
+<td>Total logical writes executed during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#totalphysicalreads">TotalPhysicalReads</a></td>
+<td>int64</td>
+<td>Total physical reads executed during the interval.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitcpums">WaitCPUms</a></td>
+<td>int64</td>
+<td>Total wait time due to CPU resource contention.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitioms">WaitIOms</a></td>
+<td>int64</td>
+<td>Total wait time related to IO operations.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitlockms">WaitLockms</a></td>
+<td>int64</td>
+<td>Total wait time caused by locks or blocking<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitmemoryms">WaitMemoryms</a></td>
+<td>int64</td>
+<td>Total wait time due to memory resource contention.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitnetworkms">WaitNetworkms</a></td>
+<td>int64</td>
+<td>Total wait time caused by network transfer-related waits.<code>Required</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitotherms">WaitOtherms</a></td>
+<td>int64</td>
+<td>Total wait time for all remaining wait categories.<code>Required</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="attribute-details">Attribute Details</h2>
+<h3 id="avgcorescpu">AvgCoresCPU</h3>
+<p>Normalized average CPU utilization by query executions in CPU-core units.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="avgcorestotal">AvgCoresTotal</h3>
+<p>Normalized average query execution duration in CPU-core units.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="avgcoreswaiting">AvgCoresWaiting</h3>
+<p>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="avgmemoryperquerymb">AvgMemoryperQueryMB</h3>
+<p>Average memory used per executed query.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="avgquerymemoryusagemb">AvgQueryMemoryUsageMB</h3>
+<p>Average SQL Server memory usage attributable to query execution (query memory grant usage).<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="diskreadmb">DiskReadMB</h3>
+<p>Total disk-read volume (MB) during the interval.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="diskreadthroughputmbps">DiskReadThroughputMBps</h3>
+<p>Average disk-read throughput (MB/s) during the interval.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="executioncount">ExecutionCount</h3>
+<p>Total number of query executions during the interval.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="executionspersecond">ExecutionsperSecond</h3>
+<p>Average executions per second within the interval.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="intervalcompletionratio">IntervalCompletionRatio</h3>
+<p>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.<code>Required</code> <code>Filter(eq)</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="runtimeintervalid">RuntimeIntervalId</h3>
+<p>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="timeslotbeginutc">TimeSlotBeginUtc</h3>
+<p>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>True</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="timeslotendutc">TimeSlotEndUtc</h3>
+<p>End timestamp of the interval in UTC.<code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="totaldurationms">TotalDurationms</h3>
+<p>Total duration (ms) of all completed executions in the interval.<code>Required</code></p>
+<p>Type: <strong>double</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="totallogicalreads">TotalLogicalReads</h3>
+<p>Total logical reads executed during the interval.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="totallogicalwrites">TotalLogicalWrites</h3>
+<p>Total logical writes executed during the interval.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="totalphysicalreads">TotalPhysicalReads</h3>
+<p>Total physical reads executed during the interval.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitcpums">WaitCPUms</h3>
+<p>Total wait time due to CPU resource contention.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitioms">WaitIOms</h3>
+<p>Total wait time related to IO operations.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitlockms">WaitLockms</h3>
+<p>Total wait time caused by locks or blocking<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitmemoryms">WaitMemoryms</h3>
+<p>Total wait time due to memory resource contention.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitnetworkms">WaitNetworkms</h3>
+<p>Total wait time caused by network transfer-related waits.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="waitotherms">WaitOtherms</h3>
+<p>Total wait time for all remaining wait categories.<code>Required</code></p>
+<p>Type: <strong>int64</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h2 id="api">API</h2>
+<p>Domain API Entity Set:
+Systems_Monitoring_DBResourceUtilization</p>
+<p>Domain API Entity Type:
+Systems_Monitoring_DBResourceUtilizationEntry</p>
+<p>Domain API Query:
+<a href="https://testdb.my.erp.net/api/domain/odata/Systems_Monitoring_DBResourceUtilization?$top=10">https://testdb.my.erp.net/api/domain/odata/Systems_Monitoring_DBResourceUtilization?$top=10</a></p>
+<p>Domain API Query Builder:
+<a href="https://testdb.my.erp.net/api/domain/querybuilder#Systems_Monitoring_DBResourceUtilization?$top=10">https://testdb.my.erp.net/api/domain/querybuilder#Systems_Monitoring_DBResourceUtilization?$top=10</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/entities/Systems.Monitoring.DBResourceUtilization.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

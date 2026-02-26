@@ -2263,6 +2263,9 @@ references:
 - uid: Systems.Monitoring.CurrentSessions
   name: Systems.Monitoring.CurrentSessions (View)
   href: entities/Systems.Monitoring.CurrentSessions.html
+- uid: Systems.Monitoring.DBResourceUtilization
+  name: Systems.Monitoring.DBResourceUtilization (View)
+  href: entities/Systems.Monitoring.DBResourceUtilization.html
 - uid: Systems.Monitoring.ExecStats
   name: Systems.Monitoring.ExecStats (View)
   href: entities/Systems.Monitoring.ExecStats.html

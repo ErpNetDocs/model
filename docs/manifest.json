@@ -20752,6 +20752,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Systems.Monitoring.DBResourceUtilization.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Systems.Monitoring.DBResourceUtilization.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Systems.Monitoring.ExecStats.md",
       "output": {
         ".html": {
@@ -23935,6 +23945,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Dmv_Current_Sessions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Dmv_DB_Resource_Utilization.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Dmv_DB_Resource_Utilization.html"
         }
       },
       "version": ""

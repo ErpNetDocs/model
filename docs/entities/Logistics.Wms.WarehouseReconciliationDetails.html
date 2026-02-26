@@ -120,6 +120,11 @@ Aggregate Root:<br>
 </thead>
 <tbody>
 <tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#countedquantity">CountedQuantity</a></td>
+<td>decimal (12, 3) <strong>nullable</strong></td>
+<td>The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.65</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#countedquantitybase">CountedQuantityBase</a></td>
 <td>decimal (12, 3) <strong>nullable</strong></td>
 <td>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.<code>Filter(eq;ge;le)</code></td>
@@ -143,6 +148,11 @@ Aggregate Root:<br>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#snapshotdatetime">SnapshotDateTime</a></td>
 <td>datetime</td>
 <td>The date and time when the availability snapshot for this line was created.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#snapshotquantity">SnapshotQuantity</a></td>
+<td>decimal (12, 3)</td>
+<td>Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.<code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.65</code></td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#snapshotquantitybase">SnapshotQuantityBase</a></td>
@@ -180,6 +190,11 @@ Aggregate Root:<br>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#product">Product</a></td>
 <td><a href="General.Products.Products.html">Products</a> (nullable)</td>
 <td>The product stored at the specified warehouse location.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#quantityunit">QuantityUnit</a></td>
+<td><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</td>
+<td>The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.</td>
 </tr>
 <tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#serialnumber">SerialNumber</a></td>
@@ -236,6 +251,13 @@ Aggregate Root:<br>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="countedquantity">CountedQuantity</h3>
+<p>The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.65</code></p>
+<p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="countedquantitybase">CountedQuantityBase</h3>
 <p>The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.<code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>decimal (12, 3) <strong>nullable</strong></strong><br>
@@ -266,27 +288,27 @@ Allowed Values (Logistics.Wms.WarehouseReconciliationDetailsRepository.ReviewSta
 <tbody>
 <tr>
 <td>Created</td>
-<td>The line is created from the snapshot and has no warehouse orders yet. This status is set automatically by the system on creation and can exist only once. It cannot be assigned manually by a user.. Stored as 'CRT'. <br> Database Value: 'CRT' <br> Model Value: 0 <br> Domain API Value: 'Created'</td>
+<td>Created value. Stored as 'CRT'. <br> Database Value: 'CRT' <br> Model Value: 0 <br> Domain API Value: 'Created'</td>
 </tr>
 <tr>
 <td>Started</td>
-<td>Warehouse orders have been generated for this line. This status is set automatically by the system and cannot be assigned by a user.. Stored as 'STR'. <br> Database Value: 'STR' <br> Model Value: 1 <br> Domain API Value: 'Started'</td>
+<td>Started value. Stored as 'STR'. <br> Database Value: 'STR' <br> Model Value: 1 <br> Domain API Value: 'Started'</td>
 </tr>
 <tr>
 <td>Finished</td>
-<td>Counting for this line is completed and results are available for review. This status is set automatically by the system.. Stored as 'FIN'. <br> Database Value: 'FIN' <br> Model Value: 2 <br> Domain API Value: 'Finished'</td>
+<td>Finished value. Stored as 'FIN'. <br> Database Value: 'FIN' <br> Model Value: 2 <br> Domain API Value: 'Finished'</td>
 </tr>
 <tr>
 <td>Approved</td>
-<td>The result for this line has been reviewed and approved. The line is considered final and will be used when generating warehouse transactions.. Stored as 'APR'. <br> Database Value: 'APR' <br> Model Value: 3 <br> Domain API Value: 'Approved'</td>
+<td>Approved value. Stored as 'APR'. <br> Database Value: 'APR' <br> Model Value: 3 <br> Domain API Value: 'Approved'</td>
 </tr>
 <tr>
 <td>Recount</td>
-<td>The line requires additional counting and should be included when generating new warehouse orders.. Stored as 'RCN'. <br> Database Value: 'RCN' <br> Model Value: 4 <br> Domain API Value: 'Recount'</td>
+<td>Recount value. Stored as 'RCN'. <br> Database Value: 'RCN' <br> Model Value: 4 <br> Domain API Value: 'Recount'</td>
 </tr>
 <tr>
 <td>Cancelled</td>
-<td>The line is excluded from the reconciliation process and will not be counted or processed further.. Stored as 'CNL'. <br> Database Value: 'CNL' <br> Model Value: 5 <br> Domain API Value: 'Cancelled'</td>
+<td>Cancelled value. Stored as 'CNL'. <br> Database Value: 'CNL' <br> Model Value: 5 <br> Domain API Value: 'Cancelled'</td>
 </tr>
 </tbody>
 </table>
@@ -307,6 +329,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="snapshotquantity">SnapshotQuantity</h3>
+<p>Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.<code>Required</code> <code>Default(0)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.1.65</code></p>
+<p>Type: <strong>decimal (12, 3)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="snapshotquantitybase">SnapshotQuantityBase</h3>
 <p>The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>
@@ -358,6 +388,12 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="product">Product</h3>
 <p>The product stored at the specified warehouse location.</p>
 <p>Type: <strong><a href="General.Products.Products.html">Products</a> (nullable)</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="quantityunit">QuantityUnit</h3>
+<p>The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.</p>
+<p>Type: <strong><a href="General.Products.MeasurementUnits.html">MeasurementUnits</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>

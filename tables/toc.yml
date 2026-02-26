@@ -413,6 +413,8 @@
     href: Dmv_Audit_Log_Entries.md
   - name: Dmv_Current_Sessions
     href: Dmv_Current_Sessions.md
+  - name: Dmv_DB_Resource_Utilization
+    href: Dmv_DB_Resource_Utilization.md
   - name: Dmv_Exec_Stats
     href: Dmv_Exec_Stats.md
   - name: Dmv_Information_Messages

@@ -25,6 +25,10 @@ Captures raw physical count entries recorded in the warehouse operations before 
 |[Source_Document_Id](#source_document_id)|`uniqueidentifier` Readonly|Requisition, reconciliation, or other document which initiated the counting.|
 |[Standard_Quantity_Base](#standard_quantity_base)|`decimal(12, 3)` Readonly|The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.|
 |[Variant_Id](#variant_id)|`uniqueidentifier` Readonly|Product variant (e.g. size, color, configuration), when tracked.|
+|[Void](#void)|`bit` |Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.|
+|[Void_Reason](#void_reason)|`nvarchar(254)` |Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.|
+|[Void_Time](#void_time)|`datetime` Readonly|The date and time when the count record was voided. Filled automatically by the system.|
+|[Void_User_Id](#void_user_id)|`uniqueidentifier` Readonly|The user who voided the count record. Filled automatically by the system.|
 |[Warehouse_Count_Id](#warehouse_count_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` Readonly|The warehouse location where the counting occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` Readonly|Warehouse order which initiated the counting.|
@@ -535,6 +539,146 @@ Product variant (e.g. size, color, configuration), when tracked.
 |Visible|yes|
 
 #### Variant_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Void
+
+
+Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Void - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### Void_Reason
+
+
+Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Void_Time
+
+
+The date and time when the count record was voided. Filled automatically by the system.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Void_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Void_User_Id
+
+
+The user who voided the count record. Filled automatically by the system.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Void_User_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

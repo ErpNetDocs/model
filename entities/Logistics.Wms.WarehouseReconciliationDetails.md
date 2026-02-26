@@ -36,11 +36,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CountedQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantity) | decimal (12, 3) __nullable__ | The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.`Filter(eq;ge;le)` `Introduced in version 26.2.1.65` 
 | [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.`Filter(eq;ge;le)` 
 | [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.`Filter(eq;ge;le)` `ReadOnly` 
 | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.`Required` `Default(&quot;CRT&quot;)` `Filter(multi eq)` 
 | [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.`Required` `Filter(eq)` `ReadOnly` 
 | [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [SnapshotQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantity) | decimal (12, 3) | Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.`Required` `Default(0)` `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65` 
 | [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.`Required` `Filter(eq;ge;le)` `ReadOnly` 
 
 ## References
@@ -51,6 +53,7 @@ Aggregate Root:
 | [LogisticUnit](Logistics.Wms.WarehouseReconciliationDetails.md#logisticunit) | [LogisticUnits](Logistics.Common.LogisticUnits.md) (nullable) | The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit. |
 | [Lot](Logistics.Wms.WarehouseReconciliationDetails.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Batch/lot of the product, when applicable. |
 | [Product](Logistics.Wms.WarehouseReconciliationDetails.md#product) | [Products](General.Products.Products.md) (nullable) | The product stored at the specified warehouse location. |
+| [QuantityUnit](Logistics.Wms.WarehouseReconciliationDetails.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) (nullable) | The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity. |
 | [SerialNumber](Logistics.Wms.WarehouseReconciliationDetails.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, when serialized tracking is enabled. |
 | [Variant](Logistics.Wms.WarehouseReconciliationDetails.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. |
 | [WarehouseLocation](Logistics.Wms.WarehouseReconciliationDetails.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location included in the reconciliation. |
@@ -68,6 +71,16 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### CountedQuantity
+
+The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.`Filter(eq;ge;le)` `Introduced in version 26.2.1.65`
+
+Type: **decimal (12, 3) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CountedQuantityBase
 
@@ -100,12 +113,12 @@ Allowed Values (Logistics.Wms.WarehouseReconciliationDetailsRepository.ReviewSta
 
 | Value | Description |
 | ---- | --- |
-| Created | The line is created from the snapshot and has no warehouse orders yet. This status is set automatically by the system on creation and can exist only once. It cannot be assigned manually by a user.. Stored as 'CRT'. <br /> Database Value: 'CRT' <br /> Model Value: 0 <br /> Domain API Value: 'Created' |
-| Started | Warehouse orders have been generated for this line. This status is set automatically by the system and cannot be assigned by a user.. Stored as 'STR'. <br /> Database Value: 'STR' <br /> Model Value: 1 <br /> Domain API Value: 'Started' |
-| Finished | Counting for this line is completed and results are available for review. This status is set automatically by the system.. Stored as 'FIN'. <br /> Database Value: 'FIN' <br /> Model Value: 2 <br /> Domain API Value: 'Finished' |
-| Approved | The result for this line has been reviewed and approved. The line is considered final and will be used when generating warehouse transactions.. Stored as 'APR'. <br /> Database Value: 'APR' <br /> Model Value: 3 <br /> Domain API Value: 'Approved' |
-| Recount | The line requires additional counting and should be included when generating new warehouse orders.. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 4 <br /> Domain API Value: 'Recount' |
-| Cancelled | The line is excluded from the reconciliation process and will not be counted or processed further.. Stored as 'CNL'. <br /> Database Value: 'CNL' <br /> Model Value: 5 <br /> Domain API Value: 'Cancelled' |
+| Created | Created value. Stored as 'CRT'. <br /> Database Value: 'CRT' <br /> Model Value: 0 <br /> Domain API Value: 'Created' |
+| Started | Started value. Stored as 'STR'. <br /> Database Value: 'STR' <br /> Model Value: 1 <br /> Domain API Value: 'Started' |
+| Finished | Finished value. Stored as 'FIN'. <br /> Database Value: 'FIN' <br /> Model Value: 2 <br /> Domain API Value: 'Finished' |
+| Approved | Approved value. Stored as 'APR'. <br /> Database Value: 'APR' <br /> Model Value: 3 <br /> Domain API Value: 'Approved' |
+| Recount | Recount value. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 4 <br /> Domain API Value: 'Recount' |
+| Cancelled | Cancelled value. Stored as 'CNL'. <br /> Database Value: 'CNL' <br /> Model Value: 5 <br /> Domain API Value: 'Cancelled' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
@@ -130,6 +143,17 @@ Type: **datetime**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### SnapshotQuantity
+
+Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.`Required` `Default(0)` `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65`
+
+Type: **decimal (12, 3)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **0**  
 Show in UI: **ShownByDefault**  
 
 ### SnapshotQuantityBase
@@ -206,6 +230,15 @@ Show in UI: **ShownByDefault**
 The product stored at the specified warehouse location.
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### QuantityUnit
+
+The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.
+
+Type: **[MeasurementUnits](General.Products.MeasurementUnits.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
