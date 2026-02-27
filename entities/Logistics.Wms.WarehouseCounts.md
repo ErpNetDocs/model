@@ -38,6 +38,9 @@ Aggregate Tree
 | [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
 | [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs.`Required` `Filter(eq;ge;le)` `ReadOnly` 
 | [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [Void](Logistics.Wms.WarehouseCounts.md#void) | boolean | Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.2.1.65` 
+| [VoidReason](Logistics.Wms.WarehouseCounts.md#voidreason) | string (254) __nullable__ | Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.`Introduced in version 26.2.1.65` 
+| [VoidTime](Logistics.Wms.WarehouseCounts.md#voidtime) | datetime __nullable__ | The date and time when the count record was voided. Filled automatically by the system.`Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65` 
 
 ## References
 
@@ -51,6 +54,7 @@ Aggregate Tree
 | [SerialNumber](Logistics.Wms.WarehouseCounts.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number, when serialized tracking is enabled. |
 | [SourceDocument](Logistics.Wms.WarehouseCounts.md#sourcedocument) | [Documents](General.Documents.Documents.md) (nullable) | Requisition, reconciliation, or other document which initiated the counting. |
 | [Variant](Logistics.Wms.WarehouseCounts.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. |
+| [VoidUser](Logistics.Wms.WarehouseCounts.md#voiduser) | [Users](Systems.Security.Users.md) (nullable) | The user who voided the count record. Filled automatically by the system. |
 | [WarehouseLocation](Logistics.Wms.WarehouseCounts.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location where the counting occurred. |
 | [WarehouseOrder](Logistics.Wms.WarehouseCounts.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) | Warehouse order which initiated the counting. |
 | [WarehouseOrderLine](Logistics.Wms.WarehouseCounts.md#warehouseorderline) | [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable) | Indicates for which Warehouse Order line this count entry was recorded. |
@@ -115,6 +119,38 @@ Show in UI: **ShownByDefault**
 The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **[Quantity (12, 3)](../data-types.md#quantity)**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Void
+
+Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.2.1.65`
+
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **False**  
+Show in UI: **ShownByDefault**  
+
+### VoidReason
+
+Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.`Introduced in version 26.2.1.65`
+
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
+
+### VoidTime
+
+The date and time when the count record was voided. Filled automatically by the system.`Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65`
+
+Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
@@ -250,6 +286,15 @@ Show in UI: **ShownByDefault**
 Product variant (e.g. size, color, configuration), when tracked.
 
 Type: **[ProductVariants](General.Products.ProductVariants.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### VoidUser
+
+The user who voided the count record. Filled automatically by the system.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

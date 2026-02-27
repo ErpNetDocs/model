@@ -101,11 +101,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#access_tokens">Access_Tokens</a></td>
-<td><code>char(3)</code> Allowed: <code>NON</code>, <code>USR</code>, <code>ADM</code></td>
-<td>Defines who is allowed to issue reference access tokens for this trusted application.</td>
-</tr>
-<tr>
 <td><a href="#application_secret_hash">Application_Secret_Hash</a></td>
 <td><code>nvarchar(250)</code></td>
 <td>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</td>
@@ -142,12 +137,12 @@
 </tr>
 <tr>
 <td><a href="#impersonate_login_url">Impersonate_Login_Url</a></td>
-<td><code>nvarchar(254)</code></td>
+<td><code>nvarchar(500)</code></td>
 <td>The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.</td>
 </tr>
 <tr>
 <td><a href="#impersonate_logout_url">Impersonate_Logout_Url</a></td>
-<td><code>nvarchar(254)</code></td>
+<td><code>nvarchar(500)</code></td>
 <td>The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.</td>
 </tr>
 <tr>
@@ -159,6 +154,11 @@
 <td><a href="#notes">Notes</a></td>
 <td><code>nvarchar(max)</code></td>
 <td></td>
+</tr>
+<tr>
+<td><a href="#reference_tokens">Reference_Tokens</a></td>
+<td><code>char(3)</code> Allowed: <code>NON</code>, <code>USR</code>, <code>ADM</code></td>
+<td>Defines who is allowed to issue reference access tokens for this trusted application.</td>
 </tr>
 <tr>
 <td><a href="#row_version">Row_Version</a></td>
@@ -198,129 +198,6 @@
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="access_tokens">Access_Tokens</h3>
-<p>Defines who is allowed to issue reference access tokens for this trusted application.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Allowed Values</td>
-<td><code>NON</code>, <code>USR</code>, <code>ADM</code></td>
-</tr>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NON</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>3</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>char(3)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="access_tokens---supported-filters">Access_Tokens - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="application_secret_hash">Application_Secret_Hash</h3>
 <p>Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.</p>
 <table>
@@ -1162,7 +1039,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>254</td>
+<td>500</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -1206,7 +1083,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254) (Allows NULL)</td>
+<td>nvarchar(500) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1262,7 +1139,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>254</td>
+<td>500</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -1306,7 +1183,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(254) (Allows NULL)</td>
+<td>nvarchar(500) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1541,6 +1418,129 @@
 <tr>
 <td>Visible</td>
 <td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reference_tokens">Reference_Tokens</h3>
+<p>Defines who is allowed to issue reference access tokens for this trusted application.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>NON</code>, <code>USR</code>, <code>ADM</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>NON</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reference_tokens---supported-filters">Reference_Tokens - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>no</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>

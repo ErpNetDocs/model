@@ -35,7 +35,6 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | [AccessTokens](Systems.Security.TrustedApplications.md#accesstokens) | Defines who is allowed to issue reference access tokens for this trusted application.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.2.0.16` 
 | [ApplicationSecretHash](Systems.Security.TrustedApplications.md#applicationsecrethash) | string (250) __nullable__ | Hash of the secret of the client application. The secret is used when the client application needs to authorize itself in front of the identity provider.`Introduced in version 20.1` 
 | [ApplicationUri](Systems.Security.TrustedApplications.md#applicationuri) | string (254) | Application globally unique Uri in reverse host name format. For example: "com.manufacturer/app".`Required` `Filter(eq)` `ORD` 
 | [BasicAuthenticationAllowed](Systems.Security.TrustedApplications.md#basicauthenticationallowed) | boolean | If true, this application allows login with user name and password. When a client application uses basic authentication it must provide the application uri along with user name and password. Use with caution, because basic authentication is less secure than oauth! If a user is specified in System User, the basic authentication is allowed only for this user.`Required` `Default(false)` `Filter(eq)` 
@@ -43,11 +42,12 @@ Aggregate Tree
 | [CreationTimeUtc](Systems.Security.TrustedApplications.md#creationtimeutc) | datetime | Date and time (in UTC) when the application was registered.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
 | [ImpersonateAsCommunity<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateascommunityuserallowed) | boolean | Allows the application to request login from external users and operate on their behalf.`Required` `Default(false)` `Filter(eq)` 
 | [ImpersonateAsInternal<br />UserAllowed](Systems.Security.TrustedApplications.md#impersonateasinternaluserallowed) | boolean | Allows the application to request login from internal users and operate on their behalf.`Required` `Default(false)` `Filter(eq)` 
-| [ImpersonateLoginUrl](Systems.Security.TrustedApplications.md#impersonateloginurl) | string (254) __nullable__ | The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
-| [ImpersonateLogoutUrl](Systems.Security.TrustedApplications.md#impersonatelogouturl) | string (254) __nullable__ | The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
+| [ImpersonateLoginUrl](Systems.Security.TrustedApplications.md#impersonateloginurl) | string (500) __nullable__ | The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
+| [ImpersonateLogoutUrl](Systems.Security.TrustedApplications.md#impersonatelogouturl) | string (500) __nullable__ | The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas. 
 | [IsEnabled](Systems.Security.TrustedApplications.md#isenabled) | boolean | Specifies whether the application is enabled for login.`Required` `Default(true)` `Filter(eq)` 
 | [Name](Systems.Security.TrustedApplications.md#name) | string (254) | The multi-language name of the application.`Required` `Filter(eq;like)` `ORD` 
 | [Notes](Systems.Security.TrustedApplications.md#notes) | string (max) __nullable__ | Notes for this TrustedApplication. 
+| [ReferenceTokens](Systems.Security.TrustedApplications.md#referencetokens) | [ReferenceTokens](Systems.Security.TrustedApplications.md#referencetokens) | Defines who is allowed to issue reference access tokens for this trusted application.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.2.1.66` 
 | [Scope](Systems.Security.TrustedApplications.md#scope) | string (max) __nullable__ | The scope (according to RFC 6749) for which the application was trusted. The scope is an unordered list of space-delimited case-sensitive strings. Each string denotes a permission (see docs for possible values).`Introduced in version 20.1` 
 | [SystemUserAllowed](Systems.Security.TrustedApplications.md#systemuserallowed) | boolean | Allows this application to logon as a service.`Required` `Default(false)` `Filter(eq)` 
 | [SystemUserLoginUrl](Systems.Security.TrustedApplications.md#systemuserloginurl) | string (254) __nullable__ | The URL, which will be used by the login process, when the application logs in as a service. 
@@ -78,26 +78,6 @@ Aggregate Tree
 
 
 ## Attribute Details
-
-### AccessTokens
-
-Defines who is allowed to issue reference access tokens for this trusted application.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.2.0.16`
-
-Type: **[AccessTokens](Systems.Security.TrustedApplications.md#accesstokens)**  
-Category: **System**  
-Allowed values for the `AccessTokens`(Systems.Security.TrustedApplications.md#accesstokens) data attribute  
-Allowed Values (Systems.Security.TrustedApplicationsRepository.AccessTokens Enum Members)  
-
-| Value | Description |
-| ---- | --- |
-| None | Reference tokens cannot be issued. (Default). Stored as 'NON'. <br /> Database Value: 'NON' <br /> Model Value: 0 <br /> Domain API Value: 'None' |
-| AuthenticatedUsers | Any authenticated (logged-in) user may issue.. Stored as 'USR'. <br /> Database Value: 'USR' <br /> Model Value: 1 <br /> Domain API Value: 'AuthenticatedUsers' |
-| AdministratorsOnly | Only administrators may issue.. Stored as 'ADM'. <br /> Database Value: 'ADM' <br /> Model Value: 2 <br /> Domain API Value: 'AdministratorsOnly' |
-
-Supported Filters: **Equals, EqualsIn**  
-Supports Order By: **False**  
-Default Value: **None**  
-Show in UI: **ShownByDefault**  
 
 ### ApplicationSecretHash
 
@@ -189,22 +169,22 @@ Show in UI: **ShownByDefault**
 
 The login Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
-Type: **string (254) __nullable__**  
+Type: **string (500) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **254**  
+Maximum Length: **500**  
 Show in UI: **ShownByDefault**  
 
 ### ImpersonateLogoutUrl
 
 The logout Url used when an application is impersonated as (usually community) user; may include multiple addresses, separated by commas.
 
-Type: **string (254) __nullable__**  
+Type: **string (500) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **254**  
+Maximum Length: **500**  
 Show in UI: **ShownByDefault**  
 
 ### IsEnabled
@@ -238,6 +218,26 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### ReferenceTokens
+
+Defines who is allowed to issue reference access tokens for this trusted application.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.2.1.66`
+
+Type: **[ReferenceTokens](Systems.Security.TrustedApplications.md#referencetokens)**  
+Category: **System**  
+Allowed values for the `ReferenceTokens`(Systems.Security.TrustedApplications.md#referencetokens) data attribute  
+Allowed Values (Systems.Security.TrustedApplicationsRepository.ReferenceTokens Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| None | None value. Stored as 'NON'. <br /> Database Value: 'NON' <br /> Model Value: 0 <br /> Domain API Value: 'None' |
+| AuthenticatedUsers | AuthenticatedUsers value. Stored as 'USR'. <br /> Database Value: 'USR' <br /> Model Value: 1 <br /> Domain API Value: 'AuthenticatedUsers' |
+| AdministratorsOnly | AdministratorsOnly value. Stored as 'ADM'. <br /> Database Value: 'ADM' <br /> Model Value: 2 <br /> Domain API Value: 'AdministratorsOnly' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **None**  
 Show in UI: **ShownByDefault**  
 
 ### Scope
