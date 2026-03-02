@@ -126,6 +126,7 @@ Allowed Values (Systems.Security.TrustedApplicationsRepository.ClientType Enum M
 | ---- | --- |
 | Confidential | Confidential value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 0 <br /> Domain API Value: 'Confidential' |
 | Public | Public value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Public' |
+| None | None value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 2 <br /> Domain API Value: 'None' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  

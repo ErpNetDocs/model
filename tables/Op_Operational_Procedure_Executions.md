@@ -45,7 +45,7 @@ When the procedure was completed.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|datetime|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -55,7 +55,7 @@ When the procedure was completed.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Operational_Procedure_Execution_Id

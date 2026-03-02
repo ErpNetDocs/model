@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime | When the procedure was completed.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [CompletedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#completedatutc) | datetime __nullable__ | When the procedure was completed.`Filter(eq;ge;le)` `ReadOnly` 
 | [StartedAtUtc](Projects.Procedures.OperationalProcedureExecutions.md#startedatutc) | datetime | When the procedure was started.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
 | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | [Status](Projects.Procedures.OperationalProcedureExecutions.md#status) | Current status.`Required` `Default(&quot;NEW&quot;)` `Filter(multi eq)` 
 
@@ -68,9 +68,9 @@ Aggregate Tree
 
 ### CompletedAtUtc
 
-When the procedure was completed.`Required` `Filter(eq;ge;le)` `ReadOnly`
+When the procedure was completed.`Filter(eq;ge;le)` `ReadOnly`
 
-Type: **datetime**  
+Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
