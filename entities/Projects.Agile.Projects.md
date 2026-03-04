@@ -232,6 +232,12 @@ Supported permissions
 | Update | - |
 | Delete | - |
 | Administer (manage security)| - |
+| Change to CONSIDER | Permission2 |
+| Change to READY | Permission3 |
+| Change to IN PROGRESS | Permission4 |
+| Change to WAITING | Permission5 |
+| Change to RESOLVED | Permission6 |
+| Change to CLOSED | Permission7 |
 ### Customer
 
 Specified, when the project is for a customer.
