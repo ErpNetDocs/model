@@ -43,7 +43,7 @@ User-defined models for cost allocation. Entity: Cost_Allocation_Models
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Cost_Allocation_Model_Id - Supported Filters
 

@@ -12,7 +12,7 @@ Compilation is created, when a Model is being compiled through the AI provider i
 | Name | Type | Description |
 | - | - | --- |
 |[Build_Log](#build_log)|`nvarchar(max)` Readonly|Detailed log of the build process of the compilation.|
-|[Compilation_Id](#compilation_id)|`uniqueidentifier` `PK`||
+|[Compilation_Id](#compilation_id)|`uniqueidentifier` `PK`, Readonly||
 |[Compiled_Model_Name](#compiled_model_name)|`nvarchar(256)` Readonly|The name of the model, which was created in the providers space, as a result of the compilation.|
 |[Completion_Time_Utc](#completion_time_utc)|`datetime` Readonly|The time, when the compilation has completed.|
 |[Error_Message](#error_message)|`nvarchar(max)` Readonly|Human-readable error message indicating the problem, when a build is not successful.|
@@ -71,7 +71,7 @@ Detailed log of the build process of the compilation.
 |Pasword|no|
 |Picture|no|
 |Primary Key|yes (order: 1)|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

@@ -280,7 +280,7 @@ The vehicle, to which a periodic maintenance plan is assigned.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Vehicle_Maintenance_Plan_Assignment_Id - Supported Filters
 

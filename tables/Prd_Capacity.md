@@ -189,7 +189,7 @@ Date of the availability period
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Capacity_Id - Supported Filters
 

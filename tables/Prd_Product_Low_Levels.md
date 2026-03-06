@@ -74,7 +74,7 @@ The product whose low level is recorded.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Product_Id - Supported Filters
 

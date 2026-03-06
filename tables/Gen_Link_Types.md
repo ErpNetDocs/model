@@ -52,7 +52,7 @@ Unique link type code
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Code - Supported Filters
 

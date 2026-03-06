@@ -232,7 +232,7 @@ The name of the instance to which this statistic applies.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Instance_Statistic_Id - Supported Filters
 

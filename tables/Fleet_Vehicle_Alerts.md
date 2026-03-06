@@ -202,7 +202,7 @@ The time of the alert.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Vehicle_Alert_Id - Supported Filters
 

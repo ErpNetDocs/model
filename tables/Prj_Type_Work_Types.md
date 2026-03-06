@@ -165,7 +165,7 @@ True when the work type is currently active and selectable in new documents.
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|

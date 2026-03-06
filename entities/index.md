@@ -14,7 +14,6 @@
 - [Projects](Projects.md)  
 - [Public](Public.md)  
 - [Regulatory](Regulatory.md)  
-- [Saft](Saft.md)  
 - [Systems](Systems.md)  
 
 ## Entity Renames

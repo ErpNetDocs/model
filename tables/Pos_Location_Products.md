@@ -210,7 +210,7 @@ The listed products for sale for each POS location.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Pos_Location_Product_Id - Supported Filters
 

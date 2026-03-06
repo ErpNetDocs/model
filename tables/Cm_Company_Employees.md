@@ -73,7 +73,7 @@ The department in which this employee is working. NULL means this information is
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -89,7 +89,7 @@ The department in which this employee is working. NULL means this information is
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

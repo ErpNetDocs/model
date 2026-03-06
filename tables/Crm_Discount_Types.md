@@ -155,7 +155,7 @@ Specifies whether the calculation method of the discount is based on a standard 
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Discount_Type_Id - Supported Filters
 

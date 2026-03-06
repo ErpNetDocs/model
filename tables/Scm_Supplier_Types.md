@@ -89,7 +89,7 @@ The access key required for accessing all suppliers of this supplier type.
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|

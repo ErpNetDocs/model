@@ -157,7 +157,7 @@ The exact timestamp of the comment
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Document_Comment_Id - Supported Filters
 

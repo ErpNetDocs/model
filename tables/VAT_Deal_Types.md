@@ -106,7 +106,7 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -122,7 +122,7 @@ Unique Id for the deal type. Deal_Type_Id should be used for identifyind and upd
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

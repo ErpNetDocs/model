@@ -158,7 +158,7 @@ Reconciliation order header
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Reconciliation_Order_Line_Id - Supported Filters
 

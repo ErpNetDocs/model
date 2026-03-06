@@ -132,7 +132,7 @@ Unique Id of the reference property
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Reference_Type_Id - Supported Filters
 

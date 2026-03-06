@@ -75,7 +75,7 @@ The process node event, which this timer defines.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Process_Node_Timer_Event_Id - Supported Filters
 

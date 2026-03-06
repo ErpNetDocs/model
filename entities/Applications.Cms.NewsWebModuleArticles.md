@@ -115,7 +115,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **ShownByDefault**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

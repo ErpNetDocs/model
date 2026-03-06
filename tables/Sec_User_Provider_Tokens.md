@@ -190,7 +190,7 @@ Primary key - not used
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### User_Provider_Token_Id - Supported Filters
 

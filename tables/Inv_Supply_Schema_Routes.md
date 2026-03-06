@@ -247,7 +247,7 @@ Obsolete. Not used.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Supply_Schema_Route_Id - Supported Filters
 

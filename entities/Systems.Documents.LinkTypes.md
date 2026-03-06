@@ -100,7 +100,7 @@ Type: **guid**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
-Show in UI: **ShownByDefault**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

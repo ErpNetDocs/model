@@ -450,7 +450,7 @@ The discount percentage, applied through the standard discount policy.
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|50|
 |User Login|no|
 |Visible|no|
 

@@ -352,7 +352,7 @@ A token used for sending notifications to the device, such as a push notificatio
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### User_Device_Id - Supported Filters
 

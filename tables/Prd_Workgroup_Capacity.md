@@ -145,7 +145,7 @@ The exact time of day, when the workgroup shift is available for utilisation
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Id - Supported Filters
 

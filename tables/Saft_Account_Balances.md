@@ -3,9 +3,9 @@
 
 ## Entity
 
-Entity: [Saft.AccountBalances](~/entities/Saft.AccountBalances.md)
+Entity: [Regulatory.Saft.AccountBalances](~/entities/Regulatory.Saft.AccountBalances.md)
 
-Account balances for SAT-T reporting purpose . Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
+Account balances for SAF-T reporting purpose . Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
 
 ## Summary
 

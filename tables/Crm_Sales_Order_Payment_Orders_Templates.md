@@ -93,7 +93,7 @@ Contains options for generation of payment orders. Each option set is assigned t
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|

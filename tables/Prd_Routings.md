@@ -58,7 +58,7 @@ The last date, when the route should be used. NULL means that the route might st
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -74,7 +74,7 @@ The last date, when the route should be used. NULL means that the route might st
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|Short|
 |User Login|no|
 |Visible|no|
 

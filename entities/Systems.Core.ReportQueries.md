@@ -57,7 +57,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Report</s>](Systems.Core.ReportQueries.md#report) | [Reports](General.Reports.md) | **OBSOLETE! Do not use!** The <see cref="General.Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner` |
+| [<s>Report</s>](Systems.Core.ReportQueries.md#report) | [Reports](General.Reports.md) | **OBSOLETE! Do not use!** The <see cref="General.Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` `Owner` |
 
 
 ## System Attributes
@@ -165,7 +165,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 
@@ -192,7 +192,7 @@ Show in UI: **HiddenByDefault**
 
 ### Report
 
-**OBSOLETE! Do not use!** The <see cref="General.Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` `Owner`
+**OBSOLETE! Do not use!** The <see cref="General.Report"/> to which this ReportQuery belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` `Owner`
 
 Type: **[Reports](General.Reports.md)**  
 Category: **System**  

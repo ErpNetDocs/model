@@ -107,7 +107,7 @@ Profiles contain multiple maintenance plans and can be assigned directly to a ve
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Maintenance_Profile_Id - Supported Filters
 

@@ -117,7 +117,7 @@ The primary key of the extension.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Extension_Id - Supported Filters
 

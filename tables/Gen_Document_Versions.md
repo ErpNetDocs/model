@@ -15,7 +15,7 @@ History of each saved version of each document. Entity: Gen_Document_Versions
 |[Document_Data_Format](#document_data_format)|`char(1)` |The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.|
 |[Document_Data_XML](#document_data_xml)|`nvarchar(max)` |The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).|
 |[Document_Id](#document_id)|`uniqueidentifier` |The document whoose version is stored in this row|
-|[Document_Version_Id](#document_version_id)|`uniqueidentifier` `PK`||
+|[Document_Version_Id](#document_version_id)|`uniqueidentifier` `PK`, Readonly||
 |[Row_Version](#row_version)|`timestamp` ||
 |[State](#state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`, `5`, Readonly|The state of the document by the time it was saved|
 |[Update_Time](#update_time)|`datetime` Readonly|The date and time when this version was saved|
@@ -158,7 +158,7 @@ The document whoose version is stored in this row
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -167,14 +167,14 @@ The document whoose version is stored in this row
 |Pasword|no|
 |Picture|no|
 |Primary Key|yes (order: 1)|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

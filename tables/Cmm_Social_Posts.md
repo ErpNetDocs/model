@@ -212,7 +212,7 @@ The group in which the post is made.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Post_Id - Supported Filters
 

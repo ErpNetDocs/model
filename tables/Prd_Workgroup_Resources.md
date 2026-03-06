@@ -98,7 +98,7 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -114,7 +114,7 @@ Quantity available of the resource in this workgroup. The measurement unit is sp
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

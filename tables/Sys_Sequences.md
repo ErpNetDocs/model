@@ -199,7 +199,7 @@ Unique identifier of the sequence record.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Sequence_Id - Supported Filters
 

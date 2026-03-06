@@ -49,7 +49,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Parent</s>](Applications.Cms.WebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete` |
+| [<s>Parent</s>](Applications.Cms.WebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` |
 | [<s>WebSite</s>](Applications.Cms.WebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. |
 
 
@@ -133,7 +133,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 
@@ -160,7 +160,7 @@ Show in UI: **HiddenByDefault**
 
 ### Parent
 
-**OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.2` `Obsolete`
+**OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete`
 
 Type: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 Category: **System**  

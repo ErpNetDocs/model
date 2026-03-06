@@ -85,7 +85,7 @@ Specifies the function, that the resource must be able to perform. This helps th
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Id - Supported Filters
 

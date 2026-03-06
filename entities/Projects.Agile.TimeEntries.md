@@ -118,7 +118,7 @@ Type: **guid**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

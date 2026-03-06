@@ -213,7 +213,7 @@ When not null, means that the comment is a reply to the specified comment. The c
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Comment_Id - Supported Filters
 

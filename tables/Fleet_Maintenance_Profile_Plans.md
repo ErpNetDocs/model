@@ -152,7 +152,7 @@ The maintenance profile, which includes the plan.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Maintenance_Profile_Plan_Id - Supported Filters
 

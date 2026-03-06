@@ -16,7 +16,7 @@ Key-value store for additional data, related to the build process of the compila
 | Name | Type | Description |
 | - | - | --- |
 |[Asset_Key](#asset_key)|`nvarchar(128)` Readonly|The key of the data asset.|
-|[Compilation_Asset_Id](#compilation_asset_id)|`uniqueidentifier` `PK`||
+|[Compilation_Asset_Id](#compilation_asset_id)|`uniqueidentifier` `PK`, Readonly||
 |[Compilation_Id](#compilation_id)|`uniqueidentifier` Readonly|The compilation of the data asset.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Value](#value)|`nvarchar(max)` Readonly|The value of the data asset.|
@@ -76,7 +76,7 @@ The key of the data asset.
 |Pasword|no|
 |Picture|no|
 |Primary Key|yes (order: 1)|
-|Readonly|no|
+|Readonly|yes|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

@@ -187,7 +187,7 @@ When true, the group is granted with update permission for the entity, protected
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Group_Access_Key_Id - Supported Filters
 

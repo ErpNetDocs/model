@@ -208,7 +208,7 @@ The vehicle, whose location is being stored.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Vehicle_Location_History_Record_Id - Supported Filters
 

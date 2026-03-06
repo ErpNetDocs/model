@@ -79,9 +79,9 @@ Allowed Values (Regulatory.Excise.ExciseStampOperationTypeEnum Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| NoChange | NoChange value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
-| Plus | Plus value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
-| Minus | Minus value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
+| NoChange | Value is not changed. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
+| Plus | Add value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
+| Minus | Subtract value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -99,9 +99,9 @@ Allowed Values (Regulatory.Excise.ExciseStampOperationTypeEnum Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| NoChange | NoChange value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
-| Plus | Plus value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
-| Minus | Minus value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
+| NoChange | Value is not changed. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
+| Plus | Add value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
+| Minus | Subtract value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -119,9 +119,9 @@ Allowed Values (Regulatory.Excise.ExciseStampOperationTypeEnum Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| NoChange | NoChange value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
-| Plus | Plus value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
-| Minus | Minus value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
+| NoChange | Value is not changed. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 0 <br /> Domain API Value: 'NoChange' |
+| Plus | Add value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Plus' |
+| Minus | Subtract value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 2 <br /> Domain API Value: 'Minus' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -187,7 +187,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

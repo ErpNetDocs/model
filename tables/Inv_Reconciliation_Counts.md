@@ -299,7 +299,7 @@ The measurement unit from the definition of the product
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Reconciliation_Count_Id - Supported Filters
 

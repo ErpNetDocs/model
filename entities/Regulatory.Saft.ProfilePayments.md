@@ -82,8 +82,8 @@ Allowed Values (Regulatory.Saft.ProfilePaymentsRepository.DebitCreditIndicator E
 
 | Value | Description |
 | ---- | --- |
-| Debit | Debit value. Stored as 'D'. <br /> Database Value: 'D' <br /> Model Value: 0 <br /> Domain API Value: 'Debit' |
-| Credit | Credit value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 1 <br /> Domain API Value: 'Credit' |
+| Debit | Debit. Stored as 'D'. <br /> Database Value: 'D' <br /> Model Value: 0 <br /> Domain API Value: 'Debit' |
+| Credit | Credit . Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 1 <br /> Domain API Value: 'Credit' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -100,8 +100,8 @@ Allowed Values (Regulatory.Saft.ProfilePaymentsRepository.Direction Enum Members
 
 | Value | Description |
 | ---- | --- |
-| Outgoing | Outgoing value. Stored as 'O'. <br /> Database Value: 'O' <br /> Model Value: 0 <br /> Domain API Value: 'Outgoing' |
-| Incoming | Incoming value. Stored as 'I'. <br /> Database Value: 'I' <br /> Model Value: 1 <br /> Domain API Value: 'Incoming' |
+| Outgoing | Outgoing. Stored as 'O'. <br /> Database Value: 'O' <br /> Model Value: 0 <br /> Domain API Value: 'Outgoing' |
+| Incoming | Incoming. Stored as 'I'. <br /> Database Value: 'I' <br /> Model Value: 1 <br /> Domain API Value: 'Incoming' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -118,9 +118,9 @@ Allowed Values (Regulatory.Saft.ProfilePaymentsRepository.PartyType Enum Members
 
 | Value | Description |
 | ---- | --- |
-| Supplier | Supplier value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Supplier' |
-| Customer | Customer value. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 1 <br /> Domain API Value: 'Customer' |
-| None | None value. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 2 <br /> Domain API Value: 'None' |
+| Supplier | Supplier. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Supplier' |
+| Customer | Customer. Stored as 'C'. <br /> Database Value: 'C' <br /> Model Value: 1 <br /> Domain API Value: 'Customer' |
+| None | None. Stored as 'N'. <br /> Database Value: 'N' <br /> Model Value: 2 <br /> Domain API Value: 'None' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -133,7 +133,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

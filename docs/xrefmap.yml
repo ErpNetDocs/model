@@ -1903,6 +1903,9 @@ references:
 - uid: Regulatory.Saft
   name: Regulatory.Saft Namespace
   href: entities/Regulatory.Saft.html
+- uid: Regulatory.Saft.AccountBalances
+  name: Regulatory.Saft.AccountBalances (View)
+  href: entities/Regulatory.Saft.AccountBalances.html
 - uid: Regulatory.Saft.ProfileAccountByAdditionalAmounts
   name: Regulatory.Saft.ProfileAccountByAdditionalAmounts
   href: entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.html
@@ -1936,6 +1939,9 @@ references:
 - uid: Regulatory.Saft.Profiles
   name: Regulatory.Saft.Profiles
   href: entities/Regulatory.Saft.Profiles.html
+- uid: Regulatory.Saft.SaftDeclarations
+  name: Regulatory.Saft.SaftDeclarations
+  href: entities/Regulatory.Saft.SaftDeclarations.html
 - uid: Regulatory.Vat
   name: Regulatory.Vat Namespace
   href: entities/Regulatory.Vat.html

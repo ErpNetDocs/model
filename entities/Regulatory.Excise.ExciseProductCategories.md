@@ -74,10 +74,10 @@ Allowed Values (Regulatory.Excise.ExciseProductCategoriesRepository.CalculationA
 
 | Value | Description |
 | ---- | --- |
-| NoОperation | NoОperation value. Stored as 'NOP'. <br /> Database Value: 'NOP' <br /> Model Value: 0 <br /> Domain API Value: 'NoОperation' |
-| Qty | Qty value. Stored as 'QTY'. <br /> Database Value: 'QTY' <br /> Model Value: 1 <br /> Domain API Value: 'Qty' |
-| QtyByAlcoholicStrength | QtyByAlcoholicStrength value. Stored as 'QAS'. <br /> Database Value: 'QAS' <br /> Model Value: 2 <br /> Domain API Value: 'QtyByAlcoholicStrength' |
-| QtyByAlcoholic<br />StrengthDiv100 | QtyByAlcoholic<br />StrengthDiv100 value. Stored as 'QAP'. <br /> Database Value: 'QAP' <br /> Model Value: 3 <br /> Domain API Value: 'QtyByAlcoholic<br />StrengthDiv100' |
+| NoОperation | No operation - manually set Tax Base. Stored as 'NOP'. <br /> Database Value: 'NOP' <br /> Model Value: 0 <br /> Domain API Value: 'NoОperation' |
+| Qty | Quantity. Stored as 'QTY'. <br /> Database Value: 'QTY' <br /> Model Value: 1 <br /> Domain API Value: 'Qty' |
+| QtyByAlcoholicStrength | Quantity * Alcoholic strength. Stored as 'QAS'. <br /> Database Value: 'QAS' <br /> Model Value: 2 <br /> Domain API Value: 'QtyByAlcoholicStrength' |
+| QtyByAlcoholic<br />StrengthDiv100 | Quantity * Alcoholic strength / 100. Stored as 'QAP'. <br /> Database Value: 'QAP' <br /> Model Value: 3 <br /> Domain API Value: 'QtyByAlcoholic<br />StrengthDiv100' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -112,7 +112,7 @@ Category: **System**
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 [Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

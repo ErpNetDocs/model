@@ -69,7 +69,7 @@ Shows where the execution of the step has reached. 0=Ready; 10=Active; 20=Execut
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Execution_Step_Id - Supported Filters
 

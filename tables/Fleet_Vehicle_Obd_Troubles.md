@@ -208,7 +208,7 @@ The vehicle, which has experienced the trouble.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Vehicle_Obd_Trouble_Id - Supported Filters
 

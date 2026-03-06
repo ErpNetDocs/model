@@ -333,7 +333,7 @@ Unique identifier of the POS sequence selector record.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Sequence_Selector_Id - Supported Filters
 

@@ -260,7 +260,7 @@ The group in which the user participates.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Group_Member_Id - Supported Filters
 

@@ -73,7 +73,7 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -89,7 +89,7 @@ Represents costs allocated to product outputs. Entity: Cost_Calculation_Product_
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

@@ -50,7 +50,7 @@ Unique distributor Id
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Distributor_Id - Supported Filters
 

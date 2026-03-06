@@ -76,7 +76,7 @@ Unique ID of the value
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Domain_Value_Id - Supported Filters
 

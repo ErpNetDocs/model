@@ -198,7 +198,7 @@ The system name of the executed update procedure.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Update_Procedure_Execute_Id - Supported Filters
 

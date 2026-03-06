@@ -80,9 +80,9 @@ Allowed Values (Regulatory.Saft.ProfileAccountsRepository.AccountType Enum Membe
 
 | Value | Description |
 | ---- | --- |
-| Active | Active value. Stored as 'ACT'. <br /> Database Value: 'ACT' <br /> Model Value: 0 <br /> Domain API Value: 'Active' |
-| Passive | Passive value. Stored as 'PAS'. <br /> Database Value: 'PAS' <br /> Model Value: 1 <br /> Domain API Value: 'Passive' |
-| Bifunctional | Bifunctional value. Stored as 'BIF'. <br /> Database Value: 'BIF' <br /> Model Value: 2 <br /> Domain API Value: 'Bifunctional' |
+| Active | Active. Stored as 'ACT'. <br /> Database Value: 'ACT' <br /> Model Value: 0 <br /> Domain API Value: 'Active' |
+| Passive | Passive. Stored as 'PAS'. <br /> Database Value: 'PAS' <br /> Model Value: 1 <br /> Domain API Value: 'Passive' |
+| Bifunctional | Bifunctional. Stored as 'BIF'. <br /> Database Value: 'BIF' <br /> Model Value: 2 <br /> Domain API Value: 'Bifunctional' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -116,7 +116,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

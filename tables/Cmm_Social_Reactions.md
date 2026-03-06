@@ -220,7 +220,7 @@ When not null, specifies that the reaction is for the specified comment within t
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Reaction_Id - Supported Filters
 

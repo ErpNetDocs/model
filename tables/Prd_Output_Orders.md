@@ -66,7 +66,7 @@ Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NewGuid|
-|Enter Stop|yes|
+|Enter Stop|no|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
@@ -82,7 +82,7 @@ Stores the output and run-time of the work orders. Entity: Prd_Output_Orders
 |Supports EQUALS_IN|yes|
 |Type|uniqueidentifier|
 |UI Memo Editor|no|
-|UI Width|Medium|
+|UI Width|100|
 |User Login|no|
 |Visible|no|
 

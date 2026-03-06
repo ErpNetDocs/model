@@ -109,9 +109,9 @@ Allowed Values (Regulatory.Excise.ExciseProductTypesRepository.Category Enum Mem
 
 | Value | Description |
 | ---- | --- |
-| ExciseStampFor<br />TobaccoProducts | ExciseStampFor<br />TobaccoProducts value. Stored as 'TT'. <br /> Database Value: 'TT' <br /> Model Value: 0 <br /> Domain API Value: 'ExciseStampFor<br />TobaccoProducts' |
-| ExciseStampFor<br />AlcoholProducts | ExciseStampFor<br />AlcoholProducts value. Stored as 'AA'. <br /> Database Value: 'AA' <br /> Model Value: 1 <br /> Domain API Value: 'ExciseStampFor<br />AlcoholProducts' |
-| DutyFree | DutyFree value. Stored as 'DF'. <br /> Database Value: 'DF' <br /> Model Value: 2 <br /> Domain API Value: 'DutyFree' |
+| ExciseStampFor<br />TobaccoProducts | Excise Stamp for Tobacco Products. Stored as 'TT'. <br /> Database Value: 'TT' <br /> Model Value: 0 <br /> Domain API Value: 'ExciseStampFor<br />TobaccoProducts' |
+| ExciseStampFor<br />AlcoholProducts | Excise Stamp for Alcohol Products. Stored as 'AA'. <br /> Database Value: 'AA' <br /> Model Value: 1 <br /> Domain API Value: 'ExciseStampFor<br />AlcoholProducts' |
+| DutyFree | Duty Free. Stored as 'DF'. <br /> Database Value: 'DF' <br /> Model Value: 2 <br /> Domain API Value: 'DutyFree' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -182,7 +182,7 @@ Indexed: **True**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
 Default Value: **NewGuid**  
-Show in UI: **CannotBeShown**  
+Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 

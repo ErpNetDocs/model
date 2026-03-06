@@ -55,7 +55,7 @@ It keeps track of "grants" issued by Identity Server - Personal Access Tokens (P
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Access_Token_Id - Supported Filters
 

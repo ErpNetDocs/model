@@ -70,7 +70,7 @@ Contains templates for creating new projects. Entity: Prj_Templates
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Project_Template_Id - Supported Filters
 

@@ -291,7 +291,7 @@ Optionally, the panel from the form which will be secured
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Visual_Permission_Id - Supported Filters
 

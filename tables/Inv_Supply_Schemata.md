@@ -73,7 +73,7 @@ Obsolete. Not used. Entity: Inv_Supply_Schemata (Obsoleted in version 22.1.6.60)
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Supply_Schema_Id - Supported Filters
 

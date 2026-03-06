@@ -83,7 +83,7 @@ If specified, might be used as search criteria for setup of the resource usage o
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Id - Supported Filters
 

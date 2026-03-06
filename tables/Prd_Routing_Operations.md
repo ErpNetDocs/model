@@ -75,7 +75,7 @@ The approximate duration of the operation (for quantity of 1) in seconds. This i
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Id - Supported Filters
 

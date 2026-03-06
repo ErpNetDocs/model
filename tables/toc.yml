@@ -1158,6 +1158,8 @@
   items:
   - name: Saft_Account_Balances
     href: Saft_Account_Balances.md
+  - name: Saft_Declarations
+    href: Saft_Declarations.md
   - name: Saft_Profile_Account_By_Additional_Amounts
     href: Saft_Profile_Account_By_Additional_Amounts.md
   - name: Saft_Profile_Account_By_Products

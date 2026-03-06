@@ -19292,6 +19292,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.AccountBalances.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.AccountBalances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Regulatory.Saft.ProfileAccountByAdditionalAmounts.md",
       "output": {
         ".html": {
@@ -19396,6 +19406,16 @@
       "output": {
         ".html": {
           "relative_path": "entities/Regulatory.Saft.Profiles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Regulatory.Saft.SaftDeclarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Regulatory.Saft.SaftDeclarations.html"
         }
       },
       "version": ""
@@ -27565,6 +27585,16 @@
       "output": {
         ".html": {
           "relative_path": "tables/Saft_Account_Balances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tables/Saft_Declarations.md",
+      "output": {
+        ".html": {
+          "relative_path": "tables/Saft_Declarations.html"
         }
       },
       "version": ""

@@ -1188,6 +1188,8 @@
   - name: Saft
     href: Regulatory.Saft.md
     items:
+    - name: AccountBalances
+      href: Regulatory.Saft.AccountBalances.md
     - name: ProfileAccountByAdditionalAmounts
       href: Regulatory.Saft.ProfileAccountByAdditionalAmounts.md
     - name: ProfileAccountByProducts
@@ -1210,6 +1212,8 @@
       href: Regulatory.Saft.ProfileTaxCodeByAccounts.md
     - name: ProfileTaxCodeByDealTypes
       href: Regulatory.Saft.ProfileTaxCodeByDealTypes.md
+    - name: SaftDeclarations
+      href: Regulatory.Saft.SaftDeclarations.md
   - name: Vat
     href: Regulatory.Vat.md
     items:
@@ -1229,11 +1233,6 @@
       href: Regulatory.Vat.Declarations.md
     - name: Entries
       href: Regulatory.Vat.Entries.md
-- name: Saft
-  href: Saft.md
-  items:
-  - name: AccountBalances
-    href: Saft.AccountBalances.md
 - name: Systems
   href: Systems.md
   items:

@@ -191,7 +191,7 @@ Reconciliation order Id
 |UI Memo Editor|no|
 |UI Width|100|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Reconciliation_Order_Id - Supported Filters
 

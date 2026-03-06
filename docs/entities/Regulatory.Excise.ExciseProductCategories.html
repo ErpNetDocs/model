@@ -201,19 +201,19 @@ Allowed Values (Regulatory.Excise.ExciseProductCategoriesRepository.CalculationA
 <tbody>
 <tr>
 <td>NoОperation</td>
-<td>NoОperation value. Stored as 'NOP'. <br> Database Value: 'NOP' <br> Model Value: 0 <br> Domain API Value: 'NoОperation'</td>
+<td>No operation - manually set Tax Base. Stored as 'NOP'. <br> Database Value: 'NOP' <br> Model Value: 0 <br> Domain API Value: 'NoОperation'</td>
 </tr>
 <tr>
 <td>Qty</td>
-<td>Qty value. Stored as 'QTY'. <br> Database Value: 'QTY' <br> Model Value: 1 <br> Domain API Value: 'Qty'</td>
+<td>Quantity. Stored as 'QTY'. <br> Database Value: 'QTY' <br> Model Value: 1 <br> Domain API Value: 'Qty'</td>
 </tr>
 <tr>
 <td>QtyByAlcoholicStrength</td>
-<td>QtyByAlcoholicStrength value. Stored as 'QAS'. <br> Database Value: 'QAS' <br> Model Value: 2 <br> Domain API Value: 'QtyByAlcoholicStrength'</td>
+<td>Quantity * Alcoholic strength. Stored as 'QAS'. <br> Database Value: 'QAS' <br> Model Value: 2 <br> Domain API Value: 'QtyByAlcoholicStrength'</td>
 </tr>
 <tr>
 <td>QtyByAlcoholic<br>StrengthDiv100</td>
-<td>QtyByAlcoholic<br>StrengthDiv100 value. Stored as 'QAP'. <br> Database Value: 'QAP' <br> Model Value: 3 <br> Domain API Value: 'QtyByAlcoholic<br>StrengthDiv100'</td>
+<td>Quantity * Alcoholic strength / 100. Stored as 'QAP'. <br> Database Value: 'QAP' <br> Model Value: 3 <br> Domain API Value: 'QtyByAlcoholic<br>StrengthDiv100'</td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +242,7 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan, EqualsIn</strong><br>
 <a href="https://docs.erp.net/dev/domain-api/filterable-references.html">Filterable Reference</a>: <strong>True</strong><br>
 Default Value: <strong>NewGuid</strong><br>
-Show in UI: <strong>CannotBeShown</strong></p>
+Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="objectversion">ObjectVersion</h3>
 <p>The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.</p>
 <p>Type: <strong>int32</strong><br>

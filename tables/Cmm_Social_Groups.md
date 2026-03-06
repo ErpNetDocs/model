@@ -134,7 +134,7 @@ The time (in UTC) of the last interaction of any kind (comment, reaction, etc.) 
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Group_Id - Supported Filters
 

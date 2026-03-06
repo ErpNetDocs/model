@@ -247,7 +247,7 @@ Specifies whether the grant is explicitly revoked.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Trusted_Application_Authorization_Id - Supported Filters
 

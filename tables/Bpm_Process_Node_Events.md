@@ -352,7 +352,7 @@ True if this is timer event.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Process_Node_Event_Id - Supported Filters
 

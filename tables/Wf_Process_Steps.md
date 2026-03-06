@@ -115,7 +115,7 @@ Unique process step Id
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Process_Step_Id - Supported Filters
 

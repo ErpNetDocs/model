@@ -182,7 +182,7 @@ Indicates the level of user’s interest for this object.
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Social_Follow_Id - Supported Filters
 

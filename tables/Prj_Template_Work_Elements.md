@@ -81,7 +81,7 @@ Contains project work elements, which shall be copied to projects, based on the 
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Project_Template_Work_Element_Id - Supported Filters
 
