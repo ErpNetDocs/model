@@ -127,7 +127,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#closedat">ClosedAt</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>When the sale was finalized (paid, voided, or completed).<code>Filter(eq;ge;le)</code></td>
+<td>When the sale was finalized (paid, voided, or completed).<code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#documentnumber">DocumentNumber</a></td>
@@ -147,7 +147,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#openedat">OpenedAt</a></td>
 <td>datetime</td>
-<td>Time of the opening of the POS sale.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Time of the opening of the POS sale.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#originalsalenumber">OriginalSaleNumber</a></td>
@@ -157,7 +157,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Crm.Pos.Sales.html#saledate">SaleDate</a></td>
 <td>date</td>
-<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></td>
+<td>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Pos.Sales.html#salekind">SaleKind</a></td>
@@ -319,11 +319,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="closedat">ClosedAt</h3>
-<p>When the sale was finalized (paid, voided, or completed).<code>Filter(eq;ge;le)</code></p>
+<p>When the sale was finalized (paid, voided, or completed).<code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="documentnumber">DocumentNumber</h3>
 <p>Receipt document number.<code>Required</code> <code>Filter(eq;like)</code></p>
@@ -350,11 +350,11 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openedat">OpenedAt</h3>
-<p>Time of the opening of the POS sale.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Time of the opening of the POS sale.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="originalsalenumber">OriginalSaleNumber</h3>
@@ -366,11 +366,11 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>25</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="saledate">SaleDate</h3>
-<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code></p>
+<p>Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.<code>Required</code> <code>Default(Now)</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Default Value: <strong>CurrentDateTime</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salekind">SaleKind</h3>

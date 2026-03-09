@@ -4,7 +4,7 @@ uid: Regulatory.Saft.SaftDeclarations
 # Regulatory.Saft.SaftDeclarations
 
 
-SAF-T Declaration document
+SAF-T Declaration documents
 
 ## General
 Namespace: [Regulatory.Saft](Regulatory.Saft.md)  

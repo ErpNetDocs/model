@@ -36,13 +36,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed).`Filter(eq;ge;le)` 
+| [ClosedAt](Crm.Pos.Sales.md#closedat) | datetime __nullable__ | When the sale was finalized (paid, voided, or completed).`Filter(eq;ge;le)` `ORD` 
 | [DocumentNumber](Crm.Pos.Sales.md#documentnumber) | string (25) | Receipt document number.`Required` `Filter(eq;like)` 
 | [FiscalSalesNumber](Crm.Pos.Sales.md#fiscalsalesnumber) | string (32) __nullable__ | Unique number of the sale, assigned for fiscal reporting purposes. The format is according to the applicable legislation. NULL means that there is no requirement for fiscal sales number for this document or it is unknown.`Filter(multi eq)` `Introduced in version 26.2.1.33` 
 | [IsVoided](Crm.Pos.Sales.md#isvoided) | boolean | Marked true if sale is canceled/voided.`Required` `Default(false)` `Filter(eq)` 
-| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale.`Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [OpenedAt](Crm.Pos.Sales.md#openedat) | datetime | Time of the opening of the POS sale.`Required` `Default(Now)` `Filter(eq;ge;le)` `ORD` 
 | [OriginalSaleNumber](Crm.Pos.Sales.md#originalsalenumber) | string (25) __nullable__ | Original sale document number. Might be specified when this sale refunds/returns another POS sale. Especially useful when the original document is not in the system.`Filter(eq;like)` 
-| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.`Required` `Default(Now)` `Filter(eq;ge;le)` 
+| [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.`Required` `Default(Now)` `Filter(eq;ge;le)` `ORD` 
 | [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale".`Required` `Default(&quot;SAL&quot;)` `Filter(eq)` 
 | [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines.`Required` `Default(&quot;NEW&quot;)` `Filter(eq)` 
 | [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency.`Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
@@ -89,12 +89,12 @@ Aggregate Tree
 
 ### ClosedAt
 
-When the sale was finalized (paid, voided, or completed).`Filter(eq;ge;le)`
+When the sale was finalized (paid, voided, or completed).`Filter(eq;ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
 ### DocumentNumber
@@ -132,12 +132,12 @@ Show in UI: **ShownByDefault**
 
 ### OpenedAt
 
-Time of the opening of the POS sale.`Required` `Default(Now)` `Filter(eq;ge;le)`
+Time of the opening of the POS sale.`Required` `Default(Now)` `Filter(eq;ge;le)` `ORD`
 
 Type: **datetime**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Default Value: **CurrentDateTime**  
 Show in UI: **ShownByDefault**  
 
@@ -154,12 +154,12 @@ Show in UI: **ShownByDefault**
 
 ### SaleDate
 
-Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.`Required` `Default(Now)` `Filter(eq;ge;le)`
+Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.`Required` `Default(Now)` `Filter(eq;ge;le)` `ORD`
 
 Type: **date**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Default Value: **CurrentDateTime**  
 Show in UI: **ShownByDefault**  
 

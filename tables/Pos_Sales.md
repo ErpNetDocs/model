@@ -60,7 +60,7 @@ When the sale was finalized (paid, voided, or completed).
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|datetime (Allows NULL)|
@@ -317,7 +317,7 @@ Time of the opening of the POS sale.
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|datetime|
@@ -637,7 +637,7 @@ Represents the business date of the sale (used for aggregations, reporting, acco
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|date|
