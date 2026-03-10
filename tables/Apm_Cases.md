@@ -34,6 +34,7 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 |[Resolved_Time_UTC](#resolved_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case was resolved.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |Specified, when the case is assigned to a group of users.|
+|[Specification](#specification)|`nvarchar(max)` |Contains the current working or final version of the case proposal.|
 |[Sprint_Id](#sprint_id)|`uniqueidentifier` |The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work).|
 |[Stakeholder_Party_Id](#stakeholder_party_id)|`uniqueidentifier` |The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).|
 |[Story_Points](#story_points)|`int` |When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.|
@@ -863,6 +864,43 @@ Specified, when the case is assigned to a group of users.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Specification
+
+
+Contains the current working or final version of the case proposal.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|30|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Specification - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 ### Sprint_Id
 

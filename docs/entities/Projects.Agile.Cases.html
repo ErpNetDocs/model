@@ -196,6 +196,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>Indicates the time (in UTC) when the case was resolved.<code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 25.1.0.93</code></td>
 </tr>
 <tr>
+<td><a href="Projects.Agile.Cases.html#specification">Specification</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Contains the current working or final version of the case proposal.<code>Filter(like)</code> <code>Introduced in version 26.2.1.78</code></td>
+</tr>
+<tr>
 <td><a href="Projects.Agile.Cases.html#storypoints">StoryPoints</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></td>
@@ -491,6 +496,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="specification">Specification</h3>
+<p>Contains the current working or final version of the case proposal.<code>Filter(like)</code> <code>Introduced in version 26.2.1.78</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="storypoints">StoryPoints</h3>
 <p>When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.1.4.53</code></p>
 <p>Type: <strong>int32 <strong>nullable</strong></strong><br>

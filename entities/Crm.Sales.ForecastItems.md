@@ -28,7 +28,7 @@ Category:  Views
 Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  0 - Do not track changes  
+Min level:  1 - Track last changes only  
 Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate

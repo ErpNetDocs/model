@@ -108,7 +108,7 @@ Category:  Documents<br>
 Show in UI:  ShownByDefault<br>
 Layout category By:  DocumentTypeId</p>
 <h2 id="track-changes">Track Changes</h2>
-<p>Min level:  0 - Do not track changes<br>
+<p>Min level:  3 - Track object and attribute changes<br>
 Max level:  4 - Track object attribute and blob changes</p>
 <h2 id="aggregate">Aggregate</h2>
 <p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
@@ -204,9 +204,9 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>Notes for this Document. (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
-<td><a href="Regulatory.Excise.ExciseAdministrativeDocuments.html#documentversion">DocumentVersion</a></td>
+<td><a href="Regulatory.Excise.ExciseAdministrativeDocuments.html#documentversion"><s>DocumentVersion</s></a></td>
 <td>int32</td>
-<td>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
+<td><strong>OBSOLETE! Do not use!</strong> Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Obsolete</code> <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> <code>Obsoleted in version 26.2.1.78</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
 <td><a href="Regulatory.Excise.ExciseAdministrativeDocuments.html#entityname">EntityName</a></td>
@@ -644,7 +644,7 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="documentversion">DocumentVersion</h3>
-<p>Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
+<p><strong>OBSOLETE! Do not use!</strong> Consecutive version number, starting with 1. Each update produces a new version of the document. <code>Obsolete</code> <code>Required</code> <code>Default(1)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code> <code>Obsoleted in version 26.2.1.78</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

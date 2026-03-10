@@ -22,7 +22,7 @@ Show in UI:  ShownByDefault
 Layout category By:  ServiceObjectTypeId  
 
 ## Track Changes  
-Min level:  0 - Do not track changes  
+Min level:  1 - Track last changes only  
 Max level:  4 - Track object attribute and blob changes  
 
 ## Aggregate

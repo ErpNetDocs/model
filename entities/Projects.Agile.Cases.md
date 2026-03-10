@@ -51,6 +51,7 @@ Aggregate Tree
 | [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest).`Required` `Default(7)` `Filter(eq)` 
 | [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
 | [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
+| [Specification](Projects.Agile.Cases.md#specification) | string (max) __nullable__ | Contains the current working or final version of the case proposal.`Filter(like)` `Introduced in version 26.2.1.78` 
 | [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.`Filter(eq;ge;le)` `Introduced in version 26.1.4.53` 
 | [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ReadOnly` 
 | [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title.`Required` `Filter(like)` 
@@ -250,6 +251,17 @@ Category: **System**
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **False**  
 Show in UI: **HiddenByDefault**  
+
+### Specification
+
+Contains the current working or final version of the case proposal.`Filter(like)` `Introduced in version 26.2.1.78`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### StoryPoints
 
