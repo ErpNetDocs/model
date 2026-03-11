@@ -111,6 +111,11 @@
 <td>The user, who created the object represented by this system object . NULL means that it is unknown.</td>
 </tr>
 <tr>
+<td><a href="#display_name">Display_Name</a></td>
+<td><code>nvarchar(128)</code></td>
+<td>Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.</td>
+</tr>
+<tr>
 <td><a href="#entity_item_id">Entity_Item_Id</a></td>
 <td><code>uniqueidentifier</code></td>
 <td>The Id of the primary row to which the object is bound</td>
@@ -410,6 +415,131 @@
 </tr>
 </tbody>
 </table>
+<h3 id="display_name">Display_Name</h3>
+<p>Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>nvarchar(128) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="display_name---supported-filters">Display_Name - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="entity_item_id">Entity_Item_Id</h3>
 <p>The Id of the primary row to which the object is bound</p>
 <table>
@@ -597,7 +727,7 @@
 </tr>
 <tr>
 <td>Sortable</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Summary Type</td>

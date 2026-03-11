@@ -94,8 +94,9 @@ Repository: Systems.Core.ExtensibleDataObjects<br>
 Base Table: Sys_Objects<br>
 API access:  ReadWrite</p>
 <h2 id="visualization">Visualization</h2>
-<p>Display Format: {Id}: {EntityType}<br>
-Search Members:<br>
+<p>Display Format: {DisplayName}<br>
+Search Members: DisplayName<br>
+Name Member: DisplayName<br>
 Category:  Definitions<br>
 Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
@@ -127,6 +128,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.<code>Filter(ge;le)</code> <code>ORD</code> <code>Introduced in version 19.1</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Core.ExtensibleDataObjects.html#displayname">DisplayName</a></td>
+<td>string (128) <strong>nullable</strong></td>
+<td>Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.<code>Filter(eq;like)</code> <code>Introduced in version 26.2.1.78</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entityitemid">EntityItemId</a></td>
 <td>guid</td>
 <td>The Id of the primary row to which the object is bound. <code>Required</code> <code>Filter(multi eq)</code></td>
@@ -134,7 +140,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#entitytype">EntityType</a></td>
 <td>string (64)</td>
-<td>The entity type of the row to which the object is bound<code>Required</code> <code>Default(&amp;quot; &amp;quot;)</code> <code>Filter(eq)</code></td>
+<td>The entity type of the row to which the object is bound<code>Required</code> <code>Default(&amp;quot; &amp;quot;)</code> <code>Filter(eq)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Core.ExtensibleDataObjects.html#externalid">ExternalId</a></td>
@@ -243,6 +249,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="displayname">DisplayName</h3>
+<p>Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.<code>Filter(eq;like)</code> <code>Introduced in version 26.2.1.78</code></p>
+<p>Type: <strong>string (128) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>128</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entityitemid">EntityItemId</h3>
 <p>The Id of the primary row to which the object is bound. <code>Required</code> <code>Filter(multi eq)</code></p>
 <p>Type: <strong>guid</strong><br>
@@ -251,11 +265,12 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="entitytype">EntityType</h3>
-<p>The entity type of the row to which the object is bound<code>Required</code> <code>Default(&amp;quot; &amp;quot;)</code> <code>Filter(eq)</code></p>
+<p>The entity type of the row to which the object is bound<code>Required</code> <code>Default(&amp;quot; &amp;quot;)</code> <code>Filter(eq)</code> <code>ORD</code></p>
 <p>Type: <strong>string (64)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Default Value: ** **<br>
 Show in UI: <strong>ShownByDefault</strong></p>

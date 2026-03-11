@@ -131,6 +131,7 @@ Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)
 | CalculateReporting<br />CurrencyAmounts | Calculate historical Reporting currency amounts. Stored as 'CRC'. <br /> Database Value: 'CRC' <br /> Model Value: 9 <br /> Domain API Value: 'CalculateReporting<br />CurrencyAmounts' |
 | InstanceChangesProcessor | InstanceChangesProcessor value. Stored as 'ICP'. <br /> Database Value: 'ICP' <br /> Model Value: 10 <br /> Domain API Value: 'InstanceChangesProcessor' |
 | DeleteExpiredAccessTokens | DeleteExpiredAccessTokens value. Stored as 'DRT'. <br /> Database Value: 'DRT' <br /> Model Value: 11 <br /> Domain API Value: 'DeleteExpiredAccessTokens' |
+| CreateExtensible<br />DataObjects | Create missing extensible data objects (EDO) for non-document entities.. Stored as 'CEO'. <br /> Database Value: 'CEO' <br /> Model Value: 12 <br /> Domain API Value: 'CreateExtensible<br />DataObjects' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

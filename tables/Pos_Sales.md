@@ -29,7 +29,8 @@ Stores header-level information for individual retail transactions processed thr
 |[Sale_Currency_Id](#sale_currency_id)|`uniqueidentifier` |Reference to the currency in which this POS sale is recorded.|
 |[Sale_Date](#sale_date)|`date` |Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.|
 |[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event. Typically it is "Normal sale".|
-|[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
+|[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`, `IPS`, `IPF`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
+|[System_Message](#system_message)|`nvarchar(max)` |System logs and error messages related to the processing of this POS sale.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
 |[Total_Amount](#total_amount)|`decimal(14, 2)` |Total gross amount in the sale currency.|
 |[Total_Amount_Base](#total_amount_base)|`decimal(14, 2)` |Total gross amount in base currency.|
@@ -697,7 +698,7 @@ General stage of the sale. Finalized sales must have matching amounts between he
 
 | Property | Value |
 | - | - |
-|Allowed Values|`NEW`, `FIN`|
+|Allowed Values|`NEW`, `FIN`, `IPS`, `IPF`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|NEW|
@@ -726,6 +727,37 @@ General stage of the sale. Finalized sales must have matching amounts between he
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### System_Message
+
+
+System logs and error messages related to the processing of this POS sale.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Terminal_Id
 

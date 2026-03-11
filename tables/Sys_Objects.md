@@ -13,6 +13,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 | - | - | --- |
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the object represented by this system object . NULL means that it is unknown.|
+|[Display_Name](#display_name)|`nvarchar(128)` |Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.|
 |[Entity_Item_Id](#entity_item_id)|`uniqueidentifier` |The Id of the primary row to which the object is bound|
 |[Entity_Type](#entity_type)|`nvarchar(64)` |The entity type of the row to which the object is bound|
 |[External_Id](#external_id)|`nvarchar(254)` |The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems.|
@@ -100,6 +101,43 @@ The user, who created the object represented by this system object . NULL means 
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Display_Name
+
+
+Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|128|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(128) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Display_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
+|Like|None|no|no|
+
 ### Entity_Item_Id
 
 
@@ -157,7 +195,7 @@ The entity type of the row to which the object is bound
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(64)|

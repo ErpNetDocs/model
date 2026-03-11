@@ -170,6 +170,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>General stage of the sale. Finalized sales must have matching amounts between header and detail lines.<code>Required</code> <code>Default(&amp;quot;NEW&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.Sales.html#systemmessage">SystemMessage</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>System logs and error messages related to the processing of this POS sale. <code>Introduced in version 26.2.1.79</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.Sales.html#totalamount">TotalAmount</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 2)</a></td>
 <td>Total gross amount in the sale currency.<code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></td>
@@ -431,11 +436,27 @@ Allowed Values (Crm.Pos.SalesRepository.SaleStage Enum Members)</p>
 <td>Finalized</td>
 <td>Finalized. Stored as 'FIN'. <br> Database Value: 'FIN' <br> Model Value: 1 <br> Domain API Value: 'Finalized'</td>
 </tr>
+<tr>
+<td>ImportSuccess</td>
+<td>ImportSuccess value. Stored as 'IPS'. <br> Database Value: 'IPS' <br> Model Value: 2 <br> Domain API Value: 'ImportSuccess'</td>
+</tr>
+<tr>
+<td>ImportFail</td>
+<td>ImportFail value. Stored as 'IPF'. <br> Database Value: 'IPF' <br> Model Value: 3 <br> Domain API Value: 'ImportFail'</td>
+</tr>
 </tbody>
 </table>
 <p>Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Default Value: <strong>New</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="systemmessage">SystemMessage</h3>
+<p>System logs and error messages related to the processing of this POS sale. <code>Introduced in version 26.2.1.79</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalamount">TotalAmount</h3>
 <p>Total gross amount in the sale currency.<code>Currency: SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code> <code>Introduced in version 25.1.3.47</code></p>
@@ -511,12 +532,14 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="closedby">ClosedBy</h3>
 <p>The operator who finalized or closed the sale (may differ from opener).</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="customer">Customer</h3>
 <p>Set for known customers (e.g. loyalty program), otherwise null.</p>
 <p>Type: <strong><a href="Crm.Sales.Customers.html">Customers</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
@@ -530,30 +553,35 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="openedby">OpenedBy</h3>
 <p>The operator who created the sale.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a></strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="operator">Operator</h3>
 <p>Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a></strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="originalsale">OriginalSale</h3>
 <p>Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).</p>
 <p>Type: <strong><a href="Crm.Pos.Sales.html">Sales</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="paymenttype">PaymentType</h3>
 <p>Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.</p>
 <p>Type: <strong><a href="Finance.Payments.PaymentTypes.html">PaymentTypes</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="salecurrency">SaleCurrency</h3>
 <p>Reference to the currency in which this POS sale is recorded.</p>
 <p>Type: <strong><a href="General.Currencies.Currencies.html">Currencies</a></strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
@@ -562,12 +590,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="terminal">Terminal</h3>
 <p>Link to specific POS workspace terminal used.</p>
 <p>Type: <strong><a href="Crm.Pos.Terminals.html">Terminals</a></strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="voidedby">VoidedBy</h3>
 <p>The operator who voided the document.</p>
 <p>Type: <strong><a href="Crm.Pos.Operators.html">Operators</a> (nullable)</strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>

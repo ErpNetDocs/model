@@ -45,6 +45,7 @@ Aggregate Tree
 | [SaleDate](Crm.Pos.Sales.md#saledate) | date | Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.`Required` `Default(Now)` `Filter(eq;ge;le)` `ORD` 
 | [SaleKind](Crm.Pos.Sales.md#salekind) | [SaleKind](Crm.Pos.Sales.md#salekind) | Kind of POS sale event. Typically it is "Normal sale".`Required` `Default(&quot;SAL&quot;)` `Filter(eq)` 
 | [SaleStage](Crm.Pos.Sales.md#salestage) | [SaleStage](Crm.Pos.Sales.md#salestage) | General stage of the sale. Finalized sales must have matching amounts between header and detail lines.`Required` `Default(&quot;NEW&quot;)` `Filter(eq)` 
+| [SystemMessage](Crm.Pos.Sales.md#systemmessage) | string (max) __nullable__ | System logs and error messages related to the processing of this POS sale. `Introduced in version 26.2.1.79` 
 | [TotalAmount](Crm.Pos.Sales.md#totalamount) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in the sale currency.`Currency: SaleCurrency` `Required` `Filter(eq)` `Introduced in version 25.1.3.47` 
 | [TotalAmountBase](Crm.Pos.Sales.md#totalamountbase) | [Amount (14, 2)](../data-types.md#amount) | Total gross amount in base currency.`Currency: Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq;ge;le)` 
 | [TotalAmountReporting](Crm.Pos.Sales.md#totalamountreporting) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Total gross amount in reporting currency (if applicable).`Currency: Location.EnterpriseCompany.ReportingCurrency` `Filter(eq;ge;le)` 
@@ -197,10 +198,23 @@ Allowed Values (Crm.Pos.SalesRepository.SaleStage Enum Members)
 | ---- | --- |
 | New | New. Stored as 'NEW'. <br /> Database Value: 'NEW' <br /> Model Value: 0 <br /> Domain API Value: 'New' |
 | Finalized | Finalized. Stored as 'FIN'. <br /> Database Value: 'FIN' <br /> Model Value: 1 <br /> Domain API Value: 'Finalized' |
+| ImportSuccess | ImportSuccess value. Stored as 'IPS'. <br /> Database Value: 'IPS' <br /> Model Value: 2 <br /> Domain API Value: 'ImportSuccess' |
+| ImportFail | ImportFail value. Stored as 'IPF'. <br /> Database Value: 'IPF' <br /> Model Value: 3 <br /> Domain API Value: 'ImportFail' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **New**  
+Show in UI: **ShownByDefault**  
+
+### SystemMessage
+
+System logs and error messages related to the processing of this POS sale. `Introduced in version 26.2.1.79`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### TotalAmount
@@ -310,6 +324,7 @@ Show in UI: **HiddenByDefault**
 The operator who finalized or closed the sale (may differ from opener).
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -319,6 +334,7 @@ Show in UI: **ShownByDefault**
 Set for known customers (e.g. loyalty program), otherwise null.
 
 Type: **[Customers](Crm.Sales.Customers.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -338,6 +354,7 @@ Show in UI: **ShownByDefault**
 The operator who created the sale.
 
 Type: **[Operators](Crm.Pos.Operators.md)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -347,6 +364,7 @@ Show in UI: **ShownByDefault**
 Primary operator, responsible for the POS sale (used for reports, commissions, etc.). Typically and by default it is set to the OpenedBy operator.
 
 Type: **[Operators](Crm.Pos.Operators.md)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -356,6 +374,7 @@ Show in UI: **ShownByDefault**
 Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system).
 
 Type: **[Sales](Crm.Pos.Sales.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -365,6 +384,7 @@ Show in UI: **ShownByDefault**
 Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments.
 
 Type: **[PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -374,6 +394,7 @@ Show in UI: **ShownByDefault**
 Reference to the currency in which this POS sale is recorded.
 
 Type: **[Currencies](General.Currencies.Currencies.md)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -386,6 +407,7 @@ Back-End Default Expression:
 Link to specific POS workspace terminal used.
 
 Type: **[Terminals](Crm.Pos.Terminals.md)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -395,6 +417,7 @@ Show in UI: **ShownByDefault**
 The operator who voided the document.
 
 Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

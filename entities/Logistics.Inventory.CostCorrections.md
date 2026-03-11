@@ -55,7 +55,7 @@ Aggregate Tree
 | [DocumentDate](Logistics.Inventory.CostCorrections.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNo](Logistics.Inventory.CostCorrections.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [DocumentNotes](Logistics.Inventory.CostCorrections.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) 
-| [<s>DocumentVersion</s>](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md)) 
+| [DocumentVersion](Logistics.Inventory.CostCorrections.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [EntityName](Logistics.Inventory.CostCorrections.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FromDate](Logistics.Inventory.CostCorrections.md#fromdate) | datetime | The date from which to start looking for transactions, needing cost correction. It is used only when the source transaction isn't specified.`Required` `Filter(ge;le)` 
 | [FullState](Logistics.Inventory.CostCorrections.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
@@ -231,7 +231,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md))
+Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **int32**  
 Category: **System**  

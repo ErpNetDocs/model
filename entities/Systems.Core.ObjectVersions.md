@@ -13,9 +13,9 @@ Base Table: Sys_Object_Versions
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Object}  
-Search Members: Object  
-Name Member: Object  
+Display Format: {Object.DisplayName}  
+Search Members: Object.DisplayName  
+Name Member: Object.DisplayName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 

@@ -13,8 +13,9 @@ Base Table: Sys_Objects
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {EntityType}  
-Search Members:   
+Display Format: {DisplayName}  
+Search Members: DisplayName  
+Name Member: DisplayName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -34,8 +35,9 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime __nullable__ | The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.`Filter(ge;le)` `ORD` `Introduced in version 19.1` 
+| [DisplayName](Systems.Core.ExtensibleDataObjects.md#displayname) | string (128) __nullable__ | Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.`Filter(eq;like)` `Introduced in version 26.2.1.78` 
 | [EntityItemId](Systems.Core.ExtensibleDataObjects.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` 
-| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string (64) | The entity type of the row to which the object is bound`Required` `Default(&quot; &quot;)` `Filter(eq)` 
+| [EntityType](Systems.Core.ExtensibleDataObjects.md#entitytype) | string (64) | The entity type of the row to which the object is bound`Required` `Default(&quot; &quot;)` `Filter(eq)` `ORD` 
 | [ExternalId](Systems.Core.ExtensibleDataObjects.md#externalid) | string (254) __nullable__ | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems.`Filter(multi eq)` `ORD` `Introduced in version 24.1.0.89` 
 | [ExternalSystem](Systems.Core.ExtensibleDataObjects.md#externalsystem) | string (64) __nullable__ | The name of the external system from which the object is imported/synchronized.`Filter(multi eq)` `Introduced in version 24.1.0.89` 
 | [IsDeleted](Systems.Core.ExtensibleDataObjects.md#isdeleted) | boolean | Specifies whether the object represented by this system object is deleted. After deletion of the original object, the system object remains in the system, but can be purged later by some cleanup processes.`Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
@@ -79,6 +81,17 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
+### DisplayName
+
+Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.`Filter(eq;like)` `Introduced in version 26.2.1.78`
+
+Type: **string (128) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **128**  
+Show in UI: **ShownByDefault**  
+
 ### EntityItemId
 
 The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)`
@@ -91,12 +104,13 @@ Show in UI: **ShownByDefault**
 
 ### EntityType
 
-The entity type of the row to which the object is bound`Required` `Default(&quot; &quot;)` `Filter(eq)`
+The entity type of the row to which the object is bound`Required` `Default(&quot; &quot;)` `Filter(eq)` `ORD`
 
 Type: **string (64)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Maximum Length: **64**  
 Default Value: ** **  
 Show in UI: **ShownByDefault**  
