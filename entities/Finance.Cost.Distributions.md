@@ -720,28 +720,11 @@ Domain API Request: **POST**
   * **userStatus**  
     The desired new user status of the document. Can be null.  
     Type: [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md)  
-     Optional: True  
+    Optional: True  
     Default Value: null  
 
 
 The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.
-
-### ProcessSingleRoute
-
-Processes the document route.               (Inherited from [Documents](General.Documents.Documents.md))  
-Return Type: **void**  
-Declaring Type: **[Documents](General.Documents.Documents.md)**  
-Domain API Request: **POST**  
-
-**Parameters**  
-  * **route**  
-      
-    Type: [Routes](Systems.Documents.Routes.md)  
-
-  * **processForLowerDocumentStates**  
-      
-    Type: boolean  
-
 
 ### Complete
 
@@ -767,127 +750,12 @@ Domain API Request: **POST**
 
 The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.
 
-### MakeVoid
+### CreateCopy
 
-Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.Documents.md))  
-Return Type: **void**  
-Declaring Type: **[Documents](General.Documents.Documents.md)**  
-Domain API Request: **POST**  
-
-**Parameters**  
-  * **reason**  
-    The reason for voiding the document.  
-    Type: string  
-
-  * **voidType**  
-    The type of void operation to execute.  
-    Type: General.Documents.DocumentsRepositoryBase.VoidType  
-    Specifies the type of void operation  
-    Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)  
-
-    | Value | Description |
-    | ---- | --- |
-    | VoidDocument | Void only the document. If there are sub-documents, the operation might fail. <br /> Model Value: 0 <br /> Domain API Value: 'VoidDocument' |
-    | VoidWithSubDocuments | Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br /> Model Value: 1 <br /> Domain API Value: 'VoidWithSubDocuments' |
-    | VoidWithReleased<br />SubDocuments | Void the document and all of its sub-documents, even the released ones. <br /> Model Value: 2 <br /> Domain API Value: 'VoidWithReleased<br />SubDocuments' |
-
-     Optional: True  
-    Default Value: VoidDocument  
-
-  * **resetParentState**  
-    Resets the parent state of document.  
-    Type: boolean  
-     Optional: True  
-    Default Value: True  
-
-
-### GetPrintout
-
-Gets a document printout as a file. The returned value is Base64 string representation of the file contents.             This method creates `DocumentPrint`(General.Documents.DocumentPrints.md).              (Inherited from [Documents](General.Documents.Documents.md))  
-Return Type: **string**  
-Declaring Type: **[Documents](General.Documents.Documents.md)**  
-Domain API Request: **POST**  
-
-**Parameters**  
-  * **fileFormat**  
-    The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.  
-    Type: string  
-     Optional: True  
-    Default Value: pdf  
-
-  * **printout**  
-    The printout defined for the document type of the document. If null the default printout of the document type is used.  
-    Type: [Printouts](Systems.Documents.Printouts.md)  
-     Optional: True  
-    Default Value: null  
-
-
-### Recalculate
-
-The document and all of its owned objects will be altered to become valid.              (Inherited from [Documents](General.Documents.Documents.md))  
-Return Type: **void**  
-Declaring Type: **[Documents](General.Documents.Documents.md)**  
-Domain API Request: **POST**  
-
-In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
-
-### GetAllParentDocuments
-
-Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from [Documents](General.Documents.Documents.md))  
-Return Type: **Collection Of [Documents](General.Documents.Documents.md)**  
-Declaring Type: **[Documents](General.Documents.Documents.md)**  
-Domain API Request: **GET**  
-
-**Parameters**  
-  * **includeSelf**  
-    if set to true the current document is included.  
-    Type: boolean  
-     Optional: True  
-    Default Value: False  
-
-
-### GetAllowedCustomPropertyValues
-
-Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
+Return Type: **EntityObject**  
 Declaring Type: **EntityObject**  
-Domain API Request: **GET**  
-
-**Parameters**  
-  * **customPropertyCode**  
-    The code of the custom property  
-    Type: string  
-
-  * **search**  
-    The search text - searches by value or description. Can contain wildcard character %.  
-    Type: string  
-     Optional: True  
-    Default Value: null  
-
-  * **exactMatch**  
-    If true the search text should be equal to the property value  
-    Type: boolean  
-     Optional: True  
-    Default Value: False  
-
-  * **orderByDescription**  
-    If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    Type: boolean  
-     Optional: True  
-    Default Value: False  
-
-  * **top**  
-    The top clause - default is 10  
-    Type: int32  
-     Optional: True  
-    Default Value: 10  
-
-  * **skip**  
-    The skip clause - default is 0  
-    Type: int32  
-     Optional: True  
-    Default Value: 0  
-
+Domain API Request: **POST**  
 
 ### CreateNotification
 
@@ -923,16 +791,186 @@ Domain API Request: **POST**
     | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
     | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     Optional: True  
+    Optional: True  
     Default Value: Normal  
 
 
-### CreateCopy
+### GetAllowedCustomPropertyValues
 
-Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-Return Type: **EntityObject**  
+Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
 Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **customPropertyCode**  
+    The code of the custom property  
+    Type: string  
+
+  * **search**  
+    The search text - searches by value or description. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **exactMatch**  
+    If true the search text should be equal to the property value  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **orderByDescription**  
+    If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
+
+### GetAllParentDocuments
+
+Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from [Documents](General.Documents.Documents.md))  
+Return Type: **Collection Of [Documents](General.Documents.Documents.md)**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **includeSelf**  
+    if set to true the current document is included.  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+
+### GetOrCreateExtensibleDataObject
+
+Gets an existing extensible data object associated with the specified entity, or creates a new one if none exists. The newly created extensible data object is immediately commited to the database.  
+Return Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+### GetPrintout
+
+Gets a document printout as a file. The returned value is Base64 string representation of the file contents.             This method creates `DocumentPrint`(General.Documents.DocumentPrints.md).              (Inherited from [Documents](General.Documents.Documents.md))  
+Return Type: **string**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
 Domain API Request: **POST**  
+
+**Parameters**  
+  * **fileFormat**  
+    The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.  
+    Type: string  
+    Optional: True  
+    Default Value: pdf  
+
+  * **printout**  
+    The printout defined for the document type of the document. If null the default printout of the document type is used.  
+    Type: [Printouts](Systems.Documents.Printouts.md)  
+    Optional: True  
+    Default Value: null  
+
+
+### GetPropertyAllowedValues
+
+Gets the allowed values for the specified property for this entity object.  
+Return Type: **Collection Of ErpNet.Model.OData.ValueTextPair**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **propertyName**  
+    The name of the attribute or reference  
+    Type: string  
+
+  * **search**  
+    The search text - searches by display text. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
+
+### MakeVoid
+
+Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.Documents.md))  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
+
+**Parameters**  
+  * **reason**  
+    The reason for voiding the document.  
+    Type: string  
+
+  * **voidType**  
+    The type of void operation to execute.  
+    Type: General.Documents.DocumentsRepositoryBase.VoidType  
+    Specifies the type of void operation  
+    Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)  
+
+    | Value | Description |
+    | ---- | --- |
+    | VoidDocument | Void only the document. If there are sub-documents, the operation might fail. <br /> Model Value: 0 <br /> Domain API Value: 'VoidDocument' |
+    | VoidWithSubDocuments | Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br /> Model Value: 1 <br /> Domain API Value: 'VoidWithSubDocuments' |
+    | VoidWithReleased<br />SubDocuments | Void the document and all of its sub-documents, even the released ones. <br /> Model Value: 2 <br /> Domain API Value: 'VoidWithReleased<br />SubDocuments' |
+
+    Optional: True  
+    Default Value: VoidDocument  
+
+  * **resetParentState**  
+    Resets the parent state of document.  
+    Type: boolean  
+    Optional: True  
+    Default Value: True  
+
+
+### ProcessSingleRoute
+
+Processes the document route.               (Inherited from [Documents](General.Documents.Documents.md))  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
+
+**Parameters**  
+  * **route**  
+      
+    Type: [Routes](Systems.Documents.Routes.md)  
+
+  * **processForLowerDocumentStates**  
+      
+    Type: boolean  
+
+
+### Recalculate
+
+The document and all of its owned objects will be altered to become valid.              (Inherited from [Documents](General.Documents.Documents.md))  
+Return Type: **void**  
+Declaring Type: **[Documents](General.Documents.Documents.md)**  
+Domain API Request: **POST**  
+
+In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.
 
 
 ## Business Rules

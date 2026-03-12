@@ -249,48 +249,12 @@ Domain API Request: **POST**
     Type: [Folders](General.Files.Folders.md)  
 
 
-### GetAllowedCustomPropertyValues
+### CreateCopy
 
-Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
-Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
+Return Type: **EntityObject**  
 Declaring Type: **EntityObject**  
-Domain API Request: **GET**  
-
-**Parameters**  
-  * **customPropertyCode**  
-    The code of the custom property  
-    Type: string  
-
-  * **search**  
-    The search text - searches by value or description. Can contain wildcard character %.  
-    Type: string  
-     Optional: True  
-    Default Value: null  
-
-  * **exactMatch**  
-    If true the search text should be equal to the property value  
-    Type: boolean  
-     Optional: True  
-    Default Value: False  
-
-  * **orderByDescription**  
-    If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
-    Type: boolean  
-     Optional: True  
-    Default Value: False  
-
-  * **top**  
-    The top clause - default is 10  
-    Type: int32  
-     Optional: True  
-    Default Value: 10  
-
-  * **skip**  
-    The skip clause - default is 0  
-    Type: int32  
-     Optional: True  
-    Default Value: 0  
-
+Domain API Request: **POST**  
 
 ### CreateNotification
 
@@ -326,16 +290,90 @@ Domain API Request: **POST**
     | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
     | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
 
-     Optional: True  
+    Optional: True  
     Default Value: Normal  
 
 
-### CreateCopy
+### GetAllowedCustomPropertyValues
 
-Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
-Return Type: **EntityObject**  
+Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
 Declaring Type: **EntityObject**  
-Domain API Request: **POST**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **customPropertyCode**  
+    The code of the custom property  
+    Type: string  
+
+  * **search**  
+    The search text - searches by value or description. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **exactMatch**  
+    If true the search text should be equal to the property value  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **orderByDescription**  
+    If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
+
+### GetOrCreateExtensibleDataObject
+
+Gets an existing extensible data object associated with the specified entity, or creates a new one if none exists. The newly created extensible data object is immediately commited to the database.  
+Return Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+### GetPropertyAllowedValues
+
+Gets the allowed values for the specified property for this entity object.  
+Return Type: **Collection Of ErpNet.Model.OData.ValueTextPair**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **propertyName**  
+    The name of the attribute or reference  
+    Type: string  
+
+  * **search**  
+    The search text - searches by display text. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
 
 
 ## Business Rules

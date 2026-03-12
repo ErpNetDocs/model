@@ -1294,20 +1294,6 @@ Default Value: null</p>
 </li>
 </ul>
 <p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
-<h3 id="processsingleroute">ProcessSingleRoute</h3>
-<p>Processes the document route.               (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
-Return Type: <strong>void</strong><br>
-Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
-Domain API Request: <strong>POST</strong></p>
-<p><strong>Parameters</strong></p>
-<ul>
-<li><p><strong>route</strong></p>
-<p>Type: <a href="Systems.Documents.Routes.html">Routes</a></p>
-</li>
-<li><p><strong>processForLowerDocumentStates</strong></p>
-<p>Type: boolean</p>
-</li>
-</ul>
 <h3 id="complete">Complete</h3>
 <p>Changes the document state to Completed with all Release-ed sub-documents              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
 Return Type: <strong>void</strong><br>
@@ -1345,135 +1331,11 @@ Allowed Values (General.Documents.DocumentCompletion Enum Members)</p>
 </li>
 </ul>
 <p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
-<h3 id="makevoid">MakeVoid</h3>
-<p>Makes the document void. The operation is irreversible.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
-Return Type: <strong>void</strong><br>
-Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
-Domain API Request: <strong>POST</strong></p>
-<p><strong>Parameters</strong></p>
-<ul>
-<li><p><strong>reason</strong><br>
-The reason for voiding the document.<br>
-Type: string</p>
-</li>
-<li><p><strong>voidType</strong><br>
-The type of void operation to execute.<br>
-Type: General.Documents.DocumentsRepositoryBase.VoidType<br>
-Specifies the type of void operation<br>
-Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>VoidDocument</td>
-<td>Void only the document. If there are sub-documents, the operation might fail. <br> Model Value: 0 <br> Domain API Value: 'VoidDocument'</td>
-</tr>
-<tr>
-<td>VoidWithSubDocuments</td>
-<td>Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br> Model Value: 1 <br> Domain API Value: 'VoidWithSubDocuments'</td>
-</tr>
-<tr>
-<td>VoidWithReleased<br>SubDocuments</td>
-<td>Void the document and all of its sub-documents, even the released ones. <br> Model Value: 2 <br> Domain API Value: 'VoidWithReleased<br>SubDocuments'</td>
-</tr>
-</tbody>
-</table>
-<p>Optional: True<br>
-Default Value: VoidDocument</p>
-</li>
-<li><p><strong>resetParentState</strong><br>
-Resets the parent state of document.<br>
-Type: boolean<br>
-Optional: True<br>
-Default Value: True</p>
-</li>
-</ul>
-<h3 id="getprintout">GetPrintout</h3>
-<p>Gets a document printout as a file. The returned value is Base64 string representation of the file contents.             This method creates <code>DocumentPrint</code>(General.Documents.DocumentPrints.md).              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
-Return Type: <strong>string</strong><br>
-Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
-Domain API Request: <strong>POST</strong></p>
-<p><strong>Parameters</strong></p>
-<ul>
-<li><p><strong>fileFormat</strong><br>
-The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.<br>
-Type: string<br>
-Optional: True<br>
-Default Value: pdf</p>
-</li>
-<li><p><strong>printout</strong><br>
-The printout defined for the document type of the document. If null the default printout of the document type is used.<br>
-Type: <a href="Systems.Documents.Printouts.html">Printouts</a><br>
-Optional: True<br>
-Default Value: null</p>
-</li>
-</ul>
-<h3 id="recalculate">Recalculate</h3>
-<p>The document and all of its owned objects will be altered to become valid.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
-Return Type: <strong>void</strong><br>
-Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
-Domain API Request: <strong>POST</strong></p>
-<p>In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.</p>
-<h3 id="getallparentdocuments">GetAllParentDocuments</h3>
-<p>Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
-Return Type: <strong>Collection Of <a href="General.Documents.Documents.html">Documents</a></strong><br>
-Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
-Domain API Request: <strong>GET</strong></p>
-<p><strong>Parameters</strong></p>
-<ul>
-<li><strong>includeSelf</strong><br>
-if set to true the current document is included.<br>
-Type: boolean<br>
-Optional: True<br>
-Default Value: False</li>
-</ul>
-<h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
-<p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
-Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
+<h3 id="createcopy">CreateCopy</h3>
+<p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
+Return Type: <strong>EntityObject</strong><br>
 Declaring Type: <strong>EntityObject</strong><br>
-Domain API Request: <strong>GET</strong></p>
-<p><strong>Parameters</strong></p>
-<ul>
-<li><p><strong>customPropertyCode</strong><br>
-The code of the custom property<br>
-Type: string</p>
-</li>
-<li><p><strong>search</strong><br>
-The search text - searches by value or description. Can contain wildcard character %.<br>
-Type: string<br>
-Optional: True<br>
-Default Value: null</p>
-</li>
-<li><p><strong>exactMatch</strong><br>
-If true the search text should be equal to the property value<br>
-Type: boolean<br>
-Optional: True<br>
-Default Value: False</p>
-</li>
-<li><p><strong>orderByDescription</strong><br>
-If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
-Type: boolean<br>
-Optional: True<br>
-Default Value: False</p>
-</li>
-<li><p><strong>top</strong><br>
-The top clause - default is 10<br>
-Type: int32<br>
-Optional: True<br>
-Default Value: 10</p>
-</li>
-<li><p><strong>skip</strong><br>
-The skip clause - default is 0<br>
-Type: int32<br>
-Optional: True<br>
-Default Value: 0</p>
-</li>
-</ul>
+Domain API Request: <strong>POST</strong></p>
 <h3 id="createnotification">CreateNotification</h3>
 <p>Create a notification immediately in a separate transaction, and send a real-time event to the user.<br>
 Return Type: <strong>void</strong><br>
@@ -1532,11 +1394,184 @@ Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)</p>
 Default Value: Normal</p>
 </li>
 </ul>
-<h3 id="createcopy">CreateCopy</h3>
-<p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
-Return Type: <strong>EntityObject</strong><br>
+<h3 id="getallowedcustompropertyvalues">GetAllowedCustomPropertyValues</h3>
+<p>Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.<br>
+Return Type: <strong>Collection Of <a href="../data-types.html#systems.bpm.custompropertyvalue">CustomPropertyValue</a></strong><br>
 Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>customPropertyCode</strong><br>
+The code of the custom property<br>
+Type: string</p>
+</li>
+<li><p><strong>search</strong><br>
+The search text - searches by value or description. Can contain wildcard character %.<br>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
+</li>
+<li><p><strong>exactMatch</strong><br>
+If true the search text should be equal to the property value<br>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
+</li>
+<li><p><strong>orderByDescription</strong><br>
+If true the result is ordered by Description instead of Value. Note that ordering is not always possible.<br>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</p>
+</li>
+<li><p><strong>top</strong><br>
+The top clause - default is 10<br>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
+</li>
+<li><p><strong>skip</strong><br>
+The skip clause - default is 0<br>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
+</li>
+</ul>
+<h3 id="getallparentdocuments">GetAllParentDocuments</h3>
+<p>Gets all parent documents, traversing the parent document chain by using the Parent property.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
+Return Type: <strong>Collection Of <a href="General.Documents.Documents.html">Documents</a></strong><br>
+Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
+Domain API Request: <strong>GET</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><strong>includeSelf</strong><br>
+if set to true the current document is included.<br>
+Type: boolean<br>
+Optional: True<br>
+Default Value: False</li>
+</ul>
+<h3 id="getorcreateextensibledataobject">GetOrCreateExtensibleDataObject</h3>
+<p>Gets an existing extensible data object associated with the specified entity, or creates a new one if none exists. The newly created extensible data object is immediately commited to the database.<br>
+Return Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
+<h3 id="getprintout">GetPrintout</h3>
+<p>Gets a document printout as a file. The returned value is Base64 string representation of the file contents.             This method creates <code>DocumentPrint</code>(General.Documents.DocumentPrints.md).              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
+Return Type: <strong>string</strong><br>
+Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
 Domain API Request: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>fileFormat</strong><br>
+The file format: pdf, html, xlsx, xls, docx, txt and png. The default format is 'pdf'.<br>
+Type: string<br>
+Optional: True<br>
+Default Value: pdf</p>
+</li>
+<li><p><strong>printout</strong><br>
+The printout defined for the document type of the document. If null the default printout of the document type is used.<br>
+Type: <a href="Systems.Documents.Printouts.html">Printouts</a><br>
+Optional: True<br>
+Default Value: null</p>
+</li>
+</ul>
+<h3 id="getpropertyallowedvalues">GetPropertyAllowedValues</h3>
+<p>Gets the allowed values for the specified property for this entity object.<br>
+Return Type: <strong>Collection Of ErpNet.Model.OData.ValueTextPair</strong><br>
+Declaring Type: <strong>EntityObject</strong><br>
+Domain API Request: <strong>GET</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>propertyName</strong><br>
+The name of the attribute or reference<br>
+Type: string</p>
+</li>
+<li><p><strong>search</strong><br>
+The search text - searches by display text. Can contain wildcard character %.<br>
+Type: string<br>
+Optional: True<br>
+Default Value: null</p>
+</li>
+<li><p><strong>top</strong><br>
+The top clause - default is 10<br>
+Type: int32<br>
+Optional: True<br>
+Default Value: 10</p>
+</li>
+<li><p><strong>skip</strong><br>
+The skip clause - default is 0<br>
+Type: int32<br>
+Optional: True<br>
+Default Value: 0</p>
+</li>
+</ul>
+<h3 id="makevoid">MakeVoid</h3>
+<p>Makes the document void. The operation is irreversible.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>reason</strong><br>
+The reason for voiding the document.<br>
+Type: string</p>
+</li>
+<li><p><strong>voidType</strong><br>
+The type of void operation to execute.<br>
+Type: General.Documents.DocumentsRepositoryBase.VoidType<br>
+Specifies the type of void operation<br>
+Allowed Values (General.Documents.DocumentsRepositoryBase.VoidType Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VoidDocument</td>
+<td>Void only the document. If there are sub-documents, the operation might fail. <br> Model Value: 0 <br> Domain API Value: 'VoidDocument'</td>
+</tr>
+<tr>
+<td>VoidWithSubDocuments</td>
+<td>Void the document and its non-released sub-documents. If there are released sub-documents, the operation might fail. <br> Model Value: 1 <br> Domain API Value: 'VoidWithSubDocuments'</td>
+</tr>
+<tr>
+<td>VoidWithReleased<br>SubDocuments</td>
+<td>Void the document and all of its sub-documents, even the released ones. <br> Model Value: 2 <br> Domain API Value: 'VoidWithReleased<br>SubDocuments'</td>
+</tr>
+</tbody>
+</table>
+<p>Optional: True<br>
+Default Value: VoidDocument</p>
+</li>
+<li><p><strong>resetParentState</strong><br>
+Resets the parent state of document.<br>
+Type: boolean<br>
+Optional: True<br>
+Default Value: True</p>
+</li>
+</ul>
+<h3 id="processsingleroute">ProcessSingleRoute</h3>
+<p>Processes the document route.               (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><p><strong>route</strong></p>
+<p>Type: <a href="Systems.Documents.Routes.html">Routes</a></p>
+</li>
+<li><p><strong>processForLowerDocumentStates</strong></p>
+<p>Type: boolean</p>
+</li>
+</ul>
+<h3 id="recalculate">Recalculate</h3>
+<p>The document and all of its owned objects will be altered to become valid.              (Inherited from <a href="General.Documents.Documents.html">Documents</a>)<br>
+Return Type: <strong>void</strong><br>
+Declaring Type: <strong><a href="General.Documents.Documents.html">Documents</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
+<p>In some cases the objects in child collection of the document depend on values from other child objects.             This method ensures that all child objects are properly validated.             The changes are only in memory and are not committed to the server.</p>
 <h2 id="business-rules">Business Rules</h2>
 <p>None</p>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>

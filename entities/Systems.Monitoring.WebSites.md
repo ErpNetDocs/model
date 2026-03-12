@@ -93,6 +93,13 @@ Show in UI: **ShownByDefault**
 
 Methods that can be invoked in public APIs.
 
+### Restart
+
+Restart web site  
+Return Type: **void**  
+Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
+Domain API Request: **POST**  
+
 ### Start
 
 Start web site  
@@ -103,13 +110,6 @@ Domain API Request: **POST**
 ### Stop
 
 Stop web site  
-Return Type: **void**  
-Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
-Domain API Request: **POST**  
-
-### Restart
-
-Restart web site  
 Return Type: **void**  
 Declaring Type: **[WebSites](Systems.Monitoring.WebSites.md)**  
 Domain API Request: **POST**  

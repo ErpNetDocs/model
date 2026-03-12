@@ -156,7 +156,7 @@ Domain API Request: **POST**
   * **userToken**  
                  A proof token, identifying the logged in user. E.g. It could be an id token, or an access token.             Required when the currently logged user is different from the public user.               
     Type: string  
-     Optional: True  
+    Optional: True  
     Default Value: null  
 
 
