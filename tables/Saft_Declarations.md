@@ -19,7 +19,9 @@ SAF-T Declaration document. Entity: Saft_Declarations (Introduced in version 26.
 |[Declaration_Type](#declaration_type)|`char(1)` Allowed: `M`, `Y`, `D`|Declaration type: monthly(M), yearly(Y), or on-demand(D).|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Period_End_Date](#period_end_date)|`date` |Period end date (by document date).|
+|[Period_Month](#period_month)|`int` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`|The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.|
 |[Period_Start_Date](#period_start_date)|`date` |Period start date (by document date).|
+|[Period_Year](#period_year)|`date` |The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.|
 |[Released_End_Time](#released_end_time)|`datetime` |Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.|
 |[Released_Start_Time](#released_start_time)|`datetime` |Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -41,7 +43,7 @@ Earliest document date for which corrections are allowed. Moved forward after an
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -78,7 +80,7 @@ Declaration type: monthly(M), yearly(Y), or on-demand(D).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -111,7 +113,7 @@ Declaration type: monthly(M), yearly(Y), or on-demand(D).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
@@ -148,7 +150,7 @@ Period end date (by document date).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -168,7 +170,45 @@ Period end date (by document date).
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
+|Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|no|
+
+### Period_Month
+
+
+The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|3|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Period_Month - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Period_Start_Date
 
@@ -184,7 +224,7 @@ Period start date (by document date).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -206,6 +246,44 @@ Period start date (by document date).
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
+### Period_Year
+
+
+The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Format|yyyy|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Period_Year - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Released_End_Time
 
 
@@ -220,14 +298,14 @@ Release window end (upper bound for ReleaseTime). This is the export timestamp; 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
 |RTF|no|
-|Sortable|no|
+|Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|datetime (Allows NULL)|
@@ -256,7 +334,7 @@ Release window start (lower bound for ReleaseTime). Typically equals previous de
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -289,7 +367,7 @@ Release window start (lower bound for ReleaseTime). Typically equals previous de
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -319,7 +397,7 @@ Unique identifier of the declaration/export run.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

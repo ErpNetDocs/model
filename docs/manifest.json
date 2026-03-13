@@ -11782,16 +11782,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "business-rules/R39658.md",
-      "output": {
-        ".html": {
-          "relative_path": "business-rules/R39658.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "business-rules/R39667-1.md",
       "output": {
         ".html": {

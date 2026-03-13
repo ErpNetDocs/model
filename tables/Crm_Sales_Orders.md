@@ -34,6 +34,7 @@ Sales Orders represent customer commitments to purchase goods or services from t
 |[Intrastat_Transaction_Nature_Code](#intrastat_transaction_nature_code)|`char(2)` Allowed: `11`, `12`, `13`, `14`, `19`, `21`, `22`, `23`, `29`, `60`, `70`, `80`, `91`, `99`, `30`, `41`, `42`, `51`, `52`|Transaction nature; used for Intrastat reporting|
 |[Intrastat_Transport_Country_Id](#intrastat_transport_country_id)|`uniqueidentifier` |Country of origin of the transport company; used for Intrastat reporting|
 |[Intrastat_Transport_Mode_Code](#intrastat_transport_mode_code)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `7`, `8`, `9`|Transport mode; used for Intrastat reporting|
+|[Invoice_No](#invoice_no)|`nvarchar(32)` |Invoice number from the POS system used to track the relation between the POS sale and the Sales Order in ERP.net.|
 |[Is_Released](#is_released)|`bit` Readonly|True if the document is not void and its state is released or greater. Deprecated|
 |[Is_Single_Execution](#is_single_execution)|`bit` Readonly|Specifies whether the document is a single execution of its order document.|
 |[IsValid](#isvalid)|`bit` |1 when the order is valid (e.g. released and not void). Used for internal processing.|
@@ -736,6 +737,42 @@ Transport mode; used for Intrastat reporting
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+### Invoice_No
+
+
+Invoice number from the POS system used to track the relation between the POS sale and the Sales Order in ERP.net.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|32|
+|Order|41|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(32) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Invoice_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Released
 

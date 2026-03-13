@@ -215,12 +215,22 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Saft.SaftDeclarations.html#periodenddate">PeriodEndDate</a></td>
 <td>date</td>
-<td>Period end date (by document date).<code>Required</code> <code>Filter(ge;le)</code></td>
+<td>Period end date (by document date).<code>Required</code> <code>Filter(eq;ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.SaftDeclarations.html#periodmonth">PeriodMonth</a></td>
+<td><a href="Regulatory.Saft.SaftDeclarations.html#periodmonth">PeriodMonth</a> <strong>nullable</strong></td>
+<td>The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.<code>Filter(eq)</code> <code>Introduced in version 26.2.1.83</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.SaftDeclarations.html#periodstartdate">PeriodStartDate</a></td>
 <td>date</td>
 <td>Period start date (by document date).<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Regulatory.Saft.SaftDeclarations.html#periodyear">PeriodYear</a></td>
+<td>date <strong>nullable</strong></td>
+<td>The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.83</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.SaftDeclarations.html#planningonly">PlanningOnly</a></td>
@@ -245,7 +255,7 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="Regulatory.Saft.SaftDeclarations.html#releasedendtime">ReleasedEndTime</a></td>
 <td>datetime <strong>nullable</strong></td>
-<td>Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.<code>Filter(ge;le)</code></td>
+<td>Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.<code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Regulatory.Saft.SaftDeclarations.html#releasedstarttime">ReleasedStartTime</a></td>
@@ -528,6 +538,8 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>obj.EnterpriseCompany.SaftInitialComplianceDate</code></p>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p>Type: <strong>datetime</strong><br>
@@ -658,10 +670,79 @@ Allowed Values (General.Documents.ParentDocumentRelationshipType Enum Members)</
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="periodenddate">PeriodEndDate</h3>
-<p>Period end date (by document date).<code>Required</code> <code>Filter(ge;le)</code></p>
+<p>Period end date (by document date).<code>Required</code> <code>Filter(eq;ge;le)</code></p>
 <p>Type: <strong>date</strong><br>
 Category: <strong>System</strong><br>
-Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>IIF( ( obj.PeriodMonth != null), obj.PeriodStartDate.AddMonths( 1).AddDays( -1), obj.PeriodStartDate.AddYears( 1).AddDays( -1))</code></p>
+<h3 id="periodmonth">PeriodMonth</h3>
+<p>The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.<code>Filter(eq)</code> <code>Introduced in version 26.2.1.83</code></p>
+<p>Type: <strong><a href="Regulatory.Saft.SaftDeclarations.html#periodmonth">PeriodMonth</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>PeriodMonth</code>(Regulatory.Saft.SaftDeclarations.md#periodmonth) data attribute<br>
+Allowed Values (Regulatory.Saft.SaftDeclarationsRepository.PeriodMonth Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>January</td>
+<td>January value. Stored as 1. <br> Database Value: 1 <br> Model Value: 1 <br> Domain API Value: 'January'</td>
+</tr>
+<tr>
+<td>February</td>
+<td>February value. Stored as 2. <br> Database Value: 2 <br> Model Value: 2 <br> Domain API Value: 'February'</td>
+</tr>
+<tr>
+<td>March</td>
+<td>March value. Stored as 3. <br> Database Value: 3 <br> Model Value: 3 <br> Domain API Value: 'March'</td>
+</tr>
+<tr>
+<td>April</td>
+<td>April value. Stored as 4. <br> Database Value: 4 <br> Model Value: 4 <br> Domain API Value: 'April'</td>
+</tr>
+<tr>
+<td>May</td>
+<td>May value. Stored as 5. <br> Database Value: 5 <br> Model Value: 5 <br> Domain API Value: 'May'</td>
+</tr>
+<tr>
+<td>June</td>
+<td>June value. Stored as 6. <br> Database Value: 6 <br> Model Value: 6 <br> Domain API Value: 'June'</td>
+</tr>
+<tr>
+<td>July</td>
+<td>July value. Stored as 7. <br> Database Value: 7 <br> Model Value: 7 <br> Domain API Value: 'July'</td>
+</tr>
+<tr>
+<td>August</td>
+<td>August value. Stored as 8. <br> Database Value: 8 <br> Model Value: 8 <br> Domain API Value: 'August'</td>
+</tr>
+<tr>
+<td>September</td>
+<td>September value. Stored as 9. <br> Database Value: 9 <br> Model Value: 9 <br> Domain API Value: 'September'</td>
+</tr>
+<tr>
+<td>October</td>
+<td>October value. Stored as 10. <br> Database Value: 10 <br> Model Value: 10 <br> Domain API Value: 'October'</td>
+</tr>
+<tr>
+<td>November</td>
+<td>November value. Stored as 11. <br> Database Value: 11 <br> Model Value: 11 <br> Domain API Value: 'November'</td>
+</tr>
+<tr>
+<td>December</td>
+<td>December value. Stored as 12. <br> Database Value: 12 <br> Model Value: 12 <br> Domain API Value: 'December'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="periodstartdate">PeriodStartDate</h3>
@@ -671,6 +752,17 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>IIF( ( obj.PeriodMonth != null), new DateTime( obj.PeriodYear.Value.Year, Convert( obj.PeriodMonth, Int32), 1), new DateTime( obj.PeriodYear.Value.Year, 1, 1))</code></p>
+<h3 id="periodyear">PeriodYear</h3>
+<p>The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.<code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.83</code></p>
+<p>Type: <strong>date <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>new DateTime( IIF( ( obj.PeriodYear != null), obj.PeriodYear.Value.Year, DateTime.Now.AddMonths( -1).Year), 1, 1)</code></p>
 <h3 id="planningonly">PlanningOnly</h3>
 <p>Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). <code>Required</code> <code>Default(false)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p>Type: <strong>boolean</strong><br>
@@ -704,12 +796,14 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>20</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h3 id="releasedendtime">ReleasedEndTime</h3>
-<p>Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.<code>Filter(ge;le)</code></p>
+<p>Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.<code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>IIF( ( obj.PeriodYear != null), Convert( DateTime.Now, Object), null)</code></p>
 <h3 id="releasedstarttime">ReleasedStartTime</h3>
 <p>Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.<code>Filter(ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
@@ -717,6 +811,8 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>obj.Transaction.Query( ).Where( d =&gt; ( ( ( ( ( Convert( d.State, Int32) &gt;= 30) AndAlso ( d.Void == False)) AndAlso ( d.EnterpriseCompany == obj.EnterpriseCompany)) AndAlso ( Convert( d.DeclarationType, Int32) == Convert( obj.DeclarationType, Int32))) AndAlso ( d.PeriodEndDate == obj.PeriodStartDate.AddDays( -1)))).OrderByDescending( d =&gt; d.ReleasedEndTime).Take( 1).ToList( ).Select( d =&gt; d.ReleasedEndTime).FirstOrDefault( ).IfNullThen( new DateTime( DateTime.Now.Year, DateTime.Now.Month, 1))</code></p>
 <h3 id="releasetime">ReleaseTime</h3>
 <p>Date and time when the document was released (State set to Released). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>

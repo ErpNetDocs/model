@@ -53,6 +53,7 @@ Aggregate Tree
 | [ReportingCurrency<br />ProcessedDate](General.EnterpriseCompanies.md#reportingcurrencyprocesseddate) | date __nullable__ | Shows the last document date for which reporting currency values were calculated by the system job 'Calculate Historical Reporting Currency Amounts'. The next execution of the job will start from the day after this date.`Filter(eq;ge;le)` `ReadOnly` `Introduced in version 25.1.3.24` 
 | [ReportingCurrencyRate](General.EnterpriseCompanies.md#reportingcurrencyrate) | decimal (18, 6) __nullable__ | Exchange rate used to convert values from the base currency to the reporting currency. The amount in base currency is multiplied by this rate to get the reporting currency amount. This rate is used only for historical data (before the Reporting Currency Start Date).`Filter(eq)` `Introduced in version 25.1.3.7` 
 | [ReportingCurrencyStartDate](General.EnterpriseCompanies.md#reportingcurrencystartdate) | date __nullable__ | Defines the date from which the reporting currency is calculated using the exchange rate entered in each document. Before this date, reporting values are derived using a default rate due to missing historical exchange data.`Filter(eq;ge;le)` `Introduced in version 25.1.3.2` 
+| [SaftInitialComplianceDate](General.EnterpriseCompanies.md#saftinitialcompliancedate) | date __nullable__ | Defines the earliest document date from which backward corrections are allowed to be included in SAF-T declarations. Initially, `Filter(ge;le)` `Introduced in version 26.2.1.83` 
 | [UIBaseColor](General.EnterpriseCompanies.md#uibasecolor) | int32 __nullable__ | Base color of the current theme`Introduced in version 18.2` 
 
 ## References
@@ -231,6 +232,16 @@ Defines the date from which the reporting currency is calculated using the excha
 Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### SaftInitialComplianceDate
+
+Defines the earliest document date from which backward corrections are allowed to be included in SAF-T declarations. Initially, `Filter(ge;le)` `Introduced in version 26.2.1.83`
+
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 

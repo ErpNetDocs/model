@@ -74,6 +74,7 @@ Aggregate Tree
 | [FullState](Crm.Sales.SalesOrders.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [IntrastatTransaction<br />NatureCode](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Sales.SalesOrders.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting 
 | [IntrastatTransportModeCode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) | [TransportMode](Crm.Sales.SalesOrders.md#intrastattransportmodecode) __nullable__ | Transport mode; used for Intrastat reporting 
+| [InvoiceNo](Crm.Sales.SalesOrders.md#invoiceno) | string (32) __nullable__ | Invoice number which is already issued for this sale. It is filled only for sales for which the invoice is already issued (for example from the POS system).`Filter(eq)` `Introduced in version 26.2.1.83` 
 | [<s>IsReleased</s>](Crm.Sales.SalesOrders.md#isreleased) | boolean | **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61` 
 | [IsSingleExecution](Crm.Sales.SalesOrders.md#issingleexecution) | boolean | Specifies whether the document is a single execution of its order document.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
 | [IsValidField](Crm.Sales.SalesOrders.md#isvalidfield) | boolean | 1 when the order is valid (e.g. released and not void). Used for internal processing.`Required` `Default(false)` `ReadOnly` 
@@ -476,6 +477,17 @@ Show in UI: **ShownByDefault**
 
 Front-End Recalc Expressions:  
 `obj.Lines.Select( c => SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
+### InvoiceNo
+
+Invoice number which is already issued for this sale. It is filled only for sales for which the invoice is already issued (for example from the POS system).`Filter(eq)` `Introduced in version 26.2.1.83`
+
+Type: **string (32) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Maximum Length: **32**  
+Show in UI: **ShownByDefault**  
+
 ### IsReleased
 
 **OBSOLETE! Do not use!** True if the document is not void and its state is released or greater. Deprecated`Obsolete` `Required` `Default(false)` `Filter(eq)` `ReadOnly` `Obsoleted in version 22.1.6.61`

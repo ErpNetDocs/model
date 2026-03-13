@@ -252,6 +252,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>Transport mode; used for Intrastat reporting</td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrders.html#invoiceno">InvoiceNo</a></td>
+<td>string (32) <strong>nullable</strong></td>
+<td>Invoice number which is already issued for this sale. It is filled only for sales for which the invoice is already issued (for example from the POS system).<code>Filter(eq)</code> <code>Introduced in version 26.2.1.83</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrders.html#isreleased"><s>IsReleased</s></a></td>
 <td>boolean</td>
 <td><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></td>
@@ -1053,6 +1058,14 @@ Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Lines.Select( c =&gt; SalesOrderLinesRepository.IntrastatTransportModeCodeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )</code></p>
+<h3 id="invoiceno">InvoiceNo</h3>
+<p>Invoice number which is already issued for this sale. It is filled only for sales for which the invoice is already issued (for example from the POS system).<code>Filter(eq)</code> <code>Introduced in version 26.2.1.83</code></p>
+<p>Type: <strong>string (32) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>32</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isreleased">IsReleased</h3>
 <p><strong>OBSOLETE! Do not use!</strong> True if the document is not void and its state is released or greater. Deprecated<code>Obsolete</code> <code>Required</code> <code>Default(false)</code> <code>Filter(eq)</code> <code>ReadOnly</code> <code>Obsoleted in version 22.1.6.61</code></p>
 <p>Type: <strong>boolean</strong><br>

@@ -61,13 +61,15 @@ Aggregate Tree
 | [EntityName](Regulatory.Saft.SaftDeclarations.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [FullState](Regulatory.Saft.SaftDeclarations.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] 
 | [ParentDocument<br />RelationshipType](Regulatory.Saft.SaftDeclarations.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](Regulatory.Saft.SaftDeclarations.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [PeriodEndDate](Regulatory.Saft.SaftDeclarations.md#periodenddate) | date | Period end date (by document date).`Required` `Filter(ge;le)` 
+| [PeriodEndDate](Regulatory.Saft.SaftDeclarations.md#periodenddate) | date | Period end date (by document date).`Required` `Filter(eq;ge;le)` 
+| [PeriodMonth](Regulatory.Saft.SaftDeclarations.md#periodmonth) | [PeriodMonth](Regulatory.Saft.SaftDeclarations.md#periodmonth) __nullable__ | The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.`Filter(eq)` `Introduced in version 26.2.1.83` 
 | [PeriodStartDate](Regulatory.Saft.SaftDeclarations.md#periodstartdate) | date | Period start date (by document date).`Required` `Filter(ge;le)` `ORD` 
+| [PeriodYear](Regulatory.Saft.SaftDeclarations.md#periodyear) | date __nullable__ | The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.`Filter(eq;ge;le)` `Introduced in version 26.2.1.83` 
 | [PlanningOnly](Regulatory.Saft.SaftDeclarations.md#planningonly) | boolean | Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReadOnly](Regulatory.Saft.SaftDeclarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDate](Regulatory.Saft.SaftDeclarations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [ReferenceDocumentNo](Regulatory.Saft.SaftDeclarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) 
-| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` 
+| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD` 
 | [ReleasedStartTime](Regulatory.Saft.SaftDeclarations.md#releasedstarttime) | datetime __nullable__ | Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD` 
 | [ReleaseTime](Regulatory.Saft.SaftDeclarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
 | [State](Regulatory.Saft.SaftDeclarations.md#state) | [DocumentState](Regulatory.Saft.SaftDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) 
@@ -181,6 +183,8 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.EnterpriseCompany.SaftInitialComplianceDate`
 ### CreationTime
 
 Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
@@ -312,11 +316,41 @@ Show in UI: **HiddenByDefault**
 
 ### PeriodEndDate
 
-Period end date (by document date).`Required` `Filter(ge;le)`
+Period end date (by document date).`Required` `Filter(eq;ge;le)`
 
 Type: **date**  
 Category: **System**  
-Supported Filters: **GreaterThanOrLessThan**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+Front-End Recalc Expressions:  
+`IIF( ( obj.PeriodMonth != null), obj.PeriodStartDate.AddMonths( 1).AddDays( -1), obj.PeriodStartDate.AddYears( 1).AddDays( -1))`
+### PeriodMonth
+
+The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.`Filter(eq)` `Introduced in version 26.2.1.83`
+
+Type: **[PeriodMonth](Regulatory.Saft.SaftDeclarations.md#periodmonth) __nullable__**  
+Category: **System**  
+Allowed values for the `PeriodMonth`(Regulatory.Saft.SaftDeclarations.md#periodmonth) data attribute  
+Allowed Values (Regulatory.Saft.SaftDeclarationsRepository.PeriodMonth Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| January | January value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'January' |
+| February | February value. Stored as 2. <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'February' |
+| March | March value. Stored as 3. <br /> Database Value: 3 <br /> Model Value: 3 <br /> Domain API Value: 'March' |
+| April | April value. Stored as 4. <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'April' |
+| May | May value. Stored as 5. <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'May' |
+| June | June value. Stored as 6. <br /> Database Value: 6 <br /> Model Value: 6 <br /> Domain API Value: 'June' |
+| July | July value. Stored as 7. <br /> Database Value: 7 <br /> Model Value: 7 <br /> Domain API Value: 'July' |
+| August | August value. Stored as 8. <br /> Database Value: 8 <br /> Model Value: 8 <br /> Domain API Value: 'August' |
+| September | September value. Stored as 9. <br /> Database Value: 9 <br /> Model Value: 9 <br /> Domain API Value: 'September' |
+| October | October value. Stored as 10. <br /> Database Value: 10 <br /> Model Value: 10 <br /> Domain API Value: 'October' |
+| November | November value. Stored as 11. <br /> Database Value: 11 <br /> Model Value: 11 <br /> Domain API Value: 'November' |
+| December | December value. Stored as 12. <br /> Database Value: 12 <br /> Model Value: 12 <br /> Domain API Value: 'December' |
+
+Supported Filters: **Equals**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
@@ -330,6 +364,20 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( obj.PeriodMonth != null), new DateTime( obj.PeriodYear.Value.Year, Convert( obj.PeriodMonth, Int32), 1), new DateTime( obj.PeriodYear.Value.Year, 1, 1))`
+### PeriodYear
+
+The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.`Filter(eq;ge;le)` `Introduced in version 26.2.1.83`
+
+Type: **date __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+Front-End Recalc Expressions:  
+`new DateTime( IIF( ( obj.PeriodYear != null), obj.PeriodYear.Value.Year, DateTime.Now.AddMonths( -1).Year), 1, 1)`
 ### PlanningOnly
 
 Indicates that the document is used only for planning (and as consequence its state cannot be greater than Planned). `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
@@ -376,14 +424,16 @@ Show in UI: **HiddenByDefault**
 
 ### ReleasedEndTime
 
-Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)`
+Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( obj.PeriodYear != null), Convert( DateTime.Now, Object), null)`
 ### ReleasedStartTime
 
 Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD`
@@ -394,6 +444,8 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Transaction.Query( ).Where( d => ( ( ( ( ( Convert( d.State, Int32) >= 30) AndAlso ( d.Void == False)) AndAlso ( d.EnterpriseCompany == obj.EnterpriseCompany)) AndAlso ( Convert( d.DeclarationType, Int32) == Convert( obj.DeclarationType, Int32))) AndAlso ( d.PeriodEndDate == obj.PeriodStartDate.AddDays( -1)))).OrderByDescending( d => d.ReleasedEndTime).Take( 1).ToList( ).Select( d => d.ReleasedEndTime).FirstOrDefault( ).IfNullThen( new DateTime( DateTime.Now.Year, DateTime.Now.Month, 1))`
 ### ReleaseTime
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
