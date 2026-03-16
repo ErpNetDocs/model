@@ -11,25 +11,25 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`uniqueidentifier` |General Ledger Account|
-|[Closing](#closing)|`decimal(38, 2)` |Closing Balance (debit balance is positive, credit - negative)|
-|[Closing_Base](#closing_base)|`decimal(38, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
-|[Closing_Credit](#closing_credit)|`decimal(38, 2)` |Closing balance when it is credit|
-|[Closing_Credit_Base](#closing_credit_base)|`decimal(38, 2)` |Closing balance in base currency when it is credit|
-|[Closing_Debit](#closing_debit)|`decimal(38, 2)` |Closing balance when it is debit|
-|[Closing_Debit_Base](#closing_debit_base)|`decimal(38, 2)` |Closing balance in base currency when it is debit|
-|[Closing_Reporting](#closing_reporting)|`decimal(38, 2)` |Closing balance in reporting currency|
-|[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` |Cost Center|
-|[Credit](#credit)|`decimal(38, 2)` |Credit|
-|[Credit_Base](#credit_base)|`decimal(38, 2)` |Credit Base|
-|[Credit_Reporting](#credit_reporting)|`decimal(38, 2)` |Credit Reporting|
-|[Currency_Id](#currency_id)|`uniqueidentifier` |Currency|
-|[Debit](#debit)|`decimal(38, 2)` |Debit|
-|[Debit_Base](#debit_base)|`decimal(38, 2)` |Debit Base|
-|[Debit_Reporting](#debit_reporting)|`decimal(38, 2)` |Debit Reporting|
-|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise Company|
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Company Location / Branch|
-|[Example_Voucher_Line_Id](#example_voucher_line_id)|`uniqueidentifier` |This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line.|
+|[Account_Id](#account_id)|`uniqueidentifier` ||
+|[Closing](#closing)|`decimal(18, 2)` |Closing Balance (debit balance is positive, credit - negative)|
+|[Closing_Base](#closing_base)|`decimal(18, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
+|[Closing_Credit](#closing_credit)|`decimal(18, 2)` |Closing balance when it is credit|
+|[Closing_Credit_Base](#closing_credit_base)|`decimal(18, 2)` |Closing balance in base currency when it is credit|
+|[Closing_Debit](#closing_debit)|`decimal(18, 2)` |Closing balance when it is debit|
+|[Closing_Debit_Base](#closing_debit_base)|`decimal(18, 2)` |Closing balance in base currency when it is debit|
+|[Closing_Reporting](#closing_reporting)|`decimal(18, 2)` |Closing balance in reporting currency|
+|[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` ||
+|[Credit](#credit)|`decimal(18, 2)` |Credit|
+|[Credit_Base](#credit_base)|`decimal(18, 2)` |Credit Base|
+|[Credit_Reporting](#credit_reporting)|`decimal(18, 2)` |Credit Reporting|
+|[Currency_Id](#currency_id)|`uniqueidentifier` ||
+|[Debit](#debit)|`decimal(18, 2)` |Debit|
+|[Debit_Base](#debit_base)|`decimal(18, 2)` |Debit Base|
+|[Debit_Reporting](#debit_reporting)|`decimal(18, 2)` |Debit Reporting|
+|[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
+|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` ||
+|[Example_Voucher_Line_Id](#example_voucher_line_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item Key|
 |[Item_Key_Level_1_Code](#item_key_level_1_code)|`nvarchar(40)` |Item Key Level 1 Code|
@@ -42,33 +42,30 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[Item_Key_Level_4_Name](#item_key_level_4_name)|`nvarchar(254)` `ML`|Item Key Level 4 Name|
 |[Item_Key_Level_5_Code](#item_key_level_5_code)|`nvarchar(40)` |Item Key Level 5 Code|
 |[Item_Key_Level_5_Name](#item_key_level_5_name)|`nvarchar(254)` `ML`|Item Key Level 5 Name|
-|[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` |Level 1 Account Group|
-|[Level_1_Account_Property_Id](#level_1_account_property_id)|`uniqueidentifier` |Level 1 Account Property|
-|[Level_2_Account_Group_Id](#level_2_account_group_id)|`uniqueidentifier` |Level 2 Account Group|
-|[Level_2_Account_Property_Id](#level_2_account_property_id)|`uniqueidentifier` |Level 2 Account Property|
-|[Level_3_Account_Group_Id](#level_3_account_group_id)|`uniqueidentifier` |Level 3 Account Group|
-|[Level_3_Account_Property_Id](#level_3_account_property_id)|`uniqueidentifier` |Level 3 Account Property|
-|[Level_4_Account_Group_Id](#level_4_account_group_id)|`uniqueidentifier` |Level 4 Account Group|
-|[Level_4_Account_Property_Id](#level_4_account_property_id)|`uniqueidentifier` |Level 4 Account Property|
-|[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` |Level 5 Account Group|
-|[Level_5_Account_Property_Id](#level_5_account_property_id)|`uniqueidentifier` |Level 5 Account Property|
-|[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` |Level 6 Account Group|
-|[Opening](#opening)|`decimal(38, 2)` |Opening balance (debit balance is positive, credit - negative)|
-|[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
-|[Opening_Credit](#opening_credit)|`decimal(38, 2)` |Opening balance when it is credit|
-|[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening balance in base currency when it is credit|
-|[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening balance when it is debit|
-|[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening balance in base currency when it is debit|
-|[Opening_Reporting](#opening_reporting)|`decimal(38, 2)` |Opening balance in reporting currency|
-|[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |Profit Center|
+|[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` ||
+|[Level_1_Account_Property_Id](#level_1_account_property_id)|`uniqueidentifier` ||
+|[Level_2_Account_Group_Id](#level_2_account_group_id)|`uniqueidentifier` ||
+|[Level_2_Account_Property_Id](#level_2_account_property_id)|`uniqueidentifier` ||
+|[Level_3_Account_Group_Id](#level_3_account_group_id)|`uniqueidentifier` ||
+|[Level_3_Account_Property_Id](#level_3_account_property_id)|`uniqueidentifier` ||
+|[Level_4_Account_Group_Id](#level_4_account_group_id)|`uniqueidentifier` ||
+|[Level_4_Account_Property_Id](#level_4_account_property_id)|`uniqueidentifier` ||
+|[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` ||
+|[Level_5_Account_Property_Id](#level_5_account_property_id)|`uniqueidentifier` ||
+|[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` ||
+|[Opening](#opening)|`decimal(18, 2)` |Opening balance (debit balance is positive, credit - negative)|
+|[Opening_Base](#opening_base)|`decimal(18, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
+|[Opening_Credit](#opening_credit)|`decimal(18, 2)` |Opening balance when it is credit|
+|[Opening_Credit_Base](#opening_credit_base)|`decimal(18, 2)` |Opening balance in base currency when it is credit|
+|[Opening_Debit](#opening_debit)|`decimal(18, 2)` |Opening balance when it is debit|
+|[Opening_Debit_Base](#opening_debit_base)|`decimal(18, 2)` |Opening balance in base currency when it is debit|
+|[Opening_Reporting](#opening_reporting)|`decimal(18, 2)` |Opening balance in reporting currency|
+|[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` ||
 |[To_Date](#to_date)|`date` |Period End Date - Should be filtered with exact date|
 
 ## Columns
 
 ### Account_Id
-
-
-General Ledger Account
 
 | Property | Value |
 | - | - |
@@ -125,7 +122,7 @@ Closing Balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -155,7 +152,7 @@ Closing balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -185,7 +182,7 @@ Closing balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -215,7 +212,7 @@ Closing balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -245,7 +242,7 @@ Closing balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -275,7 +272,7 @@ Closing balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -305,16 +302,13 @@ Closing balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
 ### Cost_Center_Id
-
-
-Cost Center
 
 | Property | Value |
 | - | - |
@@ -335,7 +329,7 @@ Cost Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -345,7 +339,7 @@ Cost Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Credit
 
@@ -371,7 +365,7 @@ Credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -401,7 +395,7 @@ Credit Base
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -431,16 +425,13 @@ Credit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
 ### Currency_Id
-
-
-Currency
 
 | Property | Value |
 | - | - |
@@ -497,7 +488,7 @@ Debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -527,7 +518,7 @@ Debit Base
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -557,16 +548,13 @@ Debit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
 ### Enterprise_Company_Id
-
-
-Enterprise Company
 
 | Property | Value |
 | - | - |
@@ -601,9 +589,6 @@ Enterprise Company
 
 ### Enterprise_Company_Location_Id
 
-
-Company Location / Branch
-
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -624,7 +609,7 @@ Company Location / Branch
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -634,12 +619,9 @@ Company Location / Branch
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Example_Voucher_Line_Id
-
-
-This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line.
 
 | Property | Value |
 | - | - |
@@ -661,7 +643,7 @@ This is one (any) of the voucher lines grouped for the current Item Key (it coul
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -671,7 +653,7 @@ This is one (any) of the voucher lines grouped for the current Item Key (it coul
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### From_Date
 
@@ -733,7 +715,7 @@ Item Key
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64)|
+|Type|nvarchar(64) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -743,7 +725,7 @@ Item Key
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 |Like|None|no|no|
 
 ### Item_Key_Level_1_Code
@@ -769,12 +751,18 @@ Item Key Level 1 Code
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(40)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(40) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_1_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_1_Name
 
@@ -799,12 +787,18 @@ Item Key Level 1 Name
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_1_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_2_Code
 
@@ -829,12 +823,18 @@ Item Key Level 2 Code
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(40)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(40) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_2_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_2_Name
 
@@ -859,12 +859,18 @@ Item Key Level 2 Name
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_2_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_3_Code
 
@@ -889,12 +895,18 @@ Item Key Level 3 Code
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(40)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(40) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_3_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_3_Name
 
@@ -919,12 +931,18 @@ Item Key Level 3 Name
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_3_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_4_Code
 
@@ -949,12 +967,18 @@ Item Key Level 4 Code
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(40)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(40) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_4_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_4_Name
 
@@ -979,12 +1003,18 @@ Item Key Level 4 Name
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_4_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_5_Code
 
@@ -1009,12 +1039,18 @@ Item Key Level 5 Code
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(40)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(40) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Item_Key_Level_5_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Item_Key_Level_5_Name
 
@@ -1039,17 +1075,20 @@ Item Key Level 5 Name
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|nvarchar(254) (MultiLanguage)|
+|Supports EQUALS_IN|yes|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
+#### Item_Key_Level_5_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Level_1_Account_Group_Id
-
-
-Level 1 Account Group
 
 | Property | Value |
 | - | - |
@@ -1071,7 +1110,7 @@ Level 1 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1081,12 +1120,9 @@ Level 1 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_1_Account_Property_Id
-
-
-Level 1 Account Property
 
 | Property | Value |
 | - | - |
@@ -1108,7 +1144,7 @@ Level 1 Account Property
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1118,12 +1154,9 @@ Level 1 Account Property
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_2_Account_Group_Id
-
-
-Level 2 Account Group
 
 | Property | Value |
 | - | - |
@@ -1145,7 +1178,7 @@ Level 2 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1155,12 +1188,9 @@ Level 2 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_2_Account_Property_Id
-
-
-Level 2 Account Property
 
 | Property | Value |
 | - | - |
@@ -1182,7 +1212,7 @@ Level 2 Account Property
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1192,12 +1222,9 @@ Level 2 Account Property
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_3_Account_Group_Id
-
-
-Level 3 Account Group
 
 | Property | Value |
 | - | - |
@@ -1219,7 +1246,7 @@ Level 3 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1229,12 +1256,9 @@ Level 3 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_3_Account_Property_Id
-
-
-Level 3 Account Property
 
 | Property | Value |
 | - | - |
@@ -1256,7 +1280,7 @@ Level 3 Account Property
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1266,12 +1290,9 @@ Level 3 Account Property
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_4_Account_Group_Id
-
-
-Level 4 Account Group
 
 | Property | Value |
 | - | - |
@@ -1293,7 +1314,7 @@ Level 4 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1303,12 +1324,9 @@ Level 4 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_4_Account_Property_Id
-
-
-Level 4 Account Property
 
 | Property | Value |
 | - | - |
@@ -1330,7 +1348,7 @@ Level 4 Account Property
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1340,12 +1358,9 @@ Level 4 Account Property
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_5_Account_Group_Id
-
-
-Level 5 Account Group
 
 | Property | Value |
 | - | - |
@@ -1367,7 +1382,7 @@ Level 5 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1377,12 +1392,9 @@ Level 5 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_5_Account_Property_Id
-
-
-Level 5 Account Property
 
 | Property | Value |
 | - | - |
@@ -1404,7 +1416,7 @@ Level 5 Account Property
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1414,12 +1426,9 @@ Level 5 Account Property
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_6_Account_Group_Id
-
-
-Level 6 Account Group
 
 | Property | Value |
 | - | - |
@@ -1441,7 +1450,7 @@ Level 6 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1451,7 +1460,7 @@ Level 6 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Opening
 
@@ -1477,7 +1486,7 @@ Opening balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1507,7 +1516,7 @@ Opening balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1537,7 +1546,7 @@ Opening balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1567,7 +1576,7 @@ Opening balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1597,7 +1606,7 @@ Opening balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1627,7 +1636,7 @@ Opening balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1657,16 +1666,13 @@ Opening balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(18, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
 ### Profit_Center_Id
-
-
-Profit Center
 
 | Property | Value |
 | - | - |
@@ -1687,7 +1693,7 @@ Profit Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1697,7 +1703,7 @@ Profit Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### To_Date
 

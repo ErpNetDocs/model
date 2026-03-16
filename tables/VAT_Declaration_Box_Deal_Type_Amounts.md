@@ -43,7 +43,7 @@ The amount of the operation according to the category.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(15, 2)|
+|Type|decimal(15, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

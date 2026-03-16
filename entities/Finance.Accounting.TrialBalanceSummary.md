@@ -28,27 +28,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (38, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
-| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (38, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (38, 2) | Closing balance when it is credit`Required` 
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (38, 2) | Closing balance in base currency when it is credit`Required` 
-| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (38, 2) | Closing balance when it is debit`Required` 
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (38, 2) | Closing balance in base currency when it is debit`Required` 
-| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (38, 2) | Closing balance in reporting currency`Required` 
-| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (38, 2) | Total credits for the period`Required` 
-| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (38, 2) | Total credits (Base Currency)`Required` 
-| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (38, 2) | Total credits (Reporting Currency)`Required` 
-| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (38, 2) | Total debits for the period`Required` 
-| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (38, 2) | Total debits (Base Currency)`Required` 
-| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (38, 2) | Total debits (Reporting Currency)`Required` 
+| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
+| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
+| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` 
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` 
+| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` 
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` 
+| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` 
+| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (18, 2) | Total credits for the period`Required` 
+| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (18, 2) | Total credits (Base Currency)`Required` 
+| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (18, 2) | Total credits (Reporting Currency)`Required` 
+| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (18, 2) | Total debits for the period`Required` 
+| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (18, 2) | Total debits (Base Currency)`Required` 
+| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (18, 2) | Total debits (Reporting Currency)`Required` 
 | [FromDate](Finance.Accounting.TrialBalanceSummary.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` 
-| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
-| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (38, 2) | Opening balance when it is credit`Required` 
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (38, 2) | Opening balance in base currency when it is credit`Required` 
-| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (38, 2) | Opening balance when it is debit`Required` 
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (38, 2) | Opening balance in base currency when it is debit`Required` 
-| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (38, 2) | Opening Reporting`Required` 
+| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
+| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
+| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` 
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` 
+| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` 
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` 
+| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (18, 2) | Opening Reporting`Required` 
 | [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` 
 
 ## References
@@ -58,13 +58,13 @@ Aggregate Tree
 | [Account](Finance.Accounting.TrialBalanceSummary.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account |
 | [Currency](Finance.Accounting.TrialBalanceSummary.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.TrialBalanceSummary.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceSummary.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Enterprise Company Location |
-| [Level1AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 1 Account Group |
-| [Level2AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level2accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 2 Account Group |
-| [Level3AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level3accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 3 Account Group |
-| [Level4AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level4accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 4 Account Group |
-| [Level5AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level5accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 5 Account Group |
-| [Level6AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level6accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 6 Account Group |
+| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceSummary.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Enterprise Company Location |
+| [Level1AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 1 Account Group |
+| [Level2AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level2accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 2 Account Group |
+| [Level3AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level3accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 3 Account Group |
+| [Level4AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level4accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 4 Account Group |
+| [Level5AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level5accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 5 Account Group |
+| [Level6AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level6accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 6 Account Group |
 
 
 ## Attribute Details
@@ -73,7 +73,7 @@ Aggregate Tree
 
 Closing Balance (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -83,7 +83,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -93,7 +93,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -103,7 +103,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -113,7 +113,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -123,7 +123,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -133,7 +133,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in reporting currency`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -143,7 +143,7 @@ Show in UI: **ShownByDefault**
 
 Total credits for the period`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -153,7 +153,7 @@ Show in UI: **ShownByDefault**
 
 Total credits (Base Currency)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -163,7 +163,7 @@ Show in UI: **ShownByDefault**
 
 Total credits (Reporting Currency)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -173,7 +173,7 @@ Show in UI: **ShownByDefault**
 
 Total debits for the period`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -183,7 +183,7 @@ Show in UI: **ShownByDefault**
 
 Total debits (Base Currency)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -193,7 +193,7 @@ Show in UI: **ShownByDefault**
 
 Total debits (Reporting Currency)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -213,7 +213,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -223,7 +223,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -233,7 +233,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -243,7 +243,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -253,7 +253,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -263,7 +263,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -273,7 +273,7 @@ Show in UI: **ShownByDefault**
 
 Opening Reporting`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -329,7 +329,7 @@ Show in UI: **ShownByDefault**
 
 Enterprise Company Location
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
 Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -340,7 +340,7 @@ Show in UI: **ShownByDefault**
 
 Level 1 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -351,7 +351,7 @@ Show in UI: **ShownByDefault**
 
 Level 2 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -362,7 +362,7 @@ Show in UI: **ShownByDefault**
 
 Level 3 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -373,7 +373,7 @@ Show in UI: **ShownByDefault**
 
 Level 4 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -384,7 +384,7 @@ Show in UI: **ShownByDefault**
 
 Level 5 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -395,7 +395,7 @@ Show in UI: **ShownByDefault**
 
 Level 6 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  

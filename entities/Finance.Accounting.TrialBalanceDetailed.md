@@ -28,38 +28,38 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (38, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
-| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (38, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (38, 2) | Closing balance when it is credit`Required` 
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (38, 2) | Closing balance in base currency when it is credit`Required` 
-| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (38, 2) | Closing balance when it is debit`Required` 
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (38, 2) | Closing balance in base currency when it is debit`Required` 
-| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (38, 2) | Closing balance in reporting currency`Required` 
-| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (38, 2) | Credit`Required` 
-| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (38, 2) | Credit Base`Required` 
-| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (38, 2) | Credit Reporting`Required` 
-| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (38, 2) | Debit`Required` 
-| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (38, 2) | Debit Base`Required` 
-| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (38, 2) | Debit Reporting`Required` 
+| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
+| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
+| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` 
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` 
+| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` 
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` 
+| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` 
+| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (18, 2) | Credit`Required` 
+| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (18, 2) | Credit Base`Required` 
+| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` 
+| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (18, 2) | Debit`Required` 
+| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (18, 2) | Debit Base`Required` 
+| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` 
 | [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` 
-| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) | Item Key`Required` `Filter(eq;like)` 
-| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) | Item Key Level 1 Code`Required` 
-| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 1 Name`Required` 
-| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) | Item Key Level 2 Code`Required` 
-| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 2 Name`Required` 
-| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) | Item Key Level 3 Code`Required` 
-| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 3 Name`Required` 
-| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) | Item Key Level 4 Code`Required` 
-| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 4 Name`Required` 
-| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) | Item Key Level 5 Code`Required` 
-| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Item Key Level 5 Name`Required` 
-| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
-| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (38, 2) | Opening balance when it is credit`Required` 
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (38, 2) | Opening balance in base currency when it is credit`Required` 
-| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (38, 2) | Opening balance when it is debit`Required` 
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (38, 2) | Opening balance in base currency when it is debit`Required` 
-| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency`Required` `Introduced in version 25.1.3.29` 
+| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) __nullable__ | Item Key`Filter(eq;like)` 
+| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) __nullable__ | Item Key Level 1 Code`Filter(multi eq)` 
+| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 1 Name`Filter(multi eq)` 
+| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) __nullable__ | Item Key Level 2 Code`Filter(multi eq)` 
+| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 2 Name`Filter(multi eq)` 
+| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) __nullable__ | Item Key Level 3 Code`Filter(multi eq)` 
+| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 3 Name`Filter(multi eq)` 
+| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) __nullable__ | Item Key Level 4 Code`Filter(multi eq)` 
+| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 4 Name`Filter(multi eq)` 
+| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) __nullable__ | Item Key Level 5 Code`Filter(multi eq)` 
+| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 5 Name`Filter(multi eq)` 
+| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
+| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
+| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` 
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` 
+| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` 
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` 
+| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (18, 2) | Opening balance in reporting currency`Required` `Introduced in version 25.1.3.29` 
 | [ToDate](Finance.Accounting.TrialBalanceDetailed.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` 
 
 ## References
@@ -67,23 +67,23 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Account](Finance.Accounting.TrialBalanceDetailed.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account |
-| [CostCenter](Finance.Accounting.TrialBalanceDetailed.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center |
+| [CostCenter](Finance.Accounting.TrialBalanceDetailed.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost Center |
 | [Currency](Finance.Accounting.TrialBalanceDetailed.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.TrialBalanceDetailed.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceDetailed.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Company Location / Branch |
-| [ExampleVoucherLine](Finance.Accounting.TrialBalanceDetailed.md#examplevoucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) | This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. |
-| [Level1AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 1 Account Group |
-| [Level1AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level1accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | Level 1 Account Property |
-| [Level2AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level2accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 2 Account Group |
-| [Level2AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level2accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | Level 2 Account Property |
-| [Level3AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level3accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 3 Account Group |
-| [Level3AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level3accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | Level 3 Account Property |
-| [Level4AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level4accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 4 Account Group |
-| [Level4AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level4accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | Level 4 Account Property |
-| [Level5AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level5accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 5 Account Group |
-| [Level5AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level5accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) | Level 5 Account Property |
-| [Level6AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level6accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) | Level 6 Account Group |
-| [ProfitCenter](Finance.Accounting.TrialBalanceDetailed.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center |
+| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceDetailed.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Company Location / Branch |
+| [ExampleVoucherLine](Finance.Accounting.TrialBalanceDetailed.md#examplevoucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) (nullable) | This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. |
+| [Level1AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 1 Account Group |
+| [Level1AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level1accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 1 Account Property |
+| [Level2AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level2accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 2 Account Group |
+| [Level2AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level2accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 2 Account Property |
+| [Level3AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level3accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 3 Account Group |
+| [Level3AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level3accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 3 Account Property |
+| [Level4AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level4accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 4 Account Group |
+| [Level4AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level4accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 4 Account Property |
+| [Level5AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level5accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 5 Account Group |
+| [Level5AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level5accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 5 Account Property |
+| [Level6AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level6accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 6 Account Group |
+| [ProfitCenter](Finance.Accounting.TrialBalanceDetailed.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Profit Center |
 
 
 ## Attribute Details
@@ -92,7 +92,7 @@ Aggregate Tree
 
 Closing Balance (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -102,7 +102,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -112,7 +112,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -122,7 +122,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -132,7 +132,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in base currency when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 Closing balance in reporting currency`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 Credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 Credit Base`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 Credit Reporting`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -192,7 +192,7 @@ Show in UI: **ShownByDefault**
 
 Debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -202,7 +202,7 @@ Show in UI: **ShownByDefault**
 
 Debit Base`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -212,7 +212,7 @@ Show in UI: **ShownByDefault**
 
 Debit Reporting`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -230,9 +230,9 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key`Required` `Filter(eq;like)`
+Item Key`Filter(eq;like)`
 
-Type: **string (64)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
@@ -241,106 +241,106 @@ Show in UI: **ShownByDefault**
 
 ### ItemKeyLevel1Code
 
-Item Key Level 1 Code`Required`
+Item Key Level 1 Code`Filter(multi eq)`
 
-Type: **string (40)**  
+Type: **string (40) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **40**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel1Name
 
-Item Key Level 1 Name`Required`
+Item Key Level 1 Name`Filter(multi eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel2Code
 
-Item Key Level 2 Code`Required`
+Item Key Level 2 Code`Filter(multi eq)`
 
-Type: **string (40)**  
+Type: **string (40) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **40**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel2Name
 
-Item Key Level 2 Name`Required`
+Item Key Level 2 Name`Filter(multi eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel3Code
 
-Item Key Level 3 Code`Required`
+Item Key Level 3 Code`Filter(multi eq)`
 
-Type: **string (40)**  
+Type: **string (40) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **40**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel3Name
 
-Item Key Level 3 Name`Required`
+Item Key Level 3 Name`Filter(multi eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel4Code
 
-Item Key Level 4 Code`Required`
+Item Key Level 4 Code`Filter(multi eq)`
 
-Type: **string (40)**  
+Type: **string (40) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **40**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel4Name
 
-Item Key Level 4 Name`Required`
+Item Key Level 4 Name`Filter(multi eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel5Code
 
-Item Key Level 5 Code`Required`
+Item Key Level 5 Code`Filter(multi eq)`
 
-Type: **string (40)**  
+Type: **string (40) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **40**  
 Show in UI: **ShownByDefault**  
 
 ### ItemKeyLevel5Name
 
-Item Key Level 5 Name`Required`
+Item Key Level 5 Name`Filter(multi eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
@@ -348,7 +348,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -358,7 +358,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency (debit balance is positive, credit - negative)`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -368,7 +368,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -378,7 +378,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency when it is credit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -388,7 +388,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -398,7 +398,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in base currency when it is debit`Required`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -408,7 +408,7 @@ Show in UI: **ShownByDefault**
 
 Opening balance in reporting currency`Required` `Introduced in version 25.1.3.29`
 
-Type: **decimal (38, 2)**  
+Type: **decimal (18, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -442,7 +442,7 @@ Show in UI: **ShownByDefault**
 
 Cost Center
 
-Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -475,7 +475,7 @@ Show in UI: **ShownByDefault**
 
 Company Location / Branch
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
 Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -486,7 +486,7 @@ Show in UI: **ShownByDefault**
 
 This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line.
 
-Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)**  
+Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Voucher_Lines_Table.Voucher_Line_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -497,7 +497,7 @@ Show in UI: **ShownByDefault**
 
 Level 1 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -508,7 +508,7 @@ Show in UI: **ShownByDefault**
 
 Level 1 Account Property
 
-Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
 Inherited From: **Gen_Properties_Table.Property_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -519,7 +519,7 @@ Show in UI: **ShownByDefault**
 
 Level 2 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -530,7 +530,7 @@ Show in UI: **ShownByDefault**
 
 Level 2 Account Property
 
-Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
 Inherited From: **Gen_Properties_Table.Property_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -541,7 +541,7 @@ Show in UI: **ShownByDefault**
 
 Level 3 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -552,7 +552,7 @@ Show in UI: **ShownByDefault**
 
 Level 3 Account Property
 
-Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
 Inherited From: **Gen_Properties_Table.Property_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -563,7 +563,7 @@ Show in UI: **ShownByDefault**
 
 Level 4 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -574,7 +574,7 @@ Show in UI: **ShownByDefault**
 
 Level 4 Account Property
 
-Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
 Inherited From: **Gen_Properties_Table.Property_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -585,7 +585,7 @@ Show in UI: **ShownByDefault**
 
 Level 5 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -596,7 +596,7 @@ Show in UI: **ShownByDefault**
 
 Level 5 Account Property
 
-Type: **[CustomProperties](Systems.Bpm.CustomProperties.md)**  
+Type: **[CustomProperties](Systems.Bpm.CustomProperties.md) (nullable)**  
 Category: **System**  
 Inherited From: **Gen_Properties_Table.Property_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -607,7 +607,7 @@ Show in UI: **ShownByDefault**
 
 Level 6 Account Group
 
-Type: **[AccountGroups](Finance.Accounting.AccountGroups.md)**  
+Type: **[AccountGroups](Finance.Accounting.AccountGroups.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Account_Groups_Table.Account_Group_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -618,7 +618,7 @@ Show in UI: **ShownByDefault**
 
 Profit Center
 
-Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  

@@ -37,7 +37,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) | The amount of the operation according to the category.`Currency: BaseCurrency` `Required` 
+| [Amount](Regulatory.Vat.DeclarationAmountDetails.md#amount) | [Amount (15, 2)](../data-types.md#amount) __nullable__ | The amount of the operation according to the category.`Currency: BaseCurrency` 
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Tree
 
 ### Amount
 
-The amount of the operation according to the category.`Currency: BaseCurrency` `Required`
+The amount of the operation according to the category.`Currency: BaseCurrency`
 
-Type: **[Amount (15, 2)](../data-types.md#amount)**  
+Type: **[Amount (15, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
