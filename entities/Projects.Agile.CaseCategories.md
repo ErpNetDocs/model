@@ -36,7 +36,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DescriptionTemplate](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Description field when creating new cases of this category.`Filter(like)` `Introduced in version 25.1.2.76` 
+| [<s>DescriptionTemplate</s>](Projects.Agile.CaseCategories.md#descriptiontemplate) | string (max) __nullable__ | **OBSOLETE! Do not use!** Interpolated string that sets a value for the Description field when creating new cases of this category.`Obsolete` `Filter(like)` `Introduced in version 25.1.2.76` `Obsoleted in version 26.2.1.88` 
 | [HideUnusedSystemStates](Projects.Agile.CaseCategories.md#hideunusedsystemstates) | boolean | If enabled, system states without at least one active user state will be hidden for cases of this category. If there are no active user states, all system states will be shown.`Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.32` 
 | [Icon](Projects.Agile.CaseCategories.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
 | [IsActive](Projects.Agile.CaseCategories.md#isactive) | boolean | Specifies whether the category is active for new cases.`Required` `Default(true)` `Filter(eq)` 
@@ -44,6 +44,7 @@ Aggregate Tree
 | [Notes](Projects.Agile.CaseCategories.md#notes) | string (max) __nullable__ | Notes for this CaseCategory. 
 | [Ord](Projects.Agile.CaseCategories.md#ord) | int32 | Display order of the category relative to other categories within the project type.`Required` `Default(1)` `Filter(eq)` 
 | [RequiresParent](Projects.Agile.CaseCategories.md#requiresparent) | boolean | Specifies whether a parent case is required for cases of this category.`Required` `Default(false)` `Filter(eq)` `Introduced in version 25.1.3.39` 
+| [SpecificationTemplate](Projects.Agile.CaseCategories.md#specificationtemplate) | string (max) __nullable__ | Interpolated string that sets a value for the Specification field when creating new cases of this category.`Filter(like)` `Introduced in version 26.2.1.88` 
 
 
 ## System Attributes
@@ -69,7 +70,7 @@ Aggregate Tree
 
 ### DescriptionTemplate
 
-Interpolated string that sets a value for the Description field when creating new cases of this category.`Filter(like)` `Introduced in version 25.1.2.76`
+**OBSOLETE! Do not use!** Interpolated string that sets a value for the Description field when creating new cases of this category.`Obsolete` `Filter(like)` `Introduced in version 25.1.2.76` `Obsoleted in version 26.2.1.88`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -152,6 +153,17 @@ Category: **System**
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **False**  
+Show in UI: **ShownByDefault**  
+
+### SpecificationTemplate
+
+Interpolated string that sets a value for the Specification field when creating new cases of this category.`Filter(like)` `Introduced in version 26.2.1.88`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **Like**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### Id

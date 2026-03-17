@@ -21,6 +21,7 @@ Determines the type and workflow of the cases. Entity: Apm_Case_Categories (Intr
 |[Ord](#ord)|`int` |Display order of the category relative to other categories within the project type.|
 |[Requires_Parent](#requires_parent)|`bit` |Specifies whether a parent case is required for cases of this category.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Specification_Template](#specification_template)|`nvarchar(max)` |Interpolated string that sets a value for the Specification field when creating new cases of this category.|
 
 ## Columns
 
@@ -359,5 +360,42 @@ Specifies whether a parent case is required for cases of this category.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Specification_Template
+
+
+Interpolated string that sets a value for the Specification field when creating new cases of this category.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|12|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Specification_Template - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
 
 

@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC).`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC).`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
 | [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
 | [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 | The counting session number to which this entry belongs.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 __nullable__ | The counting session number to which this entry belongs.`Filter(eq;ge;le)` `ReadOnly` 
 | [StandardQuantityBase](Logistics.Wms.WarehouseCounts.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in the base measurement unit, calculated according to the product’s standard measurement ratio.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` 
 | [Void](Logistics.Wms.WarehouseCounts.md#void) | boolean | Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.2.1.65` 
 | [VoidReason](Logistics.Wms.WarehouseCounts.md#voidreason) | string (254) __nullable__ | Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.`Introduced in version 26.2.1.65` 
@@ -76,12 +76,13 @@ Aggregate Tree
 
 ### CreationTimeUTC
 
-The timestamp when the counting entry was recorded (UTC).`Required` `Filter(eq;ge;le)` `ReadOnly`
+The timestamp when the counting entry was recorded (UTC).`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly`
 
 Type: **datetime**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
+Default Value: **CurrentDateTimeUtc**  
 Show in UI: **ShownByDefault**  
 
 ### Quantity
@@ -106,9 +107,9 @@ Show in UI: **ShownByDefault**
 
 ### Session
 
-The counting session number to which this entry belongs.`Required` `Filter(eq;ge;le)` `ReadOnly`
+The counting session number to which this entry belongs.`Filter(eq;ge;le)` `ReadOnly`
 
-Type: **int32**  
+Type: **int32 __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
