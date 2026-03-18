@@ -145,6 +145,7 @@ Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Member
 | BarcodeScanEnters<br />QuantityOfOnePce | If no quantity is entered, scanning a barcode in the SCAN field enters 1 PCE.. Stored as 'QOP'. <br /> Database Value: 'QOP' <br /> Model Value: 18 <br /> Domain API Value: 'BarcodeScanEnters<br />QuantityOfOnePce' |
 | RoutingAlgorithm | RoutingAlgorithm value. Stored as 'RAL'. <br /> Database Value: 'RAL' <br /> Model Value: 19 <br /> Domain API Value: 'RoutingAlgorithm' |
 | CountingSplitLevel | Zone hierarchy level (0 = no split, single order; 1 = root, n > 1 = deeper levels) used to split Warehouse Orders in the reconciliation process.. Stored as 'CSL'. <br /> Database Value: 'CSL' <br /> Model Value: 20 <br /> Domain API Value: 'CountingSplitLevel' |
+| CountingOrderDocumentType | Specifies the Document Type used when generating Warehouse Orders for counting during warehouse reconciliation.. Stored as 'CDT'. <br /> Database Value: 'CDT' <br /> Model Value: 21 <br /> Domain API Value: 'CountingOrderDocumentType' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
