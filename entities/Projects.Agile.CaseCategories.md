@@ -77,7 +77,7 @@ Category: **System**
 Supported Filters: **Like**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
-Show in UI: **ShownByDefault**  
+Show in UI: **CannotBeShown**  
 
 ### HideUnusedSystemStates
 

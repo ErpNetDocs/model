@@ -102,7 +102,6 @@ Interpolated string that sets a value for the Description field when creating ne
 
 | Property | Value |
 | - | - |
-|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -124,7 +123,7 @@ Interpolated string that sets a value for the Description field when creating ne
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
-|Visible|yes|
+|Visible|no|
 
 #### Description_Template - Supported Filters
 
