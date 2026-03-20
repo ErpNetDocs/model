@@ -41,11 +41,7 @@ Aggregate Tree
 | [ProductionBatchId](Logistics.Inventory.Lots.md#productionbatchid) | guid __nullable__ | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. `Filter(multi eq)` |
 | [PurchaseLotNumber](Logistics.Inventory.Lots.md#purchaselotnumber) | string (30) __nullable__ | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.`Filter(like)` |
 | [ReceiptDate](Logistics.Inventory.Lots.md#receiptdate) | date __nullable__ | The date of the first receipt of products in this lot.`Filter(ge;le)` `ReadOnly` |
-| [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use`Required` `Default(0)` `Filter(multi eq)` |
+| [Status](Logistics.Inventory.Lots.md#status) | [Status](Logistics.Inventory.Lots.md#status) | Status of the warehouse lot. Minus statuses describe blocked conditions.<br />-3 blocked for document (sales or service order)<br />-2 blocked for party<br />-1 blocked for inspection<br />0 free to use`Required` `Default(0)` `Filter(multi eq)` |
 
 ## References
 

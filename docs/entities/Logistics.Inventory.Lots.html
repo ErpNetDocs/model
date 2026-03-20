@@ -109,21 +109,62 @@ Max level:  4 - Track object attribute and blob changes</p>
 <li><a href="Logistics.Inventory.Lots.html">Logistics.Inventory.Lots</a></li>
 </ul>
 <h2 id="attributes">Attributes</h2>
-<p>| Name | Type | Description |
-| ---- | ---- | --- |
-| <a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a> | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.<code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code> |
-| <a href="Logistics.Inventory.Lots.html#description">Description</a> | <a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong> | The description of this Lot. |
-| <a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a> | datetime <strong>nullable</strong> | Expiry date for this lot.<code>Filter(ge;le)</code> |
-| <a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a> | string (50) <strong>nullable</strong> | The license number for this lot. Null when license number is N/A or unknown. |
-| <a href="Logistics.Inventory.Lots.html#number">Number</a> | string (30) | The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code> |
-| <a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a> | guid <strong>nullable</strong> | Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code> |
-| <a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a> | string (30) <strong>nullable</strong> | Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.<code>Filter(like)</code> |
-| <a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a> | date <strong>nullable</strong> | The date of the first receipt of products in this lot.<code>Filter(ge;le)</code> <code>ReadOnly</code> |
-| <a href="Logistics.Inventory.Lots.html#status">Status</a> | <a href="Logistics.Inventory.Lots.html#status">Status</a> | Status of the warehouse lot. Minus statuses describe blocked conditions.
--3 blocked for document (sales or service order)
--2 blocked for party
--1 blocked for inspection
-0 free to use<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code> |</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#alcoholicstrength">AlcoholicStrength</a></td>
+<td>decimal (5, 2)</td>
+<td>Percentage of pure alcohol used in excise duty reporting.<code>Required</code> <code>Default(0)</code> <code>Introduced in version 22.1.6.66</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#description">Description</a></td>
+<td><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a> <strong>nullable</strong></td>
+<td>The description of this Lot.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#expirydate">ExpiryDate</a></td>
+<td>datetime <strong>nullable</strong></td>
+<td>Expiry date for this lot.<code>Filter(ge;le)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#licenseno">LicenseNo</a></td>
+<td>string (50) <strong>nullable</strong></td>
+<td>The license number for this lot. Null when license number is N/A or unknown.</td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#number">Number</a></td>
+<td>string (30)</td>
+<td>The unique number of the Lot. May contain characters, if required. <code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#productionbatchid">ProductionBatchId</a></td>
+<td>guid <strong>nullable</strong></td>
+<td>Non-null if the production batch is known. Production batches are automatically created for internal production, but can also be used for specifying production batches for purchased goods. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#purchaselotnumber">PurchaseLotNumber</a></td>
+<td>string (30) <strong>nullable</strong></td>
+<td>Identification of the purchase lost with which the products from this store lot are received. E.g. the document number of the Receiving order.<code>Filter(like)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#receiptdate">ReceiptDate</a></td>
+<td>date <strong>nullable</strong></td>
+<td>The date of the first receipt of products in this lot.<code>Filter(ge;le)</code> <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
+<td><a href="Logistics.Inventory.Lots.html#status">Status</a></td>
+<td>Status of the warehouse lot. Minus statuses describe blocked conditions.<br>-3 blocked for document (sales or service order)<br>-2 blocked for party<br>-1 blocked for inspection<br>0 free to use<code>Required</code> <code>Default(0)</code> <code>Filter(multi eq)</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
 <table>
 <thead>
