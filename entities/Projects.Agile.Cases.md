@@ -37,25 +37,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39` 
-| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work.`Filter(like)` 
-| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date.`Filter(ge;le)` 
-| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time.`Filter(ge;le)` 
-| [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. 
-| [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] 
-| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] 
-| [Number](Projects.Agile.Cases.md#number) | int32 | The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86` 
-| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest).`Required` `Default(7)` `Filter(eq)` 
-| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
-| [Specification](Projects.Agile.Cases.md#specification) | string (max) __nullable__ | Defines the functionality that must be implemented. It should describe the expected system behaviour and acceptance criteria, without including discussions, rationale, or research.`Filter(like)` `Introduced in version 26.2.1.78` 
-| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.`Filter(eq;ge;le)` `Introduced in version 26.1.4.53` 
-| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ReadOnly` 
-| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title.`Required` `Filter(like)` 
-| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` 
+| [ClosedTimeUTC](Projects.Agile.Cases.md#closedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was closed.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
+| [ConsiderTimeUTC](Projects.Agile.Cases.md#considertimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to consider state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.1.39` |
+| [CreationTimeUtc](Projects.Agile.Cases.md#creationtimeutc) | datetime | The exact date and time (in UTC) when the case was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
+| [Description](Projects.Agile.Cases.md#description) | string (max) __nullable__ | Description of the required work.`Filter(like)` |
+| [DueDate](Projects.Agile.Cases.md#duedate) | date __nullable__ | Specified when the case has specific due date.`Filter(ge;le)` |
+| [DueTime](Projects.Agile.Cases.md#duetime) | time __nullable__ | Specified when the case has specific due time.`Filter(ge;le)` |
+| [EstimatedTimeHours](Projects.Agile.Cases.md#estimatedtimehours) | decimal (8, 2) __nullable__ | Estimation of the required work effort in hours. |
+| [FullState](Projects.Agile.Cases.md#fullstate) | int32 | Full state of the case based on its system and user state. [ReadOnly] |
+| [InProgressTimeUTC](Projects.Agile.Cases.md#inprogresstimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to in-progress state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
+| [LoggedTime](Projects.Agile.Cases.md#loggedtime) | decimal (0, 0) | Total duration of the logged time for the case (in hours). [ReadOnly] |
+| [Number](Projects.Agile.Cases.md#number) | int32 | The unique number of the Case. `Required` `Filter(multi eq;like)` `ORD` `ReadOnly` `Introduced in version 24.1.3.86` |
+| [Priority](Projects.Agile.Cases.md#priority) | [Priority](Projects.Agile.Cases.md#priority) | Priority of the case, on a scale from 1 (highest) to 7 (lowest).`Required` `Default(7)` `Filter(eq)` |
+| [ReadyTimeUTC](Projects.Agile.Cases.md#readytimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has become ready for execution.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
+| [ResolvedTimeUTC](Projects.Agile.Cases.md#resolvedtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case was resolved.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
+| [Specification](Projects.Agile.Cases.md#specification) | string (max) __nullable__ | Defines the functionality that must be implemented. It should describe the expected system behaviour and acceptance criteria, without including discussions, rationale, or research.`Filter(like)` `Introduced in version 26.2.1.78` |
+| [StoryPoints](Projects.Agile.Cases.md#storypoints) | int32 __nullable__ | When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.`Filter(eq;ge;le)` `Introduced in version 26.1.4.53` |
+| [SystemState](Projects.Agile.Cases.md#systemstate) | [SystemState](Projects.Agile.Cases.md#systemstate) | The base state of the case.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ReadOnly` |
+| [Title](Projects.Agile.Cases.md#title) | string (128) | Case short title.`Required` `Filter(like)` |
+| [WaitingTimeUTC](Projects.Agile.Cases.md#waitingtimeutc) | datetime __nullable__ | Indicates the time (in UTC) when the case has changed to waiting state.`Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.0.93` |
 
 ## References
 
@@ -79,12 +79,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Agile.Cases.md#id) | guid |  
-| [ObjectVersion](Projects.Agile.Cases.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.Agile.Cases.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Agile.Cases.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.Agile.Cases.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.Agile.Cases.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Agile.Cases.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.Cases.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.Agile.Cases.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.Agile.Cases.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.Agile.Cases.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.Agile.Cases.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

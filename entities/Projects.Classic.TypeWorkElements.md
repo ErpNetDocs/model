@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Projects.Classic.TypeWorkElements.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.`Filter(eq;like)` `ReadOnly` 
-| [Notes](Projects.Classic.TypeWorkElements.md#notes) | string (max) __nullable__ | Notes for this TypeWorkElement. 
-| [ParentFullPath](Projects.Classic.TypeWorkElements.md#parentfullpath) | string (25) __nullable__ | The full path of the parent work element in this project type. NULL when this is root element.`Filter(eq;like)` 
-| [WorkElementCode](Projects.Classic.TypeWorkElements.md#workelementcode) | string (3) | The code of the work element, unique among the sibling elements within the parent work element.`Required` `Filter(eq)` 
-| [WorkElementName](Projects.Classic.TypeWorkElements.md#workelementname) | string (254) | The name of the work element, unique among the sibling elements within the parent work element.`Required` `Filter(eq)` 
+| [FullPath](Projects.Classic.TypeWorkElements.md#fullpath) | string (25) __nullable__ | The full path of the node in the format of dot-delimited, dot-terminated codes of the parents.`Filter(eq;like)` `ReadOnly` |
+| [Notes](Projects.Classic.TypeWorkElements.md#notes) | string (max) __nullable__ | Notes for this TypeWorkElement. |
+| [ParentFullPath](Projects.Classic.TypeWorkElements.md#parentfullpath) | string (25) __nullable__ | The full path of the parent work element in this project type. NULL when this is root element.`Filter(eq;like)` |
+| [WorkElementCode](Projects.Classic.TypeWorkElements.md#workelementcode) | string (3) | The code of the work element, unique among the sibling elements within the parent work element.`Required` `Filter(eq)` |
+| [WorkElementName](Projects.Classic.TypeWorkElements.md#workelementname) | string (254) | The name of the work element, unique among the sibling elements within the parent work element.`Required` `Filter(eq)` |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.TypeWorkElements.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.TypeWorkElements.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.TypeWorkElements.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.TypeWorkElements.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.TypeWorkElements.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.TypeWorkElements.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

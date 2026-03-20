@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.Classic.TypeRoles.md#description) | string (max) __nullable__ | The description of this TypeRole. 
-| [RoleName](Projects.Classic.TypeRoles.md#rolename) | string (255) | The name of the participant role`Required` `Filter(multi eq;like)` 
+| [Description](Projects.Classic.TypeRoles.md#description) | string (max) __nullable__ | The description of this TypeRole. |
+| [RoleName](Projects.Classic.TypeRoles.md#rolename) | string (255) | The name of the participant role`Required` `Filter(multi eq;like)` |
 
 ## References
 
@@ -49,9 +49,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.TypeRoles.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.TypeRoles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.TypeRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.TypeRoles.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.TypeRoles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.TypeRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

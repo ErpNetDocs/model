@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9)`Required` `Default(0)` `Filter(ge;le)` 
-| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string (254) | The name of the hierarchy level.`Required` `Filter(like)` 
+| [HierarchyLevel](Finance.Cost.TemplateLevels.md#hierarchylevel) | int32 | The level within the hierarchy 0=Root, 1=one level below root, etc. (0..9)`Required` `Default(0)` `Filter(ge;le)` |
+| [LevelName](Finance.Cost.TemplateLevels.md#levelname) | string (254) | The name of the hierarchy level.`Required` `Filter(like)` |
 
 ## References
 
@@ -49,9 +49,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Cost.TemplateLevels.md#id) | guid |  
-| [ObjectVersion](Finance.Cost.TemplateLevels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Cost.TemplateLevels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Cost.TemplateLevels.md#id) | guid |  |
+| [ObjectVersion](Finance.Cost.TemplateLevels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Cost.TemplateLevels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

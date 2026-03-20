@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset`Required` `Filter(multi eq;ge;le)` 
-| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease.`Currency: LeaseContract.Currency` 
-| [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract.`Required` `Filter(eq;ge;le)` 
-| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. 
-| [NumberOfPeriods](Applications.Rental.LeaseContractLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21` 
-| [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset`Required` `Filter(multi eq;ge;le)` 
-| [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) | [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured.`Filter(multi eq)` `Introduced in version 24.1.5.31` 
+| [EndDate](Applications.Rental.LeaseContractLines.md#enddate) | date | Ending date of lease of this asset`Required` `Filter(multi eq;ge;le)` |
+| [GuaranteeAmount](Applications.Rental.LeaseContractLines.md#guaranteeamount) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | Deposit amount in the currency of the document which is given for this asset during its period of lease.`Currency: LeaseContract.Currency` |
+| [LineNo](Applications.Rental.LeaseContractLines.md#lineno) | int32 | Consecutive number of the line within the lease contract.`Required` `Filter(eq;ge;le)` |
+| [LineNotes](Applications.Rental.LeaseContractLines.md#linenotes) | string (max) __nullable__ | Notes for this line. |
+| [NumberOfPeriods](Applications.Rental.LeaseContractLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Start Date and End Date of the lease, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21` |
+| [StartDate](Applications.Rental.LeaseContractLines.md#startdate) | date | Starting date of lease for this asset`Required` `Filter(multi eq;ge;le)` |
+| [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) | [TimePeriodType](Applications.Rental.LeaseContractLines.md#timeperiodtype) __nullable__ | Specifies the unit by which the periods of renting of this asset are measured.`Filter(multi eq)` `Introduced in version 24.1.5.31` |
 
 ## References
 
@@ -55,9 +55,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  
-| [ObjectVersion](Applications.Rental.LeaseContractLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Rental.LeaseContractLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Rental.LeaseContractLines.md#id) | guid |  |
+| [ObjectVersion](Applications.Rental.LeaseContractLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Rental.LeaseContractLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

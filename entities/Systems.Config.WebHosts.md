@@ -43,25 +43,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CertificateContents](Systems.Config.WebHosts.md#certificatecontents) | byte[] __nullable__ | The contents of the web host certificate. NULL means to use the server system certificate. 
-| [CertificateExpiryDate](Systems.Config.WebHosts.md#certificateexpirydate) | date __nullable__ | The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.`Filter(multi eq;ge;le)` 
-| [CertificateOriginal<br />Filename](Systems.Config.WebHosts.md#certificateoriginalfilename) | string (254) __nullable__ | The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.`Filter(eq;like)` 
-| [CertificatePassword](Systems.Config.WebHosts.md#certificatepassword) | string (max) __nullable__ | The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used. 
-| [CertificateType](Systems.Config.WebHosts.md#certificatetype) | string (3) | The type of certificate uploaded. Currently, only PFX is supported.`Required` `Default(&quot;PFX&quot;)` `Filter(multi eq)` 
-| [Name](Systems.Config.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.`Required` `Filter(multi eq;like)` 
-| [Notes](Systems.Config.WebHosts.md#notes) | string (max) __nullable__ | Notes for this WebHost. 
+| [CertificateContents](Systems.Config.WebHosts.md#certificatecontents) | byte[] __nullable__ | The contents of the web host certificate. NULL means to use the server system certificate. |
+| [CertificateExpiryDate](Systems.Config.WebHosts.md#certificateexpirydate) | date __nullable__ | The expiry date of the certificate. Can be used to track the expiration of the web host certificates. When NULL, the expiry date was not provided by the user, when uploading the certificate.`Filter(multi eq;ge;le)` |
+| [CertificateOriginal<br />Filename](Systems.Config.WebHosts.md#certificateoriginalfilename) | string (254) __nullable__ | The original name of the file, used to upload the certificate. Used only for reference purposes. When NULL, means that the user did not provide that information when uploading the certificate.`Filter(eq;like)` |
+| [CertificatePassword](Systems.Config.WebHosts.md#certificatepassword) | string (max) __nullable__ | The password, which should be used to decrypt the certificate. NULL when the certificate has no password or the system certificate is used. |
+| [CertificateType](Systems.Config.WebHosts.md#certificatetype) | string (3) | The type of certificate uploaded. Currently, only PFX is supported.`Required` `Default(&quot;PFX&quot;)` `Filter(multi eq)` |
+| [Name](Systems.Config.WebHosts.md#name) | string (max) | The unique Internet name of the host. Should NOT include protocol name and should NOT include any forward slashes. This is just the dot-separated host name.`Required` `Filter(multi eq;like)` |
+| [Notes](Systems.Config.WebHosts.md#notes) | string (max) __nullable__ | Notes for this WebHost. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Config.WebHosts.md#id) | guid |  
-| [ObjectVersion](Systems.Config.WebHosts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Config.WebHosts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Config.WebHosts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Config.WebHosts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Config.WebHosts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Config.WebHosts.md#id) | guid |  |
+| [ObjectVersion](Systems.Config.WebHosts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Config.WebHosts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Config.WebHosts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Config.WebHosts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Config.WebHosts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

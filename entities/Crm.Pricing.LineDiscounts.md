@@ -41,15 +41,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Crm.Pricing.LineDiscounts.md#description) | string (50) __nullable__ | The description of the discount that is shown to the operator when they should choose between different discounts`Filter(like)` 
-| [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ORD` `Introduced in version 23.1.2.8` 
-| [DiscountPercent](Crm.Pricing.LineDiscounts.md#discountpercent) | decimal (7, 6) | The discount percent that should be applied if all the matching criteria are met.`Required` `Default(0)` `Filter(ge;le)` 
-| [FromDate](Crm.Pricing.LineDiscounts.md#fromdate) | datetime __nullable__ | Starting date of validity of the discount. NULL means no from date restriction`Filter(eq;ge;le)` 
-| [IsActive](Crm.Pricing.LineDiscounts.md#isactive) | boolean | Indicates whether the current Line Discount is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.2.5` 
-| [MaxQuantity](Crm.Pricing.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.Pricing.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` 
-| [Priority](Crm.Pricing.LineDiscounts.md#priority) | [Priority](Crm.Pricing.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.`Required` `Default(3)` 
-| [ThruDate](Crm.Pricing.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever`Filter(eq;ge;le)` 
+| [Description](Crm.Pricing.LineDiscounts.md#description) | string (50) __nullable__ | The description of the discount that is shown to the operator when they should choose between different discounts`Filter(like)` |
+| [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | [DiscountLevel](Crm.Pricing.LineDiscounts.md#discountlevel) | Specifies the cascade level (1..3), on which the discount is applied. The discounts from level 1,2 and 3 are applied to three different discount fields in the sales order. The discount for each level is determined separately, by applying the same algorithm.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `ORD` `Introduced in version 23.1.2.8` |
+| [DiscountPercent](Crm.Pricing.LineDiscounts.md#discountpercent) | decimal (7, 6) | The discount percent that should be applied if all the matching criteria are met.`Required` `Default(0)` `Filter(ge;le)` |
+| [FromDate](Crm.Pricing.LineDiscounts.md#fromdate) | datetime __nullable__ | Starting date of validity of the discount. NULL means no from date restriction`Filter(eq;ge;le)` |
+| [IsActive](Crm.Pricing.LineDiscounts.md#isactive) | boolean | Indicates whether the current Line Discount is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.2.5` |
+| [MaxQuantity](Crm.Pricing.LineDiscounts.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or less than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` |
+| [MinQuantity](Crm.Pricing.LineDiscounts.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Apply the discount only if the quantity sold is equal to or more than the specified here.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` |
+| [Priority](Crm.Pricing.LineDiscounts.md#priority) | [Priority](Crm.Pricing.LineDiscounts.md#priority) | The priority of this discount policy. When selecting a discount for a sales document line, only the highest priority policy, matching the criteria is applied.`Required` `Default(3)` |
+| [ThruDate](Crm.Pricing.LineDiscounts.md#thrudate) | datetime __nullable__ | Ending date (inclusive) of validity of the discount. If NULL, the discount is valid forever`Filter(eq;ge;le)` |
 
 ## References
 
@@ -72,12 +72,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.LineDiscounts.md#id) | guid |  
-| [ObjectVersion](Crm.Pricing.LineDiscounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pricing.LineDiscounts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.LineDiscounts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.LineDiscounts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pricing.LineDiscounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pricing.LineDiscounts.md#id) | guid |  |
+| [ObjectVersion](Crm.Pricing.LineDiscounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pricing.LineDiscounts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pricing.LineDiscounts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.LineDiscounts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pricing.LineDiscounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -34,12 +34,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivatedAt](Projects.Agile.Sprints.md#activatedat) | datetime __nullable__ | Timestamp when the sprint was activated.`Filter(eq;ge;le)` 
-| [EndDate](Projects.Agile.Sprints.md#enddate) | date | End date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` 
-| [Goal](Projects.Agile.Sprints.md#goal) | string (500) __nullable__ | Short description of the main objectives or focus for the sprint.`Filter(eq;like)` 
-| [Name](Projects.Agile.Sprints.md#name) | string (100) | Human-readable sprint name, e.g. “Sprint 14”`Required` `Filter(eq;like)` 
-| [StartDate](Projects.Agile.Sprints.md#startdate) | date | Start date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` 
-| [State](Projects.Agile.Sprints.md#state) | [State](Projects.Agile.Sprints.md#state) | Current sprint status: Planned, Active, Completed, Cancelled.`Required` `Default(&quot;PLN&quot;)` `Filter(multi eq)` `ReadOnly` 
+| [ActivatedAt](Projects.Agile.Sprints.md#activatedat) | datetime __nullable__ | Timestamp when the sprint was activated.`Filter(eq;ge;le)` |
+| [EndDate](Projects.Agile.Sprints.md#enddate) | date | End date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` |
+| [Goal](Projects.Agile.Sprints.md#goal) | string (500) __nullable__ | Short description of the main objectives or focus for the sprint.`Filter(eq;like)` |
+| [Name](Projects.Agile.Sprints.md#name) | string (100) | Human-readable sprint name, e.g. “Sprint 14”`Required` `Filter(eq;like)` |
+| [StartDate](Projects.Agile.Sprints.md#startdate) | date | Start date of the sprint’s timebox.`Required` `Filter(eq;ge;le)` |
+| [State](Projects.Agile.Sprints.md#state) | [State](Projects.Agile.Sprints.md#state) | Current sprint status: Planned, Active, Completed, Cancelled.`Required` `Default(&quot;PLN&quot;)` `Filter(multi eq)` `ReadOnly` |
 
 ## References
 
@@ -53,12 +53,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Agile.Sprints.md#id) | guid |  
-| [ObjectVersion](Projects.Agile.Sprints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.Agile.Sprints.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Agile.Sprints.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.Agile.Sprints.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.Agile.Sprints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Agile.Sprints.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.Sprints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.Agile.Sprints.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.Agile.Sprints.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.Agile.Sprints.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.Agile.Sprints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

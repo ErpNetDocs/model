@@ -48,9 +48,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentAmountReferencedDocuments.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentAmountReferencedDocuments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentAmountReferencedDocuments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentAmountReferencedDocuments.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentAmountReferencedDocuments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentAmountReferencedDocuments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

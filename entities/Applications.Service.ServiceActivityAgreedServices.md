@@ -35,7 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line.`Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly` 
+| [AgreedQuantity](Applications.Service.ServiceActivityAgreedServices.md#agreedquantity) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity from the service agreement service line that is accounted for this service activity service line.`Unit: ServiceAgreementService.QuantityUnit` `Required` `Default(0)` `ReadOnly` |
 
 ## References
 
@@ -49,9 +49,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.ServiceActivityAgreedServices.md#id) | guid |  
-| [ObjectVersion](Applications.Service.ServiceActivityAgreedServices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Service.ServiceActivityAgreedServices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Service.ServiceActivityAgreedServices.md#id) | guid |  |
+| [ObjectVersion](Applications.Service.ServiceActivityAgreedServices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Service.ServiceActivityAgreedServices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

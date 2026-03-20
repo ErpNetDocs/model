@@ -46,14 +46,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseQuantity](Logistics.Common.LogisticUnitContents.md#basequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expressed in the base measurement category of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` 
-| [ExpirationDate](Logistics.Common.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. NULL means unknown or N/A.`Filter(multi eq;ge;le)` 
-| [GrossWeight](Logistics.Common.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). NULL means unknown.`Filter(eq;ge;le)` 
-| [LineNo](Logistics.Common.LogisticUnitContents.md#lineno) | int32 | Consecutive position within the logistic unit.`Required` `Filter(multi eq)` 
-| [LotNumber](Logistics.Common.LogisticUnitContents.md#lotnumber) | string (32) __nullable__ | The production lot number. NULL means unknown.`Filter(multi eq;like)` 
-| [Notes](Logistics.Common.LogisticUnitContents.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitContent. 
-| [Quantity](Logistics.Common.LogisticUnitContents.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit.`Unit: QuantityUnit` `Required` `Filter(multi eq;ge;le)` 
-| [StandardQuantity](Logistics.Common.LogisticUnitContents.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expessed in the standard measurement unit of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` 
+| [BaseQuantity](Logistics.Common.LogisticUnitContents.md#basequantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expressed in the base measurement category of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` |
+| [ExpirationDate](Logistics.Common.LogisticUnitContents.md#expirationdate) | date __nullable__ | Expiration date of the goods. NULL means unknown or N/A.`Filter(multi eq;ge;le)` |
+| [GrossWeight](Logistics.Common.LogisticUnitContents.md#grossweight) | decimal (12, 3) __nullable__ | Gross weight in kilograms (kg). NULL means unknown.`Filter(eq;ge;le)` |
+| [LineNo](Logistics.Common.LogisticUnitContents.md#lineno) | int32 | Consecutive position within the logistic unit.`Required` `Filter(multi eq)` |
+| [LotNumber](Logistics.Common.LogisticUnitContents.md#lotnumber) | string (32) __nullable__ | The production lot number. NULL means unknown.`Filter(multi eq;like)` |
+| [Notes](Logistics.Common.LogisticUnitContents.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitContent. |
+| [Quantity](Logistics.Common.LogisticUnitContents.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity of the product in the logistic unit. Expressed in the specified measurement unit.`Unit: QuantityUnit` `Required` `Filter(multi eq;ge;le)` |
+| [StandardQuantity](Logistics.Common.LogisticUnitContents.md#standardquantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, expessed in the standard measurement unit of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` |
 
 ## References
 
@@ -71,9 +71,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Common.LogisticUnitContents.md#id) | guid |  
-| [ObjectVersion](Logistics.Common.LogisticUnitContents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Common.LogisticUnitContents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Common.LogisticUnitContents.md#id) | guid |  |
+| [ObjectVersion](Logistics.Common.LogisticUnitContents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Common.LogisticUnitContents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

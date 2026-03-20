@@ -28,28 +28,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
-| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` 
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` 
-| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` 
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` 
-| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` 
-| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (18, 2) | Total credits for the period`Required` 
-| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (18, 2) | Total credits (Base Currency)`Required` 
-| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (18, 2) | Total credits (Reporting Currency)`Required` 
-| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (18, 2) | Total debits for the period`Required` 
-| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (18, 2) | Total debits (Base Currency)`Required` 
-| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (18, 2) | Total debits (Reporting Currency)`Required` 
-| [FromDate](Finance.Accounting.TrialBalanceSummary.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` 
-| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
-| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` 
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` 
-| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` 
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` 
-| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (18, 2) | Opening Reporting`Required` 
-| [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` 
+| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` |
+| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` |
+| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` |
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` |
+| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` |
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` |
+| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` |
+| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (18, 2) | Total credits for the period`Required` |
+| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (18, 2) | Total credits (Base Currency)`Required` |
+| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (18, 2) | Total credits (Reporting Currency)`Required` |
+| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (18, 2) | Total debits for the period`Required` |
+| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (18, 2) | Total debits (Base Currency)`Required` |
+| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (18, 2) | Total debits (Reporting Currency)`Required` |
+| [FromDate](Finance.Accounting.TrialBalanceSummary.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` |
+| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` |
+| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` |
+| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` |
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` |
+| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` |
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` |
+| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (18, 2) | Opening Reporting`Required` |
+| [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` |
 
 ## References
 

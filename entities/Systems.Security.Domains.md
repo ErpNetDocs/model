@@ -35,22 +35,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).`Required` `Default(true)` 
-| [Description](Systems.Security.Domains.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. 
-| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage).`Required` `Filter(eq;like)` `ORD` 
+| [AllowLocalAccounts](Systems.Security.Domains.md#allowlocalaccounts) | boolean | Specifies whether users can have local accounts with locally stored passwords in the DB (not recommended).`Required` `Default(true)` |
+| [Description](Systems.Security.Domains.md#description) | [MultilanguageString (256)](../data-types.md#multilanguagestring) __nullable__ | Multi-language description of the domain. |
+| [IsDefault](Systems.Security.Domains.md#isdefault) | boolean | Specifies whether this is the default domain for the database.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Systems.Security.Domains.md#name) | string (64) | The name of the domain (restricted for URL usage).`Required` `Filter(eq;like)` `ORD` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.Domains.md#id) | guid |  
-| [ObjectVersion](Systems.Security.Domains.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Security.Domains.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Security.Domains.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Security.Domains.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Security.Domains.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Security.Domains.md#id) | guid |  |
+| [ObjectVersion](Systems.Security.Domains.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Security.Domains.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Security.Domains.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Security.Domains.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Security.Domains.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

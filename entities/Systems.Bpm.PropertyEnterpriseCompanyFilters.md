@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company.`Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomProperty<br />AllowedValuesRepository.TableName)` 
+| [FilterXml](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#filterxml) | dataaccessfilter __nullable__ | When not null, specifies a filter for the allowed values of the property for the specified enterprise company.`Unit: obj.Property.AllowedValuesEntityName.IfNullThen(CustomProperty<br />AllowedValuesRepository.TableName)` |
 
 ## References
 
@@ -58,9 +58,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#id) | guid |  
-| [ObjectVersion](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#id) | guid |  |
+| [ObjectVersion](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Bpm.PropertyEnterpriseCompanyFilters.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

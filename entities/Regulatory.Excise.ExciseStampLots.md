@@ -43,13 +43,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BatchNumber](Regulatory.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps`Required` `Filter(multi eq;like)` `ORD` 
-| [EndNumber](Regulatory.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot`Required` 
-| [IsActive](Regulatory.Excise.ExciseStampLots.md#isactive) | boolean | Is Active`Required` `Default(true)` `Filter(eq)` 
-| [Prefix](Regulatory.Excise.ExciseStampLots.md#prefix) | string (30) __nullable__ | Specifies the prefix that is used in forming the value of the "BatchNumber" field.`Filter(eq;like)` `Introduced in version 24.1.2.1` 
-| [PurchaseLotNumber](Regulatory.Excise.ExciseStampLots.md#purchaselotnumber) | string (30) | Type and number of the document with which the excise stamps were received from the customs administration.`Required` `Filter(eq;like)` 
-| [Quantity](Regulatory.Excise.ExciseStampLots.md#quantity) | int32 | Number of excise stamps in the lot`Required` `Default(0)` 
-| [StartNumber](Regulatory.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot`Required` 
+| [BatchNumber](Regulatory.Excise.ExciseStampLots.md#batchnumber) | string (30) | Production batch of the Excise Stamps`Required` `Filter(multi eq;like)` `ORD` |
+| [EndNumber](Regulatory.Excise.ExciseStampLots.md#endnumber) | string (30) | End number of the lot`Required` |
+| [IsActive](Regulatory.Excise.ExciseStampLots.md#isactive) | boolean | Is Active`Required` `Default(true)` `Filter(eq)` |
+| [Prefix](Regulatory.Excise.ExciseStampLots.md#prefix) | string (30) __nullable__ | Specifies the prefix that is used in forming the value of the "BatchNumber" field.`Filter(eq;like)` `Introduced in version 24.1.2.1` |
+| [PurchaseLotNumber](Regulatory.Excise.ExciseStampLots.md#purchaselotnumber) | string (30) | Type and number of the document with which the excise stamps were received from the customs administration.`Required` `Filter(eq;like)` |
+| [Quantity](Regulatory.Excise.ExciseStampLots.md#quantity) | int32 | Number of excise stamps in the lot`Required` `Default(0)` |
+| [StartNumber](Regulatory.Excise.ExciseStampLots.md#startnumber) | string (30) | Start number of the lot`Required` |
 
 ## References
 
@@ -62,12 +62,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Excise.ExciseStampLots.md#id) | guid |  
-| [ObjectVersion](Regulatory.Excise.ExciseStampLots.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Excise.ExciseStampLots.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Excise.ExciseStampLots.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Excise.ExciseStampLots.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Excise.ExciseStampLots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Excise.ExciseStampLots.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Excise.ExciseStampLots.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Excise.ExciseStampLots.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Excise.ExciseStampLots.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Excise.ExciseStampLots.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Excise.ExciseStampLots.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

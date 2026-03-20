@@ -45,13 +45,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.MeasurementUnits.md#code) | string (16) __nullable__ | When not null, contains unique measurement unit code.`Filter(eq;like)` `ORD` 
-| [Description](General.Products.MeasurementUnits.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Full multi-language description of the measurement unit. 
-| [Divisor](General.Products.MeasurementUnits.md#divisor) | decimal (9, 3) | Divisor of the relative value of the measurement unit against other units (divisor when converting to base)`Required` `Default(1)` 
-| [IsDefaultUnit](General.Products.MeasurementUnits.md#isdefaultunit) | boolean | 1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category`Required` `Default(false)` `Filter(eq)` 
-| [Multiplier](General.Products.MeasurementUnits.md#multiplier) | decimal (9, 3) | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)`Required` `Default(1)` 
-| [Name](General.Products.MeasurementUnits.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | Name of the measurement unit`Required` `Filter(eq;like)` 
-| [SystemUnit](General.Products.MeasurementUnits.md#systemunit) | [SystemUnit](General.Products.MeasurementUnits.md#systemunit) __nullable__ | Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH`Filter(eq;like)` 
+| [Code](General.Products.MeasurementUnits.md#code) | string (16) __nullable__ | When not null, contains unique measurement unit code.`Filter(eq;like)` `ORD` |
+| [Description](General.Products.MeasurementUnits.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Full multi-language description of the measurement unit. |
+| [Divisor](General.Products.MeasurementUnits.md#divisor) | decimal (9, 3) | Divisor of the relative value of the measurement unit against other units (divisor when converting to base)`Required` `Default(1)` |
+| [IsDefaultUnit](General.Products.MeasurementUnits.md#isdefaultunit) | boolean | 1 if this measurement unit is the default measurement unit within the category. There can be only one default measurement unit within a category`Required` `Default(false)` `Filter(eq)` |
+| [Multiplier](General.Products.MeasurementUnits.md#multiplier) | decimal (9, 3) | Multiplier of the relative value of the measurement unit against other units (multiplier when converting to base)`Required` `Default(1)` |
+| [Name](General.Products.MeasurementUnits.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | Name of the measurement unit`Required` `Filter(eq;like)` |
+| [SystemUnit](General.Products.MeasurementUnits.md#systemunit) | [SystemUnit](General.Products.MeasurementUnits.md#systemunit) __nullable__ | Not NULL only when this is one of the system measurement units. N=NetKG; G=GrossKG; V=VolumeL; H=HeightM; W=WidthM, L=LengthM, P=Piece, T=TimeH`Filter(eq;like)` |
 
 ## References
 
@@ -64,9 +64,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.MeasurementUnits.md#id) | guid | Unique measurement unit Id 
-| [ObjectVersion](General.Products.MeasurementUnits.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Products.MeasurementUnits.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Products.MeasurementUnits.md#id) | guid | Unique measurement unit Id |
+| [ObjectVersion](General.Products.MeasurementUnits.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Products.MeasurementUnits.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

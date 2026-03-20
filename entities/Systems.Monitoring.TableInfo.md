@@ -37,9 +37,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [RowCount](Systems.Monitoring.TableInfo.md#rowcount) | int64 | Total number of rows`Required` `Filter(eq;ge;le)` `ORD` 
-| [SizeMB](Systems.Monitoring.TableInfo.md#sizemb) | decimal (12, 3) | Total used size of the table in Megabytes.`Required` `Filter(eq;ge;le)` `ORD` 
-| [TableName](Systems.Monitoring.TableInfo.md#tablename) | string (128) | The name of the table, for which we provide the data.`Required` `Filter(eq;like)` `ORD` 
+| [RowCount](Systems.Monitoring.TableInfo.md#rowcount) | int64 | Total number of rows`Required` `Filter(eq;ge;le)` `ORD` |
+| [SizeMB](Systems.Monitoring.TableInfo.md#sizemb) | decimal (12, 3) | Total used size of the table in Megabytes.`Required` `Filter(eq;ge;le)` `ORD` |
+| [TableName](Systems.Monitoring.TableInfo.md#tablename) | string (128) | The name of the table, for which we provide the data.`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

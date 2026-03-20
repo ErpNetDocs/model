@@ -33,16 +33,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Channel](General.Contacts.PartyCommunications.md#channel) | [Channel](General.Contacts.PartyCommunications.md#channel) | Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)` 
-| [CommunicationFrom](General.Contacts.PartyCommunications.md#communicationfrom) | string (254) | Who the message is from (email/phone/identifier).`Required` `Filter(eq;like)` 
-| [CommunicationTo](General.Contacts.PartyCommunications.md#communicationto) | string (254) | Who the message is addressed to (main recipient)`Required` `Filter(eq;like)` 
-| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Conversation identifier to group messages into a single thread. `Filter(multi eq)` 
-| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) | Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)` 
-| [Message](General.Contacts.PartyCommunications.md#message) | string (max) __nullable__ | Full content of the message.`Filter(like)` 
-| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)` 
-| [Subject](General.Contacts.PartyCommunications.md#subject) | string (254) __nullable__ | Short title of the message.`Filter(like)` 
-| [TimeLastUpdate](General.Contacts.PartyCommunications.md#timelastupdate) | datetime | When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)` 
-| [TimeOccurredAt](General.Contacts.PartyCommunications.md#timeoccurredat) | datetime | When the message happened.`Required` `Filter(eq;ge;le)` 
+| [Channel](General.Contacts.PartyCommunications.md#channel) | [Channel](General.Contacts.PartyCommunications.md#channel) | Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)` |
+| [CommunicationFrom](General.Contacts.PartyCommunications.md#communicationfrom) | string (254) | Who the message is from (email/phone/identifier).`Required` `Filter(eq;like)` |
+| [CommunicationTo](General.Contacts.PartyCommunications.md#communicationto) | string (254) | Who the message is addressed to (main recipient)`Required` `Filter(eq;like)` |
+| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Conversation identifier to group messages into a single thread. `Filter(multi eq)` |
+| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) | Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)` |
+| [Message](General.Contacts.PartyCommunications.md#message) | string (max) __nullable__ | Full content of the message.`Filter(like)` |
+| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)` |
+| [Subject](General.Contacts.PartyCommunications.md#subject) | string (254) __nullable__ | Short title of the message.`Filter(like)` |
+| [TimeLastUpdate](General.Contacts.PartyCommunications.md#timelastupdate) | datetime | When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)` |
+| [TimeOccurredAt](General.Contacts.PartyCommunications.md#timeoccurredat) | datetime | When the message happened.`Required` `Filter(eq;ge;le)` |
 
 ## References
 
@@ -57,12 +57,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyCommunications.md#id) | guid |  
-| [ObjectVersion](General.Contacts.PartyCommunications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Contacts.PartyCommunications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Contacts.PartyCommunications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Contacts.PartyCommunications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Contacts.PartyCommunications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Contacts.PartyCommunications.md#id) | guid |  |
+| [ObjectVersion](General.Contacts.PartyCommunications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Contacts.PartyCommunications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Contacts.PartyCommunications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Contacts.PartyCommunications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Contacts.PartyCommunications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

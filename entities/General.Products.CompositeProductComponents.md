@@ -45,12 +45,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ComponentNo](General.Products.CompositeProductComponents.md#componentno) | int32 | Consecutive number of the component within this composite product.`Required` `Filter(multi eq)` 
-| [FromDate](General.Products.CompositeProductComponents.md#fromdate) | date __nullable__ | When set, specifies the activation date of the component for this product.`Filter(eq;ge;le)` 
-| [IsActive](General.Products.CompositeProductComponents.md#isactive) | boolean | Indicates whether the component is currently active for this composite product.`Required` `Default(true)` `Filter(eq)` 
-| [Notes](General.Products.CompositeProductComponents.md#notes) | string (max) __nullable__ | Notes for this composite product component. 
-| [Quantity](General.Products.CompositeProductComponents.md#quantity) | decimal (12, 3) | The number of packages of this component that are needed to compose the product.`Required` `Default(1)` `Filter(multi eq;ge;le)` 
-| [ToDate](General.Products.CompositeProductComponents.md#todate) | date __nullable__ | When set, specifies the de-activation date of the component for this product.`Filter(eq;ge;le)` 
+| [ComponentNo](General.Products.CompositeProductComponents.md#componentno) | int32 | Consecutive number of the component within this composite product.`Required` `Filter(multi eq)` |
+| [FromDate](General.Products.CompositeProductComponents.md#fromdate) | date __nullable__ | When set, specifies the activation date of the component for this product.`Filter(eq;ge;le)` |
+| [IsActive](General.Products.CompositeProductComponents.md#isactive) | boolean | Indicates whether the component is currently active for this composite product.`Required` `Default(true)` `Filter(eq)` |
+| [Notes](General.Products.CompositeProductComponents.md#notes) | string (max) __nullable__ | Notes for this composite product component. |
+| [Quantity](General.Products.CompositeProductComponents.md#quantity) | decimal (12, 3) | The number of packages of this component that are needed to compose the product.`Required` `Default(1)` `Filter(multi eq;ge;le)` |
+| [ToDate](General.Products.CompositeProductComponents.md#todate) | date __nullable__ | When set, specifies the de-activation date of the component for this product.`Filter(eq;ge;le)` |
 
 ## References
 
@@ -64,9 +64,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.CompositeProductComponents.md#id) | guid |  
-| [ObjectVersion](General.Products.CompositeProductComponents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Products.CompositeProductComponents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Products.CompositeProductComponents.md#id) | guid |  |
+| [ObjectVersion](General.Products.CompositeProductComponents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Products.CompositeProductComponents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

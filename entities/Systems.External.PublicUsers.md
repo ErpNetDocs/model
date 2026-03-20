@@ -38,26 +38,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AboutMeText](Systems.External.PublicUsers.md#aboutmetext) | string (1024) __nullable__ | About me text, written by the user. 
-| [Address](Systems.External.PublicUsers.md#address) | string (128) __nullable__ | The primary address of the user. Can be specified with latin or local characters.`Filter(like)` 
-| [AlternateEmail](Systems.External.PublicUsers.md#alternateemail) | string (64) __nullable__ | Alternate email of the user. Can be used for backup email for password restore.`Filter(like)` 
-| [City](Systems.External.PublicUsers.md#city) | string (64) __nullable__ | The state of residence of the user. Can be specified with latin or local letters.`Filter(like)` 
-| [CompanyName](Systems.External.PublicUsers.md#companyname) | string (64) __nullable__ | The name of the company, for which the user works, as specified by the user.`Filter(like)` 
-| [Country](Systems.External.PublicUsers.md#country) | string (64) __nullable__ | The country of residence of the user, with latin letters.`Filter(like)` 
-| [CreatedOn](Systems.External.PublicUsers.md#createdon) | datetime __nullable__ | The date and time when the user was created.`Default(Now)` `Filter(ge;le)` 
-| [Email](Systems.External.PublicUsers.md#email) | string (64) | The primary email of the user. Used for notifications and password restore.`Required` `Filter(like)` 
-| [FirstName](Systems.External.PublicUsers.md#firstname) | string (64) | First name of the user.`Required` `Filter(like)` 
-| [IsActive](Systems.External.PublicUsers.md#isactive) | boolean | Specifies whether the user account is active and access should be allowed.`Required` `Default(true)` `Filter(eq)` 
-| [LastName](Systems.External.PublicUsers.md#lastname) | string (64) | Last name of the user.`Required` `Filter(like)` 
-| [Notes](Systems.External.PublicUsers.md#notes) | string (max) __nullable__ | Notes for this PublicUser. 
-| [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string (16) | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.`Required` `Filter(like)` 
-| [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string (128) | Actual password storage. The format of the contents is determined by Password Algorithm.`Required` `Filter(like)` 
-| [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid __nullable__ | Automatically generated unique code for the last password recovery attempt`Filter(multi eq)` `ReadOnly` 
-| [PasswordRecovery<br />CreationTime](Systems.External.PublicUsers.md#passwordrecoverycreationtime) | datetime __nullable__ | Date and time when the last password recovery code was created`Filter(ge;le)` `ReadOnly` 
-| [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (16) __nullable__ | The primary phone number of the user.`Filter(like)` 
-| [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (16) __nullable__ | The postal code of the default address of the user.`Filter(like)` 
-| [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] __nullable__ | Profile picture of the user. 
-| [State](Systems.External.PublicUsers.md#state) | string (64) __nullable__ | The state of residence of the user within the country. Can be specified with latin or local characters.`Filter(like)` 
+| [AboutMeText](Systems.External.PublicUsers.md#aboutmetext) | string (1024) __nullable__ | About me text, written by the user. |
+| [Address](Systems.External.PublicUsers.md#address) | string (128) __nullable__ | The primary address of the user. Can be specified with latin or local characters.`Filter(like)` |
+| [AlternateEmail](Systems.External.PublicUsers.md#alternateemail) | string (64) __nullable__ | Alternate email of the user. Can be used for backup email for password restore.`Filter(like)` |
+| [City](Systems.External.PublicUsers.md#city) | string (64) __nullable__ | The state of residence of the user. Can be specified with latin or local letters.`Filter(like)` |
+| [CompanyName](Systems.External.PublicUsers.md#companyname) | string (64) __nullable__ | The name of the company, for which the user works, as specified by the user.`Filter(like)` |
+| [Country](Systems.External.PublicUsers.md#country) | string (64) __nullable__ | The country of residence of the user, with latin letters.`Filter(like)` |
+| [CreatedOn](Systems.External.PublicUsers.md#createdon) | datetime __nullable__ | The date and time when the user was created.`Default(Now)` `Filter(ge;le)` |
+| [Email](Systems.External.PublicUsers.md#email) | string (64) | The primary email of the user. Used for notifications and password restore.`Required` `Filter(like)` |
+| [FirstName](Systems.External.PublicUsers.md#firstname) | string (64) | First name of the user.`Required` `Filter(like)` |
+| [IsActive](Systems.External.PublicUsers.md#isactive) | boolean | Specifies whether the user account is active and access should be allowed.`Required` `Default(true)` `Filter(eq)` |
+| [LastName](Systems.External.PublicUsers.md#lastname) | string (64) | Last name of the user.`Required` `Filter(like)` |
+| [Notes](Systems.External.PublicUsers.md#notes) | string (max) __nullable__ | Notes for this PublicUser. |
+| [PasswordAlgorithm](Systems.External.PublicUsers.md#passwordalgorithm) | string (16) | Uniquely specifies the password storage algorithm among some system recognized algorithms. Usually specifies the hashing and the stretching functions. For example, 'PBKDF2-SHA1'.`Required` `Filter(like)` |
+| [PasswordHash](Systems.External.PublicUsers.md#passwordhash) | string (128) | Actual password storage. The format of the contents is determined by Password Algorithm.`Required` `Filter(like)` |
+| [PasswordRecoveryCode](Systems.External.PublicUsers.md#passwordrecoverycode) | guid __nullable__ | Automatically generated unique code for the last password recovery attempt`Filter(multi eq)` `ReadOnly` |
+| [PasswordRecovery<br />CreationTime](Systems.External.PublicUsers.md#passwordrecoverycreationtime) | datetime __nullable__ | Date and time when the last password recovery code was created`Filter(ge;le)` `ReadOnly` |
+| [PhoneNumber](Systems.External.PublicUsers.md#phonenumber) | string (16) __nullable__ | The primary phone number of the user.`Filter(like)` |
+| [PostalCode](Systems.External.PublicUsers.md#postalcode) | string (16) __nullable__ | The postal code of the default address of the user.`Filter(like)` |
+| [ProfilePicture](Systems.External.PublicUsers.md#profilepicture) | byte[] __nullable__ | Profile picture of the user. |
+| [State](Systems.External.PublicUsers.md#state) | string (64) __nullable__ | The state of residence of the user within the country. Can be specified with latin or local characters.`Filter(like)` |
 
 ## References
 
@@ -72,12 +72,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.External.PublicUsers.md#id) | guid |  
-| [ObjectVersion](Systems.External.PublicUsers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.External.PublicUsers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.External.PublicUsers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.External.PublicUsers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.External.PublicUsers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.External.PublicUsers.md#id) | guid |  |
+| [ObjectVersion](Systems.External.PublicUsers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.External.PublicUsers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.External.PublicUsers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.External.PublicUsers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.External.PublicUsers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

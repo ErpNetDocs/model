@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | 1 if the vehicle set is active for choosing; 0 - otherwise`Required` `Default(true)` `Filter(eq)` 
-| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set`Required` `Filter(eq;like)` 
+| [Active](Applications.Fleet.VehicleSets.md#active) | boolean | 1 if the vehicle set is active for choosing; 0 - otherwise`Required` `Default(true)` `Filter(eq)` |
+| [Name](Applications.Fleet.VehicleSets.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Name of the vehicle set`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -49,9 +49,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.VehicleSets.md#id) | guid |  
-| [ObjectVersion](Applications.Fleet.VehicleSets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Fleet.VehicleSets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Fleet.VehicleSets.md#id) | guid |  |
+| [ObjectVersion](Applications.Fleet.VehicleSets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Fleet.VehicleSets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

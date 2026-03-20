@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material.`Required` `Default(0)` `Filter(eq;like)` 
-| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `Filter(eq;like)` `ReadOnly` 
+| [Quantity](Projects.Classic.WorkReportMaterials.md#quantity) | decimal (9, 3) | The consumed quantity of the material.`Required` `Default(0)` `Filter(eq;like)` |
+| [QuantityBase](Projects.Classic.WorkReportMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `Filter(eq;like)` `ReadOnly` |
 
 ## References
 
@@ -52,9 +52,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.WorkReportMaterials.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.WorkReportMaterials.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.WorkReportMaterials.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.WorkReportMaterials.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.WorkReportMaterials.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.WorkReportMaterials.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

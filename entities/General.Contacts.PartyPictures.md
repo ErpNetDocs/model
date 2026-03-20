@@ -35,11 +35,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Contacts.PartyPictures.md#comments) | string (254) __nullable__ | Notes for this party picture. 
-| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | If checked specifies that this picture is used by default for this party in reports.`Required` `Default(false)` `Filter(eq)` 
-| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system.`Required` `Default(false)` `Filter(eq)` 
-| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be NULL if we insert only some comments. 
-| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting`Required` `Filter(eq)` 
+| [Comments](General.Contacts.PartyPictures.md#comments) | string (254) __nullable__ | Notes for this party picture. |
+| [IsDefault](General.Contacts.PartyPictures.md#isdefault) | boolean | If checked specifies that this picture is used by default for this party in reports.`Required` `Default(false)` `Filter(eq)` |
+| [IsLogo](General.Contacts.PartyPictures.md#islogo) | boolean | If checked specifies that this picture is used to visualize the logo of this party in the system.`Required` `Default(false)` `Filter(eq)` |
+| [Picture](General.Contacts.PartyPictures.md#picture) | byte[] __nullable__ | The actual party picture data. Can be NULL if we insert only some comments. |
+| [PictureNo](General.Contacts.PartyPictures.md#pictureno) | int32 | Unique picture number within the party. Also used for sorting`Required` `Filter(eq)` |
 
 ## References
 
@@ -52,9 +52,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyPictures.md#id) | guid |  
-| [ObjectVersion](General.Contacts.PartyPictures.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Contacts.PartyPictures.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Contacts.PartyPictures.md#id) | guid |  |
+| [ObjectVersion](General.Contacts.PartyPictures.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Contacts.PartyPictures.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -43,23 +43,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pricing.PriceTypes.md#code) | string (16) | Short identification code of the price type.`Required` `Filter(eq)` `ORD` 
-| [IsActive](Crm.Pricing.PriceTypes.md#isactive) | boolean | Indicates whether the current Price type is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Pricing.PriceTypes.md#name) | string (254) | Full name of the price type.`Required` `Filter(eq;like)` 
-| [Notes](Crm.Pricing.PriceTypes.md#notes) | string (max) __nullable__ | Notes for this PriceType. 
-| [OrdinalPos](Crm.Pricing.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types.`Required` `ORD` 
+| [Code](Crm.Pricing.PriceTypes.md#code) | string (16) | Short identification code of the price type.`Required` `Filter(eq)` `ORD` |
+| [IsActive](Crm.Pricing.PriceTypes.md#isactive) | boolean | Indicates whether the current Price type is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` |
+| [Name](Crm.Pricing.PriceTypes.md#name) | string (254) | Full name of the price type.`Required` `Filter(eq;like)` |
+| [Notes](Crm.Pricing.PriceTypes.md#notes) | string (max) __nullable__ | Notes for this PriceType. |
+| [OrdinalPos](Crm.Pricing.PriceTypes.md#ordinalpos) | int32 | Priority position of the price type, with respect to the other price types.`Required` `ORD` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.PriceTypes.md#id) | guid |  
-| [ObjectVersion](Crm.Pricing.PriceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pricing.PriceTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.PriceTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.PriceTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pricing.PriceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pricing.PriceTypes.md#id) | guid |  |
+| [ObjectVersion](Crm.Pricing.PriceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pricing.PriceTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pricing.PriceTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.PriceTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pricing.PriceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Applications.Fleet.CrewMembers.md#notes) | string (254) __nullable__ | Notes for this CrewMember. 
-| [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 __nullable__ | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader 
+| [Notes](Applications.Fleet.CrewMembers.md#notes) | string (254) __nullable__ | Notes for this CrewMember. |
+| [OrdinalPos](Applications.Fleet.CrewMembers.md#ordinalpos) | int32 __nullable__ | Ordinal position. Ordinal_Pos=0 has special meaning - this is the crew leader |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.CrewMembers.md#id) | guid |  
-| [ObjectVersion](Applications.Fleet.CrewMembers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Fleet.CrewMembers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Fleet.CrewMembers.md#id) | guid |  |
+| [ObjectVersion](Applications.Fleet.CrewMembers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Fleet.CrewMembers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

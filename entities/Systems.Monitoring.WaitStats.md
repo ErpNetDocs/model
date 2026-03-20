@@ -28,17 +28,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Database](Systems.Monitoring.WaitStats.md#database) | string (64) | The database in which the wait operation is located`Required` `Filter(eq;like)` `ORD` 
-| [MaxHoldLockTimeMs](Systems.Monitoring.WaitStats.md#maxholdlocktimems) | double | Maximum time a lock was held, measured in milliseconds.`Required` 
-| [MaxWaitTimeMs](Systems.Monitoring.WaitStats.md#maxwaittimems) | double | Maximum wait time for acquiring a lock, measured in milliseconds.`Required` 
-| [StatisticsSince](Systems.Monitoring.WaitStats.md#statisticssince) | datetime | The date and time since when the statistics are collected`Required` `Filter(ge;le)` 
-| [TotalFailedAttempts](Systems.Monitoring.WaitStats.md#totalfailedattempts) | double | Indicates the total number of unsuccessful attempts to acquire locks.`Required` 
-| [TotalFailWaitTimeMs](Systems.Monitoring.WaitStats.md#totalfailwaittimems) | double | Общо време на изчакване за неуспешни заключвания, измерено в милисекунди.`Required` 
-| [TotalHoldLockTimeMs](Systems.Monitoring.WaitStats.md#totalholdlocktimems) | double | Indicates the total duration locks are held, measured in milliseconds.`Required` 
-| [TotalLocks](Systems.Monitoring.WaitStats.md#totallocks) | double | The total number of locks.`Required` 
-| [TotalSuccessWaitTimeMs](Systems.Monitoring.WaitStats.md#totalsuccesswaittimems) | double | Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds.`Required` 
-| [TotalWaitLocks](Systems.Monitoring.WaitStats.md#totalwaitlocks) | double | Indicates the total number of locks that have been acquired after waiting.`Required` 
-| [WaitCategory](Systems.Monitoring.WaitStats.md#waitcategory) | string (128) | The category of the wait operation.`Required` 
+| [Database](Systems.Monitoring.WaitStats.md#database) | string (64) | The database in which the wait operation is located`Required` `Filter(eq;like)` `ORD` |
+| [MaxHoldLockTimeMs](Systems.Monitoring.WaitStats.md#maxholdlocktimems) | double | Maximum time a lock was held, measured in milliseconds.`Required` |
+| [MaxWaitTimeMs](Systems.Monitoring.WaitStats.md#maxwaittimems) | double | Maximum wait time for acquiring a lock, measured in milliseconds.`Required` |
+| [StatisticsSince](Systems.Monitoring.WaitStats.md#statisticssince) | datetime | The date and time since when the statistics are collected`Required` `Filter(ge;le)` |
+| [TotalFailedAttempts](Systems.Monitoring.WaitStats.md#totalfailedattempts) | double | Indicates the total number of unsuccessful attempts to acquire locks.`Required` |
+| [TotalFailWaitTimeMs](Systems.Monitoring.WaitStats.md#totalfailwaittimems) | double | Общо време на изчакване за неуспешни заключвания, измерено в милисекунди.`Required` |
+| [TotalHoldLockTimeMs](Systems.Monitoring.WaitStats.md#totalholdlocktimems) | double | Indicates the total duration locks are held, measured in milliseconds.`Required` |
+| [TotalLocks](Systems.Monitoring.WaitStats.md#totallocks) | double | The total number of locks.`Required` |
+| [TotalSuccessWaitTimeMs](Systems.Monitoring.WaitStats.md#totalsuccesswaittimems) | double | Indicates the cumulative time spent waiting for successful lock acquisitions, measured in milliseconds.`Required` |
+| [TotalWaitLocks](Systems.Monitoring.WaitStats.md#totalwaitlocks) | double | Indicates the total number of locks that have been acquired after waiting.`Required` |
+| [WaitCategory](Systems.Monitoring.WaitStats.md#waitcategory) | string (128) | The category of the wait operation.`Required` |
 
 
 ## Attribute Details

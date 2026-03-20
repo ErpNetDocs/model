@@ -35,9 +35,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service.`Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates whether this service is currently used.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service.`Required` `Filter(eq;like)` 
+| [Code](Applications.Service.Services.md#code) | string (16) | Unique code of the service.`Required` `Filter(eq;like)` `ORD` |
+| [IsActive](Applications.Service.Services.md#isactive) | boolean | Indicates whether this service is currently used.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Applications.Service.Services.md#name) | string (254) | The name of the service.`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -51,12 +51,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Service.Services.md#id) | guid |  
-| [ObjectVersion](Applications.Service.Services.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Applications.Service.Services.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Applications.Service.Services.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Applications.Service.Services.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Applications.Service.Services.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Service.Services.md#id) | guid |  |
+| [ObjectVersion](Applications.Service.Services.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Applications.Service.Services.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Applications.Service.Services.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Applications.Service.Services.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Applications.Service.Services.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

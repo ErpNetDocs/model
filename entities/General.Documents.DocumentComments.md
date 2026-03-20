@@ -48,8 +48,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comment](General.Documents.DocumentComments.md#comment) | string (254) | The user comment.`Required` 
-| [CommentTimestamp](General.Documents.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment`Required` `Default(Now)` `Filter(ge;le)` 
+| [Comment](General.Documents.DocumentComments.md#comment) | string (254) | The user comment.`Required` |
+| [CommentTimestamp](General.Documents.DocumentComments.md#commenttimestamp) | datetime | The exact timestamp of the comment`Required` `Default(Now)` `Filter(ge;le)` |
 
 ## References
 
@@ -64,9 +64,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentComments.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentComments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentComments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentComments.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentComments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentComments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

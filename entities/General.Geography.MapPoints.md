@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](General.Geography.MapPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this map point. 
-| [Latitude](General.Geography.MapPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].`-90, 90`. `Required` `Default(0)` 
-| [Longitude](General.Geography.MapPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].`-180, 180`. `Required` `Default(0)` 
-| [Name](General.Geography.MapPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Map point short name (Multilanguage)`Required` `Filter(eq;like)` 
+| [Address](General.Geography.MapPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this map point. |
+| [Latitude](General.Geography.MapPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].`-90, 90`. `Required` `Default(0)` |
+| [Longitude](General.Geography.MapPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].`-180, 180`. `Required` `Default(0)` |
+| [Name](General.Geography.MapPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Map point short name (Multilanguage)`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Geography.MapPoints.md#id) | guid |  
-| [ObjectVersion](General.Geography.MapPoints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Geography.MapPoints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Geography.MapPoints.md#id) | guid |  |
+| [ObjectVersion](General.Geography.MapPoints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Geography.MapPoints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

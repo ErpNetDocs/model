@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer.`Required` `Filter(like)` 
-| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated.`Filter(eq;ge;le)` `ReadOnly` 
-| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds.`Required` `Default(true)` `Filter(eq)` 
-| [Notes](Projects.AI.ModelQAs.md#notes) | string (max) __nullable__ | Notes for this ModelQA. 
-| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.`Required` `Default(&quot;T&quot;)` `Filter(eq)` 
-| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question.`Required` `Filter(like)` 
-| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA.`Required` 
+| [Answer](Projects.AI.ModelQAs.md#answer) | string (max) | Desired answer.`Required` `Filter(like)` |
+| [CreationTimeUtc](Projects.AI.ModelQAs.md#creationtimeutc) | datetime | The time when the QA was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` |
+| [DeactivatonTimeUtc](Projects.AI.ModelQAs.md#deactivatontimeutc) | datetime __nullable__ | The time when the QA was deactivated.`Filter(eq;ge;le)` `ReadOnly` |
+| [IsActive](Projects.AI.ModelQAs.md#isactive) | boolean | Indicates whether to include this QA in future builds.`Required` `Default(true)` `Filter(eq)` |
+| [Notes](Projects.AI.ModelQAs.md#notes) | string (max) __nullable__ | Notes for this ModelQA. |
+| [QAType](Projects.AI.ModelQAs.md#qatype) | [QAType](Projects.AI.ModelQAs.md#qatype) | Specifies whether the QA is training or validation. Validation QAs are used to test the correctness of the model and are only reported in the build logs.`Required` `Default(&quot;T&quot;)` `Filter(eq)` |
+| [Question](Projects.AI.ModelQAs.md#question) | string (max) | User question.`Required` `Filter(like)` |
+| [Section](Projects.AI.ModelQAs.md#section) | string (128) | Free text organizational section of the QA.`Required` |
 
 ## References
 
@@ -57,9 +57,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.ModelQAs.md#id) | guid |  
-| [ObjectVersion](Projects.AI.ModelQAs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.AI.ModelQAs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.ModelQAs.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.ModelQAs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.AI.ModelQAs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

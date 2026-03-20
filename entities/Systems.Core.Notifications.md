@@ -42,12 +42,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Anchor](Systems.Core.Notifications.md#anchor) | string (128) __nullable__ | A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject.`Introduced in version 25.1.1.3` 
-| [CreationTimeUtc](Systems.Core.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [IsRead](Systems.Core.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.`Required` `Default(false)` `Filter(eq)` 
-| [NotificationClass](Systems.Core.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes.`Required` `Filter(multi eq)` 
-| [Priority](Systems.Core.Notifications.md#priority) | [Priority](Systems.Core.Notifications.md#priority) | Indicates the importance level of the notification, helping determine its order of attention or urgency.`Required` `Default(3)` `Filter(eq;ge;le)` `Introduced in version 25.1.2.63` 
-| [Subject](Systems.Core.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user).`Filter(eq;like)` 
+| [Anchor](Systems.Core.Notifications.md#anchor) | string (128) __nullable__ | A custom reference (most commonly a relative URL) pointing to an additional resource related to the DataObject.`Introduced in version 25.1.1.3` |
+| [CreationTimeUtc](Systems.Core.Notifications.md#creationtimeutc) | datetime | The exact server time (in UTC), when the notification was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` |
+| [IsRead](Systems.Core.Notifications.md#isread) | boolean | Specifies whether the user has read the notification. If the system changes the notification after first reading, the flag is reset to unread again.`Required` `Default(false)` `Filter(eq)` |
+| [NotificationClass](Systems.Core.Notifications.md#notificationclass) | string (64) | The class of the notification from a predefined list of system classes.`Required` `Filter(multi eq)` |
+| [Priority](Systems.Core.Notifications.md#priority) | [Priority](Systems.Core.Notifications.md#priority) | Indicates the importance level of the notification, helping determine its order of attention or urgency.`Required` `Default(3)` `Filter(eq;ge;le)` `Introduced in version 25.1.2.63` |
+| [Subject](Systems.Core.Notifications.md#subject) | string (256) __nullable__ | The short subject of the notification (in the Default Culture of the user).`Filter(eq;like)` |
 
 ## References
 
@@ -61,12 +61,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.Notifications.md#id) | guid |  
-| [ObjectVersion](Systems.Core.Notifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.Notifications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.Notifications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.Notifications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.Notifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.Notifications.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.Notifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.Notifications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.Notifications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.Notifications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.Notifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -35,26 +35,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Regulatory.Common.Jurisdictions.md#code) | string (50) | Short code of the jurisdiction (ISO-style preferrable).`Required` `Filter(eq;like)` `ORD` 
-| [CountryCode](Regulatory.Common.Jurisdictions.md#countrycode) | string (10) | ISO country code (if applicable).`Required` `Filter(eq;like)` 
-| [CurrencySign](Regulatory.Common.Jurisdictions.md#currencysign) | string (10) | Primary currency sign (if applicable).`Required` `Filter(eq;like)` 
-| [IsActive](Regulatory.Common.Jurisdictions.md#isactive) | boolean | Specifies whether the jurisdiction is active.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction.`Required` `Filter(like)` 
-| [Notes](Regulatory.Common.Jurisdictions.md#notes) | string (max) __nullable__ | Notes for the jurisdiction.`Filter(like)` 
-| [ValidFrom](Regulatory.Common.Jurisdictions.md#validfrom) | date __nullable__ | When not null specifies the first date when the jurisdiction is valid.`Filter(eq;ge;le)` 
-| [ValidTo](Regulatory.Common.Jurisdictions.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the jurisdiction is valid.`Filter(eq;ge;le)` 
+| [Code](Regulatory.Common.Jurisdictions.md#code) | string (50) | Short code of the jurisdiction (ISO-style preferrable).`Required` `Filter(eq;like)` `ORD` |
+| [CountryCode](Regulatory.Common.Jurisdictions.md#countrycode) | string (10) | ISO country code (if applicable).`Required` `Filter(eq;like)` |
+| [CurrencySign](Regulatory.Common.Jurisdictions.md#currencysign) | string (10) | Primary currency sign (if applicable).`Required` `Filter(eq;like)` |
+| [IsActive](Regulatory.Common.Jurisdictions.md#isactive) | boolean | Specifies whether the jurisdiction is active.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Regulatory.Common.Jurisdictions.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the jurisdiction.`Required` `Filter(like)` |
+| [Notes](Regulatory.Common.Jurisdictions.md#notes) | string (max) __nullable__ | Notes for the jurisdiction.`Filter(like)` |
+| [ValidFrom](Regulatory.Common.Jurisdictions.md#validfrom) | date __nullable__ | When not null specifies the first date when the jurisdiction is valid.`Filter(eq;ge;le)` |
+| [ValidTo](Regulatory.Common.Jurisdictions.md#validto) | date __nullable__ | When not null specifies the last date (inclusive) when the jurisdiction is valid.`Filter(eq;ge;le)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Common.Jurisdictions.md#id) | guid |  
-| [ObjectVersion](Regulatory.Common.Jurisdictions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Common.Jurisdictions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Common.Jurisdictions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Common.Jurisdictions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Common.Jurisdictions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Common.Jurisdictions.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Common.Jurisdictions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Common.Jurisdictions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Common.Jurisdictions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Common.Jurisdictions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Common.Jurisdictions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

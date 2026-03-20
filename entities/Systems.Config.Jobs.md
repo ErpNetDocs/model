@@ -43,25 +43,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Systems.Config.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running.`Required` `Default(true)` `Filter(eq)` 
-| [JobConfigurations](Systems.Config.Jobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.`Filter(like)` `Introduced in version 25.1.3.15` 
-| [JobType](Systems.Config.Jobs.md#jobtype) | [JobType](Systems.Config.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.`Required` `Filter(multi eq)` 
-| [Name](Systems.Config.Jobs.md#name) | string (254) | The name of the job.`Required` `Filter(eq;like)` `ORD` 
-| [Notes](Systems.Config.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. 
-| [RunOnIdle](Systems.Config.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle.`Required` `Default(true)` `Filter(eq)` 
-| [Schedule](Systems.Config.Jobs.md#schedule) | [Schedule](Systems.Config.Jobs.md#schedule) | Defines the execution schedule of the Job.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.1.4.62` 
+| [IsActive](Systems.Config.Jobs.md#isactive) | boolean | Specifies whether the job is active and ready for running.`Required` `Default(true)` `Filter(eq)` |
+| [JobConfigurations](Systems.Config.Jobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. NULL means that there are no specific parameters.`Filter(like)` `Introduced in version 25.1.3.15` |
+| [JobType](Systems.Config.Jobs.md#jobtype) | [JobType](Systems.Config.Jobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages.`Required` `Filter(multi eq)` |
+| [Name](Systems.Config.Jobs.md#name) | string (254) | The name of the job.`Required` `Filter(eq;like)` `ORD` |
+| [Notes](Systems.Config.Jobs.md#notes) | string (max) __nullable__ | Notes for this Job. |
+| [RunOnIdle](Systems.Config.Jobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle.`Required` `Default(true)` `Filter(eq)` |
+| [Schedule](Systems.Config.Jobs.md#schedule) | [Schedule](Systems.Config.Jobs.md#schedule) | Defines the execution schedule of the Job.`Required` `Default(&quot;NON&quot;)` `Filter(multi eq)` `Introduced in version 26.1.4.62` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Config.Jobs.md#id) | guid |  
-| [ObjectVersion](Systems.Config.Jobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Config.Jobs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Config.Jobs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Config.Jobs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Config.Jobs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Config.Jobs.md#id) | guid |  |
+| [ObjectVersion](Systems.Config.Jobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Config.Jobs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Config.Jobs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Config.Jobs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Config.Jobs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

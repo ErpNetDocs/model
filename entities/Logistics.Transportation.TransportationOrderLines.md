@@ -43,13 +43,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents.`Required` 
-| [LineNo](Logistics.Transportation.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` 
-| [Notes](Logistics.Transportation.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` 
-| [PalletsCount](Logistics.Transportation.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. 
-| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)` 
-| [VolumeCbm](Logistics.Transportation.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. 
-| [WeightKg](Logistics.Transportation.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. 
+| [ContentsDescription](Logistics.Transportation.TransportationOrderLines.md#contentsdescription) | string (128) | Textual description of the cargo contents.`Required` |
+| [LineNo](Logistics.Transportation.TransportationOrderLines.md#lineno) | int32 | Line number, unique within the TransportationOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the TransportationOrder (in order to allow insertions with adjustment documents). `Required` `Filter(eq)` |
+| [Notes](Logistics.Transportation.TransportationOrderLines.md#notes) | string (max) __nullable__ | Notes for this TransportationOrderLine. `Introduced in version 18.2` |
+| [PalletsCount](Logistics.Transportation.TransportationOrderLines.md#palletscount) | int32 __nullable__ | Number of palettes comprising the cargo. NULL when it is unknown. |
+| [ParentLineNo](Logistics.Transportation.TransportationOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line.`Filter(eq)` |
+| [VolumeCbm](Logistics.Transportation.TransportationOrderLines.md#volumecbm) | int32 __nullable__ | The volume of the cargo, in CBM (cubic meters). NULL when it is unknown. |
+| [WeightKg](Logistics.Transportation.TransportationOrderLines.md#weightkg) | int32 __nullable__ | The weight of the cargo, in KG (kilogramms). NULL when it is unknown. |
 
 ## References
 
@@ -65,9 +65,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Transportation.TransportationOrderLines.md#id) | guid |  
-| [ObjectVersion](Logistics.Transportation.TransportationOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Transportation.TransportationOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Transportation.TransportationOrderLines.md#id) | guid |  |
+| [ObjectVersion](Logistics.Transportation.TransportationOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Transportation.TransportationOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

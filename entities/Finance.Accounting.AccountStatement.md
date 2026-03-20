@@ -28,27 +28,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.`Required` 
-| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) | Calculated as Balance over Base currency.`Required` 
-| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) | Calculated as Balance over Reporting currency.`Required` 
-| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) | Closing Balance(at the end of reporting period)`Required` 
-| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) | Closing Balance(in Base currency)`Required` 
-| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) | Closing Balance(in Reporting currency)`Required` 
-| [Credit](Finance.Accounting.AccountStatement.md#credit) | decimal (18, 2) | Credit`Required` 
-| [CreditBase](Finance.Accounting.AccountStatement.md#creditbase) | decimal (18, 2) | Credit Base`Required` 
-| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` 
-| [Debit](Finance.Accounting.AccountStatement.md#debit) | decimal (18, 2) | Debit`Required` 
-| [DebitBase](Finance.Accounting.AccountStatement.md#debitbase) | decimal (18, 2) | Debit Base`Required` 
-| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` 
-| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date | Document Date`Required` `Filter(ge;le)` 
-| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` 
-| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) | Item Key`Required` 
-| [MovementType](Finance.Accounting.AccountStatement.md#movementtype) | string (7) | Movement Type`Required` `Filter(multi eq)` 
-| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
-| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency`Required` 
-| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime | Document Release Time`Required` `Filter(ge;le)` 
-| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` 
+| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.`Required` |
+| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) | Calculated as Balance over Base currency.`Required` |
+| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) | Calculated as Balance over Reporting currency.`Required` |
+| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) | Closing Balance(at the end of reporting period)`Required` |
+| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) | Closing Balance(in Base currency)`Required` |
+| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) | Closing Balance(in Reporting currency)`Required` |
+| [Credit](Finance.Accounting.AccountStatement.md#credit) | decimal (18, 2) | Credit`Required` |
+| [CreditBase](Finance.Accounting.AccountStatement.md#creditbase) | decimal (18, 2) | Credit Base`Required` |
+| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` |
+| [Debit](Finance.Accounting.AccountStatement.md#debit) | decimal (18, 2) | Debit`Required` |
+| [DebitBase](Finance.Accounting.AccountStatement.md#debitbase) | decimal (18, 2) | Debit Base`Required` |
+| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` |
+| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date | Document Date`Required` `Filter(ge;le)` |
+| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` |
+| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) | Item Key`Required` |
+| [MovementType](Finance.Accounting.AccountStatement.md#movementtype) | string (7) | Movement Type`Required` `Filter(multi eq)` |
+| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)`Required` |
+| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` |
+| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency`Required` |
+| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime | Document Release Time`Required` `Filter(ge;le)` |
+| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` |
 
 ## References
 

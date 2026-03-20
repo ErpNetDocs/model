@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.`Required` `Default(&quot;D&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` 
-| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.`Required` `Default(&quot;S&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` 
-| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.`Filter(like)` 
+| [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.`Required` `Default(&quot;D&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` |
+| [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.`Required` `Default(&quot;S&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` |
+| [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.`Filter(like)` |
 
 ## References
 
@@ -63,9 +63,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileAccountByProducts.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileAccountByProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileAccountByProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileAccountByProducts.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileAccountByProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileAccountByProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

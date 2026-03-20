@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />TrackedParameter. 
+| [Notes](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#notes) | string (max) __nullable__ | Notes for this ManagedAssetType<br />TrackedParameter. |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#id) | guid |  
-| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#id) | guid |  |
+| [ObjectVersion](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.AssetManagement.ManagedAssetTypeTrackedParameters.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

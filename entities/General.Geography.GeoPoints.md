@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](General.Geography.GeoPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this geo point.`Filter(eq;like)` 
-| [Latitude](General.Geography.GeoPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].`-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [Longitude](General.Geography.GeoPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].`-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [Name](General.Geography.GeoPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Geo point short name (Multilanguage)`Required` `Filter(eq;like)` 
+| [Address](General.Geography.GeoPoints.md#address) | string (128) __nullable__ | The descriptive physical address, related to this geo point.`Filter(eq;like)` |
+| [Latitude](General.Geography.GeoPoints.md#latitude) | decimal (10, 7) | Latitude is the vertical angle from equator to the pole of the point. Positive values denote points north of the equator. The value is in the range [-90, 90].`-90, 90`. `Required` `Default(0)` `Filter(eq;ge;le)` |
+| [Longitude](General.Geography.GeoPoints.md#longitude) | decimal (10, 7) | Longitude is angle from the prime meridian (in England) in east-west direction. Positive values denote east and negative - west. The value is in the range [-180, 180].`-180, 180`. `Required` `Default(0)` `Filter(eq;ge;le)` |
+| [Name](General.Geography.GeoPoints.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Geo point short name (Multilanguage)`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -49,12 +49,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Geography.GeoPoints.md#id) | guid |  
-| [ObjectVersion](General.Geography.GeoPoints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Geography.GeoPoints.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Geography.GeoPoints.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Geography.GeoPoints.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Geography.GeoPoints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Geography.GeoPoints.md#id) | guid |  |
+| [ObjectVersion](General.Geography.GeoPoints.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Geography.GeoPoints.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Geography.GeoPoints.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Geography.GeoPoints.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Geography.GeoPoints.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

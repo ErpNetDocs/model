@@ -35,14 +35,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.CompanySizeClasses.md#code) | string (32) | The unique code of the CompanySizeClass. `Required` `Filter(eq;like)` `ORD` 
-| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. NULL if this is not relevant to this size class.`Filter(eq)` 
-| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.`Filter(eq)` 
-| [IsActive](Crm.Marketing.CompanySizeClasses.md#isactive) | boolean | Indicates whether the current Company size class is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Company size class name (multi-language).`Required` `Filter(eq;like)` 
-| [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. 
-| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. NULL if this is not relevant to this size class.`Filter(eq)` 
-| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.`Filter(eq)` 
+| [Code](Crm.Marketing.CompanySizeClasses.md#code) | string (32) | The unique code of the CompanySizeClass. `Required` `Filter(eq;like)` `ORD` |
+| [FromEmployees](Crm.Marketing.CompanySizeClasses.md#fromemployees) | int32 __nullable__ | Minimal number of employees for this size class. NULL if this is not relevant to this size class.`Filter(eq)` |
+| [FromRevenue](Crm.Marketing.CompanySizeClasses.md#fromrevenue) | decimal (15, 0) __nullable__ | Minimal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.`Filter(eq)` |
+| [IsActive](Crm.Marketing.CompanySizeClasses.md#isactive) | boolean | Indicates whether the current Company size class is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` |
+| [Name](Crm.Marketing.CompanySizeClasses.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Company size class name (multi-language).`Required` `Filter(eq;like)` |
+| [Notes](Crm.Marketing.CompanySizeClasses.md#notes) | string (max) __nullable__ | Notes for this CompanySizeClass. |
+| [ToEmployees](Crm.Marketing.CompanySizeClasses.md#toemployees) | int32 __nullable__ | Maximum number of employees for this size class. NULL if this is not relevant to this size class.`Filter(eq)` |
+| [ToRevenue](Crm.Marketing.CompanySizeClasses.md#torevenue) | decimal (15, 0) __nullable__ | Maximal revenue for this size class. Currency is Revenue Currency. NULL if this is not relevant to this size class.`Filter(eq)` |
 
 ## References
 
@@ -55,12 +55,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  
-| [ObjectVersion](Crm.Marketing.CompanySizeClasses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Marketing.CompanySizeClasses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Marketing.CompanySizeClasses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Marketing.CompanySizeClasses.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Marketing.CompanySizeClasses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Marketing.CompanySizeClasses.md#id) | guid |  |
+| [ObjectVersion](Crm.Marketing.CompanySizeClasses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Marketing.CompanySizeClasses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Marketing.CompanySizeClasses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Marketing.CompanySizeClasses.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Marketing.CompanySizeClasses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

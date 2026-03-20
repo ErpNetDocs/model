@@ -36,8 +36,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset.`Required` `Filter(eq;like)` `ReadOnly` 
-| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset.`Filter(eq;like)` `ReadOnly` 
+| [AssetKey](Projects.AI.CompilationAssets.md#assetkey) | string (128) | The key of the data asset.`Required` `Filter(eq;like)` `ReadOnly` |
+| [Value](Projects.AI.CompilationAssets.md#value) | string (max) __nullable__ | The value of the data asset.`Filter(eq;like)` `ReadOnly` |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.CompilationAssets.md#id) | guid |  
-| [ObjectVersion](Projects.AI.CompilationAssets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.AI.CompilationAssets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.CompilationAssets.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.CompilationAssets.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.AI.CompilationAssets.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

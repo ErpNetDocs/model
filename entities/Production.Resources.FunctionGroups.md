@@ -34,21 +34,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string (254) | The full path of the item.`Required` `Default(&quot;&quot;)` `Filter(eq;like)` 
-| [Name](Production.Resources.FunctionGroups.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of the function group`Required` `Filter(like)` 
-| [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item.`Required` `Default(&quot;/&quot;)` `Filter(eq;like)` `ORD` 
+| [FullPath](Production.Resources.FunctionGroups.md#fullpath) | string (254) | The full path of the item.`Required` `Default(&quot;&quot;)` `Filter(eq;like)` |
+| [Name](Production.Resources.FunctionGroups.md#name) | [MultilanguageString (64)](../data-types.md#multilanguagestring) | The name of the function group`Required` `Filter(like)` |
+| [Parent](Production.Resources.FunctionGroups.md#parent) | string (254) | The path of the parent item.`Required` `Default(&quot;/&quot;)` `Filter(eq;like)` `ORD` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.FunctionGroups.md#id) | guid |  
-| [ObjectVersion](Production.Resources.FunctionGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Production.Resources.FunctionGroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Production.Resources.FunctionGroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Production.Resources.FunctionGroups.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Production.Resources.FunctionGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Production.Resources.FunctionGroups.md#id) | guid |  |
+| [ObjectVersion](Production.Resources.FunctionGroups.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Production.Resources.FunctionGroups.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Production.Resources.FunctionGroups.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Production.Resources.FunctionGroups.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Production.Resources.FunctionGroups.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

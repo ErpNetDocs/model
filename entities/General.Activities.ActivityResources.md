@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](General.Activities.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. 
-| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)` 
+| [Notes](General.Activities.ActivityResources.md#notes) | string (255) __nullable__ | Notes for this ActivityResource. |
+| [ResourceUsagePercent](General.Activities.ActivityResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)` |
 
 ## References
 
@@ -59,9 +59,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Activities.ActivityResources.md#id) | guid |  
-| [ObjectVersion](General.Activities.ActivityResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Activities.ActivityResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Activities.ActivityResources.md#id) | guid |  |
+| [ObjectVersion](General.Activities.ActivityResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Activities.ActivityResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

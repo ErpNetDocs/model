@@ -42,26 +42,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Config.Translations.md#active) | boolean | True when the translation is verified and activated.`Required` `Default(true)` `Filter(eq)` 
-| [ApplicationName](Systems.Config.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is NULL`Filter(eq)` `ORD` 
-| [CreationTime](Systems.Config.Translations.md#creationtime) | datetime | Timestamp when the translation was first created`Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
-| [Language](Systems.Config.Translations.md#language) | string (8) | The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian.`Required` `Default(&quot;en&quot;)` `Filter(eq)` 
-| [ResourceId](Systems.Config.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code`Required` `Filter(eq;like)` 
-| [ResourceType](Systems.Config.Translations.md#resourcetype) | [ResourceType](Systems.Config.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String`Required` `Default(&quot;S&quot;)` `Filter(eq)` 
-| [TranslationField](Systems.Config.Translations.md#translationfield) | string (max) | The translated text`Required` 
-| [UpdateTime](Systems.Config.Translations.md#updatetime) | datetime | When the translation was last updated`Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
+| [Active](Systems.Config.Translations.md#active) | boolean | True when the translation is verified and activated.`Required` `Default(true)` `Filter(eq)` |
+| [ApplicationName](Systems.Config.Translations.md#applicationname) | string (50) __nullable__ | The application, containing the resource. For base resource types (T,C,H), this is NULL`Filter(eq)` `ORD` |
+| [CreationTime](Systems.Config.Translations.md#creationtime) | datetime | Timestamp when the translation was first created`Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` |
+| [Language](Systems.Config.Translations.md#language) | string (8) | The code of the language by the ISO639-1 two letter language coding: "en"=English, "bg"=Bulgarian.`Required` `Default(&quot;en&quot;)` `Filter(eq)` |
+| [ResourceId](Systems.Config.Translations.md#resourceid) | string (800) | The unique identifier of the translated resource. Should use ASCII/English chars only. Shorter strings are suggested. Depending on Text_Type: T:TableName; C:ColumnName; H:TableName.ColumnName; E,M,S: Application specific code`Required` `Filter(eq;like)` |
+| [ResourceType](Systems.Config.Translations.md#resourcetype) | [ResourceType](Systems.Config.Translations.md#resourcetype) | T=Table (entity) Name; C=Column Name; H=Column Hint; R=Meta Resource; E=Error; M=Message; S=Other application specific String`Required` `Default(&quot;S&quot;)` `Filter(eq)` |
+| [TranslationField](Systems.Config.Translations.md#translationfield) | string (max) | The translated text`Required` |
+| [UpdateTime](Systems.Config.Translations.md#updatetime) | datetime | When the translation was last updated`Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Config.Translations.md#id) | guid |  
-| [ObjectVersion](Systems.Config.Translations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Config.Translations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Config.Translations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Config.Translations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Config.Translations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Config.Translations.md#id) | guid |  |
+| [ObjectVersion](Systems.Config.Translations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Config.Translations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Config.Translations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Config.Translations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Config.Translations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

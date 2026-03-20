@@ -39,7 +39,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.`Required` `Default(0)` 
+| [CoveredInvoiceAmount](Finance.Payments.InvoiceReconciliationLines.md#coveredinvoiceamount) | decimal (14, 2) | Amount from the invoice that is covered by the payment. The amount is in the currency of the invoice.`Required` `Default(0)` |
 
 ## References
 
@@ -54,9 +54,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Payments.InvoiceReconciliationLines.md#id) | guid |  
-| [ObjectVersion](Finance.Payments.InvoiceReconciliationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Payments.InvoiceReconciliationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Payments.InvoiceReconciliationLines.md#id) | guid |  |
+| [ObjectVersion](Finance.Payments.InvoiceReconciliationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Payments.InvoiceReconciliationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

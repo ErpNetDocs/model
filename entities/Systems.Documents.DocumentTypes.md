@@ -69,19 +69,19 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Documents.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type`Required` `Filter(eq;like)` `ORD` 
-| [CreateFulfillments<br />OnCompletion](Systems.Documents.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.`Required` `Default(false)` `Introduced in version 23.1.2.9` 
-| [CreateManully](Systems.Documents.DocumentTypes.md#createmanully) | boolean | 0 if documents with this document type only can be generated; 1 - the user can create documents with this type`Required` `Default(true)` `Filter(eq)` 
-| [Description](Systems.Documents.DocumentTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of this DocumentType. 
-| [DisallowOpposite<br />ValuesGeneration](Systems.Documents.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.`Required` `Default(false)` 
-| [EntityName](Systems.Documents.DocumentTypes.md#entityname) | string (64) | System entity, which contains the documents`Required` `Filter(multi eq)` `ORD` 
-| [GenerateSingleDocument](Systems.Documents.DocumentTypes.md#generatesingledocument) | boolean | Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).`Required` `Default(false)` 
-| [Notes](Systems.Documents.DocumentTypes.md#notes) | string (254) __nullable__ | Notes for this DocumentType. 
-| [SchemaXML](Systems.Documents.DocumentTypes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. 
-| [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.`Required` `Default(&quot;DEF&quot;)` `Filter(eq)` `Introduced in version 24.1.3.37` 
-| [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | Enable/disable print images tracking for documents from this type.`Required` `Default(&quot;SDC&quot;)` `Filter(eq)` `Introduced in version 24.1.3.95` 
-| [TransitionalDocument](Systems.Documents.DocumentTypes.md#transitionaldocument) | boolean | If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.`Required` `Default(false)` 
-| [TypeName](Systems.Documents.DocumentTypes.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the document type`Required` `Filter(like)` 
+| [Code](Systems.Documents.DocumentTypes.md#code) | string (16) | Unique descriptive code of the document type`Required` `Filter(eq;like)` `ORD` |
+| [CreateFulfillments<br />OnCompletion](Systems.Documents.DocumentTypes.md#createfulfillmentsoncompletion) | boolean | When document state is changed to Completed, creates completed document fulfillments for the parent document. Used only for logistic documents.`Required` `Default(false)` `Introduced in version 23.1.2.9` |
+| [CreateManully](Systems.Documents.DocumentTypes.md#createmanully) | boolean | 0 if documents with this document type only can be generated; 1 - the user can create documents with this type`Required` `Default(true)` `Filter(eq)` |
+| [Description](Systems.Documents.DocumentTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | The description of this DocumentType. |
+| [DisallowOpposite<br />ValuesGeneration](Systems.Documents.DocumentTypes.md#disallowoppositevaluesgeneration) | boolean | Disallow the generation of decreasing scalar values (values with opposite directions than the original values determined by the parent document) through this document type.`Required` `Default(false)` |
+| [EntityName](Systems.Documents.DocumentTypes.md#entityname) | string (64) | System entity, which contains the documents`Required` `Filter(multi eq)` `ORD` |
+| [GenerateSingleDocument](Systems.Documents.DocumentTypes.md#generatesingledocument) | boolean | Create maximum one document per parent documents when documents from this type are generated (parent document to child document ratio 1:1).`Required` `Default(false)` |
+| [Notes](Systems.Documents.DocumentTypes.md#notes) | string (254) __nullable__ | Notes for this DocumentType. |
+| [SchemaXML](Systems.Documents.DocumentTypes.md#schemaxml) | string (max) __nullable__ | Obsolete. Not used. |
+| [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | [TrackAttributeChanges](Systems.Documents.DocumentTypes.md#trackattributechanges) | Enable/disable attributes change tracking for documents from this type. "Default" means that changes will be tracked for all documents, except transit and adjustment documents.`Required` `Default(&quot;DEF&quot;)` `Filter(eq)` `Introduced in version 24.1.3.37` |
+| [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | [TrackPrintImages](Systems.Documents.DocumentTypes.md#trackprintimages) | Enable/disable print images tracking for documents from this type.`Required` `Default(&quot;SDC&quot;)` `Filter(eq)` `Introduced in version 24.1.3.95` |
+| [TransitionalDocument](Systems.Documents.DocumentTypes.md#transitionaldocument) | boolean | If checked determines that the documents from this type are automatically managed by the system and don't require management from the users.`Required` `Default(false)` |
+| [TypeName](Systems.Documents.DocumentTypes.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Description of the document type`Required` `Filter(like)` |
 
 ## References
 
@@ -95,12 +95,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DocumentTypes.md#id) | guid | The unique Id of the document type 
-| [ObjectVersion](Systems.Documents.DocumentTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Documents.DocumentTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Documents.DocumentTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Documents.DocumentTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DocumentTypes.md#id) | guid | The unique Id of the document type |
+| [ObjectVersion](Systems.Documents.DocumentTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Documents.DocumentTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Documents.DocumentTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Documents.DocumentTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

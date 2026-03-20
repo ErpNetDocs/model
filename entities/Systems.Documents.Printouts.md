@@ -44,18 +44,18 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | The minimal document state on wich is permited to print this printout`Required` `Default(0)` 
-| [ApplicationName](Systems.Documents.Printouts.md#applicationname) | string (64) | The application which stored and uses the printout`Required` 
-| [BackwardCompatibility](Systems.Documents.Printouts.md#backwardcompatibility) | boolean | Supports the old data format.`Required` `Default(false)` 
-| [Copies](Systems.Documents.Printouts.md#copies) | int32 | Number of copies that will be printed when the user choses 'Print multiple'.`Required` `Default(1)` 
-| [Definition](Systems.Documents.Printouts.md#definition) | string (max) __nullable__ | The contents of the printout. 
-| [DefinitionFormat](Systems.Documents.Printouts.md#definitionformat) | string (16) __nullable__ | System format of the printout definition.`Default(&quot;default&quot;)` 
-| [IsDefault](Systems.Documents.Printouts.md#isdefault) | boolean | If True this printout will be used in direct print or print preview.`Required` `Default(false)` `Filter(eq)` 
-| [Name](Systems.Documents.Printouts.md#name) | string (64) | Name of the printout.`Required` `Filter(like)` 
-| [Notes](Systems.Documents.Printouts.md#notes) | string (512) __nullable__ | Notes for this Printout. 
-| [Ord](Systems.Documents.Printouts.md#ord) | int32 | Order in the multiple print. 0 means that the printout does not participate.`Required` `Default(0)` 
-| [OrdFilterXml](Systems.Documents.Printouts.md#ordfilterxml) | dataaccessfilter __nullable__ | The condition, required to be matched in order for the printout to be executed upon "Print All" command.`Unit: obj.DocumentType.EntityName` 
-| [OrdPriority](Systems.Documents.Printouts.md#ordpriority) | int32 __nullable__ | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.`Default(0)` 
+| [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | [AllowPrintingOnState](Systems.Documents.Printouts.md#allowprintingonstate) | The minimal document state on wich is permited to print this printout`Required` `Default(0)` |
+| [ApplicationName](Systems.Documents.Printouts.md#applicationname) | string (64) | The application which stored and uses the printout`Required` |
+| [BackwardCompatibility](Systems.Documents.Printouts.md#backwardcompatibility) | boolean | Supports the old data format.`Required` `Default(false)` |
+| [Copies](Systems.Documents.Printouts.md#copies) | int32 | Number of copies that will be printed when the user choses 'Print multiple'.`Required` `Default(1)` |
+| [Definition](Systems.Documents.Printouts.md#definition) | string (max) __nullable__ | The contents of the printout. |
+| [DefinitionFormat](Systems.Documents.Printouts.md#definitionformat) | string (16) __nullable__ | System format of the printout definition.`Default(&quot;default&quot;)` |
+| [IsDefault](Systems.Documents.Printouts.md#isdefault) | boolean | If True this printout will be used in direct print or print preview.`Required` `Default(false)` `Filter(eq)` |
+| [Name](Systems.Documents.Printouts.md#name) | string (64) | Name of the printout.`Required` `Filter(like)` |
+| [Notes](Systems.Documents.Printouts.md#notes) | string (512) __nullable__ | Notes for this Printout. |
+| [Ord](Systems.Documents.Printouts.md#ord) | int32 | Order in the multiple print. 0 means that the printout does not participate.`Required` `Default(0)` |
+| [OrdFilterXml](Systems.Documents.Printouts.md#ordfilterxml) | dataaccessfilter __nullable__ | The condition, required to be matched in order for the printout to be executed upon "Print All" command.`Unit: obj.DocumentType.EntityName` |
+| [OrdPriority](Systems.Documents.Printouts.md#ordpriority) | int32 __nullable__ | Ordinal position and priority of the printout, in regard to other printouts within the current document type. Used for sorting, when executing printouts with "Print All" command.`Default(0)` |
 
 ## References
 
@@ -72,9 +72,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.Printouts.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.Printouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Documents.Printouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.Printouts.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.Printouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Documents.Printouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

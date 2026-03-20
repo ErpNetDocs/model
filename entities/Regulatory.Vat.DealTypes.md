@@ -44,11 +44,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Regulatory.Vat.DealTypes.md#code) | string (32) | Code of the deal type.`Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32` 
-| [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.`Required` `Filter(eq)` 
-| [IsSystem](Regulatory.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [Name](Regulatory.Vat.DealTypes.md#name) | string (254) | Description of the deal type.`Required` `Filter(eq;like)` 
-| [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).`Required` `Filter(multi eq)` `Introduced in version 23.1.0.33` 
+| [Code](Regulatory.Vat.DealTypes.md#code) | string (32) | Code of the deal type.`Required` `Filter(multi eq;like)` `ORD` `Introduced in version 23.1.0.32` |
+| [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | [EntryType](Regulatory.Vat.DealTypes.md#entrytype) | Type of the VAT entries, which are made for this deal type. S=Sales, P=Purchases.`Required` `Filter(eq)` |
+| [IsSystem](Regulatory.Vat.DealTypes.md#issystem) | boolean | Is_System is True for those deal types that are managed by the system via update procedures and cannot be edited by the user.`Required` `Default(false)` `Filter(eq)` `ReadOnly` |
+| [Name](Regulatory.Vat.DealTypes.md#name) | string (254) | Description of the deal type.`Required` `Filter(eq;like)` |
+| [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | [TaxCode](Regulatory.Vat.DealTypes.md#taxcode) | VAT rate type for this deal type. Can be among "STD"(Standard rate), "RED"(Reduced rate), "SPR"(Super-reduced rates), "INT"(Intermediary (Parking) rates), "EXM"(Tax Exempt), "NS"(Non-subject to tax).`Required` `Filter(multi eq)` `Introduced in version 23.1.0.33` |
 
 ## References
 
@@ -61,12 +61,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Vat.DealTypes.md#id) | guid |  
-| [ObjectVersion](Regulatory.Vat.DealTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Vat.DealTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Vat.DealTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Vat.DealTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Vat.DealTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Vat.DealTypes.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Vat.DealTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Vat.DealTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Vat.DealTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Vat.DealTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Vat.DealTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

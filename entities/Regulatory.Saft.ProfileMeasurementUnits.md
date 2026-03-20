@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry.`Filter(like)` 
+| [Notes](Regulatory.Saft.ProfileMeasurementUnits.md#notes) | string (max) __nullable__ | Additional information or comments for this entry.`Filter(like)` |
 
 ## References
 
@@ -60,9 +60,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileMeasurementUnits.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileMeasurementUnits.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileMeasurementUnits.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileMeasurementUnits.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileMeasurementUnits.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileMeasurementUnits.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

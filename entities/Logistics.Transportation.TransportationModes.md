@@ -43,21 +43,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Transportation.TransportationModes.md#code) | string (8) | Unique transportation mode code.`Required` `Filter(eq;like)` `ORD` 
-| [Name](Logistics.Transportation.TransportationModes.md#name) | string (254) | Multilanguage name of the mode of transportation.`Required` `Filter(eq;like)` 
-| [SystemIcon](Logistics.Transportation.TransportationModes.md#systemicon) | string (1) | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.`Required` `Default(&quot;O&quot;)` 
+| [Code](Logistics.Transportation.TransportationModes.md#code) | string (8) | Unique transportation mode code.`Required` `Filter(eq;like)` `ORD` |
+| [Name](Logistics.Transportation.TransportationModes.md#name) | string (254) | Multilanguage name of the mode of transportation.`Required` `Filter(eq;like)` |
+| [SystemIcon](Logistics.Transportation.TransportationModes.md#systemicon) | string (1) | Icon, depicting the mode of transport. A=Air, W=Water, T=Train/Rail, R=Road, O=Other.`Required` `Default(&quot;O&quot;)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Transportation.TransportationModes.md#id) | guid |  
-| [ObjectVersion](Logistics.Transportation.TransportationModes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Logistics.Transportation.TransportationModes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Logistics.Transportation.TransportationModes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Logistics.Transportation.TransportationModes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Logistics.Transportation.TransportationModes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Transportation.TransportationModes.md#id) | guid |  |
+| [ObjectVersion](Logistics.Transportation.TransportationModes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Logistics.Transportation.TransportationModes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Logistics.Transportation.TransportationModes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Logistics.Transportation.TransportationModes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Logistics.Transportation.TransportationModes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -42,15 +42,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application`Filter(multi eq)` 
-| [Name](Systems.Core.Reports.md#name) | string (254) | The name of the report`Required` `Filter(eq;like)` 
-| [Notes](Systems.Core.Reports.md#notes) | string (512) __nullable__ | Notes for this Report. 
-| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only.`Required` `Default(false)` `Filter(eq)` 
-| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The primary query for the report. This is the base query for the custom data source.`Required` `Filter(eq)` 
-| [ReportBinaryLayout](Systems.Core.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout 
-| [ReportLayout](Systems.Core.Reports.md#reportlayout) | string (max) __nullable__ | The way that the report will appear on the screen or on paper. 
-| [TemplateFilterXml](Systems.Core.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report. 
-| [TemplatePriority](Systems.Core.Reports.md#templatepriority) | int32 __nullable__ | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise. 
+| [LayoutFormat](Systems.Core.Reports.md#layoutformat) | string (32) __nullable__ | Format specifier of the layout. Recognized by the application`Filter(multi eq)` |
+| [Name](Systems.Core.Reports.md#name) | string (254) | The name of the report`Required` `Filter(eq;like)` |
+| [Notes](Systems.Core.Reports.md#notes) | string (512) __nullable__ | Notes for this Report. |
+| [OneRow](Systems.Core.Reports.md#onerow) | boolean | True means that report can be used for one-row forms only. False means that the report can be used for navigators only.`Required` `Default(false)` `Filter(eq)` |
+| [QueryName](Systems.Core.Reports.md#queryname) | string (128) | The primary query for the report. This is the base query for the custom data source.`Required` `Filter(eq)` |
+| [ReportBinaryLayout](Systems.Core.Reports.md#reportbinarylayout) | byte[] __nullable__ | The printout layout, when the format requires binary storage. Alternative to Report_Layout |
+| [ReportLayout](Systems.Core.Reports.md#reportlayout) | string (max) __nullable__ | The way that the report will appear on the screen or on paper. |
+| [TemplateFilterXml](Systems.Core.Reports.md#templatefilterxml) | string (max) __nullable__ | Specifies the filter condition, which must be satisfied in order for this report to be prioritized for printing as a template sub-report. NULL when the current report cannot be used as template sub-report. |
+| [TemplatePriority](Systems.Core.Reports.md#templatepriority) | int32 __nullable__ | Specifies the priority of the current report, relative to other reports. Used only when choosing which report to show as a template subreport, NULL otherwise. |
 
 ## References
 
@@ -63,12 +63,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.Reports.md#id) | guid |  
-| [ObjectVersion](Systems.Core.Reports.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.Reports.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.Reports.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.Reports.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.Reports.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.Reports.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.Reports.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.Reports.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.Reports.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.Reports.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.Reports.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

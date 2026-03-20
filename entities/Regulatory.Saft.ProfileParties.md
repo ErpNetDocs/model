@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity.`Required` `Default(false)` `Filter(eq)` 
-| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable).`Filter(eq;ge;le)` 
-| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts.`Filter(eq;ge;le)` 
+| [IsRelated](Regulatory.Saft.ProfileParties.md#isrelated) | boolean | Mark if the party is a related entity.`Required` `Default(false)` `Filter(eq)` |
+| [RelationEndDate](Regulatory.Saft.ProfileParties.md#relationenddate) | date __nullable__ | Date when the relation ends (if applicable).`Filter(eq;ge;le)` |
+| [RelationStartDate](Regulatory.Saft.ProfileParties.md#relationstartdate) | date __nullable__ | Date from which the relation starts.`Filter(eq;ge;le)` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileParties.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileParties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileParties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileParties.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileParties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileParties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

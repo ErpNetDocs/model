@@ -37,11 +37,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvgFileSizeMB](Systems.Monitoring.ObjectFiles.md#avgfilesizemb) | decimal (12, 3) | Average file size in megabytes`Required` `Filter(eq;ge;le)` `ORD` 
-| [EntityType](Systems.Monitoring.ObjectFiles.md#entitytype) | string (64) | The entity type to which the files are bound`Required` `Filter(eq;like)` `ORD` 
-| [FilesCount](Systems.Monitoring.ObjectFiles.md#filescount) | int32 | Total number of files`Required` `Filter(eq;ge;le)` `ORD` 
-| [TotalSizeMB](Systems.Monitoring.ObjectFiles.md#totalsizemb) | decimal (12, 3) | Total size of the files in megabytes`Required` `Filter(eq;ge;le)` `ORD` 
-| [Year](Systems.Monitoring.ObjectFiles.md#year) | string (30) | Year of files creation`Required` `Filter(eq;like)` `ORD` 
+| [AvgFileSizeMB](Systems.Monitoring.ObjectFiles.md#avgfilesizemb) | decimal (12, 3) | Average file size in megabytes`Required` `Filter(eq;ge;le)` `ORD` |
+| [EntityType](Systems.Monitoring.ObjectFiles.md#entitytype) | string (64) | The entity type to which the files are bound`Required` `Filter(eq;like)` `ORD` |
+| [FilesCount](Systems.Monitoring.ObjectFiles.md#filescount) | int32 | Total number of files`Required` `Filter(eq;ge;le)` `ORD` |
+| [TotalSizeMB](Systems.Monitoring.ObjectFiles.md#totalsizemb) | decimal (12, 3) | Total size of the files in megabytes`Required` `Filter(eq;ge;le)` `ORD` |
+| [Year](Systems.Monitoring.ObjectFiles.md#year) | string (30) | Year of files creation`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

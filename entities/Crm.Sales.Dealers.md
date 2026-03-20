@@ -46,10 +46,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship`Default(Today)` `Filter(ge;le)` 
-| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` 
-| [Notes](Crm.Sales.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. 
-| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. NULL for active dealers`Filter(ge;le)` 
+| [FromDate](Crm.Sales.Dealers.md#fromdate) | datetime __nullable__ | Start of the dealer relationship`Default(Today)` `Filter(ge;le)` |
+| [IsActive](Crm.Sales.Dealers.md#isactive) | boolean | Indicates whether the current Dealer is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 24.1.5.22` |
+| [Notes](Crm.Sales.Dealers.md#notes) | string (254) __nullable__ | Notes for this Dealer. |
+| [ThruDate](Crm.Sales.Dealers.md#thrudate) | datetime __nullable__ | Termination date of the dealership. NULL for active dealers`Filter(ge;le)` |
 
 ## References
 
@@ -63,12 +63,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.Dealers.md#id) | guid |  
-| [ObjectVersion](Crm.Sales.Dealers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Sales.Dealers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Sales.Dealers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Sales.Dealers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Sales.Dealers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Sales.Dealers.md#id) | guid |  |
+| [ObjectVersion](Crm.Sales.Dealers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Sales.Dealers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Sales.Dealers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Sales.Dealers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Sales.Dealers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

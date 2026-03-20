@@ -41,11 +41,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActivitySubjectMask](General.Activities.ActivityTemplates.md#activitysubjectmask) | string (max) __nullable__ | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. 
-| [AdditionalDays](General.Activities.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.`Required` `Default(0)` 
-| [ReminderTime](General.Activities.ActivityTemplates.md#remindertime) | time __nullable__ | The time of the day for the reminder`Filter(ge;le)` 
-| [SourceDateField](General.Activities.ActivityTemplates.md#sourcedatefield) | string (64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.`Required` 
-| [StartTime](General.Activities.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts`Required` `Filter(ge;le)` 
+| [ActivitySubjectMask](General.Activities.ActivityTemplates.md#activitysubjectmask) | string (max) __nullable__ | A mask that uses fields from the header table of the source document in the specified route and is used to fill the Subject of the generated activity. |
+| [AdditionalDays](General.Activities.ActivityTemplates.md#additionaldays) | int32 | The number of days that will be added to the date in the Header_Date_Field. The result value is set to Start_Time of the activity.`Required` `Default(0)` |
+| [ReminderTime](General.Activities.ActivityTemplates.md#remindertime) | time __nullable__ | The time of the day for the reminder`Filter(ge;le)` |
+| [SourceDateField](General.Activities.ActivityTemplates.md#sourcedatefield) | string (64) | A name of a field from the header or the document table of the source document in the specified route, that will be used along with Additional_Days to set the Start_Time of the generated activity.`Required` |
+| [StartTime](General.Activities.ActivityTemplates.md#starttime) | time | The time of the day when the activity starts`Required` `Filter(ge;le)` |
 
 ## References
 
@@ -59,12 +59,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Activities.ActivityTemplates.md#id) | guid |  
-| [ObjectVersion](General.Activities.ActivityTemplates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Activities.ActivityTemplates.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Activities.ActivityTemplates.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Activities.ActivityTemplates.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Activities.ActivityTemplates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Activities.ActivityTemplates.md#id) | guid |  |
+| [ObjectVersion](General.Activities.ActivityTemplates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Activities.ActivityTemplates.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Activities.ActivityTemplates.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Activities.ActivityTemplates.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Activities.ActivityTemplates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

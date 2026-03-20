@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [RateDivisor](General.Currencies.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` 
-| [RateMultiplier](General.Currencies.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` 
+| [RateDivisor](General.Currencies.CurrencyDirectoryLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` |
+| [RateMultiplier](General.Currencies.CurrencyDirectoryLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from From_Currency to Directory.To_Currency`Required` `Default(1)` |
 
 ## References
 
@@ -59,9 +59,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Currencies.CurrencyDirectoryLines.md#id) | guid |  
-| [ObjectVersion](General.Currencies.CurrencyDirectoryLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Currencies.CurrencyDirectoryLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Currencies.CurrencyDirectoryLines.md#id) | guid |  |
+| [ObjectVersion](General.Currencies.CurrencyDirectoryLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Currencies.CurrencyDirectoryLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

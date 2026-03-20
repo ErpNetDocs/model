@@ -44,14 +44,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: 1 = the offer is available for new documents; 0 = otherwise`Required` `Default(true)` `Filter(eq)` 
-| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package`Required` `Filter(eq;like)` `ORD` 
-| [Name](Crm.Pricing.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` 
-| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | Customer filter for clients. The package is valid only for the customers, that match the filter`Unit: Crm.Sales.CustomersRepository.TableName` 
-| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.`Unit: Marketing.DistributionChannels<br />Repository.TableName` 
-| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | The package is valid only for the ship to customers, that match the filter`Unit: Crm.Sales.CustomersRepository.TableName` 
-| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | The date from which the promotional pakage is valid`Filter(eq;ge;le)` 
-| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | The date to which(inclusive) the promotional pakage is valid`Filter(eq;ge;le)` 
+| [Active](Crm.Pricing.PromotionalPackages.md#active) | boolean | Package status: 1 = the offer is available for new documents; 0 = otherwise`Required` `Default(true)` `Filter(eq)` |
+| [Code](Crm.Pricing.PromotionalPackages.md#code) | string (20) | Unique code of the promotional package`Required` `Filter(eq;like)` `ORD` |
+| [Name](Crm.Pricing.PromotionalPackages.md#name) | string (254) | The name of this PromotionalPackage. `Required` `Filter(eq;like)` `ORD` |
+| [ValidForCustomerFilterXML](Crm.Pricing.PromotionalPackages.md#validforcustomerfilterxml) | dataaccessfilter __nullable__ | Customer filter for clients. The package is valid only for the customers, that match the filter`Unit: Crm.Sales.CustomersRepository.TableName` |
+| [ValidForDistribution<br />ChannelFilterX<br />ML](Crm.Pricing.PromotionalPackages.md#validfordistributionchannelfilterxml) | dataaccessfilter __nullable__ | When not NULL, the package is valid only if the specified distribution channel of the sales order matches the filter.`Unit: Marketing.DistributionChannels<br />Repository.TableName` |
+| [ValidForShipTo<br />CustomerFilter<br />XML](Crm.Pricing.PromotionalPackages.md#validforshiptocustomerfilterxml) | dataaccessfilter __nullable__ | The package is valid only for the ship to customers, that match the filter`Unit: Crm.Sales.CustomersRepository.TableName` |
+| [ValidFromDate](Crm.Pricing.PromotionalPackages.md#validfromdate) | date __nullable__ | The date from which the promotional pakage is valid`Filter(eq;ge;le)` |
+| [ValidToDate](Crm.Pricing.PromotionalPackages.md#validtodate) | date __nullable__ | The date to which(inclusive) the promotional pakage is valid`Filter(eq;ge;le)` |
 
 ## References
 
@@ -72,12 +72,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.PromotionalPackages.md#id) | guid |  
-| [ObjectVersion](Crm.Pricing.PromotionalPackages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pricing.PromotionalPackages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.PromotionalPackages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.PromotionalPackages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pricing.PromotionalPackages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pricing.PromotionalPackages.md#id) | guid |  |
+| [ObjectVersion](Crm.Pricing.PromotionalPackages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pricing.PromotionalPackages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pricing.PromotionalPackages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.PromotionalPackages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pricing.PromotionalPackages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

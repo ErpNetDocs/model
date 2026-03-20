@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string (3) | Identifying code of the financial statement node. Unique within the parent financial statement node.`Required` `Filter(eq;like)` 
-| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node.`Filter(eq;like)` `ReadOnly` 
-| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement node.`Required` `Filter(like)` 
-| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path.`Filter(eq;like)` 
+| [Code](Finance.Accounting.FinancialStatementNodes.md#code) | string (3) | Identifying code of the financial statement node. Unique within the parent financial statement node.`Required` `Filter(eq;like)` |
+| [FullPath](Finance.Accounting.FinancialStatementNodes.md#fullpath) | string (25) __nullable__ | Full identification path of the financial statement node.`Filter(eq;like)` `ReadOnly` |
+| [Name](Finance.Accounting.FinancialStatementNodes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the financial statement node.`Required` `Filter(like)` |
+| [ParentFullPath](Finance.Accounting.FinancialStatementNodes.md#parentfullpath) | string (25) __nullable__ | Parent financial statement node specified through its full identification path.`Filter(eq;like)` |
 
 ## References
 
@@ -52,9 +52,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  
-| [ObjectVersion](Finance.Accounting.FinancialStatementNodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Accounting.FinancialStatementNodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Accounting.FinancialStatementNodes.md#id) | guid |  |
+| [ObjectVersion](Finance.Accounting.FinancialStatementNodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Accounting.FinancialStatementNodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

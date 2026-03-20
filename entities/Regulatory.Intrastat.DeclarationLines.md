@@ -44,15 +44,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat`Required` 
-| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency`Currency: IntrastatDeclaration.BaseCurrency` `Required` 
-| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted`Required` `Default(&quot;NEW&quot;)` 
-| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration`Required` `Filter(eq)` 
-| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg`Required` `Filter(multi eq)` 
-| [QuantitySupplementaryUnit](Regulatory.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (10, 0) __nullable__ | Quantity of the goods in the supplementary unit 
-| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency`Currency: IntrastatDeclaration.BaseCurrency` 
-| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification`Required` 
-| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used`Required` 
+| [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | [DeliveryTerms](Regulatory.Intrastat.DeclarationLines.md#deliveryterms) | Delivery terms - classification according to Intrastat`Required` |
+| [InvoicedValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#invoicedvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) | Invoiced value of the goods in the base currency`Currency: IntrastatDeclaration.BaseCurrency` `Required` |
+| [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | [LineAction](Regulatory.Intrastat.DeclarationLines.md#lineaction) | Line action - 'NEW' = New, 'EDN' = Edited-New, 'EDO' = Edited-Old, 'DEL' = Deleted`Required` `Default(&quot;NEW&quot;)` |
+| [LineNo](Regulatory.Intrastat.DeclarationLines.md#lineno) | int32 | Consequtive line number within the intrastat declaration`Required` `Filter(eq)` |
+| [NetMassKg](Regulatory.Intrastat.DeclarationLines.md#netmasskg) | decimal (14, 3) | Net mass of the goods in kg`Required` `Filter(multi eq)` |
+| [QuantitySupplementaryUnit](Regulatory.Intrastat.DeclarationLines.md#quantitysupplementaryunit) | decimal (10, 0) __nullable__ | Quantity of the goods in the supplementary unit |
+| [StatisticalValueAmountBase](Regulatory.Intrastat.DeclarationLines.md#statisticalvalueamountbase) | [Amount (10, 0)](../data-types.md#amount) __nullable__ | Statistical value of the goods in the base currency`Currency: IntrastatDeclaration.BaseCurrency` |
+| [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | [TransactionNature](Regulatory.Intrastat.DeclarationLines.md#transactionnature) | Transaction nature, according to the Intrastat classification`Required` |
+| [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | [TransportMode](Regulatory.Intrastat.DeclarationLines.md#transportmode) | Transportation mode - type of transportation used`Required` |
 
 ## References
 
@@ -71,9 +71,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Intrastat.DeclarationLines.md#id) | guid |  
-| [ObjectVersion](Regulatory.Intrastat.DeclarationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Intrastat.DeclarationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Intrastat.DeclarationLines.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Intrastat.DeclarationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Intrastat.DeclarationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. NULL when the equipment is still installed on the vehicle`Filter(ge;le)` 
-| [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment 
-| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment`Required` `Default(1)` `Filter(ge;le)` 
-| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment`Required` `Filter(ge;le)` 
+| [EndDate](Applications.Fleet.VehicleEquipment.md#enddate) | date __nullable__ | The date when the equipment was removed. NULL when the equipment is still installed on the vehicle`Filter(ge;le)` |
+| [Notes](Applications.Fleet.VehicleEquipment.md#notes) | string (max) __nullable__ | Notes for the installed equipment |
+| [Quantity](Applications.Fleet.VehicleEquipment.md#quantity) | int32 | Quantity of the equipment`Required` `Default(1)` `Filter(ge;le)` |
+| [StartDate](Applications.Fleet.VehicleEquipment.md#startdate) | date | The installation date of the equipment`Required` `Filter(ge;le)` |
 
 ## References
 
@@ -52,9 +52,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  
-| [ObjectVersion](Applications.Fleet.VehicleEquipment.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Fleet.VehicleEquipment.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Fleet.VehicleEquipment.md#id) | guid |  |
+| [ObjectVersion](Applications.Fleet.VehicleEquipment.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Fleet.VehicleEquipment.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

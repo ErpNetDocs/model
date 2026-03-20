@@ -42,16 +42,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Address](Systems.Security.ExternalApplications.md#address) | string (max) | The address (path) to the application. The address is platform-dependant.`Required` 
-| [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.`Required` `Default(&quot;SINGLE&quot;)` `Filter(eq)` 
-| [EntityName](Systems.Security.ExternalApplications.md#entityname) | string (64) | The entity, for which the application is defined.`Required` `Filter(eq)` `ORD` 
-| [ExecuteForAllObjects](Systems.Security.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.`Required` `Default(true)` `Filter(eq)` 
-| [IsActive](Systems.Security.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used.`Default(true)` `Filter(eq)` 
-| [Name](Systems.Security.ExternalApplications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the external application.`Required` `Filter(eq;like)` 
-| [Notes](Systems.Security.ExternalApplications.md#notes) | string (max) __nullable__ | Notes for this ExternalApplication. 
-| [Platform](Systems.Security.ExternalApplications.md#platform) | [Platform](Systems.Security.ExternalApplications.md#platform) | The execution platform of the application.`Required` `Filter(eq)` 
-| [RefreshAfterFinish](Systems.Security.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.`Required` `Default(true)` `Filter(eq)` 
-| [SaveBeforeStart](Systems.Security.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application.`Required` `Default(true)` `Filter(eq)` 
+| [Address](Systems.Security.ExternalApplications.md#address) | string (max) | The address (path) to the application. The address is platform-dependant.`Required` |
+| [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | [AvailableInMode](Systems.Security.ExternalApplications.md#availableinmode) | Whether the application will be displayed to the end users when a single object is opened or when multiple objects are listed.`Required` `Default(&quot;SINGLE&quot;)` `Filter(eq)` |
+| [EntityName](Systems.Security.ExternalApplications.md#entityname) | string (64) | The entity, for which the application is defined.`Required` `Filter(eq)` `ORD` |
+| [ExecuteForAllObjects](Systems.Security.ExternalApplications.md#executeforallobjects) | boolean | Whether to execute the application for all selected objects at once or to execute the application for each object, one by one.`Required` `Default(true)` `Filter(eq)` |
+| [IsActive](Systems.Security.ExternalApplications.md#isactive) | boolean __nullable__ | Specifies whether the external application is currently used.`Default(true)` `Filter(eq)` |
+| [Name](Systems.Security.ExternalApplications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the external application.`Required` `Filter(eq;like)` |
+| [Notes](Systems.Security.ExternalApplications.md#notes) | string (max) __nullable__ | Notes for this ExternalApplication. |
+| [Platform](Systems.Security.ExternalApplications.md#platform) | [Platform](Systems.Security.ExternalApplications.md#platform) | The execution platform of the application.`Required` `Filter(eq)` |
+| [RefreshAfterFinish](Systems.Security.ExternalApplications.md#refreshafterfinish) | boolean | Whether to refresh the data, displayed to the user, after the execution finishes. Not all platforms and/or applications support finish notification.`Required` `Default(true)` `Filter(eq)` |
+| [SaveBeforeStart](Systems.Security.ExternalApplications.md#savebeforestart) | boolean | Whether to save the form data to the server before starting the application.`Required` `Default(true)` `Filter(eq)` |
 
 ## References
 
@@ -64,12 +64,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.ExternalApplications.md#id) | guid |  
-| [ObjectVersion](Systems.Security.ExternalApplications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Security.ExternalApplications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Security.ExternalApplications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Security.ExternalApplications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Security.ExternalApplications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Security.ExternalApplications.md#id) | guid |  |
+| [ObjectVersion](Systems.Security.ExternalApplications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Security.ExternalApplications.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Security.ExternalApplications.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Security.ExternalApplications.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Security.ExternalApplications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

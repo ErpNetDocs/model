@@ -37,13 +37,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEntityName](Systems.Monitoring.PrintImages.md#documententityname) | string (64) | The entity name of the document type.`Required` `Filter(eq;like)` `ORD` 
-| [PrintoutLayoutName](Systems.Monitoring.PrintImages.md#printoutlayoutname) | string (64) | Printout layout name.`Required` `Filter(eq;like)` `ORD` 
-| [PrintsCount](Systems.Monitoring.PrintImages.md#printscount) | int32 | Total number of prints.`Required` `Filter(eq;ge;le)` `ORD` 
-| [SizeMB](Systems.Monitoring.PrintImages.md#sizemb) | decimal (12, 3) | Total size of the print in megabytes.`Required` `Filter(eq;ge;le)` `ORD` 
-| [TypeName](Systems.Monitoring.PrintImages.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the document type.`Required` `Filter(eq;like)` `ORD` 
-| [UnitSizeMB](Systems.Monitoring.PrintImages.md#unitsizemb) | decimal (12, 3) | Average print size in megabytes.`Required` `Filter(eq;ge;le)` `ORD` 
-| [Year](Systems.Monitoring.PrintImages.md#year) | string (30) | The year to which the current data refers.`Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32` 
+| [DocumentEntityName](Systems.Monitoring.PrintImages.md#documententityname) | string (64) | The entity name of the document type.`Required` `Filter(eq;like)` `ORD` |
+| [PrintoutLayoutName](Systems.Monitoring.PrintImages.md#printoutlayoutname) | string (64) | Printout layout name.`Required` `Filter(eq;like)` `ORD` |
+| [PrintsCount](Systems.Monitoring.PrintImages.md#printscount) | int32 | Total number of prints.`Required` `Filter(eq;ge;le)` `ORD` |
+| [SizeMB](Systems.Monitoring.PrintImages.md#sizemb) | decimal (12, 3) | Total size of the print in megabytes.`Required` `Filter(eq;ge;le)` `ORD` |
+| [TypeName](Systems.Monitoring.PrintImages.md#typename) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the document type.`Required` `Filter(eq;like)` `ORD` |
+| [UnitSizeMB](Systems.Monitoring.PrintImages.md#unitsizemb) | decimal (12, 3) | Average print size in megabytes.`Required` `Filter(eq;ge;le)` `ORD` |
+| [Year](Systems.Monitoring.PrintImages.md#year) | string (30) | The year to which the current data refers.`Required` `Filter(eq;like)` `ORD` `Introduced in version 24.1.3.32` |
 
 
 ## Attribute Details

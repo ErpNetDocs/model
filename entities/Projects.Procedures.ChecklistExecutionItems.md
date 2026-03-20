@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed.`Filter(eq;ge;le)` 
-| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag.`Required` `Default(false)` `Filter(eq)` 
-| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order.`Required` `Filter(eq)` 
-| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence.`Filter(like)` 
-| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation.`Required` `Filter(like)` 
+| [DoneAtUtc](Projects.Procedures.ChecklistExecutionItems.md#doneatutc) | datetime __nullable__ | When it was completed.`Filter(eq;ge;le)` |
+| [IsDone](Projects.Procedures.ChecklistExecutionItems.md#isdone) | boolean | Completion flag.`Required` `Default(false)` `Filter(eq)` |
+| [LineNo](Projects.Procedures.ChecklistExecutionItems.md#lineno) | int32 | Item order.`Required` `Filter(eq)` |
+| [Notes](Projects.Procedures.ChecklistExecutionItems.md#notes) | string (max) __nullable__ | Optional comment/evidence.`Filter(like)` |
+| [TextSnapshot](Projects.Procedures.ChecklistExecutionItems.md#textsnapshot) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Text copied from template at creation.`Required` `Filter(like)` |
 
 ## References
 
@@ -55,9 +55,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Procedures.ChecklistExecutionItems.md#id) | guid |  
-| [ObjectVersion](Projects.Procedures.ChecklistExecutionItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Procedures.ChecklistExecutionItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Procedures.ChecklistExecutionItems.md#id) | guid |  |
+| [ObjectVersion](Projects.Procedures.ChecklistExecutionItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Procedures.ChecklistExecutionItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

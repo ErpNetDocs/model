@@ -34,11 +34,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Crm.Subscriptions.BillingCycles.md#isactive) | boolean | Indicates whether the current Billing cycle is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Subscriptions.BillingCycles.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the billing cycle.`Required` `Filter(eq;like)` 
-| [Notes](Crm.Subscriptions.BillingCycles.md#notes) | string (max) __nullable__ | Notes for this BillingCycle. 
-| [NumberOfMonths](Crm.Subscriptions.BillingCycles.md#numberofmonths) | byte | Number of months between billings.`Required` `Default(1)` `Filter(eq;ge;le)` 
-| [StartingDayOfMonth](Crm.Subscriptions.BillingCycles.md#startingdayofmonth) | byte | On which date of the month the bills are issued.`Required` `Default(1)` `Filter(eq;ge;le)` 
+| [IsActive](Crm.Subscriptions.BillingCycles.md#isactive) | boolean | Indicates whether the current Billing cycle is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` |
+| [Name](Crm.Subscriptions.BillingCycles.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the billing cycle.`Required` `Filter(eq;like)` |
+| [Notes](Crm.Subscriptions.BillingCycles.md#notes) | string (max) __nullable__ | Notes for this BillingCycle. |
+| [NumberOfMonths](Crm.Subscriptions.BillingCycles.md#numberofmonths) | byte | Number of months between billings.`Required` `Default(1)` `Filter(eq;ge;le)` |
+| [StartingDayOfMonth](Crm.Subscriptions.BillingCycles.md#startingdayofmonth) | byte | On which date of the month the bills are issued.`Required` `Default(1)` `Filter(eq;ge;le)` |
 
 ## References
 
@@ -51,12 +51,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Subscriptions.BillingCycles.md#id) | guid |  
-| [ObjectVersion](Crm.Subscriptions.BillingCycles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Subscriptions.BillingCycles.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Subscriptions.BillingCycles.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Subscriptions.BillingCycles.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Subscriptions.BillingCycles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Subscriptions.BillingCycles.md#id) | guid |  |
+| [ObjectVersion](Crm.Subscriptions.BillingCycles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Subscriptions.BillingCycles.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Subscriptions.BillingCycles.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Subscriptions.BillingCycles.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Subscriptions.BillingCycles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

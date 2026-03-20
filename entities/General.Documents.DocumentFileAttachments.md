@@ -48,11 +48,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EmbeddedFileContents](General.Documents.DocumentFileAttachments.md#embeddedfilecontents) | byte[] __nullable__ | The contents of the embedded file. NULL when the file is linked 
-| [FileName](General.Documents.DocumentFileAttachments.md#filename) | string (128) | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file`Required` 
-| [IsLinked](General.Documents.DocumentFileAttachments.md#islinked) | boolean | 1 when the document is linked (ony file name is kept). 0 when the document is embedded`Required` `Default(false)` `Filter(eq)` 
-| [LinkedFilePath](General.Documents.DocumentFileAttachments.md#linkedfilepath) | string (254) __nullable__ | Path to the linked file. NULL when the file is embedded 
-| [Notes](General.Documents.DocumentFileAttachments.md#notes) | string (max) __nullable__ | Notes for this DocumentFileAttachment. 
+| [EmbeddedFileContents](General.Documents.DocumentFileAttachments.md#embeddedfilecontents) | byte[] __nullable__ | The contents of the embedded file. NULL when the file is linked |
+| [FileName](General.Documents.DocumentFileAttachments.md#filename) | string (128) | The display name of the file. Initially set to the file name (without path) of the linked or the embedded file`Required` |
+| [IsLinked](General.Documents.DocumentFileAttachments.md#islinked) | boolean | 1 when the document is linked (ony file name is kept). 0 when the document is embedded`Required` `Default(false)` `Filter(eq)` |
+| [LinkedFilePath](General.Documents.DocumentFileAttachments.md#linkedfilepath) | string (254) __nullable__ | Path to the linked file. NULL when the file is embedded |
+| [Notes](General.Documents.DocumentFileAttachments.md#notes) | string (max) __nullable__ | Notes for this DocumentFileAttachment. |
 
 ## References
 
@@ -65,9 +65,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentFileAttachments.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentFileAttachments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentFileAttachments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentFileAttachments.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentFileAttachments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentFileAttachments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

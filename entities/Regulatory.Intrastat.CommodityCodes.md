@@ -41,23 +41,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CommodityCodeField](Regulatory.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature`Required` `Filter(eq;like)` `ORD` 
-| [Description](Regulatory.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature`Required` `Filter(like)` 
-| [SupplementaryUnit](Regulatory.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations`Required` 
-| [ValidFrom](Regulatory.Intrastat.CommodityCodes.md#validfrom) | date __nullable__ | The starting date of validity of this code.`Filter(ge;le)` 
-| [ValidTo](Regulatory.Intrastat.CommodityCodes.md#validto) | date __nullable__ | The ending date of validity of this code.`Filter(ge;le)` 
+| [CommodityCodeField](Regulatory.Intrastat.CommodityCodes.md#commoditycodefield) | string (8) | Product code from the Intrastat Combined nomenclature`Required` `Filter(eq;like)` `ORD` |
+| [Description](Regulatory.Intrastat.CommodityCodes.md#description) | [MultilanguageString (4000)](../data-types.md#multilanguagestring) | Description of the product code from the Intrastat Combined nomenclature`Required` `Filter(like)` |
+| [SupplementaryUnit](Regulatory.Intrastat.CommodityCodes.md#supplementaryunit) | string (16) | If not null, the related product should have additional measurement unit with the same code as specified in this field. The additional unit will be used for the purposes of the Intrastat declarations`Required` |
+| [ValidFrom](Regulatory.Intrastat.CommodityCodes.md#validfrom) | date __nullable__ | The starting date of validity of this code.`Filter(ge;le)` |
+| [ValidTo](Regulatory.Intrastat.CommodityCodes.md#validto) | date __nullable__ | The ending date of validity of this code.`Filter(ge;le)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Intrastat.CommodityCodes.md#id) | guid |  
-| [ObjectVersion](Regulatory.Intrastat.CommodityCodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Intrastat.CommodityCodes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Intrastat.CommodityCodes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Intrastat.CommodityCodes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Intrastat.CommodityCodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Intrastat.CommodityCodes.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Intrastat.CommodityCodes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Intrastat.CommodityCodes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Intrastat.CommodityCodes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Intrastat.CommodityCodes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Intrastat.CommodityCodes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

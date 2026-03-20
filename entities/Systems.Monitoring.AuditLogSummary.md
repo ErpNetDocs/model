@@ -37,12 +37,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Monitoring.AuditLogSummary.md#applicationname) | string (64) | The client application that triggered the events. Null when unknown or N/A.`Required` `Filter(eq;like)` `ORD` 
-| [EntityName](Systems.Monitoring.AuditLogSummary.md#entityname) | string (64) | The entity, which is being referenced by the events. Null when unknown or N/A.`Required` `Filter(eq;like)` `ORD` 
-| [EntriesCount](Systems.Monitoring.AuditLogSummary.md#entriescount) | int32 | Total number of audit log entries.`Required` `Filter(eq;ge;le)` `ORD` 
-| [EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass) | The event primary classification, which shows the source of the events.`Required` `Filter(multi eq;like)` `ORD` `Inherited from Sys_Audit_Log_<br />Entries_Table.Event_Class` 
-| [TotalSizeMB](Systems.Monitoring.AuditLogSummary.md#totalsizemb) | decimal (12, 3) | Total size of the audit log entries in megabytes.`Required` `Filter(eq;ge;le)` `ORD` 
-| [Year](Systems.Monitoring.AuditLogSummary.md#year) | string (30) | Year when the events occurred.`Required` `Filter(eq;like)` `ORD` 
+| [ApplicationName](Systems.Monitoring.AuditLogSummary.md#applicationname) | string (64) | The client application that triggered the events. Null when unknown or N/A.`Required` `Filter(eq;like)` `ORD` |
+| [EntityName](Systems.Monitoring.AuditLogSummary.md#entityname) | string (64) | The entity, which is being referenced by the events. Null when unknown or N/A.`Required` `Filter(eq;like)` `ORD` |
+| [EntriesCount](Systems.Monitoring.AuditLogSummary.md#entriescount) | int32 | Total number of audit log entries.`Required` `Filter(eq;ge;le)` `ORD` |
+| [EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass) | [EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass) | The event primary classification, which shows the source of the events.`Required` `Filter(multi eq;like)` `ORD` `Inherited from Sys_Audit_Log_<br />Entries_Table.Event_Class` |
+| [TotalSizeMB](Systems.Monitoring.AuditLogSummary.md#totalsizemb) | decimal (12, 3) | Total size of the audit log entries in megabytes.`Required` `Filter(eq;ge;le)` `ORD` |
+| [Year](Systems.Monitoring.AuditLogSummary.md#year) | string (30) | Year when the events occurred.`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

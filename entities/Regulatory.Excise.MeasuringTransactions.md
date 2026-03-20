@@ -43,18 +43,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholDegree](Regulatory.Excise.MeasuringTransactions.md#alcoholdegree) | decimal (5, 2) __nullable__ | For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.`Filter(multi eq;ge;le)` 
-| [AlcoholDensity](Regulatory.Excise.MeasuringTransactions.md#alcoholdensity) | int32 __nullable__ | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.`Filter(multi eq;ge;le)` 
-| [AlcoholTemperature](Regulatory.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 __nullable__ | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.`Filter(multi eq;ge;le)` 
-| [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT.`Required` 
-| [EndTimeUtc](Regulatory.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` 
-| [MeasuringDeviceCode](Regulatory.Excise.MeasuringTransactions.md#measuringdevicecode) | string (32) | The code of the measuring device, used to measure the transaction.`Required` `Filter(multi eq;like)` `ORD` 
-| [Notes](Regulatory.Excise.MeasuringTransactions.md#notes) | string (max) __nullable__ | Notes for this MeasuringTransaction. 
-| [Quantity](Regulatory.Excise.MeasuringTransactions.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, measured with this transaction.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` 
-| [StartTimeUtc](Regulatory.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` 
-| [TotalCounterEnd](Regulatory.Excise.MeasuringTransactions.md#totalcounterend) | decimal (12, 3) __nullable__ | Total counter value at the end of the transaction`Introduced in version 23.1.1.42` 
-| [TotalCounterStart](Regulatory.Excise.MeasuringTransactions.md#totalcounterstart) | decimal (12, 3) __nullable__ | Total counter value at the start of the transaction`Introduced in version 23.1.1.42` 
-| [TransactionNumber](Regulatory.Excise.MeasuringTransactions.md#transactionnumber) | string (32) | Transaction number, unique for the measuring device.`Required` `Filter(multi eq;like)` 
+| [AlcoholDegree](Regulatory.Excise.MeasuringTransactions.md#alcoholdegree) | decimal (5, 2) __nullable__ | For alcoholic products, contains the percentage of pure alcohol. NULL when the transaction is not for alcoholic products.`Filter(multi eq;ge;le)` |
+| [AlcoholDensity](Regulatory.Excise.MeasuringTransactions.md#alcoholdensity) | int32 __nullable__ | For alcoholic products, contains the average density for the whole transaction. The measurement unit is dependent on the applicable legislation. NULL for non-alcoholic products.`Filter(multi eq;ge;le)` |
+| [AlcoholTemperature](Regulatory.Excise.MeasuringTransactions.md#alcoholtemperature) | int32 __nullable__ | For alcoholic products, contains the temperature of the fluid, when Alcohol Degree was calculated. The measurement unit is dependent on the national regulation (usually Celsius). NULL for non-alcoholic products.`Filter(multi eq;ge;le)` |
+| [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | [Direction](Regulatory.Excise.MeasuringTransactions.md#direction) | The direction of the transaction - IN/OUT.`Required` |
+| [EndTimeUtc](Regulatory.Excise.MeasuringTransactions.md#endtimeutc) | datetime | Ending time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` |
+| [MeasuringDeviceCode](Regulatory.Excise.MeasuringTransactions.md#measuringdevicecode) | string (32) | The code of the measuring device, used to measure the transaction.`Required` `Filter(multi eq;like)` `ORD` |
+| [Notes](Regulatory.Excise.MeasuringTransactions.md#notes) | string (max) __nullable__ | Notes for this MeasuringTransaction. |
+| [Quantity](Regulatory.Excise.MeasuringTransactions.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity of the product, measured with this transaction.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` |
+| [StartTimeUtc](Regulatory.Excise.MeasuringTransactions.md#starttimeutc) | datetime | Starting time of the transaction (in UTC time).`Required` `Filter(eq;ge;le)` |
+| [TotalCounterEnd](Regulatory.Excise.MeasuringTransactions.md#totalcounterend) | decimal (12, 3) __nullable__ | Total counter value at the end of the transaction`Introduced in version 23.1.1.42` |
+| [TotalCounterStart](Regulatory.Excise.MeasuringTransactions.md#totalcounterstart) | decimal (12, 3) __nullable__ | Total counter value at the start of the transaction`Introduced in version 23.1.1.42` |
+| [TransactionNumber](Regulatory.Excise.MeasuringTransactions.md#transactionnumber) | string (32) | Transaction number, unique for the measuring device.`Required` `Filter(multi eq;like)` |
 
 ## References
 
@@ -69,12 +69,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Excise.MeasuringTransactions.md#id) | guid |  
-| [ObjectVersion](Regulatory.Excise.MeasuringTransactions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Excise.MeasuringTransactions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Excise.MeasuringTransactions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Excise.MeasuringTransactions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Excise.MeasuringTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Excise.MeasuringTransactions.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Excise.MeasuringTransactions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Excise.MeasuringTransactions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Excise.MeasuringTransactions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Excise.MeasuringTransactions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Excise.MeasuringTransactions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

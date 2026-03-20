@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Classic.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. 
-| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes.`Required` `Default(true)` 
-| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task.`Required` `Default(1)` `Filter(eq)` 
+| [Notes](Projects.Classic.ProjectTaskParticipants.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskParticipant. |
+| [NotifyOnStatusChange](Projects.Classic.ProjectTaskParticipants.md#notifyonstatuschange) | boolean | Specifies whether the participant should be notified on task status changes.`Required` `Default(true)` |
+| [WorkLoadPercent](Projects.Classic.ProjectTaskParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load (in percents) of the participant for this task.`Required` `Default(1)` `Filter(eq)` |
 
 ## References
 
@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.ProjectTaskParticipants.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.ProjectTaskParticipants.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.ProjectTaskParticipants.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.ProjectTaskParticipants.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.ProjectTaskParticipants.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.ProjectTaskParticipants.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

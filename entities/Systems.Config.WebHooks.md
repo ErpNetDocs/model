@@ -44,26 +44,26 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Body](Systems.Config.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). 
-| [Code](Systems.Config.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` 
-| [Headers](Systems.Config.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. 
-| [Name](Systems.Config.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language).`Required` `Filter(like)` 
-| [Notes](Systems.Config.WebHooks.md#notes) | string (max) __nullable__ | Notes for this WebHook. 
-| [RepositoryName](Systems.Config.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.`Required` `Filter(eq;like)` 
-| [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | 0=Don't retry (default); 3=Retry up to 3 times`Required` `Default(&quot;0&quot;)` 
-| [URL](Systems.Config.WebHooks.md#url) | string (2000) | The destination URL, which should be called by the webhook (interpolated string).`Required` 
+| [Body](Systems.Config.WebHooks.md#body) | string (max) __nullable__ | The body of the POST request (interpolated string). |
+| [Code](Systems.Config.WebHooks.md#code) | string (32) | The unique code of the WebHook. `Required` `Filter(eq;like)` `ORD` |
+| [Headers](Systems.Config.WebHooks.md#headers) | string (max) __nullable__ | Optional headers for the request (interpolated string). Each header is specified on a separate line. |
+| [Name](Systems.Config.WebHooks.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Webhook name (multi-language).`Required` `Filter(like)` |
+| [Notes](Systems.Config.WebHooks.md#notes) | string (max) __nullable__ | Notes for this WebHook. |
+| [RepositoryName](Systems.Config.WebHooks.md#repositoryname) | string (128) | The name of the repository for which the webhook is setup. All interpolated strings will be evaluated in the context of entities of the specified type.`Required` `Filter(eq;like)` |
+| [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | [RetryLogic](Systems.Config.WebHooks.md#retrylogic) | 0=Don't retry (default); 3=Retry up to 3 times`Required` `Default(&quot;0&quot;)` |
+| [URL](Systems.Config.WebHooks.md#url) | string (2000) | The destination URL, which should be called by the webhook (interpolated string).`Required` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Config.WebHooks.md#id) | guid |  
-| [ObjectVersion](Systems.Config.WebHooks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Config.WebHooks.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Config.WebHooks.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Config.WebHooks.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Config.WebHooks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Config.WebHooks.md#id) | guid |  |
+| [ObjectVersion](Systems.Config.WebHooks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Config.WebHooks.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Config.WebHooks.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Config.WebHooks.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Config.WebHooks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

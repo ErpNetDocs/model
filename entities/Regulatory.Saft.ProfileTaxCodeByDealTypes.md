@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)` 
+| [Notes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)` |
 
 ## References
 
@@ -61,9 +61,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileTaxCodeByDealTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

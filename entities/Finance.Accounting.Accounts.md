@@ -35,13 +35,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string (30) | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number`Required` `Filter(like)` `ReadOnly` 
-| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts.`Required` `Default(&quot;ACB&quot;)` 
-| [Description](Finance.Accounting.Accounts.md#description) | string (254) __nullable__ | The description of this Account. 
-| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | 1 means that the account won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)` 
-| [LimitToBaseCurrency](Finance.Accounting.Accounts.md#limittobasecurrency) | boolean | When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78` 
-| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The account name`Required` `Filter(like)` 
-| [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group`Required` `Filter(like)` 
+| [AccountFullNumber](Finance.Accounting.Accounts.md#accountfullnumber) | string (30) | The full number of the account, unique among all accounts. It consists of the group number, concatenated with the account number`Required` `Filter(like)` `ReadOnly` |
+| [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | [CurrencyValuationMethod](Finance.Accounting.Accounts.md#currencyvaluationmethod) | Method for base currency valuation of non base currency amounts.`Required` `Default(&quot;ACB&quot;)` |
+| [Description](Finance.Accounting.Accounts.md#description) | string (254) __nullable__ | The description of this Account. |
+| [Discontinued](Finance.Accounting.Accounts.md#discontinued) | boolean | 1 means that the account won't be used any more and should not appear in combo boxes`Required` `Default(false)` `Filter(eq)` |
+| [LimitToBaseCurrency](Finance.Accounting.Accounts.md#limittobasecurrency) | boolean | When enabled, this setting restricts the account to use only the base or reporting currency. By default, transactions are recorded in the base currency, but reporting currency is also allowed in accounting entries when this option is checked.`Required` `Default(false)` `Filter(eq)` `Introduced in version 26.1.3.78` |
+| [Name](Finance.Accounting.Accounts.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The account name`Required` `Filter(like)` |
+| [Number](Finance.Accounting.Accounts.md#number) | string (30) | The number of the account, unique within the account group`Required` `Filter(like)` |
 
 ## References
 
@@ -56,12 +56,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.Accounts.md#id) | guid |  
-| [ObjectVersion](Finance.Accounting.Accounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Finance.Accounting.Accounts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Finance.Accounting.Accounts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Finance.Accounting.Accounts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Finance.Accounting.Accounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Accounting.Accounts.md#id) | guid |  |
+| [ObjectVersion](Finance.Accounting.Accounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Finance.Accounting.Accounts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Finance.Accounting.Accounts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Finance.Accounting.Accounts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Finance.Accounting.Accounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

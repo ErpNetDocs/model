@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments.`Filter(like)` 
+| [Notes](Projects.Agile.UserStateCaseCategories.md#notes) | string (max) __nullable__ | Additional information or comments.`Filter(like)` |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Agile.UserStateCaseCategories.md#id) | guid |  
-| [ObjectVersion](Projects.Agile.UserStateCaseCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Agile.UserStateCaseCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Agile.UserStateCaseCategories.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.UserStateCaseCategories.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Agile.UserStateCaseCategories.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

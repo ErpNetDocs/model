@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BudgetedMaterialAmount](Projects.Classic.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount`Currency: ProjectTask.Project.BudgetingCurrency` 
-| [LineNumber](Projects.Classic.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes`Required` `Default(0)` 
-| [Quantity](Projects.Classic.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material`Unit: QuantityUnit` `Required` `Default(1)` 
-| [QuantityBase](Projects.Classic.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `ReadOnly` 
+| [BudgetedMaterialAmount](Projects.Classic.ProjectTaskMaterials.md#budgetedmaterialamount) | [Amount (12, 2)](../data-types.md#amount) __nullable__ | Budgeted amount for the material in the currency of the project. NULL means there is still no budgeted amount`Currency: ProjectTask.Project.BudgetingCurrency` |
+| [LineNumber](Projects.Classic.ProjectTaskMaterials.md#linenumber) | int32 | Line number within the task, increased in steps of 10. Used for sorting purposes`Required` `Default(0)` |
+| [Quantity](Projects.Classic.ProjectTaskMaterials.md#quantity) | [Quantity (9, 3)](../data-types.md#quantity) | The required quantity of the material`Unit: QuantityUnit` `Required` `Default(1)` |
+| [QuantityBase](Projects.Classic.ProjectTaskMaterials.md#quantitybase) | decimal (9, 3) | The equivalence of Quantity in the base measurement unit of the Material.`Required` `Default(0)` `ReadOnly` |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.ProjectTaskMaterials.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.ProjectTaskMaterials.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.ProjectTaskMaterials.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.ProjectTaskMaterials.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.ProjectTaskMaterials.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.ProjectTaskMaterials.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

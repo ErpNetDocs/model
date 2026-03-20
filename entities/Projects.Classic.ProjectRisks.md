@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreateDate](Projects.Classic.ProjectRisks.md#createdate) | date | The creation date of the project risk.`Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [Description](Projects.Classic.ProjectRisks.md#description) | string (max) __nullable__ | The description of this ProjectRisk. `Filter(like)` 
-| [ImpactPercent](Projects.Classic.ProjectRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value.`Required` `Default(0)` 
-| [ProbabilityPercent](Projects.Classic.ProjectRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring.`Required` `Default(0)` 
-| [ResolutionStrategy](Projects.Classic.ProjectRisks.md#resolutionstrategy) | string (max) __nullable__ | The strategy chosen to handle the risk`Filter(eq)` 
-| [Resolved](Projects.Classic.ProjectRisks.md#resolved) | boolean | 1 if the risk is resolved`Required` `Default(false)` `Filter(eq)` 
-| [ResolveDate](Projects.Classic.ProjectRisks.md#resolvedate) | date __nullable__ | The date on which the risk is resolved`Filter(eq;ge;le)` 
-| [RiskName](Projects.Classic.ProjectRisks.md#riskname) | string (254) | The short name of the risk.`Required` `Filter(multi eq)` 
+| [CreateDate](Projects.Classic.ProjectRisks.md#createdate) | date | The creation date of the project risk.`Required` `Default(Now)` `Filter(eq;ge;le)` |
+| [Description](Projects.Classic.ProjectRisks.md#description) | string (max) __nullable__ | The description of this ProjectRisk. `Filter(like)` |
+| [ImpactPercent](Projects.Classic.ProjectRisks.md#impactpercent) | decimal (3, 2) | The impact of the risk to the project, expressed as percentage of the total project value.`Required` `Default(0)` |
+| [ProbabilityPercent](Projects.Classic.ProjectRisks.md#probabilitypercent) | decimal (3, 2) | The probability of the risk occurring.`Required` `Default(0)` |
+| [ResolutionStrategy](Projects.Classic.ProjectRisks.md#resolutionstrategy) | string (max) __nullable__ | The strategy chosen to handle the risk`Filter(eq)` |
+| [Resolved](Projects.Classic.ProjectRisks.md#resolved) | boolean | 1 if the risk is resolved`Required` `Default(false)` `Filter(eq)` |
+| [ResolveDate](Projects.Classic.ProjectRisks.md#resolvedate) | date __nullable__ | The date on which the risk is resolved`Filter(eq;ge;le)` |
+| [RiskName](Projects.Classic.ProjectRisks.md#riskname) | string (254) | The short name of the risk.`Required` `Filter(multi eq)` |
 
 ## References
 
@@ -56,9 +56,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.ProjectRisks.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.ProjectRisks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.ProjectRisks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.ProjectRisks.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.ProjectRisks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.ProjectRisks.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

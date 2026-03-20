@@ -40,9 +40,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.`Default(30)` `Filter(eq;ge;le)` 
-| [Notes](Crm.Sales.CustomerExternalAccess.md#notes) | string (max) __nullable__ | Notes for this External Access. 
-| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access.`Required` `Default(&quot;L30&quot;)` `Filter(eq)` 
+| [DaysBackAccess](Crm.Sales.CustomerExternalAccess.md#daysbackaccess) | int32 __nullable__ | The maximum number of past days the user is allowed to view. If NULL, the access is unlimited.`Default(30)` `Filter(eq;ge;le)` |
+| [Notes](Crm.Sales.CustomerExternalAccess.md#notes) | string (max) __nullable__ | Notes for this External Access. |
+| [Role](Crm.Sales.CustomerExternalAccess.md#role) | [Role](Crm.Sales.CustomerExternalAccess.md#role) | The role of the user, defines the granted access.`Required` `Default(&quot;L30&quot;)` `Filter(eq)` |
 
 ## References
 
@@ -56,9 +56,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.CustomerExternalAccess.md#id) | guid |  
-| [ObjectVersion](Crm.Sales.CustomerExternalAccess.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Crm.Sales.CustomerExternalAccess.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Sales.CustomerExternalAccess.md#id) | guid |  |
+| [ObjectVersion](Crm.Sales.CustomerExternalAccess.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Crm.Sales.CustomerExternalAccess.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -35,12 +35,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Comments](General.Products.ProductPictures.md#comments) | string (254) __nullable__ | Comments for this ProductPicture. 
-| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | 1=This is the default picture for the product and the size class; 0=otherwise`Required` `Default(false)` `Filter(eq)` 
-| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically.`Filter(ge;le)` `ReadOnly` 
-| [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be NULL if we insert only some comments 
-| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting`Required` `Filter(eq;like)` 
-| [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified. 
+| [Comments](General.Products.ProductPictures.md#comments) | string (254) __nullable__ | Comments for this ProductPicture. |
+| [IsDefault](General.Products.ProductPictures.md#isdefault) | boolean | 1=This is the default picture for the product and the size class; 0=otherwise`Required` `Default(false)` `Filter(eq)` |
+| [LastUpdateTime](General.Products.ProductPictures.md#lastupdatetime) | datetime __nullable__ | The exact server time, when the picture was last updated. Set automatically.`Filter(ge;le)` `ReadOnly` |
+| [Picture](General.Products.ProductPictures.md#picture) | byte[] __nullable__ | The actual product picture. Can be NULL if we insert only some comments |
+| [PictureNo](General.Products.ProductPictures.md#pictureno) | int32 | Unique picture number within the product. Also used for sorting`Required` `Filter(eq;like)` |
+| [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) | [PictureSizeClass](General.Products.ProductPictures.md#picturesizeclass) __nullable__ | Specifies the relative picture size and usage. S=Small picture (thumbnail), L=Large picture (full size), NULL=unspecified. |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductPictures.md#id) | guid |  
-| [ObjectVersion](General.Products.ProductPictures.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Products.ProductPictures.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Products.ProductPictures.md#id) | guid |  |
+| [ObjectVersion](General.Products.ProductPictures.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Products.ProductPictures.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

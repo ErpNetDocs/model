@@ -44,12 +44,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndNumber](Regulatory.Excise.ExciseStampOperationLines.md#endnumber) | string (30) __nullable__ | The end number of the sequence of excise stamps that are processed with the current operation. 
-| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.`Required` 
-| [Notes](Regulatory.Excise.ExciseStampOperationLines.md#notes) | string (max) __nullable__ | Notes for this ExciseStampOperationLine. 
-| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 22.1.6.32` 
-| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation.`Default(0)` 
-| [StartNumber](Regulatory.Excise.ExciseStampOperationLines.md#startnumber) | string (30) __nullable__ | The start number of the sequence of excise stamps that are processed with the current operation. 
+| [EndNumber](Regulatory.Excise.ExciseStampOperationLines.md#endnumber) | string (30) __nullable__ | The end number of the sequence of excise stamps that are processed with the current operation. |
+| [LineNo](Regulatory.Excise.ExciseStampOperationLines.md#lineno) | int32 | Consecutive line number within the document. Determines the order of execution of the excise stamp operation lines.`Required` |
+| [Notes](Regulatory.Excise.ExciseStampOperationLines.md#notes) | string (max) __nullable__ | Notes for this ExciseStampOperationLine. |
+| [ParentLineNo](Regulatory.Excise.ExciseStampOperationLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line.`Introduced in version 22.1.6.32` |
+| [Quantity](Regulatory.Excise.ExciseStampOperationLines.md#quantity) | int32 __nullable__ | The number of excise stamps that are processed with the current operation.`Default(0)` |
+| [StartNumber](Regulatory.Excise.ExciseStampOperationLines.md#startnumber) | string (30) __nullable__ | The start number of the sequence of excise stamps that are processed with the current operation. |
 
 ## References
 
@@ -67,9 +67,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Excise.ExciseStampOperationLines.md#id) | guid |  
-| [ObjectVersion](Regulatory.Excise.ExciseStampOperationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Excise.ExciseStampOperationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Excise.ExciseStampOperationLines.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Excise.ExciseStampOperationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Excise.ExciseStampOperationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

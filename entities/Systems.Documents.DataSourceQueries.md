@@ -44,13 +44,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table depending on the rows in the sub-tables`Required` `Default(0)` 
-| [ExtensionsList](Systems.Documents.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query 
-| [FilterXml](Systems.Documents.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the data from the current table.`Unit: obj.GetTableName()` 
-| [FirstRow](Systems.Documents.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.`Required` `Default(false)` 
-| [ReferencePath](Systems.Documents.DataSourceQueries.md#referencepath) | string (max) | A sequence of tables ordered by their references.`Required` 
-| [TableName](Systems.Documents.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL. 
-| [UniqueName](Systems.Documents.DataSourceQueries.md#uniquename) | string (64) __nullable__ | If not empty for the current query will be created separate set of tables with unique prefix in their names.  
+| [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | [DependsOnChildRows](Systems.Documents.DataSourceQueries.md#dependsonchildrows) | Determines the visibility of rows in this table depending on the rows in the sub-tables`Required` `Default(0)` |
+| [ExtensionsList](Systems.Documents.DataSourceQueries.md#extensionslist) | string (max) __nullable__ | A comma separated list of report extension names. An extension is set of additional fields that participate in the query |
+| [FilterXml](Systems.Documents.DataSourceQueries.md#filterxml) | dataaccessfilter __nullable__ | Filter for the data from the current table.`Unit: obj.GetTableName()` |
+| [FirstRow](Systems.Documents.DataSourceQueries.md#firstrow) | boolean | Specifies, that only the first row of the current query will be retrieved. Used and applied only when the data source type is not multitable.`Required` `Default(false)` |
+| [ReferencePath](Systems.Documents.DataSourceQueries.md#referencepath) | string (max) | A sequence of tables ordered by their references.`Required` |
+| [TableName](Systems.Documents.DataSourceQueries.md#tablename) | string (64) __nullable__ | The name of the report query. A Reference_Path can participate more than one time in the report but with different Report_Query_Name. This can be used to specify different filter for the same query. Can be NULL. |
+| [UniqueName](Systems.Documents.DataSourceQueries.md#uniquename) | string (64) __nullable__ | If not empty for the current query will be created separate set of tables with unique prefix in their names.  |
 
 ## References
 
@@ -63,9 +63,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DataSourceQueries.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DataSourceQueries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Documents.DataSourceQueries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DataSourceQueries.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.DataSourceQueries.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Documents.DataSourceQueries.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

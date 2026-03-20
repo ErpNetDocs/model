@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services.`Filter(multi eq;like)` `Introduced in version 24.1.4.87` 
-| [Notes](General.Activities.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. 
-| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity.`Required` `Default(1)` 
+| [Email](General.Activities.ActivityParticipants.md#email) | string (254) __nullable__ | Participant email. Used to identify the participant and is required when syncing with external services.`Filter(multi eq;like)` `Introduced in version 24.1.4.87` |
+| [Notes](General.Activities.ActivityParticipants.md#notes) | string (255) __nullable__ | Notes for this ActivityParticipant. |
+| [WorkLoadPercent](General.Activities.ActivityParticipants.md#workloadpercent) | decimal (3, 2) | The planned work load of the participant for this activity.`Required` `Default(1)` |
 
 ## References
 
@@ -61,9 +61,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Activities.ActivityParticipants.md#id) | guid |  
-| [ObjectVersion](General.Activities.ActivityParticipants.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Activities.ActivityParticipants.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Activities.ActivityParticipants.md#id) | guid |  |
+| [ObjectVersion](General.Activities.ActivityParticipants.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Activities.ActivityParticipants.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

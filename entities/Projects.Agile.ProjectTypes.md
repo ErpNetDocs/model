@@ -34,22 +34,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type.`Filter(like)` `Introduced in version 25.1.3.29` 
-| [Icon](Projects.Agile.ProjectTypes.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. 
-| [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Projects.Agile.ProjectTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the project type.`Required` `Filter(like)` 
+| [Description](Projects.Agile.ProjectTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Description of the project type.`Filter(like)` `Introduced in version 25.1.3.29` |
+| [Icon](Projects.Agile.ProjectTypes.md#icon) | string (128) __nullable__ | Icon name from the Font Awesome icon set. |
+| [IsActive](Projects.Agile.ProjectTypes.md#isactive) | boolean | Specifies whether the project type is active for new projects.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Projects.Agile.ProjectTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the project type.`Required` `Filter(like)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Agile.ProjectTypes.md#id) | guid |  
-| [ObjectVersion](Projects.Agile.ProjectTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.Agile.ProjectTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Agile.ProjectTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.Agile.ProjectTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.Agile.ProjectTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Agile.ProjectTypes.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.ProjectTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.Agile.ProjectTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.Agile.ProjectTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.Agile.ProjectTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.Agile.ProjectTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -45,25 +45,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts.`Required` `Default(&quot;A&quot;)` `Filter(multi eq)` 
-| [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.`Required` `Filter(multi eq)` 
-| [Code](Crm.Sales.DiscountTypes.md#code) | string (32) | The unique code of the DiscountType. `Required` `Filter(eq)` 
-| [IsSystem](Crm.Sales.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system.`Required` `Default(false)` `Filter(multi eq)` 
-| [Name](Crm.Sales.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` 
-| [Notes](Crm.Sales.DiscountTypes.md#notes) | string (max) __nullable__ | Notes for this DiscountType. 
-| [Ord](Crm.Sales.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.`Required` `Default(1)` `Filter(ge;le)` 
+| [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | [ActionType](Crm.Sales.DiscountTypes.md#actiontype) | Specifies the way the discount is applied over the previous discounts.`Required` `Default(&quot;A&quot;)` `Filter(multi eq)` |
+| [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | [CalculationMethod](Crm.Sales.DiscountTypes.md#calculationmethod) | Specifies whether the calculation method of the discount is based on a standard discount, promotional package, bonus program, etc.`Required` `Filter(multi eq)` |
+| [Code](Crm.Sales.DiscountTypes.md#code) | string (32) | The unique code of the DiscountType. `Required` `Filter(eq)` |
+| [IsSystem](Crm.Sales.DiscountTypes.md#issystem) | boolean | Specifies whether this discount type is created and managed by the system.`Required` `Default(false)` `Filter(multi eq)` |
+| [Name](Crm.Sales.DiscountTypes.md#name) | string (254) | The name of this DiscountType. `Required` `Filter(like)` |
+| [Notes](Crm.Sales.DiscountTypes.md#notes) | string (max) __nullable__ | Notes for this DiscountType. |
+| [Ord](Crm.Sales.DiscountTypes.md#ord) | int32 | Determines the order in which the discounts are applied. The discounts with smaller Ord are applied first.`Required` `Default(1)` `Filter(ge;le)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.DiscountTypes.md#id) | guid |  
-| [ObjectVersion](Crm.Sales.DiscountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Sales.DiscountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Sales.DiscountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Sales.DiscountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Sales.DiscountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Sales.DiscountTypes.md#id) | guid |  |
+| [ObjectVersion](Crm.Sales.DiscountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Sales.DiscountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Sales.DiscountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Sales.DiscountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Sales.DiscountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

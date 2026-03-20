@@ -39,11 +39,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` 
-| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` 
-| [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). `Required` `Filter(multi eq)` 
-| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` 
-| [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` 
+| [AmountBase](Finance.Accounting.VoucherCorrespondances.md#amountbase) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` |
+| [CreditAmount](Finance.Accounting.VoucherCorrespondances.md#creditamount) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` |
+| [CreditVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#creditvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the credited account). `Required` `Filter(multi eq)` |
+| [DebitAmount](Finance.Accounting.VoucherCorrespondances.md#debitamount) | decimal (18, 2) | Obsolete. Not used.`Required` `Default(0)` |
+| [DebitVoucherLineId](Finance.Accounting.VoucherCorrespondances.md#debitvoucherlineid) | guid | Obsolete. Not used. (The voucher line which contains the debited account). `Required` `Filter(multi eq)` |
 
 ## References
 
@@ -56,9 +56,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  
-| [ObjectVersion](Finance.Accounting.VoucherCorrespondances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Accounting.VoucherCorrespondances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Accounting.VoucherCorrespondances.md#id) | guid |  |
+| [ObjectVersion](Finance.Accounting.VoucherCorrespondances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Accounting.VoucherCorrespondances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

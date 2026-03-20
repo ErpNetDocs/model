@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription.`Required` `Filter(eq)` `ORD` 
-| [Notes](Crm.Subscriptions.SubscriptionLines.md#notes) | string (max) __nullable__ | Notes for this SubscriptionLine. 
-| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed.`Unit: QuantityUnit` `Required` `Filter(ge;le)` 
-| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line.`Default(0)` 
+| [LineNo](Crm.Subscriptions.SubscriptionLines.md#lineno) | int32 | Consecutive number of the line within the subscription.`Required` `Filter(eq)` `ORD` |
+| [Notes](Crm.Subscriptions.SubscriptionLines.md#notes) | string (max) __nullable__ | Notes for this SubscriptionLine. |
+| [Quantity](Crm.Subscriptions.SubscriptionLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity, which should be billed.`Unit: QuantityUnit` `Required` `Filter(ge;le)` |
+| [SpecificDiscountPercent](Crm.Subscriptions.SubscriptionLines.md#specificdiscountpercent) | decimal (7, 6) __nullable__ | The specific discount to apply for this line.`Default(0)` |
 
 ## References
 
@@ -54,9 +54,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Subscriptions.SubscriptionLines.md#id) | guid |  
-| [ObjectVersion](Crm.Subscriptions.SubscriptionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Crm.Subscriptions.SubscriptionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Subscriptions.SubscriptionLines.md#id) | guid |  |
+| [ObjectVersion](Crm.Subscriptions.SubscriptionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Crm.Subscriptions.SubscriptionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

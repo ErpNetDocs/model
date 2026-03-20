@@ -36,7 +36,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Projects.Agile.CaseCategoryRelationships.md#notes) | string (max) __nullable__ | Additional information or comments. 
+| [Notes](Projects.Agile.CaseCategoryRelationships.md#notes) | string (max) __nullable__ | Additional information or comments. |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Agile.CaseCategoryRelationships.md#id) | guid |  
-| [ObjectVersion](Projects.Agile.CaseCategoryRelationships.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Agile.CaseCategoryRelationships.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Agile.CaseCategoryRelationships.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.CaseCategoryRelationships.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Agile.CaseCategoryRelationships.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

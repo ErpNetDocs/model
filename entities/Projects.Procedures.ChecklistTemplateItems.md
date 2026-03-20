@@ -36,9 +36,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsRequired](Projects.Procedures.ChecklistTemplateItems.md#isrequired) | boolean | Required item.`Required` `Default(true)` `Filter(eq)` 
-| [LineNo](Projects.Procedures.ChecklistTemplateItems.md#lineno) | int32 | Item order.`Required` `Filter(eq)` 
-| [Text](Projects.Procedures.ChecklistTemplateItems.md#text) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | What must be done/checked.`Required` `Filter(like)` 
+| [IsRequired](Projects.Procedures.ChecklistTemplateItems.md#isrequired) | boolean | Required item.`Required` `Default(true)` `Filter(eq)` |
+| [LineNo](Projects.Procedures.ChecklistTemplateItems.md#lineno) | int32 | Item order.`Required` `Filter(eq)` |
+| [Text](Projects.Procedures.ChecklistTemplateItems.md#text) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | What must be done/checked.`Required` `Filter(like)` |
 
 ## References
 
@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Procedures.ChecklistTemplateItems.md#id) | guid |  
-| [ObjectVersion](Projects.Procedures.ChecklistTemplateItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Procedures.ChecklistTemplateItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Procedures.ChecklistTemplateItems.md#id) | guid |  |
+| [ObjectVersion](Projects.Procedures.ChecklistTemplateItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Procedures.ChecklistTemplateItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

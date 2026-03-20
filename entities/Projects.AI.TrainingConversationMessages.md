@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Contents](Projects.AI.TrainingConversationMessages.md#contents) | string (max) | Contents of the message. Can be formatted using MarkDown.`Required` 
-| [MessageNo](Projects.AI.TrainingConversationMessages.md#messageno) | int32 | Message number within the conversation.`Required` `Filter(eq)` 
-| [MessageTimeUtc](Projects.AI.TrainingConversationMessages.md#messagetimeutc) | datetime | Date and time, when the message was originally typed (or created).`Required` `Default(NowUtc)` `Filter(ge;le)` 
-| [ParticipantName](Projects.AI.TrainingConversationMessages.md#participantname) | string (64) __nullable__ | Name of the participant, who created the message. Name is optional, but gives more context to the message. 
-| [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.`Required` `Default(&quot;U&quot;)` `Filter(multi eq)` 
+| [Contents](Projects.AI.TrainingConversationMessages.md#contents) | string (max) | Contents of the message. Can be formatted using MarkDown.`Required` |
+| [MessageNo](Projects.AI.TrainingConversationMessages.md#messageno) | int32 | Message number within the conversation.`Required` `Filter(eq)` |
+| [MessageTimeUtc](Projects.AI.TrainingConversationMessages.md#messagetimeutc) | datetime | Date and time, when the message was originally typed (or created).`Required` `Default(NowUtc)` `Filter(ge;le)` |
+| [ParticipantName](Projects.AI.TrainingConversationMessages.md#participantname) | string (64) __nullable__ | Name of the participant, who created the message. Name is optional, but gives more context to the message. |
+| [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | [ParticipantRole](Projects.AI.TrainingConversationMessages.md#participantrole) | Role of the participant. Can be System - for system mood messages; User - for user messages; Assistant - for AI-created message.`Required` `Default(&quot;U&quot;)` `Filter(multi eq)` |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.TrainingConversationMessages.md#id) | guid |  
-| [ObjectVersion](Projects.AI.TrainingConversationMessages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.AI.TrainingConversationMessages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.TrainingConversationMessages.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.TrainingConversationMessages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.AI.TrainingConversationMessages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

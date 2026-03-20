@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvailableEndTime](Production.Resources.Capacity.md#availableendtime) | datetime | End of availability period during Calendar_Date`Required` `Filter(ge;le)` 
-| [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, available to production`Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` 
-| [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date`Required` `Filter(ge;le)` 
-| [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period`Required` `Filter(ge;le)` 
+| [AvailableEndTime](Production.Resources.Capacity.md#availableendtime) | datetime | End of availability period during Calendar_Date`Required` `Filter(ge;le)` |
+| [AvailableQuantity](Production.Resources.Capacity.md#availablequantity) | [Quantity (9, 0)](../data-types.md#quantity) | Quantity of the resource, available to production`Unit: WorkgroupResource.Resource.PrimaryUnit` `Required` |
+| [AvailableStartTime](Production.Resources.Capacity.md#availablestarttime) | datetime | Start of availability period during Calendar_Date`Required` `Filter(ge;le)` |
+| [CalendarDate](Production.Resources.Capacity.md#calendardate) | datetime | Date of the availability period`Required` `Filter(ge;le)` |
 
 ## References
 
@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Capacity.md#id) | guid |  
-| [ObjectVersion](Production.Resources.Capacity.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Production.Resources.Capacity.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Production.Resources.Capacity.md#id) | guid |  |
+| [ObjectVersion](Production.Resources.Capacity.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Production.Resources.Capacity.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

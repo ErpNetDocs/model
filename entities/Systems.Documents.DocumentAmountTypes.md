@@ -46,20 +46,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddToCustomer](Systems.Documents.DocumentAmountTypes.md#addtocustomer) | boolean | 1 means that the amount will be charged to the primary customer of the document`Required` `Default(true)` 
-| [AddToLine](Systems.Documents.DocumentAmountTypes.md#addtoline) | boolean | 1 means that the resulting amount will be added to the amount of each respective line`Required` `Default(true)` 
-| [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.`Default(0)` 
-| [AmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#amountinputallowed) | boolean | 1 when the user is allowed to input fixed amount for distribution`Required` `Default(false)` `Filter(eq)` 
-| [AmountTypeCode](Systems.Documents.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes`Required` `Filter(multi eq;like)` `ORD` 
-| [AmountTypeName](Systems.Documents.DocumentAmountTypes.md#amounttypename) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the amount type.`Required` `Filter(like)` 
-| [BaseOnLines](Systems.Documents.DocumentAmountTypes.md#baseonlines) | boolean | 1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts`Required` `Default(true)` 
-| [DefaultPercent](Systems.Documents.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; NULL otherwise 
-| [Description](Systems.Documents.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. 
-| [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines.`Required` `Default(&quot;AMOUNT&quot;)` `Filter(eq)` 
-| [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | 1 when the amount type is active for new records; 0 - otherwise`Required` `Default(true)` `Filter(eq)` 
-| [PercentInputAllowed](Systems.Documents.DocumentAmountTypes.md#percentinputallowed) | boolean | 1 when the user is allowed to input percent of total for distribution`Required` `Default(true)` `Filter(eq)` 
-| [RoundScale](Systems.Documents.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. NULL means to use the currency default 
-| [UnitAmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.`Required` `Default(false)` `Filter(eq)` 
+| [AddToCustomer](Systems.Documents.DocumentAmountTypes.md#addtocustomer) | boolean | 1 means that the amount will be charged to the primary customer of the document`Required` `Default(true)` |
+| [AddToLine](Systems.Documents.DocumentAmountTypes.md#addtoline) | boolean | 1 means that the resulting amount will be added to the amount of each respective line`Required` `Default(true)` |
+| [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) | [AllowedDirections](Systems.Documents.DocumentAmountTypes.md#alloweddirections) __nullable__ | Specifies condition for the sign of the allowed values for input percent or amount ​​that can be set in the documents.`Default(0)` |
+| [AmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#amountinputallowed) | boolean | 1 when the user is allowed to input fixed amount for distribution`Required` `Default(false)` `Filter(eq)` |
+| [AmountTypeCode](Systems.Documents.DocumentAmountTypes.md#amounttypecode) | string (16) | A code that can be used to uniquely identify the additional amount. Can also be used for sorting purposes`Required` `Filter(multi eq;like)` `ORD` |
+| [AmountTypeName](Systems.Documents.DocumentAmountTypes.md#amounttypename) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of the amount type.`Required` `Filter(like)` |
+| [BaseOnLines](Systems.Documents.DocumentAmountTypes.md#baseonlines) | boolean | 1 means that the percentages will be applied over lines plus dependant amounts; 0 means only dependant amounts`Required` `Default(true)` |
+| [DefaultPercent](Systems.Documents.DocumentAmountTypes.md#defaultpercent) | decimal (7, 6) __nullable__ | Default percent for amounts for which percent input is allowed; NULL otherwise |
+| [Description](Systems.Documents.DocumentAmountTypes.md#description) | string (254) __nullable__ | The description of this DocumentAmountType. |
+| [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | [DistributeBy](Systems.Documents.DocumentAmountTypes.md#distributeby) | Determines how the amount will be distributed among the document lines.`Required` `Default(&quot;AMOUNT&quot;)` `Filter(eq)` |
+| [IsActive](Systems.Documents.DocumentAmountTypes.md#isactive) | boolean | 1 when the amount type is active for new records; 0 - otherwise`Required` `Default(true)` `Filter(eq)` |
+| [PercentInputAllowed](Systems.Documents.DocumentAmountTypes.md#percentinputallowed) | boolean | 1 when the user is allowed to input percent of total for distribution`Required` `Default(true)` `Filter(eq)` |
+| [RoundScale](Systems.Documents.DocumentAmountTypes.md#roundscale) | int32 __nullable__ | The amounts should be rounded with the specified number of digits after the decimal point. NULL means to use the currency default |
+| [UnitAmountInputAllowed](Systems.Documents.DocumentAmountTypes.md#unitamountinputallowed) | boolean | Specifies whether the user is allowed to input fixed unit amount for the calculation of the amount.`Required` `Default(false)` `Filter(eq)` |
 
 ## References
 
@@ -73,12 +73,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DocumentAmountTypes.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DocumentAmountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Documents.DocumentAmountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Documents.DocumentAmountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentAmountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Documents.DocumentAmountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DocumentAmountTypes.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.DocumentAmountTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Documents.DocumentAmountTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Documents.DocumentAmountTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Documents.DocumentAmountTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Documents.DocumentAmountTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

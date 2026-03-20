@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#allowoverpayment) | boolean | If checked specifies that overpayment is allowed for the payment order in the line.`Required` `Default(false)` 
-| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | Paid amount  in the payment currency `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` 
-| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | Covered amount in the currency of payment order`Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` 
-| [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (254) __nullable__ | Notes for this PaymentTransactionLine. 
+| [AllowOverpayment](Finance.Payments.PaymentTransactionLines.md#allowoverpayment) | boolean | If checked specifies that overpayment is allowed for the payment order in the line.`Required` `Default(false)` |
+| [Amount](Finance.Payments.PaymentTransactionLines.md#amount) | [Amount (10, 2)](../data-types.md#amount) | Paid amount  in the payment currency `Currency: PaymentTransaction.TotalAmountCurrency` `Required` `Default(0)` |
+| [CoveredOrderAmount](Finance.Payments.PaymentTransactionLines.md#coveredorderamount) | [Amount (10, 2)](../data-types.md#amount) | Covered amount in the currency of payment order`Currency: PaymentOrder.TotalAmountCurrency` `Required` `Default(0)` |
+| [Notes](Finance.Payments.PaymentTransactionLines.md#notes) | string (254) __nullable__ | Notes for this PaymentTransactionLine. |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Payments.PaymentTransactionLines.md#id) | guid |  
-| [ObjectVersion](Finance.Payments.PaymentTransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Payments.PaymentTransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Payments.PaymentTransactionLines.md#id) | guid |  |
+| [ObjectVersion](Finance.Payments.PaymentTransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Payments.PaymentTransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

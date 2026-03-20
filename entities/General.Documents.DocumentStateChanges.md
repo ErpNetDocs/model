@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [NewState](General.Documents.DocumentStateChanges.md#newstate) | [NewState](General.Documents.DocumentStateChanges.md#newstate) | The new state after the change.`Required` `Filter(eq)` 
-| [SystemInitiated](General.Documents.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action.`Required` `Default(false)` `ReadOnly` 
-| [UpdateTime](General.Documents.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect.`Required` `Filter(ge;le)` `ORD` 
-| [UpdateUser](General.Documents.DocumentStateChanges.md#updateuser) | string (64) | The login name of the user, who made the status change`Required` `Filter(eq)` 
-| [Void](General.Documents.DocumentStateChanges.md#void) | boolean | 1 if the document is voided with this change`Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` 
+| [NewState](General.Documents.DocumentStateChanges.md#newstate) | [NewState](General.Documents.DocumentStateChanges.md#newstate) | The new state after the change.`Required` `Filter(eq)` |
+| [SystemInitiated](General.Documents.DocumentStateChanges.md#systeminitiated) | boolean | Specifies whether the state change was caused by system process or from user action.`Required` `Default(false)` `ReadOnly` |
+| [UpdateTime](General.Documents.DocumentStateChanges.md#updatetime) | datetime | The time when the change took effect.`Required` `Filter(ge;le)` `ORD` |
+| [UpdateUser](General.Documents.DocumentStateChanges.md#updateuser) | string (64) | The login name of the user, who made the status change`Required` `Filter(eq)` |
+| [Void](General.Documents.DocumentStateChanges.md#void) | boolean | 1 if the document is voided with this change`Required` `Default(false)` `Filter(eq)` `Introduced in version 19.1` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentStateChanges.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentStateChanges.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentStateChanges.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentStateChanges.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentStateChanges.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentStateChanges.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

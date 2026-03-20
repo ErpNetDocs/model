@@ -45,7 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](General.Documents.DocumentParties.md#notes) | string (max) __nullable__ | Notes for this DocumentParty. 
+| [Notes](General.Documents.DocumentParties.md#notes) | string (max) __nullable__ | Notes for this DocumentParty. |
 
 ## References
 
@@ -60,9 +60,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentParties.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentParties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentParties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentParties.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentParties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentParties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CountedQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantity) | decimal (12, 3) __nullable__ | The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.`Filter(eq;ge;le)` `Introduced in version 26.2.1.65` 
-| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.`Filter(eq;ge;le)` 
-| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.`Filter(eq;ge;le)` `ReadOnly` 
-| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.`Required` `Default(&quot;CRT&quot;)` `Filter(multi eq)` 
-| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.`Required` `Filter(eq)` `ReadOnly` 
-| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.`Required` `Filter(eq;ge;le)` `ReadOnly` 
-| [SnapshotQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantity) | decimal (12, 3) | Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.`Required` `Default(0)` `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65` 
-| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [CountedQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantity) | decimal (12, 3) __nullable__ | The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.`Filter(eq;ge;le)` `Introduced in version 26.2.1.65` |
+| [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.`Filter(eq;ge;le)` |
+| [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.`Filter(eq;ge;le)` `ReadOnly` |
+| [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.`Required` `Default(&quot;CRT&quot;)` `Filter(multi eq)` |
+| [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.`Required` `Filter(eq)` `ReadOnly` |
+| [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.`Required` `Filter(eq;ge;le)` `ReadOnly` |
+| [SnapshotQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantity) | decimal (12, 3) | Snapshot quantity calculated based on Warehouse Availability Standard Quantity Available, converted according to the product measurement setup (including product dimensions and variable measurement ratios when applicable), and expressed in the product’s default measurement unit.`Required` `Default(0)` `Filter(eq;ge;le)` `ReadOnly` `Introduced in version 26.2.1.65` |
+| [SnapshotQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotquantitybase) | decimal (12, 3) | The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.`Required` `Filter(eq;ge;le)` `ReadOnly` |
 
 ## References
 
@@ -65,9 +65,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Wms.WarehouseReconciliationDetails.md#id) | guid |  
-| [ObjectVersion](Logistics.Wms.WarehouseReconciliationDetails.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Wms.WarehouseReconciliationDetails.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Wms.WarehouseReconciliationDetails.md#id) | guid |  |
+| [ObjectVersion](Logistics.Wms.WarehouseReconciliationDetails.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Wms.WarehouseReconciliationDetails.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

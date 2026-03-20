@@ -33,10 +33,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Projects.AI.AssistantConversations.md#creationtimeutc) | datetime | The time when the assistant conversation was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` 
-| [IsActive](Projects.AI.AssistantConversations.md#isactive) | boolean | Indicates whether the conversation is active.`Required` `Default(false)` `Filter(eq)` 
-| [Notes](Projects.AI.AssistantConversations.md#notes) | string (max) __nullable__ | Notes for this AssistantConversation. 
-| [Title](Projects.AI.AssistantConversations.md#title) | string (256) | The title of the conversation (derived from the first message, but can be changed).`Required` 
+| [CreationTimeUtc](Projects.AI.AssistantConversations.md#creationtimeutc) | datetime | The time when the assistant conversation was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` |
+| [IsActive](Projects.AI.AssistantConversations.md#isactive) | boolean | Indicates whether the conversation is active.`Required` `Default(false)` `Filter(eq)` |
+| [Notes](Projects.AI.AssistantConversations.md#notes) | string (max) __nullable__ | Notes for this AssistantConversation. |
+| [Title](Projects.AI.AssistantConversations.md#title) | string (256) | The title of the conversation (derived from the first message, but can be changed).`Required` |
 
 ## References
 
@@ -50,12 +50,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.AssistantConversations.md#id) | guid |  
-| [ObjectVersion](Projects.AI.AssistantConversations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.AI.AssistantConversations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.AI.AssistantConversations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.AI.AssistantConversations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.AI.AssistantConversations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.AssistantConversations.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.AssistantConversations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.AI.AssistantConversations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.AI.AssistantConversations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.AI.AssistantConversations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.AI.AssistantConversations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

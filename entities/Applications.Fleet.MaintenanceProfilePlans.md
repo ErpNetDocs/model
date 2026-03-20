@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.`Required` `Default(true)` `Introduced in version 18.2` 
-| [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfilePlan. 
+| [IsActive](Applications.Fleet.MaintenanceProfilePlans.md#isactive) | boolean | 1 if the maintenance plan is active for this profile. When a plan is not active, maintenance for it will not occur for the current profile.`Required` `Default(true)` `Introduced in version 18.2` |
+| [Notes](Applications.Fleet.MaintenanceProfilePlans.md#notes) | string (max) __nullable__ | Notes for this MaintenanceProfilePlan. |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  
-| [ObjectVersion](Applications.Fleet.MaintenanceProfilePlans.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Fleet.MaintenanceProfilePlans.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Fleet.MaintenanceProfilePlans.md#id) | guid |  |
+| [ObjectVersion](Applications.Fleet.MaintenanceProfilePlans.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Fleet.MaintenanceProfilePlans.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed.`Filter(eq;ge;le)` `ReadOnly` 
-| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` 
-| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed.`Required` `Default(false)` `Filter(eq)` 
-| [Notes](Projects.Todo.TaskItems.md#notes) | string (max) __nullable__ | Notes for this TaskItem. `Introduced in version 23.1.1.48` 
-| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item.`Required` `Filter(like)` 
+| [CompletedDateTimeUtc](Projects.Todo.TaskItems.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task item was completed.`Filter(eq;ge;le)` `ReadOnly` |
+| [CreatedDateTimeUtc](Projects.Todo.TaskItems.md#createddatetimeutc) | datetime | Indicates (in UTC) when the task item was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` |
+| [IsCompleted](Projects.Todo.TaskItems.md#iscompleted) | boolean | Indicates whether the task item is completed.`Required` `Default(false)` `Filter(eq)` |
+| [Notes](Projects.Todo.TaskItems.md#notes) | string (max) __nullable__ | Notes for this TaskItem. `Introduced in version 23.1.1.48` |
+| [Title](Projects.Todo.TaskItems.md#title) | string (254) | A brief description of the task item.`Required` `Filter(like)` |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Todo.TaskItems.md#id) | guid |  
-| [ObjectVersion](Projects.Todo.TaskItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Todo.TaskItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Todo.TaskItems.md#id) | guid |  |
+| [ObjectVersion](Projects.Todo.TaskItems.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Todo.TaskItems.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

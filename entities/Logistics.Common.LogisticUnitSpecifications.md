@@ -46,10 +46,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Common.LogisticUnitSpecifications.md#code) | string (32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.`Required` `Filter(multi eq;like)` 
-| [Name](Logistics.Common.LogisticUnitSpecifications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).`Filter(eq;like)` 
-| [Notes](Logistics.Common.LogisticUnitSpecifications.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitSpecification. 
-| [Value](Logistics.Common.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.`Filter(eq;like)` 
+| [Code](Logistics.Common.LogisticUnitSpecifications.md#code) | string (32) | The code of the specification, unique within the logistic unit. It can contain only alphanumeric characters and cannot contain spaces.`Required` `Filter(multi eq;like)` |
+| [Name](Logistics.Common.LogisticUnitSpecifications.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Multi-language name of the specification. For some processing purposes, the name might be contained within the client implementation and not saved to the database (NULL).`Filter(eq;like)` |
+| [Notes](Logistics.Common.LogisticUnitSpecifications.md#notes) | string (max) __nullable__ | Notes for this LogisticUnitSpecification. |
+| [Value](Logistics.Common.LogisticUnitSpecifications.md#value) | string (254) __nullable__ | Text value of the specification. If this is GS1 specification, it can contain only numbers and letters and cannot contain spaces.`Filter(eq;like)` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Common.LogisticUnitSpecifications.md#id) | guid |  
-| [ObjectVersion](Logistics.Common.LogisticUnitSpecifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Common.LogisticUnitSpecifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Common.LogisticUnitSpecifications.md#id) | guid |  |
+| [ObjectVersion](Logistics.Common.LogisticUnitSpecifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Common.LogisticUnitSpecifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

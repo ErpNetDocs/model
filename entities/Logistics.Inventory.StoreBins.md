@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13` 
-| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store.`Required` `Default(false)` 
-| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin`Required` `Filter(like)` 
+| [Active](Logistics.Inventory.StoreBins.md#active) | boolean | Indicates whether the current store bin is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 21.1.3.13` |
+| [IsDefault](Logistics.Inventory.StoreBins.md#isdefault) | boolean | True, when this is the default storage bin for the specified store.`Required` `Default(false)` |
+| [Name](Logistics.Inventory.StoreBins.md#name) | string (254) | Name of the store bin`Required` `Filter(like)` |
 
 ## References
 
@@ -51,9 +51,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.StoreBins.md#id) | guid | Unique store bin id 
-| [ObjectVersion](Logistics.Inventory.StoreBins.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Inventory.StoreBins.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Inventory.StoreBins.md#id) | guid | Unique store bin id |
+| [ObjectVersion](Logistics.Inventory.StoreBins.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Inventory.StoreBins.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

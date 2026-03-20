@@ -37,10 +37,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CPUUtilization](Systems.Monitoring.ProcessInfo.md#cpuutilization) | double | CPU utilization by the process in percents`Required` `Filter(eq;ge;le)` `ORD` 
-| [MemoryMB](Systems.Monitoring.ProcessInfo.md#memorymb) | decimal (12, 3) | The memory used by the process in Megabytes`Required` `Filter(eq;ge;le)` `ORD` 
-| [ProcessId](Systems.Monitoring.ProcessInfo.md#processid) | int32 | The id of process`Required` `Filter(eq)` 
-| [ProcessName](Systems.Monitoring.ProcessInfo.md#processname) | string (256) | The name of process`Required` `Filter(eq;like)` `ORD` 
+| [CPUUtilization](Systems.Monitoring.ProcessInfo.md#cpuutilization) | double | CPU utilization by the process in percents`Required` `Filter(eq;ge;le)` `ORD` |
+| [MemoryMB](Systems.Monitoring.ProcessInfo.md#memorymb) | decimal (12, 3) | The memory used by the process in Megabytes`Required` `Filter(eq;ge;le)` `ORD` |
+| [ProcessId](Systems.Monitoring.ProcessInfo.md#processid) | int32 | The id of process`Required` `Filter(eq)` |
+| [ProcessName](Systems.Monitoring.ProcessInfo.md#processname) | string (256) | The name of process`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

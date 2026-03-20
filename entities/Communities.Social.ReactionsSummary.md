@@ -28,8 +28,8 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cnt](Communities.Social.ReactionsSummary.md#cnt) | int64 | Count of social reactions.`Required` 
-| [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.`Required` 
+| [Cnt](Communities.Social.ReactionsSummary.md#cnt) | int64 | Count of social reactions.`Required` |
+| [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | [ReactionType](Communities.Social.ReactionsSummary.md#reactiontype) | The type of the reaction. LIK = Like; LOV = Love; HAH = Haha; WOW = Wow; SAD = Sad; ANG = Angry.`Required` |
 
 ## References
 

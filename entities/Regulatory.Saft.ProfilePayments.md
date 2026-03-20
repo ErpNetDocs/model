@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines.`Required` `Filter(eq)` 
-| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction.`Required` `Filter(eq)` 
-| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None.`Required` `Filter(eq)` 
+| [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfilePayments.md#debitcreditindicator) | Debit/credit indicator for SAF-T payment lines.`Required` `Filter(eq)` |
+| [Direction](Regulatory.Saft.ProfilePayments.md#direction) | [Direction](Regulatory.Saft.ProfilePayments.md#direction) | Payment direction.`Required` `Filter(eq)` |
+| [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | [PartyType](Regulatory.Saft.ProfilePayments.md#partytype) | Counterparty type to be populated in SAF-T: Supplier, Customer, None.`Required` `Filter(eq)` |
 
 ## References
 
@@ -64,9 +64,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfilePayments.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfilePayments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfilePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfilePayments.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfilePayments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfilePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

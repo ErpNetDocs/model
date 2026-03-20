@@ -37,10 +37,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsSystemSite](Systems.Monitoring.WebSites.md#issystemsite) | boolean | Indicates whether this website is a system website`Required` `Introduced in version 24.1.0.3` 
-| [RootUrl](Systems.Monitoring.WebSites.md#rooturl) | string (256) | The root URL of the web site.`Required` `Filter(eq;like)` `ORD` 
-| [Status](Systems.Monitoring.WebSites.md#status) | string (10) | The current status of the web site.`Required` `Filter(like)` `ORD` 
-| [Type](Systems.Monitoring.WebSites.md#type) | string (64) | The site type.`Required` `Filter(eq;like)` `ORD` 
+| [IsSystemSite](Systems.Monitoring.WebSites.md#issystemsite) | boolean | Indicates whether this website is a system website`Required` `Introduced in version 24.1.0.3` |
+| [RootUrl](Systems.Monitoring.WebSites.md#rooturl) | string (256) | The root URL of the web site.`Required` `Filter(eq;like)` `ORD` |
+| [Status](Systems.Monitoring.WebSites.md#status) | string (10) | The current status of the web site.`Required` `Filter(like)` `ORD` |
+| [Type](Systems.Monitoring.WebSites.md#type) | string (64) | The site type.`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

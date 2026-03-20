@@ -44,12 +44,12 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Documents.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents`Required` `Default(true)` `Filter(eq)` 
-| [DisplayOrder](Systems.Documents.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type`Required` `Filter(ge;le)` 
-| [Instructions](Systems.Documents.DocumentTypeUserStatuses.md#instructions) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Instructions what should be done when this user status is active (Rich Text) 
-| [IsExitStatus](Systems.Documents.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released`Required` `Default(true)` `Filter(eq)` 
-| [State](Systems.Documents.DocumentTypeUserStatuses.md#state) | [DocumentState](Systems.Documents.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound`Required` `Filter(eq)` 
-| [UserStatusName](Systems.Documents.DocumentTypeUserStatuses.md#userstatusname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Multi-language name of the user status`Required` `Filter(eq;like)` 
+| [Active](Systems.Documents.DocumentTypeUserStatuses.md#active) | boolean | Is the user status active for applying to documents`Required` `Default(true)` `Filter(eq)` |
+| [DisplayOrder](Systems.Documents.DocumentTypeUserStatuses.md#displayorder) | int32 | Consecutive display order of the status, with regard to other statuses within the same document type`Required` `Filter(ge;le)` |
+| [Instructions](Systems.Documents.DocumentTypeUserStatuses.md#instructions) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Instructions what should be done when this user status is active (Rich Text) |
+| [IsExitStatus](Systems.Documents.DocumentTypeUserStatuses.md#isexitstatus) | boolean | True when the status allows going to the next system status, False otherwise. For example for system status Firm Planned, only user status Approved might allow going to Released`Required` `Default(true)` `Filter(eq)` |
+| [State](Systems.Documents.DocumentTypeUserStatuses.md#state) | [DocumentState](Systems.Documents.DocumentTypeUserStatuses.md#state) | The system state to which this user status is bound`Required` `Filter(eq)` |
+| [UserStatusName](Systems.Documents.DocumentTypeUserStatuses.md#userstatusname) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | Multi-language name of the user status`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DocumentTypeUserStatuses.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DocumentTypeUserStatuses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Documents.DocumentTypeUserStatuses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DocumentTypeUserStatuses.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.DocumentTypeUserStatuses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Documents.DocumentTypeUserStatuses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

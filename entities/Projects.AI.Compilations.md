@@ -35,13 +35,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BuildLog](Projects.AI.Compilations.md#buildlog) | string (max) __nullable__ | Detailed log of the build process of the compilation.`ReadOnly` 
-| [CompiledModelName](Projects.AI.Compilations.md#compiledmodelname) | string (256) __nullable__ | The name of the model, which was created in the providers space, as a result of the compilation.`Filter(eq;like)` `ReadOnly` 
-| [CompletionTimeUtc](Projects.AI.Compilations.md#completiontimeutc) | datetime __nullable__ | The time, when the compilation has completed.`Filter(eq;ge;le)` `ORD` `ReadOnly` 
-| [ErrorMessage](Projects.AI.Compilations.md#errormessage) | string (max) __nullable__ | Human-readable error message indicating the problem, when a build is not successful.`ReadOnly` 
-| [IsSuccessful](Projects.AI.Compilations.md#issuccessful) | boolean | Indicated whether the build process was successful and the compilation can be used for conversations.`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [StartTimeUtc](Projects.AI.Compilations.md#starttimeutc) | datetime | The time, when the compilation was started.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` 
-| [Status](Projects.AI.Compilations.md#status) | [Status](Projects.AI.Compilations.md#status) | The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)` `ReadOnly` 
+| [BuildLog](Projects.AI.Compilations.md#buildlog) | string (max) __nullable__ | Detailed log of the build process of the compilation.`ReadOnly` |
+| [CompiledModelName](Projects.AI.Compilations.md#compiledmodelname) | string (256) __nullable__ | The name of the model, which was created in the providers space, as a result of the compilation.`Filter(eq;like)` `ReadOnly` |
+| [CompletionTimeUtc](Projects.AI.Compilations.md#completiontimeutc) | datetime __nullable__ | The time, when the compilation has completed.`Filter(eq;ge;le)` `ORD` `ReadOnly` |
+| [ErrorMessage](Projects.AI.Compilations.md#errormessage) | string (max) __nullable__ | Human-readable error message indicating the problem, when a build is not successful.`ReadOnly` |
+| [IsSuccessful](Projects.AI.Compilations.md#issuccessful) | boolean | Indicated whether the build process was successful and the compilation can be used for conversations.`Required` `Default(false)` `Filter(eq)` `ReadOnly` |
+| [StartTimeUtc](Projects.AI.Compilations.md#starttimeutc) | datetime | The time, when the compilation was started.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` |
+| [Status](Projects.AI.Compilations.md#status) | [Status](Projects.AI.Compilations.md#status) | The status of the build job of the compilation. Building the compilation runs through New, Running and Completed. Deleting the compilation from the providers space marks it as Deleted.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)` `ReadOnly` |
 
 ## References
 
@@ -55,12 +55,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.Compilations.md#id) | guid |  
-| [ObjectVersion](Projects.AI.Compilations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.AI.Compilations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.AI.Compilations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.AI.Compilations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.AI.Compilations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.Compilations.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.Compilations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.AI.Compilations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.AI.Compilations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.AI.Compilations.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.AI.Compilations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

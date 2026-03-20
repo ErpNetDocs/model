@@ -28,10 +28,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit)`Required` 
-| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency`Required` 
-| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency`Required` 
-| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key`Required` 
+| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit)`Required` |
+| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency`Required` |
+| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency`Required` |
+| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key`Required` |
 
 ## References
 

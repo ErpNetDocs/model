@@ -42,14 +42,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DisplayTextFormat](Systems.Security.EntitySettings.md#displaytextformat) | string (128) __nullable__ | Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.`Introduced in version 22.1.4.18` 
-| [LogCreate](Systems.Security.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity.`Required` `Default(false)` `Introduced in version 18.2` 
-| [LogDelete](Systems.Security.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity.`Required` `Default(false)` `Introduced in version 18.2` 
-| [LogReadById](Systems.Security.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity.`Required` `Default(false)` `Introduced in version 18.2` 
-| [LogReadMany](Systems.Security.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity.`Required` `Default(false)` `Introduced in version 18.2` 
-| [LogUpdate](Systems.Security.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity.`Required` `Default(false)` `Introduced in version 18.2` 
-| [Name](Systems.Security.EntitySettings.md#name) | string (64) | The system name of the entity, which is being secured.`Required` `Filter(eq;like)` `ORD` 
-| [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | The track changes level for the entity`Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1` 
+| [DisplayTextFormat](Systems.Security.EntitySettings.md#displaytextformat) | string (128) __nullable__ | Interpolated string, containing the default format for displaying values of the entity. NULL means to use the system-wide default.`Introduced in version 22.1.4.18` |
+| [LogCreate](Systems.Security.EntitySettings.md#logcreate) | boolean | Specifies whether to log every insert for this entity.`Required` `Default(false)` `Introduced in version 18.2` |
+| [LogDelete](Systems.Security.EntitySettings.md#logdelete) | boolean | Specifies whether to log every delete for this entity.`Required` `Default(false)` `Introduced in version 18.2` |
+| [LogReadById](Systems.Security.EntitySettings.md#logreadbyid) | boolean | Specifies whether to log every load by Id for this entity.`Required` `Default(false)` `Introduced in version 18.2` |
+| [LogReadMany](Systems.Security.EntitySettings.md#logreadmany) | boolean | Specifies whether to log every load of many records for this entity.`Required` `Default(false)` `Introduced in version 18.2` |
+| [LogUpdate](Systems.Security.EntitySettings.md#logupdate) | boolean | Specifies whether to log every update for this entity.`Required` `Default(false)` `Introduced in version 18.2` |
+| [Name](Systems.Security.EntitySettings.md#name) | string (64) | The system name of the entity, which is being secured.`Required` `Filter(eq;like)` `ORD` |
+| [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | [TrackChangesLevel](Systems.Security.EntitySettings.md#trackchangeslevel) | The track changes level for the entity`Required` `Default(0)` `Filter(multi eq)` `Introduced in version 19.1` |
 
 ## References
 
@@ -62,12 +62,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.EntitySettings.md#id) | guid |  
-| [ObjectVersion](Systems.Security.EntitySettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Security.EntitySettings.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Security.EntitySettings.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Security.EntitySettings.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Security.EntitySettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Security.EntitySettings.md#id) | guid |  |
+| [ObjectVersion](Systems.Security.EntitySettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Security.EntitySettings.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Security.EntitySettings.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Security.EntitySettings.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Security.EntitySettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

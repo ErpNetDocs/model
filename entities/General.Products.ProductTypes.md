@@ -36,27 +36,27 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Products.ProductTypes.md#code) | string (16) | The unique code of the ProductType. `Required` `Filter(eq;like)` `ORD` 
-| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups.`Required` `Default(false)` `Filter(eq)` 
-| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | Determines whether assets are acquired or retired when products from this type are purchased or sold.`Required` `Default(false)` `Filter(eq)` 
-| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | 1 when the product corresponds to service used in service documents (like service activities)`Required` `Default(false)` `Filter(eq)` 
-| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | Determines whether for the products of this type can be created service agreements.`Required` `Default(false)` `Filter(eq)` 
-| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | Determines whether the products from this type are shipped after sales.`Required` `Default(false)` `Filter(eq)` 
-| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | 1=The products of this type are stocked in a warehouse; 0=otherwise (services)`Required` `Default(true)` `Filter(eq)` 
-| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received.`Required` `Default(false)` 
-| [Name](General.Products.ProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ProductType. `Required` `Filter(eq;like)` 
+| [Code](General.Products.ProductTypes.md#code) | string (16) | The unique code of the ProductType. `Required` `Filter(eq;like)` `ORD` |
+| [IsDefault](General.Products.ProductTypes.md#isdefault) | boolean | When checked specifies that this type is set by default for new products unless another type is specified in the product groups.`Required` `Default(false)` `Filter(eq)` |
+| [IsFixedAsset](General.Products.ProductTypes.md#isfixedasset) | boolean | Determines whether assets are acquired or retired when products from this type are purchased or sold.`Required` `Default(false)` `Filter(eq)` |
+| [IsServiceActivityService](General.Products.ProductTypes.md#isserviceactivityservice) | boolean | 1 when the product corresponds to service used in service documents (like service activities)`Required` `Default(false)` `Filter(eq)` |
+| [IsServiced](General.Products.ProductTypes.md#isserviced) | boolean | Determines whether for the products of this type can be created service agreements.`Required` `Default(false)` `Filter(eq)` |
+| [IsShipped](General.Products.ProductTypes.md#isshipped) | boolean | Determines whether the products from this type are shipped after sales.`Required` `Default(false)` `Filter(eq)` |
+| [IsStocked](General.Products.ProductTypes.md#isstocked) | boolean | 1=The products of this type are stocked in a warehouse; 0=otherwise (services)`Required` `Default(true)` `Filter(eq)` |
+| [LotAutoCreation](General.Products.ProductTypes.md#lotautocreation) | boolean | If checked specifies that lots are automatically created by the receiving orders with which the products are received.`Required` `Default(false)` |
+| [Name](General.Products.ProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ProductType. `Required` `Filter(eq;like)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductTypes.md#id) | guid |  
-| [ObjectVersion](General.Products.ProductTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Products.ProductTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Products.ProductTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Products.ProductTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Products.ProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Products.ProductTypes.md#id) | guid |  |
+| [ObjectVersion](General.Products.ProductTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Products.ProductTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Products.ProductTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Products.ProductTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Products.ProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

@@ -30,8 +30,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string (64) | The attribute name`Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` 
-| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (max) __nullable__ | The new value`Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
+| [AttributeName](Systems.Core.AttributeChanges.md#attributename) | string (64) | The attribute name`Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` |
+| [NewValue](Systems.Core.AttributeChanges.md#newvalue) | string (max) __nullable__ | The new value`Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` |
 
 ## References
 

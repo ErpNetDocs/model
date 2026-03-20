@@ -28,12 +28,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails.`Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email` 
-| [IsAdmin](Public.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0.`Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin` 
-| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email`Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login` 
-| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user`Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name` 
-| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.`Filter(eq;like)` `Inherited from Sec_Users_Table.Phone_Number` 
-| [UserId](Public.Users.md#userid) | guid | The Id of the security user. `Required` `Filter(multi eq)` 
+| [Email](Public.Users.md#email) | string (254) __nullable__ | Unique email of the user. Can be NULL because there may be login providers that don't use emails.`Filter(multi eq;like)` `Inherited from Sec_Users_Table.Email` |
+| [IsAdmin](Public.Users.md#isadmin) | boolean | 1 if the user is administrator, otherwise 0.`Required` `Default(false)` `Filter(eq)` `Inherited from Sec_Users_Table.Is_Admin` |
+| [Login](Public.Users.md#login) | string (64) | The login name of the user, which is usually the email`Required` `Filter(multi eq;like)` `Inherited from Sec_Users_Table.Login` |
+| [Name](Public.Users.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The full name of the user`Required` `Filter(like)` `Inherited from Sec_Users_Table.User_Name` |
+| [PhoneNumber](Public.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.`Filter(eq;like)` `Inherited from Sec_Users_Table.Phone_Number` |
+| [UserId](Public.Users.md#userid) | guid | The Id of the security user. `Required` `Filter(multi eq)` |
 
 ## References
 

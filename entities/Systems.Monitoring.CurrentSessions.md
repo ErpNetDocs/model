@@ -37,17 +37,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AbsoluteExpirationTime](Systems.Monitoring.CurrentSessions.md#absoluteexpirationtime) | datetime | Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Required` `Filter(ge;le)` `ORD` 
-| [Applications](Systems.Monitoring.CurrentSessions.md#applications) | string (64) | A comma separated list of client applications that share this session.`Required` `Filter(eq;like)` `ORD` 
-| [CurrentRequestsCount](Systems.Monitoring.CurrentSessions.md#currentrequestscount) | int32 | The requests count in the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [Device](Systems.Monitoring.CurrentSessions.md#device) | string (64) | The name of the user's device.`Required` `Filter(eq;like)` `ORD` 
-| [DownloadMB](Systems.Monitoring.CurrentSessions.md#downloadmb) | decimal (12, 3) | The downloaded megabytes at the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [LastRequestTime](Systems.Monitoring.CurrentSessions.md#lastrequesttime) | datetime | The last request time.`Required` `Filter(ge;le)` `ORD` 
-| [SessionId](Systems.Monitoring.CurrentSessions.md#sessionid) | string (64) | The id of the session.`Required` `Filter(eq)` `Introduced in version 26.1.4.3` 
-| [StartTime](Systems.Monitoring.CurrentSessions.md#starttime) | datetime | The login time of the session.`Required` `Filter(ge;le)` `ORD` 
-| [TotalRequestsCount](Systems.Monitoring.CurrentSessions.md#totalrequestscount) | int64 | The total request count at the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [UploadMB](Systems.Monitoring.CurrentSessions.md#uploadmb) | decimal (12, 3) | The uploaded megabytes at the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [UserLogin](Systems.Monitoring.CurrentSessions.md#userlogin) | string (64) | The user login name.`Required` `Introduced in version 26.1.4.3` 
+| [AbsoluteExpirationTime](Systems.Monitoring.CurrentSessions.md#absoluteexpirationtime) | datetime | Absolute expiration time of the session. Not empty if the session is created by a service appllication.`Required` `Filter(ge;le)` `ORD` |
+| [Applications](Systems.Monitoring.CurrentSessions.md#applications) | string (64) | A comma separated list of client applications that share this session.`Required` `Filter(eq;like)` `ORD` |
+| [CurrentRequestsCount](Systems.Monitoring.CurrentSessions.md#currentrequestscount) | int32 | The requests count in the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [Device](Systems.Monitoring.CurrentSessions.md#device) | string (64) | The name of the user's device.`Required` `Filter(eq;like)` `ORD` |
+| [DownloadMB](Systems.Monitoring.CurrentSessions.md#downloadmb) | decimal (12, 3) | The downloaded megabytes at the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [LastRequestTime](Systems.Monitoring.CurrentSessions.md#lastrequesttime) | datetime | The last request time.`Required` `Filter(ge;le)` `ORD` |
+| [SessionId](Systems.Monitoring.CurrentSessions.md#sessionid) | string (64) | The id of the session.`Required` `Filter(eq)` `Introduced in version 26.1.4.3` |
+| [StartTime](Systems.Monitoring.CurrentSessions.md#starttime) | datetime | The login time of the session.`Required` `Filter(ge;le)` `ORD` |
+| [TotalRequestsCount](Systems.Monitoring.CurrentSessions.md#totalrequestscount) | int64 | The total request count at the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [UploadMB](Systems.Monitoring.CurrentSessions.md#uploadmb) | decimal (12, 3) | The uploaded megabytes at the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [UserLogin](Systems.Monitoring.CurrentSessions.md#userlogin) | string (64) | The user login name.`Required` `Introduced in version 26.1.4.3` |
 
 
 ## Attribute Details

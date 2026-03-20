@@ -42,30 +42,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTime](Systems.Bpm.Processes.md#creationtime) | datetime __nullable__ | Date and time when the Process was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](Systems.Bpm.Processes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Process. `ReadOnly` 
-| [IsLandscape](Systems.Bpm.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode.`Required` `Default(true)` 
-| [Name](Systems.Bpm.Processes.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` 
-| [Notes](Systems.Bpm.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. 
-| [SchemaFormat](Systems.Bpm.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout.`Required` `Default(&quot;D&quot;)` 
-| [SchemaLayout](Systems.Bpm.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.`Required` 
-| [StartEvent](Systems.Bpm.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process 
-| [StartRoleId](Systems.Bpm.Processes.md#startroleid) | guid __nullable__ | When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. `Filter(multi eq)` 
-| [Thumbnail](Systems.Bpm.Processes.md#thumbnail) | byte[] __nullable__ | Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format. 
-| [UpdateTime](Systems.Bpm.Processes.md#updatetime) | datetime __nullable__ | Date and time when the Process was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](Systems.Bpm.Processes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Process. `ReadOnly` 
+| [CreationTime](Systems.Bpm.Processes.md#creationtime) | datetime __nullable__ | Date and time when the Process was created. `Filter(ge;le)` `ReadOnly` |
+| [CreationUser](Systems.Bpm.Processes.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Process. `ReadOnly` |
+| [IsLandscape](Systems.Bpm.Processes.md#islandscape) | boolean | Specifies whether the process diagram is intended to be viewed in landscape mode.`Required` `Default(true)` |
+| [Name](Systems.Bpm.Processes.md#name) | [MultilanguageString (128)](../data-types.md#multilanguagestring) | The name of this Process. `Required` `Filter(eq;like)` |
+| [Notes](Systems.Bpm.Processes.md#notes) | string (2000) __nullable__ | Notes for this Process. |
+| [SchemaFormat](Systems.Bpm.Processes.md#schemaformat) | string (1) | Application specific format of the Schema Layout.`Required` `Default(&quot;D&quot;)` |
+| [SchemaLayout](Systems.Bpm.Processes.md#schemalayout) | string (max) | Contains the actual presentation layout of the business process. The layout is stored in the format, specified by Schema Format.`Required` |
+| [StartEvent](Systems.Bpm.Processes.md#startevent) | string (3) __nullable__ | USR=User created; EML=Email receive (still not supported). NULL means that there is no starting event for this process |
+| [StartRoleId](Systems.Bpm.Processes.md#startroleid) | guid __nullable__ | When Start_Event='USR' then specifies the role which the user must play in order to start the process. null when Start_Event&lt;&gt;'USR'. `Filter(multi eq)` |
+| [Thumbnail](Systems.Bpm.Processes.md#thumbnail) | byte[] __nullable__ | Contains the visual thumbnail of the presentation of the business process. It is stored in bitmap (BMP) format. |
+| [UpdateTime](Systems.Bpm.Processes.md#updatetime) | datetime __nullable__ | Date and time when the Process was last updated. `Filter(ge;le)` `ReadOnly` |
+| [UpdateUser](Systems.Bpm.Processes.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Process. `ReadOnly` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Bpm.Processes.md#id) | guid |  
-| [ObjectVersion](Systems.Bpm.Processes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Bpm.Processes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Bpm.Processes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Bpm.Processes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Bpm.Processes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Bpm.Processes.md#id) | guid |  |
+| [ObjectVersion](Systems.Bpm.Processes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Bpm.Processes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Bpm.Processes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Bpm.Processes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Bpm.Processes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -44,11 +44,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification`Required` `Default(&quot;StateChanging&quot;)` `Filter(eq)` 
-| [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event 
-| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event`Required` `Default(0)` 
-| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` 
-| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified`Required` 
+| [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification`Required` `Default(&quot;StateChanging&quot;)` `Filter(eq)` |
+| [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event |
+| [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event`Required` `Default(0)` |
+| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` |
+| [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified`Required` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DocumentTypeNotifications.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DocumentTypeNotifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Documents.DocumentTypeNotifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DocumentTypeNotifications.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.DocumentTypeNotifications.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Documents.DocumentTypeNotifications.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

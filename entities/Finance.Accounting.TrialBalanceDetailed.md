@@ -28,39 +28,39 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` 
-| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` 
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` 
-| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` 
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` 
-| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` 
-| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (18, 2) | Credit`Required` 
-| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (18, 2) | Credit Base`Required` 
-| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` 
-| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (18, 2) | Debit`Required` 
-| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (18, 2) | Debit Base`Required` 
-| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` 
-| [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` 
-| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) __nullable__ | Item Key`Filter(eq;like)` 
-| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) __nullable__ | Item Key Level 1 Code`Filter(multi eq)` 
-| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 1 Name`Filter(multi eq)` 
-| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) __nullable__ | Item Key Level 2 Code`Filter(multi eq)` 
-| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 2 Name`Filter(multi eq)` 
-| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) __nullable__ | Item Key Level 3 Code`Filter(multi eq)` 
-| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 3 Name`Filter(multi eq)` 
-| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) __nullable__ | Item Key Level 4 Code`Filter(multi eq)` 
-| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 4 Name`Filter(multi eq)` 
-| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) __nullable__ | Item Key Level 5 Code`Filter(multi eq)` 
-| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 5 Name`Filter(multi eq)` 
-| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` 
-| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` 
-| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` 
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` 
-| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` 
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` 
-| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (18, 2) | Opening balance in reporting currency`Required` `Introduced in version 25.1.3.29` 
-| [ToDate](Finance.Accounting.TrialBalanceDetailed.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` 
+| [Closing](Finance.Accounting.TrialBalanceDetailed.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` |
+| [ClosingBase](Finance.Accounting.TrialBalanceDetailed.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` |
+| [ClosingCredit](Finance.Accounting.TrialBalanceDetailed.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` |
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceDetailed.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` |
+| [ClosingDebit](Finance.Accounting.TrialBalanceDetailed.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` |
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceDetailed.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` |
+| [ClosingReporting](Finance.Accounting.TrialBalanceDetailed.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` |
+| [Credit](Finance.Accounting.TrialBalanceDetailed.md#credit) | decimal (18, 2) | Credit`Required` |
+| [CreditBase](Finance.Accounting.TrialBalanceDetailed.md#creditbase) | decimal (18, 2) | Credit Base`Required` |
+| [CreditReporting](Finance.Accounting.TrialBalanceDetailed.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` |
+| [Debit](Finance.Accounting.TrialBalanceDetailed.md#debit) | decimal (18, 2) | Debit`Required` |
+| [DebitBase](Finance.Accounting.TrialBalanceDetailed.md#debitbase) | decimal (18, 2) | Debit Base`Required` |
+| [DebitReporting](Finance.Accounting.TrialBalanceDetailed.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` |
+| [FromDate](Finance.Accounting.TrialBalanceDetailed.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` |
+| [ItemKey](Finance.Accounting.TrialBalanceDetailed.md#itemkey) | string (64) __nullable__ | Item Key`Filter(eq;like)` |
+| [ItemKeyLevel1Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1code) | string (40) __nullable__ | Item Key Level 1 Code`Filter(multi eq)` |
+| [ItemKeyLevel1Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel1name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 1 Name`Filter(multi eq)` |
+| [ItemKeyLevel2Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2code) | string (40) __nullable__ | Item Key Level 2 Code`Filter(multi eq)` |
+| [ItemKeyLevel2Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel2name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 2 Name`Filter(multi eq)` |
+| [ItemKeyLevel3Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3code) | string (40) __nullable__ | Item Key Level 3 Code`Filter(multi eq)` |
+| [ItemKeyLevel3Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel3name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 3 Name`Filter(multi eq)` |
+| [ItemKeyLevel4Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4code) | string (40) __nullable__ | Item Key Level 4 Code`Filter(multi eq)` |
+| [ItemKeyLevel4Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel4name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 4 Name`Filter(multi eq)` |
+| [ItemKeyLevel5Code](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5code) | string (40) __nullable__ | Item Key Level 5 Code`Filter(multi eq)` |
+| [ItemKeyLevel5Name](Finance.Accounting.TrialBalanceDetailed.md#itemkeylevel5name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Item Key Level 5 Name`Filter(multi eq)` |
+| [Opening](Finance.Accounting.TrialBalanceDetailed.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` |
+| [OpeningBase](Finance.Accounting.TrialBalanceDetailed.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` |
+| [OpeningCredit](Finance.Accounting.TrialBalanceDetailed.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` |
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceDetailed.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` |
+| [OpeningDebit](Finance.Accounting.TrialBalanceDetailed.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` |
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceDetailed.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` |
+| [OpeningReporting](Finance.Accounting.TrialBalanceDetailed.md#openingreporting) | decimal (18, 2) | Opening balance in reporting currency`Required` `Introduced in version 25.1.3.29` |
+| [ToDate](Finance.Accounting.TrialBalanceDetailed.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` |
 
 ## References
 

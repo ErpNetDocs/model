@@ -41,15 +41,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price`Filter(eq;ge;le)` 
-| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit`<br />Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)`Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` 
-| [Notes](Crm.Pricing.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. `Filter(like)` 
-| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity`Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified`Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` 
-| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied.`Required` `Default(2)` `Filter(multi eq)` 
-| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price`Filter(eq;ge;le)` 
+| [FromDate](Crm.Pricing.ProductPrices.md#fromdate) | date __nullable__ | Starting date of validity of the price`Filter(eq;ge;le)` |
+| [IsActive](Crm.Pricing.ProductPrices.md#isactive) | boolean | Indicates whether the current Product price is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` |
+| [MaxQuantity](Crm.Pricing.ProductPrices.md#maxquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Maximum quantity for which this price is valid in the Price_Quantity_<br />Measurement_Unit`<br />Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` |
+| [MinQuantity](Crm.Pricing.ProductPrices.md#minquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | Minimal quantity required to use this price (in the Price_Quantity_Measurement_Unit)`Unit: PriceQuantityMeasurement<br />Unit` `Filter(eq;ge;le)` |
+| [Notes](Crm.Pricing.ProductPrices.md#notes) | string (254) __nullable__ | Notes for this ProductPrice. `Filter(like)` |
+| [Price](Crm.Pricing.ProductPrices.md#price) | [Amount (13, 5)](../data-types.md#amount) | Price in the specified currency and for the specified quantity`Currency: Currency` `Required` `Default(0)` `Filter(eq;ge;le)` |
+| [PriceQuantity](Crm.Pricing.ProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | The quantity of the product for which the price is specified`Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(ge;le)` |
+| [Priority](Crm.Pricing.ProductPrices.md#priority) | [Priority](Crm.Pricing.ProductPrices.md#priority) | Priority of the price comparative to other prices. Only the highest priority price is applied.`Required` `Default(2)` `Filter(multi eq)` |
+| [ThruDate](Crm.Pricing.ProductPrices.md#thrudate) | date __nullable__ | Ending date (inclusive) of the validity of the price`Filter(eq;ge;le)` |
 
 ## References
 
@@ -73,12 +73,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.ProductPrices.md#id) | guid |  
-| [ObjectVersion](Crm.Pricing.ProductPrices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pricing.ProductPrices.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.ProductPrices.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.ProductPrices.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pricing.ProductPrices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pricing.ProductPrices.md#id) | guid |  |
+| [ObjectVersion](Crm.Pricing.ProductPrices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pricing.ProductPrices.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pricing.ProductPrices.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.ProductPrices.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pricing.ProductPrices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

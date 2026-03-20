@@ -33,17 +33,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message 
-| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses`Filter(like)` 
-| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created`Required` `Default(Now)` `Filter(ge;le)` 
-| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address`Required` `Filter(like)` 
-| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | 1 when the message is stored in encrypted format`Required` `Default(false)` `Filter(eq)` 
-| [IsRead](Applications.Mail.Messages.md#isread) | boolean | 1 when the message was read by the user`Required` `Default(false)` `Filter(eq)` 
-| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received`Filter(ge;le)` 
-| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent`Filter(ge;le)` 
-| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server`Filter(eq)` `ORD` 
-| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject`Filter(like)` 
-| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses`Filter(like)` 
+| [Body](Applications.Mail.Messages.md#body) | string (max) __nullable__ | The body of the message |
+| [CcEmailAddressList](Applications.Mail.Messages.md#ccemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of Cc email addresses`Filter(like)` |
+| [CreationDateTime](Applications.Mail.Messages.md#creationdatetime) | datetime | Date and time when the message was created`Required` `Default(Now)` `Filter(ge;le)` |
+| [FromEmailAddress](Applications.Mail.Messages.md#fromemailaddress) | string (512) | Sending email address`Required` `Filter(like)` |
+| [IsEncrypted](Applications.Mail.Messages.md#isencrypted) | boolean | 1 when the message is stored in encrypted format`Required` `Default(false)` `Filter(eq)` |
+| [IsRead](Applications.Mail.Messages.md#isread) | boolean | 1 when the message was read by the user`Required` `Default(false)` `Filter(eq)` |
+| [ReceivedDateTime](Applications.Mail.Messages.md#receiveddatetime) | datetime __nullable__ | Date and time when the message was received`Filter(ge;le)` |
+| [SentDateTime](Applications.Mail.Messages.md#sentdatetime) | datetime __nullable__ | Date and time when the message was sent`Filter(ge;le)` |
+| [ServerMessageID](Applications.Mail.Messages.md#servermessageid) | string (256) __nullable__ | Message ID as it appears on the mail server`Filter(eq)` `ORD` |
+| [Subject](Applications.Mail.Messages.md#subject) | string (1024) __nullable__ | The message subject`Filter(like)` |
+| [ToEmailAddressList](Applications.Mail.Messages.md#toemailaddresslist) | string (2048) __nullable__ | Semicolon-separated list of receiving email addresses`Filter(like)` |
 
 ## References
 
@@ -57,12 +57,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Mail.Messages.md#id) | guid |  
-| [ObjectVersion](Applications.Mail.Messages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Applications.Mail.Messages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Applications.Mail.Messages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Applications.Mail.Messages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Applications.Mail.Messages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Mail.Messages.md#id) | guid |  |
+| [ObjectVersion](Applications.Mail.Messages.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Applications.Mail.Messages.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Applications.Mail.Messages.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Applications.Mail.Messages.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Applications.Mail.Messages.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

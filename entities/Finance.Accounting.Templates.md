@@ -35,9 +35,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Finance.Accounting.Templates.md#name) | string (254) | The name of this Template. `Required` `Filter(like)` 
-| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated vouchers. If not specified the voucher date is set as usual. 
-| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets 
+| [Name](Finance.Accounting.Templates.md#name) | string (254) | The name of this Template. `Required` `Filter(like)` |
+| [VoucherDateSource](Finance.Accounting.Templates.md#voucherdatesource) | string (2000) __nullable__ | Determines the source for the document date of the generated vouchers. If not specified the voucher date is set as usual. |
+| [VoucherDescriptionMask](Finance.Accounting.Templates.md#voucherdescriptionmask) | string (max) __nullable__ | Template voucher description. Can use field substitutes, surrounded with square brackets |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.Templates.md#id) | guid |  
-| [ObjectVersion](Finance.Accounting.Templates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Accounting.Templates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Accounting.Templates.md#id) | guid |  |
+| [ObjectVersion](Finance.Accounting.Templates.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Accounting.Templates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

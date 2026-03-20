@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents.`Required` `Default(true)` `Filter(eq)` 
-| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type.`Required` `Filter(eq;like)` 
+| [IsActive](Projects.Classic.TypeWorkTypes.md#isactive) | boolean | True when the work type is currently active and selectable in new documents.`Required` `Default(true)` `Filter(eq)` |
+| [WorkTypeName](Projects.Classic.TypeWorkTypes.md#worktypename) | string (254) | The name of the work type.`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.TypeWorkTypes.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.TypeWorkTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.TypeWorkTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.TypeWorkTypes.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.TypeWorkTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.TypeWorkTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

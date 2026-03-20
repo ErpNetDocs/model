@@ -35,12 +35,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type.`Required` `Filter(eq;like)` `ORD` 
-| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change. 
-| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days. 
-| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months. 
-| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). 
-| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type.`Required` `Filter(eq;like)` 
+| [Code](Applications.AssetManagement.MaintenanceTypes.md#code) | string (16) | Unique code of the maintenance type.`Required` `Filter(eq;like)` `ORD` |
+| [DefaultParameterChange](Applications.AssetManagement.MaintenanceTypes.md#defaultparameterchange) | int32 __nullable__ | Default positive change of the tracked parameter between two maintenances. NULL means, that maintenances are not scheduled based on parameter change. |
+| [DefaultScheduleDays](Applications.AssetManagement.MaintenanceTypes.md#defaultscheduledays) | int32 __nullable__ | Specifies the maximum number of days between two maintenances (in addition to the number of months specified in Default Schedule Months). NULL means that there is no default schedule in days. |
+| [DefaultScheduleMonths](Applications.AssetManagement.MaintenanceTypes.md#defaultschedulemonths) | int32 __nullable__ | Specifies the maximum number of months between two maintenances. NULL means that there is no default schedule in months. |
+| [Description](Applications.AssetManagement.MaintenanceTypes.md#description) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Detailed description of the maintenance (multilanguage). |
+| [Name](Applications.AssetManagement.MaintenanceTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multilanguage name of the maintenance type.`Required` `Filter(eq;like)` |
 
 ## References
 
@@ -54,12 +54,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  
-| [ObjectVersion](Applications.AssetManagement.MaintenanceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Applications.AssetManagement.MaintenanceTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Applications.AssetManagement.MaintenanceTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Applications.AssetManagement.MaintenanceTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Applications.AssetManagement.MaintenanceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.AssetManagement.MaintenanceTypes.md#id) | guid |  |
+| [ObjectVersion](Applications.AssetManagement.MaintenanceTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Applications.AssetManagement.MaintenanceTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Applications.AssetManagement.MaintenanceTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Applications.AssetManagement.MaintenanceTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Applications.AssetManagement.MaintenanceTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

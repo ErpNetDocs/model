@@ -34,23 +34,23 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseModelName](Projects.AI.Providers.md#basemodelname) | string (64) | Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge.`Required` `Filter(eq)` 
-| [Name](Projects.AI.Providers.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the provider`Required` `Filter(like)` 
-| [Notes](Projects.AI.Providers.md#notes) | string (max) __nullable__ | Notes for this Provider. 
-| [ProviderApiKey](Projects.AI.Providers.md#providerapikey) | string (256) __nullable__ | The API key (provided by the model provider), which should be used to access the provider API. 
-| [ProviderField](Projects.AI.Providers.md#providerfield) | [ProviderField](Projects.AI.Providers.md#providerfield) | The provider of the base model. Currently, only OpenAI is supported.`Required` `Default(&quot;OpenAI&quot;)` `Filter(eq)` 
+| [BaseModelName](Projects.AI.Providers.md#basemodelname) | string (64) | Provider-specific base model (for example "gpt-3.5-turbo-0613"), to which we will add domain specific knowledge.`Required` `Filter(eq)` |
+| [Name](Projects.AI.Providers.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Multi-language name of the provider`Required` `Filter(like)` |
+| [Notes](Projects.AI.Providers.md#notes) | string (max) __nullable__ | Notes for this Provider. |
+| [ProviderApiKey](Projects.AI.Providers.md#providerapikey) | string (256) __nullable__ | The API key (provided by the model provider), which should be used to access the provider API. |
+| [ProviderField](Projects.AI.Providers.md#providerfield) | [ProviderField](Projects.AI.Providers.md#providerfield) | The provider of the base model. Currently, only OpenAI is supported.`Required` `Default(&quot;OpenAI&quot;)` `Filter(eq)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.AI.Providers.md#id) | guid |  
-| [ObjectVersion](Projects.AI.Providers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.AI.Providers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.AI.Providers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.AI.Providers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.AI.Providers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.AI.Providers.md#id) | guid |  |
+| [ObjectVersion](Projects.AI.Providers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.AI.Providers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.AI.Providers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.AI.Providers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.AI.Providers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

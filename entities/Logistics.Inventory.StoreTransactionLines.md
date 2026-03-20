@@ -34,25 +34,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AllowOverExecution](Logistics.Inventory.StoreTransactionLines.md#allowoverexecution) | boolean | If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line`Required` `Default(false)` 
-| [CurrentBalanceBase](Logistics.Inventory.StoreTransactionLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [Finished](Logistics.Inventory.StoreTransactionLines.md#finished) | boolean __nullable__ | 1 if this transaction entry completes the operation. 0 if there might be more entries`Default(false)` `Filter(eq)` 
-| [GuaranteePeriodDays](Logistics.Inventory.StoreTransactionLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
-| [LineBaseCost](Logistics.Inventory.StoreTransactionLines.md#linebasecost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the enterprise company`Currency: TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [LineCost](Logistics.Inventory.StoreTransactionLines.md#linecost) | [Amount (14, 2)](../data-types.md#amount) | Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` 
-| [LineDocumentCost](Logistics.Inventory.StoreTransactionLines.md#linedocumentcost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the document`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` `ReadOnly` 
-| [LineNo](Logistics.Inventory.StoreTransactionLines.md#lineno) | int32 | Line number, unique within the store transaction.`Required` 
-| [LineProductCost](Logistics.Inventory.StoreTransactionLines.md#lineproductcost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the product`Currency: Product.CostingCurrency` `Required` `Default(0)` `ReadOnly` 
-| [LineStoreCost](Logistics.Inventory.StoreTransactionLines.md#linestorecost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the warehouse`Currency: TransactionObj.Store.Currency` `Required` `Default(0)` `ReadOnly` 
-| [Notes](Logistics.Inventory.StoreTransactionLines.md#notes) | string (254) __nullable__ | Notes for this StoreTransactionLine. 
-| [ParentLineId](Logistics.Inventory.StoreTransactionLines.md#parentlineid) | guid __nullable__ | Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. `Filter(multi eq)` 
-| [ParentLineNo](Logistics.Inventory.StoreTransactionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line. 
-| [Quantity](Logistics.Inventory.StoreTransactionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit`Unit: QuantityUnit` `Required` `Default(0)` 
-| [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` 
-| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [TempOrderNo](Logistics.Inventory.StoreTransactionLines.md#temporderno) | string (50) __nullable__ | Obsolete. Not used.`Filter(eq)` 
-| [TransactionTimestamp](Logistics.Inventory.StoreTransactionLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product.`Filter(ge;le)` `ORD` 
-| [UnitCost](Logistics.Inventory.StoreTransactionLines.md#unitcost) | [Amount (14, 5)](../data-types.md#amount) | Cost for 1 of the specified quantity`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` 
+| [AllowOverExecution](Logistics.Inventory.StoreTransactionLines.md#allowoverexecution) | boolean | If checked specifies that the quantity in this line may exceed the quantity in the corresponding store order line`Required` `Default(false)` |
+| [CurrentBalanceBase](Logistics.Inventory.StoreTransactionLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. |
+| [Finished](Logistics.Inventory.StoreTransactionLines.md#finished) | boolean __nullable__ | 1 if this transaction entry completes the operation. 0 if there might be more entries`Default(false)` `Filter(eq)` |
+| [GuaranteePeriodDays](Logistics.Inventory.StoreTransactionLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. |
+| [LineBaseCost](Logistics.Inventory.StoreTransactionLines.md#linebasecost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the enterprise company`Currency: TransactionObj.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` |
+| [LineCost](Logistics.Inventory.StoreTransactionLines.md#linecost) | [Amount (14, 2)](../data-types.md#amount) | Suggested total cost for the line, specified by the user or when the document was generated. Used only when Cost Source = Document, in which case it is used to specify the actual total cost for the line.`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` |
+| [LineDocumentCost](Logistics.Inventory.StoreTransactionLines.md#linedocumentcost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the document`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` `ReadOnly` |
+| [LineNo](Logistics.Inventory.StoreTransactionLines.md#lineno) | int32 | Line number, unique within the store transaction.`Required` |
+| [LineProductCost](Logistics.Inventory.StoreTransactionLines.md#lineproductcost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the product`Currency: Product.CostingCurrency` `Required` `Default(0)` `ReadOnly` |
+| [LineStoreCost](Logistics.Inventory.StoreTransactionLines.md#linestorecost) | [Amount (14, 2)](../data-types.md#amount) | The cost of the transaction in the currency of the warehouse`Currency: TransactionObj.Store.Currency` `Required` `Default(0)` `ReadOnly` |
+| [Notes](Logistics.Inventory.StoreTransactionLines.md#notes) | string (254) __nullable__ | Notes for this StoreTransactionLine. |
+| [ParentLineId](Logistics.Inventory.StoreTransactionLines.md#parentlineid) | guid __nullable__ | Used, when transaction lines are generated directly from other entities (different from Store Order). Denotes the Id of the parent document line, which generated the transaction line. `Filter(multi eq)` |
+| [ParentLineNo](Logistics.Inventory.StoreTransactionLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute line. |
+| [Quantity](Logistics.Inventory.StoreTransactionLines.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity received/issued in the measurement unit, specified in Quantity_Unit_Id. NULL means that the quantity is specified only in base measurement unit`Unit: QuantityUnit` `Required` `Default(0)` |
+| [QuantityBase](Logistics.Inventory.StoreTransactionLines.md#quantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` `Filter(ge;le)` |
+| [StandardQuantityBase](Logistics.Inventory.StoreTransactionLines.md#standardquantitybase) | [Quantity (18, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` |
+| [TempOrderNo](Logistics.Inventory.StoreTransactionLines.md#temporderno) | string (50) __nullable__ | Obsolete. Not used.`Filter(eq)` |
+| [TransactionTimestamp](Logistics.Inventory.StoreTransactionLines.md#transactiontimestamp) | datetime __nullable__ | Exact time when the transaction changes the cost of the product.`Filter(ge;le)` `ORD` |
+| [UnitCost](Logistics.Inventory.StoreTransactionLines.md#unitcost) | [Amount (14, 5)](../data-types.md#amount) | Cost for 1 of the specified quantity`Currency: TransactionObj.DocumentCurrency` `Required` `Default(0)` |
 
 ## References
 
@@ -76,9 +76,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Inventory.StoreTransactionLines.md#id) | guid |  
-| [ObjectVersion](Logistics.Inventory.StoreTransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Inventory.StoreTransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Inventory.StoreTransactionLines.md#id) | guid |  |
+| [ObjectVersion](Logistics.Inventory.StoreTransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Inventory.StoreTransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

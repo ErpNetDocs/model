@@ -44,13 +44,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DefaultPropertyValue](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. 
-| [DefaultProperty<br />ValueDescription](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. 
-| [DefaultValueId](Systems.Documents.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` 
-| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type`Required` `Filter(ge;le)` `ORD` 
-| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | 1 if the property is required when creating documents of this type`Required` `Default(false)` `Filter(eq)` 
-| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.`Filter(ge;le)` 
-| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.`Filter(ge;le)` 
+| [DefaultPropertyValue](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvalue) | string (254) __nullable__ | The default value of the property when creating new documents. |
+| [DefaultProperty<br />ValueDescription](Systems.Documents.DocumentTypeProperties.md#defaultpropertyvaluedescription) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Default description value of the property when creating new documents. |
+| [DefaultValueId](Systems.Documents.DocumentTypeProperties.md#defaultvalueid) | guid __nullable__ | Internal Id of the default value of the property. `Filter(multi eq)` |
+| [LineNo](Systems.Documents.DocumentTypeProperties.md#lineno) | int32 | Line number, unique within the document type`Required` `Filter(ge;le)` `ORD` |
+| [Required](Systems.Documents.DocumentTypeProperties.md#required) | boolean | 1 if the property is required when creating documents of this type`Required` `Default(false)` `Filter(eq)` |
+| [RequiredFromDate](Systems.Documents.DocumentTypeProperties.md#requiredfromdate) | datetime __nullable__ | When not null, specifies a date, after which the property becomes required for the current document type. The date is compared against the document date.`Filter(ge;le)` |
+| [RequiredThruDate](Systems.Documents.DocumentTypeProperties.md#requiredthrudate) | datetime __nullable__ | When not null, specifies a date, up to which the property is required for the current document type. The date is compared against the document date.`Filter(ge;le)` |
 
 ## References
 
@@ -65,9 +65,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Documents.DocumentTypeProperties.md#id) | guid |  
-| [ObjectVersion](Systems.Documents.DocumentTypeProperties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Documents.DocumentTypeProperties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Documents.DocumentTypeProperties.md#id) | guid |  |
+| [ObjectVersion](Systems.Documents.DocumentTypeProperties.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Documents.DocumentTypeProperties.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

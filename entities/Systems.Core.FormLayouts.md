@@ -42,16 +42,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Core.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout.`Required` `Filter(eq)` `ORD` 
-| [Category](Systems.Core.FormLayouts.md#category) | string (36) __nullable__ | The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type.`Filter(eq)` `Introduced in version 23.1.1.25` 
-| [FormName](Systems.Core.FormLayouts.md#formname) | string (128) | The form, for which the layout is applied.`Required` `Filter(eq;like)` 
-| [Layout](Systems.Core.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. 
-| [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.`Required` `Default(&quot;U&quot;)` 
-| [LayoutName](Systems.Core.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names.`Required` `Filter(eq;like)` 
-| [<s>LayoutXml</s>](Systems.Core.FormLayouts.md#layoutxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Layout xml - not used.`Obsolete` `Obsoleted in version 22.1.6.61` 
-| [<s>MachineName</s>](Systems.Core.FormLayouts.md#machinename) | string (128) __nullable__ | **OBSOLETE! Do not use!** The machine name - not used.`Obsolete` `Filter(eq;like)` `Obsoleted in version 22.1.6.61` 
-| [PanelName](Systems.Core.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied.`Required` `Default(&quot;Form&quot;)` `Filter(eq)` 
-| [UserName](Systems.Core.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. NULL means that the layout is applied for all users.`Filter(eq;like)` 
+| [ApplicationName](Systems.Core.FormLayouts.md#applicationname) | string (64) | The application, which consumes the layout.`Required` `Filter(eq)` `ORD` |
+| [Category](Systems.Core.FormLayouts.md#category) | string (36) __nullable__ | The object category for which the layout is applied. Object category is usually user-defined and further divides the objects of a given object type.`Filter(eq)` `Introduced in version 23.1.1.25` |
+| [FormName](Systems.Core.FormLayouts.md#formname) | string (128) | The form, for which the layout is applied.`Required` `Filter(eq;like)` |
+| [Layout](Systems.Core.FormLayouts.md#layout) | byte[] __nullable__ | The byte storage of the layout. |
+| [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | [LayoutFormat](Systems.Core.FormLayouts.md#layoutformat) | The format of the data in the Layout column. Values can be: 'U' - uncompressed; 'L' - LZO compressed; 'D' - Deflate compressed.`Required` `Default(&quot;U&quot;)` |
+| [LayoutName](Systems.Core.FormLayouts.md#layoutname) | string (64) | The name of a named layout. Standard layouts have empty string names.`Required` `Filter(eq;like)` |
+| [<s>LayoutXml</s>](Systems.Core.FormLayouts.md#layoutxml) | string (max) __nullable__ | **OBSOLETE! Do not use!** Layout xml - not used.`Obsolete` `Obsoleted in version 22.1.6.61` |
+| [<s>MachineName</s>](Systems.Core.FormLayouts.md#machinename) | string (128) __nullable__ | **OBSOLETE! Do not use!** The machine name - not used.`Obsolete` `Filter(eq;like)` `Obsoleted in version 22.1.6.61` |
+| [PanelName](Systems.Core.FormLayouts.md#panelname) | string (64) | The visual panel, for which the layout is applied.`Required` `Default(&quot;Form&quot;)` `Filter(eq)` |
+| [UserName](Systems.Core.FormLayouts.md#username) | string (64) __nullable__ | The user for which the layout is applied. NULL means that the layout is applied for all users.`Filter(eq;like)` |
 
 ## References
 
@@ -66,12 +66,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.FormLayouts.md#id) | guid |  
-| [ObjectVersion](Systems.Core.FormLayouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.FormLayouts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.FormLayouts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.FormLayouts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.FormLayouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.FormLayouts.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.FormLayouts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.FormLayouts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.FormLayouts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.FormLayouts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.FormLayouts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

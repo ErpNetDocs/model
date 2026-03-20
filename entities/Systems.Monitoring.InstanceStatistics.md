@@ -34,33 +34,33 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationName](Systems.Monitoring.InstanceStatistics.md#applicationname) | string (128) __nullable__ | The application (if applicable) for which we are recording stats.`Filter(eq;like)` 
-| [Avg](Systems.Monitoring.InstanceStatistics.md#avg) | int32 __nullable__ | The avg value of the stat for the time period.`Filter(ge;le)` 
-| [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences.`Required` `Filter(ge;le)` 
-| [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests).`Required` 
-| [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies.`Required` `Filter(eq;like)` 
-| [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period.`Filter(ge;le)` 
-| [ObjectName](Systems.Monitoring.InstanceStatistics.md#objectname) | string (256) __nullable__ | Name of the object or operation (depending on the statistic type). 
-| [StatisticDate](Systems.Monitoring.InstanceStatistics.md#statisticdate) | date | The date (in UTC time) for which we are storing the statistics.`Required` `Filter(eq;ge;le)` `ORD` 
-| [StatisticFromTimeUtc](Systems.Monitoring.InstanceStatistics.md#statisticfromtimeutc) | time | The starting of the time period within the date.`Required` `Filter(ge;le)` 
-| [StatisticToTimeUtc](Systems.Monitoring.InstanceStatistics.md#statistictotimeutc) | time | The ending of the time period within the date.`Required` `Filter(ge;le)` 
-| [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site`Required` `Filter(multi eq)` `ORD` 
-| [SubType](Systems.Monitoring.InstanceStatistics.md#subtype) | string (64) | Kind of stat (depending on the type).`Required` `Filter(eq)` 
-| [Total](Systems.Monitoring.InstanceStatistics.md#total) | int32 | The total of the stat for the time period.`Required` `Filter(ge;le)` 
-| [UnitOfMeasure](Systems.Monitoring.InstanceStatistics.md#unitofmeasure) | string (10) | Unit of measure for Total and Max.`Required` `Filter(eq)` 
-| [Value](Systems.Monitoring.InstanceStatistics.md#value) | string (64) __nullable__ | Holds the metric in text when numeric fields can't represent it.`Introduced in version 26.2.0.73` 
+| [ApplicationName](Systems.Monitoring.InstanceStatistics.md#applicationname) | string (128) __nullable__ | The application (if applicable) for which we are recording stats.`Filter(eq;like)` |
+| [Avg](Systems.Monitoring.InstanceStatistics.md#avg) | int32 __nullable__ | The avg value of the stat for the time period.`Filter(ge;le)` |
+| [Count](Systems.Monitoring.InstanceStatistics.md#count) | int32 | Number of occurrences.`Required` `Filter(ge;le)` |
+| [ExcludeFromSummary](Systems.Monitoring.InstanceStatistics.md#excludefromsummary) | boolean | Denotes that the stat should be excluded from summarization queries (for example long polling requests).`Required` |
+| [InstanceName](Systems.Monitoring.InstanceStatistics.md#instancename) | string (128) | The name of the instance to which this statistic applies.`Required` `Filter(eq;like)` |
+| [Max](Systems.Monitoring.InstanceStatistics.md#max) | int32 __nullable__ | The max value of the stat within the time period.`Filter(ge;le)` |
+| [ObjectName](Systems.Monitoring.InstanceStatistics.md#objectname) | string (256) __nullable__ | Name of the object or operation (depending on the statistic type). |
+| [StatisticDate](Systems.Monitoring.InstanceStatistics.md#statisticdate) | date | The date (in UTC time) for which we are storing the statistics.`Required` `Filter(eq;ge;le)` `ORD` |
+| [StatisticFromTimeUtc](Systems.Monitoring.InstanceStatistics.md#statisticfromtimeutc) | time | The starting of the time period within the date.`Required` `Filter(ge;le)` |
+| [StatisticToTimeUtc](Systems.Monitoring.InstanceStatistics.md#statistictotimeutc) | time | The ending of the time period within the date.`Required` `Filter(ge;le)` |
+| [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | [StatisticType](Systems.Monitoring.InstanceStatistics.md#statistictype) | The type of the statistic: 'EXE' = Exec, 'WAI' = Wait, 'TAB' = Table, 'PER' = Performance, 'SIT' = Site`Required` `Filter(multi eq)` `ORD` |
+| [SubType](Systems.Monitoring.InstanceStatistics.md#subtype) | string (64) | Kind of stat (depending on the type).`Required` `Filter(eq)` |
+| [Total](Systems.Monitoring.InstanceStatistics.md#total) | int32 | The total of the stat for the time period.`Required` `Filter(ge;le)` |
+| [UnitOfMeasure](Systems.Monitoring.InstanceStatistics.md#unitofmeasure) | string (10) | Unit of measure for Total and Max.`Required` `Filter(eq)` |
+| [Value](Systems.Monitoring.InstanceStatistics.md#value) | string (64) __nullable__ | Holds the metric in text when numeric fields can't represent it.`Introduced in version 26.2.0.73` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Monitoring.InstanceStatistics.md#id) | guid |  
-| [ObjectVersion](Systems.Monitoring.InstanceStatistics.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Monitoring.InstanceStatistics.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Monitoring.InstanceStatistics.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Monitoring.InstanceStatistics.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Monitoring.InstanceStatistics.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Monitoring.InstanceStatistics.md#id) | guid |  |
+| [ObjectVersion](Systems.Monitoring.InstanceStatistics.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Monitoring.InstanceStatistics.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Monitoring.InstanceStatistics.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Monitoring.InstanceStatistics.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Monitoring.InstanceStatistics.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

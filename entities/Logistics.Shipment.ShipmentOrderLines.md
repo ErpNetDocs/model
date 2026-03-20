@@ -34,25 +34,25 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BoxCount](Logistics.Shipment.ShipmentOrderLines.md#boxcount) | int32 __nullable__ | The count of boxes in which the goods are packaged. NULL means unknown 
-| [CurrentBalanceBase](Logistics.Shipment.ShipmentOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. 
-| [Finished](Logistics.Shipment.ShipmentOrderLines.md#finished) | boolean | Checked if this shipment order should prohibit further shipment orders for the sales order line.`Required` `Default(false)` `Filter(eq)` 
-| [GrossWeightkg](Logistics.Shipment.ShipmentOrderLines.md#grossweightkg) | decimal (12, 3) __nullable__ | The gross weight of the whole line in kilogramms. NULL means unknown 
-| [GuaranteePeriodDays](Logistics.Shipment.ShipmentOrderLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. 
-| [Heightm](Logistics.Shipment.ShipmentOrderLines.md#heightm) | decimal (12, 3) __nullable__ | The height of the package in meters. NULL means unknown 
-| [Lengthm](Logistics.Shipment.ShipmentOrderLines.md#lengthm) | decimal (12, 3) __nullable__ | The length of the package in meters. NULL means unknown 
-| [LineNo](Logistics.Shipment.ShipmentOrderLines.md#lineno) | int32 | Line number, unique for the shipment`Required` 
-| [NetWeightkg](Logistics.Shipment.ShipmentOrderLines.md#netweightkg) | decimal (12, 3) __nullable__ | The net weight of the entire batch of goods in kilograms. NULL means unknown 
-| [Notes](Logistics.Shipment.ShipmentOrderLines.md#notes) | string (max) __nullable__ | Specific notes for this line. 
-| [PalletNo](Logistics.Shipment.ShipmentOrderLines.md#palletno) | int32 __nullable__ | The number of the pallet in which the goods are packaged. NULL means unknown 
-| [ParentLineNo](Logistics.Shipment.ShipmentOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line. 
-| [PersistLot](Logistics.Shipment.ShipmentOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.`Required` `Default(false)` `Filter(eq)` 
-| [Product](Logistics.Shipment.ShipmentOrderLines.md#product) | [Product](../data-types.md#general.products.product) |              Gets or sets the product.              
-| [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity to be shipped`Unit: QuantityUnit` `Required` `Default(1)` 
-| [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product.`Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` 
-| [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal (12, 3) __nullable__ | The volume in litres of the whole batch. NULL means unknown 
-| [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal (12, 3) __nullable__ | The width of the package in meters. NULL means unknown 
+| [BoxCount](Logistics.Shipment.ShipmentOrderLines.md#boxcount) | int32 __nullable__ | The count of boxes in which the goods are packaged. NULL means unknown |
+| [CurrentBalanceBase](Logistics.Shipment.ShipmentOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. |
+| [Finished](Logistics.Shipment.ShipmentOrderLines.md#finished) | boolean | Checked if this shipment order should prohibit further shipment orders for the sales order line.`Required` `Default(false)` `Filter(eq)` |
+| [GrossWeightkg](Logistics.Shipment.ShipmentOrderLines.md#grossweightkg) | decimal (12, 3) __nullable__ | The gross weight of the whole line in kilogramms. NULL means unknown |
+| [GuaranteePeriodDays](Logistics.Shipment.ShipmentOrderLines.md#guaranteeperioddays) | int32 __nullable__ | standard guarantee period in days. Can be set only if the product type is serviced. |
+| [Heightm](Logistics.Shipment.ShipmentOrderLines.md#heightm) | decimal (12, 3) __nullable__ | The height of the package in meters. NULL means unknown |
+| [Lengthm](Logistics.Shipment.ShipmentOrderLines.md#lengthm) | decimal (12, 3) __nullable__ | The length of the package in meters. NULL means unknown |
+| [LineNo](Logistics.Shipment.ShipmentOrderLines.md#lineno) | int32 | Line number, unique for the shipment`Required` |
+| [NetWeightkg](Logistics.Shipment.ShipmentOrderLines.md#netweightkg) | decimal (12, 3) __nullable__ | The net weight of the entire batch of goods in kilograms. NULL means unknown |
+| [Notes](Logistics.Shipment.ShipmentOrderLines.md#notes) | string (max) __nullable__ | Specific notes for this line. |
+| [PalletNo](Logistics.Shipment.ShipmentOrderLines.md#palletno) | int32 __nullable__ | The number of the pallet in which the goods are packaged. NULL means unknown |
+| [ParentLineNo](Logistics.Shipment.ShipmentOrderLines.md#parentlineno) | int32 __nullable__ | The number of the line within the parent document, which the current line executes. NULL when the current line does not execute parent line. |
+| [PersistLot](Logistics.Shipment.ShipmentOrderLines.md#persistlot) | boolean | If checked specifies that the lot in the line cannot be changed in the sub-documents created by the current document.`Required` `Default(false)` `Filter(eq)` |
+| [Product](Logistics.Shipment.ShipmentOrderLines.md#product) | [Product](../data-types.md#general.products.product) |              Gets or sets the product.              |
+| [Quantity](Logistics.Shipment.ShipmentOrderLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity to be shipped`Unit: QuantityUnit` `Required` `Default(1)` |
+| [QuantityBase](Logistics.Shipment.ShipmentOrderLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product.`Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` |
+| [StandardQuantityBase](Logistics.Shipment.ShipmentOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: ParentSalesOrderLine.Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` |
+| [Volumel](Logistics.Shipment.ShipmentOrderLines.md#volumel) | decimal (12, 3) __nullable__ | The volume in litres of the whole batch. NULL means unknown |
+| [Widthm](Logistics.Shipment.ShipmentOrderLines.md#widthm) | decimal (12, 3) __nullable__ | The width of the package in meters. NULL means unknown |
 
 ## References
 
@@ -72,9 +72,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Shipment.ShipmentOrderLines.md#id) | guid |  
-| [ObjectVersion](Logistics.Shipment.ShipmentOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Shipment.ShipmentOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Shipment.ShipmentOrderLines.md#id) | guid |  |
+| [ObjectVersion](Logistics.Shipment.ShipmentOrderLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Shipment.ShipmentOrderLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

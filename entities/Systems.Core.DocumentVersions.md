@@ -41,13 +41,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentData](Systems.Core.DocumentVersions.md#documentdata) | byte[] __nullable__ | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).`ReadOnly` 
-| [DocumentDataFormat](Systems.Core.DocumentVersions.md#documentdataformat) | string (1) | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.`Required` `Default(&quot;U&quot;)` `ReadOnly` 
-| [DocumentDataXML](Systems.Core.DocumentVersions.md#documentdataxml) | string (max) __nullable__ | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).`ReadOnly` 
-| [State](Systems.Core.DocumentVersions.md#state) | [State](Systems.Core.DocumentVersions.md#state) | The state of the document by the time it was saved`Required` `Default(0)` `Filter(multi eq)` `ReadOnly` 
-| [UpdateTime](Systems.Core.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved`Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [UpdateUser](Systems.Core.DocumentVersions.md#updateuser) | string (64) | The login name of the user that saved this version`Required` `Filter(eq;like)` `ReadOnly` 
-| [Version](Systems.Core.DocumentVersions.md#version) | int32 | The version number that is stored in this row`Required` `Filter(eq;ge;le)` `ReadOnly` 
+| [DocumentData](Systems.Core.DocumentVersions.md#documentdata) | byte[] __nullable__ | Compressed representation of the document data. Valid when Document Data Format = D (deflate compressed).`ReadOnly` |
+| [DocumentDataFormat](Systems.Core.DocumentVersions.md#documentdataformat) | string (1) | The format of the saved document data. 'U' - uncompressed and stored in Document Data XML; 'D' - Deflate compressed and stored in Document Data.`Required` `Default(&quot;U&quot;)` `ReadOnly` |
+| [DocumentDataXML](Systems.Core.DocumentVersions.md#documentdataxml) | string (max) __nullable__ | The uncompressed XML representation of the document data, including the document row, the header row and all types of lines. Valid when Document Data Format = U (uncompressed).`ReadOnly` |
+| [State](Systems.Core.DocumentVersions.md#state) | [State](Systems.Core.DocumentVersions.md#state) | The state of the document by the time it was saved`Required` `Default(0)` `Filter(multi eq)` `ReadOnly` |
+| [UpdateTime](Systems.Core.DocumentVersions.md#updatetime) | datetime | The date and time when this version was saved`Required` `Default(Now)` `Filter(ge;le)` `ORD` `ReadOnly` |
+| [UpdateUser](Systems.Core.DocumentVersions.md#updateuser) | string (64) | The login name of the user that saved this version`Required` `Filter(eq;like)` `ReadOnly` |
+| [Version](Systems.Core.DocumentVersions.md#version) | int32 | The version number that is stored in this row`Required` `Filter(eq;ge;le)` `ReadOnly` |
 
 ## References
 
@@ -60,12 +60,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.DocumentVersions.md#id) | guid |  
-| [ObjectVersion](Systems.Core.DocumentVersions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.DocumentVersions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.DocumentVersions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.DocumentVersions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.DocumentVersions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.DocumentVersions.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.DocumentVersions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.DocumentVersions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.DocumentVersions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.DocumentVersions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.DocumentVersions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

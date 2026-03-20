@@ -44,10 +44,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form`Required` `Default(false)` `Filter(eq)` 
-| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When 1 the reminder was dismissed by the user; the initial value is 0`Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Activities.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task 
-| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user`Required` `Filter(ge;le)` 
+| [IsDefault](General.Activities.Reminders.md#isdefault) | boolean | 1 when this is the defult reminder for a task. The default reminder is controlled through the task, while non-default reminders are manipulated through separate form`Required` `Default(false)` `Filter(eq)` |
+| [IsDismissed](General.Activities.Reminders.md#isdismissed) | boolean | When 1 the reminder was dismissed by the user; the initial value is 0`Required` `Default(false)` `Filter(eq)` |
+| [Notes](General.Activities.Reminders.md#notes) | string (max) __nullable__ | Notes that describe this specific reminder for the task |
+| [ReminderTime](General.Activities.Reminders.md#remindertime) | datetime | The time when the alarm should snooze to the user`Required` `Filter(ge;le)` |
 
 ## References
 
@@ -60,9 +60,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Activities.Reminders.md#id) | guid |  
-| [ObjectVersion](General.Activities.Reminders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Activities.Reminders.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Activities.Reminders.md#id) | guid |  |
+| [ObjectVersion](General.Activities.Reminders.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Activities.Reminders.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

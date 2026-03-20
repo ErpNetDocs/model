@@ -37,14 +37,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LicenseCode](Systems.Monitoring.LicenseHistory.md#licensecode) | string (64) | The code of the module or functionality, which is licensed.`Required` `Filter(multi eq;like)` 
-| [LicenseCount](Systems.Monitoring.LicenseHistory.md#licensecount) | int32 | The number of licenses given (+) or taken (-).`Required` `Filter(eq;ge;le)` 
-| [LicenseDescription](Systems.Monitoring.LicenseHistory.md#licensedescription) | string (max) | Description of the license code.`Required` 
-| [LicenseEndDate](Systems.Monitoring.LicenseHistory.md#licenseenddate) | date | The date (inclusive), until the license is active.`Required` `Filter(eq;ge;le)` 
-| [LicenseScaleType](Systems.Monitoring.LicenseHistory.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1.`Required` 
-| [LicenseStartDate](Systems.Monitoring.LicenseHistory.md#licensestartdate) | date | The date (inclusive), from which the license is active.`Required` `Filter(eq;ge;le)` 
-| [LicensingDate](Systems.Monitoring.LicenseHistory.md#licensingdate) | date | The date, when the license was issued.`Required` `Filter(eq;ge;le)` 
-| [LicensingEvent](Systems.Monitoring.LicenseHistory.md#licensingevent) | string (128) | Unique licensing event key. Can be used to group all license codes given with a single licensing event.`Required` 
+| [LicenseCode](Systems.Monitoring.LicenseHistory.md#licensecode) | string (64) | The code of the module or functionality, which is licensed.`Required` `Filter(multi eq;like)` |
+| [LicenseCount](Systems.Monitoring.LicenseHistory.md#licensecount) | int32 | The number of licenses given (+) or taken (-).`Required` `Filter(eq;ge;le)` |
+| [LicenseDescription](Systems.Monitoring.LicenseHistory.md#licensedescription) | string (max) | Description of the license code.`Required` |
+| [LicenseEndDate](Systems.Monitoring.LicenseHistory.md#licenseenddate) | date | The date (inclusive), until the license is active.`Required` `Filter(eq;ge;le)` |
+| [LicenseScaleType](Systems.Monitoring.LicenseHistory.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1.`Required` |
+| [LicenseStartDate](Systems.Monitoring.LicenseHistory.md#licensestartdate) | date | The date (inclusive), from which the license is active.`Required` `Filter(eq;ge;le)` |
+| [LicensingDate](Systems.Monitoring.LicenseHistory.md#licensingdate) | date | The date, when the license was issued.`Required` `Filter(eq;ge;le)` |
+| [LicensingEvent](Systems.Monitoring.LicenseHistory.md#licensingevent) | string (128) | Unique licensing event key. Can be used to group all license codes given with a single licensing event.`Required` |
 
 
 ## Attribute Details

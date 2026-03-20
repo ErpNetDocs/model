@@ -34,20 +34,20 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits`Required` `Default(0)` 
-| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (18, 2) __nullable__ | The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.`ReadOnly` 
-| [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited`Currency: Currency` `Required` `Default(0)` 
-| [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of credit in base currency`Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [CreditReporting](Finance.Accounting.AccountingVoucherLines.md#creditreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of credit in reporting currency.`Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` 
-| [Debit](Finance.Accounting.AccountingVoucherLines.md#debit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited`Currency: Currency` `Required` `Default(0)` 
-| [DebitBase](Finance.Accounting.AccountingVoucherLines.md#debitbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of debit in base currency`Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` 
-| [DebitReporting](Finance.Accounting.AccountingVoucherLines.md#debitreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of debit in reporting currency.`Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` 
-| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (64) __nullable__ | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.`Filter(eq;like)` 
-| [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher`Required` 
-| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from Debit/Credit to base currency`Required` `Default(1)` 
-| [RateDivisorRC](Finance.Accounting.AccountingVoucherLines.md#ratedivisorrc) | decimal (18, 6) __nullable__ | The divisor for conversion from Debit/Credit to Reporting currency.`Introduced in version 26.1.3.74` 
-| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from Debit/Credit to base currency`Required` `Default(1)` 
-| [RateMultiplierRC](Finance.Accounting.AccountingVoucherLines.md#ratemultiplierrc) | decimal (18, 6) __nullable__ | The multiplier for conversion from Debit/Credit to Reporting currency.`Introduced in version 26.1.3.74` 
+| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits`Required` `Default(0)` |
+| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (18, 2) __nullable__ | The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.`ReadOnly` |
+| [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited`Currency: Currency` `Required` `Default(0)` |
+| [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of credit in base currency`Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` |
+| [CreditReporting](Finance.Accounting.AccountingVoucherLines.md#creditreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of credit in reporting currency.`Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` |
+| [Debit](Finance.Accounting.AccountingVoucherLines.md#debit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the debit in the currency of the account. 0 means that the account is not debited`Currency: Currency` `Required` `Default(0)` |
+| [DebitBase](Finance.Accounting.AccountingVoucherLines.md#debitbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of debit in base currency`Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` |
+| [DebitReporting](Finance.Accounting.AccountingVoucherLines.md#debitreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of debit in reporting currency.`Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` |
+| [ItemKey](Finance.Accounting.AccountingVoucherLines.md#itemkey) | string (64) __nullable__ | The item (grouping) key for the account in the line. Account_Id + Item_Key - the smallest unit of calculation for account balance.`Filter(eq;like)` |
+| [LineNo](Finance.Accounting.AccountingVoucherLines.md#lineno) | int32 | Consecutive number of the line within the voucher`Required` |
+| [RateDivisor](Finance.Accounting.AccountingVoucherLines.md#ratedivisor) | decimal (18, 6) | The divisor for conversion from Debit/Credit to base currency`Required` `Default(1)` |
+| [RateDivisorRC](Finance.Accounting.AccountingVoucherLines.md#ratedivisorrc) | decimal (18, 6) __nullable__ | The divisor for conversion from Debit/Credit to Reporting currency.`Introduced in version 26.1.3.74` |
+| [RateMultiplier](Finance.Accounting.AccountingVoucherLines.md#ratemultiplier) | decimal (18, 6) | The multiplier for conversion from Debit/Credit to base currency`Required` `Default(1)` |
+| [RateMultiplierRC](Finance.Accounting.AccountingVoucherLines.md#ratemultiplierrc) | decimal (18, 6) __nullable__ | The multiplier for conversion from Debit/Credit to Reporting currency.`Introduced in version 26.1.3.74` |
 
 ## References
 
@@ -66,9 +66,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  
-| [ObjectVersion](Finance.Accounting.AccountingVoucherLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Finance.Accounting.AccountingVoucherLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Finance.Accounting.AccountingVoucherLines.md#id) | guid |  |
+| [ObjectVersion](Finance.Accounting.AccountingVoucherLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Finance.Accounting.AccountingVoucherLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

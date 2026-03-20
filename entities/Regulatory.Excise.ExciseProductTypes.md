@@ -44,14 +44,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AlcoholicStrength](Regulatory.Excise.ExciseProductTypes.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.`Required` `Default(0)` 
-| [Capacity](Regulatory.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) __nullable__ | Package capacity - number of cigarettes or volume of alcohol in liters.`Default(0)` 
-| [Category](Regulatory.Excise.ExciseProductTypes.md#category) | [Category](Regulatory.Excise.ExciseProductTypes.md#category) | Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.`Required` 
-| [Code](Regulatory.Excise.ExciseProductTypes.md#code) | string (32) | The unique code of the ExciseProductType. `Required` `Filter(multi eq;like)` `ORD` 
-| [ExciseAmountPerStamp](Regulatory.Excise.ExciseProductTypes.md#exciseamountperstamp) | decimal (10, 6) | The excise duty, which is charged with one excise label.`Required` `Default(0)` 
-| [IsActive](Regulatory.Excise.ExciseProductTypes.md#isactive) | boolean | Indicates whether this excise poduct type is active and usable for choosing in new documents.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Regulatory.Excise.ExciseProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseProductType. `Required` `Filter(like)` 
-| [Notes](Regulatory.Excise.ExciseProductTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseProductType. 
+| [AlcoholicStrength](Regulatory.Excise.ExciseProductTypes.md#alcoholicstrength) | decimal (5, 2) | Percentage of pure alcohol used in excise duty reporting.`Required` `Default(0)` |
+| [Capacity](Regulatory.Excise.ExciseProductTypes.md#capacity) | decimal (6, 4) __nullable__ | Package capacity - number of cigarettes or volume of alcohol in liters.`Default(0)` |
+| [Category](Regulatory.Excise.ExciseProductTypes.md#category) | [Category](Regulatory.Excise.ExciseProductTypes.md#category) | Specifies the excise product category of the excise stamp - alcohol, tobacco, and others.`Required` |
+| [Code](Regulatory.Excise.ExciseProductTypes.md#code) | string (32) | The unique code of the ExciseProductType. `Required` `Filter(multi eq;like)` `ORD` |
+| [ExciseAmountPerStamp](Regulatory.Excise.ExciseProductTypes.md#exciseamountperstamp) | decimal (10, 6) | The excise duty, which is charged with one excise label.`Required` `Default(0)` |
+| [IsActive](Regulatory.Excise.ExciseProductTypes.md#isactive) | boolean | Indicates whether this excise poduct type is active and usable for choosing in new documents.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Regulatory.Excise.ExciseProductTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this ExciseProductType. `Required` `Filter(like)` |
+| [Notes](Regulatory.Excise.ExciseProductTypes.md#notes) | string (max) __nullable__ | Notes for this ExciseProductType. |
 
 ## References
 
@@ -66,12 +66,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Excise.ExciseProductTypes.md#id) | guid |  
-| [ObjectVersion](Regulatory.Excise.ExciseProductTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Regulatory.Excise.ExciseProductTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Regulatory.Excise.ExciseProductTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Regulatory.Excise.ExciseProductTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Regulatory.Excise.ExciseProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Excise.ExciseProductTypes.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Excise.ExciseProductTypes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Regulatory.Excise.ExciseProductTypes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Regulatory.Excise.ExciseProductTypes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Regulatory.Excise.ExciseProductTypes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Regulatory.Excise.ExciseProductTypes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

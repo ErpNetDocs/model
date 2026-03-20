@@ -37,10 +37,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LicenseCode](Systems.Monitoring.Licenses.md#licensecode) | string (64) | The code of the module or functionality, which is licensed.`Required` `Filter(multi eq;like)` `Introduced in version 24.1.3.88` 
-| [LicenseCount](Systems.Monitoring.Licenses.md#licensecount) | int32 | The current count (as of now) of active licenses.`Required` `Filter(eq;ge;le)` `Introduced in version 24.1.3.88` 
-| [LicenseDescription](Systems.Monitoring.Licenses.md#licensedescription) | string (max) | Description of the license code.`Required` `Introduced in version 24.1.3.88` 
-| [LicenseScaleType](Systems.Monitoring.Licenses.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1.`Required` `Introduced in version 24.1.3.88` 
+| [LicenseCode](Systems.Monitoring.Licenses.md#licensecode) | string (64) | The code of the module or functionality, which is licensed.`Required` `Filter(multi eq;like)` `Introduced in version 24.1.3.88` |
+| [LicenseCount](Systems.Monitoring.Licenses.md#licensecount) | int32 | The current count (as of now) of active licenses.`Required` `Filter(eq;ge;le)` `Introduced in version 24.1.3.88` |
+| [LicenseDescription](Systems.Monitoring.Licenses.md#licensedescription) | string (max) | Description of the license code.`Required` `Introduced in version 24.1.3.88` |
+| [LicenseScaleType](Systems.Monitoring.Licenses.md#licensescaletype) | string (64) | Denotes whether the license supports counts, different from 0 and 1.`Required` `Introduced in version 24.1.3.88` |
 
 
 ## Attribute Details

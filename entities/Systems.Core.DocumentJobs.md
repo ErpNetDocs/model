@@ -44,15 +44,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FilterXml](Systems.Core.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed.`Unit: obj.DocumentType.EntityName` `Required` 
-| [IsActive](Systems.Core.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [JobConfigurations](Systems.Core.DocumentJobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [JobType](Systems.Core.DocumentJobs.md#jobtype) | [JobType](Systems.Core.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [Name](Systems.Core.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [NewState](Systems.Core.DocumentJobs.md#newstate) | [DocumentState](Systems.Core.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter.`Required` 
-| [Notes](Systems.Core.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [RunOnIdle](Systems.Core.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
-| [Schedule](Systems.Core.DocumentJobs.md#schedule) | [Schedule](Systems.Core.DocumentJobs.md#schedule) | Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` (Inherited from [Jobs](Systems.Config.Jobs.md)) 
+| [FilterXml](Systems.Core.DocumentJobs.md#filterxml) | dataaccessfilter | Specifies the documents, whose state will be changed.`Unit: obj.DocumentType.EntityName` `Required` |
+| [IsActive](Systems.Core.DocumentJobs.md#isactive) | boolean | Specifies whether the job is active and ready for running. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [JobConfigurations](Systems.Core.DocumentJobs.md#jobconfigurations) | string (max) __nullable__ | The field specifies additional parameters for the execution of the Job in JSON format. null means that there are no specific parameters. `Filter(like)` `Introduced in version 25.1.3.15` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [JobType](Systems.Core.DocumentJobs.md#jobtype) | [JobType](Systems.Core.DocumentJobs.md#jobtype) | The system type of the job. DOC=Document Change State, POS=Run Postponed Events, DNT=Delete Old Notifications, DPI=Delete Old Print Images, DDV=Delete Old Document Versions, DIM=Delete Old Information Messages. `Required` `Filter(multi eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [Name](Systems.Core.DocumentJobs.md#name) | string (254) | The name of the job. `Required` `Filter(eq;like)` `ORD` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [NewState](Systems.Core.DocumentJobs.md#newstate) | [DocumentState](Systems.Core.DocumentJobs.md#newstate) | Specifies the state, which should be set to the documents, matching the filter.`Required` |
+| [Notes](Systems.Core.DocumentJobs.md#notes) | string (max) __nullable__ | Notes for this Job. (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [RunOnIdle](Systems.Core.DocumentJobs.md#runonidle) | boolean | Specifies whether to automatically run the job when the server is idle. `Required` `Default(true)` `Filter(eq)` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
+| [Schedule](Systems.Core.DocumentJobs.md#schedule) | [Schedule](Systems.Core.DocumentJobs.md#schedule) | Defines the execution schedule of the Job. `Required` `Default("NON")` `Filter(multi eq)` `Introduced in version 26.1.4.62` (Inherited from [Jobs](Systems.Config.Jobs.md)) |
 
 ## References
 
@@ -66,12 +66,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.DocumentJobs.md#id) | guid |  
-| [ObjectVersion](Systems.Core.DocumentJobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.DocumentJobs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.DocumentJobs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.DocumentJobs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.DocumentJobs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.DocumentJobs.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.DocumentJobs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.DocumentJobs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.DocumentJobs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.DocumentJobs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.DocumentJobs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

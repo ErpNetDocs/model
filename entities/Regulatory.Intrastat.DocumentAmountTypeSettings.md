@@ -44,8 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | 1= to add the amount to the invoiced value, 0=otherwise`Required` `Default(false)` 
-| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | 1= to add the amount to the statistical value, 0=otherwise`Required` `Default(false)` 
+| [AddToInvoicedValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtoinvoicedvalue) | boolean | 1= to add the amount to the invoiced value, 0=otherwise`Required` `Default(false)` |
+| [AddToStatisticalValue](Regulatory.Intrastat.DocumentAmountTypeSettings.md#addtostatisticalvalue) | boolean | 1= to add the amount to the statistical value, 0=otherwise`Required` `Default(false)` |
 
 ## References
 
@@ -59,9 +59,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Intrastat.DocumentAmountTypeSettings.md#id) | guid |  
-| [ObjectVersion](Regulatory.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Intrastat.DocumentAmountTypeSettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Intrastat.DocumentAmountTypeSettings.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Intrastat.DocumentAmountTypeSettings.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Intrastat.DocumentAmountTypeSettings.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

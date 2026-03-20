@@ -45,8 +45,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.`Required` `Filter(multi eq)` `ORD` 
-| [Notes](General.Contacts.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` 
+| [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | [ApplicableLegislation](General.Contacts.PartyApplicableLegislations.md#applicablelegislation) | A legislation, which applies to the specified party. The list of legislations is system defined, and contains legislations for which system rules are currently defined. For example: US, UK, EU, DE, FR, ES, IT, BG, MK, RO, GR, etc.`Required` `Filter(multi eq)` `ORD` |
+| [Notes](General.Contacts.PartyApplicableLegislations.md#notes) | string (254) __nullable__ | Notes for this PartyApplicableLegislation. `Filter(like)` |
 
 ## References
 
@@ -59,9 +59,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyApplicableLegislations.md#id) | guid |  
-| [ObjectVersion](General.Contacts.PartyApplicableLegislations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Contacts.PartyApplicableLegislations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Contacts.PartyApplicableLegislations.md#id) | guid |  |
+| [ObjectVersion](General.Contacts.PartyApplicableLegislations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Contacts.PartyApplicableLegislations.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

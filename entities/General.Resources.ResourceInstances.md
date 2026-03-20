@@ -36,9 +36,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource.`Required` `Filter(eq;like)` 
-| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name.`Required` `Filter(eq;like)` 
-| [Notes](General.Resources.ResourceInstances.md#notes) | string (max) __nullable__ | Notes for this ResourceInstance. 
+| [Code](General.Resources.ResourceInstances.md#code) | string (16) | Code of the instance, unique within the resource.`Required` `Filter(eq;like)` |
+| [Name](General.Resources.ResourceInstances.md#name) | string (max) | Multilanguage resource instance name.`Required` `Filter(eq;like)` |
+| [Notes](General.Resources.ResourceInstances.md#notes) | string (max) __nullable__ | Notes for this ResourceInstance. |
 
 ## References
 
@@ -53,9 +53,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.ResourceInstances.md#id) | guid |  
-| [ObjectVersion](General.Resources.ResourceInstances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Resources.ResourceInstances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Resources.ResourceInstances.md#id) | guid |  |
+| [ObjectVersion](General.Resources.ResourceInstances.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Resources.ResourceInstances.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -41,13 +41,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Cancelled](Systems.Monitoring.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.`Required` `Default(false)` `Filter(eq)` 
-| [CreationTime](Systems.Monitoring.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` 
-| [DocumentEvent](Systems.Monitoring.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed`Required` `ReadOnly` 
-| [LastProcessStatus](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure.`ReadOnly` 
-| [LastProcessTime](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocesstime) | datetime __nullable__ | The time of the last attempt to process the event`Filter(ge;le)` `ReadOnly` 
-| [Processed](Systems.Monitoring.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed`Required` `ReadOnly` 
+| [Cancelled](Systems.Monitoring.ScheduledDocumentEvents.md#cancelled) | boolean | When true, specifies that this document event has been cancelled (either manually or in respect to another event) and will not be executed.`Required` `Default(false)` `Filter(eq)` |
+| [CreationTime](Systems.Monitoring.ScheduledDocumentEvents.md#creationtime) | datetime | Date and time when the ScheduledDocumentEvent was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` |
+| [DocumentEvent](Systems.Monitoring.ScheduledDocumentEvents.md#documentevent) | string (254) | The type of the document event that is scheduled to be processed`Required` `ReadOnly` |
+| [LastProcessStatus](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocessstatus) | string (max) __nullable__ | Status/information of the last attemp to process the event. Usually shows the cause in case of failure.`ReadOnly` |
+| [LastProcessTime](Systems.Monitoring.ScheduledDocumentEvents.md#lastprocesstime) | datetime __nullable__ | The time of the last attempt to process the event`Filter(ge;le)` `ReadOnly` |
+| [Processed](Systems.Monitoring.ScheduledDocumentEvents.md#processed) | boolean | Indicates wheather the event is already processed or not`Required` `Default(false)` `Filter(eq)` `ReadOnly` |
+| [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | [State](Systems.Monitoring.ScheduledDocumentEvents.md#state) | The state of the document for which the event will be processed`Required` `ReadOnly` |
 
 ## References
 
@@ -61,12 +61,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Monitoring.ScheduledDocumentEvents.md#id) | guid |  
-| [ObjectVersion](Systems.Monitoring.ScheduledDocumentEvents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Monitoring.ScheduledDocumentEvents.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Monitoring.ScheduledDocumentEvents.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Monitoring.ScheduledDocumentEvents.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Monitoring.ScheduledDocumentEvents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Monitoring.ScheduledDocumentEvents.md#id) | guid |  |
+| [ObjectVersion](Systems.Monitoring.ScheduledDocumentEvents.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Monitoring.ScheduledDocumentEvents.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Monitoring.ScheduledDocumentEvents.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Monitoring.ScheduledDocumentEvents.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Monitoring.ScheduledDocumentEvents.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

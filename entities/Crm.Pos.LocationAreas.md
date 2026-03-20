@@ -37,11 +37,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A.`Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Pos.LocationAreas.md#isactive) | boolean | Indicates whether the POS location area  is currently active.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Crm.Pos.LocationAreas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-friendly name (e.g., 'Main Dining Hall').`Required` `Filter(like)` 
-| [Notes](Crm.Pos.LocationAreas.md#notes) | string (max) __nullable__ | Notes for the location area.`Filter(like)` 
-| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components.`Required` `Filter(eq;ge;le)` `ORD` 
+| [Code](Crm.Pos.LocationAreas.md#code) | string (16) | Unique (within the location) short code, e.g., DINING, ZONE-A.`Required` `Filter(eq;like)` `ORD` |
+| [IsActive](Crm.Pos.LocationAreas.md#isactive) | boolean | Indicates whether the POS location area  is currently active.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Crm.Pos.LocationAreas.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-friendly name (e.g., 'Main Dining Hall').`Required` `Filter(like)` |
+| [Notes](Crm.Pos.LocationAreas.md#notes) | string (max) __nullable__ | Notes for the location area.`Filter(like)` |
+| [Ord](Crm.Pos.LocationAreas.md#ord) | int32 | Sort order within the location. Controls display order in UI components.`Required` `Filter(eq;ge;le)` `ORD` |
 
 ## References
 
@@ -54,9 +54,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.LocationAreas.md#id) | guid |  
-| [ObjectVersion](Crm.Pos.LocationAreas.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Crm.Pos.LocationAreas.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pos.LocationAreas.md#id) | guid |  |
+| [ObjectVersion](Crm.Pos.LocationAreas.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Crm.Pos.LocationAreas.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

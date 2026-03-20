@@ -28,12 +28,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AttributeName](Systems.Core.AttributeChangesHistory.md#attributename) | string (64) | The name of the attribute.`Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` 
-| [EntityItemId](Systems.Core.AttributeChangesHistory.md#entityitemid) | guid | The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id` 
-| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string (max) __nullable__ | The new value`Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` 
-| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string (max) | The previous value`Required` `Filter(eq)` 
-| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.`Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name` 
-| [TimeUtc](Systems.Core.AttributeChangesHistory.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_<br />Table.Time_Utc` 
+| [AttributeName](Systems.Core.AttributeChangesHistory.md#attributename) | string (64) | The name of the attribute.`Required` `Filter(eq)` `Inherited from Sys_Attribute_<br />Changes_Table.Attribute_Name` |
+| [EntityItemId](Systems.Core.AttributeChangesHistory.md#entityitemid) | guid | The id of the actual changed object, described by this change. `Required` `Filter(multi eq)` `Inherited from Sys_Object_Changes_Table.Entity_Item_Id` |
+| [NewValue](Systems.Core.AttributeChangesHistory.md#newvalue) | string (max) __nullable__ | The new value`Filter(eq;like)` `Inherited from Sys_Attribute_<br />Changes_Table.New_Value` |
+| [PreviousValue](Systems.Core.AttributeChangesHistory.md#previousvalue) | string (max) | The previous value`Required` `Filter(eq)` |
+| [RepositoryName](Systems.Core.AttributeChangesHistory.md#repositoryname) | string (64) | The repository of the actual changed object, described by this change. This is different than the aggregate root, which is pointed by Root Object.`Required` `Filter(multi eq;like)` `Inherited from Sys_Object_Changes_Table.Repository_Name` |
+| [TimeUtc](Systems.Core.AttributeChangesHistory.md#timeutc) | datetime | Date and time (in Utc) when the changeset was processed by the server.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `Inherited from Sys_Object_Changesets_<br />Table.Time_Utc` |
 
 ## References
 

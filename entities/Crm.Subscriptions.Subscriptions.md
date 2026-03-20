@@ -34,9 +34,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` 
-| [Notes](Crm.Subscriptions.Subscriptions.md#notes) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Notes for this Subscription. `Filter(like)` 
-| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.`Filter(eq;ge;le)` 
+| [FromDate](Crm.Subscriptions.Subscriptions.md#fromdate) | date | The starting date of the subscription.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` |
+| [Notes](Crm.Subscriptions.Subscriptions.md#notes) | [MultilanguageString (max)](../data-types.md#multilanguagestring) __nullable__ | Notes for this Subscription. `Filter(like)` |
+| [ToDate](Crm.Subscriptions.Subscriptions.md#todate) | date __nullable__ | The final date of the subscription if it is time fenced. NULL means that the subscription is currently open-ended.`Filter(eq;ge;le)` |
 
 ## References
 
@@ -51,12 +51,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Subscriptions.Subscriptions.md#id) | guid |  
-| [ObjectVersion](Crm.Subscriptions.Subscriptions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Subscriptions.Subscriptions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Subscriptions.Subscriptions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Subscriptions.Subscriptions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Subscriptions.Subscriptions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Subscriptions.Subscriptions.md#id) | guid |  |
+| [ObjectVersion](Crm.Subscriptions.Subscriptions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Subscriptions.Subscriptions.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Subscriptions.Subscriptions.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Subscriptions.Subscriptions.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Subscriptions.Subscriptions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

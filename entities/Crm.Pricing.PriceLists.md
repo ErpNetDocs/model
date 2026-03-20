@@ -42,12 +42,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AutoApplyDiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | [DiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `Introduced in version 23.1.2.8` 
-| [Description](Crm.Pricing.PriceLists.md#description) | string (max) __nullable__ | The description of this PriceList. 
-| [FromDate](Crm.Pricing.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list`Filter(eq;ge;le)` 
-| [IsActive](Crm.Pricing.PriceLists.md#isactive) | boolean | Indicates whether the current Price List is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` 
-| [Name](Crm.Pricing.PriceLists.md#name) | string (50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` 
-| [ThruDate](Crm.Pricing.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list`Filter(eq;ge;le)` 
+| [AutoApplyDiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | [DiscountLevel](Crm.Pricing.PriceLists.md#autoapplydiscountlevel) | Indicates the level to which discounts are applied automatically. Increasing the level has performance implications. Discounts, higher than the specified level can also be applied, but must be selected manually by the users. Level 1 discounts are always calculated.`Required` `Default(&quot;1&quot;)` `Filter(multi eq)` `Introduced in version 23.1.2.8` |
+| [Description](Crm.Pricing.PriceLists.md#description) | string (max) __nullable__ | The description of this PriceList. |
+| [FromDate](Crm.Pricing.PriceLists.md#fromdate) | datetime __nullable__ | Starting validity of the price list`Filter(eq;ge;le)` |
+| [IsActive](Crm.Pricing.PriceLists.md#isactive) | boolean | Indicates whether the current Price List is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.0.18` |
+| [Name](Crm.Pricing.PriceLists.md#name) | string (50) | The name of this PriceList. `Required` `Filter(eq;like)` `ORD` |
+| [ThruDate](Crm.Pricing.PriceLists.md#thrudate) | datetime __nullable__ | Ending validity of the price list`Filter(eq;ge;le)` |
 
 ## References
 
@@ -60,12 +60,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pricing.PriceLists.md#id) | guid |  
-| [ObjectVersion](Crm.Pricing.PriceLists.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pricing.PriceLists.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pricing.PriceLists.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pricing.PriceLists.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pricing.PriceLists.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pricing.PriceLists.md#id) | guid |  |
+| [ObjectVersion](Crm.Pricing.PriceLists.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pricing.PriceLists.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pricing.PriceLists.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pricing.PriceLists.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pricing.PriceLists.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

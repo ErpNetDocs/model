@@ -33,13 +33,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [GrossPrice](Crm.Pos.LocationProducts.md#grossprice) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.`Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26` 
-| [MaxQuantity](Crm.Pos.LocationProducts.md#maxquantity) | decimal (10, 3) __nullable__ | Maximum target on-hand quantity for this product in this POS location. Used to calculate replenishment need (MaxQuantity - CurrentOnHand). 
-| [MinQuantity](Crm.Pos.LocationProducts.md#minquantity) | decimal (10, 3) __nullable__ | Minimum desired on-hand quantity for this product in this POS location. Used for basic replenishment and stock alerts. 
-| [Placement](Crm.Pos.LocationProducts.md#placement) | string (254) __nullable__ | Free-text description of default placement 
-| [Status](Crm.Pos.LocationProducts.md#status) | [Status](Crm.Pos.LocationProducts.md#status) | Listing state`Required` `Filter(multi eq)` 
-| [ValidFrom](Crm.Pos.LocationProducts.md#validfrom) | date __nullable__ | Begining of validity`Filter(eq;ge;le)` 
-| [ValidTo](Crm.Pos.LocationProducts.md#validto) | date __nullable__ | End of validity`Filter(eq;ge;le)` 
+| [GrossPrice](Crm.Pos.LocationProducts.md#grossprice) | [Amount (18, 4)](../data-types.md#amount) __nullable__ | Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.`Currency: Product.ProductCurrency` `Introduced in version 26.2.1.26` |
+| [MaxQuantity](Crm.Pos.LocationProducts.md#maxquantity) | decimal (10, 3) __nullable__ | Maximum target on-hand quantity for this product in this POS location. Used to calculate replenishment need (MaxQuantity - CurrentOnHand). |
+| [MinQuantity](Crm.Pos.LocationProducts.md#minquantity) | decimal (10, 3) __nullable__ | Minimum desired on-hand quantity for this product in this POS location. Used for basic replenishment and stock alerts. |
+| [Placement](Crm.Pos.LocationProducts.md#placement) | string (254) __nullable__ | Free-text description of default placement |
+| [Status](Crm.Pos.LocationProducts.md#status) | [Status](Crm.Pos.LocationProducts.md#status) | Listing state`Required` `Filter(multi eq)` |
+| [ValidFrom](Crm.Pos.LocationProducts.md#validfrom) | date __nullable__ | Begining of validity`Filter(eq;ge;le)` |
+| [ValidTo](Crm.Pos.LocationProducts.md#validto) | date __nullable__ | End of validity`Filter(eq;ge;le)` |
 
 ## References
 
@@ -53,12 +53,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.LocationProducts.md#id) | guid |  
-| [ObjectVersion](Crm.Pos.LocationProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Pos.LocationProducts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Pos.LocationProducts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Pos.LocationProducts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Pos.LocationProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pos.LocationProducts.md#id) | guid |  |
+| [ObjectVersion](Crm.Pos.LocationProducts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Pos.LocationProducts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Pos.LocationProducts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Pos.LocationProducts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Pos.LocationProducts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

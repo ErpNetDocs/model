@@ -36,11 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency).`Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` 
-| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency.`Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` 
-| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event.`Required` `Default(Now)` `Filter(eq;ge;le)` 
-| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment.`Filter(like)` 
-| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID).`Filter(eq;like)` 
+| [Amount](Crm.Pos.SalePayments.md#amount) | [Amount (12, 2)](../data-types.md#amount) | Amount paid (in Amount Currency).`Currency: AmountCurrency` `Required` `Filter(eq;ge;le)` |
+| [AmountBase](Crm.Pos.SalePayments.md#amountbase) | [Amount (12, 2)](../data-types.md#amount) | Amount in base currency.`Currency: PosSale.Location.EnterpriseCompany.BaseCurrency` `Required` `Filter(eq)` |
+| [CreatedAt](Crm.Pos.SalePayments.md#createdat) | datetime | Timestamp of the payment event.`Required` `Default(Now)` `Filter(eq;ge;le)` |
+| [Notes](Crm.Pos.SalePayments.md#notes) | string (128) __nullable__ | Notes for the sale payment.`Filter(like)` |
+| [Reference](Crm.Pos.SalePayments.md#reference) | string (64) __nullable__ | Optional external reference (e.g. card transaction ID).`Filter(eq;like)` |
 
 ## References
 
@@ -55,9 +55,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.SalePayments.md#id) | guid |  
-| [ObjectVersion](Crm.Pos.SalePayments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Crm.Pos.SalePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pos.SalePayments.md#id) | guid |  |
+| [ObjectVersion](Crm.Pos.SalePayments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Crm.Pos.SalePayments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

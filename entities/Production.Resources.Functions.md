@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` 
-| [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function 
+| [Name](Production.Resources.Functions.md#name) | string (64) | The name of this Function. `Required` `Filter(like)` |
+| [Notes](Production.Resources.Functions.md#notes) | string (254) __nullable__ | User comments on the function |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Functions.md#id) | guid |  
-| [ObjectVersion](Production.Resources.Functions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Production.Resources.Functions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Production.Resources.Functions.md#id) | guid |  |
+| [ObjectVersion](Production.Resources.Functions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Production.Resources.Functions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

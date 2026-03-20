@@ -45,10 +45,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Logistics.Transportation.TransportationVehicles.md#code) | string (16) | The unique code (or call sign) of this transportation vehicle.`Required` `Filter(eq;like)` `ORD` 
-| [MaxCargoWeightKg](Logistics.Transportation.TransportationVehicles.md#maxcargoweightkg) | int32 __nullable__ | The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced. 
-| [MaxPalletsCount](Logistics.Transportation.TransportationVehicles.md#maxpalletscount) | int32 __nullable__ | The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced. 
-| [Notes](Logistics.Transportation.TransportationVehicles.md#notes) | string (max) __nullable__ | Notes for this TransportationVehicle. 
+| [Code](Logistics.Transportation.TransportationVehicles.md#code) | string (16) | The unique code (or call sign) of this transportation vehicle.`Required` `Filter(eq;like)` `ORD` |
+| [MaxCargoWeightKg](Logistics.Transportation.TransportationVehicles.md#maxcargoweightkg) | int32 __nullable__ | The maximum weight of the cargo (in kg), which can be transported. NULL when this is unknown and no limit should be enforced. |
+| [MaxPalletsCount](Logistics.Transportation.TransportationVehicles.md#maxpalletscount) | int32 __nullable__ | The maximum number of pallets, which can be transported by the vehicle. NULL when this is unknown and no limit should be enforced. |
+| [Notes](Logistics.Transportation.TransportationVehicles.md#notes) | string (max) __nullable__ | Notes for this TransportationVehicle. |
 
 ## References
 
@@ -65,9 +65,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Transportation.TransportationVehicles.md#id) | guid |  
-| [ObjectVersion](Logistics.Transportation.TransportationVehicles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Logistics.Transportation.TransportationVehicles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Logistics.Transportation.TransportationVehicles.md#id) | guid |  |
+| [ObjectVersion](Logistics.Transportation.TransportationVehicles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Logistics.Transportation.TransportationVehicles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

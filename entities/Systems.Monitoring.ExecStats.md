@@ -37,16 +37,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Application](Systems.Monitoring.ExecStats.md#application) | string (64) | The name of the application that executes the operation`Required` `Filter(eq;like)` `ORD` 
-| [AvgTimeMs](Systems.Monitoring.ExecStats.md#avgtimems) | double | Average time of operation execution`Required` `Filter(ge;le)` `ORD` 
-| [Count](Systems.Monitoring.ExecStats.md#count) | int32 | The number of times the operation is executed since last statistics reset.`Required` `Filter(ge;le)` `ORD` 
-| [Database](Systems.Monitoring.ExecStats.md#database) | string (64) | The database in which the operation is executed`Required` `Filter(eq;like)` `ORD` 
-| [IsLongPolling](Systems.Monitoring.ExecStats.md#islongpolling) | boolean | True if the operation is long polling.`Required` `Filter(eq)` 
-| [Kind](Systems.Monitoring.ExecStats.md#kind) | string (64) | The operation kind. Various operation kinds exist, e.g. Db, Long Procs etc.`Required` `Filter(eq;like)` `ORD` 
-| [MaxTimeMs](Systems.Monitoring.ExecStats.md#maxtimems) | double | The maximum time of one operation execution`Required` `Filter(ge;le)` `ORD` 
-| [Operation](Systems.Monitoring.ExecStats.md#operation) | string (128) | The operation name`Required` `Filter(like)` 
-| [StatisticsSince](Systems.Monitoring.ExecStats.md#statisticssince) | datetime | The date and time since when the statistics are collected`Required` `Filter(ge;le)` 
-| [TotalTimeMs](Systems.Monitoring.ExecStats.md#totaltimems) | double | Total time spent for the operation`Required` `Filter(ge;le)` `ORD` 
+| [Application](Systems.Monitoring.ExecStats.md#application) | string (64) | The name of the application that executes the operation`Required` `Filter(eq;like)` `ORD` |
+| [AvgTimeMs](Systems.Monitoring.ExecStats.md#avgtimems) | double | Average time of operation execution`Required` `Filter(ge;le)` `ORD` |
+| [Count](Systems.Monitoring.ExecStats.md#count) | int32 | The number of times the operation is executed since last statistics reset.`Required` `Filter(ge;le)` `ORD` |
+| [Database](Systems.Monitoring.ExecStats.md#database) | string (64) | The database in which the operation is executed`Required` `Filter(eq;like)` `ORD` |
+| [IsLongPolling](Systems.Monitoring.ExecStats.md#islongpolling) | boolean | True if the operation is long polling.`Required` `Filter(eq)` |
+| [Kind](Systems.Monitoring.ExecStats.md#kind) | string (64) | The operation kind. Various operation kinds exist, e.g. Db, Long Procs etc.`Required` `Filter(eq;like)` `ORD` |
+| [MaxTimeMs](Systems.Monitoring.ExecStats.md#maxtimems) | double | The maximum time of one operation execution`Required` `Filter(ge;le)` `ORD` |
+| [Operation](Systems.Monitoring.ExecStats.md#operation) | string (128) | The operation name`Required` `Filter(like)` |
+| [StatisticsSince](Systems.Monitoring.ExecStats.md#statisticssince) | datetime | The date and time since when the statistics are collected`Required` `Filter(ge;le)` |
+| [TotalTimeMs](Systems.Monitoring.ExecStats.md#totaltimems) | double | Total time spent for the operation`Required` `Filter(ge;le)` `ORD` |
 
 
 ## Attribute Details

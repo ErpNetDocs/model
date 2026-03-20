@@ -35,10 +35,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes 
-| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21` 
-| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Exact time at which the transaction for the current asset occurs.`Required` `Filter(multi eq;ge;le)` 
-| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction type for the current asset.`Required` `Filter(multi eq;like)` 
+| [Notes](Applications.Rental.TransactionLines.md#notes) | string (max) __nullable__ | Notes |
+| [NumberOfPeriods](Applications.Rental.TransactionLines.md#numberofperiods) | int32 __nullable__ | Number of periods calculated based on the Transaction Timestamps of the deliver and receive Transactions, and the Time Period Type defined for the asset.`Filter(eq;ge;le)` `Introduced in version 24.1.5.21` |
+| [TransactionTimestamp](Applications.Rental.TransactionLines.md#transactiontimestamp) | datetime | Exact time at which the transaction for the current asset occurs.`Required` `Filter(multi eq;ge;le)` |
+| [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | [TransactionType](Applications.Rental.TransactionLines.md#transactiontype) | Transaction type for the current asset.`Required` `Filter(multi eq;like)` |
 
 ## References
 
@@ -54,9 +54,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Rental.TransactionLines.md#id) | guid |  
-| [ObjectVersion](Applications.Rental.TransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Applications.Rental.TransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Rental.TransactionLines.md#id) | guid |  |
+| [ObjectVersion](Applications.Rental.TransactionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Applications.Rental.TransactionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

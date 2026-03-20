@@ -36,10 +36,10 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [PolicyContent](HumanResources.Governance.GovernancePolicyRevisions.md#policycontent) | string (max) | Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.`Required` `Filter(like)` 
-| [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | Lifecycle state of the revision.`Required` `Default(&quot;DRF&quot;)` 
-| [ValidFrom](HumanResources.Governance.GovernancePolicyRevisions.md#validfrom) | date __nullable__ | Date from which this revision is intended to apply. Required when State = Published or Retired.`Filter(eq;ge;le)` 
-| [ValidTo](HumanResources.Governance.GovernancePolicyRevisions.md#validto) | date __nullable__ | Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.`Filter(eq;ge;le)` 
+| [PolicyContent](HumanResources.Governance.GovernancePolicyRevisions.md#policycontent) | string (max) | Full policy text for this revision - single editable text (in MarkDown). This is the authoritative content used by humans and AI.`Required` `Filter(like)` |
+| [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | [State](HumanResources.Governance.GovernancePolicyRevisions.md#state) | Lifecycle state of the revision.`Required` `Default(&quot;DRF&quot;)` |
+| [ValidFrom](HumanResources.Governance.GovernancePolicyRevisions.md#validfrom) | date __nullable__ | Date from which this revision is intended to apply. Required when State = Published or Retired.`Filter(eq;ge;le)` |
+| [ValidTo](HumanResources.Governance.GovernancePolicyRevisions.md#validto) | date __nullable__ | Date until which this revision applies (NULL = open-ended). Typically set automatically when a newer revision becomes effective.`Filter(eq;ge;le)` |
 
 ## References
 
@@ -52,9 +52,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](HumanResources.Governance.GovernancePolicyRevisions.md#id) | guid |  
-| [ObjectVersion](HumanResources.Governance.GovernancePolicyRevisions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](HumanResources.Governance.GovernancePolicyRevisions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](HumanResources.Governance.GovernancePolicyRevisions.md#id) | guid |  |
+| [ObjectVersion](HumanResources.Governance.GovernancePolicyRevisions.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](HumanResources.Governance.GovernancePolicyRevisions.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

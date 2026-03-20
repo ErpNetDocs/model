@@ -35,13 +35,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` 
-| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource`Required` `Filter(like)` 
-| [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource 
-| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production`Required` `Default(0)` 
-| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. `Unit: SetupScrapUnit` `Required` `Default(0)` 
-| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.`Currency: ResourceCurrency` 
-| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.`Currency: ResourceCurrency` 
+| [Active](Production.Resources.Resources.md#active) | boolean | Indicates whether the current resource is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 22.1.5.26` |
+| [Name](Production.Resources.Resources.md#name) | string (64) | Name of the resource`Required` `Filter(like)` |
+| [Notes](Production.Resources.Resources.md#notes) | string (254) __nullable__ | User notes for the resource |
+| [SetupDurationHours](Production.Resources.Resources.md#setupdurationhours) | decimal (6, 2) | The usual duration of setup when changing production`Required` `Default(0)` |
+| [SetupScrapQuantity](Production.Resources.Resources.md#setupscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The usual quantity of fixed scrap occurring when changing production. `Unit: SetupScrapUnit` `Required` `Default(0)` |
+| [StandardCostPerHour](Production.Resources.Resources.md#standardcostperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard cost per hour for this resource. It participates in the calculation of standard cost for production recipes in which the current resource is used.`Currency: ResourceCurrency` |
+| [StandardPricePerHour](Production.Resources.Resources.md#standardpriceperhour) | [Amount (18, 6)](../data-types.md#amount) __nullable__ | Standard price per hour for this resource. It participates in the calculation of standard price for production recipes in which the current resource is used.`Currency: ResourceCurrency` |
 
 ## References
 
@@ -57,9 +57,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.Resources.Resources.md#id) | guid | Unique resource id 
-| [ObjectVersion](Production.Resources.Resources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Production.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Production.Resources.Resources.md#id) | guid | Unique resource id |
+| [ObjectVersion](Production.Resources.Resources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Production.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

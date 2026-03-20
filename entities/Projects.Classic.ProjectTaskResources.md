@@ -35,14 +35,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BillingPricePerHour](Projects.Classic.ProjectTaskResources.md#billingpriceperhour) | decimal (12, 5) __nullable__ | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price`Filter(eq)` 
-| [BillingTotalAmount](Projects.Classic.ProjectTaskResources.md#billingtotalamount) | decimal (14, 2) __nullable__ | When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.`Filter(eq)` 
-| [CostPerHour](Projects.Classic.ProjectTaskResources.md#costperhour) | decimal (12, 5) | Cost per hour for the resource usage for this task (in the currency of the project).`Required` `Default(0)` `Filter(eq)` 
-| [Notes](Projects.Classic.ProjectTaskResources.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskResource. 
-| [PerUseCost](Projects.Classic.ProjectTaskResources.md#perusecost) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | One time cost for each resource usage, specified in the projects currency.`Currency: ProjectTask.Project.BudgetingCurrency` 
-| [ResourceUsageHours](Projects.Classic.ProjectTaskResources.md#resourceusagehours) | decimal (10, 2) | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.`Required` `Default(0)` `Filter(eq)` 
-| [ResourceUsagePercent](Projects.Classic.ProjectTaskResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)` `Filter(eq)` 
-| [TaskTotalCost](Projects.Classic.ProjectTaskResources.md#tasktotalcost) | decimal (14, 2) | Total cost for this task (in the currency of the project).`Required` `Default(0)` `Filter(eq)` 
+| [BillingPricePerHour](Projects.Classic.ProjectTaskResources.md#billingpriceperhour) | decimal (12, 5) __nullable__ | When not null, specifies the price per hour (in the currency of the Project) of resource usage which will be used for billing. NULL means that the item will be billed in another way. This way of billing is mutually exclusive with Fixed Total Price`Filter(eq)` |
+| [BillingTotalAmount](Projects.Classic.ProjectTaskResources.md#billingtotalamount) | decimal (14, 2) __nullable__ | When not NULL, specifies that this item will be billed for the specified fixed total price (in the currency of the Project). NULL means that this item will be billed in another way. This way of billing is mutually exclusive with Billing Price Per Hour.`Filter(eq)` |
+| [CostPerHour](Projects.Classic.ProjectTaskResources.md#costperhour) | decimal (12, 5) | Cost per hour for the resource usage for this task (in the currency of the project).`Required` `Default(0)` `Filter(eq)` |
+| [Notes](Projects.Classic.ProjectTaskResources.md#notes) | string (254) __nullable__ | Notes for this ProjectTaskResource. |
+| [PerUseCost](Projects.Classic.ProjectTaskResources.md#perusecost) | [Amount (14, 2)](../data-types.md#amount) __nullable__ | One time cost for each resource usage, specified in the projects currency.`Currency: ProjectTask.Project.BudgetingCurrency` |
+| [ResourceUsageHours](Projects.Classic.ProjectTaskResources.md#resourceusagehours) | decimal (10, 2) | The total number of resource-hours, which are planned for this task. Equals to the length of the task, multiplied by the resource usage.`Required` `Default(0)` `Filter(eq)` |
+| [ResourceUsagePercent](Projects.Classic.ProjectTaskResources.md#resourceusagepercent) | decimal (18, 4) | The planned resource usage for this activity in percents. Values of more than 100% are allowed when more than 1 resource is required.`Required` `Default(1)` `Filter(eq)` |
+| [TaskTotalCost](Projects.Classic.ProjectTaskResources.md#tasktotalcost) | decimal (14, 2) | Total cost for this task (in the currency of the project).`Required` `Default(0)` `Filter(eq)` |
 
 ## References
 
@@ -57,9 +57,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Classic.ProjectTaskResources.md#id) | guid |  
-| [ObjectVersion](Projects.Classic.ProjectTaskResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Projects.Classic.ProjectTaskResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Projects.Classic.ProjectTaskResources.md#id) | guid |  |
+| [ObjectVersion](Projects.Classic.ProjectTaskResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Projects.Classic.ProjectTaskResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -28,12 +28,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EndBalanceBase](Regulatory.Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency`Required` 
-| [FromDate](Regulatory.Saft.AccountBalances.md#fromdate) | date | Filter date for start of period`Required` `Filter(eq)` 
-| [ItemKey](Regulatory.Saft.AccountBalances.md#itemkey) | string (64) | Item_Key`Required` `Introduced in version 26.2.1.27` 
-| [StartBalanceBase](Regulatory.Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency`Required` 
-| [ToDate](Regulatory.Saft.AccountBalances.md#todate) | date | Filter date for end of period`Required` `Filter(eq)` 
-| [VouchersInPeriod](Regulatory.Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period`Required` `Introduced in version 26.2.1.27` 
+| [EndBalanceBase](Regulatory.Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
+| [FromDate](Regulatory.Saft.AccountBalances.md#fromdate) | date | Filter date for start of period`Required` `Filter(eq)` |
+| [ItemKey](Regulatory.Saft.AccountBalances.md#itemkey) | string (64) | Item_Key`Required` `Introduced in version 26.2.1.27` |
+| [StartBalanceBase](Regulatory.Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
+| [ToDate](Regulatory.Saft.AccountBalances.md#todate) | date | Filter date for end of period`Required` `Filter(eq)` |
+| [VouchersInPeriod](Regulatory.Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period`Required` `Introduced in version 26.2.1.27` |
 
 ## References
 

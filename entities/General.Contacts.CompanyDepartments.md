@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department.`Required` `Filter(like)` 
-| [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. 
+| [DepartmentName](General.Contacts.CompanyDepartments.md#departmentname) | string (254) | The name of the department.`Required` `Filter(like)` |
+| [Notes](General.Contacts.CompanyDepartments.md#notes) | string (max) __nullable__ | Notes for this CompanyDepartment. |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.CompanyDepartments.md#id) | guid |  
-| [ObjectVersion](General.Contacts.CompanyDepartments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Contacts.CompanyDepartments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Contacts.CompanyDepartments.md#id) | guid |  |
+| [ObjectVersion](General.Contacts.CompanyDepartments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Contacts.CompanyDepartments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

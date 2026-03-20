@@ -45,13 +45,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters.`Required` `Filter(eq;like)` 
-| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence.`Required` `Filter(eq;like)` 
-| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person.`Required` `Filter(eq;like)` 
-| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries.`Required` `Filter(eq;like)` 
-| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group.`Required` `Default(5)` `Filter(eq)` 
-| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file.`Filter(like)` 
-| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed.`Required` `Default(&quot;COM&quot;)` `Filter(eq)` 
+| [ContactPerson](Regulatory.Saft.ProfileCompanies.md#contactperson) | string (254) | Contact person for SAF-T-related matters.`Required` `Filter(eq;like)` |
+| [ContactPersonEmail](Regulatory.Saft.ProfileCompanies.md#contactpersonemail) | string (254) | Email address for SAF-T correspondence.`Required` `Filter(eq;like)` |
+| [ContactPersonJobTitle](Regulatory.Saft.ProfileCompanies.md#contactpersonjobtitle) | string (254) | Official job title of the contact person.`Required` `Filter(eq;like)` |
+| [ContactPersonPhone](Regulatory.Saft.ProfileCompanies.md#contactpersonphone) | string (254) | Phone number for inquiries.`Required` `Filter(eq;like)` |
+| [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | [IsPartOfGroup](Regulatory.Saft.ProfileCompanies.md#ispartofgroup) | Indicate whether the company is part of a group.`Required` `Default(5)` `Filter(eq)` |
+| [Notes](Regulatory.Saft.ProfileCompanies.md#notes) | string (max) __nullable__ | Internal notes, not included in the SAF-T file.`Filter(like)` |
+| [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | [TaxAccountingBasis](Regulatory.Saft.ProfileCompanies.md#taxaccountingbasis) | Accounting basis: accrual, cash, or mixed.`Required` `Default(&quot;COM&quot;)` `Filter(eq)` |
 
 ## References
 
@@ -68,9 +68,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileCompanies.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileCompanies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileCompanies.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileCompanies.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileCompanies.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

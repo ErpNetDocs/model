@@ -28,10 +28,10 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update.`Required` `Filter(ge;le)` `ORD` `ReadOnly` 
-| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status.`Required` `Filter(multi eq)` `ReadOnly` 
-| [UserId](Systems.Monitoring.UserPresence.md#userid) | guid | Unique identifier for the user. `Required` `Filter(multi eq)` `ReadOnly` 
-| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in.`Required` `Filter(multi eq;like)` `ReadOnly` 
+| [LastUpdateTimeUtc](Systems.Monitoring.UserPresence.md#lastupdatetimeutc) | datetime | Timestamp (UTC) of the last status update.`Required` `Filter(ge;le)` `ORD` `ReadOnly` |
+| [Status](Systems.Monitoring.UserPresence.md#status) | [Status](Systems.Monitoring.UserPresence.md#status) | The user's current presence status.`Required` `Filter(multi eq)` `ReadOnly` |
+| [UserId](Systems.Monitoring.UserPresence.md#userid) | guid | Unique identifier for the user. `Required` `Filter(multi eq)` `ReadOnly` |
+| [UserLogin](Systems.Monitoring.UserPresence.md#userlogin) | string (64) | The username used to log in.`Required` `Filter(multi eq;like)` `ReadOnly` |
 
 
 ## Attribute Details

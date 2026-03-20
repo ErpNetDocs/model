@@ -52,22 +52,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Crm.Sales.Customers.md#active) | boolean | 1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents`Required` `Default(true)` `Filter(eq)` 
-| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal.`Required` `Default(false)` `Filter(eq)` 
-| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal.`Required` `Default(false)` `Filter(eq)` 
-| [CreationTime](Crm.Sales.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` 
-| [CreationUser](Crm.Sales.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` 
-| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit.`Currency: EnterpriseCompany?.BaseCurrency` 
-| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale`Required` `Default(0)` 
-| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.`Required` `Default(0)` 
-| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer`Required` `Default(0)` 
-| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship`Default(Today)` `Filter(ge;le)` 
-| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer.`Required` `Default(0)` 
-| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number`Filter(eq;like)` `ORD` 
-| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.`Required` `Default(false)` `Filter(eq)` 
-| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. NULL for active customers.`Filter(ge;le)` 
-| [UpdateTime](Crm.Sales.Customers.md#updatetime) | datetime __nullable__ | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` 
-| [UpdateUser](Crm.Sales.Customers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` 
+| [Active](Crm.Sales.Customers.md#active) | boolean | 1 if the customer is active, 0 - not to list in combo boxes for choosing in new documents`Required` `Default(true)` `Filter(eq)` |
+| [AllowUseAsPrimaryCustomer](Crm.Sales.Customers.md#allowuseasprimarycustomer) | boolean | Specifies whether to allow the customer to be used as primary customer in a sales deal.`Required` `Default(false)` `Filter(eq)` |
+| [AllowUseAsShipToCustomer](Crm.Sales.Customers.md#allowuseasshiptocustomer) | boolean | True to allow the customer to be used as ship to customer in a sales deal.`Required` `Default(false)` `Filter(eq)` |
+| [CreationTime](Crm.Sales.Customers.md#creationtime) | datetime __nullable__ | Date and time when the Customer was created. `Filter(ge;le)` `ReadOnly` |
+| [CreationUser](Crm.Sales.Customers.md#creationuser) | string (64) __nullable__ | Login name of the user, who created the Customer. `Filter(like)` `ReadOnly` |
+| [CreditLimit](Crm.Sales.Customers.md#creditlimit) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | Total credit limit for the customer in the enterprise company base currency. null means there is no limit.`Currency: EnterpriseCompany?.BaseCurrency` |
+| [DefaultDeliveryTermDays](Crm.Sales.Customers.md#defaultdeliverytermdays) | int32 | Default term in days for goods delivery, starting at the day of sale`Required` `Default(0)` |
+| [DefaultPaymentStartDays](Crm.Sales.Customers.md#defaultpaymentstartdays) | int32 | Specifies the number of days after the sales order, when the payment becomes due. 0 means that the payment is due immediately.`Required` `Default(0)` |
+| [DefaultPaymentTermDays](Crm.Sales.Customers.md#defaultpaymenttermdays) | int32 | Default payment term in days when issuing documents for this customer`Required` `Default(0)` |
+| [FromDate](Crm.Sales.Customers.md#fromdate) | datetime __nullable__ | Start date of the customer relationship`Default(Today)` `Filter(ge;le)` |
+| [GracePeriodDays](Crm.Sales.Customers.md#graceperioddays) | int32 | Number of days after the payment deadline, during which the system still allows new sales orders for the customer.`Required` `Default(0)` |
+| [Number](Crm.Sales.Customers.md#number) | string (16) __nullable__ | Unique customer number`Filter(eq;like)` `ORD` |
+| [PersistSalesOrdersLots](Crm.Sales.Customers.md#persistsalesorderslots) | boolean | If checked, specifies that the lots set in the Sales orders for this customer, cannot be changed during the execution of the Store transactions for these Sales orders.`Required` `Default(false)` `Filter(eq)` |
+| [ThruDate](Crm.Sales.Customers.md#thrudate) | datetime __nullable__ | The date of customer relationship termination. NULL for active customers.`Filter(ge;le)` |
+| [UpdateTime](Crm.Sales.Customers.md#updatetime) | datetime __nullable__ | Date and time when the Customer was last updated. `Filter(ge;le)` `ReadOnly` |
+| [UpdateUser](Crm.Sales.Customers.md#updateuser) | string (64) __nullable__ | Login name of the user, who last updated the Customer. `Filter(like)` `ReadOnly` |
 
 ## References
 
@@ -90,12 +90,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Sales.Customers.md#id) | guid |  
-| [ObjectVersion](Crm.Sales.Customers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Sales.Customers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Sales.Customers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Sales.Customers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Sales.Customers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Sales.Customers.md#id) | guid |  |
+| [ObjectVersion](Crm.Sales.Customers.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Sales.Customers.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Sales.Customers.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Sales.Customers.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Sales.Customers.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

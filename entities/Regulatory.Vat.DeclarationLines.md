@@ -44,9 +44,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AmountBase](Regulatory.Vat.DeclarationLines.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Declared value in base currency.`Currency: Declaration.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` 
-| [LineNo](Regulatory.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document.`Required` 
-| [Notes](Regulatory.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. 
+| [AmountBase](Regulatory.Vat.DeclarationLines.md#amountbase) | [Amount (14, 2)](../data-types.md#amount) | Declared value in base currency.`Currency: Declaration.BaseCurrency` `Required` `Default(0)` `Filter(eq;ge;le)` |
+| [LineNo](Regulatory.Vat.DeclarationLines.md#lineno) | int32 | Consecutive line number within the document.`Required` |
+| [Notes](Regulatory.Vat.DeclarationLines.md#notes) | string (max) __nullable__ | Notes for this DeclarationLine. |
 
 ## References
 
@@ -61,9 +61,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Vat.DeclarationLines.md#id) | guid |  
-| [ObjectVersion](Regulatory.Vat.DeclarationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Vat.DeclarationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Vat.DeclarationLines.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Vat.DeclarationLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Vat.DeclarationLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

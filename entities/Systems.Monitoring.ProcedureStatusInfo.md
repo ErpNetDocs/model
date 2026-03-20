@@ -37,15 +37,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Completed](Systems.Monitoring.ProcedureStatusInfo.md#completed) | boolean | True if the procedure is completed.`Required` `Filter(eq)` `ORD` 
-| [ElapsedMin](Systems.Monitoring.ProcedureStatusInfo.md#elapsedmin) | string (64) | The elapsed minutes of the procedure at the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [ElapsedPercent](Systems.Monitoring.ProcedureStatusInfo.md#elapsedpercent) | double | The elapsed percent of the procedure at the time of the request.`Required` `Filter(ge;le)` `ORD` 
-| [EndTime](Systems.Monitoring.ProcedureStatusInfo.md#endtime) | string (64) | The end time of the procedure.`Required` `Filter(ge;le)` `ORD` 
-| [Error](Systems.Monitoring.ProcedureStatusInfo.md#error) | string (128) | If not null, this is the text of the exception that occured during the procedure execution.`Required` `ORD` 
-| [Procedure](Systems.Monitoring.ProcedureStatusInfo.md#procedure) | string (128) | The name of the procedure.`Required` `Filter(eq;like)` `ORD` 
-| [Properties](Systems.Monitoring.ProcedureStatusInfo.md#properties) | string (128) | List of procedure status properties.`Required` `ORD` 
-| [StartTime](Systems.Monitoring.ProcedureStatusInfo.md#starttime) | string (64) | The start time of the procedure.`Required` `Filter(ge;le)` `ORD` 
-| [User](Systems.Monitoring.ProcedureStatusInfo.md#user) | string (128) | The user started the procedure.`Required` `Filter(eq;like)` `ORD` 
+| [Completed](Systems.Monitoring.ProcedureStatusInfo.md#completed) | boolean | True if the procedure is completed.`Required` `Filter(eq)` `ORD` |
+| [ElapsedMin](Systems.Monitoring.ProcedureStatusInfo.md#elapsedmin) | string (64) | The elapsed minutes of the procedure at the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [ElapsedPercent](Systems.Monitoring.ProcedureStatusInfo.md#elapsedpercent) | double | The elapsed percent of the procedure at the time of the request.`Required` `Filter(ge;le)` `ORD` |
+| [EndTime](Systems.Monitoring.ProcedureStatusInfo.md#endtime) | string (64) | The end time of the procedure.`Required` `Filter(ge;le)` `ORD` |
+| [Error](Systems.Monitoring.ProcedureStatusInfo.md#error) | string (128) | If not null, this is the text of the exception that occured during the procedure execution.`Required` `ORD` |
+| [Procedure](Systems.Monitoring.ProcedureStatusInfo.md#procedure) | string (128) | The name of the procedure.`Required` `Filter(eq;like)` `ORD` |
+| [Properties](Systems.Monitoring.ProcedureStatusInfo.md#properties) | string (128) | List of procedure status properties.`Required` `ORD` |
+| [StartTime](Systems.Monitoring.ProcedureStatusInfo.md#starttime) | string (64) | The start time of the procedure.`Required` `Filter(ge;le)` `ORD` |
+| [User](Systems.Monitoring.ProcedureStatusInfo.md#user) | string (128) | The user started the procedure.`Required` `Filter(eq;like)` `ORD` |
 
 
 ## Attribute Details

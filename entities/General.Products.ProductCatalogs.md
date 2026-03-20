@@ -34,17 +34,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BackgroundColor](General.Products.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. 
-| [BackgroundImage](General.Products.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed. 
-| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right.`Required` `Default(&quot;L&quot;)` 
-| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom.`Required` `Default(&quot;T&quot;)` 
-| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.`Required` `Default(&quot;R&quot;)` 
-| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code.`Required` 
-| [FooterHtml](General.Products.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer. 
-| [HeaderHtml](General.Products.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header. 
-| [Logo](General.Products.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. 
-| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage).`Required` 
-| [Notes](General.Products.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. 
+| [BackgroundColor](General.Products.ProductCatalogs.md#backgroundcolor) | int32 __nullable__ | When not NULL, specifies the background color to use for visualization of the catalog. The color is in RGBA color format. |
+| [BackgroundImage](General.Products.ProductCatalogs.md#backgroundimage) | byte[] __nullable__ | The background image to be used for web visualization of the catalog. NULL means that background image won't be displayed. |
+| [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | [BackgroundPosition<br />Horizontal](General.Products.ProductCatalogs.md#backgroundpositionhorizontal) | Horizontal position of the Background Image. L=Left, C=Center, R=Right.`Required` `Default(&quot;L&quot;)` |
+| [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | [BackgroundPositionVertical](General.Products.ProductCatalogs.md#backgroundpositionvertical) | Vertical position of the Background Image. T=Top, C=Center, B=Bottom.`Required` `Default(&quot;T&quot;)` |
+| [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | [BackgroundRepeat](General.Products.ProductCatalogs.md#backgroundrepeat) | Specifies if and how the background image will be repeated. R=Repeat both vertically and horizontally; X=Repeat only horizontally; Y=Repeat only vertically; N=No repeat.`Required` `Default(&quot;R&quot;)` |
+| [Code](General.Products.ProductCatalogs.md#code) | string (16) | Unique catalog code.`Required` |
+| [FooterHtml](General.Products.ProductCatalogs.md#footerhtml) | string (max) __nullable__ | The footer of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL means that there shouldn't be any user-defined footer. |
+| [HeaderHtml](General.Products.ProductCatalogs.md#headerhtml) | string (max) __nullable__ | The header of the catalog in HTML format. Primarily used for web visualizations of the catalog. NULL specifies that there shouldn't be any user-defined header. |
+| [Logo](General.Products.ProductCatalogs.md#logo) | byte[] __nullable__ | The logo of the product catalog. Used for web and other visualization of the catalog. |
+| [Name](General.Products.ProductCatalogs.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Product catalog name (multilanguage).`Required` |
+| [Notes](General.Products.ProductCatalogs.md#notes) | string (max) __nullable__ | Notes for this ProductCatalog. |
 
 ## References
 
@@ -58,12 +58,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Products.ProductCatalogs.md#id) | guid |  
-| [ObjectVersion](General.Products.ProductCatalogs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Products.ProductCatalogs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Products.ProductCatalogs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Products.ProductCatalogs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Products.ProductCatalogs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Products.ProductCatalogs.md#id) | guid |  |
+| [ObjectVersion](General.Products.ProductCatalogs.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Products.ProductCatalogs.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Products.ProductCatalogs.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Products.ProductCatalogs.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Products.ProductCatalogs.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

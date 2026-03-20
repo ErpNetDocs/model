@@ -33,17 +33,17 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | The type of change requested for the enterprise company.`Required` `Filter(multi eq)` 
-| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (20, 10) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.`Filter(eq)` `Introduced in version 26.1.4.51` 
-| [EffectiveDate](Systems.Core.InstanceChangeRequests.md#effectivedate) | date | The date from which the change is effective. Might differ from execution date.`Required` `Filter(eq;ge;le)` 
-| [ExecutionDate](Systems.Core.InstanceChangeRequests.md#executiondate) | date | The date on which the change should be initiated.`Required` `Filter(eq;ge;le)` 
-| [Notes](Systems.Core.InstanceChangeRequests.md#notes) | string (max) __nullable__ | Notes`Filter(like)` 
-| [ProgressDate](Systems.Core.InstanceChangeRequests.md#progressdate) | date __nullable__ | The date up to which the data is updated in the database. Updated by the batch job.`Filter(eq;ge;le)` 
-| [ProgressPercent](Systems.Core.InstanceChangeRequests.md#progresspercent) | decimal (5, 2) __nullable__ | Progress, updated by the batch job.`Filter(ge;le)` 
-| [ReferenceNo](Systems.Core.InstanceChangeRequests.md#referenceno) | string (32) __nullable__ | Text for internal reference of the change request.`Filter(eq)` 
-| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number.`Required` `Filter(eq)` `ORD` 
-| [SettingsJson](Systems.Core.InstanceChangeRequests.md#settingsjson) | string (max) __nullable__ | Additional settings for the change; expressed in Json. The format depends on the change kind`Filter(like)` 
-| [State](Systems.Core.InstanceChangeRequests.md#state) | [State](Systems.Core.InstanceChangeRequests.md#state) | Current state of the request.`Required` `Default(&quot;DRF&quot;)` `Filter(eq)` 
+| [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | [ChangeKind](Systems.Core.InstanceChangeRequests.md#changekind) | The type of change requested for the enterprise company.`Required` `Filter(multi eq)` |
+| [CurrencyRate](Systems.Core.InstanceChangeRequests.md#currencyrate) | decimal (20, 10) __nullable__ | Currency Rate, applied for the change when relevant (e.g. reporting or base currency change). Used to fix the conversion rate at the time of change execution.`Filter(eq)` `Introduced in version 26.1.4.51` |
+| [EffectiveDate](Systems.Core.InstanceChangeRequests.md#effectivedate) | date | The date from which the change is effective. Might differ from execution date.`Required` `Filter(eq;ge;le)` |
+| [ExecutionDate](Systems.Core.InstanceChangeRequests.md#executiondate) | date | The date on which the change should be initiated.`Required` `Filter(eq;ge;le)` |
+| [Notes](Systems.Core.InstanceChangeRequests.md#notes) | string (max) __nullable__ | Notes`Filter(like)` |
+| [ProgressDate](Systems.Core.InstanceChangeRequests.md#progressdate) | date __nullable__ | The date up to which the data is updated in the database. Updated by the batch job.`Filter(eq;ge;le)` |
+| [ProgressPercent](Systems.Core.InstanceChangeRequests.md#progresspercent) | decimal (5, 2) __nullable__ | Progress, updated by the batch job.`Filter(ge;le)` |
+| [ReferenceNo](Systems.Core.InstanceChangeRequests.md#referenceno) | string (32) __nullable__ | Text for internal reference of the change request.`Filter(eq)` |
+| [RequestNo](Systems.Core.InstanceChangeRequests.md#requestno) | int32 | Global consequtive request number.`Required` `Filter(eq)` `ORD` |
+| [SettingsJson](Systems.Core.InstanceChangeRequests.md#settingsjson) | string (max) __nullable__ | Additional settings for the change; expressed in Json. The format depends on the change kind`Filter(like)` |
+| [State](Systems.Core.InstanceChangeRequests.md#state) | [State](Systems.Core.InstanceChangeRequests.md#state) | Current state of the request.`Required` `Default(&quot;DRF&quot;)` `Filter(eq)` |
 
 ## References
 
@@ -59,12 +59,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.InstanceChangeRequests.md#id) | guid |  
-| [ObjectVersion](Systems.Core.InstanceChangeRequests.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Systems.Core.InstanceChangeRequests.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Systems.Core.InstanceChangeRequests.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Systems.Core.InstanceChangeRequests.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Systems.Core.InstanceChangeRequests.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Core.InstanceChangeRequests.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.InstanceChangeRequests.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.InstanceChangeRequests.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.InstanceChangeRequests.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.InstanceChangeRequests.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Systems.Core.InstanceChangeRequests.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

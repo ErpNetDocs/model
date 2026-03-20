@@ -34,11 +34,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation.`Unit: QuantityUnit` `Required` `Default(0)` 
-| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation.`Unit: QuantityUnit` `Required` `Default(0)` 
-| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation.`Unit: QuantityUnit` `Required` `Default(0)` 
-| [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` 
-| [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. 
+| [ConsumedQuantityForRun](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforrun) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material for the operation.`Unit: QuantityUnit` `Required` `Default(0)` |
+| [ConsumedQuantityForScrap](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforscrap) | [Quantity (18, 3)](../data-types.md#quantity) | The scrapped quantity of the material for this operation.`Unit: QuantityUnit` `Required` `Default(0)` |
+| [ConsumedQuantityForSetup](Production.ShopFloor.OutputOrderConsumptionLines.md#consumedquantityforsetup) | [Quantity (18, 3)](../data-types.md#quantity) | The consumed quantity of the material while setting up the operation.`Unit: QuantityUnit` `Required` `Default(0)` |
+| [LineNo](Production.ShopFloor.OutputOrderConsumptionLines.md#lineno) | int32 | Line number, unique within the OutputOrder. Usually is increasing number like 10, 20, 30, ... when initially entering the OutputOrder (in order to allow insertions with adjustment documents). `Required` |
+| [Notes](Production.ShopFloor.OutputOrderConsumptionLines.md#notes) | string (max) __nullable__ | Notes for this OutputOrderConsumptionLine. |
 
 ## References
 
@@ -58,9 +58,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#id) | guid |  
-| [ObjectVersion](Production.ShopFloor.OutputOrderConsumptionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Production.ShopFloor.OutputOrderConsumptionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Production.ShopFloor.OutputOrderConsumptionLines.md#id) | guid |  |
+| [ObjectVersion](Production.ShopFloor.OutputOrderConsumptionLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Production.ShopFloor.OutputOrderConsumptionLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

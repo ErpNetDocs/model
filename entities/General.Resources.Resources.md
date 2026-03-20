@@ -35,8 +35,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group`Required` `Filter(eq;like)` 
-| [Notes](General.Resources.Resources.md#notes) | string (max) __nullable__ | Notes for this Resource. 
+| [Name](General.Resources.Resources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Resource name. Unique within the resource group`Required` `Filter(eq;like)` |
+| [Notes](General.Resources.Resources.md#notes) | string (max) __nullable__ | Notes for this Resource. |
 
 ## References
 
@@ -50,9 +50,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Resources.Resources.md#id) | guid |  
-| [ObjectVersion](General.Resources.Resources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Resources.Resources.md#id) | guid |  |
+| [ObjectVersion](General.Resources.Resources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Resources.Resources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

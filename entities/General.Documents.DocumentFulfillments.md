@@ -45,15 +45,15 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](General.Documents.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system.`Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` 
-| [DestinationEntityName](General.Documents.DocumentFulfillments.md#destinationentityname) | string (64) | The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.`Required` `Default(&quot;&quot;)` `Filter(eq)` `Introduced in version 22.1.4.7` 
-| [DocumentLineId](General.Documents.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)` 
-| [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed.`Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
-| [IsFinal](General.Documents.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.`Required` `Filter(eq)` 
-| [LineNo](General.Documents.DocumentFulfillments.md#lineno) | int32 __nullable__ | Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.`Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` 
-| [LineType](General.Documents.DocumentFulfillments.md#linetype) | string (1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.`Required` `Default(&quot;L&quot;)` `Filter(multi eq)` `Introduced in version 21.1.1.26` 
-| [QuantityBase](General.Documents.DocumentFulfillments.md#quantitybase) | decimal (12, 3) | Fulfilled quantity in the base measurement unit of the product.`Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` 
-| [StandardQuantity](General.Documents.DocumentFulfillments.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.`Required` `Introduced in version 22.1.4.52` 
+| [CreationTimeUtc](General.Documents.DocumentFulfillments.md#creationtimeutc) | datetime | The exact time in UTC, when the fulfillment was created in the system.`Required` `Default(NowUtc)` `Filter(multi eq;ge;le)` |
+| [DestinationEntityName](General.Documents.DocumentFulfillments.md#destinationentityname) | string (64) | The name of the entity which fulfills the line. Used to differentiate between different fulfillment types. For example, sales order line can be fulfilled, for different purposes, by store order line and invoice order line.`Required` `Default(&quot;&quot;)` `Filter(eq)` `Introduced in version 22.1.4.7` |
+| [DocumentLineId](General.Documents.DocumentFulfillments.md#documentlineid) | guid | The Id of the fulfilled line within the document. The attribute contains the Id and is not a reference, because it references different entities depending on document entity type and line type. `Required` `Filter(multi eq)` |
+| [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | [FulfillmentType](General.Documents.DocumentFulfillments.md#fulfillmenttype) | Type of fulfillment: P=Planned; C=Completed.`Required` `Filter(multi eq)` `Introduced in version 21.1.1.26` |
+| [IsFinal](General.Documents.DocumentFulfillments.md#isfinal) | boolean | Specifies whether this fulfillment finalizes the line, regardless of any remaining quantities.`Required` `Filter(eq)` |
+| [LineNo](General.Documents.DocumentFulfillments.md#lineno) | int32 __nullable__ | Line number. Used for human-readability of the fulfillment. NULL if the lines do not support line numbers or the line number is unknown.`Filter(multi eq;ge;le)` `Introduced in version 21.1.1.26` |
+| [LineType](General.Documents.DocumentFulfillments.md#linetype) | string (1) | Detail (line) type, for example materials, services, etc. L=Line. Other values are defined by the document entity type.`Required` `Default(&quot;L&quot;)` `Filter(multi eq)` `Introduced in version 21.1.1.26` |
+| [QuantityBase](General.Documents.DocumentFulfillments.md#quantitybase) | decimal (12, 3) | Fulfilled quantity in the base measurement unit of the product.`Required` `Filter(multi eq;ge;le)` `Introduced in version 21.1.1.33` |
+| [StandardQuantity](General.Documents.DocumentFulfillments.md#standardquantity) | decimal (12, 3) | The theoretical quantity according to the current measurement dimensions for the product. Used to measure the execution.`Required` `Introduced in version 22.1.4.52` |
 
 ## References
 
@@ -72,9 +72,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Documents.DocumentFulfillments.md#id) | guid |  
-| [ObjectVersion](General.Documents.DocumentFulfillments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Documents.DocumentFulfillments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Documents.DocumentFulfillments.md#id) | guid |  |
+| [ObjectVersion](General.Documents.DocumentFulfillments.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Documents.DocumentFulfillments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

@@ -45,9 +45,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T.`Required` `Filter(eq)` 
-| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping.`Filter(like)` 
-| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.`Filter(eq;ge;le)` 
+| [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | [AccountType](Regulatory.Saft.ProfileAccounts.md#accounttype) | Account classification in SAF-T.`Required` `Filter(eq)` |
+| [Notes](Regulatory.Saft.ProfileAccounts.md#notes) | string (max) __nullable__ | Additional details about the mapping.`Filter(like)` |
+| [SignificantPropertyOrder](Regulatory.Saft.ProfileAccounts.md#significantpropertyorder) | int32 __nullable__ | Sequence number of the analytical property considered important for this account. For example, the code of the subject (customer or supplier) used to link transactions to a business partner.`Filter(eq;ge;le)` |
 
 ## References
 
@@ -62,9 +62,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Regulatory.Saft.ProfileAccounts.md#id) | guid |  
-| [ObjectVersion](Regulatory.Saft.ProfileAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Regulatory.Saft.ProfileAccounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Regulatory.Saft.ProfileAccounts.md#id) | guid |  |
+| [ObjectVersion](Regulatory.Saft.ProfileAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Regulatory.Saft.ProfileAccounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

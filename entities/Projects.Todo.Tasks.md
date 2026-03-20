@@ -34,14 +34,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompletedDateTimeUtc](Projects.Todo.Tasks.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task was completed.`Filter(eq;ge;le)` `ReadOnly` 
-| [CreationTimeUtc](Projects.Todo.Tasks.md#creationtimeutc) | datetime | Indicates (in UTC) when the task was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61` 
-| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished.`Filter(eq;ge;le)` `ORD` 
-| [Importance](Projects.Todo.Tasks.md#importance) | [Importance](Projects.Todo.Tasks.md#importance) | The importance of the task.`Required` `Default(&quot;N&quot;)` `Filter(eq)` 
-| [Notes](Projects.Todo.Tasks.md#notes) | string (max) __nullable__ | Notes for this Task. `Introduced in version 23.1.1.48` 
-| [RemindTimeUtc](Projects.Todo.Tasks.md#remindtimeutc) | datetime __nullable__ | When to remind the assigned user for the task (in UTC).`Filter(eq;ge;le)` `Introduced in version 23.1.1.51` 
-| [State](Projects.Todo.Tasks.md#state) | [State](Projects.Todo.Tasks.md#state) | Indicates the current task state.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)` 
-| [Title](Projects.Todo.Tasks.md#title) | string (254) | A brief description of the task.`Required` `Filter(like)` 
+| [CompletedDateTimeUtc](Projects.Todo.Tasks.md#completeddatetimeutc) | datetime __nullable__ | Indicates (in UTC) when the task was completed.`Filter(eq;ge;le)` `ReadOnly` |
+| [CreationTimeUtc](Projects.Todo.Tasks.md#creationtimeutc) | datetime | Indicates (in UTC) when the task was created.`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ORD` `ReadOnly` `Introduced in version 26.1.4.61` |
+| [DueDate](Projects.Todo.Tasks.md#duedate) | date __nullable__ | Indicates when the task should be finished.`Filter(eq;ge;le)` `ORD` |
+| [Importance](Projects.Todo.Tasks.md#importance) | [Importance](Projects.Todo.Tasks.md#importance) | The importance of the task.`Required` `Default(&quot;N&quot;)` `Filter(eq)` |
+| [Notes](Projects.Todo.Tasks.md#notes) | string (max) __nullable__ | Notes for this Task. `Introduced in version 23.1.1.48` |
+| [RemindTimeUtc](Projects.Todo.Tasks.md#remindtimeutc) | datetime __nullable__ | When to remind the assigned user for the task (in UTC).`Filter(eq;ge;le)` `Introduced in version 23.1.1.51` |
+| [State](Projects.Todo.Tasks.md#state) | [State](Projects.Todo.Tasks.md#state) | Indicates the current task state.`Required` `Default(&quot;N&quot;)` `Filter(multi eq)` |
+| [Title](Projects.Todo.Tasks.md#title) | string (254) | A brief description of the task.`Required` `Filter(like)` |
 
 ## References
 
@@ -57,12 +57,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Projects.Todo.Tasks.md#id) | guid |  
-| [ObjectVersion](Projects.Todo.Tasks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Projects.Todo.Tasks.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Projects.Todo.Tasks.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Projects.Todo.Tasks.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Projects.Todo.Tasks.md#displaytext) | string |  
+| [Id](Projects.Todo.Tasks.md#id) | guid |  |
+| [ObjectVersion](Projects.Todo.Tasks.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.Todo.Tasks.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.Todo.Tasks.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.Todo.Tasks.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Projects.Todo.Tasks.md#displaytext) | string |  |
 
 ## Child Collections
 

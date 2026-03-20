@@ -37,11 +37,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Capacity](Crm.Pos.ExecutionResources.md#capacity) | int32 __nullable__ | Optional: number of simultaneous uses (e.g., seating for 4)`Filter(eq;ge;le)` 
-| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.`Required` `Filter(eq;like)` `ORD` 
-| [IsActive](Crm.Pos.ExecutionResources.md#isactive) | boolean | Indicates whether the POS execution resource is currently active.`Required` `Default(true)` `Filter(eq)` 
-| [Name](Crm.Pos.ExecutionResources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Human readable resource name, e.g. 'Table 5', 'Room 58'.`Required` `Filter(like)` 
-| [Notes](Crm.Pos.ExecutionResources.md#notes) | string (max) __nullable__ | Notes for the execution resource.`Filter(like)` 
+| [Capacity](Crm.Pos.ExecutionResources.md#capacity) | int32 __nullable__ | Optional: number of simultaneous uses (e.g., seating for 4)`Filter(eq;ge;le)` |
+| [Code](Crm.Pos.ExecutionResources.md#code) | string (16) | Unique (within the location) code of the resource. Used for display constrained devices, import/export matching, etc.`Required` `Filter(eq;like)` `ORD` |
+| [IsActive](Crm.Pos.ExecutionResources.md#isactive) | boolean | Indicates whether the POS execution resource is currently active.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Crm.Pos.ExecutionResources.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Human readable resource name, e.g. 'Table 5', 'Room 58'.`Required` `Filter(like)` |
+| [Notes](Crm.Pos.ExecutionResources.md#notes) | string (max) __nullable__ | Notes for the execution resource.`Filter(like)` |
 
 ## References
 
@@ -55,9 +55,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.ExecutionResources.md#id) | guid |  
-| [ObjectVersion](Crm.Pos.ExecutionResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Crm.Pos.ExecutionResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Pos.ExecutionResources.md#id) | guid |  |
+| [ObjectVersion](Crm.Pos.ExecutionResources.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Crm.Pos.ExecutionResources.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

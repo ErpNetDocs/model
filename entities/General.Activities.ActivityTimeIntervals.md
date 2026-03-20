@@ -41,12 +41,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed`Required` `Filter(eq;ge;le)` 
-| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'`Required` `Filter(ge;le)` 
-| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed`Required` `Default(0)` `Filter(ge;le)` 
-| [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval 
-| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'`Required` `Filter(ge;le)` 
-| [State](General.Activities.ActivityTimeIntervals.md#state) | [DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. NULL when the state is unknown. 
+| [Date](General.Activities.ActivityTimeIntervals.md#date) | date | The date on which the work was performed`Required` `Filter(eq;ge;le)` |
+| [EndTime](General.Activities.ActivityTimeIntervals.md#endtime) | time | The ending time of the time interval within 'Date'`Required` `Filter(ge;le)` |
+| [ExecutionCompletePercent](General.Activities.ActivityTimeIntervals.md#executioncompletepercent) | decimal (3, 2) | Percent of task completed`Required` `Default(0)` `Filter(ge;le)` |
+| [Notes](General.Activities.ActivityTimeIntervals.md#notes) | string (254) __nullable__ | Notes for the time interval |
+| [StartTime](General.Activities.ActivityTimeIntervals.md#starttime) | time | The starting time of the time interval within 'Date'`Required` `Filter(ge;le)` |
+| [State](General.Activities.ActivityTimeIntervals.md#state) | [DocumentState](General.Activities.ActivityTimeIntervals.md#state) __nullable__ | The state of the primary activity in the moment the time interval was created. NULL when the state is unknown. |
 
 ## References
 
@@ -61,12 +61,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Activities.ActivityTimeIntervals.md#id) | guid |  
-| [ObjectVersion](General.Activities.ActivityTimeIntervals.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](General.Activities.ActivityTimeIntervals.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](General.Activities.ActivityTimeIntervals.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](General.Activities.ActivityTimeIntervals.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](General.Activities.ActivityTimeIntervals.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Activities.ActivityTimeIntervals.md#id) | guid |  |
+| [ObjectVersion](General.Activities.ActivityTimeIntervals.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](General.Activities.ActivityTimeIntervals.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](General.Activities.ActivityTimeIntervals.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](General.Activities.ActivityTimeIntervals.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](General.Activities.ActivityTimeIntervals.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

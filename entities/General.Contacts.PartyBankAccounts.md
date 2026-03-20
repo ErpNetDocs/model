@@ -36,13 +36,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string (50) | The code of the account, usually the IBAN code`Required` `Filter(eq;like)` 
-| [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments 
-| [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments 
-| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code`Filter(eq)` 
-| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank`Filter(like)` 
-| [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | 1 if the this is the default account for the party. Only one default per party is allowed`Required` `Default(false)` `Filter(eq)` 
-| [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. 
+| [BankAccountCode](General.Contacts.PartyBankAccounts.md#bankaccountcode) | string (50) | The code of the account, usually the IBAN code`Required` `Filter(eq;like)` |
+| [BankAddress](General.Contacts.PartyBankAccounts.md#bankaddress) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | The address of the bank or the bank branch office. Required (not-null) only for own accounts for printing or exporting bank payments |
+| [BankBranchName](General.Contacts.PartyBankAccounts.md#bankbranchname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The name of the branch office of the bank, where the account is located. Required (not-null) only for own accounts for printing or exporting bank payments |
+| [BankCode](General.Contacts.PartyBankAccounts.md#bankcode) | string (30) __nullable__ | The code of the bank, usually the BIC code`Filter(eq)` |
+| [BankName](General.Contacts.PartyBankAccounts.md#bankname) | [MultilanguageString (100)](../data-types.md#multilanguagestring) __nullable__ | The full name of the bank`Filter(like)` |
+| [IsDefault](General.Contacts.PartyBankAccounts.md#isdefault) | boolean | 1 if the this is the default account for the party. Only one default per party is allowed`Required` `Default(false)` `Filter(eq)` |
+| [Notes](General.Contacts.PartyBankAccounts.md#notes) | string (254) __nullable__ | Notes for this PartyBankAccount. |
 
 ## References
 
@@ -55,9 +55,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  
-| [ObjectVersion](General.Contacts.PartyBankAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](General.Contacts.PartyBankAccounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](General.Contacts.PartyBankAccounts.md#id) | guid |  |
+| [ObjectVersion](General.Contacts.PartyBankAccounts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](General.Contacts.PartyBankAccounts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

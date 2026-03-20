@@ -34,22 +34,22 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code`Required` `Filter(eq;like)` 
-| [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel 
-| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? 1=Yes, 0=No`Required` `Default(true)` `Filter(eq)` 
-| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel`Required` `Filter(eq;like)` 
+| [Code](Crm.Marketing.DistributionChannels.md#code) | string (10) | Unique distribution channel code`Required` `Filter(eq;like)` |
+| [Description](Crm.Marketing.DistributionChannels.md#description) | string (max) __nullable__ | Full description of the distribution channel |
+| [IsActive](Crm.Marketing.DistributionChannels.md#isactive) | boolean | Is the channel active for new sales? 1=Yes, 0=No`Required` `Default(true)` `Filter(eq)` |
+| [Name](Crm.Marketing.DistributionChannels.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the distribution channel`Required` `Filter(eq;like)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  
-| [ObjectVersion](Crm.Marketing.DistributionChannels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Crm.Marketing.DistributionChannels.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Crm.Marketing.DistributionChannels.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Crm.Marketing.DistributionChannels.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Crm.Marketing.DistributionChannels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Crm.Marketing.DistributionChannels.md#id) | guid |  |
+| [ObjectVersion](Crm.Marketing.DistributionChannels.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Crm.Marketing.DistributionChannels.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Crm.Marketing.DistributionChannels.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Crm.Marketing.DistributionChannels.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Crm.Marketing.DistributionChannels.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details

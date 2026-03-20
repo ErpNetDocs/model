@@ -34,18 +34,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving`Required` `Default(true)` `Filter(eq)` 
-| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box`Required` `Filter(eq)` 
-| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | 1 when this is the default mailbox for the user.`Required` `Default(true)` `Filter(eq)` 
-| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | 1 when the mailbox messages are stored in encrypted format`Required` `Default(false)` `Filter(eq)` 
-| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset`Required` `Default(false)` `Filter(eq)` `ReadOnly` 
-| [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server 
-| [SentItemsFolderName](Applications.Mail.Boxes.md#sentitemsfoldername) | string (254) __nullable__ | The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne). 
-| [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached 
-| [SyncPassword](Applications.Mail.Boxes.md#syncpassword) | string (512) __nullable__ | The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name 
-| [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) | [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__ | Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup 
-| [SyncServerAddress](Applications.Mail.Boxes.md#syncserveraddress) | string (254) __nullable__ | Incoming and outgoing mail server internet address. NULL when synchronization is not set up 
-| [SyncUserName](Applications.Mail.Boxes.md#syncusername) | string (64) __nullable__ | User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name 
+| [Active](Applications.Mail.Boxes.md#active) | boolean | True when the mail box is active for mail sinchronization, sending and receiving`Required` `Default(true)` `Filter(eq)` |
+| [EmailAddress](Applications.Mail.Boxes.md#emailaddress) | string (254) | The email address associated with this mail box`Required` `Filter(eq)` |
+| [IsDefault](Applications.Mail.Boxes.md#isdefault) | boolean | 1 when this is the default mailbox for the user.`Required` `Default(true)` `Filter(eq)` |
+| [IsEncrypted](Applications.Mail.Boxes.md#isencrypted) | boolean | 1 when the mailbox messages are stored in encrypted format`Required` `Default(false)` `Filter(eq)` |
+| [ResetOnNextSync](Applications.Mail.Boxes.md#resetonnextsync) | boolean | Reset is pending: True = next sync should delete and retrieve again all messages; False = no pending reset`Required` `Default(false)` `Filter(eq)` `ReadOnly` |
+| [SendServerAddress](Applications.Mail.Boxes.md#sendserveraddress) | string (254) __nullable__ | The address of the server to use for sending mail. The same credentials as the sync server are used. When NULL, the mail will be sent using the default server, which is setup at the application server |
+| [SentItemsFolderName](Applications.Mail.Boxes.md#sentitemsfoldername) | string (254) __nullable__ | The name of the SentItems folder. It is left empty, EnterpriseOne won't save the sent mail in any folder (but it is still possible that the actual mail server would nevertheless save the mail in a sent items folder, independently from EnterpriseOne). |
+| [SignatureHtml](Applications.Mail.Boxes.md#signaturehtml) | string (max) __nullable__ | Html text of the default signature, when creating new E-mails from this mailbox. When is NULL, a default generic signature is attached |
+| [SyncPassword](Applications.Mail.Boxes.md#syncpassword) | string (512) __nullable__ | The password to supply to the server when retrieving email. NULL when the connection is not set up or the server does not require user name |
+| [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) | [SyncProtocol](Applications.Mail.Boxes.md#syncprotocol) __nullable__ | Synchronization protocol, 'POP3', 'IMAP' or 'Microsoft Exchange'. NULL means that syncrhonization is not setup |
+| [SyncServerAddress](Applications.Mail.Boxes.md#syncserveraddress) | string (254) __nullable__ | Incoming and outgoing mail server internet address. NULL when synchronization is not set up |
+| [SyncUserName](Applications.Mail.Boxes.md#syncusername) | string (64) __nullable__ | User name to supply to the server, when retrieving email. NULL when the connection is not set up or the server does not require user name |
 
 ## References
 
@@ -58,12 +58,12 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Applications.Mail.Boxes.md#id) | guid |  
-| [ObjectVersion](Applications.Mail.Boxes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [ExternalId](Applications.Mail.Boxes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] 
-| [ExternalSystem](Applications.Mail.Boxes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] 
-| [AggregateLastUpdateTimeUtc](Applications.Mail.Boxes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] 
-| [DisplayText](Applications.Mail.Boxes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Applications.Mail.Boxes.md#id) | guid |  |
+| [ObjectVersion](Applications.Mail.Boxes.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Applications.Mail.Boxes.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Applications.Mail.Boxes.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Applications.Mail.Boxes.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [DisplayText](Applications.Mail.Boxes.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 ## Child Collections
 

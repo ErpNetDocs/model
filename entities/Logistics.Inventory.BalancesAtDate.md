@@ -28,11 +28,11 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company.`Currency: EnterpriseCompany.BaseCurrency` `Required` 
-| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances.`Required` `Filter(eq)` 
-| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency.`Currency: Product.CostingCurrency` `Required` 
-| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` 
-| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency.`Currency: Store.Currency` `Required` 
+| [BaseCost](Logistics.Inventory.BalancesAtDate.md#basecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in base currency of the enterprise company.`Currency: EnterpriseCompany.BaseCurrency` `Required` |
+| [Date](Logistics.Inventory.BalancesAtDate.md#date) | date | The date parameter used to compute the balances.`Required` `Filter(eq)` |
+| [ProductCost](Logistics.Inventory.BalancesAtDate.md#productcost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the products currency.`Currency: Product.CostingCurrency` `Required` |
+| [QuantityBase](Logistics.Inventory.BalancesAtDate.md#quantitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The quantity of the stock received/issued in base measurement unit`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
+| [StoreCost](Logistics.Inventory.BalancesAtDate.md#storecost) | [Amount (38, 2)](../data-types.md#amount) | The cost of the inventory in the stores currency.`Currency: Store.Currency` `Required` |
 
 ## References
 

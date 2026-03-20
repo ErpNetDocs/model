@@ -36,14 +36,14 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CreationTimeUtc](Systems.Security.UserDevices.md#creationtimeutc) | datetime | The exact server time (in UTC), when the device was registered.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [DeviceFingerprint](Systems.Security.UserDevices.md#devicefingerprint) | string (2048) __nullable__ | A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.`Filter(eq)` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [DeviceInfo](Systems.Security.UserDevices.md#deviceinfo) | string (4092) __nullable__ | Shows basic information about your device.`ReadOnly` `Introduced in version 25.1.2.34` 
-| [DeviceName](Systems.Security.UserDevices.md#devicename) | string (256) | The name of the device, such as the model or a custom name given by the user.`Required` `Introduced in version 25.1.2.30` 
-| [LastLoginTimeUtc](Systems.Security.UserDevices.md#lastlogintimeutc) | datetime | The exact server time (in UTC) when the device was last used to sign in.`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [NotificationsAllowed](Systems.Security.UserDevices.md#notificationsallowed) | boolean | Тhe device is allowed to receive notifications from the system.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.30` 
-| [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).`Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.2.30` 
-| [NotificationsToken](Systems.Security.UserDevices.md#notificationstoken) | string (2048) __nullable__ | A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.`ReadOnly` `Introduced in version 25.1.2.30` 
+| [CreationTimeUtc](Systems.Security.UserDevices.md#creationtimeutc) | datetime | The exact server time (in UTC), when the device was registered.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 25.1.2.30` |
+| [DeviceFingerprint](Systems.Security.UserDevices.md#devicefingerprint) | string (2048) __nullable__ | A unique identifier for the device based on its fingerprint, used to track devices securely. This column can be NULL if not provided.`Filter(eq)` `ReadOnly` `Introduced in version 25.1.2.30` |
+| [DeviceInfo](Systems.Security.UserDevices.md#deviceinfo) | string (4092) __nullable__ | Shows basic information about your device.`ReadOnly` `Introduced in version 25.1.2.34` |
+| [DeviceName](Systems.Security.UserDevices.md#devicename) | string (256) | The name of the device, such as the model or a custom name given by the user.`Required` `Introduced in version 25.1.2.30` |
+| [LastLoginTimeUtc](Systems.Security.UserDevices.md#lastlogintimeutc) | datetime | The exact server time (in UTC) when the device was last used to sign in.`Required` `Default(NowUtc)` `Filter(ge;le)` `ORD` `ReadOnly` `Introduced in version 25.1.2.30` |
+| [NotificationsAllowed](Systems.Security.UserDevices.md#notificationsallowed) | boolean | Тhe device is allowed to receive notifications from the system.`Required` `Default(true)` `Filter(eq)` `Introduced in version 25.1.2.30` |
+| [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | [NotificationsSystem](Systems.Security.UserDevices.md#notificationssystem) | The type or system of notifications allowed on the device, typically referring to the notification service (e.g., FCM, WebPush, etc.).`Required` `Filter(multi eq)` `ReadOnly` `Introduced in version 25.1.2.30` |
+| [NotificationsToken](Systems.Security.UserDevices.md#notificationstoken) | string (2048) __nullable__ | A token used for sending notifications to the device, such as a push notification token. NULL if not applicable.`ReadOnly` `Introduced in version 25.1.2.30` |
 
 ## References
 
@@ -56,9 +56,9 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Security.UserDevices.md#id) | guid |  
-| [ObjectVersion](Systems.Security.UserDevices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. 
-| [DisplayText](Systems.Security.UserDevices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. 
+| [Id](Systems.Security.UserDevices.md#id) | guid |  |
+| [ObjectVersion](Systems.Security.UserDevices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [DisplayText](Systems.Security.UserDevices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details
