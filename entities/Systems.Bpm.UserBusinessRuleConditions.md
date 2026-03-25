@@ -13,9 +13,8 @@ Base Table: Sys_User_Business_Rule_Conditions
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {AttributeName}  
-Search Members: AttributeName  
-Name Member: AttributeName  
+Display Format: {Id}: {UserBusinessRuleId}  
+Search Members:   
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
