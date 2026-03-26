@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>R39658 AccountingVoucher - Reporting Currency Amounts Equal Movement Amounts | ERP.net Domain Model </title>
+      <title>R39658 Accounting Voucher - Reporting Currency Amounts Equal Movement Amounts | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="R39658 AccountingVoucher - Reporting Currency Amounts Equal Movement Amounts | ERP.net Domain Model ">
+      <meta name="title" content="R39658 Accounting Voucher - Reporting Currency Amounts Equal Movement Amounts | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -85,11 +85,11 @@
         </div>
 
         <article data-uid="">
-<h1 id="r39658-accountingvoucher---reporting-currency-amounts-equal-movement-amounts">R39658 AccountingVoucher - Reporting Currency Amounts Equal Movement Amounts</h1>
+<h1 id="r39658-accounting-voucher---reporting-currency-amounts-equal-movement-amounts">R39658 Accounting Voucher - Reporting Currency Amounts Equal Movement Amounts</h1>
 
 <table>
-<col style="width:18.8%">
-<col style="width:81.2%">
+<col style="width:25%">
+<col style="width:75%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -105,7 +105,8 @@
 </tr>
 <tr>
 <td><strong>Attribute</strong></td>
-<td>AccountingVoucherLine.Debit, AccountingVoucherLine.DebitReporting,AccountingVoucherLine.Credit, AccountingVoucherLine.CreditReporting</td>
+<td>AccountingVoucherLine.Debit, AccountingVoucherLine.DebitReporting,<br>
+AccountingVoucherLine.Credit, AccountingVoucherLine.CreditReporting</td>
 </tr>
 <tr>
 <td><strong>Layer</strong></td>
@@ -125,29 +126,29 @@
 </tr>
 <tr>
 <td><strong>Action</strong></td>
-<td>If AccountingVoucherLine.Currency = EnterpriseCompany.ReportingCurrency <br>
+<td>If AccountingVoucherLine.Currency = EnterpriseCompany.ReportingCurrency<br>
 and DocumentDate &lt;= EnterpriseCompany.ReportingCurrencyEndDate <br>
-OR EnterpriseCompany.ReportingCurrencyEndDate Is Null <br>
+OR EnterpriseCompany.ReportingCurrencyEndDate Is Null<br>
 for each voucher line validate that <br>
-Debit = DebitReporting and  Credit = CreditReporting</td>
+Debit = DebitReporting and Credit = CreditReporting</td>
 </tr>
 <tr>
 <td><strong>Description</strong></td>
-<td>Upon releasing the voucher, if the document date is before the Reporting Currency End Date<br>
-and the currency of the voucher line is the enterprise company’s reporting currency, <br>
-each line is validated to ensure that Debit = Debit Reporting and Credit = Credit Reporting.</td>
+<td>Upon releasing the voucher, if the document date is before the Reporting Currency End Date
+and the currency of the voucher line is the enterprise company’s reporting currency,
+each line is validated to ensure that Debit = Debit Reporting and Credit = Credit Reporting. |</td>
 </tr>
 <tr>
 <td><strong>Message</strong></td>
-<td>In line {LineNo} of document {DocumentText}, Debit amount is not equal to Debit RC amount<br>
-or Credit amount is not equal to Credit RC amount.<br>
-When the currency of the accounting voucher line is the reporting currency, Debit must equal<br>
-Debit RC and Credit must equal Credit RC.<br>
+<td>In line {LineNo} of document {DocumentText}, Debit amount is not equal to Debit RC<br>
+amount or Credit amount is not equal to Credit RC amount. <br>
+When the currency of the accounting voucher line is the reporting currency, <br>
+Debit must equal Debit RC and Credit must equal Credit RC.<br>
 <em>Sort Messages By Attribute: LineNo</em></td>
 </tr>
 <tr>
 <td><strong>Version</strong></td>
-<td>Introduced:</td>
+<td>Introduced: v.26.2</td>
 </tr>
 <tr>
 <td><strong>Revocable</strong></td>
@@ -155,8 +156,8 @@ Debit RC and Credit must equal Credit RC.<br>
 </tr>
 </tbody>
 </table>
-<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
-topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
 </article>
 

@@ -133,11 +133,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>On creation of a new User, set its Default Language</td>
+<td>On Insert<br>If User.DefaultLanguage != NULL <br>THEN Return,<br>ЕLSE <br>(If User.DefaultLanguage == NULL <br>AND Config(where KeyPath == &quot;Default language&quot; &amp;&amp; IsActive == True &amp;&amp; KeyValue != NULL &amp;&amp; KeyValue != &quot;0&quot;).Count() == 1 <br> THEN set User.DefaultLanguage = Config.KeyValue<br>ELSE User.DefaultLanguage = {$language} // current Language)</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>The rule sets the Default Language equal to value of the config key <a href="https://docs.erp.net/tech/reference/config-options-reference.html#6-default-language">&quot;Default Language&quot;</a>.<br>If the key is NULL or not defined, the language is equal to the current language of the logged creation user</td>
+<td>The rule sets the Default Language equal to the value of the config key <a href="https://docs.erp.net/tech/reference/config-options-reference.html#6-default-language">&quot;Default Language&quot;</a>.<br>If the key is NULL or not defined, the language is equal to the current language of the logged creation user</td>
 </tr>
 <tr>
 <td>Message</td>
