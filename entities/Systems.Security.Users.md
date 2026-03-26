@@ -220,6 +220,8 @@ Supports Order By: **True**
 Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Email`
 ### Name
 
 The full name of the user`Required` `Filter(like)`
@@ -230,6 +232,8 @@ Supported Filters: **Like**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( obj.Person != null), obj.Person.PartyName, null)`
 ### Notes
 
 Notes for this User.

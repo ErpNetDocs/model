@@ -125,22 +125,23 @@ AccountingVoucherLine.Credit, AccountingVoucherLine.CreditReporting</td>
 <td>NO</td>
 </tr>
 <tr>
-<td><strong>Action</strong></td>
+<td><p><strong>Action</strong></p>
+<hr>
+<p><strong>Description</strong></p>
+<hr>
+<p><strong>Message</strong></p>
+</td>
 <td>If AccountingVoucherLine.Currency = EnterpriseCompany.ReportingCurrency<br>
 and DocumentDate &lt;= EnterpriseCompany.ReportingCurrencyEndDate <br>
 OR EnterpriseCompany.ReportingCurrencyEndDate Is Null<br>
 for each voucher line validate that <br>
-Debit = DebitReporting and Credit = CreditReporting</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>Upon releasing the voucher, if the document date is before the Reporting Currency End Date
+Debit = DebitReporting and Credit = CreditReporting
+---------------------------------------------------------------------------------------+
+Upon releasing the voucher, if the document date is before the Reporting Currency End Date
 and the currency of the voucher line is the enterprise company’s reporting currency,
-each line is validated to ensure that Debit = Debit Reporting and Credit = Credit Reporting. |</td>
-</tr>
-<tr>
-<td><strong>Message</strong></td>
-<td>In line {LineNo} of document {DocumentText}, Debit amount is not equal to Debit RC<br>
+each line is validated to ensure that Debit = Debit Reporting and Credit = Credit Reporting.
+---------------------------------------------------------------------------------------+
+In line {LineNo} of document {DocumentText}, Debit amount is not equal to Debit RC<br>
 amount or Credit amount is not equal to Credit RC amount. <br>
 When the currency of the accounting voucher line is the reporting currency, <br>
 Debit must equal Debit RC and Credit must equal Credit RC.<br>

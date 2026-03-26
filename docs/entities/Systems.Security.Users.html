@@ -442,6 +442,8 @@ Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>64</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>obj.Email</code></p>
 <h3 id="name">Name</h3>
 <p>The full name of the user<code>Required</code> <code>Filter(like)</code></p>
 <p>Type: <strong><a href="../data-types.html#multilanguagestring">MultilanguageString (254)</a></strong><br>
@@ -449,6 +451,8 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<p>Front-End Recalc Expressions:<br>
+<code>IIF( ( obj.Person != null), obj.Person.PartyName, null)</code></p>
 <h3 id="notes">Notes</h3>
 <p>Notes for this User.</p>
 <p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
@@ -802,7 +806,10 @@ Default Value: 0</p>
 <li><a href="../business-rules/R39700-3.html">R39700-3 User - Set Default Language</a></li>
 </ul>
 <h2 id="front-end-business-rules">Front-End Business Rules</h2>
-<p>None</p>
+<ul>
+<li><a href="../business-rules/R39700-1.html">R39700-1 User - Set Login (Recalc)</a></li>
+<li><a href="../business-rules/R39700-2.html">R39700-2 User - Set Name (Recalc)</a></li>
+</ul>
 <h2 id="api">API</h2>
 <p>Domain API Entity Set:
 Systems_Security_Users</p>
