@@ -160,6 +160,142 @@ Debit must equal Debit Reporting and Credit must equal Credit Reporting.<br>
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>R39658</td>
+<td></td>
+</tr>
+<tr>
+<td>Entity</td>
+<td><a class="xref" href="../entities/Finance.Accounting.AccountingVouchers.html">Finance.Accounting.AccountingVouchers</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Name</td>
+<td>ReportingCurrencyAmountsEqualMovementAmounts</td>
+<td></td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>AccountingVoucherLine.Debit, AccountingVoucherLine.DebitReporting, AccountingVoucherLine.Credit, AccountingVoucherLine.CreditReporting</td>
+<td></td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Back-End</td>
+<td></td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Releasing +</td>
+<td></td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Normal</td>
+<td></td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>NO</td>
+<td></td>
+</tr>
+<tr>
+<td>Action</td>
+<td>If AccountingVoucherLine.Currency=EnterpriseCompany.ReportingCurrency and DocumentDate &lt;=</td>
+<td>EnterpriseCompany.ReportingCurrencyEndDate <br></td>
+</tr>
+<tr>
+<td>OR EnterpriseCompany.ReportingCurrencyEndDate Is Null<br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>for each voucher line validate that <br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Debit = DebitReporting and Credit = CreditReporting</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Upon releasing the voucher, if the document date is before the <br></td>
+<td></td>
+</tr>
+<tr>
+<td>Reporting Currency End Date and the currency of the voucher line is the<br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>enterprise company’s reporting currency,</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>each line is validated to ensure that Debit = Debit Reporting and <br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Credit = Credit Reporting.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Message</td>
+<td>In line {LineNo} of document {DocumentText}, Debit amount is not equal to<br></td>
+<td></td>
+</tr>
+<tr>
+<td>Debit Reporting amount or Credit amount is not equal to Credit Reporting <br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>amount. <br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>When the currency of the accounting voucher line is the reporting currency,<br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Debit must equal Debit Reporting and Credit must equal Credit Reporting.<br></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Sort Messages By Attribute: LineNo</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Introduced</td>
+<td>v.26 SP9</td>
+<td></td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>YES</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
 topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
 
