@@ -88,8 +88,8 @@
 <h1 id="r39658-accounting-voucher---reporting-currency-amounts-equal-movement-amounts">R39658 Accounting Voucher - Reporting Currency Amounts Equal Movement Amounts</h1>
 
 <table>
-<col style="width:25%">
-<col style="width:75%">
+<col style="width:23.77%">
+<col style="width:76.23%">
 <tbody>
 <tr>
 <td><strong>Code</strong></td>
@@ -136,11 +136,11 @@ and DocumentDate &lt;= EnterpriseCompany.ReportingCurrencyEndDate <br>
 OR EnterpriseCompany.ReportingCurrencyEndDate Is Null<br>
 for each voucher line validate that <br>
 Debit = DebitReporting and Credit = CreditReporting
----------------------------------------------------------------------------------------+
+---------------------------------------------------------------------------------------------+
 Upon releasing the voucher, if the document date is before the Reporting Currency End Date
 and the currency of the voucher line is the enterprise company’s reporting currency,
 each line is validated to ensure that Debit = Debit Reporting and Credit = Credit Reporting.
----------------------------------------------------------------------------------------+
+---------------------------------------------------------------------------------------------+
 In line {LineNo} of document {DocumentText}, Debit amount is not equal to Debit RC<br>
 amount or Credit amount is not equal to Credit RC amount. <br>
 When the currency of the accounting voucher line is the reporting currency, <br>
