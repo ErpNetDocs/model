@@ -229,6 +229,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>Unique part number of the product<code>Required</code> <code>Filter(multi eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.Products.Products.html#planningbucket">PlanningBucket</a></td>
+<td><a href="General.Products.Products.html#planningbucket">PlanningBucket</a> <strong>nullable</strong></td>
+<td>Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.<code>Default(&amp;quot;1WK&amp;quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.99</code></td>
+</tr>
+<tr>
 <td><a href="General.Products.Products.html#planningdemandtimefencedays">PlanningDemand<br>TimeFenceDays</a></td>
 <td>int32 <strong>nullable</strong></td>
 <td>Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)</td>
@@ -738,6 +743,42 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>32</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="planningbucket">PlanningBucket</h3>
+<p>Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.<code>Default(&amp;quot;1WK&amp;quot;)</code> <code>Filter(eq)</code> <code>Introduced in version 26.2.1.99</code></p>
+<p>Type: <strong><a href="General.Products.Products.html#planningbucket">PlanningBucket</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>PlanningBucket</code>(General.Products.Products.md#planningbucket) data attribute<br>
+Allowed Values (General.Products.ProductsRepository.PlanningBucket Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day</td>
+<td>Day. Stored as 'DAY'. <br> Database Value: 'DAY' <br> Model Value: 0 <br> Domain API Value: 'Day'</td>
+</tr>
+<tr>
+<td>Week</td>
+<td>Week. Stored as '1WK'. <br> Database Value: '1WK' <br> Model Value: 1 <br> Domain API Value: 'Week'</td>
+</tr>
+<tr>
+<td>v_2Weeks</td>
+<td>2 Weeks. Stored as '2WK'. <br> Database Value: '2WK' <br> Model Value: 2 <br> Domain API Value: 'v_2Weeks'</td>
+</tr>
+<tr>
+<td>Month</td>
+<td>Month. Stored as 'MTH'. <br> Database Value: 'MTH' <br> Model Value: 3 <br> Domain API Value: 'Month'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Week</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="planningdemandtimefencedays">PlanningDemandTimeFenceDays</h3>
 <p>Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)</p>

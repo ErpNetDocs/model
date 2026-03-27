@@ -13,7 +13,7 @@ Base Table: Inv_Requisition_Plan
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {FirmPlannedOrderReceiptsValue}  
+Display Format: {FirmPlannedOrderReceiptsValue}: {FirmPlannedOrderReleasesValue}  
 Search Members:   
 Category:  Views  
 Show in UI:  ShownByDefault  
@@ -47,6 +47,9 @@ Aggregate Tree
 | [Quantity](Logistics.Inventory.RequisitionPlan.md#quantity) | [Quantity (18, 3)](../data-types.md#quantity) | The Quantity of the purchase orders the program shall generate; the suggested value equals Planned_Order_Releases but can be changed by the user;`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` |
 | [ReleaseDate](Logistics.Inventory.RequisitionPlan.md#releasedate) | datetime __nullable__ | The suggested by the program value equals Calendar_Date; the release date of the purchase orders to be generated`Filter(ge;le)` |
 | [ScheduledReceipts](Logistics.Inventory.RequisitionPlan.md#scheduledreceipts) | [Quantity (18, 3)](../data-types.md#quantity) | The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Default(0)` |
+| [State](Logistics.Inventory.RequisitionPlan.md#state) | [State](Logistics.Inventory.RequisitionPlan.md#state) __nullable__ | Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.`Default(&quot;DRF&quot;)` `Filter(multi eq)` `Introduced in version 26.2.1.99` |
+| [SuggestedQuantity](Logistics.Inventory.RequisitionPlan.md#suggestedquantity) | [Quantity (18, 3)](../data-types.md#quantity) __nullable__ | The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` `Introduced in version 26.2.1.99` |
+| [SupplyType](Logistics.Inventory.RequisitionPlan.md#supplytype) | [SupplyType](Logistics.Inventory.RequisitionPlan.md#supplytype) __nullable__ | Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.`Filter(eq)` `Introduced in version 26.2.1.99` |
 
 ## References
 
@@ -233,6 +236,55 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
+
+### State
+
+Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.`Default(&quot;DRF&quot;)` `Filter(multi eq)` `Introduced in version 26.2.1.99`
+
+Type: **[State](Logistics.Inventory.RequisitionPlan.md#state) __nullable__**  
+Category: **System**  
+Allowed values for the `State`(Logistics.Inventory.RequisitionPlan.md#state) data attribute  
+Allowed Values (Logistics.Inventory.RequisitionPlanRepository.State Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Draft | The plan is automatically generated or updated by the system. Quantities are based on calculations and can be freely adjusted by the user.. Stored as 'DRF'. <br /> Database Value: 'DRF' <br /> Model Value: 0 <br /> Domain API Value: 'Draft' |
+| Firmed | The plan has been reviewed and confirmed by the user. Quantities are fixed and will not be changed by subsequent planning runs.. Stored as 'FRM'. <br /> Database Value: 'FRM' <br /> Model Value: 1 <br /> Domain API Value: 'Firmed' |
+| Released | The plan has been executed. Corresponding supply orders (purchase, transfer, or production) have been generated.. Stored as 'REL'. <br /> Database Value: 'REL' <br /> Model Value: 2 <br /> Domain API Value: 'Released' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **Draft**  
+Show in UI: **ShownByDefault**  
+
+### SuggestedQuantity
+
+The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Filter(eq;ge;le)` `Introduced in version 26.2.1.99`
+
+Type: **[Quantity (18, 3)](../data-types.md#quantity) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### SupplyType
+
+Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.`Filter(eq)` `Introduced in version 26.2.1.99`
+
+Type: **[SupplyType](Logistics.Inventory.RequisitionPlan.md#supplytype) __nullable__**  
+Category: **System**  
+Allowed values for the `SupplyType`(Logistics.Inventory.RequisitionPlan.md#supplytype) data attribute  
+Allowed Values (Logistics.Inventory.RequisitionPlanRepository.SupplyType Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Purchase | The required quantity will be supplied by purchasing from an external supplier.. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 0 <br /> Domain API Value: 'Purchase' |
+| Manufacture | The required quantity will be produced internally through a manufacturing (work) order.. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 1 <br /> Domain API Value: 'Manufacture' |
+| Transfer | The required quantity will be supplied by transferring stock from another warehouse or location.. Stored as 'T'. <br /> Database Value: 'T' <br /> Model Value: 2 <br /> Domain API Value: 'Transfer' |
+
+Supported Filters: **Equals**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Id

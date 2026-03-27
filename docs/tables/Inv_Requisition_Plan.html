@@ -201,14 +201,29 @@
 <td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.</td>
 </tr>
 <tr>
+<td><a href="#state">State</a></td>
+<td><code>char(3)</code> Allowed: <code>DRF</code>, <code>FRM</code>, <code>REL</code></td>
+<td>Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.</td>
+</tr>
+<tr>
 <td><a href="#store_id">Store_Id</a></td>
 <td><code>uniqueidentifier</code></td>
 <td>The store, which is planned.</td>
 </tr>
 <tr>
+<td><a href="#suggested_quantity">Suggested_Quantity</a></td>
+<td><code>decimal(18, 3)</code></td>
+<td>The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.</td>
+</tr>
+<tr>
 <td><a href="#supplier_id">Supplier_Id</a></td>
 <td><code>uniqueidentifier</code></td>
 <td>The default supplier in the default product supply for current store, if any</td>
+</tr>
+<tr>
+<td><a href="#supply_type">Supply_Type</a></td>
+<td><code>char(1)</code> Allowed: <code>P</code>, <code>M</code>, <code>T</code></td>
+<td>Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.</td>
 </tr>
 </tbody>
 </table>
@@ -609,7 +624,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>20</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1036,7 +1051,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>17</td>
+<td>18</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2119,7 +2134,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>19</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2243,7 +2258,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>21</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2403,6 +2418,129 @@
 </tr>
 </tbody>
 </table>
+<h3 id="state">State</h3>
+<p>Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>DRF</code>, <code>FRM</code>, <code>REL</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>DRF</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(3) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="state---supported-filters">State - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="store_id">Store_Id</h3>
 <p>The store, which is planned.</p>
 <table>
@@ -2526,6 +2664,131 @@
 </tr>
 </tbody>
 </table>
+<h3 id="suggested_quantity">Suggested_Quantity</h3>
+<p>The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(18, 3) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="suggested_quantity---supported-filters">Suggested_Quantity - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
 <h3 id="supplier_id">Supplier_Id</h3>
 <p>The default supplier in the default product supply for current store, if any</p>
 <table>
@@ -2631,6 +2894,129 @@
 </tbody>
 </table>
 <h4 id="supplier_id---supported-filters">Supplier_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supply_type">Supply_Type</h3>
+<p>Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allowed Values</td>
+<td><code>P</code>, <code>M</code>, <code>T</code></td>
+</tr>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>char(1) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="supply_type---supported-filters">Supply_Type - Supported Filters</h4>
 <table>
 <thead>
 <tr>

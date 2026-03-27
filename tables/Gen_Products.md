@@ -39,6 +39,7 @@ Products are the different items in the enterprise, which can be purchased, stor
 |[Minimal_Sales_Quantity_Base](#minimal_sales_quantity_base)|`decimal(18, 3)` |Minimal base quantity of this product that has to be specified in any sale.|
 |[Origin_Country_Id](#origin_country_id)|`uniqueidentifier` |Country from which the product originates (in which the product is produced/cultivated ...). Primarily used for Intrastat reporting.|
 |[Part_Number](#part_number)|`nvarchar(32)` |Unique part number of the product|
+|[Planning_Bucket](#planning_bucket)|`char(3)` Allowed: `DAY`, `1WK`, `2WK`, `MTH`|Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.|
 |[Planning_Demand_Time_Fence_Days](#planning_demand_time_fence_days)|`int` |Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days)|
 |[Planning_Horizon_Days](#planning_horizon_days)|`int` |Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days)|
 |[Planning_Time_Fence_Days](#planning_time_fence_days)|`int` |Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days)|
@@ -1014,6 +1015,43 @@ Unique part number of the product
 |Equals|`NULL`|no|no|
 |Like|None|no|yes|
 
+### Planning_Bucket
+
+
+Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`DAY`, `1WK`, `2WK`, `MTH`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|1WK|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|50|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Planning_Bucket - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Planning_Demand_Time_Fence_Days
 
 
@@ -1263,7 +1301,7 @@ Default measurement unit to use, when creating new purchase documents with this 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|49|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

@@ -31,8 +31,11 @@ The current requisition (MRP) plan. The data is deleted and re-created upon each
 |[Requisition_Plan_Item_Id](#requisition_plan_item_id)|`uniqueidentifier` `PK`||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Scheduled_Receipts](#scheduled_receipts)|`decimal(18, 3)` |The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.|
+|[State](#state)|`char(3)` Allowed: `DRF`, `FRM`, `REL`|Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.|
 |[Store_Id](#store_id)|`uniqueidentifier` |The store, which is planned.|
+|[Suggested_Quantity](#suggested_quantity)|`decimal(18, 3)` |The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.|
 |[Supplier_Id](#supplier_id)|`uniqueidentifier` |The default supplier in the default product supply for current store, if any|
+|[Supply_Type](#supply_type)|`char(1)` Allowed: `P`, `M`, `T`|Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.|
 
 ## Columns
 
@@ -155,7 +158,7 @@ The suggested by the program value equals Calendar_Date + Planning_Lead_Time_Day
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|20|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -283,7 +286,7 @@ When the order is for transfer, this is the store from which we shall transfer t
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|17|
+|Order|18|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -606,7 +609,7 @@ The suggested by the program value equals Calendar_Date; the release date of the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|19|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -640,7 +643,7 @@ The suggested by the program value equals Calendar_Date; the release date of the
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|21|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -686,6 +689,43 @@ The scheduled receipts of the product on the specified calendar date. This is ca
 |User Login|no|
 |Visible|yes|
 
+### State
+
+
+Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`DRF`, `FRM`, `REL`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|DRF|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|22|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### State - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Store_Id
 
 
@@ -723,6 +763,43 @@ The store, which is planned.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Suggested_Quantity
+
+
+The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|23|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(18, 3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Suggested_Quantity - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
 ### Supplier_Id
 
 
@@ -755,6 +832,43 @@ The default supplier in the default product supply for current store, if any
 |Visible|yes|
 
 #### Supplier_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Supply_Type
+
+
+Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`P`, `M`, `T`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|24|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(1) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Supply_Type - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

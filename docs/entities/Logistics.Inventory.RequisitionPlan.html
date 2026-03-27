@@ -94,7 +94,7 @@ Repository: Logistics.Inventory.RequisitionPlan<br>
 Base Table: Inv_Requisition_Plan<br>
 API access:  ReadWrite</p>
 <h2 id="visualization">Visualization</h2>
-<p>Display Format: {Id}: {FirmPlannedOrderReceiptsValue}<br>
+<p>Display Format: {FirmPlannedOrderReceiptsValue}: {FirmPlannedOrderReleasesValue}<br>
 Search Members:<br>
 Category:  Views<br>
 Show in UI:  ShownByDefault</p>
@@ -191,6 +191,21 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td><a href="Logistics.Inventory.RequisitionPlan.html#scheduledreceipts">ScheduledReceipts</a></td>
 <td><a href="../data-types.html#quantity">Quantity (18, 3)</a></td>
 <td>The scheduled receipts of the product on the specified calendar date. This is calculated as the unexecuted quantity of released receipt store orders, whose expected execution date is equal to the calendar date.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Required</code> <code>Default(0)</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#state">State</a></td>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#state">State</a> <strong>nullable</strong></td>
+<td>Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.<code>Default(&amp;quot;DRF&amp;quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.99</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#suggestedquantity">SuggestedQuantity</a></td>
+<td><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></td>
+<td>The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.99</code></td>
+</tr>
+<tr>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#supplytype">SupplyType</a></td>
+<td><a href="Logistics.Inventory.RequisitionPlan.html#supplytype">SupplyType</a> <strong>nullable</strong></td>
+<td>Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.<code>Filter(eq)</code> <code>Introduced in version 26.2.1.99</code></td>
 </tr>
 </tbody>
 </table>
@@ -390,6 +405,76 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="state">State</h3>
+<p>Indicates the current stage of the requisition planning process, from initial calculation through user confirmation to execution.<code>Default(&amp;quot;DRF&amp;quot;)</code> <code>Filter(multi eq)</code> <code>Introduced in version 26.2.1.99</code></p>
+<p>Type: <strong><a href="Logistics.Inventory.RequisitionPlan.html#state">State</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>State</code>(Logistics.Inventory.RequisitionPlan.md#state) data attribute<br>
+Allowed Values (Logistics.Inventory.RequisitionPlanRepository.State Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>The plan is automatically generated or updated by the system. Quantities are based on calculations and can be freely adjusted by the user.. Stored as 'DRF'. <br> Database Value: 'DRF' <br> Model Value: 0 <br> Domain API Value: 'Draft'</td>
+</tr>
+<tr>
+<td>Firmed</td>
+<td>The plan has been reviewed and confirmed by the user. Quantities are fixed and will not be changed by subsequent planning runs.. Stored as 'FRM'. <br> Database Value: 'FRM' <br> Model Value: 1 <br> Domain API Value: 'Firmed'</td>
+</tr>
+<tr>
+<td>Released</td>
+<td>The plan has been executed. Corresponding supply orders (purchase, transfer, or production) have been generated.. Stored as 'REL'. <br> Database Value: 'REL' <br> Model Value: 2 <br> Domain API Value: 'Released'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>Draft</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="suggestedquantity">SuggestedQuantity</h3>
+<p>The quantity suggested by the system based on planning calculations (MRP/DRP). It represents the recommended amount to cover the demand.<code>Unit: Product.BaseMeasurementCategory.BaseUnit</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 26.2.1.99</code></p>
+<p>Type: <strong><a href="../data-types.html#quantity">Quantity (18, 3)</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="supplytype">SupplyType</h3>
+<p>Indicates how the required quantity will be supplied – by purchase, manufacturing, or stock transfer.<code>Filter(eq)</code> <code>Introduced in version 26.2.1.99</code></p>
+<p>Type: <strong><a href="Logistics.Inventory.RequisitionPlan.html#supplytype">SupplyType</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>SupplyType</code>(Logistics.Inventory.RequisitionPlan.md#supplytype) data attribute<br>
+Allowed Values (Logistics.Inventory.RequisitionPlanRepository.SupplyType Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purchase</td>
+<td>The required quantity will be supplied by purchasing from an external supplier.. Stored as 'P'. <br> Database Value: 'P' <br> Model Value: 0 <br> Domain API Value: 'Purchase'</td>
+</tr>
+<tr>
+<td>Manufacture</td>
+<td>The required quantity will be produced internally through a manufacturing (work) order.. Stored as 'M'. <br> Database Value: 'M' <br> Model Value: 1 <br> Domain API Value: 'Manufacture'</td>
+</tr>
+<tr>
+<td>Transfer</td>
+<td>The required quantity will be supplied by transferring stock from another warehouse or location.. Stored as 'T'. <br> Database Value: 'T' <br> Model Value: 2 <br> Domain API Value: 'Transfer'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p>Type: <strong>guid</strong><br>
