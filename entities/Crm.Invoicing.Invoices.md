@@ -61,7 +61,7 @@ Aggregate Tree
 | [DocumentDate](Crm.Invoicing.Invoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNo](Crm.Invoicing.Invoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNotes](Crm.Invoicing.Invoices.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentVersion](Crm.Invoicing.Invoices.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [<s>DocumentVersion</s>](Crm.Invoicing.Invoices.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EntityName](Crm.Invoicing.Invoices.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FullState](Crm.Invoicing.Invoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] |
 | [IntrastatTransaction<br />NatureCode](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) | [TransactionNature](Crm.Invoicing.Invoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting |
@@ -103,7 +103,7 @@ Aggregate Tree
 | [DocumentCurrency](Crm.Invoicing.Invoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency in which the document is issued. All amounts are in this currency |
 | [DocumentType](Crm.Invoicing.Invoices.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Crm.Invoicing.Invoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Crm.Invoicing.Invoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Crm.Invoicing.Invoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Crm.Invoicing.Invoices.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Crm.Invoicing.Invoices.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [IntrastatTransportCountry](Crm.Invoicing.Invoices.md#intrastattransportcountry) | [Countries](General.Geography.Countries.md) (nullable) | Country of origin of the transport company; used for Intrastat reporting |
@@ -337,7 +337,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
+**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **int32**  
 Category: **System**  
@@ -870,9 +870,9 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  

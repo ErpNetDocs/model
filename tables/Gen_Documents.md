@@ -619,7 +619,7 @@ The branch of the enterprise company that issues the document.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

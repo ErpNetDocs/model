@@ -57,7 +57,7 @@ Aggregate Tree
 | [DocumentDate](Finance.Cost.Distributions.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNo](Finance.Cost.Distributions.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNotes](Finance.Cost.Distributions.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentVersion](Finance.Cost.Distributions.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [<s>DocumentVersion</s>](Finance.Cost.Distributions.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EndDate](Finance.Cost.Distributions.md#enddate) | date | The ending date of the covered period.`Required` `Filter(ge;le)` |
 | [EntityName](Finance.Cost.Distributions.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FullState](Finance.Cost.Distributions.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] |
@@ -85,7 +85,7 @@ Aggregate Tree
 | [CurrencyDirectory](Finance.Cost.Distributions.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. null means that the document does not need currency convertions. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentType](Finance.Cost.Distributions.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Finance.Cost.Distributions.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Finance.Cost.Distributions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Finance.Cost.Distributions.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Finance.Cost.Distributions.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Finance.Cost.Distributions.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Finance.Cost.Distributions.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -232,7 +232,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
+**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **int32**  
 Category: **System**  
@@ -565,9 +565,9 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  

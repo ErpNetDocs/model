@@ -59,7 +59,7 @@ Aggregate Tree
 | [DocumentDate](Production.ShopFloor.WorkOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNo](Production.ShopFloor.WorkOrders.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNotes](Production.ShopFloor.WorkOrders.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentVersion](Production.ShopFloor.WorkOrders.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [<s>DocumentVersion</s>](Production.ShopFloor.WorkOrders.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DueDate](Production.ShopFloor.WorkOrders.md#duedate) | datetime __nullable__ | The final due date, when the production should be ready.`Filter(ge;le)` |
 | [DurationHour](Production.ShopFloor.WorkOrders.md#durationhour) | decimal (10, 0) | The duration of all operations in the protocol either planned (for planned orders) or actual (for completed orders)`Required` `Default(0)` |
 | [EntityName](Production.ShopFloor.WorkOrders.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -94,7 +94,7 @@ Aggregate Tree
 | [DefaultOutputStore](Production.ShopFloor.WorkOrders.md#defaultoutputstore) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Default output store for the finished products |
 | [DocumentType](Production.ShopFloor.WorkOrders.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Production.ShopFloor.WorkOrders.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Production.ShopFloor.WorkOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Production.ShopFloor.WorkOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Production.ShopFloor.WorkOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Production.ShopFloor.WorkOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [MasterDocument](Production.ShopFloor.WorkOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -252,7 +252,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
+**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **int32**  
 Category: **System**  
@@ -675,9 +675,9 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  

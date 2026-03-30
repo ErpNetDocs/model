@@ -58,7 +58,7 @@ Aggregate Tree
 | [DocumentDate](Logistics.Procurement.PurchaseInvoices.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNo](Logistics.Procurement.PurchaseInvoices.md#documentno) | string (20) | Document number, unique within Document_Type_Id. `Required` `Filter(eq;like)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentNotes](Logistics.Procurement.PurchaseInvoices.md#documentnotes) | string (max) __nullable__ | Notes for this Document. (Inherited from [Documents](General.Documents.Documents.md)) |
-| [DocumentVersion](Logistics.Procurement.PurchaseInvoices.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [<s>DocumentVersion</s>](Logistics.Procurement.PurchaseInvoices.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EntityName](Logistics.Procurement.PurchaseInvoices.md#entityname) | string (64) | The entity name of the document header. `Required` `Filter(eq)` `ORD` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FullState](Logistics.Procurement.PurchaseInvoices.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] |
 | [IntrastatTransaction<br />NatureCode](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) | [TransactionNature](Logistics.Procurement.PurchaseInvoices.md#intrastattransactionnaturecode) __nullable__ | Transaction nature; used for Intrastat reporting |
@@ -95,7 +95,7 @@ Aggregate Tree
 | [DocumentCurrency](Logistics.Procurement.PurchaseInvoices.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | The currency of the unit prices and amounts in the document. |
 | [DocumentType](Logistics.Procurement.PurchaseInvoices.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [EnterpriseCompany](Logistics.Procurement.PurchaseInvoices.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseInvoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [EnterpriseCompanyLocation](Logistics.Procurement.PurchaseInvoices.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Procurement.PurchaseInvoices.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Procurement.PurchaseInvoices.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [IntrastatDestinationRegion](Logistics.Procurement.PurchaseInvoices.md#intrastatdestinationregion) | [AdministrativeRegions](General.Geography.AdministrativeRegions.md) (nullable) | Region, which is the final destination of the goods. Used for Intrastat reporting. When this is non-NULL, it applies to the whole document. |
@@ -304,7 +304,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document. `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
+**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document. `Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` (Inherited from [Documents](General.Documents.Documents.md))
 
 Type: **int32**  
 Category: **System**  
@@ -779,9 +779,9 @@ Show in UI: **HiddenByDefault**
 
 ### EnterpriseCompanyLocation
 
-The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
+The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  

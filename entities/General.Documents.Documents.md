@@ -62,7 +62,7 @@ Aggregate Tree
 | [DocumentDate](General.Documents.Documents.md#documentdate) | date | The date on which the document was issued`Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` |
 | [DocumentNo](General.Documents.Documents.md#documentno) | string (20) | Document number, unique within Document_Type_Id`Required` `Filter(eq;like)` `ORD` |
 | [DocumentNotes](General.Documents.Documents.md#documentnotes) | string (max) __nullable__ | Notes for this Document. |
-| [DocumentVersion](General.Documents.Documents.md#documentversion) | int32 | Consecutive version number, starting with 1. Each update produces a new version of the document.`Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` |
+| [<s>DocumentVersion</s>](General.Documents.Documents.md#documentversion) | int32 | **OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document.`Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78` |
 | [EntityName](General.Documents.Documents.md#entityname) | string (64) | The entity name of the document header.`Required` `Filter(eq)` `ORD` `ReadOnly` |
 | [FullState](General.Documents.Documents.md#fullstate) | string | Full state of the document based on its system and user state. [ReadOnly] |
 | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) | [ParentDocument<br />RelationshipType](General.Documents.Documents.md#parentdocumentrelationshiptype) __nullable__ | Type of relationship between the current document and the parent document(s). Affects the constraints for execution/completion for the documents. Possible values: 'S' = 'Subtask', 'N' = 'Next task'.`ReadOnly` |
@@ -88,7 +88,7 @@ Aggregate Tree
 | [CurrencyDirectory](General.Documents.Documents.md#currencydirectory) | [CurrencyDirectories](General.Currencies.CurrencyDirectories.md) (nullable) | The currency directory, containing all the convertion rates, used by the document. NULL means that the document does not need currency convertions |
 | [DocumentType](General.Documents.Documents.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The user defined type of the document. Determines document behaviour, properties, additional amounts, validation, generations, etc. |
 | [EnterpriseCompany](General.Documents.Documents.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company which issued the document |
-| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The branch of the enterprise company that issues the document.<br /> <br />The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.<br /> <br />Even when the enterprise company operates with a single branch, it must be explicitly specified. |
+| [EnterpriseCompanyLocation](General.Documents.Documents.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.<br /> <br />The value identifies the organizational unit (branch) within the enterprise company on whose behalf the document is issued. The branch determines the applicable numbering sequences, warehouses, accounting settings, tax registrations, access rights, and other rules and configurations specific to that organizational structure.<br /> <br />Even when the enterprise company operates with a single branch, it must be explicitly specified. |
 | [FromCompanyDivision](General.Documents.Documents.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. NULL when the document is not issued by any specific division |
 | [FromParty](General.Documents.Documents.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document |
 | [MasterDocument](General.Documents.Documents.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id |
@@ -231,7 +231,7 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentVersion
 
-Consecutive version number, starting with 1. Each update produces a new version of the document.`Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly`
+**OBSOLETE! Do not use!** Consecutive version number, starting with 1. Each update produces a new version of the document.`Obsolete` `Required` `Default(1)` `Filter(eq;ge;le)` `ReadOnly` `Obsoleted in version 26.2.1.78`
 
 Type: **int32**  
 Category: **System**  
@@ -554,7 +554,7 @@ The value identifies the organizational unit (branch) within the enterprise comp
  
 Even when the enterprise company operates with a single branch, it must be explicitly specified.
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  
