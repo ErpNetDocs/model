@@ -11,36 +11,37 @@ Returns diagnostic execution metrics for database queries within a specific Quer
 
 | Name | Type | Description |
 | - | - | --- |
-|[Avg_Cores_CPU](#avg_cores_cpu)|`float` |Normalized average CPU utilization by query executions in CPU-core units.|
-|[Avg_Cores_Total](#avg_cores_total)|`float` |Normalized average query execution duration in CPU-core units.|
-|[Avg_Cores_Waiting](#avg_cores_waiting)|`float` |Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.|
-|[Avg_Memory_per_Query_MB](#avg_memory_per_query_mb)|`float` |Average memory used per executed query.|
-|[Avg_Query_Memory_Usage_MB](#avg_query_memory_usage_mb)|`float` |Average SQL Server memory usage attributable to query execution (query memory grant usage).|
-|[Disk_Read_MB](#disk_read_mb)|`float` |Total disk-read volume (MB) during the interval.|
-|[Disk_Read_Throughput_MBps](#disk_read_throughput_mbps)|`float` |Average disk-read throughput (MB/s) during the interval.|
-|[Execution_Count](#execution_count)|`bigint` |Total number of query executions during the interval.|
-|[Executions_per_Second](#executions_per_second)|`float` |Average executions per second within the interval.|
+|[Avg_Cpu_Cores](#avg_cpu_cores)|`float` |Average CPU execution load, expressed in CPU cores (relative to 1 core).|
+|[Avg_Memory_Per_Query_MB](#avg_memory_per_query_mb)|`float` |Average memory (MB) used per query execution.|
+|[Avg_Total_Cores](#avg_total_cores)|`float` |Average total load, expressed in CPU cores (relative to 1 core).|
+|[Avg_Total_Query_Memory_MB](#avg_total_query_memory_mb)|`float` |Average total memory (MB) consumed by all concurrent query executions.|
+|[Avg_Waiting_Cores](#avg_waiting_cores)|`float` |Average waiting load, expressed in CPU cores (relative to 1 core).|
+|[Disk_Read_MBps](#disk_read_mbps)|`float` |Average disk read throughput (MB/s) during the interval.|
+|[Disk_Read_Total_MB](#disk_read_total_mb)|`float` |Total disk read volume (MB) during the interval.|
+|[Execution_Count](#execution_count)|`bigint` |Total number of executed queries during the interval.|
+|[Executions_Per_Second](#executions_per_second)|`float` |Average number of queries executed per second.|
 |[Interval_Completion_Ratio](#interval_completion_ratio)|`float` |Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final.|
-|[Runtime_Interval_Id](#runtime_interval_id)|`bigint` |Identifier of the Query Store runtime interval (runtime_stats_interval_id).|
+|[Is_Interval_Complete](#is_interval_complete)|`bit` |Indicates whether this is completed or still active interval.|
+|[Runtime_Interval_Id](#runtime_interval_id)|`bigint` |Unique identifier of the runtime interval.|
 |[Time_Slot_Begin_Utc](#time_slot_begin_utc)|`datetime` |Start timestamp of the interval in UTC.|
 |[Time_Slot_End_Utc](#time_slot_end_utc)|`datetime` |End timestamp of the interval in UTC.|
-|[Total_Duration_ms](#total_duration_ms)|`float` |Total duration (ms) of all completed executions in the interval.|
+|[Total_Duration_Ms](#total_duration_ms)|`float` |Total duration (ms) of all completed query executions in the interval.|
 |[Total_Logical_Reads](#total_logical_reads)|`bigint` |Total logical reads executed during the interval.|
 |[Total_Logical_Writes](#total_logical_writes)|`bigint` |Total logical writes executed during the interval.|
 |[Total_Physical_Reads](#total_physical_reads)|`bigint` |Total physical reads executed during the interval.|
-|[Wait_CPU_ms](#wait_cpu_ms)|`bigint` |Total wait time due to CPU resource contention.|
-|[Wait_IO_ms](#wait_io_ms)|`bigint` |Total wait time related to IO operations.|
-|[Wait_Lock_ms](#wait_lock_ms)|`bigint` |Total wait time caused by locks or blocking|
-|[Wait_Memory_ms](#wait_memory_ms)|`bigint` |Total wait time due to memory resource contention.|
-|[Wait_Network_ms](#wait_network_ms)|`bigint` |Total wait time caused by network transfer-related waits.|
-|[Wait_Other_ms](#wait_other_ms)|`bigint` |Total wait time for all remaining wait categories.|
+|[Wait_Cpu_Ms](#wait_cpu_ms)|`bigint` |Total wait time (ms) due to CPU resource contention.|
+|[Wait_Io_Ms](#wait_io_ms)|`bigint` |Total wait time (ms) related to I/O operations.|
+|[Wait_Lock_Ms](#wait_lock_ms)|`bigint` |Total wait time (ms) caused by locks or blocking.|
+|[Wait_Memory_Ms](#wait_memory_ms)|`bigint` |Total wait time (ms) due to memory resource contention.|
+|[Wait_Network_Ms](#wait_network_ms)|`bigint` |Total wait time (ms) caused by network transfer-related waits.|
+|[Wait_Other_Ms](#wait_other_ms)|`bigint` |Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network.|
 
 ## Columns
 
-### Avg_Cores_CPU
+### Avg_Cpu_Cores
 
 
-Normalized average CPU utilization by query executions in CPU-core units.
+Average CPU execution load, expressed in CPU cores (relative to 1 core).
 
 | Property | Value |
 | - | - |
@@ -51,7 +52,7 @@ Normalized average CPU utilization by query executions in CPU-core units.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -61,16 +62,16 @@ Normalized average CPU utilization by query executions in CPU-core units.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Avg_Cores_Total
+### Avg_Memory_Per_Query_MB
 
 
-Normalized average query execution duration in CPU-core units.
+Average memory (MB) used per query execution.
 
 | Property | Value |
 | - | - |
@@ -81,7 +82,7 @@ Normalized average query execution duration in CPU-core units.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|14|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -91,16 +92,16 @@ Normalized average query execution duration in CPU-core units.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Avg_Cores_Waiting
+### Avg_Total_Cores
 
 
-Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.
+Average total load, expressed in CPU cores (relative to 1 core).
 
 | Property | Value |
 | - | - |
@@ -111,7 +112,7 @@ Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -121,16 +122,16 @@ Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Avg_Memory_per_Query_MB
+### Avg_Total_Query_Memory_MB
 
 
-Average memory used per executed query.
+Average total memory (MB) consumed by all concurrent query executions.
 
 | Property | Value |
 | - | - |
@@ -141,7 +142,7 @@ Average memory used per executed query.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|15|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -151,16 +152,16 @@ Average memory used per executed query.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Avg_Query_Memory_Usage_MB
+### Avg_Waiting_Cores
 
 
-Average SQL Server memory usage attributable to query execution (query memory grant usage).
+Average waiting load, expressed in CPU cores (relative to 1 core).
 
 | Property | Value |
 | - | - |
@@ -171,7 +172,7 @@ Average SQL Server memory usage attributable to query execution (query memory gr
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -181,16 +182,16 @@ Average SQL Server memory usage attributable to query execution (query memory gr
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Disk_Read_MB
+### Disk_Read_MBps
 
 
-Total disk-read volume (MB) during the interval.
+Average disk read throughput (MB/s) during the interval.
 
 | Property | Value |
 | - | - |
@@ -201,7 +202,7 @@ Total disk-read volume (MB) during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|13|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -211,16 +212,16 @@ Total disk-read volume (MB) during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Disk_Read_Throughput_MBps
+### Disk_Read_Total_MB
 
 
-Average disk-read throughput (MB/s) during the interval.
+Total disk read volume (MB) during the interval.
 
 | Property | Value |
 | - | - |
@@ -231,7 +232,7 @@ Average disk-read throughput (MB/s) during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|12|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -241,7 +242,7 @@ Average disk-read throughput (MB/s) during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -250,7 +251,7 @@ Average disk-read throughput (MB/s) during the interval.
 ### Execution_Count
 
 
-Total number of query executions during the interval.
+Total number of executed queries during the interval.
 
 | Property | Value |
 | - | - |
@@ -261,7 +262,7 @@ Total number of query executions during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -271,16 +272,16 @@ Total number of query executions during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Executions_per_Second
+### Executions_Per_Second
 
 
-Average executions per second within the interval.
+Average number of queries executed per second.
 
 | Property | Value |
 | - | - |
@@ -291,7 +292,7 @@ Average executions per second within the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -301,7 +302,7 @@ Average executions per second within the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -321,7 +322,7 @@ Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean t
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|22|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -331,22 +332,16 @@ Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean t
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-#### Interval_Completion_Ratio - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
-### Runtime_Interval_Id
+### Is_Interval_Complete
 
 
-Identifier of the Query Store runtime interval (runtime_stats_interval_id).
+Indicates whether this is completed or still active interval.
 
 | Property | Value |
 | - | - |
@@ -357,7 +352,43 @@ Identifier of the Query Store runtime interval (runtime_stats_interval_id).
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|23|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Interval_Complete - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Runtime_Interval_Id
+
+
+Unique identifier of the runtime interval.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -367,7 +398,7 @@ Identifier of the Query Store runtime interval (runtime_stats_interval_id).
 |Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -377,7 +408,7 @@ Identifier of the Query Store runtime interval (runtime_stats_interval_id).
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
 ### Time_Slot_Begin_Utc
@@ -394,7 +425,7 @@ Start timestamp of the interval in UTC.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -431,7 +462,7 @@ End timestamp of the interval in UTC.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -453,10 +484,10 @@ End timestamp of the interval in UTC.
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
-### Total_Duration_ms
+### Total_Duration_Ms
 
 
-Total duration (ms) of all completed executions in the interval.
+Total duration (ms) of all completed query executions in the interval.
 
 | Property | Value |
 | - | - |
@@ -467,7 +498,7 @@ Total duration (ms) of all completed executions in the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -477,7 +508,7 @@ Total duration (ms) of all completed executions in the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|float|
+|Type|float (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -497,7 +528,7 @@ Total logical reads executed during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -507,7 +538,7 @@ Total logical reads executed during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -527,7 +558,7 @@ Total logical writes executed during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -537,7 +568,7 @@ Total logical writes executed during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -557,7 +588,7 @@ Total physical reads executed during the interval.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|11|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -567,16 +598,16 @@ Total physical reads executed during the interval.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_CPU_ms
+### Wait_Cpu_Ms
 
 
-Total wait time due to CPU resource contention.
+Total wait time (ms) due to CPU resource contention.
 
 | Property | Value |
 | - | - |
@@ -587,7 +618,7 @@ Total wait time due to CPU resource contention.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|16|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -597,16 +628,16 @@ Total wait time due to CPU resource contention.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_IO_ms
+### Wait_Io_Ms
 
 
-Total wait time related to IO operations.
+Total wait time (ms) related to I/O operations.
 
 | Property | Value |
 | - | - |
@@ -617,7 +648,7 @@ Total wait time related to IO operations.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|18|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -627,16 +658,16 @@ Total wait time related to IO operations.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_Lock_ms
+### Wait_Lock_Ms
 
 
-Total wait time caused by locks or blocking
+Total wait time (ms) caused by locks or blocking.
 
 | Property | Value |
 | - | - |
@@ -647,7 +678,7 @@ Total wait time caused by locks or blocking
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|20|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -657,16 +688,16 @@ Total wait time caused by locks or blocking
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_Memory_ms
+### Wait_Memory_Ms
 
 
-Total wait time due to memory resource contention.
+Total wait time (ms) due to memory resource contention.
 
 | Property | Value |
 | - | - |
@@ -677,7 +708,7 @@ Total wait time due to memory resource contention.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|17|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -687,16 +718,16 @@ Total wait time due to memory resource contention.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_Network_ms
+### Wait_Network_Ms
 
 
-Total wait time caused by network transfer-related waits.
+Total wait time (ms) caused by network transfer-related waits.
 
 | Property | Value |
 | - | - |
@@ -707,7 +738,7 @@ Total wait time caused by network transfer-related waits.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|19|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -717,16 +748,16 @@ Total wait time caused by network transfer-related waits.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
 
-### Wait_Other_ms
+### Wait_Other_Ms
 
 
-Total wait time for all remaining wait categories.
+Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network.
 
 | Property | Value |
 | - | - |
@@ -737,7 +768,7 @@ Total wait time for all remaining wait categories.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|21|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -747,7 +778,7 @@ Total wait time for all remaining wait categories.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|bigint|
+|Type|bigint (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

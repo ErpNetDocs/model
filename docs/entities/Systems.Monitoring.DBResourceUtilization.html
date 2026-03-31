@@ -115,59 +115,64 @@ Show in UI:  HiddenByDefault</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcorescpu">AvgCoresCPU</a></td>
-<td>double</td>
-<td>Normalized average CPU utilization by query executions in CPU-core units.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcpucores">AvgCpuCores</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average CPU execution load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcorestotal">AvgCoresTotal</a></td>
-<td>double</td>
-<td>Normalized average query execution duration in CPU-core units.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgmemoryperquerymb">AvgMemoryPerQueryMB</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average memory (MB) used per query execution. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcoreswaiting">AvgCoresWaiting</a></td>
-<td>double</td>
-<td>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgtotalcores">AvgTotalCores</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average total load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgmemoryperquerymb">AvgMemoryperQueryMB</a></td>
-<td>double</td>
-<td>Average memory used per executed query.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgtotalquerymemorymb">AvgTotalQueryMemoryMB</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average total memory (MB) consumed by all concurrent query executions. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgquerymemoryusagemb">AvgQueryMemoryUsageMB</a></td>
-<td>double</td>
-<td>Average SQL Server memory usage attributable to query execution (query memory grant usage).<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#avgwaitingcores">AvgWaitingCores</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average waiting load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadmb">DiskReadMB</a></td>
-<td>double</td>
-<td>Total disk-read volume (MB) during the interval.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadmbps">DiskReadMBps</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average disk read throughput (MB/s) during the interval. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadthroughputmbps">DiskReadThroughputMBps</a></td>
-<td>double</td>
-<td>Average disk-read throughput (MB/s) during the interval.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadtotalmb">DiskReadTotalMB</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Total disk read volume (MB) during the interval. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#executioncount">ExecutionCount</a></td>
-<td>int64</td>
-<td>Total number of query executions during the interval.<code>Required</code></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total number of query executions during the interval.</td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#executionspersecond">ExecutionsperSecond</a></td>
-<td>double</td>
-<td>Average executions per second within the interval.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#executionspersecond">ExecutionsPerSecond</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Average number of queries executed per second. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#intervalcompletionratio">IntervalCompletionRatio</a></td>
-<td>double</td>
-<td>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.<code>Required</code> <code>Filter(eq)</code></td>
+<td>double <strong>nullable</strong></td>
+<td>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.</td>
+</tr>
+<tr>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#isintervalcomplete">IsIntervalComplete</a></td>
+<td>boolean <strong>nullable</strong></td>
+<td>Indicates whether this is completed or still active interval. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#runtimeintervalid">RuntimeIntervalId</a></td>
-<td>int64</td>
-<td>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#timeslotbeginutc">TimeSlotBeginUtc</a></td>
@@ -180,131 +185,138 @@ Show in UI:  HiddenByDefault</p>
 <td>End timestamp of the interval in UTC.<code>Required</code> <code>Filter(ge;le)</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#totaldurationms">TotalDurationms</a></td>
-<td>double</td>
-<td>Total duration (ms) of all completed executions in the interval.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#totaldurationms">TotalDurationMs</a></td>
+<td>double <strong>nullable</strong></td>
+<td>Total duration (ms) of all completed query executions in the interval. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#totallogicalreads">TotalLogicalReads</a></td>
-<td>int64</td>
-<td>Total logical reads executed during the interval.<code>Required</code></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total logical reads executed during the interval.</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#totallogicalwrites">TotalLogicalWrites</a></td>
-<td>int64</td>
-<td>Total logical writes executed during the interval.<code>Required</code></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total logical writes executed during the interval.</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#totalphysicalreads">TotalPhysicalReads</a></td>
-<td>int64</td>
-<td>Total physical reads executed during the interval.<code>Required</code></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total physical reads executed during the interval.</td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitcpums">WaitCPUms</a></td>
-<td>int64</td>
-<td>Total wait time due to CPU resource contention.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitcpums">WaitCpuMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) due to CPU resource contention. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitioms">WaitIOms</a></td>
-<td>int64</td>
-<td>Total wait time related to IO operations.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitioms">WaitIoMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) related to I/O operations. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitlockms">WaitLockms</a></td>
-<td>int64</td>
-<td>Total wait time caused by locks or blocking<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitlockms">WaitLockMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) caused by locks or blocking. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitmemoryms">WaitMemoryms</a></td>
-<td>int64</td>
-<td>Total wait time due to memory resource contention.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitmemoryms">WaitMemoryMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) due to memory resource contention. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitnetworkms">WaitNetworkms</a></td>
-<td>int64</td>
-<td>Total wait time caused by network transfer-related waits.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitnetworkms">WaitNetworkMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) caused by network transfer-related waits. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
-<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitotherms">WaitOtherms</a></td>
-<td>int64</td>
-<td>Total wait time for all remaining wait categories.<code>Required</code></td>
+<td><a href="Systems.Monitoring.DBResourceUtilization.html#waitotherms">WaitOtherMs</a></td>
+<td>int64 <strong>nullable</strong></td>
+<td>Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network. <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
-<h3 id="avgcorescpu">AvgCoresCPU</h3>
-<p>Normalized average CPU utilization by query executions in CPU-core units.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="avgcpucores">AvgCpuCores</h3>
+<p>Average CPU execution load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="avgcorestotal">AvgCoresTotal</h3>
-<p>Normalized average query execution duration in CPU-core units.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="avgmemoryperquerymb">AvgMemoryPerQueryMB</h3>
+<p>Average memory (MB) used per query execution. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="avgcoreswaiting">AvgCoresWaiting</h3>
-<p>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="avgtotalcores">AvgTotalCores</h3>
+<p>Average total load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="avgmemoryperquerymb">AvgMemoryperQueryMB</h3>
-<p>Average memory used per executed query.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="avgtotalquerymemorymb">AvgTotalQueryMemoryMB</h3>
+<p>Average total memory (MB) consumed by all concurrent query executions. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="avgquerymemoryusagemb">AvgQueryMemoryUsageMB</h3>
-<p>Average SQL Server memory usage attributable to query execution (query memory grant usage).<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="avgwaitingcores">AvgWaitingCores</h3>
+<p>Average waiting load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="diskreadmb">DiskReadMB</h3>
-<p>Total disk-read volume (MB) during the interval.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="diskreadmbps">DiskReadMBps</h3>
+<p>Average disk read throughput (MB/s) during the interval. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="diskreadthroughputmbps">DiskReadThroughputMBps</h3>
-<p>Average disk-read throughput (MB/s) during the interval.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="diskreadtotalmb">DiskReadTotalMB</h3>
+<p>Total disk read volume (MB) during the interval. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="executioncount">ExecutionCount</h3>
-<p>Total number of query executions during the interval.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<p>Total number of query executions during the interval.</p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="executionspersecond">ExecutionsperSecond</h3>
-<p>Average executions per second within the interval.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="executionspersecond">ExecutionsPerSecond</h3>
+<p>Average number of queries executed per second. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="intervalcompletionratio">IntervalCompletionRatio</h3>
-<p>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.<code>Required</code> <code>Filter(eq)</code></p>
-<p>Type: <strong>double</strong><br>
+<p>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.</p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="isintervalcomplete">IsIntervalComplete</h3>
+<p>Indicates whether this is completed or still active interval. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="runtimeintervalid">RuntimeIntervalId</h3>
-<p>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
-<p>Type: <strong>int64</strong><br>
+<p>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
@@ -323,72 +335,72 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="totaldurationms">TotalDurationms</h3>
-<p>Total duration (ms) of all completed executions in the interval.<code>Required</code></p>
-<p>Type: <strong>double</strong><br>
+<h3 id="totaldurationms">TotalDurationMs</h3>
+<p>Total duration (ms) of all completed query executions in the interval. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totallogicalreads">TotalLogicalReads</h3>
-<p>Total logical reads executed during the interval.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<p>Total logical reads executed during the interval.</p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totallogicalwrites">TotalLogicalWrites</h3>
-<p>Total logical writes executed during the interval.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<p>Total logical writes executed during the interval.</p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="totalphysicalreads">TotalPhysicalReads</h3>
-<p>Total physical reads executed during the interval.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<p>Total physical reads executed during the interval.</p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitcpums">WaitCPUms</h3>
-<p>Total wait time due to CPU resource contention.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitcpums">WaitCpuMs</h3>
+<p>Total wait time (ms) due to CPU resource contention. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitioms">WaitIOms</h3>
-<p>Total wait time related to IO operations.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitioms">WaitIoMs</h3>
+<p>Total wait time (ms) related to I/O operations. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitlockms">WaitLockms</h3>
-<p>Total wait time caused by locks or blocking<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitlockms">WaitLockMs</h3>
+<p>Total wait time (ms) caused by locks or blocking. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitmemoryms">WaitMemoryms</h3>
-<p>Total wait time due to memory resource contention.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitmemoryms">WaitMemoryMs</h3>
+<p>Total wait time (ms) due to memory resource contention. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitnetworkms">WaitNetworkms</h3>
-<p>Total wait time caused by network transfer-related waits.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitnetworkms">WaitNetworkMs</h3>
+<p>Total wait time (ms) caused by network transfer-related waits. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="waitotherms">WaitOtherms</h3>
-<p>Total wait time for all remaining wait categories.<code>Required</code></p>
-<p>Type: <strong>int64</strong><br>
+<h3 id="waitotherms">WaitOtherMs</h3>
+<p>Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network. <code>Introduced in version 26.2.2.3</code></p>
+<p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>

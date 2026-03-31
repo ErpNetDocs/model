@@ -13,7 +13,7 @@ Introduced In Version: 25.1.3.29
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {EnterpriseCompanyId}: {EnterpriseCompanyLocationId}  
+Display Format: {EnterpriseCompanyId}: {ItemKey}  
 Search Members:   
 Category:  Views  
 Show in UI:  ShownByDefault  
@@ -28,30 +28,29 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) | Net current balance (Debit - Credit)`Required` |
-| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) | Current balance in base currency`Required` |
-| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) | Current balance in reporting currency`Required` |
-| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) | Item Key`Required` |
+| [Balance](Finance.Accounting.CurrentBalances.md#balance) | decimal (38, 2) __nullable__ | Net current balance (Debit - Credit) |
+| [BalanceBase](Finance.Accounting.CurrentBalances.md#balancebase) | decimal (38, 2) __nullable__ | Current balance in base currency |
+| [BalanceReporting](Finance.Accounting.CurrentBalances.md#balancereporting) | decimal (38, 2) __nullable__ | Current balance in reporting currency |
+| [ItemKey](Finance.Accounting.CurrentBalances.md#itemkey) | string (64) __nullable__ | Item Key |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Account](Finance.Accounting.CurrentBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | Account reference |
-| [CostCenter](Finance.Accounting.CurrentBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center |
+| [CostCenter](Finance.Accounting.CurrentBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost Center |
 | [Currency](Finance.Accounting.CurrentBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.CurrentBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Legal entity |
-| [EnterpriseCompanyLocation](Finance.Accounting.CurrentBalances.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Optional location/branch filter |
-| [ProfitCenter](Finance.Accounting.CurrentBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center |
+| [ProfitCenter](Finance.Accounting.CurrentBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Profit Center |
 
 
 ## Attribute Details
 
 ### Balance
 
-Net current balance (Debit - Credit)`Required`
+Net current balance (Debit - Credit)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -59,9 +58,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Current balance in base currency`Required`
+Current balance in base currency
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -69,9 +68,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Current balance in reporting currency`Required`
+Current balance in reporting currency
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -79,9 +78,9 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key`Required`
+Item Key
 
-Type: **string (64)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -107,7 +106,7 @@ Show in UI: **ShownByDefault**
 
 Cost Center
 
-Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -137,23 +136,11 @@ Supported Filters: **Equals, EqualsIn**
 Default Value: **NewGuid**  
 Show in UI: **ShownByDefault**  
 
-### EnterpriseCompanyLocation
-
-Optional location/branch filter
-
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
-Category: **System**  
-Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
-Supported Filters: **Equals, EqualsIn**  
-[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
-Default Value: **NewGuid**  
-Show in UI: **ShownByDefault**  
-
 ### ProfitCenter
 
 Profit Center
 
-Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  

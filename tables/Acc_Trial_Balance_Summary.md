@@ -27,7 +27,6 @@ Displays aggregated debit and credit turnovers and balances by account for a sel
 |[Debits_Base](#debits_base)|`decimal(18, 2)` |Total debits (Base Currency)|
 |[Debits_Reporting](#debits_reporting)|`decimal(18, 2)` |Total debits (Reporting Currency)|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise Company|
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Enterprise Company Location|
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` |Level 1 Account Group|
 |[Level_2_Account_Group_Id](#level_2_account_group_id)|`uniqueidentifier` |Level 2 Account Group|
@@ -543,43 +542,6 @@ Enterprise Company
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
-
-### Enterprise_Company_Location_Id
-
-
-Enterprise Company Location
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Cm_Company_Locations](Cm_Company_Locations.md).[Company_Location_Id](Cm_Company_Locations.md#company_location_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Enterprise_Company_Location_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### From_Date
 

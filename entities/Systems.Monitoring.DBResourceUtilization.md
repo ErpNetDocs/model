@@ -28,98 +28,99 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvgCoresCPU](Systems.Monitoring.DBResourceUtilization.md#avgcorescpu) | double | Normalized average CPU utilization by query executions in CPU-core units.`Required` |
-| [AvgCoresTotal](Systems.Monitoring.DBResourceUtilization.md#avgcorestotal) | double | Normalized average query execution duration in CPU-core units.`Required` |
-| [AvgCoresWaiting](Systems.Monitoring.DBResourceUtilization.md#avgcoreswaiting) | double | Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.`Required` |
-| [AvgMemoryperQueryMB](Systems.Monitoring.DBResourceUtilization.md#avgmemoryperquerymb) | double | Average memory used per executed query.`Required` |
-| [AvgQueryMemoryUsageMB](Systems.Monitoring.DBResourceUtilization.md#avgquerymemoryusagemb) | double | Average SQL Server memory usage attributable to query execution (query memory grant usage).`Required` |
-| [DiskReadMB](Systems.Monitoring.DBResourceUtilization.md#diskreadmb) | double | Total disk-read volume (MB) during the interval.`Required` |
-| [DiskReadThroughputMBps](Systems.Monitoring.DBResourceUtilization.md#diskreadthroughputmbps) | double | Average disk-read throughput (MB/s) during the interval.`Required` |
-| [ExecutionCount](Systems.Monitoring.DBResourceUtilization.md#executioncount) | int64 | Total number of query executions during the interval.`Required` |
-| [ExecutionsperSecond](Systems.Monitoring.DBResourceUtilization.md#executionspersecond) | double | Average executions per second within the interval.`Required` |
-| [IntervalCompletionRatio](Systems.Monitoring.DBResourceUtilization.md#intervalcompletionratio) | double | Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final.`Required` `Filter(eq)` |
-| [RuntimeIntervalId](Systems.Monitoring.DBResourceUtilization.md#runtimeintervalid) | int64 | Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Required` `Filter(eq;ge;le)` `ORD` |
+| [AvgCpuCores](Systems.Monitoring.DBResourceUtilization.md#avgcpucores) | double __nullable__ | Average CPU execution load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
+| [AvgMemoryPerQueryMB](Systems.Monitoring.DBResourceUtilization.md#avgmemoryperquerymb) | double __nullable__ | Average memory (MB) used per query execution. `Introduced in version 26.2.2.3` |
+| [AvgTotalCores](Systems.Monitoring.DBResourceUtilization.md#avgtotalcores) | double __nullable__ | Average total load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
+| [AvgTotalQueryMemoryMB](Systems.Monitoring.DBResourceUtilization.md#avgtotalquerymemorymb) | double __nullable__ | Average total memory (MB) consumed by all concurrent query executions. `Introduced in version 26.2.2.3` |
+| [AvgWaitingCores](Systems.Monitoring.DBResourceUtilization.md#avgwaitingcores) | double __nullable__ | Average waiting load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
+| [DiskReadMBps](Systems.Monitoring.DBResourceUtilization.md#diskreadmbps) | double __nullable__ | Average disk read throughput (MB/s) during the interval. `Introduced in version 26.2.2.3` |
+| [DiskReadTotalMB](Systems.Monitoring.DBResourceUtilization.md#diskreadtotalmb) | double __nullable__ | Total disk read volume (MB) during the interval. `Introduced in version 26.2.2.3` |
+| [ExecutionCount](Systems.Monitoring.DBResourceUtilization.md#executioncount) | int64 __nullable__ | Total number of query executions during the interval. |
+| [ExecutionsPerSecond](Systems.Monitoring.DBResourceUtilization.md#executionspersecond) | double __nullable__ | Average number of queries executed per second. `Introduced in version 26.2.2.3` |
+| [IntervalCompletionRatio](Systems.Monitoring.DBResourceUtilization.md#intervalcompletionratio) | double __nullable__ | Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final. |
+| [IsIntervalComplete](Systems.Monitoring.DBResourceUtilization.md#isintervalcomplete) | boolean __nullable__ | Indicates whether this is completed or still active interval. `Filter(eq)` `Introduced in version 26.2.2.3` |
+| [RuntimeIntervalId](Systems.Monitoring.DBResourceUtilization.md#runtimeintervalid) | int64 __nullable__ | Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Filter(eq;ge;le)` `ORD` |
 | [TimeSlotBeginUtc](Systems.Monitoring.DBResourceUtilization.md#timeslotbeginutc) | datetime | Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)` `ORD` |
 | [TimeSlotEndUtc](Systems.Monitoring.DBResourceUtilization.md#timeslotendutc) | datetime | End timestamp of the interval in UTC.`Required` `Filter(ge;le)` |
-| [TotalDurationms](Systems.Monitoring.DBResourceUtilization.md#totaldurationms) | double | Total duration (ms) of all completed executions in the interval.`Required` |
-| [TotalLogicalReads](Systems.Monitoring.DBResourceUtilization.md#totallogicalreads) | int64 | Total logical reads executed during the interval.`Required` |
-| [TotalLogicalWrites](Systems.Monitoring.DBResourceUtilization.md#totallogicalwrites) | int64 | Total logical writes executed during the interval.`Required` |
-| [TotalPhysicalReads](Systems.Monitoring.DBResourceUtilization.md#totalphysicalreads) | int64 | Total physical reads executed during the interval.`Required` |
-| [WaitCPUms](Systems.Monitoring.DBResourceUtilization.md#waitcpums) | int64 | Total wait time due to CPU resource contention.`Required` |
-| [WaitIOms](Systems.Monitoring.DBResourceUtilization.md#waitioms) | int64 | Total wait time related to IO operations.`Required` |
-| [WaitLockms](Systems.Monitoring.DBResourceUtilization.md#waitlockms) | int64 | Total wait time caused by locks or blocking`Required` |
-| [WaitMemoryms](Systems.Monitoring.DBResourceUtilization.md#waitmemoryms) | int64 | Total wait time due to memory resource contention.`Required` |
-| [WaitNetworkms](Systems.Monitoring.DBResourceUtilization.md#waitnetworkms) | int64 | Total wait time caused by network transfer-related waits.`Required` |
-| [WaitOtherms](Systems.Monitoring.DBResourceUtilization.md#waitotherms) | int64 | Total wait time for all remaining wait categories.`Required` |
+| [TotalDurationMs](Systems.Monitoring.DBResourceUtilization.md#totaldurationms) | double __nullable__ | Total duration (ms) of all completed query executions in the interval. `Introduced in version 26.2.2.3` |
+| [TotalLogicalReads](Systems.Monitoring.DBResourceUtilization.md#totallogicalreads) | int64 __nullable__ | Total logical reads executed during the interval. |
+| [TotalLogicalWrites](Systems.Monitoring.DBResourceUtilization.md#totallogicalwrites) | int64 __nullable__ | Total logical writes executed during the interval. |
+| [TotalPhysicalReads](Systems.Monitoring.DBResourceUtilization.md#totalphysicalreads) | int64 __nullable__ | Total physical reads executed during the interval. |
+| [WaitCpuMs](Systems.Monitoring.DBResourceUtilization.md#waitcpums) | int64 __nullable__ | Total wait time (ms) due to CPU resource contention. `Introduced in version 26.2.2.3` |
+| [WaitIoMs](Systems.Monitoring.DBResourceUtilization.md#waitioms) | int64 __nullable__ | Total wait time (ms) related to I/O operations. `Introduced in version 26.2.2.3` |
+| [WaitLockMs](Systems.Monitoring.DBResourceUtilization.md#waitlockms) | int64 __nullable__ | Total wait time (ms) caused by locks or blocking. `Introduced in version 26.2.2.3` |
+| [WaitMemoryMs](Systems.Monitoring.DBResourceUtilization.md#waitmemoryms) | int64 __nullable__ | Total wait time (ms) due to memory resource contention. `Introduced in version 26.2.2.3` |
+| [WaitNetworkMs](Systems.Monitoring.DBResourceUtilization.md#waitnetworkms) | int64 __nullable__ | Total wait time (ms) caused by network transfer-related waits. `Introduced in version 26.2.2.3` |
+| [WaitOtherMs](Systems.Monitoring.DBResourceUtilization.md#waitotherms) | int64 __nullable__ | Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network. `Introduced in version 26.2.2.3` |
 
 
 ## Attribute Details
 
-### AvgCoresCPU
+### AvgCpuCores
 
-Normalized average CPU utilization by query executions in CPU-core units.`Required`
+Average CPU execution load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### AvgCoresTotal
+### AvgMemoryPerQueryMB
 
-Normalized average query execution duration in CPU-core units.`Required`
+Average memory (MB) used per query execution. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### AvgCoresWaiting
+### AvgTotalCores
 
-Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.`Required`
+Average total load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### AvgMemoryperQueryMB
+### AvgTotalQueryMemoryMB
 
-Average memory used per executed query.`Required`
+Average total memory (MB) consumed by all concurrent query executions. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### AvgQueryMemoryUsageMB
+### AvgWaitingCores
 
-Average SQL Server memory usage attributable to query execution (query memory grant usage).`Required`
+Average waiting load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### DiskReadMB
+### DiskReadMBps
 
-Total disk-read volume (MB) during the interval.`Required`
+Average disk read throughput (MB/s) during the interval. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### DiskReadThroughputMBps
+### DiskReadTotalMB
 
-Average disk-read throughput (MB/s) during the interval.`Required`
+Total disk read volume (MB) during the interval. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -127,19 +128,19 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionCount
 
-Total number of query executions during the interval.`Required`
+Total number of query executions during the interval.
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### ExecutionsperSecond
+### ExecutionsPerSecond
 
-Average executions per second within the interval.`Required`
+Average number of queries executed per second. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -147,9 +148,19 @@ Show in UI: **ShownByDefault**
 
 ### IntervalCompletionRatio
 
-Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final.`Required` `Filter(eq)`
+Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final.
 
-Type: **double**  
+Type: **double __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### IsIntervalComplete
+
+Indicates whether this is completed or still active interval. `Filter(eq)` `Introduced in version 26.2.2.3`
+
+Type: **boolean __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -157,9 +168,9 @@ Show in UI: **ShownByDefault**
 
 ### RuntimeIntervalId
 
-Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Required` `Filter(eq;ge;le)` `ORD`
+Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Filter(eq;ge;le)` `ORD`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **True**  
@@ -185,11 +196,11 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### TotalDurationms
+### TotalDurationMs
 
-Total duration (ms) of all completed executions in the interval.`Required`
+Total duration (ms) of all completed query executions in the interval. `Introduced in version 26.2.2.3`
 
-Type: **double**  
+Type: **double __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -197,9 +208,9 @@ Show in UI: **ShownByDefault**
 
 ### TotalLogicalReads
 
-Total logical reads executed during the interval.`Required`
+Total logical reads executed during the interval.
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -207,9 +218,9 @@ Show in UI: **ShownByDefault**
 
 ### TotalLogicalWrites
 
-Total logical writes executed during the interval.`Required`
+Total logical writes executed during the interval.
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -217,69 +228,69 @@ Show in UI: **ShownByDefault**
 
 ### TotalPhysicalReads
 
-Total physical reads executed during the interval.`Required`
+Total physical reads executed during the interval.
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitCPUms
+### WaitCpuMs
 
-Total wait time due to CPU resource contention.`Required`
+Total wait time (ms) due to CPU resource contention. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitIOms
+### WaitIoMs
 
-Total wait time related to IO operations.`Required`
+Total wait time (ms) related to I/O operations. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitLockms
+### WaitLockMs
 
-Total wait time caused by locks or blocking`Required`
+Total wait time (ms) caused by locks or blocking. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitMemoryms
+### WaitMemoryMs
 
-Total wait time due to memory resource contention.`Required`
+Total wait time (ms) due to memory resource contention. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitNetworkms
+### WaitNetworkMs
 
-Total wait time caused by network transfer-related waits.`Required`
+Total wait time (ms) caused by network transfer-related waits. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### WaitOtherms
+### WaitOtherMs
 
-Total wait time for all remaining wait categories.`Required`
+Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network. `Introduced in version 26.2.2.3`
 
-Type: **int64**  
+Type: **int64 __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  

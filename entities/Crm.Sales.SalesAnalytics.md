@@ -32,7 +32,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentDate](Crm.Sales.SalesAnalytics.md#documentdate) | date | Date to group for`Required` `Filter(ge;le)` `ORD` |
+| [DocumentDate](Crm.Sales.SalesAnalytics.md#documentdate) | date __nullable__ | Date to group for`Filter(ge;le)` `ORD` |
 | [LineAmount](Crm.Sales.SalesAnalytics.md#lineamount) | decimal (38, 2) | Line Amount for date`Required` |
 | [LineDiscountAmount](Crm.Sales.SalesAnalytics.md#linediscountamount) | decimal (38, 2) | Discount over Line Amount for Date`Required` |
 | [QuantityBase](Crm.Sales.SalesAnalytics.md#quantitybase) | decimal (38, 3) | Base Quantity for Date`Required` |
@@ -49,7 +49,7 @@ Aggregate Tree
 | [DocumentCurrency](Crm.Sales.SalesAnalytics.md#documentcurrency) | [Currencies](General.Currencies.Currencies.md) | Currency for this sales |
 | [EndCustomerParty](Crm.Sales.SalesAnalytics.md#endcustomerparty) | [Parties](General.Contacts.Parties.md) | Unique party id. |
 | [EnterpriseCompany](Crm.Sales.SalesAnalytics.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The Enterprise Company to which this SalesAnalyticsEntry applies. |
-| [EnterpriseCompanyLocation](Crm.Sales.SalesAnalytics.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The Enterprise Company Location to which this SalesAnalyticsEntry applies. |
+| [EnterpriseCompanyLocation](Crm.Sales.SalesAnalytics.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | The Enterprise Company Location to which this SalesAnalyticsEntry applies. |
 | [Product](Crm.Sales.SalesAnalytics.md#product) | [Products](General.Products.Products.md) | Unique id of the item. |
 | [ProductVariant](Crm.Sales.SalesAnalytics.md#productvariant) | [ProductVariants](General.Products.ProductVariants.md) | Product Variant for this sales |
 | [SalesPerson](Crm.Sales.SalesAnalytics.md#salesperson) | [SalesPersons](Crm.SalesForce.SalesPersons.md) | Unique sales person for this sales |
@@ -60,9 +60,9 @@ Aggregate Tree
 
 ### DocumentDate
 
-Date to group for`Required` `Filter(ge;le)` `ORD`
+Date to group for`Filter(ge;le)` `ORD`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **True**  
@@ -190,7 +190,7 @@ Show in UI: **ShownByDefault**
 
 The Enterprise Company Location to which this SalesAnalyticsEntry applies.
 
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
 Category: **System**  
 Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
 Supported Filters: **Equals, EqualsIn**  

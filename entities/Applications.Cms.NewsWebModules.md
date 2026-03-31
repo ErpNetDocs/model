@@ -50,8 +50,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [<s>Parent</s>](Applications.Cms.NewsWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
-| [<s>WebSite</s>](Applications.Cms.NewsWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
+| [<s>Parent</s>](Applications.Cms.NewsWebModules.md#parent) | [WebModules](Applications.Cms.WebModules.md) (nullable) | **OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.2.3` `Obsolete` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
+| [<s>WebSite</s>](Applications.Cms.NewsWebModules.md#website) | [WebSites](Applications.Cms.WebSites.md) | **OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.2.3` `Obsolete` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md)) |
 
 
 ## System Attributes
@@ -161,7 +161,7 @@ Show in UI: **HiddenByDefault**
 
 ### Parent
 
-**OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` (Inherited from [WebModules](Applications.Cms.WebModules.md))
+**OBSOLETE! Do not use!** The parent web Module. It can only be a module with Module Type = Category. Null means that the web Module is root web Module. `Obsolete` `Filter(multi eq)` `Obsoleted in version 26.2.2.3` `Obsolete` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 Type: **[WebModules](Applications.Cms.WebModules.md) (nullable)**  
 Category: **System**  
@@ -170,7 +170,7 @@ Show in UI: **ShownByDefault**
 
 ### WebSite
 
-**OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.1.73` `Obsolete` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md))
+**OBSOLETE! Do not use!** The web site to which the module belongs. `Obsolete` `Required` `Filter(multi eq)` `Obsoleted in version 26.2.2.3` `Obsolete` `Owner` (Inherited from [WebModules](Applications.Cms.WebModules.md))
 
 Type: **[WebSites](Applications.Cms.WebSites.md)**  
 Category: **System**  

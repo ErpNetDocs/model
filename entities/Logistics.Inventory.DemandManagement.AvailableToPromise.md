@@ -30,7 +30,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ATPBase](Logistics.Inventory.DemandManagement.AvailableToPromise.md#atpbase) | [Quantity (38, 3)](../data-types.md#quantity) | Indicates the quantity available to promise (in a base unit). It is valid from this date on.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
 | [CurrentAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromise.md#currentavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | The current availability in а base measurement unit.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
-| [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromise.md#fromdate) | datetime | Тhe date from which the available to promise quantity is valid.`Required` `Filter(eq;ge;le)` `ORD` |
+| [FromDate](Logistics.Inventory.DemandManagement.AvailableToPromise.md#fromdate) | datetime __nullable__ | Тhe date from which the available to promise quantity is valid.`Filter(eq;ge;le)` `ORD` |
 | [MovementsBase](Logistics.Inventory.DemandManagement.AvailableToPromise.md#movementsbase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements on this date in а base measurement unit. `Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
 | [MovementsToDateBase](Logistics.Inventory.DemandManagement.AvailableToPromise.md#movementstodatebase) | [Quantity (38, 3)](../data-types.md#quantity) | The sum of the quantity of all planned stock movements until this date (inclusive) in а base measurement unit. The value is cumulative.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
 | [ProjectedAvailabilityBase](Logistics.Inventory.DemandManagement.AvailableToPromise.md#projectedavailabilitybase) | [Quantity (38, 3)](../data-types.md#quantity) | Projected Availability in а base measurement unit on the particular date. The value is cumulative and includes the sum of all planned stock movements until this date (inclusive) and the current availability.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
@@ -68,9 +68,9 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Тhe date from which the available to promise quantity is valid.`Required` `Filter(eq;ge;le)` `ORD`
+Тhe date from which the available to promise quantity is valid.`Filter(eq;ge;le)` `ORD`
 
-Type: **datetime**  
+Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **True**  

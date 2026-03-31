@@ -18,7 +18,6 @@ Contains live account balances calculated from all released accounting vouchers 
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` |Cost Center|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |Currency|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Legal entity |
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Optional location/branch filter|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item Key|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` |Profit Center|
 
@@ -84,7 +83,7 @@ Net current balance (Debit - Credit)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -114,7 +113,7 @@ Current balance in base currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -144,7 +143,7 @@ Current balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -174,7 +173,7 @@ Cost Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -184,7 +183,7 @@ Cost Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Currency_Id
 
@@ -258,43 +257,6 @@ Legal entity
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Enterprise_Company_Location_Id
-
-
-Optional location/branch filter
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Cm_Company_Locations](Cm_Company_Locations.md).[Company_Location_Id](Cm_Company_Locations.md#company_location_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Enterprise_Company_Location_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### Item_Key
 
 
@@ -319,7 +281,7 @@ Item Key
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64)|
+|Type|nvarchar(64) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -349,7 +311,7 @@ Profit Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -359,6 +321,6 @@ Profit Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 

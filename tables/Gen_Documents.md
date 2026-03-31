@@ -629,7 +629,7 @@ The branch of the enterprise company that issues the document.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Entity_Name
 

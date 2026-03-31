@@ -58,7 +58,6 @@ Aggregate Tree
 | [Account](Finance.Accounting.TrialBalanceSummary.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account |
 | [Currency](Finance.Accounting.TrialBalanceSummary.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.TrialBalanceSummary.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceSummary.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Enterprise Company Location |
 | [Level1AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 1 Account Group |
 | [Level2AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level2accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 2 Account Group |
 | [Level3AccountGroup](Finance.Accounting.TrialBalanceSummary.md#level3accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 3 Account Group |
@@ -321,17 +320,6 @@ Enterprise Company
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
 Inherited From: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
-Supported Filters: **Equals, EqualsIn**  
-Default Value: **NewGuid**  
-Show in UI: **ShownByDefault**  
-
-### EnterpriseCompanyLocation
-
-Enterprise Company Location
-
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-Category: **System**  
-Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
 Supported Filters: **Equals, EqualsIn**  
 Default Value: **NewGuid**  
 Show in UI: **ShownByDefault**  

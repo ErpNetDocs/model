@@ -118,8 +118,8 @@ Show in UI:  ShownByDefault</p>
 <tbody>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#documentdate">DocumentDate</a></td>
-<td>date</td>
-<td>Date to group for<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></td>
+<td>date <strong>nullable</strong></td>
+<td>Date to group for<code>Filter(ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#lineamount">LineAmount</a></td>
@@ -190,7 +190,7 @@ Show in UI:  ShownByDefault</p>
 </tr>
 <tr>
 <td><a href="Crm.Sales.SalesAnalytics.html#enterprisecompanylocation">EnterpriseCompanyLocation</a></td>
-<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></td>
+<td><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</td>
 <td>The Enterprise Company Location to which this SalesAnalyticsEntry applies.</td>
 </tr>
 <tr>
@@ -217,8 +217,8 @@ Show in UI:  ShownByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="documentdate">DocumentDate</h3>
-<p>Date to group for<code>Required</code> <code>Filter(ge;le)</code> <code>ORD</code></p>
-<p>Type: <strong>date</strong><br>
+<p>Date to group for<code>Filter(ge;le)</code> <code>ORD</code></p>
+<p>Type: <strong>date <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>True</strong><br>
@@ -308,7 +308,7 @@ Default Value: <strong>NewGuid</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="enterprisecompanylocation">EnterpriseCompanyLocation</h3>
 <p>The Enterprise Company Location to which this SalesAnalyticsEntry applies.</p>
-<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a></strong><br>
+<p>Type: <strong><a href="General.Contacts.CompanyLocations.html">CompanyLocations</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Inherited From: <strong>Cm_Company_Locations_Table.Company_Location_Id</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

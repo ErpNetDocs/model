@@ -70,7 +70,6 @@ Aggregate Tree
 | [CostCenter](Finance.Accounting.TrialBalanceDetailed.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost Center |
 | [Currency](Finance.Accounting.TrialBalanceDetailed.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.TrialBalanceDetailed.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.TrialBalanceDetailed.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) (nullable) | Company Location / Branch |
 | [ExampleVoucherLine](Finance.Accounting.TrialBalanceDetailed.md#examplevoucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) (nullable) | This is one (any) of the voucher lines grouped for the current Item Key (it could be from the opening balances or transactions) - it will be used to display the user-defined characteristics of this line. |
 | [Level1AccountGroup](Finance.Accounting.TrialBalanceDetailed.md#level1accountgroup) | [AccountGroups](Finance.Accounting.AccountGroups.md) (nullable) | Level 1 Account Group |
 | [Level1AccountProperty](Finance.Accounting.TrialBalanceDetailed.md#level1accountproperty) | [CustomProperties](Systems.Bpm.CustomProperties.md) (nullable) | Level 1 Account Property |
@@ -467,17 +466,6 @@ Enterprise Company
 Type: **[EnterpriseCompanies](General.EnterpriseCompanies.md)**  
 Category: **System**  
 Inherited From: **Gen_Enterprise_Companies_Table.Enterprise_Company_Id**  
-Supported Filters: **Equals, EqualsIn**  
-Default Value: **NewGuid**  
-Show in UI: **ShownByDefault**  
-
-### EnterpriseCompanyLocation
-
-Company Location / Branch
-
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md) (nullable)**  
-Category: **System**  
-Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
 Supported Filters: **Equals, EqualsIn**  
 Default Value: **NewGuid**  
 Show in UI: **ShownByDefault**  

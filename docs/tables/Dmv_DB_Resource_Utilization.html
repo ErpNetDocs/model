@@ -101,49 +101,49 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#avg_cores_cpu">Avg_Cores_CPU</a></td>
+<td><a href="#avg_cpu_cores">Avg_Cpu_Cores</a></td>
 <td><code>float</code></td>
-<td>Normalized average CPU utilization by query executions in CPU-core units.</td>
+<td>Average CPU execution load, expressed in CPU cores (relative to 1 core).</td>
 </tr>
 <tr>
-<td><a href="#avg_cores_total">Avg_Cores_Total</a></td>
+<td><a href="#avg_memory_per_query_mb">Avg_Memory_Per_Query_MB</a></td>
 <td><code>float</code></td>
-<td>Normalized average query execution duration in CPU-core units.</td>
+<td>Average memory (MB) used per query execution.</td>
 </tr>
 <tr>
-<td><a href="#avg_cores_waiting">Avg_Cores_Waiting</a></td>
+<td><a href="#avg_total_cores">Avg_Total_Cores</a></td>
 <td><code>float</code></td>
-<td>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.</td>
+<td>Average total load, expressed in CPU cores (relative to 1 core).</td>
 </tr>
 <tr>
-<td><a href="#avg_memory_per_query_mb">Avg_Memory_per_Query_MB</a></td>
+<td><a href="#avg_total_query_memory_mb">Avg_Total_Query_Memory_MB</a></td>
 <td><code>float</code></td>
-<td>Average memory used per executed query.</td>
+<td>Average total memory (MB) consumed by all concurrent query executions.</td>
 </tr>
 <tr>
-<td><a href="#avg_query_memory_usage_mb">Avg_Query_Memory_Usage_MB</a></td>
+<td><a href="#avg_waiting_cores">Avg_Waiting_Cores</a></td>
 <td><code>float</code></td>
-<td>Average SQL Server memory usage attributable to query execution (query memory grant usage).</td>
+<td>Average waiting load, expressed in CPU cores (relative to 1 core).</td>
 </tr>
 <tr>
-<td><a href="#disk_read_mb">Disk_Read_MB</a></td>
+<td><a href="#disk_read_mbps">Disk_Read_MBps</a></td>
 <td><code>float</code></td>
-<td>Total disk-read volume (MB) during the interval.</td>
+<td>Average disk read throughput (MB/s) during the interval.</td>
 </tr>
 <tr>
-<td><a href="#disk_read_throughput_mbps">Disk_Read_Throughput_MBps</a></td>
+<td><a href="#disk_read_total_mb">Disk_Read_Total_MB</a></td>
 <td><code>float</code></td>
-<td>Average disk-read throughput (MB/s) during the interval.</td>
+<td>Total disk read volume (MB) during the interval.</td>
 </tr>
 <tr>
 <td><a href="#execution_count">Execution_Count</a></td>
 <td><code>bigint</code></td>
-<td>Total number of query executions during the interval.</td>
+<td>Total number of executed queries during the interval.</td>
 </tr>
 <tr>
-<td><a href="#executions_per_second">Executions_per_Second</a></td>
+<td><a href="#executions_per_second">Executions_Per_Second</a></td>
 <td><code>float</code></td>
-<td>Average executions per second within the interval.</td>
+<td>Average number of queries executed per second.</td>
 </tr>
 <tr>
 <td><a href="#interval_completion_ratio">Interval_Completion_Ratio</a></td>
@@ -151,9 +151,14 @@
 <td>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.</td>
 </tr>
 <tr>
+<td><a href="#is_interval_complete">Is_Interval_Complete</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether this is completed or still active interval.</td>
+</tr>
+<tr>
 <td><a href="#runtime_interval_id">Runtime_Interval_Id</a></td>
 <td><code>bigint</code></td>
-<td>Identifier of the Query Store runtime interval (runtime_stats_interval_id).</td>
+<td>Unique identifier of the runtime interval.</td>
 </tr>
 <tr>
 <td><a href="#time_slot_begin_utc">Time_Slot_Begin_Utc</a></td>
@@ -166,9 +171,9 @@
 <td>End timestamp of the interval in UTC.</td>
 </tr>
 <tr>
-<td><a href="#total_duration_ms">Total_Duration_ms</a></td>
+<td><a href="#total_duration_ms">Total_Duration_Ms</a></td>
 <td><code>float</code></td>
-<td>Total duration (ms) of all completed executions in the interval.</td>
+<td>Total duration (ms) of all completed query executions in the interval.</td>
 </tr>
 <tr>
 <td><a href="#total_logical_reads">Total_Logical_Reads</a></td>
@@ -186,40 +191,40 @@
 <td>Total physical reads executed during the interval.</td>
 </tr>
 <tr>
-<td><a href="#wait_cpu_ms">Wait_CPU_ms</a></td>
+<td><a href="#wait_cpu_ms">Wait_Cpu_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time due to CPU resource contention.</td>
+<td>Total wait time (ms) due to CPU resource contention.</td>
 </tr>
 <tr>
-<td><a href="#wait_io_ms">Wait_IO_ms</a></td>
+<td><a href="#wait_io_ms">Wait_Io_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time related to IO operations.</td>
+<td>Total wait time (ms) related to I/O operations.</td>
 </tr>
 <tr>
-<td><a href="#wait_lock_ms">Wait_Lock_ms</a></td>
+<td><a href="#wait_lock_ms">Wait_Lock_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time caused by locks or blocking</td>
+<td>Total wait time (ms) caused by locks or blocking.</td>
 </tr>
 <tr>
-<td><a href="#wait_memory_ms">Wait_Memory_ms</a></td>
+<td><a href="#wait_memory_ms">Wait_Memory_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time due to memory resource contention.</td>
+<td>Total wait time (ms) due to memory resource contention.</td>
 </tr>
 <tr>
-<td><a href="#wait_network_ms">Wait_Network_ms</a></td>
+<td><a href="#wait_network_ms">Wait_Network_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time caused by network transfer-related waits.</td>
+<td>Total wait time (ms) caused by network transfer-related waits.</td>
 </tr>
 <tr>
-<td><a href="#wait_other_ms">Wait_Other_ms</a></td>
+<td><a href="#wait_other_ms">Wait_Other_Ms</a></td>
 <td><code>bigint</code></td>
-<td>Total wait time for all remaining wait categories.</td>
+<td>Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="columns">Columns</h2>
-<h3 id="avg_cores_cpu">Avg_Cores_CPU</h3>
-<p>Normalized average CPU utilization by query executions in CPU-core units.</p>
+<h3 id="avg_cpu_cores">Avg_Cpu_Cores</h3>
+<p>Average CPU execution load, expressed in CPU cores (relative to 1 core).</p>
 <table>
 <thead>
 <tr>
@@ -258,7 +263,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>5</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -298,7 +303,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -318,8 +323,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="avg_cores_total">Avg_Cores_Total</h3>
-<p>Normalized average query execution duration in CPU-core units.</p>
+<h3 id="avg_memory_per_query_mb">Avg_Memory_Per_Query_MB</h3>
+<p>Average memory (MB) used per query execution.</p>
 <table>
 <thead>
 <tr>
@@ -358,7 +363,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>14</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -398,7 +403,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -418,8 +423,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="avg_cores_waiting">Avg_Cores_Waiting</h3>
-<p>Normalized average wait time for CPU/memory/IO/locks  in CPU-core units.</p>
+<h3 id="avg_total_cores">Avg_Total_Cores</h3>
+<p>Average total load, expressed in CPU cores (relative to 1 core).</p>
 <table>
 <thead>
 <tr>
@@ -458,7 +463,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>7</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -498,7 +503,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -518,8 +523,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="avg_memory_per_query_mb">Avg_Memory_per_Query_MB</h3>
-<p>Average memory used per executed query.</p>
+<h3 id="avg_total_query_memory_mb">Avg_Total_Query_Memory_MB</h3>
+<p>Average total memory (MB) consumed by all concurrent query executions.</p>
 <table>
 <thead>
 <tr>
@@ -558,7 +563,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>15</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -598,7 +603,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -618,8 +623,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="avg_query_memory_usage_mb">Avg_Query_Memory_Usage_MB</h3>
-<p>Average SQL Server memory usage attributable to query execution (query memory grant usage).</p>
+<h3 id="avg_waiting_cores">Avg_Waiting_Cores</h3>
+<p>Average waiting load, expressed in CPU cores (relative to 1 core).</p>
 <table>
 <thead>
 <tr>
@@ -658,7 +663,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>8</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -698,7 +703,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -718,8 +723,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="disk_read_mb">Disk_Read_MB</h3>
-<p>Total disk-read volume (MB) during the interval.</p>
+<h3 id="disk_read_mbps">Disk_Read_MBps</h3>
+<p>Average disk read throughput (MB/s) during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -758,7 +763,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>13</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -798,7 +803,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -818,8 +823,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="disk_read_throughput_mbps">Disk_Read_Throughput_MBps</h3>
-<p>Average disk-read throughput (MB/s) during the interval.</p>
+<h3 id="disk_read_total_mb">Disk_Read_Total_MB</h3>
+<p>Total disk read volume (MB) during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -858,7 +863,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>12</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -898,7 +903,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -919,7 +924,7 @@
 </tbody>
 </table>
 <h3 id="execution_count">Execution_Count</h3>
-<p>Total number of query executions during the interval.</p>
+<p>Total number of executed queries during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -958,7 +963,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>3</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -998,7 +1003,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1018,8 +1023,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="executions_per_second">Executions_per_Second</h3>
-<p>Average executions per second within the interval.</p>
+<h3 id="executions_per_second">Executions_Per_Second</h3>
+<p>Average number of queries executed per second.</p>
 <table>
 <thead>
 <tr>
@@ -1058,7 +1063,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>6</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1098,7 +1103,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1158,7 +1163,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>22</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1198,7 +1203,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1218,27 +1223,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="interval_completion_ratio---supported-filters">Interval_Completion_Ratio - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="runtime_interval_id">Runtime_Interval_Id</h3>
-<p>Identifier of the Query Store runtime interval (runtime_stats_interval_id).</p>
+<h3 id="is_interval_complete">Is_Interval_Complete</h3>
+<p>Indicates whether this is completed or still active interval.</p>
 <table>
 <thead>
 <tr>
@@ -1277,7 +1263,126 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>23</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bit (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="is_interval_complete---supported-filters">Is_Interval_Complete - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="runtime_interval_id">Runtime_Interval_Id</h3>
+<p>Unique identifier of the runtime interval.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>0</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1317,7 +1422,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1351,7 +1456,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 <tr>
@@ -1402,7 +1507,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>1</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1527,7 +1632,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>2</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1606,8 +1711,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="total_duration_ms">Total_Duration_ms</h3>
-<p>Total duration (ms) of all completed executions in the interval.</p>
+<h3 id="total_duration_ms">Total_Duration_Ms</h3>
+<p>Total duration (ms) of all completed query executions in the interval.</p>
 <table>
 <thead>
 <tr>
@@ -1646,7 +1751,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>4</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1686,7 +1791,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>float</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1746,7 +1851,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>9</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1786,7 +1891,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1846,7 +1951,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>10</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1886,7 +1991,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1946,7 +2051,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>11</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1986,7 +2091,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2006,8 +2111,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_cpu_ms">Wait_CPU_ms</h3>
-<p>Total wait time due to CPU resource contention.</p>
+<h3 id="wait_cpu_ms">Wait_Cpu_Ms</h3>
+<p>Total wait time (ms) due to CPU resource contention.</p>
 <table>
 <thead>
 <tr>
@@ -2046,7 +2151,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>16</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2086,7 +2191,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2106,8 +2211,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_io_ms">Wait_IO_ms</h3>
-<p>Total wait time related to IO operations.</p>
+<h3 id="wait_io_ms">Wait_Io_Ms</h3>
+<p>Total wait time (ms) related to I/O operations.</p>
 <table>
 <thead>
 <tr>
@@ -2146,7 +2251,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>18</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2186,7 +2291,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2206,8 +2311,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_lock_ms">Wait_Lock_ms</h3>
-<p>Total wait time caused by locks or blocking</p>
+<h3 id="wait_lock_ms">Wait_Lock_Ms</h3>
+<p>Total wait time (ms) caused by locks or blocking.</p>
 <table>
 <thead>
 <tr>
@@ -2246,7 +2351,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>20</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2286,7 +2391,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2306,8 +2411,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_memory_ms">Wait_Memory_ms</h3>
-<p>Total wait time due to memory resource contention.</p>
+<h3 id="wait_memory_ms">Wait_Memory_Ms</h3>
+<p>Total wait time (ms) due to memory resource contention.</p>
 <table>
 <thead>
 <tr>
@@ -2346,7 +2451,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>17</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2386,7 +2491,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2406,8 +2511,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_network_ms">Wait_Network_ms</h3>
-<p>Total wait time caused by network transfer-related waits.</p>
+<h3 id="wait_network_ms">Wait_Network_Ms</h3>
+<p>Total wait time (ms) caused by network transfer-related waits.</p>
 <table>
 <thead>
 <tr>
@@ -2446,7 +2551,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>19</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2486,7 +2591,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2506,8 +2611,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="wait_other_ms">Wait_Other_ms</h3>
-<p>Total wait time for all remaining wait categories.</p>
+<h3 id="wait_other_ms">Wait_Other_Ms</h3>
+<p>Total wait time (ms) for events other than CPU, I/O, Lock, Memory, or Network.</p>
 <table>
 <thead>
 <tr>
@@ -2546,7 +2651,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2147483647</td>
+<td>21</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2586,7 +2691,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>

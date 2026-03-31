@@ -28,7 +28,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime | The date on which the document was issued.`Required` `Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date` |
+| [DocumentDate](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#documentdate) | datetime __nullable__ | The date on which the document was issued.`Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date` |
 | [IsFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isfulfilled) | boolean | Returns 1/true when both the Quantity and Cost are fulfilled or only negligible (less than 0.001 for qty and 0.01 for cost) sums remain. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.`Required` `Filter(multi eq)` |
 | [IsQuantityFulfilled](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#isquantityfulfilled) | boolean | Returns 1/true when the Quantity is fulfilled or only negligible (less than 0.001) sum remains. Please note, that filtering by this fields forces full scan and calculation of remaining amounts for all non-finished store orders. For best performance, the store orders should be finished after fulfilling.`Required` `Filter(multi eq)` |
 | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | [MovementType](Logistics.Inventory.StoreOrderLinesUnfulfilledView.md#movementtype) | Store order movement type. R=RECEIPT, I=ISSUE`Required` `Default(&quot;R&quot;)` `Filter(multi eq)` `Inherited from Inv_Store_Orders_Table.Movement_Type` |
@@ -53,9 +53,9 @@ Aggregate Tree
 
 ### DocumentDate
 
-The date on which the document was issued.`Required` `Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date`
+The date on which the document was issued.`Default(Today)` `Filter(eq;ge;le)` `Inherited from Gen_Documents_Table.Document_Date`
 
-Type: **datetime**  
+Type: **datetime __nullable__**  
 Category: **System**  
 Inherited From: **Gen_Documents_Table.Document_Date**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  

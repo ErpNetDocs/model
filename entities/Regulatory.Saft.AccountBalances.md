@@ -29,10 +29,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [EndBalanceBase](Regulatory.Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
-| [FromDate](Regulatory.Saft.AccountBalances.md#fromdate) | date | Filter date for start of period`Required` `Filter(eq)` |
-| [ItemKey](Regulatory.Saft.AccountBalances.md#itemkey) | string (64) | Item_Key`Required` `Introduced in version 26.2.1.27` |
+| [FromDate](Regulatory.Saft.AccountBalances.md#fromdate) | date __nullable__ | Filter date for start of period`Filter(eq)` |
+| [ItemKey](Regulatory.Saft.AccountBalances.md#itemkey) | string (64) __nullable__ | Item_Key`Introduced in version 26.2.1.27` |
 | [StartBalanceBase](Regulatory.Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
-| [ToDate](Regulatory.Saft.AccountBalances.md#todate) | date | Filter date for end of period`Required` `Filter(eq)` |
+| [ToDate](Regulatory.Saft.AccountBalances.md#todate) | date __nullable__ | Filter date for end of period`Filter(eq)` |
 | [VouchersInPeriod](Regulatory.Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period`Required` `Introduced in version 26.2.1.27` |
 
 ## References
@@ -57,9 +57,9 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Filter date for start of period`Required` `Filter(eq)`
+Filter date for start of period`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -67,9 +67,9 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item_Key`Required` `Introduced in version 26.2.1.27`
+Item_Key`Introduced in version 26.2.1.27`
 
-Type: **string (64)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -88,9 +88,9 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Filter date for end of period`Required` `Filter(eq)`
+Filter date for end of period`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  

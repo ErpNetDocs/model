@@ -28,48 +28,47 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.`Required` |
-| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) | Calculated as Balance over Base currency.`Required` |
-| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) | Calculated as Balance over Reporting currency.`Required` |
-| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) | Closing Balance(at the end of reporting period)`Required` |
-| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) | Closing Balance(in Base currency)`Required` |
-| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) | Closing Balance(in Reporting currency)`Required` |
+| [Balance](Finance.Accounting.AccountStatement.md#balance) | decimal (38, 2) __nullable__ | Balance is running sum of (Opening + Debit - Credit) calculated for each row of group. |
+| [BalanceBase](Finance.Accounting.AccountStatement.md#balancebase) | decimal (38, 2) __nullable__ | Calculated as Balance over Base currency. |
+| [BalanceReporting](Finance.Accounting.AccountStatement.md#balancereporting) | decimal (38, 2) __nullable__ | Calculated as Balance over Reporting currency. |
+| [Closing](Finance.Accounting.AccountStatement.md#closing) | decimal (38, 2) __nullable__ | Closing Balance(at the end of reporting period) |
+| [ClosingBase](Finance.Accounting.AccountStatement.md#closingbase) | decimal (38, 2) __nullable__ | Closing Balance(in Base currency) |
+| [ClosingReporting](Finance.Accounting.AccountStatement.md#closingreporting) | decimal (38, 2) __nullable__ | Closing Balance(in Reporting currency) |
 | [Credit](Finance.Accounting.AccountStatement.md#credit) | decimal (18, 2) | Credit`Required` |
 | [CreditBase](Finance.Accounting.AccountStatement.md#creditbase) | decimal (18, 2) | Credit Base`Required` |
-| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) | Credit Reporting`Required` |
+| [CreditReporting](Finance.Accounting.AccountStatement.md#creditreporting) | decimal (18, 2) __nullable__ | Credit Reporting |
 | [Debit](Finance.Accounting.AccountStatement.md#debit) | decimal (18, 2) | Debit`Required` |
 | [DebitBase](Finance.Accounting.AccountStatement.md#debitbase) | decimal (18, 2) | Debit Base`Required` |
-| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) | Debit Reporting`Required` |
-| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date | Document Date`Required` `Filter(ge;le)` |
-| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` |
-| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) | Item Key`Required` |
+| [DebitReporting](Finance.Accounting.AccountStatement.md#debitreporting) | decimal (18, 2) __nullable__ | Debit Reporting |
+| [DocumentDate](Finance.Accounting.AccountStatement.md#documentdate) | date __nullable__ | Document Date`Filter(ge;le)` |
+| [FromDate](Finance.Accounting.AccountStatement.md#fromdate) | date __nullable__ | Period Start Date - Should be filtered with exact date`Filter(eq)` |
+| [ItemKey](Finance.Accounting.AccountStatement.md#itemkey) | string (64) __nullable__ | Item Key |
 | [MovementType](Finance.Accounting.AccountStatement.md#movementtype) | string (7) | Movement Type`Required` `Filter(multi eq)` |
-| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) | Opening balance (debit balance is positive, credit - negative)`Required` |
-| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` |
-| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) | Opening balance in reporting currency`Required` |
-| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime | Document Release Time`Required` `Filter(ge;le)` |
-| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` |
+| [Opening](Finance.Accounting.AccountStatement.md#opening) | decimal (38, 2) __nullable__ | Opening balance (debit balance is positive, credit - negative) |
+| [OpeningBase](Finance.Accounting.AccountStatement.md#openingbase) | decimal (38, 2) __nullable__ | Opening balance in base currency (debit balance is positive, credit - negative) |
+| [OpeningReporting](Finance.Accounting.AccountStatement.md#openingreporting) | decimal (38, 2) __nullable__ | Opening balance in reporting currency |
+| [ReleaseTime](Finance.Accounting.AccountStatement.md#releasetime) | datetime __nullable__ | Document Release Time`Filter(ge;le)` |
+| [ToDate](Finance.Accounting.AccountStatement.md#todate) | date __nullable__ | Period End Date - Should be filtered with exact date`Filter(eq)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Account](Finance.Accounting.AccountStatement.md#account) | [Accounts](Finance.Accounting.Accounts.md) | General Ledger Account |
-| [CostCenter](Finance.Accounting.AccountStatement.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | Cost Center |
+| [CostCenter](Finance.Accounting.AccountStatement.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | Cost Center |
 | [Currency](Finance.Accounting.AccountStatement.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency |
 | [EnterpriseCompany](Finance.Accounting.AccountStatement.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | Enterprise Company |
-| [EnterpriseCompanyLocation](Finance.Accounting.AccountStatement.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | Company Location / Branch |
-| [ProfitCenter](Finance.Accounting.AccountStatement.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | Profit Center |
-| [VoucherLine](Finance.Accounting.AccountStatement.md#voucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) | Voucher Line reference |
+| [ProfitCenter](Finance.Accounting.AccountStatement.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | Profit Center |
+| [VoucherLine](Finance.Accounting.AccountStatement.md#voucherline) | [AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) (nullable) | Voucher Line reference |
 
 
 ## Attribute Details
 
 ### Balance
 
-Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.`Required`
+Balance is running sum of (Opening + Debit - Credit) calculated for each row of group.
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -77,9 +76,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Calculated as Balance over Base currency.`Required`
+Calculated as Balance over Base currency.
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -87,9 +86,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Calculated as Balance over Reporting currency.`Required`
+Calculated as Balance over Reporting currency.
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -97,9 +96,9 @@ Show in UI: **ShownByDefault**
 
 ### Closing
 
-Closing Balance(at the end of reporting period)`Required`
+Closing Balance(at the end of reporting period)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -107,9 +106,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingBase
 
-Closing Balance(in Base currency)`Required`
+Closing Balance(in Base currency)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -117,9 +116,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingReporting
 
-Closing Balance(in Reporting currency)`Required`
+Closing Balance(in Reporting currency)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -147,9 +146,9 @@ Show in UI: **ShownByDefault**
 
 ### CreditReporting
 
-Credit Reporting`Required`
+Credit Reporting
 
-Type: **decimal (18, 2)**  
+Type: **decimal (18, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -177,9 +176,9 @@ Show in UI: **ShownByDefault**
 
 ### DebitReporting
 
-Debit Reporting`Required`
+Debit Reporting
 
-Type: **decimal (18, 2)**  
+Type: **decimal (18, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -187,9 +186,9 @@ Show in UI: **ShownByDefault**
 
 ### DocumentDate
 
-Document Date`Required` `Filter(ge;le)`
+Document Date`Filter(ge;le)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **False**  
@@ -197,9 +196,9 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Period Start Date - Should be filtered with exact date`Required` `Filter(eq)`
+Period Start Date - Should be filtered with exact date`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -207,9 +206,9 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Item Key`Required`
+Item Key
 
-Type: **string (64)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -229,9 +228,9 @@ Show in UI: **ShownByDefault**
 
 ### Opening
 
-Opening balance (debit balance is positive, credit - negative)`Required`
+Opening balance (debit balance is positive, credit - negative)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -239,9 +238,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningBase
 
-Opening balance in base currency (debit balance is positive, credit - negative)`Required`
+Opening balance in base currency (debit balance is positive, credit - negative)
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -249,9 +248,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningReporting
 
-Opening balance in reporting currency`Required`
+Opening balance in reporting currency
 
-Type: **decimal (38, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -259,9 +258,9 @@ Show in UI: **ShownByDefault**
 
 ### ReleaseTime
 
-Document Release Time`Required` `Filter(ge;le)`
+Document Release Time`Filter(ge;le)`
 
-Type: **datetime**  
+Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **False**  
@@ -269,9 +268,9 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Period End Date - Should be filtered with exact date`Required` `Filter(eq)`
+Period End Date - Should be filtered with exact date`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -296,7 +295,7 @@ Show in UI: **ShownByDefault**
 
 Cost Center
 
-Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -326,23 +325,11 @@ Supported Filters: **Equals, EqualsIn**
 Default Value: **NewGuid**  
 Show in UI: **ShownByDefault**  
 
-### EnterpriseCompanyLocation
-
-Company Location / Branch
-
-Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
-Category: **System**  
-Inherited From: **Cm_Company_Locations_Table.Company_Location_Id**  
-Supported Filters: **Equals, EqualsIn**  
-[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
-Default Value: **NewGuid**  
-Show in UI: **ShownByDefault**  
-
 ### ProfitCenter
 
 Profit Center
 
-Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -353,7 +340,7 @@ Show in UI: **ShownByDefault**
 
 Voucher Line reference
 
-Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md)**  
+Type: **[AccountingVoucherLines](Finance.Accounting.AccountingVoucherLines.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Voucher_Lines_Table.Voucher_Line_Id**  
 Supported Filters: **Equals, EqualsIn**  

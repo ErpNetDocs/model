@@ -186,11 +186,6 @@
 <td>Enterprise Company</td>
 </tr>
 <tr>
-<td><a href="#enterprise_company_location_id">Enterprise_Company_Location_Id</a></td>
-<td><code>uniqueidentifier</code></td>
-<td>Company Location / Branch</td>
-</tr>
-<tr>
 <td><a href="#from_date">From_Date</a></td>
 <td><code>date</code></td>
 <td>Period Start Date - Should be filtered with exact date</td>
@@ -442,7 +437,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -542,7 +537,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -642,7 +637,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -742,7 +737,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -842,7 +837,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -942,7 +937,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1042,7 +1037,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>uniqueidentifier</td>
+<td>uniqueidentifier (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1076,7 +1071,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -1361,7 +1356,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(18, 2)</td>
+<td>decimal(18, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1780,7 +1775,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(18, 2)</td>
+<td>decimal(18, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1880,7 +1875,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>date</td>
+<td>date (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2038,129 +2033,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id="enterprise_company_location_id">Enterprise_Company_Location_Id</h3>
-<p>Company Location / Branch</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Base Table.Column</td>
-<td><a href="Cm_Company_Locations.html">Cm_Company_Locations</a>.<a href="Cm_Company_Locations.html#company_location_id">Company_Location_Id</a></td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>NewGuid</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>2147483647</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>uniqueidentifier</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="enterprise_company_location_id---supported-filters">Enterprise_Company_Location_Id - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
 <h3 id="from_date">From_Date</h3>
 <p>Period Start Date - Should be filtered with exact date</p>
 <table>
@@ -2241,7 +2113,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>date</td>
+<td>date (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2275,7 +2147,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -2360,7 +2232,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>nvarchar(64)</td>
+<td>nvarchar(64) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2579,7 +2451,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2679,7 +2551,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2779,7 +2651,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>decimal(38, 2)</td>
+<td>decimal(38, 2) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2879,7 +2751,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>uniqueidentifier</td>
+<td>uniqueidentifier (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2913,7 +2785,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -2998,7 +2870,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>datetime</td>
+<td>datetime (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3117,7 +2989,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>date</td>
+<td>date (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3151,7 +3023,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -3236,7 +3108,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>uniqueidentifier</td>
+<td>uniqueidentifier (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -3270,7 +3142,7 @@
 <tr>
 <td>Equals</td>
 <td><code>NULL</code></td>
-<td>no</td>
+<td>yes</td>
 <td>no</td>
 </tr>
 </tbody>

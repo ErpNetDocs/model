@@ -85,14 +85,15 @@ The event primary classification, which shows the source of the events.`Required
 
 Type: **[EventClass](Systems.Monitoring.AuditLogSummary.md#eventclass)**  
 Category: **System**  
-Allowed values for the `EventClass`(Systems.Monitoring.AuditLogSummary.md#eventclass) data attribute  
-Allowed Values (Systems.Monitoring.AuditLogSummaryRepository.EventClass Enum Members)  
+Allowed values for the `EventClass`(Systems.Monitoring.AuditLogEntries.md#eventclass) data attribute  
+Allowed Values (Systems.Monitoring.AuditLogEntriesRepository.EventClass Enum Members)  
 
 | Value | Description |
 | ---- | --- |
 | Entity | Entity value. Stored as 'E'. <br /> Database Value: 'E' <br /> Model Value: 0 <br /> Domain API Value: 'Entity' |
 | Authentication | Authentication value. Stored as 'A'. <br /> Database Value: 'A' <br /> Model Value: 1 <br /> Domain API Value: 'Authentication' |
 | Server | Server value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 2 <br /> Domain API Value: 'Server' |
+| Presence | Presence value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 3 <br /> Domain API Value: 'Presence' |
 
 Inherited From: **Sys_Audit_Log_Entries_Table.Event_Class**  
 Supported Filters: **Equals, EqualsIn**  

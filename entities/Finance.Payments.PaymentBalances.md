@@ -74,8 +74,8 @@ Indicates whether the remaining balance is an incoming receivable (to be collect
 
 Type: **[Direction](Finance.Payments.PaymentBalances.md#direction)**  
 Category: **System**  
-Allowed values for the `Direction`(Finance.Payments.PaymentBalances.md#direction) data attribute  
-Allowed Values (Finance.Payments.PaymentBalancesRepository.Direction Enum Members)  
+Allowed values for the `Direction`(Finance.Payments.PaymentOrders.md#direction) data attribute  
+Allowed Values (Finance.Payments.PaymentOrdersRepository.Direction Enum Members)  
 
 | Value | Description |
 | ---- | --- |

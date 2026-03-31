@@ -28,7 +28,6 @@ Provides a chronological breakdown of all accounting transactions for each gener
 |[Debit_Reporting](#debit_reporting)|`decimal(18, 2)` |Debit Reporting|
 |[Document_Date](#document_date)|`date` |Document Date|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise Company|
-|[Enterprise_Company_Location_Id](#enterprise_company_location_id)|`uniqueidentifier` |Company Location / Branch|
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item Key|
 |[Movement_Type](#movement_type)|`nvarchar(7)` |Movement Type|
@@ -102,7 +101,7 @@ Balance is running sum of (Opening + Debit - Credit) calculated for each row of 
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -132,7 +131,7 @@ Calculated as Balance over Base currency.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -162,7 +161,7 @@ Calculated as Balance over Reporting currency.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -192,7 +191,7 @@ Closing Balance(at the end of reporting period)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -222,7 +221,7 @@ Closing Balance(in Base currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -252,7 +251,7 @@ Closing Balance(in Reporting currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -282,7 +281,7 @@ Cost Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -292,7 +291,7 @@ Cost Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Credit
 
@@ -378,7 +377,7 @@ Credit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(18, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -504,7 +503,7 @@ Debit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(18, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -534,7 +533,7 @@ Document Date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -582,43 +581,6 @@ Enterprise Company
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Enterprise_Company_Location_Id
-
-
-Company Location / Branch
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Base Table.Column|[Cm_Company_Locations](Cm_Company_Locations.md).[Company_Location_Id](Cm_Company_Locations.md#company_location_id)|
-|Data Filter|no|
-|Default Value|NewGuid|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Enterprise_Company_Location_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-
 ### From_Date
 
 
@@ -643,7 +605,7 @@ Period Start Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -653,7 +615,7 @@ Period Start Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Item_Key
 
@@ -679,7 +641,7 @@ Item Key
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64)|
+|Type|nvarchar(64) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -745,7 +707,7 @@ Opening balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -775,7 +737,7 @@ Opening balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -805,7 +767,7 @@ Opening balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -835,7 +797,7 @@ Profit Center
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -845,7 +807,7 @@ Profit Center
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Release_Time
 
@@ -871,7 +833,7 @@ Document Release Time
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|datetime|
+|Type|datetime (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -907,7 +869,7 @@ Period End Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -917,7 +879,7 @@ Period End Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Voucher_Line_Id
 
@@ -943,7 +905,7 @@ Voucher Line reference
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -953,6 +915,6 @@ Voucher Line reference
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 
