@@ -178,6 +178,7 @@ General log of the last transfer attempt. Messages for the individual objects ar
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

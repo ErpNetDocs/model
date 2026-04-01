@@ -13,7 +13,7 @@ Base Table: Acc_Accounts
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Name:T}  
+Display Format: {Number}: {Name:T}  
 Search Members: Number; Name  
 Code Member: Number  
 Name Member: Name  

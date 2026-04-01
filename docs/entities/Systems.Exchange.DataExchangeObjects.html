@@ -95,9 +95,9 @@ Base Table: Sys_Data_Exchange_Objects<br>
 Introduced In Version: 25.1.1.70<br>
 API access:  ReadWrite</p>
 <h2 id="visualization">Visualization</h2>
-<p>Display Format: {DataExchange.Name}<br>
-Search Members: DataExchange.Name<br>
-Name Member: DataExchange.Name<br>
+<p>Display Format: {RepositoryName}<br>
+Search Members: RepositoryName<br>
+Name Member: RepositoryName<br>
 Category:  Definitions<br>
 Show in UI:  ShownByDefault</p>
 <h2 id="track-changes">Track Changes</h2>
@@ -145,9 +145,19 @@ Aggregate Root:<br>
 <td>Notes for the exchanged object<code>Filter(like)</code></td>
 </tr>
 <tr>
+<td><a href="Systems.Exchange.DataExchangeObjects.html#payload">Payload</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>The object payload - usually JSON. Used for import.<code>Introduced in version 26.2.2.4</code></td>
+</tr>
+<tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></td>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></td>
 <td>Reason for adding the object.<code>Required</code> <code>Default(&amp;quot;C&amp;quot;)</code> <code>Filter(eq)</code></td>
+</tr>
+<tr>
+<td><a href="Systems.Exchange.DataExchangeObjects.html#repositoryname">RepositoryName</a></td>
+<td>string (64) <strong>nullable</strong></td>
+<td>The repository name of the exchanged object<code>Filter(eq;like)</code> <code>Introduced in version 26.2.2.4</code></td>
 </tr>
 </tbody>
 </table>
@@ -168,7 +178,7 @@ Aggregate Root:<br>
 </tr>
 <tr>
 <td><a href="Systems.Exchange.DataExchangeObjects.html#dataobject">DataObject</a></td>
-<td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
+<td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</td>
 <td>The data object which will be transferred.</td>
 </tr>
 </tbody>
@@ -286,6 +296,14 @@ Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="payload">Payload</h3>
+<p>The object payload - usually JSON. Used for import.<code>Introduced in version 26.2.2.4</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reason">Reason</h3>
 <p>Reason for adding the object.<code>Required</code> <code>Default(&amp;quot;C&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="Systems.Exchange.DataExchangeObjects.html#reason">Reason</a></strong><br>
@@ -322,6 +340,14 @@ Allowed Values (Systems.Exchange.DataExchangeObjectsRepository.Reason Enum Membe
 Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CoreData</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="repositoryname">RepositoryName</h3>
+<p>The repository name of the exchanged object<code>Filter(eq;like)</code> <code>Introduced in version 26.2.2.4</code></p>
+<p>Type: <strong>string (64) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>64</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p>Type: <strong>guid</strong><br>
 Indexed: <strong>True</strong><br>
@@ -354,7 +380,7 @@ Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="dataobject">DataObject</h3>
 <p>The data object which will be transferred.</p>
-<p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
+<p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a> (nullable)</strong><br>
 Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>

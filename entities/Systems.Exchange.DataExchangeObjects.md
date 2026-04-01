@@ -14,9 +14,9 @@ Introduced In Version: 25.1.1.70
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {DataExchange.Name}  
-Search Members: DataExchange.Name  
-Name Member: DataExchange.Name  
+Display Format: {RepositoryName}  
+Search Members: RepositoryName  
+Name Member: RepositoryName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -41,14 +41,16 @@ Aggregate Root:
 | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | [ExchangeResult](Systems.Exchange.DataExchangeObjects.md#exchangeresult) | Transfer status.`Required` `Default(&quot;N&quot;)` `Filter(eq)` |
 | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | [Mode](Systems.Exchange.DataExchangeObjects.md#mode) | Operation mode for the object when transferring.`Required` `Default(&quot;MER&quot;)` `Filter(eq)` |
 | [Notes](Systems.Exchange.DataExchangeObjects.md#notes) | string (max) __nullable__ | Notes for the exchanged object`Filter(like)` |
+| [Payload](Systems.Exchange.DataExchangeObjects.md#payload) | string (max) __nullable__ | The object payload - usually JSON. Used for import.`Introduced in version 26.2.2.4` |
 | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | [Reason](Systems.Exchange.DataExchangeObjects.md#reason) | Reason for adding the object.`Required` `Default(&quot;C&quot;)` `Filter(eq)` |
+| [RepositoryName](Systems.Exchange.DataExchangeObjects.md#repositoryname) | string (64) __nullable__ | The repository name of the exchanged object`Filter(eq;like)` `Introduced in version 26.2.2.4` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DataExchange](Systems.Exchange.DataExchangeObjects.md#dataexchange) | [DataExchanges](Systems.Exchange.DataExchanges.md) | The exchange of the object. |
-| [DataObject](Systems.Exchange.DataExchangeObjects.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | The data object which will be transferred. |
+| [DataObject](Systems.Exchange.DataExchangeObjects.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable) | The data object which will be transferred. |
 
 
 ## System Attributes
@@ -136,6 +138,17 @@ Supports Order By: **False**
 Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
+### Payload
+
+The object payload - usually JSON. Used for import.`Introduced in version 26.2.2.4`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
 ### Reason
 
 Reason for adding the object.`Required` `Default(&quot;C&quot;)` `Filter(eq)`
@@ -155,6 +168,17 @@ Allowed Values (Systems.Exchange.DataExchangeObjectsRepository.Reason Enum Membe
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **CoreData**  
+Show in UI: **ShownByDefault**  
+
+### RepositoryName
+
+The repository name of the exchanged object`Filter(eq;like)` `Introduced in version 26.2.2.4`
+
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -204,7 +228,7 @@ Show in UI: **ShownByDefault**
 
 The data object which will be transferred.
 
-Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) (nullable)**  
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  

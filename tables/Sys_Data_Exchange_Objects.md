@@ -23,7 +23,9 @@ Individual aggregate root objects transferred within the data exchange. Only agg
 |[Exchange_Result](#exchange_result)|`char(1)` Allowed: `N`, `S`, `F`|Transfer status.|
 |[Mode](#mode)|`char(3)` Allowed: `MER`, `ADD`|Operation mode for the object when transferring.|
 |[Notes](#notes)|`nvarchar(max)` |Notes for the exchanged object|
+|[Payload](#payload)|`nvarchar(max)` |The object payload - usually JSON. Used for import.|
 |[Reason](#reason)|`char(1)` Allowed: `C`, `R`, `O`, `U`|Reason for adding the object.|
+|[Repository_Name](#repository_name)|`nvarchar(64)` |The repository name of the exchanged object|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -160,7 +162,7 @@ The data object which will be transferred.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -170,7 +172,7 @@ The data object which will be transferred.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Exchange_Message
 
@@ -179,6 +181,7 @@ Status message for this object after the last exchange attempt.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
@@ -318,6 +321,37 @@ Notes for the exchanged object
 | - | - | - | - |
 |Like|None|no|no|
 
+### Payload
+
+
+The object payload - usually JSON. Used for import.
+
+| Property | Value |
+| - | - |
+|Attributes|IsLongString|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Reason
 
 
@@ -354,6 +388,43 @@ Reason for adding the object.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Repository_Name
+
+
+The repository name of the exchanged object
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Repository_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Row_Version
 
