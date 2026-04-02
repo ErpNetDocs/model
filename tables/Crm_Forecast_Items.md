@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Crm.Sales.ForecastItems](~/entities/Crm.Sales.ForecastItems.md)
+Entity: [Logistics.Planning.ForecastItems](~/entities/Logistics.Planning.ForecastItems.md)
 
 Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 
@@ -16,7 +16,11 @@ Forecast items form demand in MRP calculations. Entity: Crm_Forecast_Items
 |[Date](#date)|`datetime` |The date for which the sales is forecasted. When forecasting for a period, this contains the first date of the period|
 |[Dealer_Id](#dealer_id)|`uniqueidentifier` |The dealer for which the forecast is made. When NULL, the forecast is not for any specfic dealer.|
 |[Forecast_Item_Id](#forecast_item_id)|`uniqueidentifier` `PK`||
+|[Forecast_Settings_Json](#forecast_settings_json)|`nvarchar(max)` |Stores the configuration parameters used to generate the forecast in JSON format. This may include algorithm settings, input filters, time horizons, or other options applied during the forecasting process.|
+|[Forecasted_On_Utc](#forecasted_on_utc)|`datetime` |Indicates the date and time when the demand forecast was generated or last recalculated. For manually created or adjusted records, this represents the date and time of the latest update.|
 |[Is_Active](#is_active)|`bit` |Indicates whether the current Forecast item is active.|
+|[Notes](#notes)|`nvarchar(max)` |Additional information for this forecast item.|
+|[Planning_Source](#planning_source)|`char(1)` Allowed: `A`, `M`|Specifies how the demand forecast item was created—whether it was generated automatically by the forecasting system or entered/adjusted manually by a user.|
 |[Product_Id](#product_id)|`uniqueidentifier` |The product for which the forecast is made.|
 |[Quantity](#quantity)|`decimal(18, 3)` |The forecasted sales quantity in the base measurement category of the product|
 |[Row_Version](#row_version)|`timestamp` ||
@@ -39,7 +43,7 @@ The country for which the forecast is made. When NULL, the forecast is country n
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -76,7 +80,7 @@ The customer for which the forecast is made. When NULL, the forecast is not for 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -113,7 +117,7 @@ The date for which the sales is forecasted. When forecasting for a period, this 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|5|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -149,7 +153,7 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -183,7 +187,7 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -206,6 +210,78 @@ The dealer for which the forecast is made. When NULL, the forecast is not for an
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|yes|
 
+### Forecast_Settings_Json
+
+
+Stores the configuration parameters used to generate the forecast in JSON format. This may include algorithm settings, input filters, time horizons, or other options applied during the forecasting process.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|14|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Forecast_Settings_Json - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
+### Forecasted_On_Utc
+
+
+Indicates the date and time when the demand forecast was generated or last recalculated. For manually created or adjusted records, this represents the date and time of the latest update.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|CurrentDateTimeUtc|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|13|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Forecasted_On_Utc - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|no|
+
 ### Is_Active
 
 
@@ -220,7 +296,7 @@ Indicates whether the current Forecast item is active.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|10|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -242,6 +318,79 @@ Indicates whether the current Forecast item is active.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Notes
+
+
+Additional information for this forecast item.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|12|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Notes - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
+### Planning_Source
+
+
+Specifies how the demand forecast item was created—whether it was generated automatically by the forecasting system or entered/adjusted manually by a user.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`A`, `M`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|M|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|11|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(1)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Planning_Source - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Product_Id
 
 
@@ -256,7 +405,7 @@ The product for which the forecast is made.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|6|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -293,7 +442,7 @@ The forecasted sales quantity in the base measurement category of the product
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|8|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -326,7 +475,7 @@ The forecasted sales quantity in the base measurement category of the product
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|9|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -356,7 +505,7 @@ The sales person for which the forecast is made. When NULL, the forecast is not 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -393,7 +542,7 @@ The store which is expected to sell the products.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|7|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

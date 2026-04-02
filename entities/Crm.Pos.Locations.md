@@ -38,6 +38,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [IsActive](Crm.Pos.Locations.md#isactive) | boolean __nullable__ | Indicates whether the POS location is currently active and can be chosen in drop-downs, etc.`Default(true)` `Filter(eq)` |
 | [PosLocationCode](Crm.Pos.Locations.md#poslocationcode) | string (16) | Unique (with the enterprise company) code of this POS location.`Required` `Filter(multi eq;like)` |
+| [SettingsJson](Crm.Pos.Locations.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this location. NULL means that there are no specific settings for this location.`Introduced in version 26.2.2.5` |
 
 ## References
 
@@ -89,6 +90,17 @@ Category: **System**
 Supported Filters: **Equals, Like, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **16**  
+Show in UI: **ShownByDefault**  
+
+### SettingsJson
+
+The field specifies the JSON settings for this location. NULL means that there are no specific settings for this location.`Introduced in version 26.2.2.5`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### Id

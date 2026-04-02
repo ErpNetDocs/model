@@ -71,6 +71,7 @@ Aggregate Root:
 | [RequiredDeliveryDate](Crm.Sales.SalesOrderLines.md#requireddeliverydate) | date __nullable__ | The required (contracted) delivery date for the line`Filter(ge;le)` |
 | [StandardQuantityBase](Crm.Sales.SalesOrderLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` |
 | [StandardUnitPrice](Crm.Sales.SalesOrderLines.md#standardunitprice) | [Amount (14, 5)](../data-types.md#amount) __nullable__ | Standard unit price of the product during the creation of the sales order line`Currency: SalesOrder.DocumentCurrency` `ReadOnly` |
+| [TaxAmount](Crm.Sales.SalesOrderLines.md#taxamount) | decimal (12, 2) __nullable__ | The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)`Introduced in version 26.2.2.5` |
 | [UnitPrice](Crm.Sales.SalesOrderLines.md#unitprice) | [Amount (14, 5)](../data-types.md#amount) | Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId`Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)` |
 
 ## References
@@ -592,6 +593,16 @@ Back-End Default Expression:
 
 Front-End Recalc Expressions:  
 `obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.SalesOrder.DocumentCurrency, obj.SalesOrder.CurrencyDirectory)`
+### TaxAmount
+
+The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)`Introduced in version 26.2.2.5`
+
+Type: **decimal (12, 2) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
 ### UnitPrice
 
 Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId`Currency: SalesOrder.DocumentCurrency` `Required` `Default(0)`

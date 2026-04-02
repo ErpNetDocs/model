@@ -34,8 +34,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits`Required` `Default(0)` |
-| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (18, 2) __nullable__ | The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.`ReadOnly` |
+| [CorrespondanceNo](Finance.Accounting.AccountingVoucherLines.md#correspondanceno) | int32 | The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits`Required` `Default(0)` |
+| [CorrespondantAmount](Finance.Accounting.AccountingVoucherLines.md#correspondantamount) | decimal (18, 2) __nullable__ | The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).`ReadOnly` |
 | [Credit](Finance.Accounting.AccountingVoucherLines.md#credit) | [Amount (18, 2)](../data-types.md#amount) | The amount of the credit in the currency of the account. 0 means that the account is not credited`Currency: Currency` `Required` `Default(0)` |
 | [CreditBase](Finance.Accounting.AccountingVoucherLines.md#creditbase) | [Amount (18, 2)](../data-types.md#amount) | The amount of credit in base currency`Currency: Voucher.EnterpriseCompany.BaseCurrency` `Required` `Default(0)` |
 | [CreditReporting](Finance.Accounting.AccountingVoucherLines.md#creditreporting) | [Amount (18, 2)](../data-types.md#amount) __nullable__ | The amount of credit in reporting currency.`Currency: Voucher.EnterpriseCompany.ReportingCurrency` `Introduced in version 25.1.2.88` |
@@ -75,7 +75,7 @@ Aggregate Root:
 
 ### CorrespondanceNo
 
-The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits`Required` `Default(0)`
+The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits`Required` `Default(0)`
 
 Type: **int32**  
 Category: **System**  
@@ -86,7 +86,7 @@ Show in UI: **ShownByDefault**
 
 ### CorrespondantAmount
 
-The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.`ReadOnly`
+The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).`ReadOnly`
 
 Type: **decimal (18, 2) __nullable__**  
 Category: **System**  

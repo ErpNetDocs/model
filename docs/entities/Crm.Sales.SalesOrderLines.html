@@ -285,6 +285,11 @@ Aggregate Root:<br>
 <td>Standard unit price of the product during the creation of the sales order line<code>Currency: SalesOrder.DocumentCurrency</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Sales.SalesOrderLines.html#taxamount">TaxAmount</a></td>
+<td>decimal (12, 2) <strong>nullable</strong></td>
+<td>The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)<code>Introduced in version 26.2.2.5</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Sales.SalesOrderLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (14, 5)</a></td>
 <td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></td>
@@ -946,6 +951,13 @@ Show in UI: <strong>HiddenByDefault</strong></p>
 <code>obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.SalesOrder.DocumentCurrency, obj.SalesOrder.CurrencyDirectory)</code></p>
 <p>Front-End Recalc Expressions:<br>
 <code>obj.Product.GetStandardUnitPrice( obj.QuantityUnit, obj.SalesOrder.DocumentCurrency, obj.SalesOrder.CurrencyDirectory)</code></p>
+<h3 id="taxamount">TaxAmount</h3>
+<p>The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)<code>Introduced in version 26.2.2.5</code></p>
+<p>Type: <strong>decimal (12, 2) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="unitprice">UnitPrice</h3>
 <p>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId<code>Currency: SalesOrder.DocumentCurrency</code> <code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong><a href="../data-types.html#amount">Amount (14, 5)</a></strong><br>

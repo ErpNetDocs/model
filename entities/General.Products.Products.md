@@ -64,7 +64,7 @@ Aggregate Tree
 | [MinimalSalesQuantityBase](General.Products.Products.md#minimalsalesquantitybase) | decimal (18, 3) __nullable__ | Minimal base quantity of this product that has to be specified in any sale. |
 | [Name](General.Products.Products.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the item`Required` `Filter(eq;like)` |
 | [PartNumber](General.Products.Products.md#partnumber) | string (32) | Unique part number of the product`Required` `Filter(multi eq;like)` `ORD` |
-| [PlanningBucket](General.Products.Products.md#planningbucket) | [PlanningBucket](General.Products.Products.md#planningbucket) __nullable__ | Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.`Default(&quot;1WK&quot;)` `Filter(eq)` `Introduced in version 26.2.1.99` |
+| [PlanningBucket](General.Products.Products.md#planningbucket) | [PlanningBucket](General.Products.Products.md#planningbucket) __nullable__ | Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.`Default(&quot;AWK&quot;)` `Filter(eq)` `ORD` `Introduced in version 26.2.1.99` |
 | [PlanningDemand<br />TimeFenceDays](General.Products.Products.md#planningdemandtimefencedays) | int32 __nullable__ | Period in the future, in which changes to the MPS are not accepted due to the high cost of changing. Demand for the period is calculated based entirely on the customer orders. Abbr. - DTF (NULL = Default of 30 days) |
 | [PlanningHorizonDays](General.Products.Products.md#planninghorizondays) | int32 __nullable__ | Number of days in the future for which to plan the demand and supply (NULL = Default of 180 days) |
 | [PlanningTimeFenceDays](General.Products.Products.md#planningtimefencedays) | int32 __nullable__ | Period in the future inside of which changes to the MPS are carefully evaluated to prevent costly schedule disruption. Demand for the period between DTF and PTF is calculated as the bigger of customer orders and sales forecast. Abbr. - PTF. (NULL = Default of 90 days) |
@@ -372,9 +372,10 @@ Show in UI: **ShownByDefault**
 
 ### PlanningBucket
 
-Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.`Default(&quot;1WK&quot;)` `Filter(eq)` `Introduced in version 26.2.1.99`
+Specifies the time bucket size used for planning this product. Demand and supply quantities are aggregated and planned within these time buckets.`Default(&quot;AWK&quot;)` `Filter(eq)` `ORD` `Introduced in version 26.2.1.99`
 
 Type: **[PlanningBucket](General.Products.Products.md#planningbucket) __nullable__**  
+Indexed: **True**  
 Category: **System**  
 Allowed values for the `PlanningBucket`(General.Products.Products.md#planningbucket) data attribute  
 Allowed Values (General.Products.ProductsRepository.PlanningBucket Enum Members)  
@@ -382,12 +383,12 @@ Allowed Values (General.Products.ProductsRepository.PlanningBucket Enum Members)
 | Value | Description |
 | ---- | --- |
 | Day | Day. Stored as 'DAY'. <br /> Database Value: 'DAY' <br /> Model Value: 0 <br /> Domain API Value: 'Day' |
-| Week | Week. Stored as '1WK'. <br /> Database Value: '1WK' <br /> Model Value: 1 <br /> Domain API Value: 'Week' |
-| v_2Weeks | 2 Weeks. Stored as '2WK'. <br /> Database Value: '2WK' <br /> Model Value: 2 <br /> Domain API Value: 'v_2Weeks' |
+| Week | Week. Stored as 'AWK'. <br /> Database Value: 'AWK' <br /> Model Value: 1 <br /> Domain API Value: 'Week' |
+| TwoWeeks | Two Weeks. Stored as 'TWK'. <br /> Database Value: 'TWK' <br /> Model Value: 2 <br /> Domain API Value: 'TwoWeeks' |
 | Month | Month. Stored as 'MTH'. <br /> Database Value: 'MTH' <br /> Model Value: 3 <br /> Domain API Value: 'Month' |
 
 Supported Filters: **Equals**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Default Value: **Week**  
 Show in UI: **ShownByDefault**  
 

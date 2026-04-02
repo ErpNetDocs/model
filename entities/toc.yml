@@ -359,8 +359,6 @@
       href: Crm.Sales.Distributors.md
     - name: DocumentTypePaymentOptions
       href: Crm.Sales.DocumentTypePaymentOptions.md
-    - name: ForecastItems
-      href: Crm.Sales.ForecastItems.md
     - name: SalesAnalytics
       href: Crm.Sales.SalesAnalytics.md
     - name: SalesOrderLines
@@ -824,6 +822,11 @@
       href: Logistics.Inventory.TransferOrders.md
     - name: TransferOrdersOptions
       href: Logistics.Inventory.TransferOrdersOptions.md
+  - name: Planning
+    href: Logistics.Planning.md
+    items:
+    - name: ForecastItems
+      href: Logistics.Planning.ForecastItems.md
   - name: Procurement
     href: Logistics.Procurement.md
     items:

@@ -117,7 +117,7 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#avgcpucores">AvgCpuCores</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Average CPU execution load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
+<td>Average CPU execution load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#avgmemoryperquerymb">AvgMemoryPerQueryMB</a></td>
@@ -127,32 +127,32 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#avgtotalcores">AvgTotalCores</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Average total load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
+<td>Average total load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#avgtotalquerymemorymb">AvgTotalQueryMemoryMB</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Average total memory (MB) consumed by all concurrent query executions. <code>Introduced in version 26.2.2.3</code></td>
+<td>Average total memory (MB) consumed by all concurrent query executions.<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#avgwaitingcores">AvgWaitingCores</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Average waiting load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></td>
+<td>Average waiting load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadmbps">DiskReadMBps</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Average disk read throughput (MB/s) during the interval. <code>Introduced in version 26.2.2.3</code></td>
+<td>Average disk read throughput (MB/s) during the interval.<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#diskreadtotalmb">DiskReadTotalMB</a></td>
 <td>double <strong>nullable</strong></td>
-<td>Total disk read volume (MB) during the interval. <code>Introduced in version 26.2.2.3</code></td>
+<td>Total disk read volume (MB) during the interval.<code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#executioncount">ExecutionCount</a></td>
 <td>int64 <strong>nullable</strong></td>
-<td>Total number of query executions during the interval.</td>
+<td>Total number of executed queries during the interval.</td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#executionspersecond">ExecutionsPerSecond</a></td>
@@ -167,12 +167,12 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#isintervalcomplete">IsIntervalComplete</a></td>
 <td>boolean <strong>nullable</strong></td>
-<td>Indicates whether this is completed or still active interval. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></td>
+<td>Indicates whether this is completed or still active interval.<code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#runtimeintervalid">RuntimeIntervalId</a></td>
 <td>int64 <strong>nullable</strong></td>
-<td>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Filter(eq;ge;le)</code> <code>ORD</code></td>
+<td>Unique identifier of the runtime interval.<code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#timeslotbeginutc">TimeSlotBeginUtc</a></td>
@@ -238,7 +238,7 @@ Show in UI:  HiddenByDefault</p>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="avgcpucores">AvgCpuCores</h3>
-<p>Average CPU execution load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Average CPU execution load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -252,42 +252,42 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="avgtotalcores">AvgTotalCores</h3>
-<p>Average total load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Average total load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="avgtotalquerymemorymb">AvgTotalQueryMemoryMB</h3>
-<p>Average total memory (MB) consumed by all concurrent query executions. <code>Introduced in version 26.2.2.3</code></p>
+<p>Average total memory (MB) consumed by all concurrent query executions.<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="avgwaitingcores">AvgWaitingCores</h3>
-<p>Average waiting load, expressed in CPU cores (relative to 1 core). <code>Introduced in version 26.2.2.3</code></p>
+<p>Average waiting load, expressed in CPU cores (relative to 1 core).<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="diskreadmbps">DiskReadMBps</h3>
-<p>Average disk read throughput (MB/s) during the interval. <code>Introduced in version 26.2.2.3</code></p>
+<p>Average disk read throughput (MB/s) during the interval.<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="diskreadtotalmb">DiskReadTotalMB</h3>
-<p>Total disk read volume (MB) during the interval. <code>Introduced in version 26.2.2.3</code></p>
+<p>Total disk read volume (MB) during the interval.<code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>double <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="executioncount">ExecutionCount</h3>
-<p>Total number of query executions during the interval.</p>
+<p>Total number of executed queries during the interval.</p>
 <p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -308,14 +308,14 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="isintervalcomplete">IsIntervalComplete</h3>
-<p>Indicates whether this is completed or still active interval. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></p>
+<p>Indicates whether this is completed or still active interval.<code>Filter(eq)</code> <code>Introduced in version 26.2.2.3</code></p>
 <p>Type: <strong>boolean <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="runtimeintervalid">RuntimeIntervalId</h3>
-<p>Identifier of the Query Store runtime interval (runtime_stats_interval_id).<code>Filter(eq;ge;le)</code> <code>ORD</code></p>
+<p>Unique identifier of the runtime interval.<code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>int64 <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>

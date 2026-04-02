@@ -39,6 +39,7 @@ Aggregate Tree
 | [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records.`Required` `Default(true)` `Filter(multi eq)` |
 | [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal.`Required` `Filter(eq;like)` |
 | [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.`Required` `Filter(multi eq;like)` |
+| [SettingsJson](Crm.Pos.Terminals.md#settingsjson) | string (max) __nullable__ | The field specifies the JSON settings for this terminal. NULL means that there are no specific settings for this terminal.`Introduced in version 26.2.2.5` |
 
 ## References
 
@@ -98,6 +99,17 @@ Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**
 Category: **System**  
 Supported Filters: **Equals, Like, EqualsIn**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### SettingsJson
+
+The field specifies the JSON settings for this terminal. NULL means that there are no specific settings for this terminal.`Introduced in version 26.2.2.5`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### Id

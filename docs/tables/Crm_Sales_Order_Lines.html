@@ -361,6 +361,11 @@
 <td>The bin from which the goods should be withdrawn. NULL means that the bin will be specified at a later stage (store order, etc.)</td>
 </tr>
 <tr>
+<td><a href="#tax_amount">Tax_Amount</a></td>
+<td><code>decimal(12, 2)</code></td>
+<td>The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)</td>
+</tr>
+<tr>
 <td><a href="#unit_price">Unit_Price</a></td>
 <td><code>decimal(14, 5)</code></td>
 <td>Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId</td>
@@ -6296,6 +6301,106 @@
 <td><code>NULL</code></td>
 <td>yes</td>
 <td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tax_amount">Tax_Amount</h3>
+<p>The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>decimal(12, 2) (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>

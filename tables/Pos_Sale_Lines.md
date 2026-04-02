@@ -37,6 +37,7 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` |Measurement unit of Quantity.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Tax_Amount](#tax_amount)|`decimal(12, 2)` |Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds.|
+|[Tax_Group](#tax_group)|`int` Allowed: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.|
 |[Unit_Price](#unit_price)|`decimal(12, 2)` |Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.|
 |[Voided_At](#voided_at)|`datetime` |Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Voided_By_Id](#voided_by_id)|`uniqueidentifier` |Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
@@ -836,6 +837,37 @@ Amount of tax (VAT) for this line. The tax amount is already included in Unit Pr
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Tax_Group
+
+
+The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Unit_Price
 

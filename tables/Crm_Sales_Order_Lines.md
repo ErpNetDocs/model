@@ -67,6 +67,7 @@ Sales Order Lines represent the individual items or services ordered by a custom
 |[Standard_Quantity_Base](#standard_quantity_base)|`decimal(12, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.|
 |[Standard_Unit_Price](#standard_unit_price)|`decimal(14, 5)` Readonly|Standard unit price of the product during the creation of the sales order line|
 |[Store_Bin_Id](#store_bin_id)|`uniqueidentifier` |The bin from which the goods should be withdrawn. NULL means that the bin will be specified at a later stage (store order, etc.)|
+|[Tax_Amount](#tax_amount)|`decimal(12, 2)` |The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)|
 |[Unit_Price](#unit_price)|`decimal(14, 5)` |Unit price of the product in the currency of the sales order and in the unit of measure, as specified by QuantityUnitId|
 
 ## Columns
@@ -1839,6 +1840,36 @@ The bin from which the goods should be withdrawn. NULL means that the bin will b
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Tax_Amount
+
+
+The pre-calculated tax amount for this specific line, captured from the source system (e.g., POS)
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(12, 2) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Unit_Price
 

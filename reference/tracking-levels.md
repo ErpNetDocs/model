@@ -157,7 +157,6 @@ The following table contains default system-specified tracking levels:
 | Crm.Sales.DiscountTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Sales.Distributors | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Sales.DocumentTypePaymentOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Crm.Sales.ForecastItems | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Sales.SalesOrderLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Sales.SalesOrderPaymentOrdersTemplates | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Sales.SalesOrderPaymentPlans | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -341,6 +340,7 @@ The following table contains default system-specified tracking levels:
 | Logistics.Inventory.TransferOrderLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrders | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrdersOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Planning.ForecastItems | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.ProductSupply | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.PurchaseControlDocumentLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.PurchaseControlDocuments | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

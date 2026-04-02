@@ -134,6 +134,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>string (16)</td>
 <td>Unique (with the enterprise company) code of this POS location.<code>Required</code> <code>Filter(multi eq;like)</code></td>
 </tr>
+<tr>
+<td><a href="Crm.Pos.Locations.html#settingsjson">SettingsJson</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>The field specifies the JSON settings for this location. NULL means that there are no specific settings for this location.<code>Introduced in version 26.2.2.5</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
@@ -243,6 +248,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like, EqualsIn</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>16</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="settingsjson">SettingsJson</h3>
+<p>The field specifies the JSON settings for this location. NULL means that there are no specific settings for this location.<code>Introduced in version 26.2.2.5</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="id">Id</h3>
 <p>Type: <strong>guid</strong><br>

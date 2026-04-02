@@ -18,6 +18,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 |[Pos_Terminal_Id](#pos_terminal_id)|`uniqueidentifier` `PK`||
 |[Pos_Terminal_Name](#pos_terminal_name)|`nvarchar(254)` `ML`|The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Settings_Json](#settings_json)|`nvarchar(max)` |The field specifies the JSON settings for this terminal. NULL means that there are no specific settings for this terminal.|
 
 ## Columns
 
@@ -265,5 +266,35 @@ The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Settings_Json
+
+
+The field specifies the JSON settings for this terminal. NULL means that there are no specific settings for this terminal.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

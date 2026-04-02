@@ -120,12 +120,12 @@ Aggregate Root:<br>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#correspondanceno">CorrespondanceNo</a></td>
 <td>int32</td>
-<td>The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits<code>Required</code> <code>Default(0)</code></td>
+<td>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits<code>Required</code> <code>Default(0)</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#correspondantamount">CorrespondantAmount</a></td>
 <td>decimal (18, 2) <strong>nullable</strong></td>
-<td>The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.<code>ReadOnly</code></td>
+<td>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).<code>ReadOnly</code></td>
 </tr>
 <tr>
 <td><a href="Finance.Accounting.AccountingVoucherLines.html#credit">Credit</a></td>
@@ -265,7 +265,7 @@ Aggregate Root:<br>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
 <h3 id="correspondanceno">CorrespondanceNo</h3>
-<p>The number of the correspondence group within the accounting voucher. For each correspondence group, the debits are equal to the credits<code>Required</code> <code>Default(0)</code></p>
+<p>The number of the correspondance group within the accounting voucher. For each correspondance group, the debits are equal to the credits<code>Required</code> <code>Default(0)</code></p>
 <p>Type: <strong>int32</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>
@@ -273,7 +273,7 @@ Supports Order By: <strong>False</strong><br>
 Default Value: <strong>0</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="correspondantamount">CorrespondantAmount</h3>
-<p>The amount (in the currency of the correspondent line) to which the amount in this line is corresponding if the current line is corresponding to only one line.<code>ReadOnly</code></p>
+<p>The amount (in the currency of the correspondant line) to which the amount in this line is corresponding. This field has value only when the current line is corresponding to only one line (e.g. NULL means that the current line is corresponding to many lines).<code>ReadOnly</code></p>
 <p>Type: <strong>decimal (18, 2) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>NotFilterable</strong><br>

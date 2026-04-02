@@ -5,6 +5,11 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Crm.Sales.ForecastItems**  
+New name: **Logistics.Planning.DemandForecastItems**  
+Version: **26.2.2.6**  
+Case: **39727**  
+
 Old name: **Finance.Saft.ProfileTaxCodeByDealTypes**  
 New name: **Regulatory.Saft.ProfileTaxCodeByDealTypes**  
 Version: **26.2.1.17**  

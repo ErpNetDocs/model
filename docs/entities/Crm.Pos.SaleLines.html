@@ -180,6 +180,11 @@ Aggregate Root:<br>
 <td>Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds.<code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Default(0)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
+<td><a href="Crm.Pos.SaleLines.html#taxgroup">TaxGroup</a></td>
+<td><a href="Crm.Pos.SaleLines.html#taxgroup">TaxGroup</a> <strong>nullable</strong></td>
+<td>The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.<code>Introduced in version 26.2.2.5</code></td>
+</tr>
+<tr>
 <td><a href="Crm.Pos.SaleLines.html#unitprice">UnitPrice</a></td>
 <td><a href="../data-types.html#amount">Amount (12, 2)</a></td>
 <td>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.<code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></td>
@@ -397,6 +402,61 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Default Value: <strong>Constant</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="taxgroup">TaxGroup</h3>
+<p>The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.<code>Introduced in version 26.2.2.5</code></p>
+<p>Type: <strong><a href="Crm.Pos.SaleLines.html#taxgroup">TaxGroup</a> <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Allowed values for the <code>TaxGroup</code>(Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute<br>
+Allowed Values (Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup Enum Members)</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero</td>
+<td>Zero value. Stored as 0. <br> Database Value: 0 <br> Model Value: 0 <br> Domain API Value: 'Zero'</td>
+</tr>
+<tr>
+<td>One</td>
+<td>One value. Stored as 1. <br> Database Value: 1 <br> Model Value: 1 <br> Domain API Value: 'One'</td>
+</tr>
+<tr>
+<td>Two</td>
+<td>Two value. Stored as 2. <br> Database Value: 2 <br> Model Value: 2 <br> Domain API Value: 'Two'</td>
+</tr>
+<tr>
+<td>Three</td>
+<td>Three value. Stored as 3. <br> Database Value: 3 <br> Model Value: 3 <br> Domain API Value: 'Three'</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>Four value. Stored as 4. <br> Database Value: 4 <br> Model Value: 4 <br> Domain API Value: 'Four'</td>
+</tr>
+<tr>
+<td>Five</td>
+<td>Five value. Stored as 5. <br> Database Value: 5 <br> Model Value: 5 <br> Domain API Value: 'Five'</td>
+</tr>
+<tr>
+<td>Six</td>
+<td>Six value. Stored as 6. <br> Database Value: 6 <br> Model Value: 6 <br> Domain API Value: 'Six'</td>
+</tr>
+<tr>
+<td>Seven</td>
+<td>Seven value. Stored as 7. <br> Database Value: 7 <br> Model Value: 7 <br> Domain API Value: 'Seven'</td>
+</tr>
+<tr>
+<td>Eight</td>
+<td>Eight value. Stored as 8. <br> Database Value: 8 <br> Model Value: 8 <br> Domain API Value: 'Eight'</td>
+</tr>
+</tbody>
+</table>
+<p>Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="unitprice">UnitPrice</h3>
 <p>Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.<code>Currency: PosSale.SaleCurrency</code> <code>Required</code> <code>Filter(eq)</code></p>

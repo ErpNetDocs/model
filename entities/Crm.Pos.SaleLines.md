@@ -48,6 +48,7 @@ Aggregate Root:
 | [Quantity](Crm.Pos.SaleLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` |
 | [QuantityBase](Crm.Pos.SaleLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq)` |
 | [TaxAmount](Crm.Pos.SaleLines.md#taxamount) | [Amount (12, 2)](../data-types.md#amount) | Amount of tax (VAT) for this line. The tax amount is already included in Unit Price and Line Amount and is provided for reference. Positive for normal sales, negative for refunds.`Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` |
+| [TaxGroup](Crm.Pos.SaleLines.md#taxgroup) | [TaxGroup](Crm.Pos.SaleLines.md#taxgroup) __nullable__ | The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.`Introduced in version 26.2.2.5` |
 | [UnitPrice](Crm.Pos.SaleLines.md#unitprice) | [Amount (12, 2)](../data-types.md#amount) | Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.`Currency: PosSale.SaleCurrency` `Required` `Filter(eq)` |
 | [VoidedAt](Crm.Pos.SaleLines.md#voidedat) | datetime __nullable__ | Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq;ge;le)` |
 
@@ -216,6 +217,31 @@ Category: **System**
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **Constant**  
+Show in UI: **ShownByDefault**  
+
+### TaxGroup
+
+The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.`Introduced in version 26.2.2.5`
+
+Type: **[TaxGroup](Crm.Pos.SaleLines.md#taxgroup) __nullable__**  
+Category: **System**  
+Allowed values for the `TaxGroup`(Crm.Pos.ProductTypeTaxGroups.md#taxgroup) data attribute  
+Allowed Values (Crm.Pos.ProductTypeTaxGroupsRepository.TaxGroup Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Zero | Zero value. Stored as 0. <br /> Database Value: 0 <br /> Model Value: 0 <br /> Domain API Value: 'Zero' |
+| One | One value. Stored as 1. <br /> Database Value: 1 <br /> Model Value: 1 <br /> Domain API Value: 'One' |
+| Two | Two value. Stored as 2. <br /> Database Value: 2 <br /> Model Value: 2 <br /> Domain API Value: 'Two' |
+| Three | Three value. Stored as 3. <br /> Database Value: 3 <br /> Model Value: 3 <br /> Domain API Value: 'Three' |
+| Four | Four value. Stored as 4. <br /> Database Value: 4 <br /> Model Value: 4 <br /> Domain API Value: 'Four' |
+| Five | Five value. Stored as 5. <br /> Database Value: 5 <br /> Model Value: 5 <br /> Domain API Value: 'Five' |
+| Six | Six value. Stored as 6. <br /> Database Value: 6 <br /> Model Value: 6 <br /> Domain API Value: 'Six' |
+| Seven | Seven value. Stored as 7. <br /> Database Value: 7 <br /> Model Value: 7 <br /> Domain API Value: 'Seven' |
+| Eight | Eight value. Stored as 8. <br /> Database Value: 8 <br /> Model Value: 8 <br /> Domain API Value: 'Eight' |
+
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### UnitPrice

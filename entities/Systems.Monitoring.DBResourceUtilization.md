@@ -28,18 +28,18 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AvgCpuCores](Systems.Monitoring.DBResourceUtilization.md#avgcpucores) | double __nullable__ | Average CPU execution load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
+| [AvgCpuCores](Systems.Monitoring.DBResourceUtilization.md#avgcpucores) | double __nullable__ | Average CPU execution load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3` |
 | [AvgMemoryPerQueryMB](Systems.Monitoring.DBResourceUtilization.md#avgmemoryperquerymb) | double __nullable__ | Average memory (MB) used per query execution. `Introduced in version 26.2.2.3` |
-| [AvgTotalCores](Systems.Monitoring.DBResourceUtilization.md#avgtotalcores) | double __nullable__ | Average total load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
-| [AvgTotalQueryMemoryMB](Systems.Monitoring.DBResourceUtilization.md#avgtotalquerymemorymb) | double __nullable__ | Average total memory (MB) consumed by all concurrent query executions. `Introduced in version 26.2.2.3` |
-| [AvgWaitingCores](Systems.Monitoring.DBResourceUtilization.md#avgwaitingcores) | double __nullable__ | Average waiting load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3` |
-| [DiskReadMBps](Systems.Monitoring.DBResourceUtilization.md#diskreadmbps) | double __nullable__ | Average disk read throughput (MB/s) during the interval. `Introduced in version 26.2.2.3` |
-| [DiskReadTotalMB](Systems.Monitoring.DBResourceUtilization.md#diskreadtotalmb) | double __nullable__ | Total disk read volume (MB) during the interval. `Introduced in version 26.2.2.3` |
-| [ExecutionCount](Systems.Monitoring.DBResourceUtilization.md#executioncount) | int64 __nullable__ | Total number of query executions during the interval. |
+| [AvgTotalCores](Systems.Monitoring.DBResourceUtilization.md#avgtotalcores) | double __nullable__ | Average total load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3` |
+| [AvgTotalQueryMemoryMB](Systems.Monitoring.DBResourceUtilization.md#avgtotalquerymemorymb) | double __nullable__ | Average total memory (MB) consumed by all concurrent query executions.`Introduced in version 26.2.2.3` |
+| [AvgWaitingCores](Systems.Monitoring.DBResourceUtilization.md#avgwaitingcores) | double __nullable__ | Average waiting load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3` |
+| [DiskReadMBps](Systems.Monitoring.DBResourceUtilization.md#diskreadmbps) | double __nullable__ | Average disk read throughput (MB/s) during the interval.`Introduced in version 26.2.2.3` |
+| [DiskReadTotalMB](Systems.Monitoring.DBResourceUtilization.md#diskreadtotalmb) | double __nullable__ | Total disk read volume (MB) during the interval.`Introduced in version 26.2.2.3` |
+| [ExecutionCount](Systems.Monitoring.DBResourceUtilization.md#executioncount) | int64 __nullable__ | Total number of executed queries during the interval. |
 | [ExecutionsPerSecond](Systems.Monitoring.DBResourceUtilization.md#executionspersecond) | double __nullable__ | Average number of queries executed per second. `Introduced in version 26.2.2.3` |
 | [IntervalCompletionRatio](Systems.Monitoring.DBResourceUtilization.md#intervalcompletionratio) | double __nullable__ | Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final. |
-| [IsIntervalComplete](Systems.Monitoring.DBResourceUtilization.md#isintervalcomplete) | boolean __nullable__ | Indicates whether this is completed or still active interval. `Filter(eq)` `Introduced in version 26.2.2.3` |
-| [RuntimeIntervalId](Systems.Monitoring.DBResourceUtilization.md#runtimeintervalid) | int64 __nullable__ | Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Filter(eq;ge;le)` `ORD` |
+| [IsIntervalComplete](Systems.Monitoring.DBResourceUtilization.md#isintervalcomplete) | boolean __nullable__ | Indicates whether this is completed or still active interval.`Filter(eq)` `Introduced in version 26.2.2.3` |
+| [RuntimeIntervalId](Systems.Monitoring.DBResourceUtilization.md#runtimeintervalid) | int64 __nullable__ | Unique identifier of the runtime interval.`Filter(eq;ge;le)` `ORD` |
 | [TimeSlotBeginUtc](Systems.Monitoring.DBResourceUtilization.md#timeslotbeginutc) | datetime | Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)` `ORD` |
 | [TimeSlotEndUtc](Systems.Monitoring.DBResourceUtilization.md#timeslotendutc) | datetime | End timestamp of the interval in UTC.`Required` `Filter(ge;le)` |
 | [TotalDurationMs](Systems.Monitoring.DBResourceUtilization.md#totaldurationms) | double __nullable__ | Total duration (ms) of all completed query executions in the interval. `Introduced in version 26.2.2.3` |
@@ -58,7 +58,7 @@ Aggregate Tree
 
 ### AvgCpuCores
 
-Average CPU execution load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
+Average CPU execution load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -78,7 +78,7 @@ Show in UI: **ShownByDefault**
 
 ### AvgTotalCores
 
-Average total load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
+Average total load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -88,7 +88,7 @@ Show in UI: **ShownByDefault**
 
 ### AvgTotalQueryMemoryMB
 
-Average total memory (MB) consumed by all concurrent query executions. `Introduced in version 26.2.2.3`
+Average total memory (MB) consumed by all concurrent query executions.`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -98,7 +98,7 @@ Show in UI: **ShownByDefault**
 
 ### AvgWaitingCores
 
-Average waiting load, expressed in CPU cores (relative to 1 core). `Introduced in version 26.2.2.3`
+Average waiting load, expressed in CPU cores (relative to 1 core).`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -108,7 +108,7 @@ Show in UI: **ShownByDefault**
 
 ### DiskReadMBps
 
-Average disk read throughput (MB/s) during the interval. `Introduced in version 26.2.2.3`
+Average disk read throughput (MB/s) during the interval.`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -118,7 +118,7 @@ Show in UI: **ShownByDefault**
 
 ### DiskReadTotalMB
 
-Total disk read volume (MB) during the interval. `Introduced in version 26.2.2.3`
+Total disk read volume (MB) during the interval.`Introduced in version 26.2.2.3`
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -128,7 +128,7 @@ Show in UI: **ShownByDefault**
 
 ### ExecutionCount
 
-Total number of query executions during the interval.
+Total number of executed queries during the interval.
 
 Type: **int64 __nullable__**  
 Category: **System**  
@@ -158,7 +158,7 @@ Show in UI: **ShownByDefault**
 
 ### IsIntervalComplete
 
-Indicates whether this is completed or still active interval. `Filter(eq)` `Introduced in version 26.2.2.3`
+Indicates whether this is completed or still active interval.`Filter(eq)` `Introduced in version 26.2.2.3`
 
 Type: **boolean __nullable__**  
 Category: **System**  
@@ -168,7 +168,7 @@ Show in UI: **ShownByDefault**
 
 ### RuntimeIntervalId
 
-Identifier of the Query Store runtime interval (runtime_stats_interval_id).`Filter(eq;ge;le)` `ORD`
+Unique identifier of the runtime interval.`Filter(eq;ge;le)` `ORD`
 
 Type: **int64 __nullable__**  
 Category: **System**  

@@ -17262,6 +17262,26 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Planning.ForecastItems.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Planning.ForecastItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Planning.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Planning.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Procurement.ProductSupply.md",
       "output": {
         ".html": {
