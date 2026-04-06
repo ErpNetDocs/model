@@ -604,7 +604,7 @@ Level 1 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -614,7 +614,7 @@ Level 1 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Level_2_Account_Group_Id
 
@@ -641,7 +641,7 @@ Level 2 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -651,7 +651,7 @@ Level 2 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Level_3_Account_Group_Id
 
@@ -678,7 +678,7 @@ Level 3 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -688,7 +688,7 @@ Level 3 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Level_4_Account_Group_Id
 
@@ -715,7 +715,7 @@ Level 4 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -725,7 +725,7 @@ Level 4 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Level_5_Account_Group_Id
 
@@ -752,7 +752,7 @@ Level 5 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -762,7 +762,7 @@ Level 5 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Level_6_Account_Group_Id
 
@@ -789,7 +789,7 @@ Level 6 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -799,7 +799,7 @@ Level 6 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Opening
 

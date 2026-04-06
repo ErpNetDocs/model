@@ -135,6 +135,11 @@ Aggregate Root:<br>
 <td>The date and time when the counted quantities were last aggregated into this line.<code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#lineno">LineNo</a></td>
+<td>int32 <strong>nullable</strong></td>
+<td>Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.<code>Filter(eq)</code> <code>Introduced in version 26.2.2.10</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
 <td>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.<code>Required</code> <code>Default(&amp;quot;CRT&amp;quot;)</code> <code>Filter(multi eq)</code></td>
@@ -270,6 +275,13 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>Type: <strong>datetime <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="lineno">LineNo</h3>
+<p>Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.<code>Filter(eq)</code> <code>Introduced in version 26.2.2.10</code></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reviewstatus">ReviewStatus</h3>

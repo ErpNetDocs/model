@@ -13,6 +13,7 @@ Captures raw physical count entries recorded in the warehouse operations before 
 | - | - | --- |
 |[Creation_Time_UTC](#creation_time_utc)|`datetime` Readonly|The timestamp when the counting entry was recorded (UTC).|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` Readonly|The user who recorded the counting entry.|
+|[Line_No](#line_no)|`int` |Consecutive number of the count.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` Readonly|The logistic unit involved in the counting, when applicable.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` Readonly|Batch/lot of the product, when applicable.|
 |[Product_Id](#product_id)|`uniqueidentifier` Readonly|The product that was counted.|
@@ -109,6 +110,42 @@ The user who recorded the counting entry.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Line_No
+
+
+Consecutive number of the count.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
 
 ### Logistic_Unit_Id
 

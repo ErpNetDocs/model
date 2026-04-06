@@ -124,6 +124,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>The timestamp when the counting entry was recorded (UTC).<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseCounts.html#lineno">LineNo</a></td>
+<td>int32 <strong>nullable</strong></td>
+<td>Consecutive number of the count. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.10</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseCounts.html#quantity">Quantity</a></td>
 <td><a href="../data-types.html#quantity">Quantity (12, 3)</a></td>
 <td>The quantity entered during the counting process, in the entered measurement unit.<code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></td>
@@ -282,6 +287,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Default Value: <strong>CurrentDateTimeUtc</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="lineno">LineNo</h3>
+<p>Consecutive number of the count. <code>Filter(eq)</code> <code>Introduced in version 26.2.2.10</code></p>
+<p>Type: <strong>int32 <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="quantity">Quantity</h3>
 <p>The quantity entered during the counting process, in the entered measurement unit.<code>Unit: QuantityUnit</code> <code>Required</code> <code>Filter(eq;ge;le)</code> <code>ReadOnly</code></p>

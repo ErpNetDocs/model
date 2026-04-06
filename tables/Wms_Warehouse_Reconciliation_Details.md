@@ -20,6 +20,7 @@ Contains detailed warehouse reconciliation data per location and product, includ
 |[Counted_Quantity](#counted_quantity)|`decimal(12, 3)` |The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.|
 |[Counted_Quantity_Base](#counted_quantity_base)|`decimal(12, 3)` |The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.|
 |[Last_Aggregated_At](#last_aggregated_at)|`datetime` Readonly|The date and time when the counted quantities were last aggregated into this line.|
+|[Line_No](#line_no)|`int` |Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` Readonly|The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` Readonly|Batch/lot of the product, when applicable.|
 |[Product_Id](#product_id)|`uniqueidentifier` Readonly|The product stored at the specified warehouse location.|
@@ -186,6 +187,42 @@ The date and time when the counted quantities were last aggregated into this lin
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
+
+### Line_No
+
+
+Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_No - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|yes|
 
 ### Logistic_Unit_Id
 

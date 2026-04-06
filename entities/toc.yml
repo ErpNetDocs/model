@@ -1388,8 +1388,8 @@
       href: Systems.Monitoring.AuditLogSummary.md
     - name: CurrentSessions
       href: Systems.Monitoring.CurrentSessions.md
-    - name: DBResourceUtilization
-      href: Systems.Monitoring.DBResourceUtilization.md
+    - name: DbResourceUtilization
+      href: Systems.Monitoring.DbResourceUtilization.md
     - name: ExecStats
       href: Systems.Monitoring.ExecStats.md
     - name: InformationMessages

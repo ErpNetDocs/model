@@ -39,6 +39,7 @@ Aggregate Root:
 | [CountedQuantity](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantity) | decimal (12, 3) __nullable__ | The physically counted quantity, entered or aggregated during the counting process and expressed in the product’s default measurement unit. The value can be edited during review before completing the reconciliation.`Filter(eq;ge;le)` `Introduced in version 26.2.1.65` |
 | [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.`Filter(eq;ge;le)` |
 | [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.`Filter(eq;ge;le)` `ReadOnly` |
+| [LineNo](Logistics.Wms.WarehouseReconciliationDetails.md#lineno) | int32 __nullable__ | Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.`Filter(eq)` `Introduced in version 26.2.2.10` |
 | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.`Required` `Default(&quot;CRT&quot;)` `Filter(multi eq)` |
 | [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.`Required` `Filter(eq)` `ReadOnly` |
 | [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.`Required` `Filter(eq;ge;le)` `ReadOnly` |
@@ -99,6 +100,16 @@ The date and time when the counted quantities were last aggregated into this lin
 Type: **datetime __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### LineNo
+
+Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.`Filter(eq)` `Introduced in version 26.2.2.10`
+
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 

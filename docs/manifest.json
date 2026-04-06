@@ -24091,10 +24091,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "tables/Dmv_DB_Resource_Utilization.md",
+      "source_relative_path": "tables/Dmv_Db_Resource_Utilization.md",
       "output": {
         ".html": {
-          "relative_path": "tables/Dmv_DB_Resource_Utilization.html"
+          "relative_path": "tables/Dmv_Db_Resource_Utilization.html"
         }
       },
       "version": ""

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>View Dmv_DB_Resource_Utilization | ERP.net Domain Model </title>
+      <title>View Dmv_Db_Resource_Utilization | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="View Dmv_DB_Resource_Utilization | ERP.net Domain Model ">
+      <meta name="title" content="View Dmv_Db_Resource_Utilization | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Dmv_DB_Resource_Utilization.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/tables/Dmv_Db_Resource_Utilization.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,11 +85,11 @@
         </div>
 
         <article data-uid="">
-<h1 id="view-dmv_db_resource_utilization">View Dmv_DB_Resource_Utilization</h1>
+<h1 id="view-dmv_db_resource_utilization">View Dmv_Db_Resource_Utilization</h1>
 
 <h2 id="entity">Entity</h2>
-<p>Entity: <a href="../entities/Systems.Monitoring.DBResourceUtilization.html">Systems.Monitoring.DBResourceUtilization</a></p>
-<p>Returns diagnostic execution metrics for database queries within a specific Query Store interval. Values are aggregated, normalized, and partially recalculated from Query Store views (query_store_runtime_stats_interval, query_store_runtime_stats, query_store_wait_stats). Useful for performance monitoring, workload analysis, and automated diagnostics. Entity: Dmv_DB_Resource_Utilization (Introduced in version 26.2.1.65)</p>
+<p>Entity: <a href="../entities/Systems.Monitoring.DBResourceUtilization.html">Systems.Monitoring.DbResourceUtilization</a></p>
+<p>Provides aggregated metrics for database query execution within a given time interval. The data reflects system workload, including CPU usage, waiting time, memory consumption, and I/O activity. Useful for performance monitoring, workload analysis, and automated diagnostics. Entity: Dmv_Db_Resource_Utilization (Introduced in version 26.2.2.11)</p>
 <h2 id="summary">Summary</h2>
 <table>
 <thead>
@@ -126,19 +126,14 @@
 <td>Average waiting load, expressed in CPU cores (relative to 1 core).</td>
 </tr>
 <tr>
-<td><a href="#disk_read_mbps">Disk_Read_MBps</a></td>
-<td><code>float</code></td>
-<td>Average disk read throughput (MB/s) during the interval.</td>
-</tr>
-<tr>
-<td><a href="#disk_read_total_mb">Disk_Read_Total_MB</a></td>
-<td><code>float</code></td>
-<td>Total disk read volume (MB) during the interval.</td>
-</tr>
-<tr>
 <td><a href="#execution_count">Execution_Count</a></td>
 <td><code>bigint</code></td>
 <td>Total number of executed queries during the interval.</td>
+</tr>
+<tr>
+<td><a href="#execution_duration_ms">Execution_Duration_Ms</a></td>
+<td><code>float</code></td>
+<td>Total duration (ms) of all completed query executions in the interval.</td>
 </tr>
 <tr>
 <td><a href="#executions_per_second">Executions_Per_Second</a></td>
@@ -151,44 +146,49 @@
 <td>Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.</td>
 </tr>
 <tr>
-<td><a href="#is_interval_complete">Is_Interval_Complete</a></td>
-<td><code>bit</code></td>
-<td>Indicates whether this is completed or still active interval.</td>
-</tr>
-<tr>
-<td><a href="#runtime_interval_id">Runtime_Interval_Id</a></td>
-<td><code>bigint</code></td>
-<td>Unique identifier of the runtime interval.</td>
-</tr>
-<tr>
-<td><a href="#time_slot_begin_utc">Time_Slot_Begin_Utc</a></td>
-<td><code>datetime</code></td>
-<td>Start timestamp of the interval in UTC.</td>
-</tr>
-<tr>
-<td><a href="#time_slot_end_utc">Time_Slot_End_Utc</a></td>
+<td><a href="#interval_end_utc">Interval_End_Utc</a></td>
 <td><code>datetime</code></td>
 <td>End timestamp of the interval in UTC.</td>
 </tr>
 <tr>
-<td><a href="#total_duration_ms">Total_Duration_Ms</a></td>
-<td><code>float</code></td>
-<td>Total duration (ms) of all completed query executions in the interval.</td>
+<td><a href="#interval_id">Interval_Id</a></td>
+<td><code>bigint</code></td>
+<td>Unique identifier of the runtime interval.</td>
 </tr>
 <tr>
-<td><a href="#total_logical_reads">Total_Logical_Reads</a></td>
+<td><a href="#interval_is_completed">Interval_Is_Completed</a></td>
+<td><code>bit</code></td>
+<td>Indicates whether this is completed or still active interval.</td>
+</tr>
+<tr>
+<td><a href="#interval_start_utc">Interval_Start_Utc</a></td>
+<td><code>datetime</code></td>
+<td>Start timestamp of the interval in UTC.</td>
+</tr>
+<tr>
+<td><a href="#logical_reads">Logical_Reads</a></td>
 <td><code>bigint</code></td>
 <td>Total logical reads executed during the interval.</td>
 </tr>
 <tr>
-<td><a href="#total_logical_writes">Total_Logical_Writes</a></td>
+<td><a href="#logical_writes">Logical_Writes</a></td>
 <td><code>bigint</code></td>
 <td>Total logical writes executed during the interval.</td>
 </tr>
 <tr>
-<td><a href="#total_physical_reads">Total_Physical_Reads</a></td>
+<td><a href="#physical_reads_count">Physical_Reads_Count</a></td>
 <td><code>bigint</code></td>
 <td>Total physical reads executed during the interval.</td>
+</tr>
+<tr>
+<td><a href="#physical_reads_mb">Physical_Reads_MB</a></td>
+<td><code>float</code></td>
+<td>Total disk read volume (MB) during the interval.</td>
+</tr>
+<tr>
+<td><a href="#physical_reads_mbps">Physical_Reads_MBps</a></td>
+<td><code>float</code></td>
+<td>Average disk read throughput (MB/s) during the interval.</td>
 </tr>
 <tr>
 <td><a href="#wait_cpu_ms">Wait_Cpu_Ms</a></td>
@@ -263,7 +263,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>5</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -363,7 +363,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>14</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -463,7 +463,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>7</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -563,7 +563,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>15</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -663,207 +663,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>8</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>float (Allows NULL)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="disk_read_mbps">Disk_Read_MBps</h3>
-<p>Average disk read throughput (MB/s) during the interval.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>13</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>float (Allows NULL)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="disk_read_total_mb">Disk_Read_Total_MB</h3>
-<p>Total disk read volume (MB) during the interval.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>12</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -963,7 +763,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>3</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1023,6 +823,106 @@
 </tr>
 </tbody>
 </table>
+<h3 id="execution_duration_ms">Execution_Duration_Ms</h3>
+<p>Total duration (ms) of all completed query executions in the interval.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>float (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
 <h3 id="executions_per_second">Executions_Per_Second</h3>
 <p>Average number of queries executed per second.</p>
 <table>
@@ -1063,7 +963,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>6</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1163,7 +1063,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>22</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1223,7 +1123,245 @@
 </tr>
 </tbody>
 </table>
-<h3 id="is_interval_complete">Is_Interval_Complete</h3>
+<h3 id="interval_end_utc">Interval_End_Utc</h3>
+<p>End timestamp of the interval in UTC.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interval_end_utc---supported-filters">Interval_End_Utc - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GreaterThanOrLessThan</td>
+<td>None</td>
+<td>no</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interval_id">Interval_Id</h3>
+<p>Unique identifier of the runtime interval.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bigint (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interval_id---supported-filters">Interval_Id - Supported Filters</h4>
+<table>
+<thead>
+<tr>
+<th>Filter Type</th>
+<th>Default</th>
+<th>Include Nulls</th>
+<th>Hidden by Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equals</td>
+<td><code>NULL</code></td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interval_is_completed">Interval_Is_Completed</h3>
 <p>Indicates whether this is completed or still active interval.</p>
 <table>
 <thead>
@@ -1263,7 +1401,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>23</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1323,7 +1461,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="is_interval_complete---supported-filters">Is_Interval_Complete - Supported Filters</h4>
+<h4 id="interval_is_completed---supported-filters">Interval_Is_Completed - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1342,132 +1480,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="runtime_interval_id">Runtime_Interval_Id</h3>
-<p>Unique identifier of the runtime interval.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>0</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>bigint (Allows NULL)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="runtime_interval_id---supported-filters">Runtime_Interval_Id - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
-</tr>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="time_slot_begin_utc">Time_Slot_Begin_Utc</h3>
+<h3 id="interval_start_utc">Interval_Start_Utc</h3>
 <p>Start timestamp of the interval in UTC.</p>
 <table>
 <thead>
@@ -1507,7 +1520,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>1</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1535,7 +1548,7 @@
 </tr>
 <tr>
 <td>Sortable</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Summary Type</td>
@@ -1567,7 +1580,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="time_slot_begin_utc---supported-filters">Time_Slot_Begin_Utc - Supported Filters</h4>
+<h4 id="interval_start_utc---supported-filters">Interval_Start_Utc - Supported Filters</h4>
 <table>
 <thead>
 <tr>
@@ -1592,8 +1605,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="time_slot_end_utc">Time_Slot_End_Utc</h3>
-<p>End timestamp of the interval in UTC.</p>
+<h3 id="logical_reads">Logical_Reads</h3>
+<p>Total logical reads executed during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -1632,7 +1645,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>2</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1672,7 +1685,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>datetime</td>
+<td>bigint (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -1692,27 +1705,8 @@
 </tr>
 </tbody>
 </table>
-<h4 id="time_slot_end_utc---supported-filters">Time_Slot_End_Utc - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GreaterThanOrLessThan</td>
-<td>None</td>
-<td>no</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
-<h3 id="total_duration_ms">Total_Duration_Ms</h3>
-<p>Total duration (ms) of all completed query executions in the interval.</p>
+<h3 id="logical_writes">Logical_Writes</h3>
+<p>Total logical writes executed during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -1751,7 +1745,207 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>4</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bigint (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="physical_reads_count">Physical_Reads_Count</h3>
+<p>Total physical reads executed during the interval.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
+</tr>
+<tr>
+<td>Ownership Reference</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Pasword</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Picture</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Primary Key</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Readonly</td>
+<td>no</td>
+</tr>
+<tr>
+<td>RTF</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Sortable</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Summary Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Supports EQUALS_IN</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>bigint (Allows NULL)</td>
+</tr>
+<tr>
+<td>UI Memo Editor</td>
+<td>no</td>
+</tr>
+<tr>
+<td>UI Width</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>User Login</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Visible</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="physical_reads_mb">Physical_Reads_MB</h3>
+<p>Total disk read volume (MB) during the interval.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auto Complete</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Data Filter</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Default Value</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Enter Stop</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Ignore for Insert Order</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Is Entity Name</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Max Length</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1811,8 +2005,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="total_logical_reads">Total_Logical_Reads</h3>
-<p>Total logical reads executed during the interval.</p>
+<h3 id="physical_reads_mbps">Physical_Reads_MBps</h3>
+<p>Average disk read throughput (MB/s) during the interval.</p>
 <table>
 <thead>
 <tr>
@@ -1851,7 +2045,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>9</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -1891,207 +2085,7 @@
 </tr>
 <tr>
 <td>Type</td>
-<td>bigint (Allows NULL)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="total_logical_writes">Total_Logical_Writes</h3>
-<p>Total logical writes executed during the interval.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>bigint (Allows NULL)</td>
-</tr>
-<tr>
-<td>UI Memo Editor</td>
-<td>no</td>
-</tr>
-<tr>
-<td>UI Width</td>
-<td>Medium</td>
-</tr>
-<tr>
-<td>User Login</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Visible</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
-<h3 id="total_physical_reads">Total_Physical_Reads</h3>
-<p>Total physical reads executed during the interval.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Auto Complete</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Data Filter</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Default Value</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Enter Stop</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Ignore for Insert Order</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Is Entity Name</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Max Length</td>
-<td>-1</td>
-</tr>
-<tr>
-<td>Order</td>
-<td>11</td>
-</tr>
-<tr>
-<td>Ownership Reference</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Pasword</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Picture</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Primary Key</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Readonly</td>
-<td>no</td>
-</tr>
-<tr>
-<td>RTF</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Sortable</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Summary Type</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Supports EQUALS_IN</td>
-<td>no</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>bigint (Allows NULL)</td>
+<td>float (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2151,7 +2145,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>16</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2251,7 +2245,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>18</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2351,7 +2345,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>20</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2451,7 +2445,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>17</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2551,7 +2545,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>19</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2651,7 +2645,7 @@
 </tr>
 <tr>
 <td>Order</td>
-<td>21</td>
+<td>2147483647</td>
 </tr>
 <tr>
 <td>Ownership Reference</td>
@@ -2715,7 +2709,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Dmv_DB_Resource_Utilization.md/#L1" class="edit-link">Suggest improvement to this page</a>
+          <a href="https://github.com/ErpNetDocs/model/blob/master/tables/Dmv_Db_Resource_Utilization.md/#L1" class="edit-link">Suggest improvement to this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

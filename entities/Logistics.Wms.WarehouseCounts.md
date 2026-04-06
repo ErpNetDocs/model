@@ -34,6 +34,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CreationTimeUTC](Logistics.Wms.WarehouseCounts.md#creationtimeutc) | datetime | The timestamp when the counting entry was recorded (UTC).`Required` `Default(NowUtc)` `Filter(eq;ge;le)` `ReadOnly` |
+| [LineNo](Logistics.Wms.WarehouseCounts.md#lineno) | int32 __nullable__ | Consecutive number of the count. `Filter(eq)` `Introduced in version 26.2.2.10` |
 | [Quantity](Logistics.Wms.WarehouseCounts.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The quantity entered during the counting process, in the entered measurement unit.`Unit: QuantityUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` |
 | [QuantityBase](Logistics.Wms.WarehouseCounts.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The converted quantity in the product’s base measurement unit.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `Filter(eq;ge;le)` `ReadOnly` |
 | [Session](Logistics.Wms.WarehouseCounts.md#session) | int32 __nullable__ | The counting session number to which this entry belongs.`Filter(eq;ge;le)` `ReadOnly` |
@@ -83,6 +84,16 @@ Category: **System**
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
 Default Value: **CurrentDateTimeUtc**  
+Show in UI: **ShownByDefault**  
+
+### LineNo
+
+Consecutive number of the count. `Filter(eq)` `Introduced in version 26.2.2.10`
+
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Quantity
