@@ -784,8 +784,6 @@
       href: Logistics.Inventory.ReconciliationLines.md
     - name: Reconciliations
       href: Logistics.Inventory.Reconciliations.md
-    - name: RequisitionPlan
-      href: Logistics.Inventory.RequisitionPlan.md
     - name: ScrapTypes
       href: Logistics.Inventory.ScrapTypes.md
     - name: SerialNumbers
@@ -825,8 +823,10 @@
   - name: Planning
     href: Logistics.Planning.md
     items:
-    - name: ForecastItems
-      href: Logistics.Planning.ForecastItems.md
+    - name: DemandForecastItems
+      href: Logistics.Planning.DemandForecastItems.md
+    - name: RequisitionPlan
+      href: Logistics.Planning.RequisitionPlan.md
   - name: Procurement
     href: Logistics.Procurement.md
     items:

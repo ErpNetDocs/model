@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Logistics.Inventory.RequisitionPlan](~/entities/Logistics.Inventory.RequisitionPlan.md)
+Entity: [Logistics.Planning.RequisitionPlan](~/entities/Logistics.Planning.RequisitionPlan.md)
 
 The current requisition (MRP) plan. The data is deleted and re-created upon each planning. Entity: Inv_Requisition_Plan
 

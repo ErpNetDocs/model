@@ -323,7 +323,6 @@ The following table contains default system-specified tracking levels:
 | Logistics.Inventory.ReconciliationCounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.ReconciliationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.Reconciliations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
-| Logistics.Inventory.RequisitionPlan | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.ScrapTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.SerialNumbers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.StoreBins | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -340,7 +339,8 @@ The following table contains default system-specified tracking levels:
 | Logistics.Inventory.TransferOrderLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrders | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrdersOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Logistics.Planning.ForecastItems | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Planning.DemandForecastItems | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Planning.RequisitionPlan | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.ProductSupply | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.PurchaseControlDocumentLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.PurchaseControlDocuments | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

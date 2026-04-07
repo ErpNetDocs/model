@@ -4,5 +4,6 @@ uid: Logistics.Planning
 # Logistics.Planning Namespace
 
 ## Entities
-- [ForecastItems](Logistics.Planning.ForecastItems.md)  
+- [DemandForecastItems](Logistics.Planning.DemandForecastItems.md)  
+- [RequisitionPlan](Logistics.Planning.RequisitionPlan.md)  
 

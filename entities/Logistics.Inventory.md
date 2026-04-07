@@ -18,7 +18,6 @@ uid: Logistics.Inventory
 - [ReconciliationCounts](Logistics.Inventory.ReconciliationCounts.md)  
 - [ReconciliationLines](Logistics.Inventory.ReconciliationLines.md)  
 - [Reconciliations](Logistics.Inventory.Reconciliations.md)  
-- [RequisitionPlan](Logistics.Inventory.RequisitionPlan.md)  
 - [ScrapTypes](Logistics.Inventory.ScrapTypes.md)  
 - [SerialNumbers](Logistics.Inventory.SerialNumbers.md)  
 - [StoreBins](Logistics.Inventory.StoreBins.md)  

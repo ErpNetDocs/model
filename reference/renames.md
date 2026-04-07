@@ -5,6 +5,11 @@ In various versions of ERP.net, different entities have been renamed.
 Here is a list of entity renames in chronological order.  
 
 
+Old name: **Logistics.Inventory.RequisitionPlan**  
+New name: **Logistics.Planning.RequisitionPlan**  
+Version: **26.2.2.12**  
+Case: **39709**  
+
 Old name: **Crm.Sales.ForecastItems**  
 New name: **Logistics.Planning.DemandForecastItems**  
 Version: **26.2.2.6**  

@@ -553,9 +553,6 @@ references:
 - uid: Crm.Sales.DocumentTypePaymentOptions
   name: Crm.Sales.DocumentTypePaymentOptions
   href: entities/Crm.Sales.DocumentTypePaymentOptions.html
-- uid: Crm.Sales.ForecastItems
-  name: Crm.Sales.ForecastItems
-  href: entities/Crm.Sales.ForecastItems.html
 - uid: Crm.Sales.SalesAnalytics
   name: Crm.Sales.SalesAnalytics (View)
   href: entities/Crm.Sales.SalesAnalytics.html
@@ -1234,9 +1231,6 @@ references:
 - uid: Logistics.Inventory.Reconciliations
   name: Logistics.Inventory.Reconciliations
   href: entities/Logistics.Inventory.Reconciliations.html
-- uid: Logistics.Inventory.RequisitionPlan
-  name: Logistics.Inventory.RequisitionPlan
-  href: entities/Logistics.Inventory.RequisitionPlan.html
 - uid: Logistics.Inventory.ScrapTypes
   name: Logistics.Inventory.ScrapTypes
   href: entities/Logistics.Inventory.ScrapTypes.html
@@ -1294,9 +1288,15 @@ references:
 - uid: Logistics.Planning
   name: Logistics.Planning Namespace
   href: entities/Logistics.Planning.html
+- uid: Logistics.Planning.DemandForecastItems
+  name: Logistics.Planning.DemandForecastItems
+  href: entities/Logistics.Planning.DemandForecastItems.html
 - uid: Logistics.Planning.ForecastItems
   name: Logistics.Planning.ForecastItems
   href: entities/Logistics.Planning.ForecastItems.html
+- uid: Logistics.Planning.RequisitionPlan
+  name: Logistics.Planning.RequisitionPlan
+  href: entities/Logistics.Planning.RequisitionPlan.html
 - uid: Logistics.Procurement
   name: Logistics.Procurement Namespace
   href: entities/Logistics.Procurement.html

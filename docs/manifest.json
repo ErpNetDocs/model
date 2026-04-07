@@ -17262,10 +17262,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Planning.DemandForecastItems.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Planning.DemandForecastItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "entities/Logistics.Planning.ForecastItems.md",
       "output": {
         ".html": {
           "relative_path": "entities/Logistics.Planning.ForecastItems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "entities/Logistics.Planning.RequisitionPlan.md",
+      "output": {
+        ".html": {
+          "relative_path": "entities/Logistics.Planning.RequisitionPlan.html"
         }
       },
       "version": ""
