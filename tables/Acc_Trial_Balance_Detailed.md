@@ -12,21 +12,21 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 | Name | Type | Description |
 | - | - | --- |
 |[Account_Id](#account_id)|`uniqueidentifier` ||
-|[Closing](#closing)|`decimal(18, 2)` |Closing Balance (debit balance is positive, credit - negative)|
-|[Closing_Base](#closing_base)|`decimal(18, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
-|[Closing_Credit](#closing_credit)|`decimal(18, 2)` |Closing balance when it is credit|
-|[Closing_Credit_Base](#closing_credit_base)|`decimal(18, 2)` |Closing balance in base currency when it is credit|
-|[Closing_Debit](#closing_debit)|`decimal(18, 2)` |Closing balance when it is debit|
-|[Closing_Debit_Base](#closing_debit_base)|`decimal(18, 2)` |Closing balance in base currency when it is debit|
-|[Closing_Reporting](#closing_reporting)|`decimal(18, 2)` |Closing balance in reporting currency|
+|[Closing](#closing)|`decimal(38, 2)` |Closing Balance (debit balance is positive, credit - negative)|
+|[Closing_Base](#closing_base)|`decimal(38, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
+|[Closing_Credit](#closing_credit)|`decimal(38, 2)` |Closing balance when it is credit|
+|[Closing_Credit_Base](#closing_credit_base)|`decimal(38, 2)` |Closing balance in base currency when it is credit|
+|[Closing_Debit](#closing_debit)|`decimal(38, 2)` |Closing balance when it is debit|
+|[Closing_Debit_Base](#closing_debit_base)|`decimal(38, 2)` |Closing balance in base currency when it is debit|
+|[Closing_Reporting](#closing_reporting)|`decimal(38, 2)` |Closing balance in reporting currency|
 |[Cost_Center_Id](#cost_center_id)|`uniqueidentifier` ||
-|[Credit](#credit)|`decimal(18, 2)` |Credit|
-|[Credit_Base](#credit_base)|`decimal(18, 2)` |Credit Base|
-|[Credit_Reporting](#credit_reporting)|`decimal(18, 2)` |Credit Reporting|
+|[Credit](#credit)|`decimal(38, 2)` |Credit|
+|[Credit_Base](#credit_base)|`decimal(38, 2)` |Credit Base|
+|[Credit_Reporting](#credit_reporting)|`decimal(38, 2)` |Credit Reporting|
 |[Currency_Id](#currency_id)|`uniqueidentifier` ||
-|[Debit](#debit)|`decimal(18, 2)` |Debit|
-|[Debit_Base](#debit_base)|`decimal(18, 2)` |Debit Base|
-|[Debit_Reporting](#debit_reporting)|`decimal(18, 2)` |Debit Reporting|
+|[Debit](#debit)|`decimal(38, 2)` |Debit|
+|[Debit_Base](#debit_base)|`decimal(38, 2)` |Debit Base|
+|[Debit_Reporting](#debit_reporting)|`decimal(38, 2)` |Debit Reporting|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` ||
 |[Example_Voucher_Line_Id](#example_voucher_line_id)|`uniqueidentifier` ||
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
@@ -52,13 +52,13 @@ Shows debit and credit turnovers and balances per account, broken down by analyt
 |[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` ||
 |[Level_5_Account_Property_Id](#level_5_account_property_id)|`uniqueidentifier` ||
 |[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` ||
-|[Opening](#opening)|`decimal(18, 2)` |Opening balance (debit balance is positive, credit - negative)|
-|[Opening_Base](#opening_base)|`decimal(18, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
-|[Opening_Credit](#opening_credit)|`decimal(18, 2)` |Opening balance when it is credit|
-|[Opening_Credit_Base](#opening_credit_base)|`decimal(18, 2)` |Opening balance in base currency when it is credit|
-|[Opening_Debit](#opening_debit)|`decimal(18, 2)` |Opening balance when it is debit|
-|[Opening_Debit_Base](#opening_debit_base)|`decimal(18, 2)` |Opening balance in base currency when it is debit|
-|[Opening_Reporting](#opening_reporting)|`decimal(18, 2)` |Opening balance in reporting currency|
+|[Opening](#opening)|`decimal(38, 2)` |Opening balance (debit balance is positive, credit - negative)|
+|[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
+|[Opening_Credit](#opening_credit)|`decimal(38, 2)` |Opening balance when it is credit|
+|[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening balance in base currency when it is credit|
+|[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening balance when it is debit|
+|[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening balance in base currency when it is debit|
+|[Opening_Reporting](#opening_reporting)|`decimal(38, 2)` |Opening balance in reporting currency|
 |[Profit_Center_Id](#profit_center_id)|`uniqueidentifier` ||
 |[To_Date](#to_date)|`date` |Period End Date - Should be filtered with exact date|
 
@@ -121,7 +121,7 @@ Closing Balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -151,7 +151,7 @@ Closing balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -181,7 +181,7 @@ Closing balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -211,7 +211,7 @@ Closing balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -241,7 +241,7 @@ Closing balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -271,7 +271,7 @@ Closing balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -301,7 +301,7 @@ Closing balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -364,7 +364,7 @@ Credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -394,7 +394,7 @@ Credit Base
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -424,7 +424,7 @@ Credit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -487,7 +487,7 @@ Debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -517,7 +517,7 @@ Debit Base
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -547,7 +547,7 @@ Debit Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -644,7 +644,7 @@ Period Start Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -654,7 +654,7 @@ Period Start Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Item_Key
 
@@ -1451,7 +1451,7 @@ Opening balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1481,7 +1481,7 @@ Opening balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1511,7 +1511,7 @@ Opening balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1541,7 +1541,7 @@ Opening balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1571,7 +1571,7 @@ Opening balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1601,7 +1601,7 @@ Opening balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1631,7 +1631,7 @@ Opening balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1694,7 +1694,7 @@ Period End Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1704,6 +1704,6 @@ Period End Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 

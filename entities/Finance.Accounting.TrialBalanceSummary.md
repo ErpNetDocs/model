@@ -28,28 +28,28 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (18, 2) | Closing Balance (debit balance is positive, credit - negative)`Required` |
-| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (18, 2) | Closing balance in base currency (debit balance is positive, credit - negative)`Required` |
-| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (18, 2) | Closing balance when it is credit`Required` |
-| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (18, 2) | Closing balance in base currency when it is credit`Required` |
-| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (18, 2) | Closing balance when it is debit`Required` |
-| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (18, 2) | Closing balance in base currency when it is debit`Required` |
-| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (18, 2) | Closing balance in reporting currency`Required` |
-| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (18, 2) | Total credits for the period`Required` |
-| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (18, 2) | Total credits (Base Currency)`Required` |
-| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (18, 2) | Total credits (Reporting Currency)`Required` |
-| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (18, 2) | Total debits for the period`Required` |
-| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (18, 2) | Total debits (Base Currency)`Required` |
-| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (18, 2) | Total debits (Reporting Currency)`Required` |
-| [FromDate](Finance.Accounting.TrialBalanceSummary.md#fromdate) | date | Period Start Date - Should be filtered with exact date`Required` `Filter(eq)` |
-| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (18, 2) | Opening balance (debit balance is positive, credit - negative)`Required` |
-| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (18, 2) | Opening balance in base currency (debit balance is positive, credit - negative)`Required` |
-| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (18, 2) | Opening balance when it is credit`Required` |
-| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (18, 2) | Opening balance in base currency when it is credit`Required` |
-| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (18, 2) | Opening balance when it is debit`Required` |
-| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (18, 2) | Opening balance in base currency when it is debit`Required` |
-| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (18, 2) | Opening Reporting`Required` |
-| [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date | Period End Date - Should be filtered with exact date`Required` `Filter(eq)` |
+| [Closing](Finance.Accounting.TrialBalanceSummary.md#closing) | decimal (38, 2) __nullable__ | Closing Balance (debit balance is positive, credit - negative) |
+| [ClosingBase](Finance.Accounting.TrialBalanceSummary.md#closingbase) | decimal (38, 2) __nullable__ | Closing balance in base currency (debit balance is positive, credit - negative) |
+| [ClosingCredit](Finance.Accounting.TrialBalanceSummary.md#closingcredit) | decimal (38, 2) __nullable__ | Closing balance when it is credit |
+| [ClosingCreditBase](Finance.Accounting.TrialBalanceSummary.md#closingcreditbase) | decimal (38, 2) __nullable__ | Closing balance in base currency when it is credit |
+| [ClosingDebit](Finance.Accounting.TrialBalanceSummary.md#closingdebit) | decimal (38, 2) __nullable__ | Closing balance when it is debit |
+| [ClosingDebitBase](Finance.Accounting.TrialBalanceSummary.md#closingdebitbase) | decimal (38, 2) __nullable__ | Closing balance in base currency when it is debit |
+| [ClosingReporting](Finance.Accounting.TrialBalanceSummary.md#closingreporting) | decimal (38, 2) __nullable__ | Closing balance in reporting currency |
+| [Credits](Finance.Accounting.TrialBalanceSummary.md#credits) | decimal (38, 2) | Total credits for the period`Required` |
+| [CreditsBase](Finance.Accounting.TrialBalanceSummary.md#creditsbase) | decimal (38, 2) | Total credits (Base Currency)`Required` |
+| [CreditsReporting](Finance.Accounting.TrialBalanceSummary.md#creditsreporting) | decimal (38, 2) | Total credits (Reporting Currency)`Required` |
+| [Debits](Finance.Accounting.TrialBalanceSummary.md#debits) | decimal (38, 2) | Total debits for the period`Required` |
+| [DebitsBase](Finance.Accounting.TrialBalanceSummary.md#debitsbase) | decimal (38, 2) | Total debits (Base Currency)`Required` |
+| [DebitsReporting](Finance.Accounting.TrialBalanceSummary.md#debitsreporting) | decimal (38, 2) | Total debits (Reporting Currency)`Required` |
+| [FromDate](Finance.Accounting.TrialBalanceSummary.md#fromdate) | date __nullable__ | Period Start Date - Should be filtered with exact date`Filter(eq)` |
+| [Opening](Finance.Accounting.TrialBalanceSummary.md#opening) | decimal (38, 2) __nullable__ | Opening balance (debit balance is positive, credit - negative) |
+| [OpeningBase](Finance.Accounting.TrialBalanceSummary.md#openingbase) | decimal (38, 2) __nullable__ | Opening balance in base currency (debit balance is positive, credit - negative) |
+| [OpeningCredit](Finance.Accounting.TrialBalanceSummary.md#openingcredit) | decimal (38, 2) __nullable__ | Opening balance when it is credit |
+| [OpeningCreditBase](Finance.Accounting.TrialBalanceSummary.md#openingcreditbase) | decimal (38, 2) __nullable__ | Opening balance in base currency when it is credit |
+| [OpeningDebit](Finance.Accounting.TrialBalanceSummary.md#openingdebit) | decimal (38, 2) __nullable__ | Opening balance when it is debit |
+| [OpeningDebitBase](Finance.Accounting.TrialBalanceSummary.md#openingdebitbase) | decimal (38, 2) __nullable__ | Opening balance in base currency when it is debit |
+| [OpeningReporting](Finance.Accounting.TrialBalanceSummary.md#openingreporting) | decimal (38, 2) __nullable__ | Opening Reporting |
+| [ToDate](Finance.Accounting.TrialBalanceSummary.md#todate) | date __nullable__ | Period End Date - Should be filtered with exact date`Filter(eq)` |
 
 ## References
 
@@ -70,9 +70,9 @@ Aggregate Tree
 
 ### Closing
 
-Closing Balance (debit balance is positive, credit - negative)`Required`
+Closing Balance (debit balance is positive, credit - negative)
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -80,9 +80,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingBase
 
-Closing balance in base currency (debit balance is positive, credit - negative)`Required`
+Closing balance in base currency (debit balance is positive, credit - negative)
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -90,9 +90,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingCredit
 
-Closing balance when it is credit`Required`
+Closing balance when it is credit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -100,9 +100,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingCreditBase
 
-Closing balance in base currency when it is credit`Required`
+Closing balance in base currency when it is credit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -110,9 +110,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingDebit
 
-Closing balance when it is debit`Required`
+Closing balance when it is debit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -120,9 +120,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingDebitBase
 
-Closing balance in base currency when it is debit`Required`
+Closing balance in base currency when it is debit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -130,9 +130,9 @@ Show in UI: **ShownByDefault**
 
 ### ClosingReporting
 
-Closing balance in reporting currency`Required`
+Closing balance in reporting currency
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -142,7 +142,7 @@ Show in UI: **ShownByDefault**
 
 Total credits for the period`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 Total credits (Base Currency)`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -162,7 +162,7 @@ Show in UI: **ShownByDefault**
 
 Total credits (Reporting Currency)`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -172,7 +172,7 @@ Show in UI: **ShownByDefault**
 
 Total debits for the period`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -182,7 +182,7 @@ Show in UI: **ShownByDefault**
 
 Total debits (Base Currency)`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -192,7 +192,7 @@ Show in UI: **ShownByDefault**
 
 Total debits (Reporting Currency)`Required`
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -200,9 +200,9 @@ Show in UI: **ShownByDefault**
 
 ### FromDate
 
-Period Start Date - Should be filtered with exact date`Required` `Filter(eq)`
+Period Start Date - Should be filtered with exact date`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -210,9 +210,9 @@ Show in UI: **ShownByDefault**
 
 ### Opening
 
-Opening balance (debit balance is positive, credit - negative)`Required`
+Opening balance (debit balance is positive, credit - negative)
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -220,9 +220,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningBase
 
-Opening balance in base currency (debit balance is positive, credit - negative)`Required`
+Opening balance in base currency (debit balance is positive, credit - negative)
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -230,9 +230,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningCredit
 
-Opening balance when it is credit`Required`
+Opening balance when it is credit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -240,9 +240,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningCreditBase
 
-Opening balance in base currency when it is credit`Required`
+Opening balance in base currency when it is credit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -250,9 +250,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningDebit
 
-Opening balance when it is debit`Required`
+Opening balance when it is debit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -260,9 +260,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningDebitBase
 
-Opening balance in base currency when it is debit`Required`
+Opening balance in base currency when it is debit
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -270,9 +270,9 @@ Show in UI: **ShownByDefault**
 
 ### OpeningReporting
 
-Opening Reporting`Required`
+Opening Reporting
 
-Type: **decimal (18, 2)**  
+Type: **decimal (38, 2) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -280,9 +280,9 @@ Show in UI: **ShownByDefault**
 
 ### ToDate
 
-Period End Date - Should be filtered with exact date`Required` `Filter(eq)`
+Period End Date - Should be filtered with exact date`Filter(eq)`
 
-Type: **date**  
+Type: **date __nullable__**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  

@@ -12,20 +12,20 @@ Displays aggregated debit and credit turnovers and balances by account for a sel
 | Name | Type | Description |
 | - | - | --- |
 |[Account_Id](#account_id)|`uniqueidentifier` |General Ledger Account|
-|[Closing](#closing)|`decimal(18, 2)` |Closing Balance (debit balance is positive, credit - negative)|
-|[Closing_Base](#closing_base)|`decimal(18, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
-|[Closing_Credit](#closing_credit)|`decimal(18, 2)` |Closing balance when it is credit|
-|[Closing_Credit_Base](#closing_credit_base)|`decimal(18, 2)` |Closing balance in base currency when it is credit|
-|[Closing_Debit](#closing_debit)|`decimal(18, 2)` |Closing balance when it is debit|
-|[Closing_Debit_Base](#closing_debit_base)|`decimal(18, 2)` |Closing balance in base currency when it is debit|
-|[Closing_Reporting](#closing_reporting)|`decimal(18, 2)` |Closing balance in reporting currency|
-|[Credits](#credits)|`decimal(18, 2)` |Total credits for the period|
-|[Credits_Base](#credits_base)|`decimal(18, 2)` |Total credits (Base Currency)|
-|[Credits_Reporting](#credits_reporting)|`decimal(18, 2)` |Total credits (Reporting Currency)|
+|[Closing](#closing)|`decimal(38, 2)` |Closing Balance (debit balance is positive, credit - negative)|
+|[Closing_Base](#closing_base)|`decimal(38, 2)` |Closing balance in base currency (debit balance is positive, credit - negative)|
+|[Closing_Credit](#closing_credit)|`decimal(38, 2)` |Closing balance when it is credit|
+|[Closing_Credit_Base](#closing_credit_base)|`decimal(38, 2)` |Closing balance in base currency when it is credit|
+|[Closing_Debit](#closing_debit)|`decimal(38, 2)` |Closing balance when it is debit|
+|[Closing_Debit_Base](#closing_debit_base)|`decimal(38, 2)` |Closing balance in base currency when it is debit|
+|[Closing_Reporting](#closing_reporting)|`decimal(38, 2)` |Closing balance in reporting currency|
+|[Credits](#credits)|`decimal(38, 2)` |Total credits for the period|
+|[Credits_Base](#credits_base)|`decimal(38, 2)` |Total credits (Base Currency)|
+|[Credits_Reporting](#credits_reporting)|`decimal(38, 2)` |Total credits (Reporting Currency)|
 |[Currency_Id](#currency_id)|`uniqueidentifier` |Currency|
-|[Debits](#debits)|`decimal(18, 2)` |Total debits for the period|
-|[Debits_Base](#debits_base)|`decimal(18, 2)` |Total debits (Base Currency)|
-|[Debits_Reporting](#debits_reporting)|`decimal(18, 2)` |Total debits (Reporting Currency)|
+|[Debits](#debits)|`decimal(38, 2)` |Total debits for the period|
+|[Debits_Base](#debits_base)|`decimal(38, 2)` |Total debits (Base Currency)|
+|[Debits_Reporting](#debits_reporting)|`decimal(38, 2)` |Total debits (Reporting Currency)|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise Company|
 |[From_Date](#from_date)|`date` |Period Start Date - Should be filtered with exact date|
 |[Level_1_Account_Group_Id](#level_1_account_group_id)|`uniqueidentifier` |Level 1 Account Group|
@@ -34,13 +34,13 @@ Displays aggregated debit and credit turnovers and balances by account for a sel
 |[Level_4_Account_Group_Id](#level_4_account_group_id)|`uniqueidentifier` |Level 4 Account Group|
 |[Level_5_Account_Group_Id](#level_5_account_group_id)|`uniqueidentifier` |Level 5 Account Group|
 |[Level_6_Account_Group_Id](#level_6_account_group_id)|`uniqueidentifier` |Level 6 Account Group|
-|[Opening](#opening)|`decimal(18, 2)` |Opening balance (debit balance is positive, credit - negative)|
-|[Opening_Base](#opening_base)|`decimal(18, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
-|[Opening_Credit](#opening_credit)|`decimal(18, 2)` |Opening balance when it is credit|
-|[Opening_Credit_Base](#opening_credit_base)|`decimal(18, 2)` |Opening balance in base currency when it is credit|
-|[Opening_Debit](#opening_debit)|`decimal(18, 2)` |Opening balance when it is debit|
-|[Opening_Debit_Base](#opening_debit_base)|`decimal(18, 2)` |Opening balance in base currency when it is debit|
-|[Opening_Reporting](#opening_reporting)|`decimal(18, 2)` |Opening Reporting|
+|[Opening](#opening)|`decimal(38, 2)` |Opening balance (debit balance is positive, credit - negative)|
+|[Opening_Base](#opening_base)|`decimal(38, 2)` |Opening balance in base currency (debit balance is positive, credit - negative)|
+|[Opening_Credit](#opening_credit)|`decimal(38, 2)` |Opening balance when it is credit|
+|[Opening_Credit_Base](#opening_credit_base)|`decimal(38, 2)` |Opening balance in base currency when it is credit|
+|[Opening_Debit](#opening_debit)|`decimal(38, 2)` |Opening balance when it is debit|
+|[Opening_Debit_Base](#opening_debit_base)|`decimal(38, 2)` |Opening balance in base currency when it is debit|
+|[Opening_Reporting](#opening_reporting)|`decimal(38, 2)` |Opening Reporting|
 |[To_Date](#to_date)|`date` |Period End Date - Should be filtered with exact date|
 
 ## Columns
@@ -105,7 +105,7 @@ Closing Balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -135,7 +135,7 @@ Closing balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -165,7 +165,7 @@ Closing balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -195,7 +195,7 @@ Closing balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -225,7 +225,7 @@ Closing balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -255,7 +255,7 @@ Closing balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -285,7 +285,7 @@ Closing balance in reporting currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -315,7 +315,7 @@ Total credits for the period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -345,7 +345,7 @@ Total credits (Base Currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -375,7 +375,7 @@ Total credits (Reporting Currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -441,7 +441,7 @@ Total debits for the period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -471,7 +471,7 @@ Total debits (Base Currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -501,7 +501,7 @@ Total debits (Reporting Currency)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -567,7 +567,7 @@ Period Start Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -577,7 +577,7 @@ Period Start Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_1_Account_Group_Id
 
@@ -604,7 +604,7 @@ Level 1 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -614,7 +614,7 @@ Level 1 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_2_Account_Group_Id
 
@@ -641,7 +641,7 @@ Level 2 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -651,7 +651,7 @@ Level 2 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_3_Account_Group_Id
 
@@ -678,7 +678,7 @@ Level 3 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -688,7 +688,7 @@ Level 3 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_4_Account_Group_Id
 
@@ -715,7 +715,7 @@ Level 4 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -725,7 +725,7 @@ Level 4 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_5_Account_Group_Id
 
@@ -752,7 +752,7 @@ Level 5 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -762,7 +762,7 @@ Level 5 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Level_6_Account_Group_Id
 
@@ -789,7 +789,7 @@ Level 6 Account Group
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -799,7 +799,7 @@ Level 6 Account Group
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Opening
 
@@ -825,7 +825,7 @@ Opening balance (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -855,7 +855,7 @@ Opening balance in base currency (debit balance is positive, credit - negative)
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -885,7 +885,7 @@ Opening balance when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -915,7 +915,7 @@ Opening balance in base currency when it is credit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -945,7 +945,7 @@ Opening balance when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -975,7 +975,7 @@ Opening balance in base currency when it is debit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1005,7 +1005,7 @@ Opening Reporting
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(18, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1035,7 +1035,7 @@ Period End Date - Should be filtered with exact date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1045,6 +1045,6 @@ Period End Date - Should be filtered with exact date
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 
