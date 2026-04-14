@@ -177,7 +177,7 @@ Show in UI:  HiddenByDefault</p>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#intervalstartutc">IntervalStartUtc</a></td>
 <td>datetime</td>
-<td>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
+<td>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></td>
 </tr>
 <tr>
 <td><a href="Systems.Monitoring.DBResourceUtilization.html#logicalreads">LogicalReads</a></td>
@@ -322,11 +322,11 @@ Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="intervalstartutc">IntervalStartUtc</h3>
-<p>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
+<p>Start timestamp of the interval in UTC.<code>Required</code> <code>Filter(eq;ge;le)</code> <code>ORD</code></p>
 <p>Type: <strong>datetime</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
+Supports Order By: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="logicalreads">LogicalReads</h3>
 <p>Total logical reads executed during the interval.</p>

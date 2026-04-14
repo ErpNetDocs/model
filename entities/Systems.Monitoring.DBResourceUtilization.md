@@ -36,11 +36,11 @@ Aggregate Tree
 | [ExecutionCount](Systems.Monitoring.DbResourceUtilization.md#executioncount) | int64 __nullable__ | Total number of executed queries during the interval. |
 | [ExecutionDurationMs](Systems.Monitoring.DbResourceUtilization.md#executiondurationms) | double __nullable__ | Total duration (ms) of all completed query executions in the interval. |
 | [ExecutionsPerSecond](Systems.Monitoring.DbResourceUtilization.md#executionspersecond) | double __nullable__ | Average number of queries executed per second. |
-| [IntervalCompletionRatio](Systems.Monitoring.DbResourceUtilization.md#intervalcompletionratio) | double __nullable__ | Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final. |
+| [IntervalCompletionRatio](Systems.Monitoring.DbResourceUtilization.md#intervalcompletionratio) | double __nullable__ | Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final. |
 | [IntervalEndUtc](Systems.Monitoring.DbResourceUtilization.md#intervalendutc) | datetime | End timestamp of the interval in UTC.`Required` `Filter(ge;le)` |
 | [IntervalId](Systems.Monitoring.DbResourceUtilization.md#intervalid) | int64 __nullable__ | Unique identifier of the runtime interval.`Filter(eq)` |
 | [IntervalIsCompleted](Systems.Monitoring.DbResourceUtilization.md#intervaliscompleted) | boolean __nullable__ | Indicates whether this is completed or still active interval.`Filter(eq)` |
-| [IntervalStartUtc](Systems.Monitoring.DbResourceUtilization.md#intervalstartutc) | datetime | Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)` |
+| [IntervalStartUtc](Systems.Monitoring.DbResourceUtilization.md#intervalstartutc) | datetime | Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)` `ORD` |
 | [LogicalReads](Systems.Monitoring.DbResourceUtilization.md#logicalreads) | int64 __nullable__ | Total logical reads executed during the interval. |
 | [LogicalWrites](Systems.Monitoring.DbResourceUtilization.md#logicalwrites) | int64 __nullable__ |  Total logical writes executed during the interval. |
 | [PhysicalReadsCount](Systems.Monitoring.DbResourceUtilization.md#physicalreadscount) | int64 __nullable__ | Total physical reads executed during the interval. |
@@ -138,7 +138,7 @@ Show in UI: **ShownByDefault**
 
 ### IntervalCompletionRatio
 
-Ratio (0–1) indicating how much of the interval has elapsed. Values &lt; 1 mean the interval is still active and data is not final.
+Ratio (0–1) indicating how much of the interval has elapsed. Values < 1 mean the interval is still active and data is not final.
 
 Type: **double __nullable__**  
 Category: **System**  
@@ -178,12 +178,12 @@ Show in UI: **ShownByDefault**
 
 ### IntervalStartUtc
 
-Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)`
+Start timestamp of the interval in UTC.`Required` `Filter(eq;ge;le)` `ORD`
 
 Type: **datetime**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
+Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
 ### LogicalReads
