@@ -860,6 +860,13 @@ Domain API Request: **POST**
 
 The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.
 
+### CreateCompletingOutputOrder
+
+Creates a completing output order for the selected work order to distribute the remaining materials and undistributed cost.  
+Return Type: **[OutputOrders](Production.ShopFloor.OutputOrders.md)**  
+Declaring Type: **[WorkOrders](Production.ShopFloor.WorkOrders.md)**  
+Domain API Request: **POST**  
+
 ### CreateCopy
 
 Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  

@@ -1190,6 +1190,11 @@ Allowed Values (General.Documents.DocumentCompletion Enum Members)</p>
 </li>
 </ul>
 <p>The process of changing the document state is very labor intensive and includes              validation, generation of sub-documents and some other document-specific tasks.                          The state changing process might be very time-consuming, usually ranging              from 500 to 5000 milliseconds.                          Document states usually can only be advanced to higher states, but there are              exceptions from this rule. Database settings and configuration options might affect             the allowed state changes.                          Numerous kinds of document-specific and generic exceptions can be thrown during the             process.</p>
+<h3 id="createcompletingoutputorder">CreateCompletingOutputOrder</h3>
+<p>Creates a completing output order for the selected work order to distribute the remaining materials and undistributed cost.<br>
+Return Type: <strong><a href="Production.ShopFloor.OutputOrders.html">OutputOrders</a></strong><br>
+Declaring Type: <strong><a href="Production.ShopFloor.WorkOrders.html">WorkOrders</a></strong><br>
+Domain API Request: <strong>POST</strong></p>
 <h3 id="createcopy">CreateCopy</h3>
 <p>Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.<br>
 Return Type: <strong>EntityObject</strong><br>

@@ -28,30 +28,30 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the original accounting currency as of the selected date.`Currency: Currency` `Required` |
-| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency` `Required` |
-| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) | Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency` `Required` |
+| [Balance](Finance.Accounting.HistoricalBalances.md#balance) | [Amount (19, 2)](../data-types.md#amount) __nullable__ | Account balance in the original accounting currency as of the selected date.`Currency: Currency` |
+| [BalanceBase](Finance.Accounting.HistoricalBalances.md#balancebase) | [Amount (19, 2)](../data-types.md#amount) __nullable__ | Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency` |
+| [BalanceReporting](Finance.Accounting.HistoricalBalances.md#balancereporting) | [Amount (19, 2)](../data-types.md#amount) __nullable__ | Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency` |
 | [Date](Finance.Accounting.HistoricalBalances.md#date) | date | The report shows balances as of this date. This is a required filter; if not set, the view returns no data.`Required` `Filter(eq)` |
-| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) | Combined analytical dimensions key used for grouping and filtering account balances.`Required` `Filter(eq;like)` |
+| [ItemKey](Finance.Accounting.HistoricalBalances.md#itemkey) | string (64) __nullable__ | Combined analytical dimensions key used for grouping and filtering account balances.`Filter(eq;like)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Account](Finance.Accounting.HistoricalBalances.md#account) | [Accounts](Finance.Accounting.Accounts.md) | The general ledger account for which the balance is calculated. Required field. |
-| [CostCenter](Finance.Accounting.HistoricalBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) | The cost center associated with the account balance for analytical and reporting purposes. |
+| [CostCenter](Finance.Accounting.HistoricalBalances.md#costcenter) | [CostCenters](Finance.Accounting.CostCenters.md) (nullable) | The cost center associated with the account balance for analytical and reporting purposes. |
 | [Currency](Finance.Accounting.HistoricalBalances.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency in which the account balance is shown. Required field. |
 | [EnterpriseCompany](Finance.Accounting.HistoricalBalances.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company whose accounts are being analyzed. Required for filtering accounting data. |
-| [ProfitCenter](Finance.Accounting.HistoricalBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) | The profit center associated with the account balance for profit analysis and segment reporting. |
+| [ProfitCenter](Finance.Accounting.HistoricalBalances.md#profitcenter) | [ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable) | The profit center associated with the account balance for profit analysis and segment reporting. |
 
 
 ## Attribute Details
 
 ### Balance
 
-Account balance in the original accounting currency as of the selected date.`Currency: Currency` `Required`
+Account balance in the original accounting currency as of the selected date.`Currency: Currency`
 
-Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Type: **[Amount (19, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -59,9 +59,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceBase
 
-Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency` `Required`
+Account balance in the company’s base currency as of the selected date.`Currency: EnterpriseCompany.BaseCurrency`
 
-Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Type: **[Amount (19, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -69,9 +69,9 @@ Show in UI: **ShownByDefault**
 
 ### BalanceReporting
 
-Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency` `Required`
+Account balance in the reporting currency as of the selected date.`Currency: EnterpriseCompany.ReportingCurrency`
 
-Type: **[Amount (19, 2)](../data-types.md#amount)**  
+Type: **[Amount (19, 2)](../data-types.md#amount) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -89,9 +89,9 @@ Show in UI: **ShownByDefault**
 
 ### ItemKey
 
-Combined analytical dimensions key used for grouping and filtering account balances.`Required` `Filter(eq;like)`
+Combined analytical dimensions key used for grouping and filtering account balances.`Filter(eq;like)`
 
-Type: **string (64)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
@@ -117,7 +117,7 @@ Show in UI: **ShownByDefault**
 
 The cost center associated with the account balance for analytical and reporting purposes.
 
-Type: **[CostCenters](Finance.Accounting.CostCenters.md)**  
+Type: **[CostCenters](Finance.Accounting.CostCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Cost_Centers_Table.Cost_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  
@@ -152,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 The profit center associated with the account balance for profit analysis and segment reporting.
 
-Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md)**  
+Type: **[ProfitCenters](Finance.Accounting.ProfitCenters.md) (nullable)**  
 Category: **System**  
 Inherited From: **Acc_Profit_Centers_Table.Profit_Center_Id**  
 Supported Filters: **Equals, EqualsIn**  

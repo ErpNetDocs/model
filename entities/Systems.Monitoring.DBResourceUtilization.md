@@ -4,7 +4,7 @@ uid: Systems.Monitoring.DbResourceUtilization
 # Systems.Monitoring.DbResourceUtilization (View)
 
 
-Provides aggregated metrics for database query execution within a given time interval. The data reflects system workload, including CPU usage, waiting time, memory consumption, and I/O activity. Useful for performance monitoring, workload analysis, and automated diagnostics.
+Provides aggregated metrics for database query execution within a given time interval. The data reflects system workload, including CPU usage, waiting time, memory consumption, and I/O activity. Useful for performance monitoring, workload analysis, and automated diagnostics. To retrieve the data for a period, there must be a filter over the Interval Start Utc field (suggested filter - greater than for no more than a day back).
 
 ## General
 Namespace: [Systems.Monitoring](Systems.Monitoring.md)  

@@ -258,9 +258,9 @@ Allowed Values (Logistics.Planning.RequisitionPlanRepository.State Enum Members)
 
 | Value | Description |
 | ---- | --- |
-| Draft | Draft value. Stored as 'DRF'. <br /> Database Value: 'DRF' <br /> Model Value: 0 <br /> Domain API Value: 'Draft' |
-| Firmed | Firmed value. Stored as 'FRM'. <br /> Database Value: 'FRM' <br /> Model Value: 1 <br /> Domain API Value: 'Firmed' |
-| Released | Released value. Stored as 'REL'. <br /> Database Value: 'REL' <br /> Model Value: 2 <br /> Domain API Value: 'Released' |
+| Draft | The plan is automatically generated or updated by the system. Quantities are based on calculations and can be freely adjusted by the user.. Stored as 'DRF'. <br /> Database Value: 'DRF' <br /> Model Value: 0 <br /> Domain API Value: 'Draft' |
+| Firmed | The plan has been reviewed and confirmed by the user. Quantities are fixed and will not be changed by subsequent planning runs.. Stored as 'FRM'. <br /> Database Value: 'FRM' <br /> Model Value: 1 <br /> Domain API Value: 'Firmed' |
+| Released | The plan has been executed. Corresponding supply orders (purchase, transfer, or production) have been generated.. Stored as 'REL'. <br /> Database Value: 'REL' <br /> Model Value: 2 <br /> Domain API Value: 'Released' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
@@ -288,9 +288,9 @@ Allowed Values (Logistics.Planning.RequisitionPlanRepository.SupplyType Enum Mem
 
 | Value | Description |
 | ---- | --- |
-| Purchase | Purchase value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 0 <br /> Domain API Value: 'Purchase' |
-| Manufacture | Manufacture value. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 1 <br /> Domain API Value: 'Manufacture' |
-| Transfer | Transfer value. Stored as 'T'. <br /> Database Value: 'T' <br /> Model Value: 2 <br /> Domain API Value: 'Transfer' |
+| Purchase | The required quantity will be supplied by purchasing from an external supplier.. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 0 <br /> Domain API Value: 'Purchase' |
+| Manufacture | The required quantity will be produced internally through a manufacturing (work) order.. Stored as 'M'. <br /> Database Value: 'M' <br /> Model Value: 1 <br /> Domain API Value: 'Manufacture' |
+| Transfer | The required quantity will be supplied by transferring stock from another warehouse or location.. Stored as 'T'. <br /> Database Value: 'T' <br /> Model Value: 2 <br /> Domain API Value: 'Transfer' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  

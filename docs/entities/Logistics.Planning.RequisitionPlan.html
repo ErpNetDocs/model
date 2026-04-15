@@ -427,15 +427,15 @@ Allowed Values (Logistics.Planning.RequisitionPlanRepository.State Enum Members)
 <tbody>
 <tr>
 <td>Draft</td>
-<td>Draft value. Stored as 'DRF'. <br> Database Value: 'DRF' <br> Model Value: 0 <br> Domain API Value: 'Draft'</td>
+<td>The plan is automatically generated or updated by the system. Quantities are based on calculations and can be freely adjusted by the user.. Stored as 'DRF'. <br> Database Value: 'DRF' <br> Model Value: 0 <br> Domain API Value: 'Draft'</td>
 </tr>
 <tr>
 <td>Firmed</td>
-<td>Firmed value. Stored as 'FRM'. <br> Database Value: 'FRM' <br> Model Value: 1 <br> Domain API Value: 'Firmed'</td>
+<td>The plan has been reviewed and confirmed by the user. Quantities are fixed and will not be changed by subsequent planning runs.. Stored as 'FRM'. <br> Database Value: 'FRM' <br> Model Value: 1 <br> Domain API Value: 'Firmed'</td>
 </tr>
 <tr>
 <td>Released</td>
-<td>Released value. Stored as 'REL'. <br> Database Value: 'REL' <br> Model Value: 2 <br> Domain API Value: 'Released'</td>
+<td>The plan has been executed. Corresponding supply orders (purchase, transfer, or production) have been generated.. Stored as 'REL'. <br> Database Value: 'REL' <br> Model Value: 2 <br> Domain API Value: 'Released'</td>
 </tr>
 </tbody>
 </table>
@@ -466,15 +466,15 @@ Allowed Values (Logistics.Planning.RequisitionPlanRepository.SupplyType Enum Mem
 <tbody>
 <tr>
 <td>Purchase</td>
-<td>Purchase value. Stored as 'P'. <br> Database Value: 'P' <br> Model Value: 0 <br> Domain API Value: 'Purchase'</td>
+<td>The required quantity will be supplied by purchasing from an external supplier.. Stored as 'P'. <br> Database Value: 'P' <br> Model Value: 0 <br> Domain API Value: 'Purchase'</td>
 </tr>
 <tr>
 <td>Manufacture</td>
-<td>Manufacture value. Stored as 'M'. <br> Database Value: 'M' <br> Model Value: 1 <br> Domain API Value: 'Manufacture'</td>
+<td>The required quantity will be produced internally through a manufacturing (work) order.. Stored as 'M'. <br> Database Value: 'M' <br> Model Value: 1 <br> Domain API Value: 'Manufacture'</td>
 </tr>
 <tr>
 <td>Transfer</td>
-<td>Transfer value. Stored as 'T'. <br> Database Value: 'T' <br> Model Value: 2 <br> Domain API Value: 'Transfer'</td>
+<td>The required quantity will be supplied by transferring stock from another warehouse or location.. Stored as 'T'. <br> Database Value: 'T' <br> Model Value: 2 <br> Domain API Value: 'Transfer'</td>
 </tr>
 </tbody>
 </table>
