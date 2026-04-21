@@ -14,7 +14,7 @@ Introduced In Version: 26.2.0.62
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Name:T}  
+Display Format: {Name}  
 Search Members: Code; Name  
 Code Member: Code  
 Name Member: Name  
