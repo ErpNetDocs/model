@@ -4,7 +4,7 @@ uid: General.Contacts.PartyCommunications
 # General.Contacts.PartyCommunications
 
 
-A “Communication timeline” centralizes emails, chats and internal notes with a specific Party.
+PartyCommunications contains all communication related to a specific business partner, such as emails, chats, and internal notes, centralized in a single communication timeline.
 
 ## General
 Namespace: [General.Contacts](General.Contacts.md)  
@@ -33,23 +33,25 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AdditionalDetailsJson](General.Contacts.PartyCommunications.md#additionaldetailsjson) | string (max) __nullable__ | For entering additional information`Introduced in version 26.2.2.24` |
 | [Channel](General.Contacts.PartyCommunications.md#channel) | [Channel](General.Contacts.PartyCommunications.md#channel) | Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)` |
 | [CommunicationFrom](General.Contacts.PartyCommunications.md#communicationfrom) | string (254) | Who the message is from (email/phone/identifier).`Required` `Filter(eq;like)` |
 | [CommunicationTo](General.Contacts.PartyCommunications.md#communicationto) | string (254) | Who the message is addressed to (main recipient)`Required` `Filter(eq;like)` |
-| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Conversation identifier to group messages into a single thread. `Filter(multi eq)` |
-| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) | Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)` |
+| [ConversationId](General.Contacts.PartyCommunications.md#conversationid) | guid __nullable__ | Usually is entered by the supplier of the message. `Filter(multi eq)` |
+| [CreationTimeUtc](General.Contacts.PartyCommunications.md#creationtimeutc) | datetime | Date and time when the document was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.2.24` |
+| [Direction](General.Contacts.PartyCommunications.md#direction) | [Direction](General.Contacts.PartyCommunications.md#direction) __nullable__ | Direction: received or sent.`Default(&quot;I&quot;)` `Filter(eq)` |
 | [Message](General.Contacts.PartyCommunications.md#message) | string (max) __nullable__ | Full content of the message.`Filter(like)` |
-| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)` |
+| [SubChannel](General.Contacts.PartyCommunications.md#subchannel) | string (254) __nullable__ | Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.`Filter(eq;like)` |
 | [Subject](General.Contacts.PartyCommunications.md#subject) | string (254) __nullable__ | Short title of the message.`Filter(like)` |
-| [TimeLastUpdate](General.Contacts.PartyCommunications.md#timelastupdate) | datetime | When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)` |
 | [TimeOccurredAt](General.Contacts.PartyCommunications.md#timeoccurredat) | datetime | When the message happened.`Required` `Filter(eq;ge;le)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CreationUser](General.Contacts.PartyCommunications.md#creationuser) | [Users](Systems.Security.Users.md) | The login name of the user, who created the document. |
 | [DataObject](General.Contacts.PartyCommunications.md#dataobject) | [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md) | Which object this communication is about. |
-| [ParentCommunicationLog](General.Contacts.PartyCommunications.md#parentcommunicationlog) | [PartyCommunications](General.Contacts.PartyCommunications.md) (nullable) | Link to a previous communication (for reply/forward or sequence). |
+| [Document](General.Contacts.PartyCommunications.md#document) | [Documents](General.Documents.Documents.md) (nullable) | Reference to the related document |
 | [Party](General.Contacts.PartyCommunications.md#party) | [Parties](General.Contacts.Parties.md) | Which partner this communication is about. |
 
 
@@ -67,6 +69,17 @@ Aggregate Tree
 
 ## Attribute Details
 
+### AdditionalDetailsJson
+
+For entering additional information`Introduced in version 26.2.2.24`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
 ### Channel
 
 Main channel of communication.`Required` `Default(&quot;EML&quot;)` `Filter(eq)`
@@ -79,7 +92,7 @@ Allowed Values (General.Contacts.PartyCommunicationsRepository.Channel Enum Memb
 | Value | Description |
 | ---- | --- |
 | Email | Email value. Stored as 'EML'. <br /> Database Value: 'EML' <br /> Model Value: 0 <br /> Domain API Value: 'Email' |
-| IM | IM value. Stored as 'MSG'. <br /> Database Value: 'MSG' <br /> Model Value: 1 <br /> Domain API Value: 'IM' |
+| InstantMessage | InstantMessage value. Stored as 'MSG'. <br /> Database Value: 'MSG' <br /> Model Value: 1 <br /> Domain API Value: 'InstantMessage' |
 | Note | Note value. Stored as 'NOT'. <br /> Database Value: 'NOT' <br /> Model Value: 2 <br /> Domain API Value: 'Note' |
 
 Supported Filters: **Equals**  
@@ -111,18 +124,30 @@ Show in UI: **ShownByDefault**
 
 ### ConversationId
 
-Conversation identifier to group messages into a single thread. `Filter(multi eq)`
+Usually is entered by the supplier of the message. `Filter(multi eq)`
 
 Type: **guid __nullable__**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### CreationTimeUtc
+
+Date and time when the document was created.`Required` `Default(NowUtc)` `Filter(ge;le)` `ReadOnly` `Introduced in version 26.2.2.24`
+
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Default Value: **CurrentDateTimeUtc**  
+Show in UI: **ShownByDefault**  
+
 ### Direction
 
-Direction: received or sent.`Required` `Default(&quot;I&quot;)` `Filter(eq)`
+Direction: received or sent.`Default(&quot;I&quot;)` `Filter(eq)`
 
-Type: **[Direction](General.Contacts.PartyCommunications.md#direction)**  
+Type: **[Direction](General.Contacts.PartyCommunications.md#direction) __nullable__**  
 Category: **System**  
 Allowed values for the `Direction`(General.Contacts.PartyCommunications.md#direction) data attribute  
 Allowed Values (General.Contacts.PartyCommunicationsRepository.Direction Enum Members)  
@@ -150,23 +175,13 @@ Show in UI: **ShownByDefault**
 
 ### SubChannel
 
-Specific application source.`Required` `Default(&quot;OUT&quot;)` `Filter(eq)`
+Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.`Filter(eq;like)`
 
-Type: **[SubChannel](General.Contacts.PartyCommunications.md#subchannel)**  
+Type: **string (254) __nullable__**  
 Category: **System**  
-Allowed values for the `SubChannel`(General.Contacts.PartyCommunications.md#subchannel) data attribute  
-Allowed Values (General.Contacts.PartyCommunicationsRepository.SubChannel Enum Members)  
-
-| Value | Description |
-| ---- | --- |
-| Outlook | Outlook value. Stored as 'OUT'. <br /> Database Value: 'OUT' <br /> Model Value: 0 <br /> Domain API Value: 'Outlook' |
-| WhatsApp | WhatsApp value. Stored as 'WHA'. <br /> Database Value: 'WHA' <br /> Model Value: 1 <br /> Domain API Value: 'WhatsApp' |
-| Viber | Viber value. Stored as 'VBR'. <br /> Database Value: 'VBR' <br /> Model Value: 2 <br /> Domain API Value: 'Viber' |
-| Internal | Internal value. Stored as 'INT'. <br /> Database Value: 'INT' <br /> Model Value: 3 <br /> Domain API Value: 'Internal' |
-
-Supported Filters: **Equals**  
+Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
-Default Value: **Outlook**  
+Maximum Length: **254**  
 Show in UI: **ShownByDefault**  
 
 ### Subject
@@ -178,16 +193,6 @@ Category: **System**
 Supported Filters: **Like**  
 Supports Order By: **False**  
 Maximum Length: **254**  
-Show in UI: **ShownByDefault**  
-
-### TimeLastUpdate
-
-When it was last updated/synced in ERP.`Required` `Filter(eq;ge;le)`
-
-Type: **datetime**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### TimeOccurredAt
@@ -262,6 +267,18 @@ Show in UI: **HiddenByDefault**
 
 ## Reference Details
 
+### CreationUser
+
+The login name of the user, who created the document.
+
+Type: **[Users](Systems.Security.Users.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+Back-End Default Expression:  
+`obj.Transaction.CurrentUser.ToSecurityUser( )`
+
 ### DataObject
 
 Which object this communication is about.
@@ -271,11 +288,11 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
-### ParentCommunicationLog
+### Document
 
-Link to a previous communication (for reply/forward or sequence).
+Reference to the related document
 
-Type: **[PartyCommunications](General.Contacts.PartyCommunications.md) (nullable)**  
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

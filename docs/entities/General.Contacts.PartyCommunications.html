@@ -87,7 +87,7 @@
         <article data-uid="General.Contacts.PartyCommunications">
 <h1 id="generalcontactspartycommunications">General.Contacts.PartyCommunications</h1>
 
-<p>A “Communication timeline” centralizes emails, chats and internal notes with a specific Party.</p>
+<p>PartyCommunications contains all communication related to a specific business partner, such as emails, chats, and internal notes, centralized in a single communication timeline.</p>
 <h2 id="general">General</h2>
 <p>Namespace: <a href="General.Contacts.html">General.Contacts</a><br>
 Repository: General.Contacts.PartyCommunications<br>
@@ -119,6 +119,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="General.Contacts.PartyCommunications.html#additionaldetailsjson">AdditionalDetailsJson</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>For entering additional information<code>Introduced in version 26.2.2.24</code></td>
+</tr>
+<tr>
 <td><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></td>
 <td><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></td>
 <td>Main channel of communication.<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></td>
@@ -136,12 +141,17 @@ Max level:  4 - Track object attribute and blob changes</p>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#conversationid">ConversationId</a></td>
 <td>guid <strong>nullable</strong></td>
-<td>Conversation identifier to group messages into a single thread. <code>Filter(multi eq)</code></td>
+<td>Usually is entered by the supplier of the message. <code>Filter(multi eq)</code></td>
+</tr>
+<tr>
+<td><a href="General.Contacts.PartyCommunications.html#creationtimeutc">CreationTimeUtc</a></td>
+<td>datetime</td>
+<td>Date and time when the document was created.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.2.24</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></td>
-<td><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></td>
-<td>Direction: received or sent.<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></td>
+<td><a href="General.Contacts.PartyCommunications.html#direction">Direction</a> <strong>nullable</strong></td>
+<td>Direction: received or sent.<code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#message">Message</a></td>
@@ -150,18 +160,13 @@ Max level:  4 - Track object attribute and blob changes</p>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></td>
-<td><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></td>
-<td>Specific application source.<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></td>
+<td>string (254) <strong>nullable</strong></td>
+<td>Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.<code>Filter(eq;like)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#subject">Subject</a></td>
 <td>string (254) <strong>nullable</strong></td>
 <td>Short title of the message.<code>Filter(like)</code></td>
-</tr>
-<tr>
-<td><a href="General.Contacts.PartyCommunications.html#timelastupdate">TimeLastUpdate</a></td>
-<td>datetime</td>
-<td>When it was last updated/synced in ERP.<code>Required</code> <code>Filter(eq;ge;le)</code></td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#timeoccurredat">TimeOccurredAt</a></td>
@@ -181,14 +186,19 @@ Max level:  4 - Track object attribute and blob changes</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="General.Contacts.PartyCommunications.html#creationuser">CreationUser</a></td>
+<td><a href="Systems.Security.Users.html">Users</a></td>
+<td>The login name of the user, who created the document.</td>
+</tr>
+<tr>
 <td><a href="General.Contacts.PartyCommunications.html#dataobject">DataObject</a></td>
 <td><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></td>
 <td>Which object this communication is about.</td>
 </tr>
 <tr>
-<td><a href="General.Contacts.PartyCommunications.html#parentcommunicationlog">ParentCommunicationLog</a></td>
-<td><a href="General.Contacts.PartyCommunications.html">PartyCommunications</a> (nullable)</td>
-<td>Link to a previous communication (for reply/forward or sequence).</td>
+<td><a href="General.Contacts.PartyCommunications.html#document">Document</a></td>
+<td><a href="General.Documents.Documents.html">Documents</a> (nullable)</td>
+<td>Reference to the related document</td>
 </tr>
 <tr>
 <td><a href="General.Contacts.PartyCommunications.html#party">Party</a></td>
@@ -240,6 +250,14 @@ Max level:  4 - Track object attribute and blob changes</p>
 </tbody>
 </table>
 <h2 id="attribute-details">Attribute Details</h2>
+<h3 id="additionaldetailsjson">AdditionalDetailsJson</h3>
+<p>For entering additional information<code>Introduced in version 26.2.2.24</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="channel">Channel</h3>
 <p>Main channel of communication.<code>Required</code> <code>Default(&amp;quot;EML&amp;quot;)</code> <code>Filter(eq)</code></p>
 <p>Type: <strong><a href="General.Contacts.PartyCommunications.html#channel">Channel</a></strong><br>
@@ -259,8 +277,8 @@ Allowed Values (General.Contacts.PartyCommunicationsRepository.Channel Enum Memb
 <td>Email value. Stored as 'EML'. <br> Database Value: 'EML' <br> Model Value: 0 <br> Domain API Value: 'Email'</td>
 </tr>
 <tr>
-<td>IM</td>
-<td>IM value. Stored as 'MSG'. <br> Database Value: 'MSG' <br> Model Value: 1 <br> Domain API Value: 'IM'</td>
+<td>InstantMessage</td>
+<td>InstantMessage value. Stored as 'MSG'. <br> Database Value: 'MSG' <br> Model Value: 1 <br> Domain API Value: 'InstantMessage'</td>
 </tr>
 <tr>
 <td>Note</td>
@@ -289,14 +307,23 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="conversationid">ConversationId</h3>
-<p>Conversation identifier to group messages into a single thread. <code>Filter(multi eq)</code></p>
+<p>Usually is entered by the supplier of the message. <code>Filter(multi eq)</code></p>
 <p>Type: <strong>guid <strong>nullable</strong></strong><br>
+Indexed: <strong>True</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="creationtimeutc">CreationTimeUtc</h3>
+<p>Date and time when the document was created.<code>Required</code> <code>Default(NowUtc)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> <code>Introduced in version 26.2.2.24</code></p>
+<p>Type: <strong>datetime</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>CurrentDateTimeUtc</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="direction">Direction</h3>
-<p>Direction: received or sent.<code>Required</code> <code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></p>
-<p>Type: <strong><a href="General.Contacts.PartyCommunications.html#direction">Direction</a></strong><br>
+<p>Direction: received or sent.<code>Default(&amp;quot;I&amp;quot;)</code> <code>Filter(eq)</code></p>
+<p>Type: <strong><a href="General.Contacts.PartyCommunications.html#direction">Direction</a> <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
 Allowed values for the <code>Direction</code>(General.Contacts.PartyCommunications.md#direction) data attribute<br>
 Allowed Values (General.Contacts.PartyCommunicationsRepository.Direction Enum Members)</p>
@@ -331,40 +358,12 @@ Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="subchannel">SubChannel</h3>
-<p>Specific application source.<code>Required</code> <code>Default(&amp;quot;OUT&amp;quot;)</code> <code>Filter(eq)</code></p>
-<p>Type: <strong><a href="General.Contacts.PartyCommunications.html#subchannel">SubChannel</a></strong><br>
+<p>Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.<code>Filter(eq;like)</code></p>
+<p>Type: <strong>string (254) <strong>nullable</strong></strong><br>
 Category: <strong>System</strong><br>
-Allowed values for the <code>SubChannel</code>(General.Contacts.PartyCommunications.md#subchannel) data attribute<br>
-Allowed Values (General.Contacts.PartyCommunicationsRepository.SubChannel Enum Members)</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Outlook</td>
-<td>Outlook value. Stored as 'OUT'. <br> Database Value: 'OUT' <br> Model Value: 0 <br> Domain API Value: 'Outlook'</td>
-</tr>
-<tr>
-<td>WhatsApp</td>
-<td>WhatsApp value. Stored as 'WHA'. <br> Database Value: 'WHA' <br> Model Value: 1 <br> Domain API Value: 'WhatsApp'</td>
-</tr>
-<tr>
-<td>Viber</td>
-<td>Viber value. Stored as 'VBR'. <br> Database Value: 'VBR' <br> Model Value: 2 <br> Domain API Value: 'Viber'</td>
-</tr>
-<tr>
-<td>Internal</td>
-<td>Internal value. Stored as 'INT'. <br> Database Value: 'INT' <br> Model Value: 3 <br> Domain API Value: 'Internal'</td>
-</tr>
-</tbody>
-</table>
-<p>Supported Filters: <strong>Equals</strong><br>
+Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>False</strong><br>
-Default Value: <strong>Outlook</strong><br>
+Maximum Length: <strong>254</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="subject">Subject</h3>
 <p>Short title of the message.<code>Filter(like)</code></p>
@@ -373,13 +372,6 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Like</strong><br>
 Supports Order By: <strong>False</strong><br>
 Maximum Length: <strong>254</strong><br>
-Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="timelastupdate">TimeLastUpdate</h3>
-<p>When it was last updated/synced in ERP.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
-<p>Type: <strong>datetime</strong><br>
-Category: <strong>System</strong><br>
-Supported Filters: <strong>Equals, GreaterThanOrLessThan</strong><br>
-Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="timeoccurredat">TimeOccurredAt</h3>
 <p>When the message happened.<code>Required</code> <code>Filter(eq;ge;le)</code></p>
@@ -431,15 +423,23 @@ Supported Filters: <strong>NotFilterable</strong><br>
 Supports Order By: ****<br>
 Show in UI: <strong>HiddenByDefault</strong></p>
 <h2 id="reference-details">Reference Details</h2>
+<h3 id="creationuser">CreationUser</h3>
+<p>The login name of the user, who created the document.</p>
+<p>Type: <strong><a href="Systems.Security.Users.html">Users</a></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<p>Back-End Default Expression:<br>
+<code>obj.Transaction.CurrentUser.ToSecurityUser( )</code></p>
 <h3 id="dataobject">DataObject</h3>
 <p>Which object this communication is about.</p>
 <p>Type: <strong><a href="Systems.Core.ExtensibleDataObjects.html">ExtensibleDataObjects</a></strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
-<h3 id="parentcommunicationlog">ParentCommunicationLog</h3>
-<p>Link to a previous communication (for reply/forward or sequence).</p>
-<p>Type: <strong><a href="General.Contacts.PartyCommunications.html">PartyCommunications</a> (nullable)</strong><br>
+<h3 id="document">Document</h3>
+<p>Reference to the related document</p>
+<p>Type: <strong><a href="General.Documents.Documents.html">Documents</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>

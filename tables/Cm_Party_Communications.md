@@ -11,23 +11,55 @@ Party Communications. Entity: Cm_Party_Communications (Introduced in version 26.
 
 | Name | Type | Description |
 | - | - | --- |
+|[Additional_Details_Json](#additional_details_json)|`nvarchar(max)` |For entering additional information|
 |[Channel](#channel)|`char(3)` Allowed: `EML`, `MSG`, `NOT`|Main channel of communication.|
 |[Communication_From](#communication_from)|`nvarchar(254)` |Who the message is from (email/phone/identifier).|
 |[Communication_To](#communication_to)|`nvarchar(254)` |Who the message is addressed to (main recipient)|
-|[Conversation_Id](#conversation_id)|`uniqueidentifier` |Conversation identifier to group messages into a single thread.|
+|[Conversation_Id](#conversation_id)|`uniqueidentifier` |Usually is entered by the supplier of the message|
+|[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|Date and time when the document was created.|
+|[Creation_User_Id](#creation_user_id)|`uniqueidentifier` Readonly|The login name of the user, who created the document.|
 |[Data_Object_Id](#data_object_id)|`uniqueidentifier` |Which object this communication is about.|
 |[Direction](#direction)|`char(1)` Allowed: `I`, `O`|Direction: received or sent.|
+|[Document_Id](#document_id)|`uniqueidentifier` |Reference to the related document|
 |[Message](#message)|`nvarchar(max)` |Full content of the message.|
-|[Parent_Communication_Log_Id](#parent_communication_log_id)|`uniqueidentifier` |Link to a previous communication (for reply/forward or sequence).|
 |[Party_Communication_Id](#party_communication_id)|`uniqueidentifier` `PK`|Unique identifier of communication message.|
 |[Party_Id](#party_id)|`uniqueidentifier` |Which partner this communication is about.|
 |[Row_Version](#row_version)|`timestamp` ||
-|[Sub_Channel](#sub_channel)|`char(3)` Allowed: `OUT`, `WHA`, `VBR`, `INT`|Specific application source.|
+|[Sub_Channel](#sub_channel)|`nvarchar(254)` |Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.|
 |[Subject](#subject)|`nvarchar(254)` |Short title of the message.|
-|[Time_Last_Update](#time_last_update)|`datetime` |When it was last updated/synced in ERP.|
 |[Time_Occurred_At](#time_occurred_at)|`datetime` |When the message happened.|
 
 ## Columns
+
+### Additional_Details_Json
+
+
+For entering additional information
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Channel
 
@@ -143,7 +175,7 @@ Who the message is addressed to (main recipient)
 ### Conversation_Id
 
 
-Conversation identifier to group messages into a single thread.
+Usually is entered by the supplier of the message
 
 | Property | Value |
 | - | - |
@@ -175,6 +207,79 @@ Conversation identifier to group messages into a single thread.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Creation_Time_Utc
+
+
+Date and time when the document was created.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|CurrentDateTimeUtc|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Creation_Time_Utc - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
+### Creation_User_Id
+
+
+The login name of the user, who created the document.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Creation_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Data_Object_Id
 
@@ -238,7 +343,7 @@ Direction: received or sent.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|char(1)|
+|Type|char(1) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -248,7 +353,44 @@ Direction: received or sent.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
+
+### Document_Id
+
+
+Reference to the related document
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Document_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Message
 
@@ -275,7 +417,7 @@ Full content of the message.
 |Summary Type|None|
 |Supports EQUALS_IN|no|
 |Type|nvarchar(max) (Allows NULL)|
-|UI Memo Editor|no|
+|UI Memo Editor|yes|
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
@@ -285,43 +427,6 @@ Full content of the message.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
-
-### Parent_Communication_Log_Id
-
-
-Link to a previous communication (for reply/forward or sequence).
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|12|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Cm_Party_Communications](Cm_Party_Communications.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Parent_Communication_Log_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Party_Communication_Id
 
@@ -427,18 +532,17 @@ Which partner this communication is about.
 ### Sub_Channel
 
 
-Specific application source.
+Usually populated automatically when synchronized with external systems and indicates the specific source, e.g. Outlook, Viber, WhatsApp.
 
 | Property | Value |
 | - | - |
-|Allowed Values|`OUT`, `WHA`, `VBR`, `INT`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|OUT|
+|Default Value|None|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|3|
+|Max Length|254|
 |Order|6|
 |Ownership Reference|no|
 |Pasword|no|
@@ -449,7 +553,7 @@ Specific application source.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|char(3)|
+|Type|nvarchar(254) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -459,7 +563,8 @@ Specific application source.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Subject
 
@@ -496,43 +601,6 @@ Short title of the message.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
-
-### Time_Last_Update
-
-
-When it was last updated/synced in ERP.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|9|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|no|
-|Type|datetime|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Time_Last_Update - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
-|GreaterThanOrLessThan|None|no|no|
 
 ### Time_Occurred_At
 
