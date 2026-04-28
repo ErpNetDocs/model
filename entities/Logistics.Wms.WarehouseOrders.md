@@ -52,6 +52,7 @@ Aggregate Tree
 | [AdjustmentTime](Logistics.Wms.WarehouseOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentUser](Logistics.Wms.WarehouseOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CompleteTime](Logistics.Wms.WarehouseOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [CompletionPercent](Logistics.Wms.WarehouseOrders.md#completionpercent) | decimal (0, 0) | Completion percent of the warehouse order. [ReadOnly] |
 | [CreationTime](Logistics.Wms.WarehouseOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CreationUser](Logistics.Wms.WarehouseOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [DocumentDate](Logistics.Wms.WarehouseOrders.md#documentdate) | date | The date on which the document was issued. `Required` `Default(Today)` `Filter(eq;ge;le)` `ORD` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -181,6 +182,16 @@ Category: **System**
 Supported Filters: **GreaterThanOrLessThan**  
 Supports Order By: **False**  
 Show in UI: **HiddenByDefault**  
+
+### CompletionPercent
+
+Completion percent of the warehouse order. [ReadOnly]
+
+Type: **decimal (0, 0)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **ShownByDefault**  
 
 ### CreationTime
 

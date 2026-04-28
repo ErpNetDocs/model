@@ -164,6 +164,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>Date and time when the document was completed (State set to Completed). <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseOrders.html#completionpercent">CompletionPercent</a></td>
+<td>decimal (0, 0)</td>
+<td>Completion percent of the warehouse order. [ReadOnly]</td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseOrders.html#creationtime">CreationTime</a></td>
 <td>datetime</td>
 <td>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</td>
@@ -525,6 +530,13 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>GreaterThanOrLessThan</strong><br>
 Supports Order By: <strong>False</strong><br>
 Show in UI: <strong>HiddenByDefault</strong></p>
+<h3 id="completionpercent">CompletionPercent</h3>
+<p>Completion percent of the warehouse order. [ReadOnly]</p>
+<p>Type: <strong>decimal (0, 0)</strong><br>
+Category: <strong>Calculated Attributes</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: ****<br>
+Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="creationtime">CreationTime</h3>
 <p>Date/Time when the document was created. <code>Required</code> <code>Default(Now)</code> <code>Filter(ge;le)</code> <code>ReadOnly</code> (Inherited from <a href="General.Documents.Documents.html">Documents</a>)</p>
 <p>Type: <strong>datetime</strong><br>

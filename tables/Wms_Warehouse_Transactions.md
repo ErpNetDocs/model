@@ -787,6 +787,7 @@ The order line which created this transaction. NULL when this transaction was no
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 ### Warehouse_Transaction_Id
 

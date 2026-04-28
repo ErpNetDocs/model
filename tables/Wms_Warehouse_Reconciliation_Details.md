@@ -23,6 +23,7 @@ Contains detailed warehouse reconciliation data per location and product, includ
 |[Line_No](#line_no)|`int` |Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` Readonly|The logistic unit in which the product is stored on this location. Empty when the quantity is not associated with a logistic unit.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` Readonly|Batch/lot of the product, when applicable.|
+|[Notes](#notes)|`nvarchar(max)` |Notes for this Warehouse Reconciliation Detail.|
 |[Product_Id](#product_id)|`uniqueidentifier` Readonly|The product stored at the specified warehouse location.|
 |[Quantity_Unit_Id](#quantity_unit_id)|`uniqueidentifier` Readonly|The product’s default measurement unit used to express Snapshot Quantity and Counted Quantity.|
 |[Review_Status](#review_status)|`char(3)` Allowed: `CRT`, `STR`, `FIN`, `APR`, `RCN`, `CNL`|Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.|
@@ -34,6 +35,7 @@ Contains detailed warehouse reconciliation data per location and product, includ
 |[Snapshot_Quantity_Base](#snapshot_quantity_base)|`decimal(12, 3)` Readonly|The expected quantity of the product at the time the availability snapshot is created, in the base measurement unit.|
 |[Variant_Id](#variant_id)|`uniqueidentifier` Readonly|Product variant (e.g. size, color, configuration), when tracked.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` Readonly|The warehouse location included in the reconciliation.|
+|[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` Readonly|Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail.|
 |[Warehouse_Reconciliation_Detail_Id](#warehouse_reconciliation_detail_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Reconciliation_Id](#warehouse_reconciliation_id)|`uniqueidentifier` Readonly|The source document to which this detail refers.|
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` Readonly|The warehouse zone to which the location belongs.|
@@ -297,6 +299,36 @@ Batch/lot of the product, when applicable.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Notes
+
+
+Notes for this Warehouse Reconciliation Detail.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Product_Id
 
@@ -693,6 +725,43 @@ The warehouse location included in the reconciliation.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Warehouse_Order_Id
+
+
+Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Wms_Warehouse_Orders](Wms_Warehouse_Orders.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Warehouse_Order_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Warehouse_Reconciliation_Detail_Id
 

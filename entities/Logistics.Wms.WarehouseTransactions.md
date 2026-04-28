@@ -361,7 +361,7 @@ The order line which created this transaction. NULL when this transaction was no
 Type: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 Indexed: **True**  
 Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
+Supported Filters: **Equals, Like, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
 

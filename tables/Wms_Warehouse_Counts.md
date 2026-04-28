@@ -865,5 +865,6 @@ Indicates for which Warehouse Order line this count entry was recorded.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 

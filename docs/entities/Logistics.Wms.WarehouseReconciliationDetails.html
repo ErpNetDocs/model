@@ -140,6 +140,11 @@ Aggregate Root:<br>
 <td>Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.<code>Filter(eq)</code> <code>Introduced in version 26.2.2.10</code></td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#notes">Notes</a></td>
+<td>string (max) <strong>nullable</strong></td>
+<td>Notes for this Warehouse Reconciliation Detail.<code>Introduced in version 27.1.0.1</code></td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#reviewstatus">ReviewStatus</a></td>
 <td>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.<code>Required</code> <code>Default(&amp;quot;CRT&amp;quot;)</code> <code>Filter(multi eq)</code></td>
@@ -217,6 +222,11 @@ Aggregate Root:<br>
 <td>The warehouse location included in the reconciliation.</td>
 </tr>
 <tr>
+<td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#warehouseorder">WarehouseOrder</a></td>
+<td><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a> (nullable)</td>
+<td>Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail.</td>
+</tr>
+<tr>
 <td><a href="Logistics.Wms.WarehouseReconciliationDetails.html#warehousereconciliation">WarehouseReconciliation</a></td>
 <td><a href="Logistics.Wms.WarehouseReconciliations.html">WarehouseReconciliations</a></td>
 <td>The source document to which this detail refers.</td>
@@ -283,6 +293,14 @@ Show in UI: <strong>ShownByDefault</strong></p>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals</strong><br>
 Supports Order By: <strong>False</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="notes">Notes</h3>
+<p>Notes for this Warehouse Reconciliation Detail.<code>Introduced in version 27.1.0.1</code></p>
+<p>Type: <strong>string (max) <strong>nullable</strong></strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>NotFilterable</strong><br>
+Supports Order By: <strong>False</strong><br>
+Maximum Length: <strong>2147483647</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="reviewstatus">ReviewStatus</h3>
 <p>Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.<code>Required</code> <code>Default(&amp;quot;CRT&amp;quot;)</code> <code>Filter(multi eq)</code></p>
@@ -425,6 +443,12 @@ Show in UI: <strong>ShownByDefault</strong></p>
 <p>The warehouse location included in the reconciliation.</p>
 <p>Type: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
 Indexed: <strong>True</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals, EqualsIn</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="warehouseorder">WarehouseOrder</h3>
+<p>Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail.</p>
+<p>Type: <strong><a href="Logistics.Wms.WarehouseOrders.html">WarehouseOrders</a> (nullable)</strong><br>
 Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, EqualsIn</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>

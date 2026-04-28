@@ -337,7 +337,7 @@ Indicates for which Warehouse Order line this count entry was recorded.
 
 Type: **[WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md) (nullable)**  
 Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
+Supported Filters: **Equals, Like, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
 

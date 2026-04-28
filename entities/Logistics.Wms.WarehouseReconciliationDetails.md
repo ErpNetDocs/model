@@ -40,6 +40,7 @@ Aggregate Root:
 | [CountedQuantityBase](Logistics.Wms.WarehouseReconciliationDetails.md#countedquantitybase) | decimal (12, 3) __nullable__ | The physically counted quantity recorded during the counting process in the base measurement unit. The value is filled after a user action (e.g. merging results) and can be edited before completing the reconciliation.`Filter(eq;ge;le)` |
 | [LastAggregatedAt](Logistics.Wms.WarehouseReconciliationDetails.md#lastaggregatedat) | datetime __nullable__ | The date and time when the counted quantities were last aggregated into this line.`Filter(eq;ge;le)` `ReadOnly` |
 | [LineNo](Logistics.Wms.WarehouseReconciliationDetails.md#lineno) | int32 __nullable__ | Consecutive number of the detail, used only within the Details table. Does not correspond to the document line number.`Filter(eq)` `Introduced in version 26.2.2.10` |
+| [Notes](Logistics.Wms.WarehouseReconciliationDetails.md#notes) | string (max) __nullable__ | Notes for this Warehouse Reconciliation Detail.`Introduced in version 27.1.0.1` |
 | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | [ReviewStatus](Logistics.Wms.WarehouseReconciliationDetails.md#reviewstatus) | Indicates the current review state of the reconciliation detail line and how it should be processed in the inventory workflow.`Required` `Default(&quot;CRT&quot;)` `Filter(multi eq)` |
 | [Session](Logistics.Wms.WarehouseReconciliationDetails.md#session) | int32 | The counting session in which this result was recorded.`Required` `Filter(eq)` `ReadOnly` |
 | [SnapshotDateTime](Logistics.Wms.WarehouseReconciliationDetails.md#snapshotdatetime) | datetime | The date and time when the availability snapshot for this line was created.`Required` `Filter(eq;ge;le)` `ReadOnly` |
@@ -58,6 +59,7 @@ Aggregate Root:
 | [SerialNumber](Logistics.Wms.WarehouseReconciliationDetails.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product, when serialized tracking is enabled. |
 | [Variant](Logistics.Wms.WarehouseReconciliationDetails.md#variant) | [ProductVariants](General.Products.ProductVariants.md) (nullable) | Product variant (e.g. size, color, configuration), when tracked. |
 | [WarehouseLocation](Logistics.Wms.WarehouseReconciliationDetails.md#warehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) | The warehouse location included in the reconciliation. |
+| [WarehouseOrder](Logistics.Wms.WarehouseReconciliationDetails.md#warehouseorder) | [WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable) | Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail. |
 | [WarehouseReconciliation](Logistics.Wms.WarehouseReconciliationDetails.md#warehousereconciliation) | [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md) | The source document to which this detail refers. |
 | [WarehouseZone](Logistics.Wms.WarehouseReconciliationDetails.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The warehouse zone to which the location belongs. |
 
@@ -111,6 +113,17 @@ Type: **int32 __nullable__**
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Notes
+
+Notes for this Warehouse Reconciliation Detail.`Introduced in version 27.1.0.1`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### ReviewStatus
@@ -278,6 +291,15 @@ The warehouse location included in the reconciliation.
 
 Type: **[WarehouseLocations](Logistics.Wms.WarehouseLocations.md)**  
 Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### WarehouseOrder
+
+Warehouse Order associated with this reconciliation detail. The field stores the latest generated counting order for this detail.
+
+Type: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
