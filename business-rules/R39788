@@ -1,0 +1,28 @@
+---
+erp.type: business-rule
+erp.entity: Logistics.Wms.WarehouseOrders
+---
+
+# R39788 WarehouseOrder - Void Related Warehouse Counts on Document Voiding
+
+| Name | Value |
+| ---- | ----- |
+| Code | R39788 |
+| Entity | Logistics.Wms.WarehouseOrders |
+| Name | VoidRelatedWarehouseCountsOnDocumentVoiding |
+| Attribute | Void, VoidReason |
+| Layer | Back-End                                        |
+| Events | Voiding |
+| Priority | Normal |
+| Modify | YES |
+| Applicable Legislations | ALL // no condition needed |
+| Action | On Voiding <br>​ <br>
+For each WarehouseCount related to the current document: <br>
+- Set Void = True <br>
+- Set VoidTime = Now <br>
+- Set VoidUser = Document.VoidUser <br>
+- Set VoidReason = Document.VoidReason |
+| Description | When document state is changed to Planned, the rules validates that the lines does not contain Warehouse Locations from another Warehouse.|
+| Message | -|
+| Introduced In Version | Introduced: v.26.2 |
+| Revocable | NO |
