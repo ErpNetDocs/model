@@ -44,6 +44,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CurrencySign](General.Currencies.Currencies.md#currencysign) | string (4) | The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.`Required` `Filter(eq;like)` `ORD` |
+| [IsActive](General.Currencies.Currencies.md#isactive) | boolean | Indicates whether the current Currency  is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 27.1.0.8` |
 | [Name](General.Currencies.Currencies.md#name) | string (50) | The name of this Currency. `Required` `Filter(like)` |
 | [ShowOrder](General.Currencies.Currencies.md#showorder) | int32 | The order in which to show the currency in combo boxes, etc.`Required` `Default(0)` |
 
@@ -72,6 +73,17 @@ Category: **System**
 Supported Filters: **Equals, Like**  
 Supports Order By: **True**  
 Maximum Length: **4**  
+Show in UI: **ShownByDefault**  
+
+### IsActive
+
+Indicates whether the current Currency  is active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 27.1.0.8`
+
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
 Show in UI: **ShownByDefault**  
 
 ### Name

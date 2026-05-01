@@ -14,6 +14,7 @@ List of user-defined currencies. Entity: Gen_Currencies
 |[Currency_Id](#currency_id)|`uniqueidentifier` `PK`||
 |[Currency_Name](#currency_name)|`nvarchar(50)` ||
 |[Currency_Sign](#currency_sign)|`nvarchar(4)` |The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.|
+|[Is_Active](#is_active)|`bit` |Indicates whether the current Currency  is active.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Show_Order](#show_order)|`int` |The order in which to show the currency in combo boxes, etc.|
 
@@ -30,7 +31,7 @@ List of user-defined currencies. Entity: Gen_Currencies
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -64,7 +65,7 @@ List of user-defined currencies. Entity: Gen_Currencies
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|50|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -100,7 +101,7 @@ The international currency designator, as defined in ISO 4217. For example euro 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|4|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -123,6 +124,42 @@ The international currency designator, as defined in ISO 4217. For example euro 
 |Equals|`NULL`|no|yes|
 |Like|None|no|no|
 
+### Is_Active
+
+
+Indicates whether the current Currency  is active.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|True|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|5|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Is_Active - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -134,7 +171,7 @@ The international currency designator, as defined in ISO 4217. For example euro 
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -164,7 +201,7 @@ The order in which to show the currency in combo boxes, etc.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

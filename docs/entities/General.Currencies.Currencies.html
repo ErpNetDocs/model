@@ -130,6 +130,11 @@ Max level:  4 - Track object attribute and blob changes</p>
 <td>The international currency designator, as defined in ISO 4217. For example euro is represented as 'EUR'.<code>Required</code> <code>Filter(eq;like)</code> <code>ORD</code></td>
 </tr>
 <tr>
+<td><a href="General.Currencies.Currencies.html#isactive">IsActive</a></td>
+<td>boolean</td>
+<td>Indicates whether the current Currency  is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 27.1.0.8</code></td>
+</tr>
+<tr>
 <td><a href="General.Currencies.Currencies.html#name">Name</a></td>
 <td>string (50)</td>
 <td>The name of this Currency. <code>Required</code> <code>Filter(like)</code></td>
@@ -192,6 +197,14 @@ Category: <strong>System</strong><br>
 Supported Filters: <strong>Equals, Like</strong><br>
 Supports Order By: <strong>True</strong><br>
 Maximum Length: <strong>4</strong><br>
+Show in UI: <strong>ShownByDefault</strong></p>
+<h3 id="isactive">IsActive</h3>
+<p>Indicates whether the current Currency  is active.<code>Required</code> <code>Default(true)</code> <code>Filter(eq)</code> <code>Introduced in version 27.1.0.8</code></p>
+<p>Type: <strong>boolean</strong><br>
+Category: <strong>System</strong><br>
+Supported Filters: <strong>Equals</strong><br>
+Supports Order By: <strong>False</strong><br>
+Default Value: <strong>True</strong><br>
 Show in UI: <strong>ShownByDefault</strong></p>
 <h3 id="name">Name</h3>
 <p>The name of this Currency. <code>Required</code> <code>Filter(like)</code></p>
