@@ -29,7 +29,7 @@ Captures raw physical count entries recorded in the warehouse operations before 
 |[Void](#void)|`bit` |Indicates that the count record has been voided and should no longer be considered in the aggregation of counted quantities. Used when a counting entry was made by mistake or needs to be excluded from the reconciliation.|
 |[Void_Reason](#void_reason)|`nvarchar(254)` |Specifies the reason for voiding the count record. Used to document why the counting entry is excluded from the reconciliation.|
 |[Void_Time](#void_time)|`datetime` Readonly|The date and time when the count record was voided. Filled automatically by the system.|
-|[Void_User_Id](#void_user_id)|`uniqueidentifier` Readonly|The user who voided the count record. Filled automatically by the system.|
+|[Void_User](#void_user)|`nvarchar(64)` |The user who voided the count record. Filled automatically by the system.|
 |[Warehouse_Count_Id](#warehouse_count_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` Readonly|The warehouse location where the counting occurred.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` Readonly|Warehouse order which initiated the counting.|
@@ -684,7 +684,7 @@ The date and time when the count record was voided. Filled automatically by the 
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
 
-### Void_User_Id
+### Void_User
 
 
 The user who voided the count record. Filled automatically by the system.
@@ -697,29 +697,22 @@ The user who voided the count record. Filled automatically by the system.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|-1|
+|Max Length|64|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|yes|
-|Referenced Table|[Sec_Users](Sec_Users.md)|
+|Readonly|no|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
-|User Login|no|
+|User Login|yes|
 |Visible|yes|
-
-#### Void_User_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Warehouse_Count_Id
 

@@ -22,7 +22,7 @@ Case: 35911
 
 
 ## Visualization
-Display Format: {Activity.EntityName}  
+Display Format: {ParticipantPerson.PartyName:T}  
 Search Members: Activity.EntityName  
 Name Member: Activity.EntityName  
 Category:  Definitions  

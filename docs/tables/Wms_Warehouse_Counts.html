@@ -191,8 +191,8 @@
 <td>The date and time when the count record was voided. Filled automatically by the system.</td>
 </tr>
 <tr>
-<td><a href="#void_user_id">Void_User_Id</a></td>
-<td><code>uniqueidentifier</code> Readonly</td>
+<td><a href="#void_user">Void_User</a></td>
+<td><code>nvarchar(64)</code></td>
 <td>The user who voided the count record. Filled automatically by the system.</td>
 </tr>
 <tr>
@@ -2389,7 +2389,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="void_user_id">Void_User_Id</h3>
+<h3 id="void_user">Void_User</h3>
 <p>The user who voided the count record. Filled automatically by the system.</p>
 <table>
 <thead>
@@ -2425,7 +2425,7 @@
 </tr>
 <tr>
 <td>Max Length</td>
-<td>-1</td>
+<td>64</td>
 </tr>
 <tr>
 <td>Order</td>
@@ -2449,11 +2449,7 @@
 </tr>
 <tr>
 <td>Readonly</td>
-<td>yes</td>
-</tr>
-<tr>
-<td>Referenced Table</td>
-<td><a href="Sec_Users.html">Sec_Users</a></td>
+<td>no</td>
 </tr>
 <tr>
 <td>RTF</td>
@@ -2469,11 +2465,11 @@
 </tr>
 <tr>
 <td>Supports EQUALS_IN</td>
-<td>yes</td>
+<td>no</td>
 </tr>
 <tr>
 <td>Type</td>
-<td>uniqueidentifier (Allows NULL)</td>
+<td>nvarchar(64) (Allows NULL)</td>
 </tr>
 <tr>
 <td>UI Memo Editor</td>
@@ -2485,30 +2481,11 @@
 </tr>
 <tr>
 <td>User Login</td>
-<td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>Visible</td>
 <td>yes</td>
-</tr>
-</tbody>
-</table>
-<h4 id="void_user_id---supported-filters">Void_User_Id - Supported Filters</h4>
-<table>
-<thead>
-<tr>
-<th>Filter Type</th>
-<th>Default</th>
-<th>Include Nulls</th>
-<th>Hidden by Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Equals</td>
-<td><code>NULL</code></td>
-<td>yes</td>
-<td>no</td>
 </tr>
 </tbody>
 </table>
