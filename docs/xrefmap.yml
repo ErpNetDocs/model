@@ -946,9 +946,6 @@ references:
 - uid: General.Currencies.CurrencyDirectoryLines
   name: General.Currencies.CurrencyDirectoryLines
   href: entities/General.Currencies.CurrencyDirectoryLines.html
-- uid: General.DocumentAmountReferencedDocuments
-  name: General.DocumentAmountReferencedDocuments Entity
-  href: entities/General.DocumentAmountReferencedDocuments.html
 - uid: General.Documents
   name: General.Documents Namespace
   href: entities/General.Documents.html
@@ -1411,9 +1408,6 @@ references:
 - uid: Logistics.Wms.WarehouseAvailability
   name: Logistics.Wms.WarehouseAvailability (View)
   href: entities/Logistics.Wms.WarehouseAvailability.html
-- uid: Logistics.Wms.WarehouseAvailabilityView
-  name: Logistics.Wms.WarehouseAvailabilityView View
-  href: entities/Logistics.Wms.WarehouseAvailabilityView.html
 - uid: Logistics.Wms.WarehouseCounts
   name: Logistics.Wms.WarehouseCounts
   href: entities/Logistics.Wms.WarehouseCounts.html

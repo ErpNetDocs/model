@@ -255,6 +255,12 @@ Direction of status change. Positive when the new status is greater than the pre
 |User Login|no|
 |Visible|no|
 
+#### Status_Change_Direction - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### To_Email_Address_List
 
 

@@ -12,6 +12,15 @@ Repository: Logistics.Wms.WarehouseAvailability
 Introduced In Version: 21.1.1.35  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: Logistics.Wms.WarehouseAvailabilityView  
+New name: Logistics.Wms.WarehouseAvailability  
+Version: 25.1.3.30  
+Case: 36128  
+
+
+
 ## Visualization
 Display Format: {WarehouseId}: {WarehouseLocationId}  
 Search Members:   

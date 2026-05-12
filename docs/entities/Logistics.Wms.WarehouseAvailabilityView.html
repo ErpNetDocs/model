@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Logistics.Wms.WarehouseAvailabilityView View | ERP.net Domain Model </title>
+      <title>Logistics.Wms.WarehouseAvailabilityView | ERP.net Domain Model </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Logistics.Wms.WarehouseAvailabilityView View | ERP.net Domain Model ">
+      <meta name="title" content="Logistics.Wms.WarehouseAvailabilityView | ERP.net Domain Model ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -84,164 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="Logistics.Wms.WarehouseAvailabilityView">
-<h1 id="logisticswmswarehouseavailabilityview-view">Logistics.Wms.WarehouseAvailabilityView View</h1>
+        <article data-uid="">
+<h1 id="logisticswmswarehouseavailabilityview">Logistics.Wms.WarehouseAvailabilityView</h1>
 
-<p><strong>Namespace:</strong> <a href="Logistics.Wms.html">Logistics.Wms</a></p>
-<p>The availability of goods in the warehouse locations of the warehouse. Entity: Wms_Warehouse_Availability_Indexed_View (Introduced in version 21.1.1.35)</p>
-<h2 id="default-visualization">Default Visualization</h2>
-<p>Default Display Text Format:<br>
-<em>{WarehouseId}: {WarehouseLocationId}</em><br>
-Default Search Members:<br>
-__<br>
-Category:  <em>Views</em><br>
-Show in UI:  <em>ShownByDefault</em></p>
-<h2 id="aggregate">Aggregate</h2>
-<p>An <a href="https://docs.erp.net/tech/advanced/concepts/aggregates.html">aggregate</a> is a cluster of domain objects that can be treated as a single unit.</p>
-<p>Aggregate Tree</p>
-<ul>
-<li><a href="Logistics.Wms.WarehouseAvailabilityView.html">Logistics.Wms.WarehouseAvailabilityView</a></li>
-</ul>
-<h2 id="attributes">Attributes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#quantitybaseavailable">QuantityBaseAvailable</a></td>
-<td>decimal (38, 3)</td>
-<td>Currently available quantity in base measurement unit. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 22.1.5.25</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#standardquantityavailable">StandardQuantityAvailable</a></td>
-<td>decimal (38, 3)</td>
-<td>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 22.1.5.25</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="references">References</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#logisticunit">LogisticUnit</a></td>
-<td><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</td>
-<td>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Logistic_Unit_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#lot">Lot</a></td>
-<td><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</td>
-<td>The lot which was transacted. null when the transaction was not for a specific lot. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Lot_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#product">Product</a></td>
-<td><a href="General.Products.Products.html">Products</a></td>
-<td>The product, which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Product_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#productvariant">ProductVariant</a></td>
-<td><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</td>
-<td>The product variant, which was transacted. null when the transaction was not for a product variant. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Product_Variant_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#serialnumber">SerialNumber</a></td>
-<td><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</td>
-<td>The serial number which was transacted. null when the transaction was not for a specific serial number. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Serial_Number_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#warehouse">Warehouse</a></td>
-<td><a href="Logistics.Wms.Warehouses.html">Warehouses</a></td>
-<td>The warehouse in which the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Warehouse_Id</code></td>
-</tr>
-<tr>
-<td><a href="Logistics.Wms.WarehouseAvailabilityView.html#warehouselocation">WarehouseLocation</a></td>
-<td><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></td>
-<td>The warehouse location, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_&lt;br /&gt;Transactions_Table.Warehouse_Location_Id</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="attribute-details">Attribute Details</h2>
-<h3 id="quantitybaseavailable">QuantityBaseAvailable</h3>
-<p>Currently available quantity in base measurement unit. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 22.1.5.25</code></p>
-<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="standardquantityavailable">StandardQuantityAvailable</h3>
-<p>Currently available theoretical quantity according to the measurement dimensions of the product. It can be used to calculate the quantity available in fixed measurement units like pieces. <code>Required</code> <code>Filter(eq;ge;le)</code> <code>Introduced in version 22.1.5.25</code></p>
-<p><em>Type</em>: <strong>decimal (38, 3)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Supported Filters</em>: <strong>Equals, GreaterThanOrLessThan</strong><br>
-<em>Supports Order By</em>: <strong>False</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="reference-details">Reference Details</h2>
-<h3 id="logisticunit">LogisticUnit</h3>
-<p>Logistic unit, which was transacted. null when the transaction was not for a logistic unit. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Logistic_Unit_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Common.LogisticUnits.html">LogisticUnits</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Logistic_Unit_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="lot">Lot</h3>
-<p>The lot which was transacted. null when the transaction was not for a specific lot. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Lot_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.Lots.html">Lots</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Lot_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="product">Product</h3>
-<p>The product, which was transacted. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Product_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.Products.html">Products</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Product_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="productvariant">ProductVariant</h3>
-<p>The product variant, which was transacted. null when the transaction was not for a product variant. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Product_Variant_Id</code></p>
-<p><em>Type</em>: <strong><a href="General.Products.ProductVariants.html">ProductVariants</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Product_Variant_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="serialnumber">SerialNumber</h3>
-<p>The serial number which was transacted. null when the transaction was not for a specific serial number. <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Serial_Number_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Inventory.SerialNumbers.html">SerialNumbers</a> (nullable)</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Serial_Number_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="warehouse">Warehouse</h3>
-<p>The warehouse in which the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.Warehouses.html">Warehouses</a></strong><br>
-<em>Indexed</em>: <strong>True</strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Warehouse_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h3 id="warehouselocation">WarehouseLocation</h3>
-<p>The warehouse location, where the transaction occurred. <code>Required</code> <code>Filter(multi eq)</code> <code>Inherited from Wms_Warehouse_Transactions_Table.Warehouse_Location_Id</code></p>
-<p><em>Type</em>: <strong><a href="Logistics.Wms.WarehouseLocations.html">WarehouseLocations</a></strong><br>
-<em>Category</em>: <strong>System</strong><br>
-<em>Inherited From</em>: <strong>Wms_Warehouse_Transactions_Table.Warehouse_Location_Id</strong><br>
-<em>Supported Filters</em>: <strong>Equals, EqualsIn</strong><br>
-<em>Show in UI</em>: <strong>ShownByDefault</strong></p>
-<h2 id="api">API</h2>
-<p>Domain API Query:
-<a href="https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseAvailabilityView?$top=10">https://demodb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseAvailabilityView?$top=10</a></p>
-<p>Domain API Query Builder:
-<a href="https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseAvailabilityView?$top=10">https://demodb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseAvailabilityView?$top=10</a></p>
+<h2 id="renamed-entity-type">Renamed entity type</h2>
+<p>This entity type was renamed (in v.25).</p>
+<p>New name: <a href="Logistics.Wms.WarehouseAvailability.html">Logistics.Wms.WarehouseAvailability</a></p>
 
 </article>
 

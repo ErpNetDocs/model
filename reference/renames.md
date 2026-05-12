@@ -225,6 +225,11 @@ New name: **Regulatory.Vat**
 Version: **26.2.0.99**  
 Case: **39297**  
 
+Old name: **Logistics.Wms.WarehouseAvailabilityView**  
+New name: **Logistics.Wms.WarehouseAvailability**  
+Version: **25.1.3.30**  
+Case: **36128**  
+
 Old name: **Finance.Payments.OrderBalances**  
 New name: **Finance.Payments.PaymentBalances**  
 Version: **25.1.2.86**  
@@ -432,6 +437,11 @@ Case: **37169**
 
 Old name: **General.LinkTypes**  
 New name: **Systems.Documents.LinkTypes**  
+Version: **25.1.0.64**  
+Case: **37169**  
+
+Old name: **General.DocumentAmountReferencedDocuments**  
+New name: **General.Documents.DocumentAmountReferencedDocuments**  
 Version: **25.1.0.64**  
 Case: **37169**  
 

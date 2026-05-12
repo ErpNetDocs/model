@@ -12,6 +12,15 @@ Repository: General.Documents.DocumentAmountReferencedDocuments
 Base Table: Gen_Document_Amount_Referenced_Documents  
 API access:  ReadWrite  
 
+## Renames
+
+Old name: General.DocumentAmountReferencedDocuments  
+New name: General.Documents.DocumentAmountReferencedDocuments  
+Version: 25.1.0.64  
+Case: 37169  
+
+
+
 ## Visualization
 Display Format: {Id}. {DocumentAmount.Document.DocumentNo} {DocumentAmount.Document.DocumentType.TypeName:T}  
 Search Members: DocumentAmount.Document.DocumentNo  
