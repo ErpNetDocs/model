@@ -47,7 +47,7 @@ Aggregate Root:
 | [DocumentEvent](Systems.Documents.DocumentTypeNotifications.md#documentevent) | string (254) | The event which will trigger the notification`Required` `Default(&quot;StateChanging&quot;)` `Filter(eq)` |
 | [FilterXML](Systems.Documents.DocumentTypeNotifications.md#filterxml) | string (max) __nullable__ | Filtering condition for the document. Only documents which match the filter will trigger the event |
 | [StateBitMask](Systems.Documents.DocumentTypeNotifications.md#statebitmask) | int32 | The document states that will trigger the event`Required` `Default(0)` |
-| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` `Filter(eq)` |
+| [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | [StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection) | Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` `Filter(multi eq)` |
 | [ToEmailAddressList](Systems.Documents.DocumentTypeNotifications.md#toemailaddresslist) | string (2048) | List of E-mail addresses to be notified`Required` |
 
 ## References
@@ -105,7 +105,7 @@ Show in UI: **ShownByDefault**
 
 ### StatusChangeDirection
 
-Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` `Filter(eq)`
+Direction of status change. Positive when the new status is greater than the previous. Applicable values: Positive '+', Negative '-', No change '0', Any change '*'`Required` `Default(&quot;*&quot;)` `Filter(multi eq)`
 
 Type: **[StatusChangeDirection](Systems.Documents.DocumentTypeNotifications.md#statuschangedirection)**  
 Category: **System**  
@@ -119,7 +119,7 @@ Allowed Values (Systems.Documents.DocumentTypeNotificationsRepository.StatusChan
 | PositiveChange | PositiveChange value. Stored as '+'. <br /> Database Value: '+' <br /> Model Value: 2 <br /> Domain API Value: 'PositiveChange' |
 | NegativeChange | NegativeChange value. Stored as '-'. <br /> Database Value: '-' <br /> Model Value: 3 <br /> Domain API Value: 'NegativeChange' |
 
-Supported Filters: **Equals**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Default Value: **AnyChange**  
 Show in UI: **HiddenByDefault**  
