@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>R39819 WarehouseReconciliation - Check Valid Review Status | ERP.net Domain Model </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="R39819 WarehouseReconciliation - Check Valid Review Status | ERP.net Domain Model ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39819.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="r39819-warehousereconciliation---check-valid-review-status">R39819 WarehouseReconciliation - Check Valid Review Status</h1>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code</td>
+<td>R39819</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>Logistics.Wms.WarehouseReconciliations</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>CheckValidReviewStatus</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>WarehouseReconciliationDetails.ReviewStatus, WarehouseReconciliationDetails.CountedQuantity</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Back-End</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>ClientCommit</td>
+</tr>
+<tr>
+<td>Modify</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>For all Warehouse Reconciliation Details:<br><br> If (ReviewStatus != ReviewStatus.GetDatabaseValue())<br><br>If (ReviewStatus == Created)<br>Validate that:<br>ReviewStatus.GetDatabaseValue() = Created<br><br>If (ReviewStatus == Started)<br>Validate that:<br>ReviewStatus.GetDatabaseValue() = Started<br><br>If (ReviewStatus == Finished)<br>Validate that:<br>ReviewStatus.GetDatabaseValue() = Finished<br><br>If (ReviewStatus == Recount)<br>No validation<br><br>If (ReviewStatus == Approved)<br>Validate that one of the following is true:<br>ReviewStatus.GetDatabaseValue() = Approved<br>ReviewStatus.GetDatabaseValue() = Finished<br>(ReviewStatus.GetDatabaseValue() = Recount) &amp;&amp; (CountedQuantity != Null)<br>(ReviewStatus.GetDatabaseValue() = Cancelled) &amp;&amp; (CountedQuantity != Null)<br><br>If (ReviewStatus == Cancelled)<br>Validate that:<br>ReviewStatus.GetDatabaseValue() != Started</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Validates the Review Status selected for all Warehouse Reconciliation Details at Client Commit.<br><br>The rule checks whether the newly selected Review Status is valid according to the current Review Status stored in the database for each detail line.<br><br>The validation is based on the current Review Status of each detail line.<br><br>Allowed transitions:<br>- Created -&gt; only Created<br>- Started -&gt; only Started<br>- Finished -&gt; only Finished<br>- Recount -&gt; always allowed<br>- Approved -&gt; allowed from Approved, Finished, Recount with CountedQuantity, or Cancelled with CountedQuantity<br>- Cancelled -&gt; allowed from any status except Started<br><br>If the selected Review Status is not valid for the current status of a detail line, the rule throws the corresponding error message for that line.</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>The current Review Status for line no. &quot;{LineNo}&quot; is Created. You cannot change the Review Status to &quot;{ReviewStatus}&quot;.<br><br>From the current status, the Review Status can only be changed to Recount or Cancelled.<br><br>The current Review Status for line no. &quot;{LineNo}&quot; is Started. This status means that there are active Warehouse Orders for counting this line, so the Review Status cannot be changed until the counting is finished.<br><br>From the current status, the Review Status can only be changed to Recount.<br><br><br><br>The current Review Status for line no. &quot;{LineNo}&quot; is Finished. You cannot change the Review Status to &quot;{ReviewStatus}&quot;.<br><br>From the current status, the Review Status can only be changed to Recount, Approved, or Cancelled.<br><br><br><br>The current Review Status for line no. &quot;{LineNo}&quot; is Recount. You cannot change the Review Status to &quot;{ReviewStatus}&quot;.<br><br>From the current status, the Review Status can only be changed to Approved or Cancelled. The Approved status can be set only if the Counted Quantity field has a value.<br><br><br><br>The current Review Status for line no. &quot;{LineNo}&quot; is Approved. You cannot change the Review Status to &quot;{ReviewStatus}&quot;.<br><br>From the current status, the Review Status can only be changed to Recount or Cancelled.<br><br><br><br>The current Review Status for line no. &quot;{LineNo}&quot; is Cancelled. You cannot change the Review Status to &quot;{ReviewStatus}&quot;.<br><br>From the current status, the Review Status can only be changed to Recount or Approved. The Approved status can be set only if the Counted Quantity field has a value.</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>Introduced in: 26.2</td>
+</tr>
+<tr>
+<td>Revocable</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<p><em>* For more information about the Business Rules Documentation Template and a short explanation of each column, see
+topic <a href="../templates/template-description-system-business-rules.html">System Business Rules</a>.</em></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ErpNetDocs/model/blob/master/business-rules/R39819.md/#L1" class="edit-link">Suggest improvement to this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
