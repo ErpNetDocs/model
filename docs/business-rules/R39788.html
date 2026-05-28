@@ -109,7 +109,7 @@
 </tr>
 <tr>
 <td>Attribute</td>
-<td>Void, VoidReason</td>
+<td>WarehouseCounts.Void, WarehouseCounts.VoidReason, WarehouseCounts.VoidTime, WarehouseCounts.VoidUser, WarehouseReconciliationDetails.WarehouseOrder, WarehouseReconciliationDetails.ReviewStatus</td>
 </tr>
 <tr>
 <td>Layer</td>
@@ -133,11 +133,11 @@
 </tr>
 <tr>
 <td>Action</td>
-<td>For each WarehouseCount related to the current document: <br> - Set Void = True <br> - Set VoidTime = Now <br> - Set VoidUser = CurrentUser <br> - Set VoidReason = The document has been voided</td>
+<td>For each WarehouseCount related to the current document: <br> - Set Void = True <br> - Set VoidTime = Now <br> - Set VoidUser = Document.VoidUser <br> - Set VoidReason = Document.VoidReason <br><br> For each WarehouseReconciliationDetail related to the current document: <br> - Set WarehouseOrder = Null <br> - If ReviewStatus &lt;&gt; Cancelled: <br>   - Set ReviewStatus = Recount <br> - Else: <br>   - Keep ReviewStatus = Cancelled</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>When a Warehouse Order is voided, the rule must automatically find all Warehouse Counts created for the current document and void them. For each of these Warehouse Counts, the rule must populate the voiding fields as follows: Void = True, VoidTime = Now, VoidUser = Document.VoidUser, and VoidReason = Document.VoidReason.</td>
+<td>When a Warehouse Order is voided, the rule must automatically find all Warehouse Counts created for the current document and void them. <br> For each of these Warehouse Counts, the rule must populate the voiding fields as follows: Void = True, VoidTime = Now, VoidUser = Document.VoidUser, and VoidReason = Document.VoidReason. <br><br> The rule must also find all Warehouse Reconciliation Details related to the current Warehouse Order and remove the link to it by setting WarehouseOrder = Null. <br> For each affected Warehouse Reconciliation Detail, if ReviewStatus is Cancelled, it must remain Cancelled; otherwise, ReviewStatus must be set to Recount.</td>
 </tr>
 <tr>
 <td>Message</td>
