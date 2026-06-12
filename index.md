@@ -12,7 +12,7 @@ It is accessible through the [Domain API](https://docs.erp.net/dev/topics/domain
 
 * The database-oriented base [**Table Model**](tables/).
 
-The Table model includes the full documentation of the tables in the database.
+The Table model includes the full documentation of the tables in the database...
 This model is used for quick dumping of database data for Business Intelligence and backup solutions.
 
 It is accessible through the [Table API](https://docs.erp.net/dev/topics/table-api/index.html).
