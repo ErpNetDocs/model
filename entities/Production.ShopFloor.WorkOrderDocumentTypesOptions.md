@@ -44,7 +44,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | [ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) | Specifies whether the document is for Production or Decomposition purposes.`Required` `Default(&quot;P&quot;)` `Filter(eq)` `Introduced in version 25.1.0.76` |
+| [ProductionMode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionmode) | [ProductionMode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionmode) | Specifies whether the document is for Production or Decomposition purposes.`Required` `Default(&quot;P&quot;)` `Filter(eq)` `Introduced in version 25.1.0.76` |
 
 ## References
 
@@ -65,14 +65,14 @@ Aggregate Root:
 
 ## Attribute Details
 
-### ProductionМode
+### ProductionMode
 
 Specifies whether the document is for Production or Decomposition purposes.`Required` `Default(&quot;P&quot;)` `Filter(eq)` `Introduced in version 25.1.0.76`
 
-Type: **[ProductionМode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode)**  
+Type: **[ProductionMode](Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionmode)**  
 Category: **System**  
-Allowed values for the `ProductionМode`(Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionмode) data attribute  
-Allowed Values (Production.ShopFloor.WorkOrderDocumentTypesOptionsRepository.ProductionМode Enum Members)  
+Allowed values for the `ProductionMode`(Production.ShopFloor.WorkOrderDocumentTypesOptions.md#productionmode) data attribute  
+Allowed Values (Production.ShopFloor.WorkOrderDocumentTypesOptionsRepository.ProductionMode Enum Members)  
 
 | Value | Description |
 | ---- | --- |
