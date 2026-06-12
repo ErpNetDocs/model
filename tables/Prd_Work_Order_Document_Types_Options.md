@@ -17,7 +17,7 @@ Options for user-defined Work Order document types. Entity: Prd_Work_Order_Docum
 | - | - | --- |
 |[Completing_Output_Order_Document_Type_Id](#completing_output_order_document_type_id)|`uniqueidentifier` |User-defined Completing Output Order document type|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |User-defined Work Order document type|
-|[Production_Мode](#production_мode)|`char(1)` Allowed: `P`, `D`, `S`|Specifies whether the document is for Production or Decomposition purposes.|
+|[Production_Mode](#production_mode)|`char(1)` Allowed: `P`, `D`, `S`|Specifies whether the document is for Production or Decomposition purposes.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Work_Order_Document_Types_Option_Id](#work_order_document_types_option_id)|`uniqueidentifier` `PK`|Option for user-defined Work Order document type|
 
@@ -97,7 +97,7 @@ User-defined Work Order document type
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
-### Production_Мode
+### Production_Mode
 
 
 Specifies whether the document is for Production or Decomposition purposes.
@@ -128,7 +128,7 @@ Specifies whether the document is for Production or Decomposition purposes.
 |User Login|no|
 |Visible|yes|
 
-#### Production_Мode - Supported Filters
+#### Production_Mode - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
