@@ -199,6 +199,7 @@ Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Member
 | ComponentReceive | ComponentReceive value. Stored as 'CRC'. <br /> Database Value: 'CRC' <br /> Model Value: 12 <br /> Domain API Value: 'ComponentReceive' |
 | Assemble | Assemble value. Stored as 'ASM'. <br /> Database Value: 'ASM' <br /> Model Value: 13 <br /> Domain API Value: 'Assemble' |
 | Disassemble | Disassemble value. Stored as 'DSM'. <br /> Database Value: 'DSM' <br /> Model Value: 14 <br /> Domain API Value: 'Disassemble' |
+| Reconciliation | Reconciliation value. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 15 <br /> Domain API Value: 'Reconciliation' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

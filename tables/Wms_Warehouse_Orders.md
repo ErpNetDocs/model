@@ -18,7 +18,7 @@ Contains order for internal warehouse operation or plan for execution of warehou
 |[Additional_Details_Json](#additional_details_json)|`nvarchar(max)` |Stores additional information for the Warehouse Order in JSON format. The field is intended as a universal container for process-specific data and is populated automatically by the system.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
 |[Row_Version](#row_version)|`timestamp` ||
-|[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
+|[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`, `RCN`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the order will be executed.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` |When set, denotes that the whole order is assigned to the specified worker.|
@@ -123,7 +123,7 @@ The type of the task (operation), which should be performed. REC=Receive; DIS=Di
 
 | Property | Value |
 | - | - |
-|Allowed Values|`REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`|
+|Allowed Values|`REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`, `RCN`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
