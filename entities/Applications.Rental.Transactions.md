@@ -401,6 +401,8 @@ Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Lines.Select( c => TransactionLinesRepository.TransactionTimestampAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### TransactionType
 
 Transaction type for the entire rent transaction. If the transaction contains actions of different type then this fields should by empty.`Filter(eq;like)`
@@ -421,6 +423,8 @@ Supported Filters: **Equals, Like**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Lines.Select( c => TransactionLinesRepository.TransactionTypeAttribute.GetUntypedValue( c, False)).Distinct( ).OnlyIfSingle( )`
 ### Void
 
 True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))
@@ -630,6 +634,8 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Lines.Select( c => c.LeaseContract).Distinct( ).OnlyIfSingle( )`
 ### LesseeCustomer
 
 Lessee for which this rent transaction contains actions. If the transaction contains actions for different lessees then this fields should by empty.
@@ -639,6 +645,8 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.Lines.Select( c => c.LesseeCustomer).Distinct( ).OnlyIfSingle( )`
 ### MasterDocument
 
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))

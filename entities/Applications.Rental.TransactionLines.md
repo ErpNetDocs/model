@@ -94,14 +94,19 @@ Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Back-End Default Expression:  
+`obj.RentTransaction.TransactionTimestamp`
+
+Front-End Recalc Expressions:  
+`obj.RentTransaction.TransactionTimestamp`
 ### TransactionType
 
 Transaction type for the current asset.`Required` `Filter(multi eq;like)`
 
 Type: **[TransactionType](Applications.Rental.TransactionLines.md#transactiontype)**  
 Category: **System**  
-Allowed values for the `TransactionType`(Applications.Rental.TransactionLines.md#transactiontype) data attribute  
-Allowed Values (Applications.Rental.TransactionLinesRepository.TransactionType Enum Members)  
+Allowed values for the `TransactionType`(Applications.Rental.Transactions.md#transactiontype) data attribute  
+Allowed Values (Applications.Rental.TransactionsRepository.TransactionType Enum Members)  
 
 | Value | Description |
 | ---- | --- |
@@ -114,6 +119,11 @@ Supported Filters: **Equals, Like, EqualsIn**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Back-End Default Expression:  
+`obj.RentTransaction.TransactionType`
+
+Front-End Recalc Expressions:  
+`obj.RentTransaction.TransactionType`
 ### Id
 
 Type: **guid**  
@@ -155,6 +165,11 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+Back-End Default Expression:  
+`obj.RentTransaction.LeaseContract`
+
+Front-End Recalc Expressions:  
+`obj.RentTransaction.LeaseContract`
 ### LesseeCustomer
 
 Lessee for the current asset.
@@ -164,6 +179,11 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+Back-End Default Expression:  
+`obj.RentTransaction.LesseeCustomer`
+
+Front-End Recalc Expressions:  
+`obj.RentTransaction.LesseeCustomer`
 ### RentalAsset
 
 Rent asset for which the current transaction is performed.

@@ -34,6 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AdditionalDataJson](Systems.Core.ExtensibleDataObjects.md#additionaldatajson) | string (max) __nullable__ | Extensible JSON object for storing this entity's custom or optional attributes.`Introduced in version 27.1.0.57` |
 | [CreationTimeUtc](Systems.Core.ExtensibleDataObjects.md#creationtimeutc) | datetime __nullable__ | The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.`Filter(ge;le)` `ORD` `Introduced in version 19.1` |
 | [DisplayName](Systems.Core.ExtensibleDataObjects.md#displayname) | string (128) __nullable__ | Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.`Filter(eq;like)` `Introduced in version 26.2.1.78` |
 | [EntityItemId](Systems.Core.ExtensibleDataObjects.md#entityitemid) | guid | The Id of the primary row to which the object is bound. `Required` `Filter(multi eq)` |
@@ -69,6 +70,17 @@ Aggregate Tree
 
 
 ## Attribute Details
+
+### AdditionalDataJson
+
+Extensible JSON object for storing this entity's custom or optional attributes.`Introduced in version 27.1.0.57`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
 
 ### CreationTimeUtc
 

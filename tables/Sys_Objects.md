@@ -11,6 +11,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 
 | Name | Type | Description |
 | - | - | --- |
+|[Additional_Data_Json](#additional_data_json)|`nvarchar(max)` |Extensible JSON object for storing this entity's custom or optional attributes.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the object represented by this system object . NULL means that it is unknown.|
 |[Display_Name](#display_name)|`nvarchar(128)` |Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.|
@@ -27,6 +28,36 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
+
+### Additional_Data_Json
+
+
+Extensible JSON object for storing this entity's custom or optional attributes.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Creation_Time_Utc
 
