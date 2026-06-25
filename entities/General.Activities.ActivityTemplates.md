@@ -64,6 +64,7 @@ Aggregate Tree
 | [ExternalId](General.Activities.ActivityTemplates.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
 | [ExternalSystem](General.Activities.ActivityTemplates.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
 | [AggregateLastUpdateTimeUtc](General.Activities.ActivityTemplates.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [AdditionalDataJson](General.Activities.ActivityTemplates.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. [Introduced in version 26.3.100.4] |
 | [DisplayText](General.Activities.ActivityTemplates.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
@@ -168,6 +169,16 @@ Show in UI: **HiddenByDefault**
 The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
 
 Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AdditionalDataJson
+
+Extensible JSON object for storing this entity&apos;s custom or optional attributes. [Introduced in version 26.3.100.4]
+
+Type: **string**  
 Category: **Extensible Data Object**  
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  
