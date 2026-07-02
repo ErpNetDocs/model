@@ -279,6 +279,7 @@ Consecutive number of the line within the depreciation plan
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+|Like|None|no|no|
 
 ### Plan_Depreciation_Value
 

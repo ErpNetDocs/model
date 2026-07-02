@@ -36,7 +36,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [DepreciationEndDate](Finance.Assets.DepreciationPlanLines.md#depreciationenddate) | datetime | End date of the depreciation plan for this asset.`Required` `Filter(ge;le)` |
 | [DepreciationStartDate](Finance.Assets.DepreciationPlanLines.md#depreciationstartdate) | datetime | Start date of the depreciation plan for this asset.`Required` `Filter(ge;le)` |
-| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan.`Required` `Filter(eq)` |
+| [LineNo](Finance.Assets.DepreciationPlanLines.md#lineno) | int32 | Consecutive number of the line within the depreciation plan.`Required` `Filter(eq;like)` |
 | [PlanDepreciationValue](Finance.Assets.DepreciationPlanLines.md#plandepreciationvalue) | [Amount (14, 2)](../data-types.md#amount) | The part of the total amount of the asset (in the currency of the asset), which is due for depreciation.`Currency: Asset.ValuationCurrency` `Required` `Default(0)` |
 
 ## References
@@ -89,11 +89,11 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Consecutive number of the line within the depreciation plan.`Required` `Filter(eq)`
+Consecutive number of the line within the depreciation plan.`Required` `Filter(eq;like)`
 
 Type: **int32**  
 Category: **System**  
-Supported Filters: **Equals**  
+Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
