@@ -339,6 +339,7 @@ The following table contains default system-specified tracking levels:
 | Logistics.Inventory.TransferOrderLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrders | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Logistics.Inventory.TransferOrdersOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Planning.DemandForecastDefinitions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Planning.DemandForecastItems | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Planning.RequisitionPlan | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Procurement.ProductSupply | 1 - Track last changes only | 4 - Track object attribute and blob changes |

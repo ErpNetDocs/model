@@ -823,6 +823,8 @@
   - name: Planning
     href: Logistics.Planning.md
     items:
+    - name: DemandForecastDefinitions
+      href: Logistics.Planning.DemandForecastDefinitions.md
     - name: DemandForecastItems
       href: Logistics.Planning.DemandForecastItems.md
     - name: RequisitionPlan

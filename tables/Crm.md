@@ -20,6 +20,7 @@
 * [Crm_Distribution_Channels](Crm_Distribution_Channels.md)
 * [Crm_Distributors](Crm_Distributors.md)
 * [Crm_Document_Type_Payment_Options](Crm_Document_Type_Payment_Options.md)
+* [Crm_Forecast_Definitions](Crm_Forecast_Definitions.md)
 * [Crm_Forecast_Items](Crm_Forecast_Items.md)
 * [Crm_Industries](Crm_Industries.md)
 * [Crm_Invoice_Lines](Crm_Invoice_Lines.md)
