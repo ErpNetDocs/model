@@ -262,6 +262,10 @@
   - name: Pos
     href: Crm.Pos.md
     items:
+    - name: BundleLines
+      href: Crm.Pos.BundleLines.md
+    - name: Bundles
+      href: Crm.Pos.Bundles.md
     - name: Devices
       href: Crm.Pos.Devices.md
     - name: ExecutionResources
@@ -272,6 +276,8 @@
       href: Crm.Pos.FiscalReceiptTemplates.md
     - name: LocationAreas
       href: Crm.Pos.LocationAreas.md
+    - name: LocationGroups
+      href: Crm.Pos.LocationGroups.md
     - name: LocationProducts
       href: Crm.Pos.LocationProducts.md
     - name: Locations

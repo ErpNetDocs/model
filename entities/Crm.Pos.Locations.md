@@ -45,6 +45,8 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [EnterpriseCompany](Crm.Pos.Locations.md#enterprisecompany) | [EnterpriseCompanies](General.EnterpriseCompanies.md) | The enterprise company of the POS location. |
 | [EnterpriseCompanyLocation](Crm.Pos.Locations.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location. |
+| [PosLocation](Crm.Pos.Locations.md#poslocation) | [Locations](Crm.Pos.Locations.md) | POS Location |
+| [PosLocationGroup](Crm.Pos.Locations.md#poslocationgroup) | [LocationGroups](Crm.Pos.LocationGroups.md) (nullable) | The POS location group that this location belongs to. Null indicates that the location doesn't belong to any location group. |
 | [Store](Crm.Pos.Locations.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store to which this POS location belongs. NULL means that there is no store associated with this specific POS location. |
 
 
@@ -52,7 +54,6 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.Locations.md#id) | guid |  |
 | [ObjectVersion](Crm.Pos.Locations.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
 | [ExternalId](Crm.Pos.Locations.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
 | [ExternalSystem](Crm.Pos.Locations.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
@@ -91,15 +92,6 @@ Supported Filters: **Equals, Like, EqualsIn**
 Supports Order By: **False**  
 Maximum Length: **16**  
 Show in UI: **ShownByDefault**  
-
-### Id
-
-Type: **guid**  
-Indexed: **True**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Default Value: **NewGuid**  
-Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 
@@ -179,6 +171,27 @@ Show in UI: **ShownByDefault**
 The enterprise company location of the POS location. Currently, only one POS location is allowed for each company location.
 
 Type: **[CompanyLocations](General.Contacts.CompanyLocations.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### PosLocation
+
+POS Location
+
+Type: **[Locations](Crm.Pos.Locations.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **HiddenByDefault**  
+
+### PosLocationGroup
+
+The POS location group that this location belongs to. Null indicates that the location doesn't belong to any location group.
+
+Type: **[LocationGroups](Crm.Pos.LocationGroups.md) (nullable)**  
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  

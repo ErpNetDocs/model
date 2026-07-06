@@ -15,6 +15,8 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 
 | Name | Type | Description |
 | - | - | --- |
+|[Bundle_Id](#bundle_id)|`uniqueidentifier` |Reference to the POS bundle this sales line originates from. Null indicates the line is not part of a bundle.|
+|[Bundle_Line_No](#bundle_line_no)|`int` |Ordinal number of the corresponding line within the source bundle. Null indicates the line is not part of a bundle.|
 |[Created_At](#created_at)|`datetime` |The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Created_By_Id](#created_by_id)|`uniqueidentifier` |The operator who created the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Discount_Amount](#discount_amount)|`decimal(12, 2)` |The amount of discount applied to the line. Positive for normal sales, negative for refunds.|
@@ -30,7 +32,7 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 |[Line_No](#line_no)|`int` |Line number within the POS sale.|
 |[Notes](#notes)|`nvarchar(64)` |Notes for the line.|
 |[Pos_Sale_Id](#pos_sale_id)|`uniqueidentifier` |The main POS sale.|
-|[Pos_Sale_Line_Id](#pos_sale_line_id)|`uniqueidentifier` `PK`||
+|[Pos_Sale_Line_Id](#pos_sale_line_id)|`uniqueidentifier` `PK`|POS Sale Line|
 |[Product_Id](#product_id)|`uniqueidentifier` |The sold product.|
 |[Quantity](#quantity)|`decimal(12, 3)` |The quantity sold (in Quantity Unit). Positive for normal sales, negative for returns.|
 |[Quantity_Base](#quantity_base)|`decimal(12, 3)` |Quantity sold in base measurement unit of the product. Positive for normal sales, negative for returns.|
@@ -43,6 +45,73 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 |[Voided_By_Id](#voided_by_id)|`uniqueidentifier` |Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 
 ## Columns
+
+### Bundle_Id
+
+
+Reference to the POS bundle this sales line originates from. Null indicates the line is not part of a bundle.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Bundles](Pos_Bundles.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Bundle_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Bundle_Line_No
+
+
+Ordinal number of the corresponding line within the source bundle. Null indicates the line is not part of a bundle.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Created_At
 
@@ -248,7 +317,6 @@ Which staff member last updated the execution status. Used only for businesses w
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
-|Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -596,6 +664,9 @@ The main POS sale.
 
 ### Pos_Sale_Line_Id
 
+
+POS Sale Line
+
 | Property | Value |
 | - | - |
 |Auto Complete|no|
@@ -611,6 +682,7 @@ The main POS sale.
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
+|Referenced Table|[Pos_Sale_Lines](Pos_Sale_Lines.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -962,7 +1034,6 @@ Operator who voided the line. Used only for businesses with real-time execution 
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
-|Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

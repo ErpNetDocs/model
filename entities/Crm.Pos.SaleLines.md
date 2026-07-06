@@ -36,9 +36,11 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [BundleLineNo](Crm.Pos.SaleLines.md#bundlelineno) | int32 __nullable__ | Ordinal number of the corresponding line within the source bundle. Null indicates the line is not part of a bundle.`Introduced in version 27.1.0.66` |
 | [CreatedAt](Crm.Pos.SaleLines.md#createdat) | datetime __nullable__ | The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Default(Now)` `Filter(eq;ge;le)` |
 | [DiscountAmount](Crm.Pos.SaleLines.md#discountamount) | [Amount (12, 2)](../data-types.md#amount) | The amount of discount applied to the line. Positive for normal sales, negative for refunds.`Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` |
 | [ExecutionChangedAt](Crm.Pos.SaleLines.md#executionchangedat) | datetime __nullable__ | Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq;ge;le)` |
+| [ExecutionChangedById](Crm.Pos.SaleLines.md#executionchangedbyid) | guid __nullable__ | Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
 | [ExecutionNote](Crm.Pos.SaleLines.md#executionnote) | string (64) __nullable__ | Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(like)` |
 | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) __nullable__ | Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq)` |
 | [IsVoided](Crm.Pos.SaleLines.md#isvoided) | boolean | Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Required` `Default(false)` `Filter(eq)` |
@@ -51,32 +53,42 @@ Aggregate Root:
 | [TaxGroup](Crm.Pos.SaleLines.md#taxgroup) | [TaxGroup](Crm.Pos.SaleLines.md#taxgroup) __nullable__ | The product's tax group at the time of the transaction, stored for historical accuracy and legislative compliance.`Introduced in version 26.2.2.5` |
 | [UnitPrice](Crm.Pos.SaleLines.md#unitprice) | [Amount (12, 2)](../data-types.md#amount) | Gross price (incl. VAT if applicable) at the time of the sale. Should always by a positive number.`Currency: PosSale.SaleCurrency` `Required` `Filter(eq)` |
 | [VoidedAt](Crm.Pos.SaleLines.md#voidedat) | datetime __nullable__ | Time of voiding the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq;ge;le)` |
+| [VoidedById](Crm.Pos.SaleLines.md#voidedbyid) | guid __nullable__ | Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [Bundle](Crm.Pos.SaleLines.md#bundle) | [Bundles](Crm.Pos.Bundles.md) (nullable) | Reference to the POS bundle this sales line originates from. Null indicates the line is not part of a bundle. |
 | [CreatedBy](Crm.Pos.SaleLines.md#createdby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who created the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 | [ExecutionArea](Crm.Pos.SaleLines.md#executionarea) | [LocationAreas](Crm.Pos.LocationAreas.md) (nullable) | Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
-| [ExecutionChangedBy](Crm.Pos.SaleLines.md#executionchangedby) | [Operators](Crm.Pos.Operators.md) (nullable) | Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 | [ExecutionResource](Crm.Pos.SaleLines.md#executionresource) | [ExecutionResources](Crm.Pos.ExecutionResources.md) (nullable) | The resource (table, room, etc.) used to execute the current line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 | [ExecutionStatus](Crm.Pos.SaleLines.md#executionstatus) | [ExecutionStatuses](Crm.Pos.ExecutionStatuses.md) (nullable) | User-configurable status of the process. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 | [PosSale](Crm.Pos.SaleLines.md#possale) | [Sales](Crm.Pos.Sales.md) | The main POS sale. |
+| [PosSaleLine](Crm.Pos.SaleLines.md#possaleline) | [SaleLines](Crm.Pos.SaleLines.md) | POS Sale Line |
 | [Product](Crm.Pos.SaleLines.md#product) | [Products](General.Products.Products.md) | The sold product. |
 | [QuantityUnit](Crm.Pos.SaleLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of Quantity. |
-| [VoidedBy](Crm.Pos.SaleLines.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Pos.SaleLines.md#id) | guid |  |
 | [ObjectVersion](Crm.Pos.SaleLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
 | [DisplayText](Crm.Pos.SaleLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details
+
+### BundleLineNo
+
+Ordinal number of the corresponding line within the source bundle. Null indicates the line is not part of a bundle.`Introduced in version 27.1.0.66`
+
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CreatedAt
 
@@ -108,6 +120,15 @@ Type: **datetime __nullable__**
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### ExecutionChangedById
+
+Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)`
+
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
 ### ExecutionNote
@@ -264,14 +285,14 @@ Supported Filters: **Equals, GreaterThanOrLessThan**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### Id
+### VoidedById
 
-Type: **guid**  
-Indexed: **True**  
+Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). `Filter(multi eq)`
+
+Type: **guid __nullable__**  
 Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Default Value: **NewGuid**  
-Show in UI: **HiddenByDefault**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### ObjectVersion
 
@@ -296,6 +317,15 @@ Show in UI: **HiddenByDefault**
 
 ## Reference Details
 
+### Bundle
+
+Reference to the POS bundle this sales line originates from. Null indicates the line is not part of a bundle.
+
+Type: **[Bundles](Crm.Pos.Bundles.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### CreatedBy
 
 The operator who created the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
@@ -310,15 +340,6 @@ Show in UI: **ShownByDefault**
 Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
 
 Type: **[LocationAreas](Crm.Pos.LocationAreas.md) (nullable)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### ExecutionChangedBy
-
-Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
-
-Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -352,6 +373,17 @@ Supported Filters: **Equals, EqualsIn**
 [Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
 Show in UI: **ShownByDefault**  
 
+### PosSaleLine
+
+POS Sale Line
+
+Type: **[SaleLines](Crm.Pos.SaleLines.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **HiddenByDefault**  
+
 ### Product
 
 The sold product.
@@ -366,15 +398,6 @@ Show in UI: **ShownByDefault**
 Measurement unit of Quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### VoidedBy
-
-Operator who voided the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
-
-Type: **[Operators](Crm.Pos.Operators.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

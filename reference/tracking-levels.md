@@ -113,11 +113,14 @@ The following table contains default system-specified tracking levels:
 | Crm.Marketing.ProductDistributionChannels | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.TargetGroupMembers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.TargetGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Pos.BundleLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Pos.Bundles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Devices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.ExecutionResources | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.ExecutionStatuses | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.FiscalReceiptTemplates | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.LocationAreas | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Pos.LocationGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.LocationProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Locations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.Operators | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

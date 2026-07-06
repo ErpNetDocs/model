@@ -946,6 +946,10 @@
 - name: Pos
   href: Pos.md
   items:
+  - name: Pos_Bundle_Lines
+    href: Pos_Bundle_Lines.md
+  - name: Pos_Bundles
+    href: Pos_Bundles.md
   - name: Pos_Devices
     href: Pos_Devices.md
   - name: Pos_Execution_Resources
@@ -956,6 +960,8 @@
     href: Pos_Fiscal_Receipt_Templates.md
   - name: Pos_Location_Areas
     href: Pos_Location_Areas.md
+  - name: Pos_Location_Groups
+    href: Pos_Location_Groups.md
   - name: Pos_Location_Products
     href: Pos_Location_Products.md
   - name: Pos_Locations
