@@ -65,6 +65,7 @@ Ordinal number of the line within the bundle.
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Autoincrement|1|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|

@@ -80,6 +80,11 @@ Supported Filters: **NotFilterable**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+Back-End Default Expression:  
+`( obj.PosBundle.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
+
+Front-End Recalc Expressions:  
+`( obj.PosBundle.Lines.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Quantity
 
 Quantity of the product included in the bundle.`Unit: QuantityUnit` `Required`
