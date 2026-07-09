@@ -226,7 +226,6 @@ POS Location
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
-|Referenced Table|[Pos_Locations](Pos_Locations.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
