@@ -38,11 +38,11 @@ Aggregate Root:
 | [ActionNo](Systems.Bpm.UserBusinessRuleActions.md#actionno) | int32 | Consecutive number of the action, unique within the business rule.`Required` |
 | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | [ActionType](Systems.Bpm.UserBusinessRuleActions.md#actiontype) | Specifies the type of action to perform.`Required` |
 | [Parameter1Type](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter1type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. |
-| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (256) __nullable__ | The actual value of the parameter. |
+| [Parameter1Value](Systems.Bpm.UserBusinessRuleActions.md#parameter1value) | string (1000) __nullable__ | The actual value of the parameter. |
 | [Parameter2Type](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter2type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. |
-| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string (256) __nullable__ | The actual value of the parameter. |
+| [Parameter2Value](Systems.Bpm.UserBusinessRuleActions.md#parameter2value) | string (1000) __nullable__ | The actual value of the parameter. |
 | [Parameter3Type](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) | [ActionParameterType](Systems.Bpm.UserBusinessRuleActions.md#parameter3type) __nullable__ | The type of the parameter specifies how to obtain the parameter value. |
-| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string (256) __nullable__ | The actual value of the parameter. |
+| [Parameter3Value](Systems.Bpm.UserBusinessRuleActions.md#parameter3value) | string (1000) __nullable__ | The actual value of the parameter. |
 
 ## References
 
@@ -128,11 +128,11 @@ Show in UI: **ShownByDefault**
 
 The actual value of the parameter.
 
-Type: **string (256) __nullable__**  
+Type: **string (1000) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **256**  
+Maximum Length: **1000**  
 Show in UI: **ShownByDefault**  
 
 ### Parameter2Type
@@ -161,11 +161,11 @@ Show in UI: **ShownByDefault**
 
 The actual value of the parameter.
 
-Type: **string (256) __nullable__**  
+Type: **string (1000) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **256**  
+Maximum Length: **1000**  
 Show in UI: **ShownByDefault**  
 
 ### Parameter3Type
@@ -194,11 +194,11 @@ Show in UI: **ShownByDefault**
 
 The actual value of the parameter.
 
-Type: **string (256) __nullable__**  
+Type: **string (1000) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **256**  
+Maximum Length: **1000**  
 Show in UI: **ShownByDefault**  
 
 ### Id

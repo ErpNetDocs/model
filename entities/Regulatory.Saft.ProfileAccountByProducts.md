@@ -102,6 +102,7 @@ Allowed Values (Regulatory.Saft.ProfileAccountByProductsRepository.EntityKind En
 | ---- | --- |
 | Sales | Sales value. Stored as 'S'. <br /> Database Value: 'S' <br /> Model Value: 0 <br /> Domain API Value: 'Sales' |
 | Purchases | Purchases value. Stored as 'P'. <br /> Database Value: 'P' <br /> Model Value: 1 <br /> Domain API Value: 'Purchases' |
+| Inventory | Inventory. Stored as 'I'. <br /> Database Value: 'I' <br /> Model Value: 2 <br /> Domain API Value: 'Inventory' |
 
 Supported Filters: **Equals**  
 Supports Order By: **False**  

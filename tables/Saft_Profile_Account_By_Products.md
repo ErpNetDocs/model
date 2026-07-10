@@ -18,7 +18,7 @@ Maps the SAF-T account by product type for a selected SAF-T profile. Entity: Saf
 |[Account_Code_Entry_Id](#account_code_entry_id)|`uniqueidentifier` |The SAF-T account used during SAF-T generation for the selected product type.|
 |[Debit_Credit_Indicator](#debit_credit_indicator)|`char(1)` Allowed: `D`, `C`|Debit/credit indicator for SAF-T invoice lines.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The ERP.net document type under which this mapping rule should be applied.|
-|[Entity_Kind](#entity_kind)|`char(1)` Allowed: `S`, `P`|Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.|
+|[Entity_Kind](#entity_kind)|`char(1)` Allowed: `S`, `P`, `I`|Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments about the mapping.|
 |[Product_Type_Id](#product_type_id)|`uniqueidentifier` |The ERP.net product type for which the SAF-T account is defined.|
 |[Profile_Id](#profile_id)|`uniqueidentifier` |The SAF-T profile this mapping belongs to.|
@@ -145,7 +145,7 @@ Specifies whether the product type to SAF-T account mapping applies to sales inv
 
 | Property | Value |
 | - | - |
-|Allowed Values|`S`, `P`|
+|Allowed Values|`S`, `P`, `I`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|S|
