@@ -1217,6 +1217,8 @@
       href: Regulatory.Saft.ProfilePayments.md
     - name: ProfilePaymentTypes
       href: Regulatory.Saft.ProfilePaymentTypes.md
+    - name: ProfileProductTypes
+      href: Regulatory.Saft.ProfileProductTypes.md
     - name: Profiles
       href: Regulatory.Saft.Profiles.md
     - name: ProfileTaxCodeByAccounts

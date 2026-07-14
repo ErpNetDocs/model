@@ -503,6 +503,7 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Saft.ProfileParties | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfilePayments | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfilePaymentTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileProductTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.Profiles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |

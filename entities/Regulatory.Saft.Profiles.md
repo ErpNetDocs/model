@@ -46,6 +46,7 @@ Aggregate Tree
   * [Regulatory.Saft.ProfileParties](Regulatory.Saft.ProfileParties.md)  
   * [Regulatory.Saft.ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  
   * [Regulatory.Saft.ProfilePayments](Regulatory.Saft.ProfilePayments.md)  
+  * [Regulatory.Saft.ProfileProductTypes](Regulatory.Saft.ProfileProductTypes.md)  
   * [Regulatory.Saft.ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md)  
   * [Regulatory.Saft.ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md)  
 
@@ -82,6 +83,7 @@ Aggregate Tree
 | Parties | [ProfileParties](Regulatory.Saft.ProfileParties.md) | List of `ProfileParty`(Regulatory.Saft.ProfileParties.md) child objects, based on the `Regulatory.Saft.ProfileParty.Profile`(Regulatory.Saft.ProfileParties.md#profile) back reference 
 | Payments | [ProfilePayments](Regulatory.Saft.ProfilePayments.md) | List of `ProfilePayment`(Regulatory.Saft.ProfilePayments.md) child objects, based on the `Regulatory.Saft.ProfilePayment.Profile`(Regulatory.Saft.ProfilePayments.md#profile) back reference 
 | PaymentTypes | [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md) | List of `ProfilePaymentType`(Regulatory.Saft.ProfilePaymentTypes.md) child objects, based on the `Regulatory.Saft.ProfilePaymentType.Profile`(Regulatory.Saft.ProfilePaymentTypes.md#profile) back reference 
+| ProductTypes | [ProfileProductTypes](Regulatory.Saft.ProfileProductTypes.md) | List of `ProfileProductType`(Regulatory.Saft.ProfileProductTypes.md) child objects, based on the `Regulatory.Saft.ProfileProductType.Profile`(Regulatory.Saft.ProfileProductTypes.md#profile) back reference 
 | TaxCodeByAccounts | [ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md) | List of `ProfileTaxCodeByAccount`(Regulatory.Saft.ProfileTaxCodeByAccounts.md) child objects, based on the `Regulatory.Saft.ProfileTaxCodeByAccount.Profile`(Regulatory.Saft.ProfileTaxCodeByAccounts.md#profile) back reference 
 | TaxCodeByDealTypes | [ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md) | List of `ProfileTaxCodeByDealType`(Regulatory.Saft.ProfileTaxCodeByDealTypes.md) child objects, based on the `Regulatory.Saft.ProfileTaxCodeByDealType.Profile`(Regulatory.Saft.ProfileTaxCodeByDealTypes.md#profile) back reference 
 

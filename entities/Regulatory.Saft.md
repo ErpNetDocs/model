@@ -13,6 +13,7 @@ uid: Regulatory.Saft
 - [ProfileParties](Regulatory.Saft.ProfileParties.md)  
 - [ProfilePayments](Regulatory.Saft.ProfilePayments.md)  
 - [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  
+- [ProfileProductTypes](Regulatory.Saft.ProfileProductTypes.md)  
 - [Profiles](Regulatory.Saft.Profiles.md)  
 - [ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md)  
 - [ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md)  
