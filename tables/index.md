@@ -646,6 +646,7 @@
 * [Saft_Profile_Tax_Code_By_Accounts](Saft_Profile_Tax_Code_By_Accounts.md)
 * [Saft_Profile_Tax_Code_By_Deal_Types](Saft_Profile_Tax_Code_By_Deal_Types.md)
 * [Saft_Profiles](Saft_Profiles.md)
+* [Saft_Stock_Movement_Types](Saft_Stock_Movement_Types.md)
 
 ## [Scm](Scm.md)
 

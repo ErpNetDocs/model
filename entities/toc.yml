@@ -1227,6 +1227,8 @@
       href: Regulatory.Saft.ProfileTaxCodeByDealTypes.md
     - name: SaftDeclarations
       href: Regulatory.Saft.SaftDeclarations.md
+    - name: StockMovementTypes
+      href: Regulatory.Saft.StockMovementTypes.md
   - name: Vat
     href: Regulatory.Vat.md
     items:

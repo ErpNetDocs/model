@@ -1192,6 +1192,8 @@
     href: Saft_Profile_Tax_Code_By_Deal_Types.md
   - name: Saft_Profiles
     href: Saft_Profiles.md
+  - name: Saft_Stock_Movement_Types
+    href: Saft_Stock_Movement_Types.md
 - name: Scm
   href: Scm.md
   items:

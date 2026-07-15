@@ -508,6 +508,7 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Saft.ProfileTaxCodeByAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.SaftDeclarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.StockMovementTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypeDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.DealTypeDocumentAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
