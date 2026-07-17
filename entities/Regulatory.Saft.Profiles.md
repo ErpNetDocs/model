@@ -41,6 +41,7 @@ Aggregate Tree
   * [Regulatory.Saft.ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
   * [Regulatory.Saft.ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
   * [Regulatory.Saft.ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
+  * [Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
   * [Regulatory.Saft.ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
   * [Regulatory.Saft.ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  
   * [Regulatory.Saft.ProfileParties](Regulatory.Saft.ProfileParties.md)  
@@ -79,6 +80,7 @@ Aggregate Tree
 | AccountByAdditionalAmounts | [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md) | List of `ProfileAccount<br />ByAdditionalAmount`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount<br />ByAdditionalAmount.Profile`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md#profile) back reference 
 | AccountByProducts | [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md) | List of `ProfileAccountByProduct`(Regulatory.Saft.ProfileAccountByProducts.md) child objects, based on the `Regulatory.Saft.ProfileAccountByProduct.Profile`(Regulatory.Saft.ProfileAccountByProducts.md#profile) back reference 
 | Accounts | [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md) | List of `ProfileAccount`(Regulatory.Saft.ProfileAccounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount.Profile`(Regulatory.Saft.ProfileAccounts.md#profile) back reference 
+| AssetTransaction<br />TypeByOperation<br />Types | [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md) | List of `ProfileAssetTransaction<br />TypeByOperation<br />Type`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md) child objects, based on the `Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Type.Profile`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md#profile) back reference 
 | Companies | [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md) | List of `ProfileCompany`(Regulatory.Saft.ProfileCompanies.md) child objects, based on the `Regulatory.Saft.ProfileCompany.Profile`(Regulatory.Saft.ProfileCompanies.md#profile) back reference 
 | MeasurementUnits | [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md) | List of `ProfileMeasurementUnit`(Regulatory.Saft.ProfileMeasurementUnits.md) child objects, based on the `Regulatory.Saft.ProfileMeasurementUnit.Profile`(Regulatory.Saft.ProfileMeasurementUnits.md#profile) back reference 
 | Parties | [ProfileParties](Regulatory.Saft.ProfileParties.md) | List of `ProfileParty`(Regulatory.Saft.ProfileParties.md) child objects, based on the `Regulatory.Saft.ProfileParty.Profile`(Regulatory.Saft.ProfileParties.md#profile) back reference 

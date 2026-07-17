@@ -8,6 +8,7 @@ uid: Regulatory.Saft
 - [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
 - [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
 - [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
+- [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
 - [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
 - [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  
 - [ProfileParties](Regulatory.Saft.ProfileParties.md)  

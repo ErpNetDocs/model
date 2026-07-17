@@ -1207,6 +1207,8 @@
       href: Regulatory.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts
       href: Regulatory.Saft.ProfileAccounts.md
+    - name: ProfileAssetTransactionTypeByOperationTypes
+      href: Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md
     - name: ProfileCompanies
       href: Regulatory.Saft.ProfileCompanies.md
     - name: ProfileMeasurementUnits

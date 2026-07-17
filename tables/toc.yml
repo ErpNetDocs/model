@@ -1174,6 +1174,8 @@
     href: Saft_Profile_Account_By_Products.md
   - name: Saft_Profile_Accounts
     href: Saft_Profile_Accounts.md
+  - name: Saft_Profile_Asset_Transaction_Type_By_Operation_Types
+    href: Saft_Profile_Asset_Transaction_Type_By_Operation_Types.md
   - name: Saft_Profile_Companies
     href: Saft_Profile_Companies.md
   - name: Saft_Profile_Measurement_Units

@@ -637,6 +637,7 @@
 * [Saft_Profile_Account_By_Additional_Amounts](Saft_Profile_Account_By_Additional_Amounts.md)
 * [Saft_Profile_Account_By_Products](Saft_Profile_Account_By_Products.md)
 * [Saft_Profile_Accounts](Saft_Profile_Accounts.md)
+* [Saft_Profile_Asset_Transaction_Type_By_Operation_Types](Saft_Profile_Asset_Transaction_Type_By_Operation_Types.md)
 * [Saft_Profile_Companies](Saft_Profile_Companies.md)
 * [Saft_Profile_Measurement_Units](Saft_Profile_Measurement_Units.md)
 * [Saft_Profile_Parties](Saft_Profile_Parties.md)
