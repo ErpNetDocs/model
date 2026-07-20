@@ -39,6 +39,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Tree  
 * [Regulatory.Saft.Profiles](Regulatory.Saft.Profiles.md)  
   * [Regulatory.Saft.ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
+  * [Regulatory.Saft.ProfileAccountByAssetCategories](Regulatory.Saft.ProfileAccountByAssetCategories.md)  
   * [Regulatory.Saft.ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
   * [Regulatory.Saft.ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
   * [Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
@@ -78,6 +79,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | AccountByAdditionalAmounts | [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md) | List of `ProfileAccount<br />ByAdditionalAmount`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount<br />ByAdditionalAmount.Profile`(Regulatory.Saft.ProfileAccount<br />ByAdditionalAmounts.md#profile) back reference 
+| AccountByAssetCategories | [ProfileAccountByAssetCategories](Regulatory.Saft.ProfileAccountByAssetCategories.md) | List of `ProfileAccount<br />ByAssetCategory`(Regulatory.Saft.ProfileAccount<br />ByAssetCategories.md) child objects, based on the `Regulatory.Saft.ProfileAccount<br />ByAssetCategory.Profile`(Regulatory.Saft.ProfileAccount<br />ByAssetCategories.md#profile) back reference 
 | AccountByProducts | [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md) | List of `ProfileAccountByProduct`(Regulatory.Saft.ProfileAccountByProducts.md) child objects, based on the `Regulatory.Saft.ProfileAccountByProduct.Profile`(Regulatory.Saft.ProfileAccountByProducts.md#profile) back reference 
 | Accounts | [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md) | List of `ProfileAccount`(Regulatory.Saft.ProfileAccounts.md) child objects, based on the `Regulatory.Saft.ProfileAccount.Profile`(Regulatory.Saft.ProfileAccounts.md#profile) back reference 
 | AssetTransaction<br />TypeByOperation<br />Types | [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md) | List of `ProfileAssetTransaction<br />TypeByOperation<br />Type`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md) child objects, based on the `Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Type.Profile`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md#profile) back reference 

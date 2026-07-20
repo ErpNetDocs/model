@@ -5,7 +5,9 @@ uid: Regulatory.Saft
 
 ## Entities
 - [AccountBalances](Regulatory.Saft.AccountBalances.md)  
+- [DeclarationExports](Regulatory.Saft.DeclarationExports.md)  
 - [ProfileAccountByAdditionalAmounts](Regulatory.Saft.ProfileAccountByAdditionalAmounts.md)  
+- [ProfileAccountByAssetCategories](Regulatory.Saft.ProfileAccountByAssetCategories.md)  
 - [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
 - [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
 - [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  

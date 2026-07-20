@@ -495,7 +495,9 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Intrastat.DeclarationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.Declarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.DocumentAmountTypeSettings | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.DeclarationExports | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByAdditionalAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileAccountByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |

@@ -1,8 +1,10 @@
 # Saft
 
 * [Saft_Account_Balances](Saft_Account_Balances.md)
+* [Saft_Declaration_Exports](Saft_Declaration_Exports.md)
 * [Saft_Declarations](Saft_Declarations.md)
 * [Saft_Profile_Account_By_Additional_Amounts](Saft_Profile_Account_By_Additional_Amounts.md)
+* [Saft_Profile_Account_By_Asset_Categories](Saft_Profile_Account_By_Asset_Categories.md)
 * [Saft_Profile_Account_By_Products](Saft_Profile_Account_By_Products.md)
 * [Saft_Profile_Accounts](Saft_Profile_Accounts.md)
 * [Saft_Profile_Asset_Transaction_Type_By_Operation_Types](Saft_Profile_Asset_Transaction_Type_By_Operation_Types.md)

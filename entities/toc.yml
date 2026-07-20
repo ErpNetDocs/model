@@ -1201,8 +1201,12 @@
     items:
     - name: AccountBalances
       href: Regulatory.Saft.AccountBalances.md
+    - name: DeclarationExports
+      href: Regulatory.Saft.DeclarationExports.md
     - name: ProfileAccountByAdditionalAmounts
       href: Regulatory.Saft.ProfileAccountByAdditionalAmounts.md
+    - name: ProfileAccountByAssetCategories
+      href: Regulatory.Saft.ProfileAccountByAssetCategories.md
     - name: ProfileAccountByProducts
       href: Regulatory.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts
