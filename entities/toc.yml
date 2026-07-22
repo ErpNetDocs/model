@@ -1231,6 +1231,8 @@
       href: Regulatory.Saft.ProfileTaxCodeByAccounts.md
     - name: ProfileTaxCodeByDealTypes
       href: Regulatory.Saft.ProfileTaxCodeByDealTypes.md
+    - name: ProfileValuationTypeByValuationModels
+      href: Regulatory.Saft.ProfileValuationTypeByValuationModels.md
     - name: SaftDeclarations
       href: Regulatory.Saft.SaftDeclarations.md
     - name: StockMovementTypes

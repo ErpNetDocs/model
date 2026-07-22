@@ -20,6 +20,7 @@ uid: Regulatory.Saft
 - [Profiles](Regulatory.Saft.Profiles.md)  
 - [ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md)  
 - [ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md)  
+- [ProfileValuationTypeByValuationModels](Regulatory.Saft.ProfileValuationTypeByValuationModels.md)  
 - [SaftDeclarations](Regulatory.Saft.SaftDeclarations.md)  
 - [StockMovementTypes](Regulatory.Saft.StockMovementTypes.md)  
 
