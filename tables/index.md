@@ -642,6 +642,7 @@
 * [Saft_Profile_Asset_Transaction_Type_By_Operation_Types](Saft_Profile_Asset_Transaction_Type_By_Operation_Types.md)
 * [Saft_Profile_Companies](Saft_Profile_Companies.md)
 * [Saft_Profile_Measurement_Units](Saft_Profile_Measurement_Units.md)
+* [Saft_Profile_Owner_By_Stores](Saft_Profile_Owner_By_Stores.md)
 * [Saft_Profile_Parties](Saft_Profile_Parties.md)
 * [Saft_Profile_Payment_Types](Saft_Profile_Payment_Types.md)
 * [Saft_Profile_Payments](Saft_Profile_Payments.md)

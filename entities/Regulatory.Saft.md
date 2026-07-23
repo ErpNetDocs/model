@@ -13,6 +13,7 @@ uid: Regulatory.Saft
 - [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
 - [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
 - [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  
+- [ProfileOwnerByStores](Regulatory.Saft.ProfileOwnerByStores.md)  
 - [ProfileParties](Regulatory.Saft.ProfileParties.md)  
 - [ProfilePayments](Regulatory.Saft.ProfilePayments.md)  
 - [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  

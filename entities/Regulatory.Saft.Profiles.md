@@ -45,6 +45,7 @@ Aggregate Tree
   * [Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
   * [Regulatory.Saft.ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
   * [Regulatory.Saft.ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  
+  * [Regulatory.Saft.ProfileOwnerByStores](Regulatory.Saft.ProfileOwnerByStores.md)  
   * [Regulatory.Saft.ProfileParties](Regulatory.Saft.ProfileParties.md)  
   * [Regulatory.Saft.ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  
   * [Regulatory.Saft.ProfilePayments](Regulatory.Saft.ProfilePayments.md)  
@@ -86,6 +87,7 @@ Aggregate Tree
 | AssetTransaction<br />TypeByOperation<br />Types | [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md) | List of `ProfileAssetTransaction<br />TypeByOperation<br />Type`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md) child objects, based on the `Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Type.Profile`(Regulatory.Saft.ProfileAssetTransaction<br />TypeByOperation<br />Types.md#profile) back reference 
 | Companies | [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md) | List of `ProfileCompany`(Regulatory.Saft.ProfileCompanies.md) child objects, based on the `Regulatory.Saft.ProfileCompany.Profile`(Regulatory.Saft.ProfileCompanies.md#profile) back reference 
 | MeasurementUnits | [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md) | List of `ProfileMeasurementUnit`(Regulatory.Saft.ProfileMeasurementUnits.md) child objects, based on the `Regulatory.Saft.ProfileMeasurementUnit.Profile`(Regulatory.Saft.ProfileMeasurementUnits.md#profile) back reference 
+| OwnerByStores | [ProfileOwnerByStores](Regulatory.Saft.ProfileOwnerByStores.md) | List of `ProfileOwnerByStore`(Regulatory.Saft.ProfileOwnerByStores.md) child objects, based on the `Regulatory.Saft.ProfileOwnerByStore.Profile`(Regulatory.Saft.ProfileOwnerByStores.md#profile) back reference 
 | Parties | [ProfileParties](Regulatory.Saft.ProfileParties.md) | List of `ProfileParty`(Regulatory.Saft.ProfileParties.md) child objects, based on the `Regulatory.Saft.ProfileParty.Profile`(Regulatory.Saft.ProfileParties.md#profile) back reference 
 | Payments | [ProfilePayments](Regulatory.Saft.ProfilePayments.md) | List of `ProfilePayment`(Regulatory.Saft.ProfilePayments.md) child objects, based on the `Regulatory.Saft.ProfilePayment.Profile`(Regulatory.Saft.ProfilePayments.md#profile) back reference 
 | PaymentTypes | [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md) | List of `ProfilePaymentType`(Regulatory.Saft.ProfilePaymentTypes.md) child objects, based on the `Regulatory.Saft.ProfilePaymentType.Profile`(Regulatory.Saft.ProfilePaymentTypes.md#profile) back reference 

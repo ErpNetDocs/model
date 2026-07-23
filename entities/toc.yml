@@ -1217,6 +1217,8 @@
       href: Regulatory.Saft.ProfileCompanies.md
     - name: ProfileMeasurementUnits
       href: Regulatory.Saft.ProfileMeasurementUnits.md
+    - name: ProfileOwnerByStores
+      href: Regulatory.Saft.ProfileOwnerByStores.md
     - name: ProfileParties
       href: Regulatory.Saft.ProfileParties.md
     - name: ProfilePayments
