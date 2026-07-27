@@ -1201,8 +1201,38 @@
     items:
     - name: AccountBalances
       href: Regulatory.Saft.AccountBalances.md
+    - name: DeclarationExportAccounts
+      href: Regulatory.Saft.DeclarationExportAccounts.md
+    - name: DeclarationExportBankAccounts
+      href: Regulatory.Saft.DeclarationExportBankAccounts.md
+    - name: DeclarationExportCustomers
+      href: Regulatory.Saft.DeclarationExportCustomers.md
+    - name: DeclarationExportMeasurementUnits
+      href: Regulatory.Saft.DeclarationExportMeasurementUnits.md
+    - name: DeclarationExportPaymentLines
+      href: Regulatory.Saft.DeclarationExportPaymentLines.md
+    - name: DeclarationExportPayments
+      href: Regulatory.Saft.DeclarationExportPayments.md
+    - name: DeclarationExportProducts
+      href: Regulatory.Saft.DeclarationExportProducts.md
+    - name: DeclarationExportPurchaseInvoiceLines
+      href: Regulatory.Saft.DeclarationExportPurchaseInvoiceLines.md
+    - name: DeclarationExportPurchaseInvoices
+      href: Regulatory.Saft.DeclarationExportPurchaseInvoices.md
     - name: DeclarationExports
       href: Regulatory.Saft.DeclarationExports.md
+    - name: DeclarationExportSalesInvoiceLines
+      href: Regulatory.Saft.DeclarationExportSalesInvoiceLines.md
+    - name: DeclarationExportSalesInvoices
+      href: Regulatory.Saft.DeclarationExportSalesInvoices.md
+    - name: DeclarationExportSuppliers
+      href: Regulatory.Saft.DeclarationExportSuppliers.md
+    - name: DeclarationExportTaxEntries
+      href: Regulatory.Saft.DeclarationExportTaxEntries.md
+    - name: DeclarationExportVoucherLines
+      href: Regulatory.Saft.DeclarationExportVoucherLines.md
+    - name: DeclarationExportVouchers
+      href: Regulatory.Saft.DeclarationExportVouchers.md
     - name: ProfileAccountByAdditionalAmounts
       href: Regulatory.Saft.ProfileAccountByAdditionalAmounts.md
     - name: ProfileAccountByAssetCategories

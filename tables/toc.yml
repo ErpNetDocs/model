@@ -1166,6 +1166,36 @@
   items:
   - name: Saft_Account_Balances
     href: Saft_Account_Balances.md
+  - name: Saft_Declaration_Export_Accounts
+    href: Saft_Declaration_Export_Accounts.md
+  - name: Saft_Declaration_Export_Bank_Accounts
+    href: Saft_Declaration_Export_Bank_Accounts.md
+  - name: Saft_Declaration_Export_Customers
+    href: Saft_Declaration_Export_Customers.md
+  - name: Saft_Declaration_Export_Measurement_Units
+    href: Saft_Declaration_Export_Measurement_Units.md
+  - name: Saft_Declaration_Export_Payment_Lines
+    href: Saft_Declaration_Export_Payment_Lines.md
+  - name: Saft_Declaration_Export_Payments
+    href: Saft_Declaration_Export_Payments.md
+  - name: Saft_Declaration_Export_Products
+    href: Saft_Declaration_Export_Products.md
+  - name: Saft_Declaration_Export_Purchase_Invoice_Lines
+    href: Saft_Declaration_Export_Purchase_Invoice_Lines.md
+  - name: Saft_Declaration_Export_Purchase_Invoices
+    href: Saft_Declaration_Export_Purchase_Invoices.md
+  - name: Saft_Declaration_Export_Sales_Invoice_Lines
+    href: Saft_Declaration_Export_Sales_Invoice_Lines.md
+  - name: Saft_Declaration_Export_Sales_Invoices
+    href: Saft_Declaration_Export_Sales_Invoices.md
+  - name: Saft_Declaration_Export_Suppliers
+    href: Saft_Declaration_Export_Suppliers.md
+  - name: Saft_Declaration_Export_Tax_Table_Entries
+    href: Saft_Declaration_Export_Tax_Table_Entries.md
+  - name: Saft_Declaration_Export_Voucher_Lines
+    href: Saft_Declaration_Export_Voucher_Lines.md
+  - name: Saft_Declaration_Export_Vouchers
+    href: Saft_Declaration_Export_Vouchers.md
   - name: Saft_Declaration_Exports
     href: Saft_Declaration_Exports.md
   - name: Saft_Declarations
