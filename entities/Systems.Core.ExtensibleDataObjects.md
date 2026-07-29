@@ -76,7 +76,7 @@ Aggregate Tree
 Extensible JSON object for storing this entity's custom or optional attributes.`Introduced in version 26.3.100.4`
 
 Type: **string (max) __nullable__**  
-Category: **System**  
+Category: **Delay Loaded Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
