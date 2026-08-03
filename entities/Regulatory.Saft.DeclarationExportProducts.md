@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportProducts  
 Base Table: Saft_Declaration_Export_Products  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {ProductCode}  
@@ -34,13 +34,13 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Regulatory.Saft.DeclarationExportProducts.md#description) | string (255) __nullable__ | Description |
+| [Description](Regulatory.Saft.DeclarationExportProducts.md#description) | string (256) __nullable__ | Description |
 | [ExportSequence](Regulatory.Saft.DeclarationExportProducts.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [ProductCode](Regulatory.Saft.DeclarationExportProducts.md#productcode) | string (35) | Product code`Required` |
+| [ProductCode](Regulatory.Saft.DeclarationExportProducts.md#productcode) | string (70) | Product code`Required` |
 | [ProductCommodityCode](Regulatory.Saft.DeclarationExportProducts.md#productcommoditycode) | string (35) | Product Commodity Code`Required` |
 | [UOMBase](Regulatory.Saft.DeclarationExportProducts.md#uombase) | string (35) | UOM Base`Required` |
-| [UOMStandard](Regulatory.Saft.DeclarationExportProducts.md#uomstandard) | string (35) | UOM Standard`Required` |
-| [UOMToUOMBaseConversion<br />Factor](Regulatory.Saft.DeclarationExportProducts.md#uomtouombaseconversionfactor) | string (15) | UOM To UOM Base Conversion Factor`Required` |
+| [UOMStandard](Regulatory.Saft.DeclarationExportProducts.md#uomstandard) | string (9) | UOM Standard`Required` |
+| [UOMToUOMBaseConversion<br />Factor](Regulatory.Saft.DeclarationExportProducts.md#uomtouombaseconversionfactor) | string (35) | UOM To UOM Base Conversion Factor`Required` |
 
 ## References
 
@@ -68,11 +68,11 @@ Aggregate Tree
 
 Description
 
-Type: **string (255) __nullable__**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -89,11 +89,11 @@ Show in UI: **ShownByDefault**
 
 Product code`Required`
 
-Type: **string (35)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### ProductCommodityCode
@@ -122,22 +122,22 @@ Show in UI: **ShownByDefault**
 
 UOM Standard`Required`
 
-Type: **string (35)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### UOMToUOMBaseConversionFactor
 
 UOM To UOM Base Conversion Factor`Required`
 
-Type: **string (15)**  
+Type: **string (35)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **15**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### Id

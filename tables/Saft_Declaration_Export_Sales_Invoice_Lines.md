@@ -11,24 +11,24 @@ Contains Sale invoice lines for `SAFT_Declaration_Export_Sales_Invoices`. Entity
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`nvarchar(10)` |Account Id|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account Id|
 |[Debit_Credit_Indicator](#debit_credit_indicator)|`char(1)` |Debit Credit Indicator|
 |[Declaration_Export_Sales_Invoice_Line_Id](#declaration_export_sales_invoice_line_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(255)` |Description|
+|[Description](#description)|`nvarchar(256)` |Description|
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[Line_Amount](#line_amount)|`decimal(18, 2)` |Line Amount|
 |[Line_Currency_Amount](#line_currency_amount)|`decimal(18, 2)` |Line Currency Amount|
 |[Line_Currency_Code](#line_currency_code)|`nvarchar(3)` |Line Currency Code|
-|[Product_Code](#product_code)|`nvarchar(35)` |Product code|
+|[Product_Code](#product_code)|`nvarchar(70)` |Product code|
 |[Quantity](#quantity)|`decimal(18, 3)` |Quantity|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Sales_Invoice_Id](#saft_declaration_export_sales_invoice_id)|`uniqueidentifier` |Saft Declaration Export Sales Invoice|
 |[Tax_Amount](#tax_amount)|`decimal(18, 2)` |ax Amount|
-|[Tax_Code](#tax_code)|`nvarchar(10)` |Tax Code|
+|[Tax_Code](#tax_code)|`nvarchar(9)` |Tax Code|
 |[Tax_Currency_Amount](#tax_currency_amount)|`decimal(18, 2)` |Tax Currency Amount|
 |[Tax_Currency_Code](#tax_currency_code)|`nvarchar(3)` |Tax Currency Code|
 |[Tax_Point_Date](#tax_point_date)|`datetime` |Tax Point Date|
-|[Tax_Type](#tax_type)|`nvarchar(10)` | Tax Type|
+|[Tax_Type](#tax_type)|`nvarchar(9)` | Tax Type|
 |[Unit_Price](#unit_price)|`decimal(14, 5)` |Unit Price|
 
 ## Columns
@@ -46,7 +46,7 @@ Account Id
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|5|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -57,7 +57,7 @@ Account Id
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -140,7 +140,7 @@ Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -151,7 +151,7 @@ Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -296,7 +296,7 @@ Product code
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -307,7 +307,7 @@ Product code
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(70)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -450,7 +450,7 @@ Tax Code
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -461,7 +461,7 @@ Tax Code
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -576,7 +576,7 @@ Tax Point Date
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -587,7 +587,7 @@ Tax Point Date
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

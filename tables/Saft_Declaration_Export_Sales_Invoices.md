@@ -11,7 +11,7 @@ Contains Sales Invoices for SAF-T export section `SalesInvoices`. Entity: Saft_D
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`nvarchar(10)` |Account Id|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account Id|
 |[Customer_City](#customer_city)|`nvarchar(35)` |Customer City|
 |[Customer_Country](#customer_country)|`nvarchar(2)` |Customer Country|
 |[Customer_Id](#customer_id)|`nvarchar(35)` |Customer Id|
@@ -19,8 +19,8 @@ Contains Sales Invoices for SAF-T export section `SalesInvoices`. Entity: Saft_D
 |[Declaration_Export_Sales_Invoice_Id](#declaration_export_sales_invoice_id)|`uniqueidentifier` `PK`||
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[Invoice_Date](#invoice_date)|`date` |Invoice Date|
-|[Invoice_No](#invoice_no)|`nvarchar(35)` |Invoice No|
-|[Invoice_Type](#invoice_type)|`nvarchar(10)` |Invoice Type|
+|[Invoice_No](#invoice_no)|`nvarchar(70)` |Invoice No|
+|[Invoice_Type](#invoice_type)|`nvarchar(9)` |Invoice Type|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Id](#saft_declaration_export_id)|`uniqueidentifier` | Saft Declaration Export|
 |[Self_Billing_Indicator](#self_billing_indicator)|`char(1)` |Self Billing Indicator|
@@ -41,7 +41,7 @@ Account Id
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|5|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -52,7 +52,7 @@ Account Id
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -172,7 +172,7 @@ Customer Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -297,7 +297,7 @@ Invoice No
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -308,7 +308,7 @@ Invoice No
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(70)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -327,7 +327,7 @@ Invoice Type
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -338,7 +338,7 @@ Invoice Type
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

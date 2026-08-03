@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportCustomers  
 Base Table: Saft_Declaration_Export_Customers  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {Name}  
@@ -35,20 +35,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportCustomers.md#accountid) | string (35) | Account`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportCustomers.md#accountid) | string (5) | Account`Required` |
 | [City](Regulatory.Saft.DeclarationExportCustomers.md#city) | string (35) | City or other place of client address`Required` |
 | [ClosingCreditBalance](Regulatory.Saft.DeclarationExportCustomers.md#closingcreditbalance) | decimal (18, 2) | Closing Credit Balance`Required` |
 | [ClosingDebitBalance](Regulatory.Saft.DeclarationExportCustomers.md#closingdebitbalance) | decimal (18, 2) | Closing Debit Balance`Required` |
-| [Country](Regulatory.Saft.DeclarationExportCustomers.md#country) | string (10) | Country`Required` |
+| [Country](Regulatory.Saft.DeclarationExportCustomers.md#country) | string (2) | Country`Required` |
 | [CustomerId](Regulatory.Saft.DeclarationExportCustomers.md#customerid) | string (35) | Customer Id`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportCustomers.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [Name](Regulatory.Saft.DeclarationExportCustomers.md#name) | string (70) | Name`Required` |
-| [NameLatin](Regulatory.Saft.DeclarationExportCustomers.md#namelatin) | string (70) | Name in Latin script`Required` |
+| [Name](Regulatory.Saft.DeclarationExportCustomers.md#name) | string (70) __nullable__ | Name |
+| [NameLatin](Regulatory.Saft.DeclarationExportCustomers.md#namelatin) | string (70) __nullable__ | Name in Latin script |
 | [OpeningCreditBalance](Regulatory.Saft.DeclarationExportCustomers.md#openingcreditbalance) | decimal (18, 2) | Opening Credit Balance`Required` |
 | [OpeningDebitBalance](Regulatory.Saft.DeclarationExportCustomers.md#openingdebitbalance) | decimal (18, 2) | Opening Debit Balance`Required` |
 | [RegistrationNumber](Regulatory.Saft.DeclarationExportCustomers.md#registrationnumber) | string (35) | Client Registration Number`Required` |
 | [RelatedParty](Regulatory.Saft.DeclarationExportCustomers.md#relatedparty) | string (1) | Related Party`Required` |
-| [StreetName](Regulatory.Saft.DeclarationExportCustomers.md#streetname) | string (70) | Street name`Required` |
+| [StreetName](Regulatory.Saft.DeclarationExportCustomers.md#streetname) | string (70) __nullable__ | Street name |
 
 ## References
 
@@ -76,11 +76,11 @@ Aggregate Tree
 
 Account`Required`
 
-Type: **string (35)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### City
@@ -118,11 +118,11 @@ Show in UI: **ShownByDefault**
 
 Country`Required`
 
-Type: **string (10)**  
+Type: **string (2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **2**  
 Show in UI: **ShownByDefault**  
 
 ### CustomerId
@@ -148,9 +148,9 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name`Required`
+Name
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -159,9 +159,9 @@ Show in UI: **ShownByDefault**
 
 ### NameLatin
 
-Name in Latin script`Required`
+Name in Latin script
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -212,9 +212,9 @@ Show in UI: **ShownByDefault**
 
 ### StreetName
 
-Street name`Required`
+Street name
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  

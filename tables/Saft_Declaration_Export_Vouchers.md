@@ -13,7 +13,7 @@ Contains Accounting Vouchers in SAF-T export section `GeneralLedgerEntries`. Ent
 | - | - | --- |
 |[Customer_Id](#customer_id)|`nvarchar(35)` |Customer Id|
 |[Declaration_Export_Voucher_Id](#declaration_export_voucher_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(255)` |Description|
+|[Description](#description)|`nvarchar(256)` |Description|
 |[Document_Type_Code](#document_type_code)|`nvarchar(35)` |Document Type Code|
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[GL_Posting_Date](#gl_posting_date)|`datetime` |GL Posting Date|
@@ -105,7 +105,7 @@ Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -116,7 +116,7 @@ Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

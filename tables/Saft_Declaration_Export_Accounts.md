@@ -11,9 +11,9 @@ SAF-T export accounts. Entity: Saft_Declaration_Export_Accounts (Introduced in v
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Description](#account_description)|`nvarchar(255)` |Account Description|
-|[Account_Id](#account_id)|`nvarchar(35)` |Account Id|
-|[Account_Type](#account_type)|`nvarchar(35)` |Account Type|
+|[Account_Description](#account_description)|`nvarchar(256)` |Account Description|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account Id|
+|[Account_Type](#account_type)|`nvarchar(18)` |Account Type|
 |[Closing_Credit_Balance](#closing_credit_balance)|`decimal(18, 2)` |Closing Credit Balance|
 |[Closing_Debit_Balance](#closing_debit_balance)|`decimal(18, 2)` |Closing Debit Balance|
 |[Declaration_Export_Account_Id](#declaration_export_account_id)|`uniqueidentifier` `PK`||
@@ -22,7 +22,7 @@ SAF-T export accounts. Entity: Saft_Declaration_Export_Accounts (Introduced in v
 |[Opening_Debit_Balance](#opening_debit_balance)|`decimal(18, 2)` |Opening Debit Balance|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Id](#saft_declaration_export_id)|`uniqueidentifier` |Saft Declaration Export|
-|[Taxpayer_Account_Id](#taxpayer_account_id)|`nvarchar(35)` |Taxpayer Account |
+|[Taxpayer_Account_Id](#taxpayer_account_id)|`nvarchar(70)` |Taxpayer Account |
 
 ## Columns
 
@@ -39,7 +39,7 @@ Account Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|4|
 |Ownership Reference|no|
 |Pasword|no|
@@ -50,7 +50,7 @@ Account Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255) (Allows NULL)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -69,7 +69,7 @@ Account Id
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|5|
 |Order|2|
 |Ownership Reference|no|
 |Pasword|no|
@@ -80,7 +80,7 @@ Account Id
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -99,7 +99,7 @@ Account Type
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|18|
 |Order|5|
 |Ownership Reference|no|
 |Pasword|no|
@@ -110,7 +110,7 @@ Account Type
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(18)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -383,7 +383,7 @@ Taxpayer Account
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|70|
 |Order|3|
 |Ownership Reference|no|
 |Pasword|no|
@@ -394,7 +394,7 @@ Taxpayer Account
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(70)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

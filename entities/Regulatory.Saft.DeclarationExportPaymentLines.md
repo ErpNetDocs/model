@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportPaymentLines  
 Base Table: Saft_Declaration_Export_Payment_Lines  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {CurrencyCode}  
@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportPaymentLines.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportPaymentLines.md#accountid) | string (5) | Account Id`Required` |
 | [Amount](Regulatory.Saft.DeclarationExportPaymentLines.md#amount) | decimal (18, 2) | Amount`Required` |
 | [CurrencyAmount](Regulatory.Saft.DeclarationExportPaymentLines.md#currencyamount) | decimal (18, 2) | Currency Amount`Required` |
 | [CurrencyCode](Regulatory.Saft.DeclarationExportPaymentLines.md#currencycode) | string (3) | Currency Code`Required` |
@@ -69,11 +69,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### Amount

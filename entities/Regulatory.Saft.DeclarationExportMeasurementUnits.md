@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportMeasurementUnits  
 Base Table: Saft_Declaration_Export_Measurement_Units  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {Id}: {SaftDeclarationExportId}  
@@ -33,9 +33,9 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Description](Regulatory.Saft.DeclarationExportMeasurementUnits.md#description) | string (255) | Description`Required` |
+| [Description](Regulatory.Saft.DeclarationExportMeasurementUnits.md#description) | string (256) | Description`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportMeasurementUnits.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [UnitOfMeasure](Regulatory.Saft.DeclarationExportMeasurementUnits.md#unitofmeasure) | string (35) | Unit Of Measure`Required` |
+| [UnitOfMeasure](Regulatory.Saft.DeclarationExportMeasurementUnits.md#unitofmeasure) | string (9) | Unit Of Measure`Required` |
 
 ## References
 
@@ -63,11 +63,11 @@ Aggregate Tree
 
 Description`Required`
 
-Type: **string (255)**  
+Type: **string (256)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -84,11 +84,11 @@ Show in UI: **ShownByDefault**
 
 Unit Of Measure`Required`
 
-Type: **string (35)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### Id

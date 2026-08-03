@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportAccounts  
 Base Table: Saft_Declaration_Export_Accounts  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {Id}: {SaftDeclarationExportId}  
@@ -33,15 +33,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountDescription](Regulatory.Saft.DeclarationExportAccounts.md#accountdescription) | string (255) __nullable__ | Account Description |
-| [AccountId](Regulatory.Saft.DeclarationExportAccounts.md#accountid) | string (35) | Account Id`Required` |
-| [AccountType](Regulatory.Saft.DeclarationExportAccounts.md#accounttype) | string (35) | Account Type`Required` |
+| [AccountDescription](Regulatory.Saft.DeclarationExportAccounts.md#accountdescription) | string (256) __nullable__ | Account Description |
+| [AccountId](Regulatory.Saft.DeclarationExportAccounts.md#accountid) | string (5) | Account Id`Required` |
+| [AccountType](Regulatory.Saft.DeclarationExportAccounts.md#accounttype) | string (18) | Account Type`Required` |
 | [ClosingCreditBalance](Regulatory.Saft.DeclarationExportAccounts.md#closingcreditbalance) | decimal (18, 2) | Closing Credit Balance`Required` |
 | [ClosingDebitBalance](Regulatory.Saft.DeclarationExportAccounts.md#closingdebitbalance) | decimal (18, 2) | Closing Debit Balance`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportAccounts.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
 | [OpeningCreditBalance](Regulatory.Saft.DeclarationExportAccounts.md#openingcreditbalance) | decimal (18, 2) | Opening Credit Balance`Required` |
 | [OpeningDebitBalance](Regulatory.Saft.DeclarationExportAccounts.md#openingdebitbalance) | decimal (18, 2) | Opening Debit Balance`Required` |
-| [TaxpayerAccountId](Regulatory.Saft.DeclarationExportAccounts.md#taxpayeraccountid) | string (35) | Taxpayer Account `Required` |
+| [TaxpayerAccountId](Regulatory.Saft.DeclarationExportAccounts.md#taxpayeraccountid) | string (70) | Taxpayer Account `Required` |
 
 ## References
 
@@ -69,33 +69,33 @@ Aggregate Tree
 
 Account Description
 
-Type: **string (255) __nullable__**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### AccountId
 
 Account Id`Required`
 
-Type: **string (35)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### AccountType
 
 Account Type`Required`
 
-Type: **string (35)**  
+Type: **string (18)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **18**  
 Show in UI: **ShownByDefault**  
 
 ### ClosingCreditBalance
@@ -152,11 +152,11 @@ Show in UI: **ShownByDefault**
 
 Taxpayer Account `Required`
 
-Type: **string (35)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### Id

@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportSalesInvoiceLines  
 Base Table: Saft_Declaration_Export_Sales_Invoice_Lines  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {LineCurrencyCode}  
@@ -34,21 +34,21 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#accountid) | string (5) | Account Id`Required` |
 | [DebitCreditIndicator](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#debitcreditindicator) | string (1) | Debit Credit Indicator`Required` |
-| [Description](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#description) | string (255) | Description`Required` |
+| [Description](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#description) | string (256) __nullable__ | Description |
 | [ExportSequence](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
 | [LineAmount](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#lineamount) | decimal (18, 2) | Line Amount`Required` |
 | [LineCurrencyAmount](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#linecurrencyamount) | decimal (18, 2) | Line Currency Amount`Required` |
 | [LineCurrencyCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#linecurrencycode) | string (3) | Line Currency Code`Required` |
-| [ProductCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#productcode) | string (35) | Product code`Required` |
+| [ProductCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#productcode) | string (70) | Product code`Required` |
 | [Quantity](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#quantity) | decimal (18, 3) | Quantity`Required` |
 | [TaxAmount](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxamount) | decimal (18, 2) | ax Amount`Required` |
-| [TaxCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxcode) | string (10) | Tax Code`Required` |
+| [TaxCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxcode) | string (9) | Tax Code`Required` |
 | [TaxCurrencyAmount](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxcurrencyamount) | decimal (18, 2) | Tax Currency Amount`Required` |
 | [TaxCurrencyCode](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxcurrencycode) | string (3) | Tax Currency Code`Required` |
 | [TaxPointDate](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxpointdate) | datetime __nullable__ | Tax Point Date`Filter(ge;le)` |
-| [TaxType](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxtype) | string (10) |  Tax Type`Required` |
+| [TaxType](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#taxtype) | string (9) |  Tax Type`Required` |
 | [UnitPrice](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#unitprice) | decimal (14, 5) | Unit Price`Required` |
 
 ## References
@@ -77,11 +77,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### DebitCreditIndicator
@@ -97,13 +97,13 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description`Required`
+Description
 
-Type: **string (255)**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -151,11 +151,11 @@ Show in UI: **ShownByDefault**
 
 Product code`Required`
 
-Type: **string (35)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### Quantity
@@ -182,11 +182,11 @@ Show in UI: **ShownByDefault**
 
 Tax Code`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### TaxCurrencyAmount
@@ -224,11 +224,11 @@ Show in UI: **ShownByDefault**
 
 Tax Type`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### UnitPrice

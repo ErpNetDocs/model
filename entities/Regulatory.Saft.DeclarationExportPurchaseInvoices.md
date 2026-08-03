@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportPurchaseInvoices  
 Base Table: Saft_Declaration_Export_Purchase_Invoices  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {SupplierName}  
@@ -34,16 +34,16 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#accountid) | string (5) | Account Id`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
 | [InvoiceDate](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#invoicedate) | date | Invoice Date`Required` `Filter(ge;le)` |
-| [InvoiceNo](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#invoiceno) | string (35) | Invoice No`Required` |
-| [InvoiceType](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#invoicetype) | string (10) | Invoice Type`Required` |
+| [InvoiceNo](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#invoiceno) | string (70) | Invoice No`Required` |
+| [InvoiceType](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#invoicetype) | string (9) | Invoice Type`Required` |
 | [SelfBillingIndicator](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#selfbillingindicator) | string (1) | Self Billing Indicator`Required` |
 | [SupplierCity](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#suppliercity) | string (35) | Supplier City`Required` |
 | [SupplierCountry](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#suppliercountry) | string (2) | Supplier Country`Required` |
 | [SupplierId](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#supplierid) | string (35) | Supplier Id`Required` |
-| [SupplierName](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#suppliername) | string (70) | Supplier Name`Required` |
+| [SupplierName](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#suppliername) | string (70) __nullable__ | Supplier Name |
 | [TransactionId](Regulatory.Saft.DeclarationExportPurchaseInvoices.md#transactionid) | guid | Transaction Id. `Required` `Filter(multi eq)` |
 
 ## References
@@ -72,11 +72,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -103,22 +103,22 @@ Show in UI: **ShownByDefault**
 
 Invoice No`Required`
 
-Type: **string (35)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### InvoiceType
 
 Invoice Type`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### SelfBillingIndicator
@@ -167,9 +167,9 @@ Show in UI: **ShownByDefault**
 
 ### SupplierName
 
-Supplier Name`Required`
+Supplier Name
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  

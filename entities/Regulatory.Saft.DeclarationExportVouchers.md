@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportVouchers  
 Base Table: Saft_Declaration_Export_Vouchers  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {DocumentTypeCode}  
@@ -35,7 +35,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [CustomerId](Regulatory.Saft.DeclarationExportVouchers.md#customerid) | string (35) | Customer Id`Required` |
-| [Description](Regulatory.Saft.DeclarationExportVouchers.md#description) | string (255) | Description`Required` |
+| [Description](Regulatory.Saft.DeclarationExportVouchers.md#description) | string (256) __nullable__ | Description |
 | [DocumentTypeCode](Regulatory.Saft.DeclarationExportVouchers.md#documenttypecode) | string (35) | Document Type Code`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportVouchers.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
 | [GLPostingDate](Regulatory.Saft.DeclarationExportVouchers.md#glpostingdate) | datetime | GL Posting Date`Required` `Filter(ge;le)` |
@@ -81,13 +81,13 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Description`Required`
+Description
 
-Type: **string (255)**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### DocumentTypeCode

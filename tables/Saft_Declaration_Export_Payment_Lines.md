@@ -11,7 +11,7 @@ Contains lines of `SAFT_Declaration_Export_Payments`. Entity: Saft_Declaration_E
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`nvarchar(10)` |Account Id|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account Id|
 |[Amount](#amount)|`decimal(18, 2)` |Amount|
 |[Currency_Amount](#currency_amount)|`decimal(18, 2)` |Currency Amount|
 |[Currency_Code](#currency_code)|`nvarchar(3)` |Currency Code|
@@ -38,7 +38,7 @@ Account Id
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|5|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -49,7 +49,7 @@ Account Id
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

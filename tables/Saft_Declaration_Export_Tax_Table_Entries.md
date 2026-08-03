@@ -13,12 +13,12 @@ Contains Tax Codes  in SAF-T export section `TaxTable`. Entity: Saft_Declaration
 | - | - | --- |
 |[Country](#country)|`nvarchar(2)` |Country|
 |[Declaration_Export_Tax_Table_Entrie_Id](#declaration_export_tax_table_entrie_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(255)` |Description|
+|[Description](#description)|`nvarchar(256)` |Description|
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Id](#saft_declaration_export_id)|`uniqueidentifier` |Saft Declaration Export|
-|[Tax_Code](#tax_code)|`nvarchar(10)` |Tax Code|
-|[Tax_Type](#tax_type)|`nvarchar(10)` |Tax Type|
+|[Tax_Code](#tax_code)|`nvarchar(9)` |Tax Code|
+|[Tax_Type](#tax_type)|`nvarchar(9)` |Tax Type|
 
 ## Columns
 
@@ -99,7 +99,7 @@ Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -110,7 +110,7 @@ Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255) (Allows NULL)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -229,7 +229,7 @@ Tax Code
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -240,7 +240,7 @@ Tax Code
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -259,7 +259,7 @@ Tax Type
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -270,7 +270,7 @@ Tax Type
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

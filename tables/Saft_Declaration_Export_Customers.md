@@ -11,11 +11,11 @@ Contains Customers included in SAF-T export. Entity: Saft_Declaration_Export_Cus
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`nvarchar(35)` |Account|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account|
 |[City](#city)|`nvarchar(35)` |City or other place of client address|
 |[Closing_Credit_Balance](#closing_credit_balance)|`decimal(18, 2)` |Closing Credit Balance|
 |[Closing_Debit_Balance](#closing_debit_balance)|`decimal(18, 2)` |Closing Debit Balance|
-|[Country](#country)|`nvarchar(10)` |Country|
+|[Country](#country)|`nvarchar(2)` |Country|
 |[Customer_Id](#customer_id)|`nvarchar(35)` |Customer Id|
 |[Declaration_Export_Customer_Id](#declaration_export_customer_id)|`uniqueidentifier` `PK`||
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
@@ -44,7 +44,7 @@ Account
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|5|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -55,7 +55,7 @@ Account
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -164,7 +164,7 @@ Country
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|2|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -175,7 +175,7 @@ Country
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -305,7 +305,7 @@ Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -335,7 +335,7 @@ Name in Latin script
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -549,7 +549,7 @@ Street name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

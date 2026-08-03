@@ -12,11 +12,11 @@ Measurement Units used in SAF-T export. Entity: Saft_Declaration_Export_Measurem
 | Name | Type | Description |
 | - | - | --- |
 |[Declaration_Export_Measurement_Unit_Id](#declaration_export_measurement_unit_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(255)` |Description|
+|[Description](#description)|`nvarchar(256)` |Description|
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Id](#saft_declaration_export_id)|`uniqueidentifier` |Saft Declaration Export|
-|[Unit_Of_Measure](#unit_of_measure)|`nvarchar(35)` |Unit Of Measure|
+|[Unit_Of_Measure](#unit_of_measure)|`nvarchar(9)` |Unit Of Measure|
 
 ## Columns
 
@@ -67,7 +67,7 @@ Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -78,7 +78,7 @@ Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255)|
+|Type|nvarchar(256)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -197,7 +197,7 @@ Unit Of Measure
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -208,7 +208,7 @@ Unit Of Measure
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportVoucherLines  
 Base Table: Saft_Declaration_Export_Voucher_Lines  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {CurrencyCode}  
@@ -34,7 +34,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportVoucherLines.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportVoucherLines.md#accountid) | string (5) | Account Id`Required` |
 | [Amount](Regulatory.Saft.DeclarationExportVoucherLines.md#amount) | decimal (18, 2) | Amount`Required` |
 | [Credit](Regulatory.Saft.DeclarationExportVoucherLines.md#credit) | decimal (18, 2) | Credit`Required` |
 | [CreditBase](Regulatory.Saft.DeclarationExportVoucherLines.md#creditbase) | decimal (18, 2) | Credit Base`Required` |
@@ -43,14 +43,14 @@ Aggregate Tree
 | [CustomerId](Regulatory.Saft.DeclarationExportVoucherLines.md#customerid) | string (35) | Customer Id`Required` |
 | [Debit](Regulatory.Saft.DeclarationExportVoucherLines.md#debit) | decimal (18, 2) | Debit`Required` |
 | [DebitBase](Regulatory.Saft.DeclarationExportVoucherLines.md#debitbase) | decimal (18, 2) | Debit Base`Required` |
-| [Description](Regulatory.Saft.DeclarationExportVoucherLines.md#description) | string (255) __nullable__ | Description |
+| [Description](Regulatory.Saft.DeclarationExportVoucherLines.md#description) | string (256) __nullable__ | Description |
 | [ExportSequence](Regulatory.Saft.DeclarationExportVoucherLines.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [PartyCode](Regulatory.Saft.DeclarationExportVoucherLines.md#partycode) | string (2) | Party Code`Required` |
+| [PartyCode](Regulatory.Saft.DeclarationExportVoucherLines.md#partycode) | string (64) __nullable__ | Party Code |
 | [RecordId](Regulatory.Saft.DeclarationExportVoucherLines.md#recordid) | int32 | Recort Id`Required` |
 | [SupplierId](Regulatory.Saft.DeclarationExportVoucherLines.md#supplierid) | string (35) | Supplier Id`Required` |
-| [TaxCode](Regulatory.Saft.DeclarationExportVoucherLines.md#taxcode) | string (10) | Tax Code`Required` |
-| [TaxpayerAccountId](Regulatory.Saft.DeclarationExportVoucherLines.md#taxpayeraccountid) | string (10) | Taxpayer Account`Required` |
-| [TaxType](Regulatory.Saft.DeclarationExportVoucherLines.md#taxtype) | string (10) | Tax Type`Required` |
+| [TaxCode](Regulatory.Saft.DeclarationExportVoucherLines.md#taxcode) | string (9) | Tax Code`Required` |
+| [TaxpayerAccountId](Regulatory.Saft.DeclarationExportVoucherLines.md#taxpayeraccountid) | string (70) | Taxpayer Account`Required` |
+| [TaxType](Regulatory.Saft.DeclarationExportVoucherLines.md#taxtype) | string (9) | Tax Type`Required` |
 | [TransactionId](Regulatory.Saft.DeclarationExportVoucherLines.md#transactionid) | guid | Trnsaction Id. `Required` `Filter(multi eq)` |
 
 ## References
@@ -79,11 +79,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### Amount
@@ -172,11 +172,11 @@ Show in UI: **ShownByDefault**
 
 Description
 
-Type: **string (255) __nullable__**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -191,13 +191,13 @@ Show in UI: **ShownByDefault**
 
 ### PartyCode
 
-Party Code`Required`
+Party Code
 
-Type: **string (2)**  
+Type: **string (64) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **2**  
+Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
 
 ### RecordId
@@ -225,33 +225,33 @@ Show in UI: **ShownByDefault**
 
 Tax Code`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### TaxpayerAccountId
 
 Taxpayer Account`Required`
 
-Type: **string (10)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### TaxType
 
 Tax Type`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### TransactionId

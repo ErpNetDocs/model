@@ -16,21 +16,21 @@ Each record in the table represents a distinct SAF-T declaration export operatio
 
 | Name | Type | Description |
 | - | - | --- |
-|[Application_Version](#application_version)|`nvarchar(64)` |ERP.net Version Used to Generate the Export|
+|[Application_Version](#application_version)|`nvarchar(18)` |ERP.net Version Used to Generate the Export|
 |[Audit_File_Date_Created](#audit_file_date_created)|`datetime` |Creation date of odit file (value of AuditFileDateCreated)|
 |[Beneficial_Owner_Country_Code](#beneficial_owner_country_code)|`nvarchar(2)` |Country Code of the Beneficial Owner|
-|[Beneficial_Owner_EGN](#beneficial_owner_egn)|`nvarchar(16)` |Personal Identification Number of the Bulgarian Beneficial Owne|
-|[Beneficial_Owner_Name_Cyrillic_BG](#beneficial_owner_name_cyrillic_bg)|`nvarchar(127)` |Name of the Bulgarian Beneficial Owner|
-|[Beneficial_Owner_Name_Latin_Foreign](#beneficial_owner_name_latin_foreign)|`nvarchar(127)` |Name of the Foreign Beneficial Owner|
-|[Company_City](#company_city)|`nvarchar(64)` |City or Other Locality|
+|[Beneficial_Owner_EGN](#beneficial_owner_egn)|`nvarchar(35)` |Personal Identification Number of the Bulgarian Beneficial Owne|
+|[Beneficial_Owner_Name_Cyrillic_BG](#beneficial_owner_name_cyrillic_bg)|`nvarchar(70)` |Name of the Bulgarian Beneficial Owner|
+|[Beneficial_Owner_Name_Latin_Foreign](#beneficial_owner_name_latin_foreign)|`nvarchar(70)` |Name of the Foreign Beneficial Owner|
+|[Company_City](#company_city)|`nvarchar(35)` |City or Other Locality|
 |[Company_Country_Code](#company_country_code)|`nvarchar(2)` |Country Code|
-|[Company_Name](#company_name)|`nvarchar(254)` |Official Name of the Taxable Person|
-|[Company_Registration_Number](#company_registration_number)|`nvarchar(16)` |Company Registration Number or Other Registration Number of the Taxable Person|
-|[Company_Street_Name](#company_street_name)|`nvarchar(254)` |Registered Address of the Taxable Person|
-|[Contact_Person_Email](#contact_person_email)|`nvarchar(64)` |Email Address of the Contact Person|
-|[Contact_Person_Job_Title](#contact_person_job_title)|`nvarchar(127)` |Position or Role of the Contact Person|
+|[Company_Name](#company_name)|`nvarchar(70)` |Official Name of the Taxable Person|
+|[Company_Registration_Number](#company_registration_number)|`nvarchar(35)` |Company Registration Number or Other Registration Number of the Taxable Person|
+|[Company_Street_Name](#company_street_name)|`nvarchar(70)` |Registered Address of the Taxable Person|
+|[Contact_Person_Email](#contact_person_email)|`nvarchar(70)` |Email Address of the Contact Person|
+|[Contact_Person_Job_Title](#contact_person_job_title)|`nvarchar(35)` |Position or Role of the Contact Person|
 |[Contact_Person_Name](#contact_person_name)|`nvarchar(127)` |Contact Person Name|
-|[Contact_Person_Phone](#contact_person_phone)|`nvarchar(20)` |Contact Person Phone Number|
+|[Contact_Person_Phone](#contact_person_phone)|`nvarchar(18)` |Contact Person Phone Number|
 |[Created_On](#created_on)|`datetime` |Date and time of record creation|
 |[Declaration_Export_Id](#declaration_export_id)|`uniqueidentifier` `PK`|Unique export identifier|
 |[Default_Currency_Code](#default_currency_code)|`nvarchar(3)` |Primary currency code of the SAF-T file.|
@@ -44,16 +44,16 @@ Each record in the table represents a distinct SAF-T declaration export operatio
 |[Released_Start_Time](#released_start_time)|`datetime` |The beginning of the Released Time range used to select data.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Id](#saft_declaration_id)|`uniqueidentifier` |SAF-T declaration|
-|[Schema_Version](#schema_version)|`nvarchar(64)` |The version of the SAF-T schema used to generate the file.|
+|[Schema_Version](#schema_version)|`nvarchar(9)` |The version of the SAF-T schema used to generate the file.|
 |[Selection_End_Date](#selection_end_date)|`date` |End Date of the Export Period|
 |[Selection_Start_Date](#selection_start_date)|`date` |Start Date of the Export Period|
 |[Status](#status)|`char(1)` Allowed: `P`, `G`, `C`, `F`, `N`|Current status: Pending(P), Generating(G), Completed(C), Failed(F), Cancelled(N)|
-|[Tax_Accounting_Basis](#tax_accounting_basis)|`nvarchar(20)` |Accounting Basis Used in the SAF-T File|
+|[Tax_Accounting_Basis](#tax_accounting_basis)|`nvarchar(18)` |Accounting Basis Used in the SAF-T File|
 |[Ultimate_Owner_Country_Code](#ultimate_owner_country_code)|`nvarchar(2)` |Country Code of the Ultimate Owner|
-|[Ultimate_Owner_Name_Cyrillic_BG](#ultimate_owner_name_cyrillic_bg)|`nvarchar(127)` |Name of the Bulgarian Ultimate Owner|
-|[Ultimate_Owner_Name_Cyrillic_Foreign](#ultimate_owner_name_cyrillic_foreign)|`nvarchar(127)` |Name of the Foreign Ultimate Owner in Cyrillic|
-|[Ultimate_Owner_Name_Latin_Foreign](#ultimate_owner_name_latin_foreign)|`nvarchar(127)` |Name of the Foreign Ultimate Owner in Latin Script|
-|[Ultimate_Owner_UIC_BG](#ultimate_owner_uic_bg)|`nvarchar(16)` |UIC of the Bulgarian Ultimate Owner|
+|[Ultimate_Owner_Name_Cyrillic_BG](#ultimate_owner_name_cyrillic_bg)|`nvarchar(70)` |Name of the Bulgarian Ultimate Owner|
+|[Ultimate_Owner_Name_Cyrillic_Foreign](#ultimate_owner_name_cyrillic_foreign)|`nvarchar(70)` |Name of the Foreign Ultimate Owner in Cyrillic|
+|[Ultimate_Owner_Name_Latin_Foreign](#ultimate_owner_name_latin_foreign)|`nvarchar(70)` |Name of the Foreign Ultimate Owner in Latin Script|
+|[Ultimate_Owner_UIC_BG](#ultimate_owner_uic_bg)|`nvarchar(35)` |UIC of the Bulgarian Ultimate Owner|
 
 ## Columns
 
@@ -70,7 +70,7 @@ ERP.net Version Used to Generate the Export
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|18|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -81,7 +81,7 @@ ERP.net Version Used to Generate the Export
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64)|
+|Type|nvarchar(18)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -166,7 +166,7 @@ Personal Identification Number of the Bulgarian Beneficial Owne
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|16|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -177,7 +177,7 @@ Personal Identification Number of the Bulgarian Beneficial Owne
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(16) (Allows NULL)|
+|Type|nvarchar(35) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -196,7 +196,7 @@ Name of the Bulgarian Beneficial Owner
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -207,7 +207,7 @@ Name of the Bulgarian Beneficial Owner
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -226,7 +226,7 @@ Name of the Foreign Beneficial Owner
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -237,7 +237,7 @@ Name of the Foreign Beneficial Owner
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -256,7 +256,7 @@ City or Other Locality
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -267,7 +267,7 @@ City or Other Locality
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (Allows NULL)|
+|Type|nvarchar(35) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -316,7 +316,7 @@ Official Name of the Taxable Person
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|254|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -327,7 +327,7 @@ Official Name of the Taxable Person
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -346,7 +346,7 @@ Company Registration Number or Other Registration Number of the Taxable Person
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|16|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -357,7 +357,7 @@ Company Registration Number or Other Registration Number of the Taxable Person
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(16) (Allows NULL)|
+|Type|nvarchar(35) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -376,7 +376,7 @@ Registered Address of the Taxable Person
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|254|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -387,7 +387,7 @@ Registered Address of the Taxable Person
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -406,7 +406,7 @@ Email Address of the Contact Person
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -417,7 +417,7 @@ Email Address of the Contact Person
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -436,7 +436,7 @@ Position or Role of the Contact Person
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -447,7 +447,7 @@ Position or Role of the Contact Person
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(35) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -496,7 +496,7 @@ Contact Person Phone Number
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|20|
+|Max Length|18|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -507,7 +507,7 @@ Contact Person Phone Number
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(20) (Allows NULL)|
+|Type|nvarchar(18) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -970,7 +970,7 @@ The version of the SAF-T schema used to generate the file.
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -981,7 +981,7 @@ The version of the SAF-T schema used to generate the file.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1111,7 +1111,7 @@ Accounting Basis Used in the SAF-T File
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|20|
+|Max Length|18|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -1122,7 +1122,7 @@ Accounting Basis Used in the SAF-T File
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(20)|
+|Type|nvarchar(18)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1177,7 +1177,7 @@ Name of the Bulgarian Ultimate Owner
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -1188,7 +1188,7 @@ Name of the Bulgarian Ultimate Owner
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1207,7 +1207,7 @@ Name of the Foreign Ultimate Owner in Cyrillic
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -1218,7 +1218,7 @@ Name of the Foreign Ultimate Owner in Cyrillic
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1237,7 +1237,7 @@ Name of the Foreign Ultimate Owner in Latin Script
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|127|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -1248,7 +1248,7 @@ Name of the Foreign Ultimate Owner in Latin Script
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(127) (Allows NULL)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -1267,7 +1267,7 @@ UIC of the Bulgarian Ultimate Owner
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|16|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -1278,7 +1278,7 @@ UIC of the Bulgarian Ultimate Owner
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(16) (Allows NULL)|
+|Type|nvarchar(35) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportSalesInvoices  
 Base Table: Saft_Declaration_Export_Sales_Invoices  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {CustomerName}  
@@ -34,15 +34,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportSalesInvoices.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportSalesInvoices.md#accountid) | string (5) | Account Id`Required` |
 | [CustomerCity](Regulatory.Saft.DeclarationExportSalesInvoices.md#customercity) | string (35) | Customer City`Required` |
 | [CustomerCountry](Regulatory.Saft.DeclarationExportSalesInvoices.md#customercountry) | string (2) | Customer Country`Required` |
 | [CustomerId](Regulatory.Saft.DeclarationExportSalesInvoices.md#customerid) | string (35) | Customer Id`Required` |
-| [CustomerName](Regulatory.Saft.DeclarationExportSalesInvoices.md#customername) | string (70) | Customer Name`Required` |
+| [CustomerName](Regulatory.Saft.DeclarationExportSalesInvoices.md#customername) | string (70) __nullable__ | Customer Name |
 | [ExportSequence](Regulatory.Saft.DeclarationExportSalesInvoices.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
 | [InvoiceDate](Regulatory.Saft.DeclarationExportSalesInvoices.md#invoicedate) | date | Invoice Date`Required` `Filter(ge;le)` |
-| [InvoiceNo](Regulatory.Saft.DeclarationExportSalesInvoices.md#invoiceno) | string (35) | Invoice No`Required` |
-| [InvoiceType](Regulatory.Saft.DeclarationExportSalesInvoices.md#invoicetype) | string (10) | Invoice Type`Required` |
+| [InvoiceNo](Regulatory.Saft.DeclarationExportSalesInvoices.md#invoiceno) | string (70) | Invoice No`Required` |
+| [InvoiceType](Regulatory.Saft.DeclarationExportSalesInvoices.md#invoicetype) | string (9) | Invoice Type`Required` |
 | [SelfBillingIndicator](Regulatory.Saft.DeclarationExportSalesInvoices.md#selfbillingindicator) | string (1) | Self Billing Indicator`Required` |
 | [TransactionId](Regulatory.Saft.DeclarationExportSalesInvoices.md#transactionid) | guid | Transaction Id. `Required` `Filter(multi eq)` |
 
@@ -72,11 +72,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### CustomerCity
@@ -114,9 +114,9 @@ Show in UI: **ShownByDefault**
 
 ### CustomerName
 
-Customer Name`Required`
+Customer Name
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -147,22 +147,22 @@ Show in UI: **ShownByDefault**
 
 Invoice No`Required`
 
-Type: **string (35)**  
+Type: **string (70)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **35**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### InvoiceType
 
 Invoice Type`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### SelfBillingIndicator

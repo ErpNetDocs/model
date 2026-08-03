@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportSuppliers  
 Base Table: Saft_Declaration_Export_Suppliers  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {Name}  
@@ -35,14 +35,14 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccountId](Regulatory.Saft.DeclarationExportSuppliers.md#accountid) | string (10) | Account Id`Required` |
+| [AccountId](Regulatory.Saft.DeclarationExportSuppliers.md#accountid) | string (5) | Account Id`Required` |
 | [City](Regulatory.Saft.DeclarationExportSuppliers.md#city) | string (35) | City or other place of supplier address`Required` |
 | [ClosingCreditBalance](Regulatory.Saft.DeclarationExportSuppliers.md#closingcreditbalance) | decimal (18, 2) | Closing Credit Balance`Required` |
 | [ClosingDebitBalance](Regulatory.Saft.DeclarationExportSuppliers.md#closingdebitbalance) | decimal (18, 2) | Closing Debit Balance`Required` |
-| [Country](Regulatory.Saft.DeclarationExportSuppliers.md#country) | string (10) | Country`Required` |
+| [Country](Regulatory.Saft.DeclarationExportSuppliers.md#country) | string (2) | Country`Required` |
 | [ExportSequence](Regulatory.Saft.DeclarationExportSuppliers.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [Name](Regulatory.Saft.DeclarationExportSuppliers.md#name) | string (70) | Name`Required` |
-| [NameLatin](Regulatory.Saft.DeclarationExportSuppliers.md#namelatin) | string (70) | Name Latin`Required` |
+| [Name](Regulatory.Saft.DeclarationExportSuppliers.md#name) | string (70) __nullable__ | Name |
+| [NameLatin](Regulatory.Saft.DeclarationExportSuppliers.md#namelatin) | string (70) __nullable__ | Name Latin |
 | [OpeningCreditBalance](Regulatory.Saft.DeclarationExportSuppliers.md#openingcreditbalance) | decimal (18, 2) | Opening Credit Balance`Required` |
 | [OpeningDebitBalance](Regulatory.Saft.DeclarationExportSuppliers.md#openingdebitbalance) | decimal (18, 2) | Opening Debit Balance`Required` |
 | [RegistrationNumber](Regulatory.Saft.DeclarationExportSuppliers.md#registrationnumber) | string (35) | Identification number`Required` |
@@ -76,11 +76,11 @@ Aggregate Tree
 
 Account Id`Required`
 
-Type: **string (10)**  
+Type: **string (5)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **5**  
 Show in UI: **ShownByDefault**  
 
 ### City
@@ -118,11 +118,11 @@ Show in UI: **ShownByDefault**
 
 Country`Required`
 
-Type: **string (10)**  
+Type: **string (2)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **2**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -137,9 +137,9 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name`Required`
+Name
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
@@ -148,9 +148,9 @@ Show in UI: **ShownByDefault**
 
 ### NameLatin
 
-Name Latin`Required`
+Name Latin
 
-Type: **string (70)**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  

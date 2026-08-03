@@ -12,15 +12,15 @@ Contains Products included in SAF-T export. Entity: Saft_Declaration_Export_Prod
 | Name | Type | Description |
 | - | - | --- |
 |[Declaration_Export_Product_Id](#declaration_export_product_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(255)` |Description|
+|[Description](#description)|`nvarchar(256)` |Description|
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
-|[Product_Code](#product_code)|`nvarchar(35)` |Product code|
+|[Product_Code](#product_code)|`nvarchar(70)` |Product code|
 |[Product_Commodity_Code](#product_commodity_code)|`nvarchar(35)` |Product Commodity Code|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Export_Id](#saft_declaration_export_id)|`uniqueidentifier` |Saft Declaration Export|
 |[UOM_Base](#uom_base)|`nvarchar(35)` |UOM Base|
-|[UOM_Standard](#uom_standard)|`nvarchar(35)` |UOM Standard|
-|[UOM_To_UOM_Base_Conversion_Factor](#uom_to_uom_base_conversion_factor)|`nvarchar(15)` |UOM To UOM Base Conversion Factor|
+|[UOM_Standard](#uom_standard)|`nvarchar(9)` |UOM Standard|
+|[UOM_To_UOM_Base_Conversion_Factor](#uom_to_uom_base_conversion_factor)|`nvarchar(35)` |UOM To UOM Base Conversion Factor|
 
 ## Columns
 
@@ -71,7 +71,7 @@ Description
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|255|
+|Max Length|256|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -82,7 +82,7 @@ Description
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(255) (Allows NULL)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -137,7 +137,7 @@ Product code
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|70|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -148,7 +148,7 @@ Product code
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(70)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -291,7 +291,7 @@ UOM Standard
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|35|
+|Max Length|9|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -302,7 +302,7 @@ UOM Standard
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(35)|
+|Type|nvarchar(9)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -321,7 +321,7 @@ UOM To UOM Base Conversion Factor
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|15|
+|Max Length|35|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -332,7 +332,7 @@ UOM To UOM Base Conversion Factor
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(15)|
+|Type|nvarchar(35)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

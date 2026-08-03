@@ -11,11 +11,11 @@ Contains Suppliers in SAF-T export section `Suppliers`. Entity: Saft_Declaration
 
 | Name | Type | Description |
 | - | - | --- |
-|[Account_Id](#account_id)|`nvarchar(10)` |Account Id|
+|[Account_Id](#account_id)|`nvarchar(5)` |Account Id|
 |[City](#city)|`nvarchar(35)` |City or other place of supplier address|
 |[Closing_Credit_Balance](#closing_credit_balance)|`decimal(18, 2)` |Closing Credit Balance|
 |[Closing_Debit_Balance](#closing_debit_balance)|`decimal(18, 2)` |Closing Debit Balance|
-|[Country](#country)|`nvarchar(10)` |Country|
+|[Country](#country)|`nvarchar(2)` |Country|
 |[Declaration_Export_Supplier_Id](#declaration_export_supplier_id)|`uniqueidentifier` `PK`||
 |[Export_Sequence](#export_sequence)|`int` |Monotonc sequence within Declaration Export|
 |[Name](#name)|`nvarchar(70)` |Name|
@@ -44,7 +44,7 @@ Account Id
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|5|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -55,7 +55,7 @@ Account Id
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(5)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -164,7 +164,7 @@ Country
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|10|
+|Max Length|2|
 |Order|2147483647|
 |Ownership Reference|no|
 |Pasword|no|
@@ -175,7 +175,7 @@ Country
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(10)|
+|Type|nvarchar(2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -275,7 +275,7 @@ Name
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -305,7 +305,7 @@ Name Latin
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(70)|
+|Type|nvarchar(70) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

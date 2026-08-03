@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExportTaxEntries  
 Base Table: Saft_Declaration_Export_Tax_Table_Entries  
 Introduced In Version: 27.1.0.86  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {TaxCode}  
@@ -35,10 +35,10 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Country](Regulatory.Saft.DeclarationExportTaxEntries.md#country) | string (2) | Country`Required` |
-| [Description](Regulatory.Saft.DeclarationExportTaxEntries.md#description) | string (255) __nullable__ | Description |
+| [Description](Regulatory.Saft.DeclarationExportTaxEntries.md#description) | string (256) __nullable__ | Description |
 | [ExportSequence](Regulatory.Saft.DeclarationExportTaxEntries.md#exportsequence) | int32 | Monotonc sequence within Declaration Export`Required` `Filter(ge;le)` `ORD` `Introduced in version 27.1.0.89` |
-| [TaxCode](Regulatory.Saft.DeclarationExportTaxEntries.md#taxcode) | string (10) | Tax Code`Required` |
-| [TaxType](Regulatory.Saft.DeclarationExportTaxEntries.md#taxtype) | string (10) | Tax Type`Required` |
+| [TaxCode](Regulatory.Saft.DeclarationExportTaxEntries.md#taxcode) | string (9) | Tax Code`Required` |
+| [TaxType](Regulatory.Saft.DeclarationExportTaxEntries.md#taxtype) | string (9) | Tax Type`Required` |
 
 ## References
 
@@ -77,11 +77,11 @@ Show in UI: **ShownByDefault**
 
 Description
 
-Type: **string (255) __nullable__**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **255**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExportSequence
@@ -98,22 +98,22 @@ Show in UI: **ShownByDefault**
 
 Tax Code`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### TaxType
 
 Tax Type`Required`
 
-Type: **string (10)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **10**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### Id

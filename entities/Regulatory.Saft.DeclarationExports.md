@@ -11,7 +11,7 @@ Namespace: [Regulatory.Saft](Regulatory.Saft.md)
 Repository: Regulatory.Saft.DeclarationExports  
 Base Table: Saft_Declaration_Exports  
 Introduced In Version: 27.1.0.81  
-API access:  ReadOnly  
+API access:  ReadWrite  
 
 ## Visualization
 Display Format: {CompanyName}  
@@ -37,21 +37,21 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ApplicationVersion](Regulatory.Saft.DeclarationExports.md#applicationversion) | string (64) | ERP.net Version Used to Generate the Export`Required` |
+| [ApplicationVersion](Regulatory.Saft.DeclarationExports.md#applicationversion) | string (18) | ERP.net Version Used to Generate the Export`Required` |
 | [AuditFileDateCreated](Regulatory.Saft.DeclarationExports.md#auditfiledatecreated) | datetime | Creation date of odit file (value of AuditFileDateCreated)`Required` `Filter(ge;le)` |
 | [BeneficialOwnerCountryCode](Regulatory.Saft.DeclarationExports.md#beneficialownercountrycode) | string (2) __nullable__ | Country Code of the Beneficial Owner |
-| [BeneficialOwnerEGN](Regulatory.Saft.DeclarationExports.md#beneficialowneregn) | string (16) __nullable__ | Personal Identification Number of the Bulgarian Beneficial Owne |
-| [BeneficialOwner<br />NameCyrillicBG](Regulatory.Saft.DeclarationExports.md#beneficialownernamecyrillicbg) | string (127) __nullable__ | Name of the Bulgarian Beneficial Owner |
-| [BeneficialOwner<br />NameLatinForeign](Regulatory.Saft.DeclarationExports.md#beneficialownernamelatinforeign) | string (127) __nullable__ | Name of the Foreign Beneficial Owner |
-| [CompanyCity](Regulatory.Saft.DeclarationExports.md#companycity) | string (64) __nullable__ | City or Other Locality |
+| [BeneficialOwnerEGN](Regulatory.Saft.DeclarationExports.md#beneficialowneregn) | string (35) __nullable__ | Personal Identification Number of the Bulgarian Beneficial Owne |
+| [BeneficialOwner<br />NameCyrillicBG](Regulatory.Saft.DeclarationExports.md#beneficialownernamecyrillicbg) | string (70) __nullable__ | Name of the Bulgarian Beneficial Owner |
+| [BeneficialOwner<br />NameLatinForeign](Regulatory.Saft.DeclarationExports.md#beneficialownernamelatinforeign) | string (70) __nullable__ | Name of the Foreign Beneficial Owner |
+| [CompanyCity](Regulatory.Saft.DeclarationExports.md#companycity) | string (35) __nullable__ | City or Other Locality |
 | [CompanyCountryCode](Regulatory.Saft.DeclarationExports.md#companycountrycode) | string (2) __nullable__ | Country Code |
-| [CompanyName](Regulatory.Saft.DeclarationExports.md#companyname) | string (254) __nullable__ | Official Name of the Taxable Person |
-| [CompanyRegistrationNumber](Regulatory.Saft.DeclarationExports.md#companyregistrationnumber) | string (16) __nullable__ | Company Registration Number or Other Registration Number of the Taxable Person |
-| [CompanyStreetName](Regulatory.Saft.DeclarationExports.md#companystreetname) | string (254) __nullable__ | Registered Address of the Taxable Person |
-| [ContactPersonEmail](Regulatory.Saft.DeclarationExports.md#contactpersonemail) | string (64) __nullable__ | Email Address of the Contact Person |
-| [ContactPersonJobTitle](Regulatory.Saft.DeclarationExports.md#contactpersonjobtitle) | string (127) __nullable__ | Position or Role of the Contact Person |
+| [CompanyName](Regulatory.Saft.DeclarationExports.md#companyname) | string (70) __nullable__ | Official Name of the Taxable Person |
+| [CompanyRegistrationNumber](Regulatory.Saft.DeclarationExports.md#companyregistrationnumber) | string (35) __nullable__ | Company Registration Number or Other Registration Number of the Taxable Person |
+| [CompanyStreetName](Regulatory.Saft.DeclarationExports.md#companystreetname) | string (70) __nullable__ | Registered Address of the Taxable Person |
+| [ContactPersonEmail](Regulatory.Saft.DeclarationExports.md#contactpersonemail) | string (70) __nullable__ | Email Address of the Contact Person |
+| [ContactPersonJobTitle](Regulatory.Saft.DeclarationExports.md#contactpersonjobtitle) | string (35) __nullable__ | Position or Role of the Contact Person |
 | [ContactPersonName](Regulatory.Saft.DeclarationExports.md#contactpersonname) | string (127) __nullable__ | Contact Person Name |
-| [ContactPersonPhone](Regulatory.Saft.DeclarationExports.md#contactpersonphone) | string (20) __nullable__ | Contact Person Phone Number |
+| [ContactPersonPhone](Regulatory.Saft.DeclarationExports.md#contactpersonphone) | string (18) __nullable__ | Contact Person Phone Number |
 | [CreatedOn](Regulatory.Saft.DeclarationExports.md#createdon) | datetime | Date and time of record creation`Required` `Default(Now)` `Filter(ge;le)` |
 | [DefaultCurrencyCode](Regulatory.Saft.DeclarationExports.md#defaultcurrencycode) | string (3) | Primary currency code of the SAF-T file.`Required` |
 | [ErrorMessage](Regulatory.Saft.DeclarationExports.md#errormessage) | string (max) __nullable__ | Information about the error that occurred during failed generation. |
@@ -62,16 +62,16 @@ Aggregate Root:
 | [IsPartOfGroup](Regulatory.Saft.DeclarationExports.md#ispartofgroup) | int32 __nullable__ | Indicates whether the company belongs to a group of enterprises. |
 | [ReleasedEndTime](Regulatory.Saft.DeclarationExports.md#releasedendtime) | datetime | The end of the Released Time range used to select data.`Required` `Filter(ge;le)` |
 | [ReleasedStartTime](Regulatory.Saft.DeclarationExports.md#releasedstarttime) | datetime | The beginning of the Released Time range used to select data.`Required` `Filter(ge;le)` |
-| [SchemaVersion](Regulatory.Saft.DeclarationExports.md#schemaversion) | string (64) | The version of the SAF-T schema used to generate the file.`Required` |
+| [SchemaVersion](Regulatory.Saft.DeclarationExports.md#schemaversion) | string (9) | The version of the SAF-T schema used to generate the file.`Required` |
 | [SelectionEndDate](Regulatory.Saft.DeclarationExports.md#selectionenddate) | date | End Date of the Export Period`Required` `Filter(eq;ge;le)` |
 | [SelectionStartDate](Regulatory.Saft.DeclarationExports.md#selectionstartdate) | date | Start Date of the Export Period`Required` `Filter(eq;ge;le)` |
 | [Status](Regulatory.Saft.DeclarationExports.md#status) | [Status](Regulatory.Saft.DeclarationExports.md#status) | Current status: Pending(P), Generating(G), Completed(C), Failed(F), Cancelled(N)`Required` `Filter(multi eq)` |
-| [TaxAccountingBasis](Regulatory.Saft.DeclarationExports.md#taxaccountingbasis) | string (20) | Accounting Basis Used in the SAF-T File`Required` `Filter(eq)` |
+| [TaxAccountingBasis](Regulatory.Saft.DeclarationExports.md#taxaccountingbasis) | string (18) | Accounting Basis Used in the SAF-T File`Required` `Filter(eq)` |
 | [UltimateOwnerCountryCode](Regulatory.Saft.DeclarationExports.md#ultimateownercountrycode) | string (2) __nullable__ | Country Code of the Ultimate Owner |
-| [UltimateOwnerName<br />CyrillicBG](Regulatory.Saft.DeclarationExports.md#ultimateownernamecyrillicbg) | string (127) __nullable__ | Name of the Bulgarian Ultimate Owner |
-| [UltimateOwnerName<br />CyrillicForeign](Regulatory.Saft.DeclarationExports.md#ultimateownernamecyrillicforeign) | string (127) __nullable__ | Name of the Foreign Ultimate Owner in Cyrillic |
-| [UltimateOwnerName<br />LatinForeign](Regulatory.Saft.DeclarationExports.md#ultimateownernamelatinforeign) | string (127) __nullable__ | Name of the Foreign Ultimate Owner in Latin Script |
-| [UltimateOwnerUICBG](Regulatory.Saft.DeclarationExports.md#ultimateowneruicbg) | string (16) __nullable__ | UIC of the Bulgarian Ultimate Owner |
+| [UltimateOwnerName<br />CyrillicBG](Regulatory.Saft.DeclarationExports.md#ultimateownernamecyrillicbg) | string (70) __nullable__ | Name of the Bulgarian Ultimate Owner |
+| [UltimateOwnerName<br />CyrillicForeign](Regulatory.Saft.DeclarationExports.md#ultimateownernamecyrillicforeign) | string (70) __nullable__ | Name of the Foreign Ultimate Owner in Cyrillic |
+| [UltimateOwnerName<br />LatinForeign](Regulatory.Saft.DeclarationExports.md#ultimateownernamelatinforeign) | string (70) __nullable__ | Name of the Foreign Ultimate Owner in Latin Script |
+| [UltimateOwnerUICBG](Regulatory.Saft.DeclarationExports.md#ultimateowneruicbg) | string (35) __nullable__ | UIC of the Bulgarian Ultimate Owner |
 
 ## References
 
@@ -95,11 +95,11 @@ Aggregate Root:
 
 ERP.net Version Used to Generate the Export`Required`
 
-Type: **string (64)**  
+Type: **string (18)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Maximum Length: **18**  
 Show in UI: **ShownByDefault**  
 
 ### AuditFileDateCreated
@@ -127,44 +127,44 @@ Show in UI: **ShownByDefault**
 
 Personal Identification Number of the Bulgarian Beneficial Owne
 
-Type: **string (16) __nullable__**  
+Type: **string (35) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **16**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### BeneficialOwnerNameCyrillicBG
 
 Name of the Bulgarian Beneficial Owner
 
-Type: **string (127) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### BeneficialOwnerNameLatinForeign
 
 Name of the Foreign Beneficial Owner
 
-Type: **string (127) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### CompanyCity
 
 City or Other Locality
 
-Type: **string (64) __nullable__**  
+Type: **string (35) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### CompanyCountryCode
@@ -182,55 +182,55 @@ Show in UI: **ShownByDefault**
 
 Official Name of the Taxable Person
 
-Type: **string (254) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **254**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### CompanyRegistrationNumber
 
 Company Registration Number or Other Registration Number of the Taxable Person
 
-Type: **string (16) __nullable__**  
+Type: **string (35) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **16**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### CompanyStreetName
 
 Registered Address of the Taxable Person
 
-Type: **string (254) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **254**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### ContactPersonEmail
 
 Email Address of the Contact Person
 
-Type: **string (64) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### ContactPersonJobTitle
 
 Position or Role of the Contact Person
 
-Type: **string (127) __nullable__**  
+Type: **string (35) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### ContactPersonName
@@ -248,11 +248,11 @@ Show in UI: **ShownByDefault**
 
 Contact Person Phone Number
 
-Type: **string (20) __nullable__**  
+Type: **string (18) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **20**  
+Maximum Length: **18**  
 Show in UI: **ShownByDefault**  
 
 ### CreatedOn
@@ -371,11 +371,11 @@ Show in UI: **ShownByDefault**
 
 The version of the SAF-T schema used to generate the file.`Required`
 
-Type: **string (64)**  
+Type: **string (9)**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Maximum Length: **9**  
 Show in UI: **ShownByDefault**  
 
 ### SelectionEndDate
@@ -423,11 +423,11 @@ Show in UI: **ShownByDefault**
 
 Accounting Basis Used in the SAF-T File`Required` `Filter(eq)`
 
-Type: **string (20)**  
+Type: **string (18)**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
-Maximum Length: **20**  
+Maximum Length: **18**  
 Show in UI: **ShownByDefault**  
 
 ### UltimateOwnerCountryCode
@@ -445,44 +445,44 @@ Show in UI: **ShownByDefault**
 
 Name of the Bulgarian Ultimate Owner
 
-Type: **string (127) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### UltimateOwnerNameCyrillicForeign
 
 Name of the Foreign Ultimate Owner in Cyrillic
 
-Type: **string (127) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### UltimateOwnerNameLatinForeign
 
 Name of the Foreign Ultimate Owner in Latin Script
 
-Type: **string (127) __nullable__**  
+Type: **string (70) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **127**  
+Maximum Length: **70**  
 Show in UI: **ShownByDefault**  
 
 ### UltimateOwnerUICBG
 
 UIC of the Bulgarian Ultimate Owner
 
-Type: **string (16) __nullable__**  
+Type: **string (35) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
-Maximum Length: **16**  
+Maximum Length: **35**  
 Show in UI: **ShownByDefault**  
 
 ### Id
