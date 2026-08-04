@@ -21,7 +21,7 @@ Represents one POS device, attached to a POS terminal. Entity: Pos_Devices (Intr
 |[Is_Active](#is_active)|`bit` |Indicates whether the device is currently active and can be choosen from drop-downs in new records.|
 |[Pos_Device_Id](#pos_device_id)|`uniqueidentifier` `PK`||
 |[Pos_Terminal_Id](#pos_terminal_id)|`uniqueidentifier` |The POS terminal, to which this device is attached.|
-|[Protocol_Name](#protocol_name)|`nvarchar(32)` Allowed: `ERPNET_FP`|The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.|
+|[Protocol_Name](#protocol_name)|`nvarchar(32)` Allowed: `ERPNET_FP`, `ERPNET_PT`|The name of the protocol, which can be used to communicate with the device. NULL means that the protocol is unknown and programmatic communication with the device would not be performed.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Settings_Json](#settings_json)|`nvarchar(max)` |Settings and operator access codes for the POS device. The data is stored as Json, encrypted for the current application server instance. NULL means that there are no settings for this device.|
 
@@ -252,7 +252,7 @@ The name of the protocol, which can be used to communicate with the device. NULL
 
 | Property | Value |
 | - | - |
-|Allowed Values|`ERPNET_FP`|
+|Allowed Values|`ERPNET_FP`, `ERPNET_PT`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

@@ -127,6 +127,7 @@ Allowed Values (Crm.Pos.DevicesRepository.ProtocolName Enum Members)
 | Value | Description |
 | ---- | --- |
 | ERPNETFP | ErpNet.FP. Stored as 'ERPNET_FP'. <br /> Database Value: 'ERPNET_FP' <br /> Model Value: 0 <br /> Domain API Value: 'ERPNETFP' |
+| ERPNETPT | ErpNet.PT. Stored as 'ERPNET_PT'. <br /> Database Value: 'ERPNET_PT' <br /> Model Value: 1 <br /> Domain API Value: 'ERPNETPT' |
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
