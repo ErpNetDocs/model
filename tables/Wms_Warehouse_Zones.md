@@ -22,6 +22,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 |[Warehouse_Zone_Code](#warehouse_zone_code)|`nvarchar(32)` |Zone code, unique within the warehouse.|
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Zone_Name](#warehouse_zone_name)|`nvarchar(254)` `ML`|Multi-language name of the zone.|
+|[Zone_Type](#zone_type)|`char(3)` Allowed: `RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`|Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.|
 
 ## Columns
 
@@ -260,5 +261,42 @@ Multi-language name of the zone.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Zone_Type
+
+
+Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Zone_Type - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

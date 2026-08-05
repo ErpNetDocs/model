@@ -25,6 +25,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the worker works.|
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Worker_Name](#warehouse_worker_name)|`nvarchar(254)` `ML`|Name of the worker (multi-language).|
+|[Warehouse_Worker_Role](#warehouse_worker_role)|`char(3)` Allowed: `CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `KTR`, `DKR`, `GNR`|Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.|
 
 ## Columns
 
@@ -373,5 +374,42 @@ Name of the worker (multi-language).
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Warehouse_Worker_Role
+
+
+Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `KTR`, `DKR`, `GNR`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Warehouse_Worker_Role - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 

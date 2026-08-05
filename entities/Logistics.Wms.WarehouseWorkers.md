@@ -41,6 +41,7 @@ Aggregate Root:
 | [IsActive](Logistics.Wms.WarehouseWorkers.md#isactive) | boolean | Specifies whether the worker is active and can execute new warehouse tasks.`Required` `Default(true)` `Filter(eq)` |
 | [Name](Logistics.Wms.WarehouseWorkers.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the worker (multi-language).`Required` `Filter(multi eq;like)` |
 | [Notes](Logistics.Wms.WarehouseWorkers.md#notes) | string (max) __nullable__ | Notes for this WarehouseWorker. |
+| [WarehouseWorkerRole](Logistics.Wms.WarehouseWorkers.md#warehouseworkerrole) | [WarehouseWorkerRole](Logistics.Wms.WarehouseWorkers.md#warehouseworkerrole) | Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.`Required` `Filter(multi eq)` `Introduced in version 27.1.0.99` |
 
 ## References
 
@@ -113,6 +114,31 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### WarehouseWorkerRole
+
+Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.`Required` `Filter(multi eq)` `Introduced in version 27.1.0.99`
+
+Type: **[WarehouseWorkerRole](Logistics.Wms.WarehouseWorkers.md#warehouseworkerrole)**  
+Category: **System**  
+Allowed values for the `WarehouseWorkerRole`(Logistics.Wms.WarehouseWorkers.md#warehouseworkerrole) data attribute  
+Allowed Values (Logistics.Wms.WarehouseWorkersRepository.WarehouseWorkerRole Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Checker | Verifies picked orders before packing or shipment by checking products, quantities, identification details, and visible discrepancies.. Stored as 'CKR'. <br /> Database Value: 'CKR' <br /> Model Value: 0 <br /> Domain API Value: 'Checker' |
+| Labeler | Prints and applies the required product labels, including localized labels containing translated or market-specific information.. Stored as 'LBR'. <br /> Database Value: 'LBR' <br /> Model Value: 1 <br /> Domain API Value: 'Labeler' |
+| Picker | Collects the required products from warehouse locations according to assigned picking tasks.. Stored as 'PKR'. <br /> Database Value: 'PKR' <br /> Model Value: 2 <br /> Domain API Value: 'Picker' |
+| Receiver | Receives incoming goods and verifies their products, quantities, identification details, and logistic units.. Stored as 'RVR'. <br /> Database Value: 'RVR' <br /> Model Value: 3 <br /> Domain API Value: 'Receiver' |
+| Handler | Performs internal warehouse movements using material-handling equipment, including putaway, replenishment, and pallet or logistic-unit transfers.. Stored as 'HNR'. <br /> Database Value: 'HNR' <br /> Model Value: 4 <br /> Domain API Value: 'Handler' |
+| Packer | Packs picked products into packages or logistic units and prepares them for shipment or subsequent warehouse processing.. Stored as 'PCR'. <br /> Database Value: 'PCR' <br /> Model Value: 5 <br /> Domain API Value: 'Packer' |
+| Kitter | Collects and verifies the specified components of composite products and confirms their kitting for dispatch according to warehouse orders.. Stored as 'KTR'. <br /> Database Value: 'KTR' <br /> Model Value: 6 <br /> Domain API Value: 'Kitter' |
+| Dekitter | Separates and verifies the components of received composite products and confirms their dekitting according to warehouse orders.. Stored as 'DKR'. <br /> Database Value: 'DKR' <br /> Model Value: 7 <br /> Domain API Value: 'Dekitter' |
+| General | Performs various warehouse tasks without being assigned a single primary specialization.. Stored as 'GNR'. <br /> Database Value: 'GNR' <br /> Model Value: 8 <br /> Domain API Value: 'General' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Id

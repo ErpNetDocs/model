@@ -40,6 +40,7 @@ Aggregate Root:
 | [Code](Logistics.Wms.WarehouseZones.md#code) | string (32) | Zone code, unique within the warehouse.`Required` `Filter(multi eq;like)` |
 | [Name](Logistics.Wms.WarehouseZones.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Multi-language name of the zone.`Required` `Filter(eq;like)` |
 | [Notes](Logistics.Wms.WarehouseZones.md#notes) | string (max) __nullable__ | Notes for this WarehouseZone. |
+| [ZoneType](Logistics.Wms.WarehouseZones.md#zonetype) | [ZoneType](Logistics.Wms.WarehouseZones.md#zonetype) __nullable__ | Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.`Filter(multi eq)` `Introduced in version 27.1.0.99` |
 
 ## References
 
@@ -95,6 +96,36 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### ZoneType
+
+Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.`Filter(multi eq)` `Introduced in version 27.1.0.99`
+
+Type: **[ZoneType](Logistics.Wms.WarehouseZones.md#zonetype) __nullable__**  
+Category: **System**  
+Allowed values for the `ZoneType`(Logistics.Wms.WarehouseZones.md#zonetype) data attribute  
+Allowed Values (Logistics.Wms.WarehouseZonesRepository.ZoneType Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Receiving | A zone where incoming goods are unloaded, received, and initially processed.. Stored as 'RCZ'. <br /> Database Value: 'RCZ' <br /> Model Value: 0 <br /> Domain API Value: 'Receiving' |
+| Bulk | A primary storage zone for goods and logistic units, including reserve quantities and full pallets.. Stored as 'BLK'. <br /> Database Value: 'BLK' <br /> Model Value: 1 <br /> Domain API Value: 'Bulk' |
+| Picking | A zone from which products are collected for the execution of Pick tasks.. Stored as 'PKZ'. <br /> Database Value: 'PKZ' <br /> Model Value: 2 <br /> Domain API Value: 'Picking' |
+| Labeling | A zone where required localized or market-specific labels are applied to products.. Stored as 'LBZ'. <br /> Database Value: 'LBZ' <br /> Model Value: 3 <br /> Domain API Value: 'Labeling' |
+| Packing | A zone where products or components are packed, repacked, or consolidated into packages or logistic units.. Stored as 'PAZ'. <br /> Database Value: 'PAZ' <br /> Model Value: 4 <br /> Domain API Value: 'Packing' |
+| Assembly | A zone where components are physically assembled into finished or semi-finished products.. Stored as 'ASZ'. <br /> Database Value: 'ASZ' <br /> Model Value: 5 <br /> Domain API Value: 'Assembly' |
+| Disassembly | A zone where products are disassembled into their individual components.. Stored as 'DSZ'. <br /> Database Value: 'DSZ' <br /> Model Value: 6 <br /> Domain API Value: 'Disassembly' |
+| Shipping | A zone where completed goods are prepared for loading and departure from the warehouse.. Stored as 'SHZ'. <br /> Database Value: 'SHZ' <br /> Model Value: 7 <br /> Domain API Value: 'Shipping' |
+| Quarantine | A zone where goods are temporarily isolated and excluded from standard warehouse processes.. Stored as 'QRZ'. <br /> Database Value: 'QRZ' <br /> Model Value: 8 <br /> Domain API Value: 'Quarantine' |
+| General | A zone without a single specific primary purpose.. Stored as 'GNZ'. <br /> Database Value: 'GNZ' <br /> Model Value: 9 <br /> Domain API Value: 'General' |
+| UserDefined1 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZA'. <br /> Database Value: 'UZA' <br /> Model Value: 10 <br /> Domain API Value: 'UserDefined1' |
+| UserDefined2 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZB'. <br /> Database Value: 'UZB' <br /> Model Value: 11 <br /> Domain API Value: 'UserDefined2' |
+| UserDefined3 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZC'. <br /> Database Value: 'UZC' <br /> Model Value: 12 <br /> Domain API Value: 'UserDefined3' |
+| UserDefined4 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZD'. <br /> Database Value: 'UZD' <br /> Model Value: 13 <br /> Domain API Value: 'UserDefined4' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Id

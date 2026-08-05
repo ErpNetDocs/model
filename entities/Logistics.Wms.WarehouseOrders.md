@@ -418,6 +418,7 @@ Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Member
 | Assemble | Assemble value. Stored as 'ASM'. <br /> Database Value: 'ASM' <br /> Model Value: 13 <br /> Domain API Value: 'Assemble' |
 | Disassemble | Disassemble value. Stored as 'DSM'. <br /> Database Value: 'DSM' <br /> Model Value: 14 <br /> Domain API Value: 'Disassemble' |
 | Reconciliation | Reconciliation value. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 15 <br /> Domain API Value: 'Reconciliation' |
+| Pick | Warehouse picking task used to collect the required products from warehouse locations according to the Warehouse Order. When Warehouse Orders with this task type are completed, the picked quantities are recorded as executed and the products are prepared for the next warehouse operation.. Stored as 'PIK'. <br /> Database Value: 'PIK' <br /> Model Value: 16 <br /> Domain API Value: 'Pick' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
