@@ -381,6 +381,7 @@ The following table contains default system-specified tracking levels:
 | Logistics.Wms.WarehouseOrderLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseOrders | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehousePolicies | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Wms.WarehouseProcesses | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliationDetails | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

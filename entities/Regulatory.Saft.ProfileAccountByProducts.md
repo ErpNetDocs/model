@@ -46,6 +46,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | [DebitCreditIndicator](Regulatory.Saft.ProfileAccountByProducts.md#debitcreditindicator) | Debit/credit indicator for SAF-T invoice lines.`Required` `Default(&quot;D&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` |
+| [Direction](Regulatory.Saft.ProfileAccountByProducts.md#direction) | [Direction](Regulatory.Saft.ProfileAccountByProducts.md#direction) __nullable__ | Direction of the inventory operation, used as a criterion for determining the accounting account.`Filter(eq)` `Introduced in version 27.1.1.5` |
 | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | [EntityKind](Regulatory.Saft.ProfileAccountByProducts.md#entitykind) | Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.`Required` `Default(&quot;S&quot;)` `Filter(eq)` `Introduced in version 26.2.1.9` |
 | [Notes](Regulatory.Saft.ProfileAccountByProducts.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.`Filter(like)` |
 
@@ -87,6 +88,24 @@ Allowed Values (Regulatory.Saft.ProfileAccountByProductsRepository.DebitCreditIn
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **Debit**  
+Show in UI: **ShownByDefault**  
+
+### Direction
+
+Direction of the inventory operation, used as a criterion for determining the accounting account.`Filter(eq)` `Introduced in version 27.1.1.5`
+
+Type: **[Direction](Regulatory.Saft.ProfileAccountByProducts.md#direction) __nullable__**  
+Category: **System**  
+Allowed values for the `Direction`(Regulatory.Saft.ProfileAccountByProducts.md#direction) data attribute  
+Allowed Values (Regulatory.Saft.ProfileAccountByProductsRepository.Direction Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Receipt | Inventory receipt. Stored as 'R'. <br /> Database Value: 'R' <br /> Model Value: 0 <br /> Domain API Value: 'Receipt' |
+| Issue | Inventory issue. Stored as 'I'. <br /> Database Value: 'I' <br /> Model Value: 1 <br /> Domain API Value: 'Issue' |
+
+Supported Filters: **Equals**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### EntityKind

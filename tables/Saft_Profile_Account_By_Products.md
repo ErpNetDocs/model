@@ -17,6 +17,7 @@ Maps the SAF-T account by product type for a selected SAF-T profile. Entity: Saf
 | - | - | --- |
 |[Account_Code_Entry_Id](#account_code_entry_id)|`uniqueidentifier` |The SAF-T account used during SAF-T generation for the selected product type.|
 |[Debit_Credit_Indicator](#debit_credit_indicator)|`char(1)` Allowed: `D`, `C`|Debit/credit indicator for SAF-T invoice lines.|
+|[Direction](#direction)|`char(1)` Allowed: `R`, `I`|Direction of the inventory operation, used as a criterion for determining the accounting account.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The ERP.net document type under which this mapping rule should be applied.|
 |[Entity_Kind](#entity_kind)|`char(1)` Allowed: `S`, `P`, `I`|Specifies whether the product type to SAF-T account mapping applies to sales invoices or purchase invoices.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments about the mapping.|
@@ -100,6 +101,43 @@ Debit/credit indicator for SAF-T invoice lines.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Direction
+
+
+Direction of the inventory operation, used as a criterion for determining the accounting account.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`R`, `I`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(1) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Direction - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Document_Type_Id
 

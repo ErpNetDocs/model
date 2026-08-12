@@ -10,6 +10,7 @@ uid: Logistics.Wms
 - [WarehouseOrderLines](Logistics.Wms.WarehouseOrderLines.md)  
 - [WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
 - [WarehousePolicies](Logistics.Wms.WarehousePolicies.md)  
+- [WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
 - [WarehouseReconciliationDetails](Logistics.Wms.WarehouseReconciliationDetails.md)  
 - [WarehouseReconciliationLines](Logistics.Wms.WarehouseReconciliationLines.md)  
 - [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)  

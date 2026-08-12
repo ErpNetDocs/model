@@ -1,0 +1,380 @@
+---
+uid: Logistics.Wms.WarehouseProcesses
+---
+# Logistics.Wms.WarehouseProcesses
+
+
+Contains warehouse process configurations that determine which algorithm is executed. The configurations can optionally be limited by document type, managed warehouse, and validity period. The algorithm defines the applicable conditions, processing steps, and Warehouse Order generation logic.
+
+## General
+Namespace: [Logistics.Wms](Logistics.Wms.md)  
+Repository: Logistics.Wms.WarehouseProcesses  
+Base Table: Wms_Warehouse_Processes  
+Introduced In Version: 27.1.1.5  
+API access:  ReadWrite  
+
+## Visualization
+Display Format: {Id}: {No}  
+Search Members:   
+Category:  Definitions  
+Show in UI:  ShownByDefault  
+
+## Track Changes  
+Min level:  1 - Track last changes only  
+Max level:  4 - Track object attribute and blob changes  
+
+## Aggregate
+An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
+
+Aggregate Tree  
+* [Logistics.Wms.WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
+
+## Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [ActiveFrom](Logistics.Wms.WarehouseProcesses.md#activefrom) | datetime __nullable__ | The date and time from which the warehouse process configuration is valid.`Filter(ge;le)` |
+| [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | The date and time until which the warehouse process configuration is valid.`Filter(ge;le)` |
+| [Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm) | [Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm) | The algorithm that defines the conditions, processing steps, and Warehouse Order generation logic of the warehouse process.`Required` `Filter(multi eq)` |
+| [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Indicates whether the warehouse process configuration is active and can be used.`Required` `Default(true)` `Filter(eq)` |
+| [No](Logistics.Wms.WarehouseProcesses.md#no) | int32 | The line number of the warehouse process configuration.`Required` `Filter(multi eq)` |
+| [Notes](Logistics.Wms.WarehouseProcesses.md#notes) | string (max) __nullable__ | Additional information or comments about the warehouse process configuration. |
+
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [DocumentType](Logistics.Wms.WarehouseProcesses.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The type of document for which the warehouse process is configured. |
+| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | The managed warehouse for which the warehouse process is configured. |
+
+
+## System Attributes
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [Id](Logistics.Wms.WarehouseProcesses.md#id) | guid |  |
+| [ObjectVersion](Logistics.Wms.WarehouseProcesses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Logistics.Wms.WarehouseProcesses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Logistics.Wms.WarehouseProcesses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Logistics.Wms.WarehouseProcesses.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [AdditionalDataJson](Logistics.Wms.WarehouseProcesses.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. [Introduced in version 26.3.100.4] |
+| [DisplayText](Logistics.Wms.WarehouseProcesses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+
+
+## Attribute Details
+
+### ActiveFrom
+
+The date and time from which the warehouse process configuration is valid.`Filter(ge;le)`
+
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### ActiveTo
+
+The date and time until which the warehouse process configuration is valid.`Filter(ge;le)`
+
+Type: **datetime __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Algorithm
+
+The algorithm that defines the conditions, processing steps, and Warehouse Order generation logic of the warehouse process.`Required` `Filter(multi eq)`
+
+Type: **[Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm)**  
+Category: **System**  
+Allowed values for the `Algorithm`(Logistics.Wms.WarehouseProcesses.md#algorithm) data attribute  
+Allowed Values (Logistics.Wms.WarehouseProcessesRepository.Algorithm Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Pick | Executes the picking process by creating and processing the required Warehouse Orders for collecting products from warehouse locations.. Stored as 'PIC'. <br /> Database Value: 'PIC' <br /> Model Value: 0 <br /> Domain API Value: 'Pick' |
+| Pack | Executes the packing process by creating and processing the required Warehouse Orders for packing products into packages or logistic units.. Stored as 'PAC'. <br /> Database Value: 'PAC' <br /> Model Value: 1 <br /> Domain API Value: 'Pack' |
+| Dispatch | Executes the dispatch process by creating and processing the required Warehouse Orders for dispatching goods from warehouse stock.. Stored as 'DIS'. <br /> Database Value: 'DIS' <br /> Model Value: 2 <br /> Domain API Value: 'Dispatch' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### IsActive
+
+Indicates whether the warehouse process configuration is active and can be used.`Required` `Default(true)` `Filter(eq)`
+
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
+
+### No
+
+The line number of the warehouse process configuration.`Required` `Filter(multi eq)`
+
+Type: **int32**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### Notes
+
+Additional information or comments about the warehouse process configuration.
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### Id
+
+Type: **guid**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **HiddenByDefault**  
+
+### ObjectVersion
+
+The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking.
+
+Type: **int32**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalId
+
+The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### ExternalSystem
+
+The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AggregateLastUpdateTimeUtc
+
+The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
+
+Type: **datetime**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### AdditionalDataJson
+
+Extensible JSON object for storing this entity&apos;s custom or optional attributes. [Introduced in version 26.3.100.4]
+
+Type: **string**  
+Category: **Extensible Data Object**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### DisplayText
+
+Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+
+## Reference Details
+
+### DocumentType
+
+The type of document for which the warehouse process is configured.
+
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### Warehouse
+
+The managed warehouse for which the warehouse process is configured.
+
+Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+
+## API Methods
+
+Methods that can be invoked in public APIs.
+
+### CreateCopy
+
+Duplicates the object and its child objects belonging to the same aggregate.              The duplicated objects are not saved to the data source but remain in the same transaction as the original object.  
+Return Type: **EntityObject**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
+
+### CreateNotification
+
+Create a notification immediately in a separate transaction, and send a real-time event to the user.  
+Return Type: **void**  
+Declaring Type: **EntityObject**  
+Domain API Request: **POST**  
+
+**Parameters**  
+  * **user**  
+    The user.  
+    Type: [Users](Systems.Security.Users.md)  
+
+  * **notificationClass**  
+    The notification class.  
+    Type: string  
+
+  * **subject**  
+    The notification subject.  
+    Type: string  
+
+  * **priority**  
+    The notification priority.  
+    Type: Systems.Core.NotificationsRepository.Priority  
+    Allowed values for the `Priority`(Systems.Core.Notifications.md#priority) data attribute  
+    Allowed Values (Systems.Core.NotificationsRepository.Priority Enum Members)  
+
+    | Value | Description |
+    | ---- | --- |
+    | Background | Background value. Stored as 1. <br /> Model Value: 1 <br /> Domain API Value: 'Background' |
+    | Low | Low value. Stored as 2. <br /> Model Value: 2 <br /> Domain API Value: 'Low' |
+    | Normal | Normal value. Stored as 3. <br /> Model Value: 3 <br /> Domain API Value: 'Normal' |
+    | High | High value. Stored as 4. <br /> Model Value: 4 <br /> Domain API Value: 'High' |
+    | Urgent | Urgent value. Stored as 5. <br /> Model Value: 5 <br /> Domain API Value: 'Urgent' |
+
+    Optional: True  
+    Default Value: Normal  
+
+
+### GetAllowedCustomPropertyValues
+
+Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
+Return Type: **Collection Of [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **customPropertyCode**  
+    The code of the custom property  
+    Type: string  
+
+  * **search**  
+    The search text - searches by value or description. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **exactMatch**  
+    If true the search text should be equal to the property value  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **orderByDescription**  
+    If true the result is ordered by Description instead of Value. Note that ordering is not always possible.  
+    Type: boolean  
+    Optional: True  
+    Default Value: False  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
+
+### GetOrCreateExtensibleDataObject
+
+Gets an existing extensible data object associated with the specified entity, or creates a new one if none exists. The newly created extensible data object is immediately commited to the database.  
+Return Type: **[ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+### GetPropertyAllowedValues
+
+Gets the allowed values for the specified property for this entity object.  
+Return Type: **Collection Of ErpNet.Model.OData.ValueTextPair**  
+Declaring Type: **EntityObject**  
+Domain API Request: **GET**  
+
+**Parameters**  
+  * **propertyName**  
+    The name of the attribute or reference  
+    Type: string  
+
+  * **search**  
+    The search text - searches by display text. Can contain wildcard character %.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+  * **top**  
+    The top clause - default is 10  
+    Type: int32  
+    Optional: True  
+    Default Value: 10  
+
+  * **skip**  
+    The skip clause - default is 0  
+    Type: int32  
+    Optional: True  
+    Default Value: 0  
+
+
+
+## Business Rules
+
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcesses erp.type=business-rule default-text="None"]
+
+## Front-End Business Rules
+
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcesses erp.type=front-end-business-rule default-text="None"]
+
+## API
+
+Domain API Entity Set: 
+Logistics_Wms_WarehouseProcesses
+
+Domain API Entity Type: 
+Logistics_Wms_WarehouseProcess
+
+Domain API Query:
+<https://testdb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseProcesses?$top=10>
+
+Domain API Query Builder:
+<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseProcesses?$top=10>
+
