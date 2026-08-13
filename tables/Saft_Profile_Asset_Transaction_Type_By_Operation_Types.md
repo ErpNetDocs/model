@@ -19,7 +19,7 @@ Maps SAF-T AssetTransactionType for asset transaction lines by operation type an
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The ERP.net document type under which this mapping rule should apply. When empty, the rule applies to all document types for the given operation type.|
 |[Id](#id)|`uniqueidentifier` `PK`|Unique identifier of the mapping record.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments about the mapping.|
-|[Operation_Type](#operation_type)|`nvarchar(3)` |The ERP.net operation type of the asset transaction line for which the SAF-T AssetTransactionType is determined.|
+|[Operation_Type](#operation_type)|`char(3)` Allowed: `ADJ`, `DEP`, `PUR`, `SLS`, `REV`|The ERP.net operation type of the asset transaction line for which the SAF-T AssetTransactionType is determined.|
 |[Profile_Id](#profile_id)|`uniqueidentifier` |The SAF-T profile this mapping belongs to.|
 |[Row_Version](#row_version)|`timestamp` ||
 
@@ -179,6 +179,7 @@ The ERP.net operation type of the asset transaction line for which the SAF-T Ass
 
 | Property | Value |
 | - | - |
+|Allowed Values|`ADJ`, `DEP`, `PUR`, `SLS`, `REV`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|ADJ|
@@ -196,7 +197,7 @@ The ERP.net operation type of the asset transaction line for which the SAF-T Ass
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|nvarchar(3)|
+|Type|char(3)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

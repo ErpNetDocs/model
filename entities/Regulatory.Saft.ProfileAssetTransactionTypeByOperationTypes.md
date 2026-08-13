@@ -37,7 +37,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Notes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md#notes) | string (max) __nullable__ | Additional information or comments about the mapping.`Filter(like)` |
-| [OperationType](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md#operationtype) | string (3) | The ERP.net operation type of the asset transaction line for which the SAF-T AssetTransactionType is determined.`Required` `Default(&quot;ADJ&quot;)` `Filter(multi eq)` |
+| [OperationType](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md#operationtype) | [OperationType](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md#operationtype) | The ERP.net operation type of the asset transaction line for which the SAF-T AssetTransactionType is determined.`Required` `Default(&quot;ADJ&quot;)` `Filter(multi eq)` |
 
 ## References
 
@@ -74,12 +74,22 @@ Show in UI: **ShownByDefault**
 
 The ERP.net operation type of the asset transaction line for which the SAF-T AssetTransactionType is determined.`Required` `Default(&quot;ADJ&quot;)` `Filter(multi eq)`
 
-Type: **string (3)**  
+Type: **[OperationType](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md#operationtype)**  
 Category: **System**  
+Allowed values for the `OperationType`(Finance.Assets.AssetTransactionLines.md#operationtype) data attribute  
+Allowed Values (Finance.Assets.AssetTransactionLinesRepository.OperationType Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Adjustment | Adjustment value. Stored as 'ADJ'. <br /> Database Value: 'ADJ' <br /> Model Value: 0 <br /> Domain API Value: 'Adjustment' |
+| Depreciation | Depreciation value. Stored as 'DEP'. <br /> Database Value: 'DEP' <br /> Model Value: 1 <br /> Domain API Value: 'Depreciation' |
+| Purchase | Purchase value. Stored as 'PUR'. <br /> Database Value: 'PUR' <br /> Model Value: 2 <br /> Domain API Value: 'Purchase' |
+| Sale | Sale value. Stored as 'SLS'. <br /> Database Value: 'SLS' <br /> Model Value: 3 <br /> Domain API Value: 'Sale' |
+| Reevaluation | Reevaluation value. Stored as 'REV'. <br /> Database Value: 'REV' <br /> Model Value: 4 <br /> Domain API Value: 'Reevaluation' |
+
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
-Maximum Length: **3**  
-Default Value: **ADJ**  
+Default Value: **Adjustment**  
 Show in UI: **ShownByDefault**  
 
 ### Id

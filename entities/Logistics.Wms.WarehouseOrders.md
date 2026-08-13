@@ -969,6 +969,13 @@ Domain API Request: **GET**
     Default Value: 0  
 
 
+### GetSuggestRouting
+
+Loads Warehouse Locations for all Warehouse Order Lines from the current document.  
+Return Type: **Collection Of valuetuple`2**  
+Declaring Type: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
+Domain API Request: **GET**  
+
 ### MakeVoid
 
 Makes the document void. The operation is irreversible.              (Inherited from [Documents](General.Documents.Documents.md))  
