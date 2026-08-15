@@ -972,7 +972,7 @@ Domain API Request: **GET**
 ### GetSuggestRouting
 
 Loads Warehouse Locations for all Warehouse Order Lines from the current document.  
-Return Type: **Collection Of valuetuple`2**  
+Return Type: **Collection Of [WarehouseRoutingSuggestion](../data-types.md#logistics.wms.warehouseroutingsuggestion)**  
 Declaring Type: **[WarehouseOrders](Logistics.Wms.WarehouseOrders.md)**  
 Domain API Request: **GET**  
 
