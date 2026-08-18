@@ -32,6 +32,7 @@ User logins. Entity: Sec_Users
 |[Phone_Number_Confirmed](#phone_number_confirmed)|`bit` |Indicates whether the Phone Number has been verified.|
 |[Registration_Message](#registration_message)|`nvarchar(254)` |Message from the user to the registration operator, regarding the desired permissions and assignment.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Time_Zone](#time_zone)|`nvarchar(64)` |Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.|
 |[Two_Factor_Enabled](#two_factor_enabled)|`bit` |Indicates whether two-factor authentication has been enabled.|
 |[User_Id](#user_id)|`uniqueidentifier` `PK`||
 |[User_Name](#user_name)|`nvarchar(254)` `ML`|The full name of the user|
@@ -771,6 +772,36 @@ Message from the user to the registration operator, regarding the desired permis
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Time_Zone
+
+
+Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|64|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(64) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 ### Two_Factor_Enabled
 

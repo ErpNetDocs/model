@@ -59,6 +59,7 @@ Aggregate Tree
 | [PhoneNumber](Systems.Security.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.`Filter(eq;like)` `Introduced in version 18.2` |
 | [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified.`Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` |
 | [RegistrationMessage](Systems.Security.Users.md#registrationmessage) | string (254) __nullable__ | Message from the user to the registration operator, regarding the desired permissions and assignment.`Introduced in version 22.1.6.61` |
+| [TimeZone](Systems.Security.Users.md#timezone) | string (64) __nullable__ | Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.`Introduced in version 27.1.1.11` |
 | [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled.`Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` |
 | [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login).`Required` `Default(&quot;INT&quot;)` `Filter(multi eq;like)` `Introduced in version 18.2` |
 | [VoiceExtensionNumbers](Systems.Security.Users.md#voiceextensionnumbers) | string (254) __nullable__ | Comma separated list of internal extension numbers and contexts of the voice telephones of the user in form 'Number@Context'. Used for VOIP integration |
@@ -307,6 +308,17 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
+
+### TimeZone
+
+Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.`Introduced in version 27.1.1.11`
+
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
 
 ### TwoFactorEnabled
