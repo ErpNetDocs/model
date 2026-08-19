@@ -11,7 +11,7 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 
 | Name | Type | Description |
 | - | - | --- |
-|[Additional_Data_Json](#additional_data_json)|`nvarchar(max)` |Extensible JSON object for storing this entity's custom or optional attributes.|
+|[Additional_Data_Json](#additional_data_json)|`nvarchar(max)` |Extensible JSON object for storing this entity's custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` |The exact server time (in UTC) when the object represented by this system object was created. NULL means that it is unknown.|
 |[Creation_User_Id](#creation_user_id)|`uniqueidentifier` |The user, who created the object represented by this system object . NULL means that it is unknown.|
 |[Display_Name](#display_name)|`nvarchar(128)` |Human-readable title of the object (e.g. ‘Sales Order SO-10245’, ‘Contoso Ltd’, ‘Contract Template.pdf’) used when displaying the object in lists, folders, and search results. Stored in the default language of the database.|
@@ -32,10 +32,11 @@ Extends data in other tables with attached files, custom properties, etc. Each r
 ### Additional_Data_Json
 
 
-Extensible JSON object for storing this entity's custom or optional attributes.
+Extensible JSON object for storing this entity's custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters.
 
 | Property | Value |
 | - | - |
+|Attributes|IsLongString|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
