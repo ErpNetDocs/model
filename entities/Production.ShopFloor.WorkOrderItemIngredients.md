@@ -34,7 +34,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified. |
+| [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) | [DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__ | Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.`Filter(eq)` |
 | [FixedScrapQuantity](Production.ShopFloor.WorkOrderItemIngredients.md#fixedscrapquantity) | [Quantity (18, 3)](../data-types.md#quantity) | The quantity of the material, which will be used for setup.`Unit: UsedQuantityUnit` `Required` `Default(0)` |
 | [LineOrd](Production.ShopFloor.WorkOrderItemIngredients.md#lineord) | int32 | The order of the line within the item.`Required` `Filter(eq;like)` |
 | [Notes](Production.ShopFloor.WorkOrderItemIngredients.md#notes) | string (254) __nullable__ | Notes for this WorkOrderItemIngredient. |
@@ -74,7 +74,7 @@ Aggregate Root:
 
 ### DistributeBy
 
-Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.
+Distribution method in case the materials from the line are distributed amongst all work order items. Should be specified if and only if 'Work order item' isn't specified.`Filter(eq)`
 
 Type: **[DistributeBy](Production.ShopFloor.WorkOrderItemIngredients.md#distributeby) __nullable__**  
 Category: **System**  
@@ -86,8 +86,9 @@ Allowed Values (Production.ShopFloor.WorkOrderItemIngredientsRepository.Distribu
 | StandardPrice | StandardPrice value. Stored as 'SP'. <br /> Database Value: 'SP' <br /> Model Value: 0 <br /> Domain API Value: 'StandardPrice' |
 | Measurement | Measurement value. Stored as 'MC'. <br /> Database Value: 'MC' <br /> Model Value: 1 <br /> Domain API Value: 'Measurement' |
 | StandardCost | StandardCost value. Stored as 'SC'. <br /> Database Value: 'SC' <br /> Model Value: 2 <br /> Domain API Value: 'StandardCost' |
+| ByItemCoefficient | Use Distribution Coefficient. Stored as 'IC'. <br /> Database Value: 'IC' <br /> Model Value: 3 <br /> Domain API Value: 'ByItemCoefficient' |
 
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals**  
 Supports Order By: **False**  
 Show in UI: **HiddenByDefault**  
 

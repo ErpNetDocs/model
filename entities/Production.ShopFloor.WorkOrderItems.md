@@ -36,6 +36,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [CompletionDate](Production.ShopFloor.WorkOrderItems.md#completiondate) | datetime __nullable__ | The date, when the item should be completed. NULL means that there is no constraint for completion date`Filter(ge;le)` |
 | [CurrentBalanceBase](Production.ShopFloor.WorkOrderItems.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. |
+| [DistributionCoefficient](Production.ShopFloor.WorkOrderItems.md#distributioncoefficient) | decimal (3, 0) __nullable__ | A relative coefficient that determines the item’s share when distributing the total consumed material quantity and its corresponding cost among the items in the work order. The coefficients are used as relative weights and are not required to total 1 or 100. A value of 0 excludes the item from the distribution.`Filter(ge;le)` `Introduced in version 27.1.1.25` |
 | [LineOrd](Production.ShopFloor.WorkOrderItems.md#lineord) | int32 | The order of the line within the work order.`Required` `Filter(eq;like)` |
 | [LotSize](Production.ShopFloor.WorkOrderItems.md#lotsize) | [Quantity (18, 3)](../data-types.md#quantity) | Quantity produced in one production run`Unit: ProducedQuantityUnit` `Required` `Default(1)` |
 | [Notes](Production.ShopFloor.WorkOrderItems.md#notes) | string (max) __nullable__ | Notes for this WorkOrderItem. |
@@ -107,6 +108,16 @@ Category: **Calculated Attributes**
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
+
+### DistributionCoefficient
+
+A relative coefficient that determines the item’s share when distributing the total consumed material quantity and its corresponding cost among the items in the work order. The coefficients are used as relative weights and are not required to total 1 or 100. A value of 0 excludes the item from the distribution.`Filter(ge;le)` `Introduced in version 27.1.1.25`
+
+Type: **decimal (3, 0) __nullable__**  
+Category: **System**  
+Supported Filters: **GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### LineOrd
 

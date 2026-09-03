@@ -17,6 +17,7 @@ The different items that are produced with a work order. Entity: Prd_Work_Order_
 | Name | Type | Description |
 | - | - | --- |
 |[Completion_Date](#completion_date)|`datetime` |The date, when the item should be completed. NULL means that there is no constraint for completion date|
+|[Distribution_Coefficient](#distribution_coefficient)|`decimal(3, 0)` |A relative coefficient that determines the item’s share when distributing the total consumed material quantity and its corresponding cost among the items in the work order. The coefficients are used as relative weights and are not required to total 1 or 100. A value of 0 excludes the item from the distribution.|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` |The order of the line within the work order.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the produced product.|
@@ -75,6 +76,42 @@ The date, when the item should be completed. NULL means that there is no constra
 |Visible|no|
 
 #### Completion_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|no|no|
+
+### Distribution_Coefficient
+
+
+A relative coefficient that determines the item’s share when distributing the total consumed material quantity and its corresponding cost among the items in the work order. The coefficients are used as relative weights and are not required to total 1 or 100. A value of 0 excludes the item from the distribution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|decimal(3, 0) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Distribution_Coefficient - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
