@@ -31,6 +31,8 @@ Contains document routes, which specify which document generation procedures wil
 |[Destination_State](#destination_state)|`smallint` Allowed: `0`, `10`, `20`, `30`, `40`, `50`|0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed|
 |[Destination_User_Status_Id](#destination_user_status_id)|`uniqueidentifier` |The user defined status to set to the generated document.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The document type from which this route originates. Documents from this type generate sub-documents using this route.|
+|[Master_Document_Activation_Date](#master_document_activation_date)|`date` |The date from which (including) the route is active. The date is matched against the document date of the master document.|
+|[Master_Document_Deactivation_Date](#master_document_deactivation_date)|`date` |The date until which (including) the route is active. The date is matched against the document date of the master document. Null means the route does not have a master document deactivation date.|
 |[Negative_Condition_Filter_Xml](#negative_condition_filter_xml)|`nvarchar(max)` |The negative condition should NOT be matched by the document in order to execute the route.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Parent_Document_Relationship_Type](#parent_document_relationship_type)|`char(1)` Allowed: `S`, `N`, `I`|Determines the default relationship type between the generated document and the parent document.|
@@ -607,6 +609,78 @@ The document type from which this route originates. Documents from this type gen
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Master_Document_Activation_Date
+
+
+The date from which (including) the route is active. The date is matched against the document date of the master document.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Master_Document_Activation_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|no|
+
+### Master_Document_Deactivation_Date
+
+
+The date until which (including) the route is active. The date is matched against the document date of the master document. Null means the route does not have a master document deactivation date.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|date (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Master_Document_Deactivation_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|GreaterThanOrLessThan|None|yes|no|
 
 ### Negative_Condition_Filter_Xml
 
