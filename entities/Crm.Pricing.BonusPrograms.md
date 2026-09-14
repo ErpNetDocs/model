@@ -60,6 +60,7 @@ Aggregate Tree
 | [ConditionToDate](Crm.Pricing.BonusPrograms.md#conditiontodate) | datetime __nullable__ | Ending date (inclusive) of the bonus. NULL means that there is no ending date restriction`Filter(eq;ge;le)` |
 | [Name](Crm.Pricing.BonusPrograms.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the bonus program`Required` `Filter(eq;like)` |
 | [Priority](Crm.Pricing.BonusPrograms.md#priority) | [Priority](Crm.Pricing.BonusPrograms.md#priority) | Priority of the bonus program comparative to the other bonus programs.`Required` `Default(2)` `Filter(multi eq)` |
+| [SumQuantitiesRegardless<br />OfMeasurementUnit](Crm.Pricing.BonusPrograms.md#sumquantitiesregardlessofmeasurementunit) | boolean | When enabled, quantity conditions are evaluated by summing the numeric base quantities of all matching sales order lines, regardless of the products’ base measurement units. No unit conversion is performed.`Required` `Default(false)` `Introduced in version 27.1.1.39` |
 
 ## References
 
@@ -295,6 +296,17 @@ Allowed Values (Crm.Pricing.BonusProgramsRepository.Priority Enum Members)
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Default Value: **2**  
+Show in UI: **ShownByDefault**  
+
+### SumQuantitiesRegardlessOfMeasurementUnit
+
+When enabled, quantity conditions are evaluated by summing the numeric base quantities of all matching sales order lines, regardless of the products’ base measurement units. No unit conversion is performed.`Required` `Default(false)` `Introduced in version 27.1.1.39`
+
+Type: **boolean**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Default Value: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Id

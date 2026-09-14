@@ -1376,6 +1376,8 @@
       href: Systems.Core.ReportQueries.md
     - name: Reports
       href: Systems.Core.Reports.md
+    - name: Scripts
+      href: Systems.Core.Scripts.md
     - name: Sequences
       href: Systems.Core.Sequences.md
   - name: Documents

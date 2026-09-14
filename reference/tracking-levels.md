@@ -571,6 +571,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.ObjectVersions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.ReportQueries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Reports | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.Scripts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Sequences | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Documents.DataSourceQueries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Documents.DataSources | 1 - Track last changes only | 4 - Track object attribute and blob changes |

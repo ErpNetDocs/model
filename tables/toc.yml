@@ -1419,6 +1419,8 @@
     href: Sys_Reports.md
   - name: Sys_Resolved_Conflicts
     href: Sys_Resolved_Conflicts.md
+  - name: Sys_Scripts
+    href: Sys_Scripts.md
   - name: Sys_Sequences
     href: Sys_Sequences.md
   - name: Sys_Subsystems
