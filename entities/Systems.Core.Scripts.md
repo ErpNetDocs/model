@@ -275,6 +275,21 @@ Domain API Request: **POST**
     Default Value: Normal  
 
 
+### Execute
+
+Executes the callable script with the specified JSON arguments and returns its JSON result.  
+Return Type: **string**  
+Declaring Type: **[Scripts](Systems.Core.Scripts.md)**  
+Domain API Request: **POST**  
+
+**Parameters**  
+  * **argumentsJson**  
+    A JSON object containing input and input/output parameter values.  
+    Type: string  
+    Optional: True  
+    Default Value: null  
+
+
 ### GetAllowedCustomPropertyValues
 
 Gets the allowed values for the specified custom property for this entity object.              If supported the result is ordered by property value. Some property value sources do not support ordering - in that case the result is not ordered.  
