@@ -555,6 +555,9 @@ The following table contains default system-specified tracking levels:
 | Systems.Config.WebHooks | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebHosts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebSites | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
+| Systems.Core.CustomEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.CustomEntityTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.CustomSubEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DataEntryDefaultValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentJobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentPrintImages | 1 - Track last changes only | 4 - Track object attribute and blob changes |

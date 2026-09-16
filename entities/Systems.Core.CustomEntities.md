@@ -1,16 +1,16 @@
 ---
-uid: Systems.Core.Scripts
+uid: Systems.Core.CustomEntities
 ---
-# Systems.Core.Scripts
+# Systems.Core.CustomEntities
 
 
-Contains managed scripts, their parameter schemas, and execution settings.
+Stores the instances of user-defined aggregate root entities.
 
 ## General
 Namespace: [Systems.Core](Systems.Core.md)  
-Repository: Systems.Core.Scripts  
-Base Table: Sys_Scripts  
-Introduced In Version: 27.1.1.39  
+Repository: Systems.Core.CustomEntities  
+Base Table: Sys_Custom_Entities  
+Introduced In Version: 27.1.1.41  
 API access:  ReadWrite  
 
 ## Visualization
@@ -29,131 +29,69 @@ Max level:  4 - Track object attribute and blob changes
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
 Aggregate Tree  
-* [Systems.Core.Scripts](Systems.Core.Scripts.md)  
+* [Systems.Core.CustomEntities](Systems.Core.CustomEntities.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Code](Systems.Core.Scripts.md#code) | string (16) | Unique code used to identify the script.`Required` `Filter(eq;like)` `ORD` |
-| [ExecutionSettings](Systems.Core.Scripts.md#executionsettings) | string (max) __nullable__ | JSON object specifying the script execution limits and settings. |
-| [IsActive](Systems.Core.Scripts.md#isactive) | boolean | Indicates whether the script can be executed.`Required` `Default(false)` `Filter(eq)` |
-| [Name](Systems.Core.Scripts.md#name) | string (254) | Display name of the script.`Required` |
-| [Notes](Systems.Core.Scripts.md#notes) | string (max) __nullable__ | Additional information about the script. |
-| [ParametersSchema](Systems.Core.Scripts.md#parametersschema) | string (max) __nullable__ | JSON schema describing the script parameters and return value. |
-| [ScriptLanguage](Systems.Core.Scripts.md#scriptlanguage) | [ScriptLanguage](Systems.Core.Scripts.md#scriptlanguage) | Programming language of the script.`Required` `Default(&quot;JavaScript&quot;)` |
-| [ScriptText](Systems.Core.Scripts.md#scripttext) | string (max) __nullable__ | Source code of the script. |
+| [Active](Systems.Core.CustomEntities.md#active) | boolean | Indicates whether the custom entity instance is active and available for use.`Required` `Default(true)` `Filter(eq)` |
+| [Code](Systems.Core.CustomEntities.md#code) | string (64) __nullable__ | Optional business identifier of the custom entity instance. Unique within the entity type.`Filter(eq;like)` |
+| [Name](Systems.Core.CustomEntities.md#name) | string (254) __nullable__ | Name of the custom entity instance.`Filter(like)` |
+
+## References
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| [EntityType](Systems.Core.CustomEntities.md#entitytype) | [CustomEntityTypes](Systems.Core.CustomEntityTypes.md) | Reference to the custom entity type. The referenced type must be an aggregate root type. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Systems.Core.Scripts.md#id) | guid |  |
-| [ObjectVersion](Systems.Core.Scripts.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
-| [ExternalId](Systems.Core.Scripts.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
-| [ExternalSystem](Systems.Core.Scripts.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
-| [AggregateLastUpdateTimeUtc](Systems.Core.Scripts.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
-| [AdditionalDataJson](Systems.Core.Scripts.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
-| [DisplayText](Systems.Core.Scripts.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+| [Id](Systems.Core.CustomEntities.md#id) | guid |  |
+| [ObjectVersion](Systems.Core.CustomEntities.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Systems.Core.CustomEntities.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Systems.Core.CustomEntities.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Systems.Core.CustomEntities.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [AdditionalDataJson](Systems.Core.CustomEntities.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
+| [DisplayText](Systems.Core.CustomEntities.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details
 
-### Code
+### Active
 
-Unique code used to identify the script.`Required` `Filter(eq;like)` `ORD`
-
-Type: **string (16)**  
-Indexed: **True**  
-Category: **System**  
-Supported Filters: **Equals, Like**  
-Supports Order By: **True**  
-Maximum Length: **16**  
-Show in UI: **ShownByDefault**  
-
-### ExecutionSettings
-
-JSON object specifying the script execution limits and settings.
-
-Type: **string (max) __nullable__**  
-Category: **System**  
-Supported Filters: **NotFilterable**  
-Supports Order By: **False**  
-Maximum Length: **2147483647**  
-Show in UI: **ShownByDefault**  
-
-### IsActive
-
-Indicates whether the script can be executed.`Required` `Default(false)` `Filter(eq)`
+Indicates whether the custom entity instance is active and available for use.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
-Default Value: **False**  
+Default Value: **True**  
+Show in UI: **ShownByDefault**  
+
+### Code
+
+Optional business identifier of the custom entity instance. Unique within the entity type.`Filter(eq;like)`
+
+Type: **string (64) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
 
 ### Name
 
-Display name of the script.`Required`
+Name of the custom entity instance.`Filter(like)`
 
-Type: **string (254)**  
+Type: **string (254) __nullable__**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Like**  
 Supports Order By: **False**  
 Maximum Length: **254**  
-Show in UI: **ShownByDefault**  
-
-### Notes
-
-Additional information about the script.
-
-Type: **string (max) __nullable__**  
-Category: **System**  
-Supported Filters: **NotFilterable**  
-Supports Order By: **False**  
-Maximum Length: **2147483647**  
-Show in UI: **ShownByDefault**  
-
-### ParametersSchema
-
-JSON schema describing the script parameters and return value.
-
-Type: **string (max) __nullable__**  
-Category: **System**  
-Supported Filters: **NotFilterable**  
-Supports Order By: **False**  
-Maximum Length: **2147483647**  
-Show in UI: **ShownByDefault**  
-
-### ScriptLanguage
-
-Programming language of the script.`Required` `Default(&quot;JavaScript&quot;)`
-
-Type: **[ScriptLanguage](Systems.Core.Scripts.md#scriptlanguage)**  
-Category: **System**  
-Allowed values for the `ScriptLanguage`(Systems.Core.Scripts.md#scriptlanguage) data attribute  
-Allowed Values (Systems.Core.ScriptsRepository.ScriptLanguage Enum Members)  
-
-| Value | Description |
-| ---- | --- |
-| JavaScript | JavaScript value. Stored as 'JavaScript'. <br /> Database Value: 'JavaScript' <br /> Model Value: 0 <br /> Domain API Value: 'JavaScript' |
-
-Supported Filters: **NotFilterable**  
-Supports Order By: **False**  
-Default Value: **JavaScript**  
-Show in UI: **ShownByDefault**  
-
-### ScriptText
-
-Source code of the script.
-
-Type: **string (max) __nullable__**  
-Category: **System**  
-Supported Filters: **NotFilterable**  
-Supports Order By: **False**  
-Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -162,7 +100,6 @@ Type: **guid**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Default Value: **NewGuid**  
 Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
@@ -226,6 +163,19 @@ Supports Order By: ****
 Show in UI: **HiddenByDefault**  
 
 
+## Reference Details
+
+### EntityType
+
+Reference to the custom entity type. The referenced type must be an aggregate root type.
+
+Type: **[CustomEntityTypes](Systems.Core.CustomEntityTypes.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+
 ## API Methods
 
 Methods that can be invoked in public APIs.
@@ -273,19 +223,6 @@ Domain API Request: **POST**
 
     Optional: True  
     Default Value: Normal  
-
-
-### Execute
-
-Return Type: **jsonelement**  
-Declaring Type: **[Scripts](Systems.Core.Scripts.md)**  
-Domain API Request: **POST**  
-
-**Parameters**  
-  * **arguments**  
-    Type: jsonelement (nullable)  
-    Optional: True  
-    Default Value: null  
 
 
 ### GetAllowedCustomPropertyValues
@@ -372,23 +309,23 @@ Domain API Request: **GET**
 
 ## Business Rules
 
-[!list limit=1000 erp.entity=Systems.Core.Scripts erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.CustomEntities erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list limit=1000 erp.entity=Systems.Core.Scripts erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Systems.Core.CustomEntities erp.type=front-end-business-rule default-text="None"]
 
 ## API
 
 Domain API Entity Set: 
-Systems_Core_Scripts
+Systems_Core_CustomEntities
 
 Domain API Entity Type: 
-Systems_Core_Script
+Systems_Core_CustomEntity
 
 Domain API Query:
-<https://testdb.my.erp.net/api/domain/odata/Systems_Core_Scripts?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Systems_Core_CustomEntities?$top=10>
 
 Domain API Query Builder:
-<https://testdb.my.erp.net/api/domain/querybuilder#Systems_Core_Scripts?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Systems_Core_CustomEntities?$top=10>
 

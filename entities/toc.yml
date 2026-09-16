@@ -1342,6 +1342,12 @@
       href: Systems.Core.AttributeChanges.md
     - name: AttributeChangesHistory
       href: Systems.Core.AttributeChangesHistory.md
+    - name: CustomEntities
+      href: Systems.Core.CustomEntities.md
+    - name: CustomEntityTypes
+      href: Systems.Core.CustomEntityTypes.md
+    - name: CustomSubEntities
+      href: Systems.Core.CustomSubEntities.md
     - name: DataEntryDefaultValues
       href: Systems.Core.DataEntryDefaultValues.md
     - name: DocumentJobs

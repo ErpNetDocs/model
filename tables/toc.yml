@@ -1367,6 +1367,12 @@
     href: Sys_Calculated_Attributes.md
   - name: Sys_Characteristic_Types
     href: Sys_Characteristic_Types.md
+  - name: Sys_Custom_Entities
+    href: Sys_Custom_Entities.md
+  - name: Sys_Custom_Entity_Types
+    href: Sys_Custom_Entity_Types.md
+  - name: Sys_Custom_Sub_Entities
+    href: Sys_Custom_Sub_Entities.md
   - name: Sys_Data_Exchange_Objects
     href: Sys_Data_Exchange_Objects.md
   - name: Sys_Data_Exchanges

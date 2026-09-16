@@ -6,6 +6,9 @@ uid: Systems.Core
 ## Entities
 - [AttributeChanges](Systems.Core.AttributeChanges.md)  
 - [AttributeChangesHistory](Systems.Core.AttributeChangesHistory.md)  
+- [CustomEntities](Systems.Core.CustomEntities.md)  
+- [CustomEntityTypes](Systems.Core.CustomEntityTypes.md)  
+- [CustomSubEntities](Systems.Core.CustomSubEntities.md)  
 - [DataEntryDefaultValues](Systems.Core.DataEntryDefaultValues.md)  
 - [DocumentJobs](Systems.Core.DocumentJobs.md)  
 - [DocumentPrintImages](Systems.Core.DocumentPrintImages.md)  
