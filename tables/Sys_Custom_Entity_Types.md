@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Systems.Core.CustomEntityTypes](~/entities/Systems.Core.CustomEntityTypes.md)
+Entity: [Systems.Bpm.CustomEntityTypes](~/entities/Systems.Bpm.CustomEntityTypes.md)
 
 Stores the definitions of user-defined entity types in the system. Entity: Sys_Custom_Entity_Types (Introduced in version 27.1.1.41)
 

@@ -1261,6 +1261,8 @@
       href: Regulatory.Saft.ProfileProductTypes.md
     - name: Profiles
       href: Regulatory.Saft.Profiles.md
+    - name: ProfileStockMovementTypes
+      href: Regulatory.Saft.ProfileStockMovementTypes.md
     - name: ProfileTaxCodeByAccounts
       href: Regulatory.Saft.ProfileTaxCodeByAccounts.md
     - name: ProfileTaxCodeByDealTypes
@@ -1269,8 +1271,6 @@
       href: Regulatory.Saft.ProfileValuationTypeByValuationModels.md
     - name: SaftDeclarations
       href: Regulatory.Saft.SaftDeclarations.md
-    - name: StockMovementTypes
-      href: Regulatory.Saft.StockMovementTypes.md
   - name: Vat
     href: Regulatory.Vat.md
     items:
@@ -1300,10 +1300,16 @@
       href: Systems.Bpm.CalculatedAttributeExpressions.md
     - name: CalculatedAttributes
       href: Systems.Bpm.CalculatedAttributes.md
+    - name: CustomEntities
+      href: Systems.Bpm.CustomEntities.md
+    - name: CustomEntityTypes
+      href: Systems.Bpm.CustomEntityTypes.md
     - name: CustomProperties
       href: Systems.Bpm.CustomProperties.md
     - name: CustomPropertyAllowedValues
       href: Systems.Bpm.CustomPropertyAllowedValues.md
+    - name: CustomSubEntities
+      href: Systems.Bpm.CustomSubEntities.md
     - name: Processes
       href: Systems.Bpm.Processes.md
     - name: PropertiesCategories
@@ -1342,12 +1348,6 @@
       href: Systems.Core.AttributeChanges.md
     - name: AttributeChangesHistory
       href: Systems.Core.AttributeChangesHistory.md
-    - name: CustomEntities
-      href: Systems.Core.CustomEntities.md
-    - name: CustomEntityTypes
-      href: Systems.Core.CustomEntityTypes.md
-    - name: CustomSubEntities
-      href: Systems.Core.CustomSubEntities.md
     - name: DataEntryDefaultValues
       href: Systems.Core.DataEntryDefaultValues.md
     - name: DocumentJobs

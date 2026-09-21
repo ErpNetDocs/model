@@ -47,6 +47,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CartZone](Logistics.Wms.WarehouseWorkers.md#cartzone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Specifies the warehouse zone used by the worker to organize and temporarily hold collected goods during warehouse task execution. Locations within the zone can be used to separate the collected goods by their originating orders. |
 | [DefaultWarehouseLocation](Logistics.Wms.WarehouseWorkers.md#defaultwarehouselocation) | [WarehouseLocations](Logistics.Wms.WarehouseLocations.md) (nullable) | Specifies the default warehouse location used by the worker during task execution to temporarily hold goods being collected, moved, or otherwise processed. |
 | [Person](Logistics.Wms.WarehouseWorkers.md#person) | [Persons](General.Contacts.Persons.md) (nullable) | The definition of the person, when the worker is human worker. NULL means that the person is unknown or the worker is non-person. |
 | [User](Logistics.Wms.WarehouseWorkers.md#user) | [Users](Systems.Security.Users.md) (nullable) | The user who is going to work in the selected warehouse |
@@ -173,6 +174,15 @@ Show in UI: **HiddenByDefault**
 
 
 ## Reference Details
+
+### CartZone
+
+Specifies the warehouse zone used by the worker to organize and temporarily hold collected goods during warehouse task execution. Locations within the zone can be used to separate the collected goods by their originating orders.
+
+Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### DefaultWarehouseLocation
 

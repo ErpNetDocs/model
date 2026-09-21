@@ -30,9 +30,9 @@
 * [Saft_Profile_Payment_Types](Saft_Profile_Payment_Types.md)
 * [Saft_Profile_Payments](Saft_Profile_Payments.md)
 * [Saft_Profile_Product_Types](Saft_Profile_Product_Types.md)
+* [Saft_Profile_Stock_Movement_Types](Saft_Profile_Stock_Movement_Types.md)
 * [Saft_Profile_Tax_Code_By_Accounts](Saft_Profile_Tax_Code_By_Accounts.md)
 * [Saft_Profile_Tax_Code_By_Deal_Types](Saft_Profile_Tax_Code_By_Deal_Types.md)
 * [Saft_Profile_Valuation_Type_By_Valuation_Models](Saft_Profile_Valuation_Type_By_Valuation_Models.md)
 * [Saft_Profiles](Saft_Profiles.md)
-* [Saft_Stock_Movement_Types](Saft_Stock_Movement_Types.md)
 

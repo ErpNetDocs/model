@@ -34,9 +34,9 @@ uid: Regulatory.Saft
 - [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  
 - [ProfileProductTypes](Regulatory.Saft.ProfileProductTypes.md)  
 - [Profiles](Regulatory.Saft.Profiles.md)  
+- [ProfileStockMovementTypes](Regulatory.Saft.ProfileStockMovementTypes.md)  
 - [ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md)  
 - [ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md)  
 - [ProfileValuationTypeByValuationModels](Regulatory.Saft.ProfileValuationTypeByValuationModels.md)  
 - [SaftDeclarations](Regulatory.Saft.SaftDeclarations.md)  
-- [StockMovementTypes](Regulatory.Saft.StockMovementTypes.md)  
 

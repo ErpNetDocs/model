@@ -525,11 +525,11 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Saft.ProfilePaymentTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileProductTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.Profiles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileStockMovementTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileValuationTypeByValuationModels | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.SaftDeclarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.StockMovementTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypeDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.DealTypeDocumentAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -539,8 +539,11 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Vat.Entries | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CalculatedAttributeExpressions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CalculatedAttributes | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomEntityTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CustomProperties | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CustomPropertyAllowedValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomSubEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.Processes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.PropertiesCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.PropertyEnterpriseCompanyFilters | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -555,9 +558,6 @@ The following table contains default system-specified tracking levels:
 | Systems.Config.WebHooks | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebHosts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebSites | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
-| Systems.Core.CustomEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Systems.Core.CustomEntityTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Systems.Core.CustomSubEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DataEntryDefaultValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentJobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentPrintImages | 1 - Track last changes only | 4 - Track object attribute and blob changes |

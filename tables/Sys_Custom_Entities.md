@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Systems.Core.CustomEntities](~/entities/Systems.Core.CustomEntities.md)
+Entity: [Systems.Bpm.CustomEntities](~/entities/Systems.Bpm.CustomEntities.md)
 
 Stores the instances of user-defined aggregate root entities. Entity: Sys_Custom_Entities (Introduced in version 27.1.1.41)
 

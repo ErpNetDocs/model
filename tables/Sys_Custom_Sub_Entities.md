@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Systems.Core.CustomSubEntities](~/entities/Systems.Core.CustomSubEntities.md)
+Entity: [Systems.Bpm.CustomSubEntities](~/entities/Systems.Bpm.CustomSubEntities.md)
 
 Stores the objects of user-defined child entity types. Entity: Sys_Custom_Sub_Entities (Introduced in version 27.1.1.41)
 
