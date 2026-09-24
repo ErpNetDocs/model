@@ -11,54 +11,17 @@ Stores the definitions of user-defined entity types in the system. Entity: Sys_C
 
 | Name | Type | Description |
 | - | - | --- |
-|[Access_Key_Id](#access_key_id)|`uniqueidentifier` |Access key controlling permissions for entities of this type. Primarily applicable to aggregate-root types.|
 |[Active](#active)|`bit` |Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive.|
 |[Code](#code)|`nvarchar(64)` |Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code.|
 |[Custom_Entity_Type_Id](#custom_entity_type_id)|`uniqueidentifier` `PK`||
-|[Description](#description)|`nvarchar(254)` |Explanation of the purpose and intended use of the custom entity type.|
-|[Name](#name)|`nvarchar(254)` |User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.|
+|[Description](#description)|`nvarchar(254)` `ML`|Explanation of the purpose and intended use of the custom entity type.|
+|[Name](#name)|`nvarchar(254)` `ML`|User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.|
 |[Parent_Entity_Type_Id](#parent_entity_type_id)|`uniqueidentifier` |Parent custom entity type. `NULL` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type.|
-|[Plural_Name](#plural_name)|`nvarchar(254)` |User-facing plural or collection name, for example 'Vehicles' or 'Services'.|
+|[Plural_Name](#plural_name)|`nvarchar(254)` `ML`|User-facing plural or collection name, for example 'Vehicles' or 'Services'.|
+|[Repository_Namespace](#repository_namespace)|`nvarchar(128)` |The namespace of the entity repository. Used in RepositoryName.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
-
-### Access_Key_Id
-
-
-Access key controlling permissions for entities of this type. Primarily applicable to aggregate-root types.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Sec_Access_Keys](Sec_Access_Keys.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Access_Key_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|yes|no|
 
 ### Active
 
@@ -69,7 +32,7 @@ Specifies whether new entities or sub-entities of this type may be created. Exis
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|True|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -191,7 +154,7 @@ Explanation of the purpose and intended use of the custom entity type.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -221,7 +184,7 @@ User-facing singular name of the entity type, for example 'Vehicle' or 'Service'
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -294,7 +257,37 @@ User-facing plural or collection name, for example 'Vehicles' or 'Services'.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254)|
+|Type|nvarchar(254) (MultiLanguage)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+### Repository_Namespace
+
+
+The namespace of the entity repository. Used in RepositoryName.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|128|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(128)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

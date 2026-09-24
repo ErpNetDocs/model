@@ -14,7 +14,7 @@ Introduced In Version: 27.1.1.41
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Name}  
+Display Format: {Name:T}  
 Search Members: Code; Name  
 Code Member: Code  
 Name Member: Name  
@@ -37,17 +37,17 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Bpm.CustomSubEntities.md#active) | boolean | Indicates whether the child object is active and available for use. `Required` `Default(true)` `Filter(eq)` |
-| [Code](Systems.Bpm.CustomSubEntities.md#code) | string (64) __nullable__ | Optional business identifier of the child object. Unique within root entity. `Filter(eq;like)` |
-| [LineNo](Systems.Bpm.CustomSubEntities.md#lineno) | int32 | Sequential number of the child object within the root object. `Required` `Default(10)` `Filter(eq;ge;le)` |
-| [Name](Systems.Bpm.CustomSubEntities.md#name) | string (254) __nullable__ | Name of the child object. `Filter(like)` |
+| [Active](Systems.Bpm.CustomSubEntities.md#active) | boolean | Indicates whether the child object is active and available for use.`Required` `Default(true)` `Filter(eq)` |
+| [Code](Systems.Bpm.CustomSubEntities.md#code) | string (64) __nullable__ | Optional business identifier of the child object. Unique within root entity.`Filter(eq;like)` |
+| [LineNo](Systems.Bpm.CustomSubEntities.md#lineno) | int32 | Sequential number of the child object within the root object.`Required` `Default(1)` `Filter(eq;ge;le)` |
+| [Name](Systems.Bpm.CustomSubEntities.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Name of the child object.`Filter(like)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EntityType](Systems.Bpm.CustomSubEntities.md#entitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) | Reference to the entity type of the object. The data type must have the root object’s data type as its parent data type. `Required` `Filter(multi eq)` |
-| [RootEntity](Systems.Bpm.CustomSubEntities.md#rootentity) | [CustomEntities](Systems.Bpm.CustomEntities.md) | Reference to the aggregate root object that owns the child object. `Required` `Filter(multi eq)` `Owner` |
+| [EntityType](Systems.Bpm.CustomSubEntities.md#entitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) | Reference to the entity type of the object. The data type must have the root object’s data type as its parent data type. |
+| [RootEntity](Systems.Bpm.CustomSubEntities.md#rootentity) | [CustomEntities](Systems.Bpm.CustomEntities.md) | Reference to the aggregate root object that owns the child object. |
 
 
 ## System Attributes
@@ -63,7 +63,7 @@ Aggregate Root:
 
 ### Active
 
-Indicates whether the child object is active and available for use. `Required` `Default(true)` `Filter(eq)`
+Indicates whether the child object is active and available for use.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -74,7 +74,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Optional business identifier of the child object. Unique within root entity. `Filter(eq;like)`
+Optional business identifier of the child object. Unique within root entity.`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -85,13 +85,13 @@ Show in UI: **ShownByDefault**
 
 ### LineNo
 
-Sequential number of the child object within the root object. `Required` `Default(10)` `Filter(eq;ge;le)`
+Sequential number of the child object within the root object.`Required` `Default(1)` `Filter(eq;ge;le)`
 
 Type: **int32**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan**  
 Supports Order By: **False**  
-Default Value: **10**  
+Default Value: **1**  
 Show in UI: **ShownByDefault**  
 
 Back-End Default Expression:  
@@ -101,13 +101,12 @@ Front-End Recalc Expressions:
 `( obj.RootEntity.CustomSubEntities.Select( c => c.LineNo).DefaultIfEmpty( 0).Max( ) + 1)`
 ### Name
 
-Name of the child object. `Filter(like)`
+Name of the child object.`Filter(like)`
 
-Type: **string (254) __nullable__**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
-Maximum Length: **254**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -143,7 +142,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityType
 
-Reference to the entity type of the object. The data type must have the root object’s data type as its parent data type. `Required` `Filter(multi eq)`
+Reference to the entity type of the object. The data type must have the root object’s data type as its parent data type.
 
 Type: **[CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md)**  
 Indexed: **True**  
@@ -153,7 +152,7 @@ Show in UI: **ShownByDefault**
 
 ### RootEntity
 
-Reference to the aggregate root object that owns the child object. `Required` `Filter(multi eq)` `Owner`
+Reference to the aggregate root object that owns the child object.
 
 Type: **[CustomEntities](Systems.Bpm.CustomEntities.md)**  
 Indexed: **True**  

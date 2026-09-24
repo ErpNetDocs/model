@@ -4,7 +4,7 @@ uid: Systems.Bpm.CustomEntityTypes
 # Systems.Bpm.CustomEntityTypes
 
 
-Stores the definitions of user-defined entity types in the system.
+Stores the definitions of user-defined entity types in the system. A type can be either an aggregate root or a child type of another custom entity type. The definition specifies the technical code, display names, activation status, and access-control settings.
 
 ## General
 Namespace: [Systems.Bpm](Systems.Bpm.md)  
@@ -35,19 +35,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Bpm.CustomEntityTypes.md#active) | boolean | Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive. `Required` `Default(true)` `Filter(eq)` |
-| [Code](Systems.Bpm.CustomEntityTypes.md#code) | string (64) | Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code. `Required` `Filter(eq;like)` `ORD` |
-| [Description](Systems.Bpm.CustomEntityTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Explanation of the purpose and intended use of the custom entity type. `Required` |
-| [Name](Systems.Bpm.CustomEntityTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing singular name of the entity type, for example 'Vehicle' or 'Service'. `Required` `Filter(like)` |
-| [PluralName](Systems.Bpm.CustomEntityTypes.md#pluralname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing plural or collection name, for example 'Vehicles' or 'Services'. `Required` |
-| [RepositoryNamespace](Systems.Bpm.CustomEntityTypes.md#repositorynamespace) | string (128) | The namespace of the entity repository. Used in RepositoryName. `Required` `Introduced in version 27.1.1.42` |
+| [Active](Systems.Bpm.CustomEntityTypes.md#active) | boolean | Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive.`Required` `Default(true)` `Filter(eq)` |
+| [Code](Systems.Bpm.CustomEntityTypes.md#code) | string (64) | Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code.`Required` `Filter(eq;like)` `ORD` |
+| [Description](Systems.Bpm.CustomEntityTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Explanation of the purpose and intended use of the custom entity type.`Required` |
+| [EntityName](Systems.Bpm.CustomEntityTypes.md#entityname) | string |              Gets the entity/table name of this custom entity type.              |
+| [Name](Systems.Bpm.CustomEntityTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.`Required` `Filter(like)` |
+| [PluralName](Systems.Bpm.CustomEntityTypes.md#pluralname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing plural or collection name, for example 'Vehicles' or 'Services'.`Required` |
+| [RepositoryName](Systems.Bpm.CustomEntityTypes.md#repositoryname) | string |              Gets the repository name of this custom entity type.              |
+| [RepositoryNamespace](Systems.Bpm.CustomEntityTypes.md#repositorynamespace) | string (128) | The namespace of the entity repository. Used in RepositoryName.`Required` `Introduced in version 27.1.1.42` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [AccessKey](Systems.Bpm.CustomEntityTypes.md#accesskey) | [AccessKeys](Systems.Security.AccessKeys.md) (nullable) | Access key controlling permissions for entities of this type. Primarily applicable to aggregate-root types. `Filter(multi eq)` |
-| [ParentEntityType](Systems.Bpm.CustomEntityTypes.md#parententitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable) | Parent custom entity type. `null` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type. `Filter(multi eq)` |
+| [ParentEntityType](Systems.Bpm.CustomEntityTypes.md#parententitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable) | Parent custom entity type. `NULL` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type. |
 
 
 ## System Attributes
@@ -67,7 +68,7 @@ Aggregate Tree
 
 ### Active
 
-Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive. `Required` `Default(true)` `Filter(eq)`
+Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -78,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code. `Required` `Filter(eq;like)` `ORD`
+Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -90,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Explanation of the purpose and intended use of the custom entity type. `Required`
+Explanation of the purpose and intended use of the custom entity type.`Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -98,9 +99,19 @@ Supported Filters: **NotFilterable**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+### EntityName
+
+Gets the entity/table name of this custom entity type.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
 ### Name
 
-User-facing singular name of the entity type, for example 'Vehicle' or 'Service'. `Required` `Filter(like)`
+User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -110,7 +121,7 @@ Show in UI: **ShownByDefault**
 
 ### PluralName
 
-User-facing plural or collection name, for example 'Vehicles' or 'Services'. `Required`
+User-facing plural or collection name, for example 'Vehicles' or 'Services'.`Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -118,9 +129,19 @@ Supported Filters: **NotFilterable**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+### RepositoryName
+
+Gets the repository name of this custom entity type.
+
+Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
 ### RepositoryNamespace
 
-The namespace of the entity repository. Used in RepositoryName. `Required` `Introduced in version 27.1.1.42`
+The namespace of the entity repository. Used in RepositoryName.`Required` `Introduced in version 27.1.1.42`
 
 Type: **string (128)**  
 Category: **System**  
@@ -200,27 +221,9 @@ Show in UI: **HiddenByDefault**
 
 ## Reference Details
 
-### AccessKey
-
-Access key controlling permissions for entities of this type. Primarily applicable to aggregate-root types. `Filter(multi eq)`
-
-Type: **[AccessKeys](Systems.Security.AccessKeys.md) (nullable)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-
-Remarks  
-Supported permissions
-
-| Permission | Type |
-| --- | --- |
-| Update | - |
-| Delete | - |
-| Administer (manage security)| - |
 ### ParentEntityType
 
-Parent custom entity type. `null` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type. `Filter(multi eq)`
+Parent custom entity type. `NULL` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type.
 
 Type: **[CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable)**  
 Category: **System**  

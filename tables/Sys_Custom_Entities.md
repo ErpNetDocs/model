@@ -15,7 +15,8 @@ Stores the instances of user-defined aggregate root entities. Entity: Sys_Custom
 |[Code](#code)|`nvarchar(64)` |Optional business identifier of the custom entity instance. Unique within the entity type.|
 |[Entity_Type_Id](#entity_type_id)|`uniqueidentifier` |Reference to the custom entity type. The referenced type must be an aggregate root type.|
 |[Id](#id)|`uniqueidentifier` `PK`||
-|[Name](#name)|`nvarchar(254)` |Name of the custom entity instance.|
+|[Name](#name)|`nvarchar(254)` `ML`|Name of the custom entity instance.|
+|[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
@@ -187,7 +188,7 @@ Name of the custom entity instance.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (Allows NULL)|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -198,5 +199,32 @@ Name of the custom entity instance.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Like|None|no|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 

@@ -14,7 +14,7 @@ Introduced In Version: 27.1.1.41
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Name}  
+Display Format: {Name:T}  
 Search Members: Code; Name  
 Code Member: Code  
 Name Member: Name  
@@ -36,15 +36,15 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Bpm.CustomEntities.md#active) | boolean | Indicates whether the custom entity instance is active and available for use. `Required` `Default(true)` `Filter(eq)` |
-| [Code](Systems.Bpm.CustomEntities.md#code) | string (64) __nullable__ | Optional business identifier of the custom entity instance. Unique within the entity type. `Filter(eq;like)` |
-| [Name](Systems.Bpm.CustomEntities.md#name) | string (254) __nullable__ | Name of the custom entity instance. `Filter(like)` |
+| [Active](Systems.Bpm.CustomEntities.md#active) | boolean | Indicates whether the custom entity instance is active and available for use.`Required` `Default(true)` `Filter(eq)` |
+| [Code](Systems.Bpm.CustomEntities.md#code) | string (64) __nullable__ | Optional business identifier of the custom entity instance. Unique within the entity type.`Filter(eq;like)` |
+| [Name](Systems.Bpm.CustomEntities.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Name of the custom entity instance.`Filter(like)` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [EntityType](Systems.Bpm.CustomEntities.md#entitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) | Reference to the custom entity type. The referenced type must be an aggregate root type. `Required` `Filter(multi eq)` |
+| [EntityType](Systems.Bpm.CustomEntities.md#entitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) | Reference to the custom entity type. The referenced type must be an aggregate root type. |
 
 
 ## System Attributes
@@ -70,7 +70,7 @@ Aggregate Tree
 
 ### Active
 
-Indicates whether the custom entity instance is active and available for use. `Required` `Default(true)` `Filter(eq)`
+Indicates whether the custom entity instance is active and available for use.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -81,7 +81,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Optional business identifier of the custom entity instance. Unique within the entity type. `Filter(eq;like)`
+Optional business identifier of the custom entity instance. Unique within the entity type.`Filter(eq;like)`
 
 Type: **string (64) __nullable__**  
 Category: **System**  
@@ -92,13 +92,12 @@ Show in UI: **ShownByDefault**
 
 ### Name
 
-Name of the custom entity instance. `Filter(like)`
+Name of the custom entity instance.`Filter(like)`
 
-Type: **string (254) __nullable__**  
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
-Maximum Length: **254**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -174,7 +173,7 @@ Show in UI: **HiddenByDefault**
 
 ### EntityType
 
-Reference to the custom entity type. The referenced type must be an aggregate root type. `Required` `Filter(multi eq)`
+Reference to the custom entity type. The referenced type must be an aggregate root type.
 
 Type: **[CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md)**  
 Indexed: **True**  

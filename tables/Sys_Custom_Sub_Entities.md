@@ -7,6 +7,10 @@ Entity: [Systems.Bpm.CustomSubEntities](~/entities/Systems.Bpm.CustomSubEntities
 
 Stores the objects of user-defined child entity types. Entity: Sys_Custom_Sub_Entities (Introduced in version 27.1.1.41)
 
+## Owner Tables Hierarchy
+
+* [Sys_Custom_Entities](Sys_Custom_Entities.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -16,8 +20,9 @@ Stores the objects of user-defined child entity types. Entity: Sys_Custom_Sub_En
 |[Entity_Type_Id](#entity_type_id)|`uniqueidentifier` |Reference to the entity type of the object. The data type must have the root object’s data type as its parent data type.|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_No](#line_no)|`int` |Sequential number of the child object within the root object.|
-|[Name](#name)|`nvarchar(254)` |Name of the child object.|
+|[Name](#name)|`nvarchar(254)` `ML`|Name of the child object.|
 |[Root_Entity_Id](#root_entity_id)|`uniqueidentifier` |Reference to the aggregate root object that owns the child object.|
+|[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
 
@@ -175,7 +180,7 @@ Sequential number of the child object within the root object.
 |Auto Complete|no|
 |Autoincrement|1|
 |Data Filter|no|
-|Default Value|10|
+|Default Value|1|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -227,7 +232,7 @@ Name of the child object.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(254) (Allows NULL)|
+|Type|nvarchar(254) (MultiLanguage) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -254,7 +259,7 @@ Reference to the aggregate root object that owns the child object.
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
@@ -275,5 +280,32 @@ Reference to the aggregate root object that owns the child object.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Row_Version
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|timestamp|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|no|
 
 
