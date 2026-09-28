@@ -35,20 +35,20 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Active](Systems.Bpm.CustomEntityTypes.md#active) | boolean | Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive.`Required` `Default(true)` `Filter(eq)` |
-| [Code](Systems.Bpm.CustomEntityTypes.md#code) | string (64) | Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code.`Required` `Filter(eq;like)` `ORD` |
-| [Description](Systems.Bpm.CustomEntityTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Explanation of the purpose and intended use of the custom entity type.`Required` |
+| [Active](Systems.Bpm.CustomEntityTypes.md#active) | boolean | Defaults to true. Specifies whether this type is active. Only active, valid types (and subtypes with an active, valid root type) are registered in the Domain Model. Inactive types cannot be used to create new records; existing records are not deleted.`Required` `Default(true)` `Filter(eq)` |
+| [Code](Systems.Bpm.CustomEntityTypes.md#code) | string (64) | Required, stable technical code for the type. Use the plural form (for example, Workspaces). It must start with an ASCII letter and contain only ASCII letters and digits; spaces and punctuation are not allowed. Maximum length: 64 characters. The (Code, RepositoryNamespace) pair must be unique. This code is used to derive RepositoryName, EntityName, and the Domain API entity set.`Required` `Filter(eq;like)` `ORD` |
+| [Description](Systems.Bpm.CustomEntityTypes.md#description) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Required, localized explanation of the type's purpose and intended use. Maximum length: 254 characters.`Required` |
 | [EntityName](Systems.Bpm.CustomEntityTypes.md#entityname) | string |              Gets the entity/table name of this custom entity type.              |
-| [Name](Systems.Bpm.CustomEntityTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.`Required` `Filter(like)` |
-| [PluralName](Systems.Bpm.CustomEntityTypes.md#pluralname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | User-facing plural or collection name, for example 'Vehicles' or 'Services'.`Required` |
+| [Name](Systems.Bpm.CustomEntityTypes.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Required, localized singular display name of the entity type, for example, Workspace. It does not affect technical names. Maximum length: 254 characters.`Required` `Filter(like)` |
+| [PluralName](Systems.Bpm.CustomEntityTypes.md#pluralname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Required, localized plural display or collection name, for example, Workspaces. It does not affect technical names. Maximum length: 254 characters.`Required` `Filter(like)` |
 | [RepositoryName](Systems.Bpm.CustomEntityTypes.md#repositoryname) | string |              Gets the repository name of this custom entity type.              |
-| [RepositoryNamespace](Systems.Bpm.CustomEntityTypes.md#repositorynamespace) | string (128) | The namespace of the entity repository. Used in RepositoryName.`Required` `Introduced in version 27.1.1.42` |
+| [RepositoryNamespace](Systems.Bpm.CustomEntityTypes.md#repositorynamespace) | string (128) | Required namespace for the generated repository, for example, Crm.Sales. It must exactly match a namespace registered in the current Domain Model and is used to derive RepositoryName and the Domain API entity set. Maximum length: 128 characters.`Required` `Filter(eq)` `Introduced in version 27.1.1.42` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ParentEntityType](Systems.Bpm.CustomEntityTypes.md#parententitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable) | Parent custom entity type. `NULL` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type. |
+| [ParentEntityType](Systems.Bpm.CustomEntityTypes.md#parententitytype) | [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable) | Optional parent type. Leave empty for an aggregate root. When specified, the type defines a sub-entity collection belonging directly to a root type; sub-entities cannot have child types. |
 
 
 ## System Attributes
@@ -68,7 +68,7 @@ Aggregate Tree
 
 ### Active
 
-Specifies whether new entities or sub-entities of this type may be created. Existing records remain valid when the type is inactive.`Required` `Default(true)` `Filter(eq)`
+Defaults to true. Specifies whether this type is active. Only active, valid types (and subtypes with an active, valid root type) are registered in the Domain Model. Inactive types cannot be used to create new records; existing records are not deleted.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
@@ -79,7 +79,7 @@ Show in UI: **ShownByDefault**
 
 ### Code
 
-Stable technical code of the type. Used for identification in metadata, APIs, Stored Attributes, and system configuration. EntityName and RepositoryName are derived from this code.`Required` `Filter(eq;like)` `ORD`
+Required, stable technical code for the type. Use the plural form (for example, Workspaces). It must start with an ASCII letter and contain only ASCII letters and digits; spaces and punctuation are not allowed. Maximum length: 64 characters. The (Code, RepositoryNamespace) pair must be unique. This code is used to derive RepositoryName, EntityName, and the Domain API entity set.`Required` `Filter(eq;like)` `ORD`
 
 Type: **string (64)**  
 Indexed: **True**  
@@ -91,7 +91,7 @@ Show in UI: **ShownByDefault**
 
 ### Description
 
-Explanation of the purpose and intended use of the custom entity type.`Required`
+Required, localized explanation of the type's purpose and intended use. Maximum length: 254 characters.`Required`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -111,7 +111,7 @@ Show in UI: **HiddenByDefault**
 
 ### Name
 
-User-facing singular name of the entity type, for example 'Vehicle' or 'Service'.`Required` `Filter(like)`
+Required, localized singular display name of the entity type, for example, Workspace. It does not affect technical names. Maximum length: 254 characters.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
@@ -121,11 +121,11 @@ Show in UI: **ShownByDefault**
 
 ### PluralName
 
-User-facing plural or collection name, for example 'Vehicles' or 'Services'.`Required`
+Required, localized plural display or collection name, for example, Workspaces. It does not affect technical names. Maximum length: 254 characters.`Required` `Filter(like)`
 
 Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Like**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
@@ -141,11 +141,11 @@ Show in UI: **HiddenByDefault**
 
 ### RepositoryNamespace
 
-The namespace of the entity repository. Used in RepositoryName.`Required` `Introduced in version 27.1.1.42`
+Required namespace for the generated repository, for example, Crm.Sales. It must exactly match a namespace registered in the current Domain Model and is used to derive RepositoryName and the Domain API entity set. Maximum length: 128 characters.`Required` `Filter(eq)` `Introduced in version 27.1.1.42`
 
 Type: **string (128)**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals**  
 Supports Order By: **False**  
 Maximum Length: **128**  
 Show in UI: **ShownByDefault**  
@@ -223,7 +223,7 @@ Show in UI: **HiddenByDefault**
 
 ### ParentEntityType
 
-Parent custom entity type. `NULL` means that this type defines aggregate-root entities. When specified, the type defines a sub-entity collection belonging to the parent type.
+Optional parent type. Leave empty for an aggregate root. When specified, the type defines a sub-entity collection belonging directly to a root type; sub-entities cannot have child types.
 
 Type: **[CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md) (nullable)**  
 Category: **System**  

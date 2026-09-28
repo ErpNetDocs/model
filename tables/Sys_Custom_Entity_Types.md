@@ -263,6 +263,12 @@ User-facing plural or collection name, for example 'Vehicles' or 'Services'.
 |User Login|no|
 |Visible|yes|
 
+#### Plural_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Like|None|no|no|
+
 ### Repository_Namespace
 
 
@@ -292,6 +298,12 @@ The namespace of the entity repository. Used in RepositoryName.
 |UI Width|Medium|
 |User Login|no|
 |Visible|yes|
+
+#### Repository_Namespace - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Row_Version
 
