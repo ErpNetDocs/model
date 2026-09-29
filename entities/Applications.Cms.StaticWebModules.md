@@ -9,6 +9,7 @@ A web module, which contains one web page with static text.
 ## General
 Namespace: [Applications.Cms](Applications.Cms.md)  
 Repository: Applications.Cms.StaticWebModules  
+Inherited From: [Applications.Cms.WebModules](Applications.Cms.WebModules.md)  
 Base Table: Cms_Static_Web_Modules  
 API access:  ReadWrite  
 

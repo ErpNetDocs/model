@@ -22,7 +22,7 @@ One zone within a warehouse. Each zone can have different rack structure and dif
 |[Warehouse_Zone_Code](#warehouse_zone_code)|`nvarchar(32)` |Zone code, unique within the warehouse.|
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Zone_Name](#warehouse_zone_name)|`nvarchar(254)` `ML`|Multi-language name of the zone.|
-|[Zone_Type](#zone_type)|`char(3)` Allowed: `RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`|Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.|
+|[Zone_Type](#zone_type)|`char(3)` Allowed: `RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`, `CAR`|Specifies the primary functional purpose of the Warehouse Zone. The zone type can be used by warehouse processes to determine appropriate source, destination, or processing zones when planning and executing warehouse operations. RCZ=Receiving; BLK=Bulk; PKZ=Picking; LBZ=Labeling; PAZ=Packing; ASZ=Assembly; DSZ=Disassembly; SHZ=Shipping; QRZ=Quarantine; GNZ=General; UZA=User Defined 1; UZB=User Defined 2; UZC=User Defined 3; UZD=User Defined 4.|
 
 ## Columns
 
@@ -269,7 +269,7 @@ Specifies the primary functional purpose of the Warehouse Zone. The zone type ca
 
 | Property | Value |
 | - | - |
-|Allowed Values|`RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`|
+|Allowed Values|`RCZ`, `BLK`, `PKZ`, `LBZ`, `PAZ`, `ASZ`, `DSZ`, `SHZ`, `QRZ`, `GNZ`, `UZA`, `UZB`, `UZC`, `UZD`, `CAR`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|
