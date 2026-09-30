@@ -923,6 +923,8 @@
       href: Logistics.Wms.WarehousePolicies.md
     - name: WarehouseProcesses
       href: Logistics.Wms.WarehouseProcesses.md
+    - name: WarehouseProcessSteps
+      href: Logistics.Wms.WarehouseProcessSteps.md
     - name: WarehouseReconciliationDetails
       href: Logistics.Wms.WarehouseReconciliationDetails.md
     - name: WarehouseReconciliationLines

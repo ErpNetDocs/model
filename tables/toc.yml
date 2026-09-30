@@ -1500,6 +1500,8 @@
     href: Wms_Warehouse_Orders.md
   - name: Wms_Warehouse_Policies
     href: Wms_Warehouse_Policies.md
+  - name: Wms_Warehouse_Process_Steps
+    href: Wms_Warehouse_Process_Steps.md
   - name: Wms_Warehouse_Processes
     href: Wms_Warehouse_Processes.md
   - name: Wms_Warehouse_Reconciliation_Details

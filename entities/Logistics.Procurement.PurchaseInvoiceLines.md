@@ -43,6 +43,11 @@ Aggregate Root:
 | [LineNo](Logistics.Procurement.PurchaseInvoiceLines.md#lineno) | int32 | Consecutive line number within the invoice.`Required` |
 | [Notes](Logistics.Procurement.PurchaseInvoiceLines.md#notes) | string (254) __nullable__ | Notes for this PurchaseInvoiceLine. |
 | [ProductName](Logistics.Procurement.PurchaseInvoiceLines.md#productname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of the invoiced product, initially copied from the name in the product definition. The field can be edited by the user.`Required` |
+| [PurchaseInvoice<br />LineCustomProperty1](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoicelinecustomproperty1) | [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__ | The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type. |
+| [PurchaseInvoice<br />LineCustomProperty2](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoicelinecustomproperty2) | [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__ | The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type. |
+| [PurchaseInvoice<br />LineCustomProperty3](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoicelinecustomproperty3) | [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__ | The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type. |
+| [PurchaseInvoice<br />LineCustomProperty4](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoicelinecustomproperty4) | [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__ | The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type. |
+| [PurchaseInvoice<br />LineCustomProperty5](Logistics.Procurement.PurchaseInvoiceLines.md#purchaseinvoicelinecustomproperty5) | [CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__ | The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type. |
 | [Quantity](Logistics.Procurement.PurchaseInvoiceLines.md#quantity) | [Quantity (12, 3)](../data-types.md#quantity) | The invoiced quantity.`Unit: QuantityUnit` `Required` `Default(1)` |
 | [QuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#quantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The equivalence of Quantity in the base measurement category of the product.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` |
 | [StandardQuantityBase](Logistics.Procurement.PurchaseInvoiceLines.md#standardquantitybase) | [Quantity (12, 3)](../data-types.md#quantity) | The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution.`Unit: Product.BaseMeasurementCategory.BaseUnit` `Required` `ReadOnly` `Introduced in version 18.2` |
@@ -250,6 +255,56 @@ Back-End Default Expression:
 
 Front-End Recalc Expressions:  
 `IIF( ( obj.ReceivingOrderLine != null), obj.ReceivingOrderLine.ProductDescription, obj.Product.Name)`
+### PurchaseInvoiceLineCustomProperty1
+
+The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type.
+
+Type: **[CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__**  
+Category: **Purchase invoice line properties**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### PurchaseInvoiceLineCustomProperty2
+
+The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type.
+
+Type: **[CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__**  
+Category: **Purchase invoice line properties**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### PurchaseInvoiceLineCustomProperty3
+
+The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type.
+
+Type: **[CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__**  
+Category: **Purchase invoice line properties**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### PurchaseInvoiceLineCustomProperty4
+
+The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type.
+
+Type: **[CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__**  
+Category: **Purchase invoice line properties**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### PurchaseInvoiceLineCustomProperty5
+
+The value of the purchase invoice line property slot, mapped to the corresponding property defined for the product's product type.
+
+Type: **[CustomPropertyValue](../data-types.md#systems.bpm.custompropertyvalue) __nullable__**  
+Category: **Purchase invoice line properties**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
 ### Quantity
 
 The invoiced quantity.`Unit: QuantityUnit` `Required` `Default(1)`

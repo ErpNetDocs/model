@@ -35,6 +35,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [CartPosition](Logistics.Wms.WarehouseOrderLines.md#cartposition) | int32 __nullable__ | Specifies the position in the picking cart used to separate and group collected goods during execution. The value identifies a cart position, not a physical container. A null value also represents a separate cart position.`Filter(eq;ge;le)` `Introduced in version 27.1.1.51` |
 | [CurrentBalanceBase](Logistics.Wms.WarehouseOrderLines.md#currentbalancebase) | [Quantity](../data-types.md#quantity) | The current balance of the product in the selected store and enterprise company. If lot, serial number or product variant are specified the quantity is calculated accordingly. |
 | [LineGroupNo](Logistics.Wms.WarehouseOrderLines.md#linegroupno) | int32 | Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.`Required` `Default(1)` `Filter(eq;ge;le)` `Introduced in version 23.1.0.67` |
 | [LineNo](Logistics.Wms.WarehouseOrderLines.md#lineno) | int32 | Unique consecutive line number within the order.`Required` `Filter(eq)` |
@@ -74,6 +75,16 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### CartPosition
+
+Specifies the position in the picking cart used to separate and group collected goods during execution. The value identifies a cart position, not a physical container. A null value also represents a separate cart position.`Filter(eq;ge;le)` `Introduced in version 27.1.1.51`
+
+Type: **int32 __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
 
 ### CurrentBalanceBase
 

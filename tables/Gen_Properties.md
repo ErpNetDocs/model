@@ -26,7 +26,7 @@ User-defined properties, which can supplement the system properties of almost al
 |[Property_Code](#property_code)|`nvarchar(40)` |Unique property code.|
 |[Property_Id](#property_id)|`uniqueidentifier` `PK`||
 |[Property_Name](#property_name)|`nvarchar(254)` `ML`||
-|[Property_Type](#property_type)|`char(1)` Allowed: `T`, `N`, `P`, `D`, `R`|Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.|
+|[Property_Type](#property_type)|`char(1)` Allowed: `T`, `N`, `P`, `D`, `R`|Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date; ‘R’ - reference.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -547,7 +547,7 @@ Unique property code.
 ### Property_Type
 
 
-Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.
+Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date; ‘R’ - reference.
 
 | Property | Value |
 | - | - |

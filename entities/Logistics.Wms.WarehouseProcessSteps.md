@@ -1,21 +1,22 @@
 ---
-uid: Logistics.Wms.WarehouseProcesses
+uid: Logistics.Wms.WarehouseProcessSteps
 ---
-# Logistics.Wms.WarehouseProcesses
+# Logistics.Wms.WarehouseProcessSteps
 
 
-Contains warehouse process configurations used to determine which Warehouse Process is applicable to a Warehouse Requisition. Configurations are evaluated in ascending order of Process No. Only the first process that matches all specified criteria is selected; subsequent processes are not considered. More specific configurations should therefore be ordered before more general ones. A configuration can optionally be limited by managed warehouse, party, and validity period, while the Warehouse Requisition document type is required. The execution of the selected process is defined by the steps configured for it.
+Contains the ordered steps that define how a Warehouse Process is executed. The steps should be arranged in the sequence in which they are intended to run. Each step represents a specific stage of the process and defines the algorithm and Warehouse Order document type used for its execution. An optional condition can be specified for each step to determine whether it should be executed or skipped.
 
 ## General
 Namespace: [Logistics.Wms](Logistics.Wms.md)  
-Repository: Logistics.Wms.WarehouseProcesses  
-Base Table: Wms_Warehouse_Processes  
-Introduced In Version: 27.1.1.5  
+Repository: Logistics.Wms.WarehouseProcessSteps  
+Base Table: Wms_Warehouse_Process_Steps  
+Introduced In Version: 27.1.1.51  
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {WarehouseId}  
-Search Members:   
+Display Format: {IntegratedAlgorithmName}  
+Search Members: IntegratedAlgorithmName  
+Name Member: IntegratedAlgorithmName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -27,76 +28,45 @@ Max level:  4 - Track object attribute and blob changes
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
 Aggregate Tree  
-* [Logistics.Wms.WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
+* [Logistics.Wms.WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Logistics.Wms.WarehouseProcesses.md#activefrom) | datetime __nullable__ | Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.`Filter(ge;le)` |
-| [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)` |
-| [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)` |
-| [Notes](Logistics.Wms.WarehouseProcesses.md#notes) | string (max) __nullable__ | Additional information or comments about the warehouse process configuration. |
-| [ProcessNo](Logistics.Wms.WarehouseProcesses.md#processno) | int32 | Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51` |
+| [ConditionJS](Logistics.Wms.WarehouseProcessSteps.md#conditionjs) | string (max) __nullable__ | JavaScript condition that determines whether the process step should be executed for the entire Warehouse Requisition. The condition applies to all lines of the requisition and cannot include or exclude individual lines. When the script returns true, the step is executed; when it returns false, the step is skipped. If the field is empty, the step is always executed. |
+| [CustomAlgorithmJS](Logistics.Wms.WarehouseProcessSteps.md#customalgorithmjs) | string (max) __nullable__ | Custom JavaScript logic used to execute the process step and generate its Warehouse Order. Use this field only when the Integrated Algorithm Name field is empty. |
+| [IntegratedAlgorithmName](Logistics.Wms.WarehouseProcessSteps.md#integratedalgorithmname) | string (254) __nullable__ | The name of the integrated algorithm used to execute the process step and generate its Warehouse Order. Leave this field empty when a custom algorithm is defined in the Custom Algorithm JS field. |
+| [Notes](Logistics.Wms.WarehouseProcessSteps.md#notes) | string (max) __nullable__ | Additional information or comments about the process step. |
+| [StepName](Logistics.Wms.WarehouseProcessSteps.md#stepname) | string (254) | A descriptive name used to identify the process step.`Required` |
+| [StepNo](Logistics.Wms.WarehouseProcessSteps.md#stepno) | int32 | The sequence number of the step within the Warehouse Process.`Required` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Party](Logistics.Wms.WarehouseProcesses.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party. |
-| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse. |
-| [WarehouseRequisition<br />DocumentType](Logistics.Wms.WarehouseProcesses.md#warehouserequisitiondocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Specifies the Warehouse Requisition document type for which the process is applicable. |
+| [WarehouseOrderDocumentType](Logistics.Wms.WarehouseProcessSteps.md#warehouseorderdocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | The document type used for the Warehouse Order generated by this process step. |
+| [WarehouseProcess](Logistics.Wms.WarehouseProcessSteps.md#warehouseprocess) | [WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md) | The Warehouse Process to which this step belongs. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Wms.WarehouseProcesses.md#id) | guid |  |
-| [ObjectVersion](Logistics.Wms.WarehouseProcesses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
-| [ExternalId](Logistics.Wms.WarehouseProcesses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
-| [ExternalSystem](Logistics.Wms.WarehouseProcesses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
-| [AggregateLastUpdateTimeUtc](Logistics.Wms.WarehouseProcesses.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
-| [AdditionalDataJson](Logistics.Wms.WarehouseProcesses.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
-| [DisplayText](Logistics.Wms.WarehouseProcesses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+| [Id](Logistics.Wms.WarehouseProcessSteps.md#id) | guid |  |
+| [ObjectVersion](Logistics.Wms.WarehouseProcessSteps.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Logistics.Wms.WarehouseProcessSteps.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Logistics.Wms.WarehouseProcessSteps.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Logistics.Wms.WarehouseProcessSteps.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [AdditionalDataJson](Logistics.Wms.WarehouseProcessSteps.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
+| [DisplayText](Logistics.Wms.WarehouseProcessSteps.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details
 
-### ActiveFrom
+### ConditionJS
 
-Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.`Filter(ge;le)`
-
-Type: **datetime __nullable__**  
-Category: **System**  
-Supported Filters: **GreaterThanOrLessThan**  
-Supports Order By: **False**  
-Show in UI: **ShownByDefault**  
-
-### ActiveTo
-
-Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)`
-
-Type: **datetime __nullable__**  
-Category: **System**  
-Supported Filters: **GreaterThanOrLessThan**  
-Supports Order By: **False**  
-Show in UI: **ShownByDefault**  
-
-### IsActive
-
-Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)`
-
-Type: **boolean**  
-Category: **System**  
-Supported Filters: **Equals**  
-Supports Order By: **False**  
-Default Value: **True**  
-Show in UI: **ShownByDefault**  
-
-### Notes
-
-Additional information or comments about the warehouse process configuration.
+JavaScript condition that determines whether the process step should be executed for the entire Warehouse Requisition. The condition applies to all lines of the requisition and cannot include or exclude individual lines. When the script returns true, the step is executed; when it returns false, the step is skipped. If the field is empty, the step is always executed.
 
 Type: **string (max) __nullable__**  
 Category: **System**  
@@ -105,15 +75,58 @@ Supports Order By: **False**
 Maximum Length: **2147483647**  
 Show in UI: **ShownByDefault**  
 
-### ProcessNo
+### CustomAlgorithmJS
 
-Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51`
+Custom JavaScript logic used to execute the process step and generate its Warehouse Order. Use this field only when the Integrated Algorithm Name field is empty.
 
-Type: **int32**  
-Indexed: **True**  
+Type: **string (max) __nullable__**  
 Category: **System**  
 Supported Filters: **NotFilterable**  
-Supports Order By: **True**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### IntegratedAlgorithmName
+
+The name of the integrated algorithm used to execute the process step and generate its Warehouse Order. Leave this field empty when a custom algorithm is defined in the Custom Algorithm JS field.
+
+Type: **string (254) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
+
+### Notes
+
+Additional information or comments about the process step.
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### StepName
+
+A descriptive name used to identify the process step.`Required`
+
+Type: **string (254)**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **254**  
+Show in UI: **ShownByDefault**  
+
+### StepNo
+
+The sequence number of the step within the Warehouse Process.`Required`
+
+Type: **int32**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -122,7 +135,6 @@ Type: **guid**
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Default Value: **NewGuid**  
 Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
@@ -188,29 +200,21 @@ Show in UI: **HiddenByDefault**
 
 ## Reference Details
 
-### Party
+### WarehouseOrderDocumentType
 
-Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party.
-
-Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### Warehouse
-
-Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse.
-
-Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### WarehouseRequisitionDocumentType
-
-Specifies the Warehouse Requisition document type for which the process is applicable.
+The document type used for the Warehouse Order generated by this process step.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### WarehouseProcess
+
+The Warehouse Process to which this step belongs.
+
+Type: **[WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
@@ -349,23 +353,23 @@ Domain API Request: **GET**
 
 ## Business Rules
 
-[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcesses erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcessSteps erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcesses erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Logistics.Wms.WarehouseProcessSteps erp.type=front-end-business-rule default-text="None"]
 
 ## API
 
 Domain API Entity Set: 
-Logistics_Wms_WarehouseProcesses
+Logistics_Wms_WarehouseProcessSteps
 
 Domain API Entity Type: 
-Logistics_Wms_WarehouseProcess
+Logistics_Wms_WarehouseProcessStep
 
 Domain API Query:
-<https://testdb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseProcesses?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Logistics_Wms_WarehouseProcessSteps?$top=10>
 
 Domain API Query Builder:
-<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseProcesses?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Logistics_Wms_WarehouseProcessSteps?$top=10>
 
