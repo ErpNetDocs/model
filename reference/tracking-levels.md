@@ -102,6 +102,7 @@ The following table contains default system-specified tracking levels:
 | Crm.Invoicing.InvoicesOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.Campaigns | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.CompanySizeClasses | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Marketing.CompetitorProductPrices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.Competitors | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.CompetitorSolutions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.DistributionChannels | 1 - Track last changes only | 4 - Track object attribute and blob changes |

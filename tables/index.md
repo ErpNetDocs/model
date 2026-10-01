@@ -161,6 +161,7 @@
 * [Crm_Bonus_Programs](Crm_Bonus_Programs.md)
 * [Crm_Campaigns](Crm_Campaigns.md)
 * [Crm_Company_Size_Classes](Crm_Company_Size_Classes.md)
+* [Crm_Competitor_Product_Prices](Crm_Competitor_Product_Prices.md)
 * [Crm_Competitor_Solutions](Crm_Competitor_Solutions.md)
 * [Crm_Competitors](Crm_Competitors.md)
 * [Crm_Customer_External_Access](Crm_Customer_External_Access.md)
