@@ -1041,12 +1041,16 @@
       href: Projects.Agile.ProjectMilestones.md
     - name: Projects
       href: Projects.Agile.Projects.md
+    - name: ProjectStakeholders
+      href: Projects.Agile.ProjectStakeholders.md
     - name: ProjectTypeCaseCategories
       href: Projects.Agile.ProjectTypeCaseCategories.md
     - name: ProjectTypes
       href: Projects.Agile.ProjectTypes.md
     - name: Sprints
       href: Projects.Agile.Sprints.md
+    - name: StakeholderRoles
+      href: Projects.Agile.StakeholderRoles.md
     - name: TimeEntries
       href: Projects.Agile.TimeEntries.md
     - name: UserStateCaseCategories

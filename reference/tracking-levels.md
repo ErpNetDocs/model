@@ -432,9 +432,11 @@ The following table contains default system-specified tracking levels:
 | Projects.Agile.ProjectGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectMilestones | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.Projects | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Projects.Agile.ProjectStakeholders | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectTypeCaseCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.Sprints | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Projects.Agile.StakeholderRoles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.TimeEntries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.UserStateCaseCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.UserStates | 1 - Track last changes only | 4 - Track object attribute and blob changes |

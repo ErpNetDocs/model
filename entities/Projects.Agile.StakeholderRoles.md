@@ -1,23 +1,22 @@
 ---
-uid: Crm.Marketing.CompetitorProductPrices
+uid: Projects.Agile.StakeholderRoles
 ---
-# Crm.Marketing.CompetitorProductPrices
+# Projects.Agile.StakeholderRoles
 
 
-Contains observed prices of products offered by competitors and links them to the corresponding company products.
+Contains the roles used to specify responsibilities and involvement in projects.
 
 ## General
-Namespace: [Crm.Marketing](Crm.Marketing.md)  
-Repository: Crm.Marketing.CompetitorProductPrices  
-Base Table: Crm_Competitor_Product_Prices  
-Introduced In Version: 27.1.1.52  
+Namespace: [Projects.Agile](Projects.Agile.md)  
+Repository: Projects.Agile.StakeholderRoles  
+Base Table: Apm_Stakeholder_Roles  
+Introduced In Version: 27.1.1.54  
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {CompetitorProductName}: {Currency} {Price} ({ObservedOn})  
-Search Members: CompetitorProductCode; CompetitorProductName  
-Code Member: CompetitorProductCode  
-Name Member: CompetitorProductName  
+Display Format: {Name:T}  
+Search Members: Name  
+Name Member: Name  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -29,61 +28,60 @@ Max level:  4 - Track object attribute and blob changes
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
 Aggregate Tree  
-* [Crm.Marketing.CompetitorProductPrices](Crm.Marketing.CompetitorProductPrices.md)  
+* [Projects.Agile.StakeholderRoles](Projects.Agile.StakeholderRoles.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [CompetitorProductCode](Crm.Marketing.CompetitorProductPrices.md#competitorproductcode) | string (64) __nullable__ | Competitor’s own SKU / product code, if known.`Filter(eq)` |
-| [CompetitorProductName](Crm.Marketing.CompetitorProductPrices.md#competitorproductname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__ | Competitor’s product name as advertised.`Filter(eq)` |
-| [Notes](Crm.Marketing.CompetitorProductPrices.md#notes) | string (max) __nullable__ | Additional information.`Filter(like)` |
-| [ObservedOn](Crm.Marketing.CompetitorProductPrices.md#observedon) | date | Date on which this price was observed.`Required` `Default(Now)` `Filter(eq;ge;le)` |
-| [Price](Crm.Marketing.CompetitorProductPrices.md#price) | decimal (13, 5) | Observed competitor price.`Required` `Filter(eq;ge;le)` |
-| [PriceQuantity](Crm.Marketing.CompetitorProductPrices.md#pricequantity) | [Quantity (10, 3)](../data-types.md#quantity) | Quantity to which the price applies. By default it applies to 1.`Unit: PriceQuantityMeasurement<br />Unit` `Required` `Default(1)` `Filter(eq;ge;le)` |
-| [Source](Crm.Marketing.CompetitorProductPrices.md#source) | string (500) __nullable__ | Where the price came from, e.g. website, catalogue, sales representative.`Filter(like)` |
-
-## References
-
-| Name | Type | Description |
-| ---- | ---- | --- |
-| [Competitor](Crm.Marketing.CompetitorProductPrices.md#competitor) | [Competitors](Crm.Marketing.Competitors.md) | Competitor offering the product. |
-| [Currency](Crm.Marketing.CompetitorProductPrices.md#currency) | [Currencies](General.Currencies.Currencies.md) | Currency of the price. |
-| [PriceQuantityMeasurement<br />Unit](Crm.Marketing.CompetitorProductPrices.md#pricequantitymeasurementunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of the quantity to which the price applies. |
-| [Product](Crm.Marketing.CompetitorProductPrices.md#product) | [Products](General.Products.Products.md) | Our product against which the competitor product is compared. |
+| [Description](Projects.Agile.StakeholderRoles.md#description) | string (256) __nullable__ | Description of the role.`Filter(eq;like)` |
+| [IsActive](Projects.Agile.StakeholderRoles.md#isactive) | boolean | Indicates whether the role is currently available for use.`Required` `Default(true)` `Filter(eq)` |
+| [Name](Projects.Agile.StakeholderRoles.md#name) | [MultilanguageString (256)](../data-types.md#multilanguagestring) | Name of the role.`Required` `Filter(eq)` |
+| [Notes](Projects.Agile.StakeholderRoles.md#notes) | string (max) __nullable__ | Additional information or comments about the role.`Filter(like)` |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Crm.Marketing.CompetitorProductPrices.md#id) | guid |  |
-| [ObjectVersion](Crm.Marketing.CompetitorProductPrices.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
-| [ExternalId](Crm.Marketing.CompetitorProductPrices.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
-| [ExternalSystem](Crm.Marketing.CompetitorProductPrices.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
-| [AggregateLastUpdateTimeUtc](Crm.Marketing.CompetitorProductPrices.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
-| [AdditionalDataJson](Crm.Marketing.CompetitorProductPrices.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
-| [DisplayText](Crm.Marketing.CompetitorProductPrices.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+| [Id](Projects.Agile.StakeholderRoles.md#id) | guid |  |
+| [ObjectVersion](Projects.Agile.StakeholderRoles.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
+| [ExternalId](Projects.Agile.StakeholderRoles.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
+| [ExternalSystem](Projects.Agile.StakeholderRoles.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
+| [AggregateLastUpdateTimeUtc](Projects.Agile.StakeholderRoles.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
+| [AdditionalDataJson](Projects.Agile.StakeholderRoles.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
+| [DisplayText](Projects.Agile.StakeholderRoles.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
 ## Attribute Details
 
-### CompetitorProductCode
+### Description
 
-Competitor’s own SKU / product code, if known.`Filter(eq)`
+Description of the role.`Filter(eq;like)`
 
-Type: **string (64) __nullable__**  
+Type: **string (256) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **256**  
+Show in UI: **ShownByDefault**  
+
+### IsActive
+
+Indicates whether the role is currently available for use.`Required` `Default(true)` `Filter(eq)`
+
+Type: **boolean**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Default Value: **True**  
 Show in UI: **ShownByDefault**  
 
-### CompetitorProductName
+### Name
 
-Competitor’s product name as advertised.`Filter(eq)`
+Name of the role.`Required` `Filter(eq)`
 
-Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring) __nullable__**  
+Type: **[MultilanguageString (256)](../data-types.md#multilanguagestring)**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
@@ -91,56 +89,13 @@ Show in UI: **ShownByDefault**
 
 ### Notes
 
-Additional information.`Filter(like)`
+Additional information or comments about the role.`Filter(like)`
 
 Type: **string (max) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
-Show in UI: **ShownByDefault**  
-
-### ObservedOn
-
-Date on which this price was observed.`Required` `Default(Now)` `Filter(eq;ge;le)`
-
-Type: **date**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
-Default Value: **CurrentDateTime**  
-Show in UI: **ShownByDefault**  
-
-### Price
-
-Observed competitor price.`Required` `Filter(eq;ge;le)`
-
-Type: **decimal (13, 5)**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
-Show in UI: **ShownByDefault**  
-
-### PriceQuantity
-
-Quantity to which the price applies. By default it applies to 1.`Unit: PriceQuantityMeasurementUnit` `Required` `Default(1)` `Filter(eq;ge;le)`
-
-Type: **[Quantity (10, 3)](../data-types.md#quantity)**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan**  
-Supports Order By: **False**  
-Default Value: **Constant**  
-Show in UI: **ShownByDefault**  
-
-### Source
-
-Where the price came from, e.g. website, catalogue, sales representative.`Filter(like)`
-
-Type: **string (500) __nullable__**  
-Category: **System**  
-Supported Filters: **Like**  
-Supports Order By: **False**  
-Maximum Length: **500**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -211,47 +166,6 @@ Category: **Calculated Attributes**
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
-
-
-## Reference Details
-
-### Competitor
-
-Competitor offering the product.
-
-Type: **[Competitors](Crm.Marketing.Competitors.md)**  
-Indexed: **True**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### Currency
-
-Currency of the price.
-
-Type: **[Currencies](General.Currencies.Currencies.md)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### PriceQuantityMeasurementUnit
-
-The measurement unit of the quantity to which the price applies.
-
-Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### Product
-
-Our product against which the competitor product is compared.
-
-Type: **[Products](General.Products.Products.md)**  
-Indexed: **True**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
 
 
 ## API Methods
@@ -387,23 +301,23 @@ Domain API Request: **GET**
 
 ## Business Rules
 
-[!list limit=1000 erp.entity=Crm.Marketing.CompetitorProductPrices erp.type=business-rule default-text="None"]
+[!list limit=1000 erp.entity=Projects.Agile.StakeholderRoles erp.type=business-rule default-text="None"]
 
 ## Front-End Business Rules
 
-[!list limit=1000 erp.entity=Crm.Marketing.CompetitorProductPrices erp.type=front-end-business-rule default-text="None"]
+[!list limit=1000 erp.entity=Projects.Agile.StakeholderRoles erp.type=front-end-business-rule default-text="None"]
 
 ## API
 
 Domain API Entity Set: 
-Crm_Marketing_CompetitorProductPrices
+Projects_Agile_StakeholderRoles
 
 Domain API Entity Type: 
-Crm_Marketing_CompetitorProductPrice
+Projects_Agile_StakeholderRole
 
 Domain API Query:
-<https://testdb.my.erp.net/api/domain/odata/Crm_Marketing_CompetitorProductPrices?$top=10>
+<https://testdb.my.erp.net/api/domain/odata/Projects_Agile_StakeholderRoles?$top=10>
 
 Domain API Query Builder:
-<https://testdb.my.erp.net/api/domain/querybuilder#Crm_Marketing_CompetitorProductPrices?$top=10>
+<https://testdb.my.erp.net/api/domain/querybuilder#Projects_Agile_StakeholderRoles?$top=10>
 

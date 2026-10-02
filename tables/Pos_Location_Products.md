@@ -11,6 +11,7 @@ The listed products for sale for each POS location. Entity: Pos_Location_Product
 
 | Name | Type | Description |
 | - | - | --- |
+|[Execution_Area_Id](#execution_area_id)|`uniqueidentifier` |Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Gross_Price](#gross_price)|`decimal(18, 4)` |Gross sales price including applicable taxes, expressed in the currency defined by Product.ProductCurrency.|
 |[Location_Id](#location_id)|`uniqueidentifier` |The location for which the product is listed|
 |[Max_Quantity](#max_quantity)|`decimal(10, 3)` |Maximum target on-hand quantity for this product in this POS location. Used to calculate replenishment need (MaxQuantity - CurrentOnHand).|
@@ -24,6 +25,43 @@ The listed products for sale for each POS location. Entity: Pos_Location_Product
 |[Valid_To](#valid_to)|`date` |End of validity|
 
 ## Columns
+
+### Execution_Area_Id
+
+
+Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Location_Areas](Pos_Location_Areas.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Execution_Area_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Gross_Price
 

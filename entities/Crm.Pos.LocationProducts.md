@@ -45,6 +45,7 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [ExecutionArea](Crm.Pos.LocationProducts.md#executionarea) | [LocationAreas](Crm.Pos.LocationAreas.md) (nullable) | Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.). |
 | [Location](Crm.Pos.LocationProducts.md#location) | [Locations](Crm.Pos.Locations.md) | The location for which the product is listed |
 | [Product](Crm.Pos.LocationProducts.md#product) | [Products](General.Products.Products.md) | The listed product |
 
@@ -215,6 +216,16 @@ Show in UI: **HiddenByDefault**
 
 
 ## Reference Details
+
+### ExecutionArea
+
+Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).
+
+Type: **[LocationAreas](Crm.Pos.LocationAreas.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Location
 
