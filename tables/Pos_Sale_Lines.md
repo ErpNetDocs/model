@@ -317,6 +317,7 @@ Which staff member last updated the execution status. Used only for businesses w
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -682,7 +683,6 @@ POS Sale Line
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
-|Referenced Table|[Pos_Sale_Lines](Pos_Sale_Lines.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -1034,6 +1034,7 @@ Operator who voided the line. Used only for businesses with real-time execution 
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Pos_Operators](Pos_Operators.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
