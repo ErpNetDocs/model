@@ -17,7 +17,7 @@ Base Table: Crm_Sales_Order_Lines
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {LineNo}. {SalesOrder.DocumentNo} {SalesOrder.DocumentType.TypeName:T}  
+Display Format: {LineNo}: {ProductDescription:T}  
 Search Members: SalesOrder.DocumentNo  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
