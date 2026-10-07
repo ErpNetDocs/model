@@ -49,6 +49,7 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Procurement.ReceivingOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentTime](Logistics.Procurement.ReceivingOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentUser](Logistics.Procurement.ReceivingOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [AmountToPay](Logistics.Procurement.ReceivingOrders.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. |
 | [CompleteTime](Logistics.Procurement.ReceivingOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CreationTime](Logistics.Procurement.ReceivingOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CreationUser](Logistics.Procurement.ReceivingOrders.md#creationuser) | string (64) | The login name of the user, who created the document. `Required` `Filter(like)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -74,6 +75,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Procurement.ReceivingOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [State](Logistics.Procurement.ReceivingOrders.md#state) | [DocumentState](Logistics.Procurement.ReceivingOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Logistics.Procurement.ReceivingOrders.md#statetagsattribute) | string | Specifies the state of the document. |
+| [TotalLineAmount](Logistics.Procurement.ReceivingOrders.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. |
 | [Void](Logistics.Procurement.ReceivingOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [VoidReason](Logistics.Procurement.ReceivingOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [VoidTime](Logistics.Procurement.ReceivingOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -170,6 +172,16 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### AmountToPay
+
+The total amount to pay after all lines, discounts, and taxes.
+
+Type: **[Amount](../data-types.md#amount)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
 
 ### CompleteTime
@@ -469,6 +481,16 @@ Show in UI: **HiddenByDefault**
 Specifies the state of the document.
 
 Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+Type: **[Amount](../data-types.md#amount)**  
 Category: **Calculated Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  

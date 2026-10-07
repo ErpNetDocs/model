@@ -49,6 +49,7 @@ Aggregate Tree
 | [AdjustmentNumber](Logistics.Procurement.PurchaseInvoices.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentTime](Logistics.Procurement.PurchaseInvoices.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentUser](Logistics.Procurement.PurchaseInvoices.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [AmountToPay](Logistics.Procurement.PurchaseInvoices.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. |
 | [ApplyDate](Logistics.Procurement.PurchaseInvoices.md#applydate) | date | Specifies the date on which the VAT entry for this invoice should be applied in the ledgers. Usually equal to the document date with exception for documents that are late to be applied in the correct period.`Required` `Filter(ge;le)` |
 | [CompleteTime](Logistics.Procurement.PurchaseInvoices.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CreationTime](Logistics.Procurement.PurchaseInvoices.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -74,6 +75,7 @@ Aggregate Tree
 | [ReleaseTime](Logistics.Procurement.PurchaseInvoices.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [State](Logistics.Procurement.PurchaseInvoices.md#state) | [DocumentState](Logistics.Procurement.PurchaseInvoices.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Logistics.Procurement.PurchaseInvoices.md#statetagsattribute) | string | Specifies the state of the document. |
+| [TotalLineAmount](Logistics.Procurement.PurchaseInvoices.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. |
 | [VATCashReportingMode](Logistics.Procurement.PurchaseInvoices.md#vatcashreportingmode) | boolean | When true, specifies, that the special cash reporting mode should be used for VAT reporting. When false, the normal (classic) VAT reporting is used.`Required` `Default(false)` `Filter(multi eq)` |
 | [VATNotes](Logistics.Procurement.PurchaseInvoices.md#vatnotes) | string (254) __nullable__ | Description of the operation that will be entered in the VAT ledgers. |
 | [Void](Logistics.Procurement.PurchaseInvoices.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -178,6 +180,16 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### AmountToPay
+
+The total amount to pay after all lines, discounts, and taxes.
+
+Type: **[Amount](../data-types.md#amount)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
 
 ### ApplyDate
@@ -535,6 +547,16 @@ Show in UI: **HiddenByDefault**
 Specifies the state of the document.
 
 Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+Type: **[Amount](../data-types.md#amount)**  
 Category: **Calculated Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  
