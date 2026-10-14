@@ -44,7 +44,7 @@ Aggregate Tree
 | [LastUsedTimestamp](Systems.Security.AccessTokens.md#lastusedtimestamp) | datetime __nullable__ | Indicates when the token was last used.`Filter(ge;le)` `Introduced in version 26.2.0.18` |
 | [Scopes](Systems.Security.AccessTokens.md#scopes) | string (256) __nullable__ | Space-separated list of permissions granted to this token.`Introduced in version 26.2.0.18` |
 | [Session](Systems.Security.AccessTokens.md#session) | string (128) __nullable__ | Session parameter`Filter(multi eq)` |
-| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc.`Required` |
+| [Type](Systems.Security.AccessTokens.md#type) | string (64) | Type of the token - reference_token, refresh_token, etc.`Required` `Filter(multi eq)` |
 
 ## References
 
@@ -190,11 +190,11 @@ Show in UI: **ShownByDefault**
 
 ### Type
 
-Type of the token - reference_token, refresh_token, etc.`Required`
+Type of the token - reference_token, refresh_token, etc.`Required` `Filter(multi eq)`
 
 Type: **string (64)**  
 Category: **System**  
-Supported Filters: **NotFilterable**  
+Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
 Maximum Length: **64**  
 Show in UI: **ShownByDefault**  
