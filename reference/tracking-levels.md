@@ -566,6 +566,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.DocumentJobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentPrintImages | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentVersions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.EntityAttributeDefaultValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.ExtensibleDataObjects | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Extensions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.FormLayouts | 1 - Track last changes only | 4 - Track object attribute and blob changes |

@@ -1364,6 +1364,8 @@
       href: Systems.Core.DocumentPrintImages.md
     - name: DocumentVersions
       href: Systems.Core.DocumentVersions.md
+    - name: EntityAttributeDefaultValues
+      href: Systems.Core.EntityAttributeDefaultValues.md
     - name: ExtensibleDataObjects
       href: Systems.Core.ExtensibleDataObjects.md
     - name: Extensions

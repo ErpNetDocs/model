@@ -37,6 +37,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse.`Required` `Filter(eq;like)` |
+| [LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) | [LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) __nullable__ | Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.`Filter(multi eq)` `Introduced in version 27.1.1.70` |
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. |
 
 ## References
@@ -67,6 +68,24 @@ Category: **System**
 Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
 Maximum Length: **32**  
+Show in UI: **ShownByDefault**  
+
+### LocationKind
+
+Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.`Filter(multi eq)` `Introduced in version 27.1.1.70`
+
+Type: **[LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) __nullable__**  
+Category: **System**  
+Allowed values for the `LocationKind`(Logistics.Wms.WarehouseLocations.md#locationkind) data attribute  
+Allowed Values (Logistics.Wms.WarehouseLocationsRepository.LocationKind Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| MovableContainer | A warehouse location that represents a movable container. Its parent zone can be changed, and the availability in the location moves together with the container.. Stored as 'MovableContainer'. <br /> Database Value: 'MovableContainer' <br /> Model Value: 0 <br /> Domain API Value: 'MovableContainer' |
+| Other | A warehouse location that does not use any of the specifically defined location kinds.. Stored as 'Other'. <br /> Database Value: 'Other' <br /> Model Value: 1 <br /> Domain API Value: 'Other' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Notes

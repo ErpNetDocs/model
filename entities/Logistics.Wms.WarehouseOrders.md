@@ -88,6 +88,7 @@ Aggregate Tree
 | [EnterpriseCompanyLocation](Logistics.Wms.WarehouseOrders.md#enterprisecompanylocation) | [CompanyLocations](General.Contacts.CompanyLocations.md) | The branch of the enterprise company that issues the document.  Even when the enterprise company operates with a single branch, it must be explicitly specified. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromCompanyDivision](Logistics.Wms.WarehouseOrders.md#fromcompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, issuing the document. null when the document is not issued by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [FromParty](Logistics.Wms.WarehouseOrders.md#fromparty) | [Parties](General.Contacts.Parties.md) | The party which issued the document. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [FromWarehouseZone](Logistics.Wms.WarehouseOrders.md#fromwarehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Specifies the source warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose source warehouse locations during execution. If empty, source locations are not limited by a predefined warehouse zone. |
 | [MasterDocument](Logistics.Wms.WarehouseOrders.md#masterdocument) | [Documents](General.Documents.Documents.md) | In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Parent](Logistics.Wms.WarehouseOrders.md#parent) | [Documents](General.Documents.Documents.md) (nullable) | In a multi-document tree, this is the direct parent document. If this is the root it is null. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [PrimeCauseDocument](Logistics.Wms.WarehouseOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -96,6 +97,7 @@ Aggregate Tree
 | [Sequence](Logistics.Wms.WarehouseOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Logistics.Wms.WarehouseOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Logistics.Wms.WarehouseOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [ToWarehouseZone](Logistics.Wms.WarehouseOrders.md#towarehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable) | Specifies the destination warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose destination warehouse locations during execution. If empty, destination locations are not limited by a predefined warehouse zone. |
 | [UserStatus](Logistics.Wms.WarehouseOrders.md#userstatus) | [DocumentTypeUserStatuses](Systems.Documents.DocumentTypeUserStatuses.md) (nullable) | The user status of this document if applicable for this document type. null means unknown or not yet set. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [Warehouse](Logistics.Wms.WarehouseOrders.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse, where the order will be executed. |
 | [WarehouseWorker](Logistics.Wms.WarehouseOrders.md#warehouseworker) | [WarehouseWorkers](Logistics.Wms.WarehouseWorkers.md) (nullable) | When set, denotes that the whole order is assigned to the specified worker. |
@@ -636,6 +638,15 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  
 
+### FromWarehouseZone
+
+Specifies the source warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose source warehouse locations during execution. If empty, source locations are not limited by a predefined warehouse zone.
+
+Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### MasterDocument
 
 In a multi-document tree, this is the root document, that created the whole tree. If this is the root it is equal to Id. `Required` `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md))
@@ -713,6 +724,15 @@ Show in UI: **HiddenByDefault**
 
 Back-End Default Expression:  
 `obj.ObtainToParty( )`
+
+### ToWarehouseZone
+
+Specifies the destination warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose destination warehouse locations during execution. If empty, destination locations are not limited by a predefined warehouse zone.
+
+Type: **[WarehouseZones](Logistics.Wms.WarehouseZones.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### UserStatus
 
