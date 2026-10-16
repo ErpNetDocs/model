@@ -17,6 +17,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 |[Pos_Terminal_Code](#pos_terminal_code)|`nvarchar(16)` |Unique (within the location) code of the POS terminal.|
 |[Pos_Terminal_Id](#pos_terminal_id)|`uniqueidentifier` `PK`||
 |[Pos_Terminal_Name](#pos_terminal_name)|`nvarchar(254)` `ML`|The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.|
+|[Pos_Workspace_Type](#pos_workspace_type)|`char(3)` Allowed: `REG`, `SCO`, `KDS`, `KSK`, `OTH`|The default purpose of the workstation represented by this POS terminal.|
 |[Row_Version](#row_version)|`timestamp` ||
 
 ## Columns
@@ -238,6 +239,43 @@ The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Pos_Workspace_Type
+
+
+The default purpose of the workstation represented by this POS terminal.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`REG`, `SCO`, `KDS`, `KSK`, `OTH`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|REG|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|char(3)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Pos_Workspace_Type - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Row_Version
 

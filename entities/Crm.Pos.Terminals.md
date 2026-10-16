@@ -39,6 +39,7 @@ Aggregate Tree
 | [IsActive](Crm.Pos.Terminals.md#isactive) | boolean | Represents whether the POS terminal is active and can be chosen from drop-downs for new records.`Required` `Default(true)` `Filter(multi eq)` |
 | [PosTerminalCode](Crm.Pos.Terminals.md#posterminalcode) | string (16) | Unique (within the location) code of the POS terminal.`Required` `Filter(eq;like)` |
 | [PosTerminalName](Crm.Pos.Terminals.md#posterminalname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The multi-language name of the terminal, like "Cash 1", "Self-checkout 5", etc.`Required` `Filter(multi eq;like)` |
+| [PosWorkspaceType](Crm.Pos.Terminals.md#posworkspacetype) | [PosWorkspaceType](Crm.Pos.Terminals.md#posworkspacetype) | The default purpose of the workstation represented by this POS terminal.`Required` `Default(&quot;REG&quot;)` `Filter(multi eq)` `Introduced in version 27.1.1.71` |
 
 ## References
 
@@ -99,6 +100,28 @@ Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**
 Category: **System**  
 Supported Filters: **Equals, Like, EqualsIn**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### PosWorkspaceType
+
+The default purpose of the workstation represented by this POS terminal.`Required` `Default(&quot;REG&quot;)` `Filter(multi eq)` `Introduced in version 27.1.1.71`
+
+Type: **[PosWorkspaceType](Crm.Pos.Terminals.md#posworkspacetype)**  
+Category: **System**  
+Allowed values for the `PosWorkspaceType`(Crm.Pos.Terminals.md#posworkspacetype) data attribute  
+Allowed Values (Crm.Pos.TerminalsRepository.PosWorkspaceType Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| CashRegister | CashRegister value. Stored as 'REG'. <br /> Database Value: 'REG' <br /> Model Value: 0 <br /> Domain API Value: 'CashRegister' |
+| SelfCheckout | SelfCheckout value. Stored as 'SCO'. <br /> Database Value: 'SCO' <br /> Model Value: 1 <br /> Domain API Value: 'SelfCheckout' |
+| KitchenDisplaySystem | KitchenDisplaySystem value. Stored as 'KDS'. <br /> Database Value: 'KDS' <br /> Model Value: 2 <br /> Domain API Value: 'KitchenDisplaySystem' |
+| Kiosk | Kiosk value. Stored as 'KSK'. <br /> Database Value: 'KSK' <br /> Model Value: 3 <br /> Domain API Value: 'Kiosk' |
+| Other | Other value. Stored as 'OTH'. <br /> Database Value: 'OTH' <br /> Model Value: 4 <br /> Domain API Value: 'Other' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
+Default Value: **CashRegister**  
 Show in UI: **ShownByDefault**  
 
 ### Id
