@@ -176,7 +176,7 @@ The plus or minus percent, by which the goal can be missed, but still considered
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|0,2|
+|Default Value|0.2|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
@@ -212,7 +212,7 @@ The change in percents, which is considered neutral. Higher positive/negative ch
 | - | - |
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|0,01|
+|Default Value|0.01|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
