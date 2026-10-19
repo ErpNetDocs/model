@@ -124,6 +124,7 @@ Allowed Values (Logistics.Wms.WarehouseZonesRepository.ZoneType Enum Members)
 | UserDefined3 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZC'. <br /> Database Value: 'UZC' <br /> Model Value: 12 <br /> Domain API Value: 'UserDefined3' |
 | UserDefined4 | A user-defined zone type that can be used according to the specific warehouse processes.. Stored as 'UZD'. <br /> Database Value: 'UZD' <br /> Model Value: 13 <br /> Domain API Value: 'UserDefined4' |
 | Carts | A zone representing a warehouse cart or other mobile handling unit, with its locations representing the available positions within it. Each cart or handling unit is defined as a separate zone.. Stored as 'CAR'. <br /> Database Value: 'CAR' <br /> Model Value: 14 <br /> Domain API Value: 'Carts' |
+| ContainerHomes | Zones used as default return and storage areas for movable containers when they are not in use or assigned to another warehouse operation.. Stored as 'CHO'. <br /> Database Value: 'CHO' <br /> Model Value: 15 <br /> Domain API Value: 'ContainerHomes' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  
