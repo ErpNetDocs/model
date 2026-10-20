@@ -500,22 +500,22 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Intrastat.DeclarationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.Declarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.DocumentAmountTypeSettings | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportBankAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportCustomers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportMeasurementUnits | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPaymentLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPayments | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPurchaseInvoiceLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPurchaseInvoices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.DeclarationExportAccounts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportBankAccounts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportCustomers | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportMeasurementUnits | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPaymentLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPayments | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportProducts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPurchaseInvoiceLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPurchaseInvoices | 0 - Do not track changes | 0 - Do not track changes |
 | Regulatory.Saft.DeclarationExports | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSalesInvoiceLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSalesInvoices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSuppliers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportTaxEntries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportVoucherLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportVouchers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.DeclarationExportSalesInvoiceLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportSalesInvoices | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportSuppliers | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportTaxEntries | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportVoucherLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportVouchers | 0 - Do not track changes | 0 - Do not track changes |
 | Regulatory.Saft.ProfileAccountByAdditionalAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |

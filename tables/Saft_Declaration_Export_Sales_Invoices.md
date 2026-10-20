@@ -7,6 +7,12 @@ Entity: [Regulatory.Saft.DeclarationExportSalesInvoices](~/entities/Regulatory.S
 
 Contains Sales Invoices for SAF-T export section `SalesInvoices`. Entity: Saft_Declaration_Export_Sales_Invoices (Introduced in version 27.1.0.86)
 
+## Owner Tables Hierarchy
+
+* [Saft_Declaration_Exports](Saft_Declaration_Exports.md)
+* [Saft_Declarations](Saft_Declarations.md)
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -386,7 +392,7 @@ Invoice Type
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

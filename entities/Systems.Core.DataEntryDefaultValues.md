@@ -4,7 +4,7 @@ uid: Systems.Core.DataEntryDefaultValues
 # Systems.Core.DataEntryDefaultValues
 
 
-Contains user-specified default values for columns in data entry forms.
+Contains user-specified default values for attributes in data entry forms. For new settings, it is recommended to usе еntity “Entity Attribute Default Values” through the Web Client interface. Before creating or changing a setting, check both repositories for default values for the same attribute with overlapping conditions. Such settings may conflict when determining the default value.
 
 ## General
 Namespace: [Systems.Core](Systems.Core.md)  

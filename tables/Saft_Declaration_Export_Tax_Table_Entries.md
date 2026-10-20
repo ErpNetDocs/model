@@ -7,6 +7,12 @@ Entity: [Regulatory.Saft.DeclarationExportTaxEntries](~/entities/Regulatory.Saft
 
 Contains Tax Codes  in SAF-T export section `TaxTable`. Entity: Saft_Declaration_Export_Tax_Table_Entries (Introduced in version 27.1.0.86)
 
+## Owner Tables Hierarchy
+
+* [Saft_Declaration_Exports](Saft_Declaration_Exports.md)
+* [Saft_Declarations](Saft_Declarations.md)
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -194,7 +200,7 @@ Saft Declaration Export
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

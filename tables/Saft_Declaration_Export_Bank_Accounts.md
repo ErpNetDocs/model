@@ -7,6 +7,12 @@ Entity: [Regulatory.Saft.DeclarationExportBankAccounts](~/entities/Regulatory.Sa
 
 Bank accounts for SAF-T export. Entity: Saft_Declaration_Export_Bank_Accounts (Introduced in version 27.1.0.86)
 
+## Owner Tables Hierarchy
+
+* [Saft_Declaration_Exports](Saft_Declaration_Exports.md)
+* [Saft_Declarations](Saft_Declarations.md)
+* [Gen_Documents](Gen_Documents.md)
+
 ## Summary
 
 | Name | Type | Description |
@@ -161,7 +167,7 @@ Reference to SAF-T Declaration Export
 |Is Entity Name|no|
 |Max Length|-1|
 |Order|2147483647|
-|Ownership Reference|no|
+|Ownership Reference|yes|
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|

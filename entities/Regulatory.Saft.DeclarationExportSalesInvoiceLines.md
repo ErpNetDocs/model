@@ -14,21 +14,24 @@ Introduced In Version: 27.1.0.86
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {LineCurrencyCode}  
-Search Members: LineCurrencyCode  
+Display Format: {SaftDeclarationExportSalesInvoice.CustomerName}  
+Search Members: LineCurrencyCode; SaftDeclarationExportSalesInvoice.CustomerName  
 Code Member: LineCurrencyCode  
+Name Member: SaftDeclarationExportSalesInvoice.CustomerName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
 ## Track Changes  
-Min level:  1 - Track last changes only  
-Max level:  4 - Track object attribute and blob changes  
+Min level:  0 - Do not track changes  
+Max level:  0 - Do not track changes  
 
 ## Aggregate
 An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a cluster of domain objects that can be treated as a single unit.  
 
-Aggregate Tree  
-* [Regulatory.Saft.DeclarationExportSalesInvoiceLines](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md)  
+Aggregate Parent:  
+[Regulatory.Saft.DeclarationExportSalesInvoices](Regulatory.Saft.DeclarationExportSalesInvoices.md)  
+Aggregate Root:  
+[Regulatory.Saft.SaftDeclarations](Regulatory.Saft.SaftDeclarations.md)  
 
 ## Attributes
 
@@ -64,10 +67,6 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [Id](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#id) | guid |  |
 | [ObjectVersion](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
-| [ExternalId](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
-| [ExternalSystem](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
-| [AggregateLastUpdateTimeUtc](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
-| [AdditionalDataJson](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
 | [DisplayText](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
@@ -260,46 +259,6 @@ Supported Filters: **NotFilterable**
 Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
 
-### ExternalId
-
-The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89]
-
-Type: **string**  
-Category: **Extensible Data Object**  
-Supported Filters: **NotFilterable**  
-Supports Order By: ****  
-Show in UI: **HiddenByDefault**  
-
-### ExternalSystem
-
-The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89]
-
-Type: **string**  
-Category: **Extensible Data Object**  
-Supported Filters: **NotFilterable**  
-Supports Order By: ****  
-Show in UI: **HiddenByDefault**  
-
-### AggregateLastUpdateTimeUtc
-
-The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1]
-
-Type: **datetime**  
-Category: **Extensible Data Object**  
-Supported Filters: **NotFilterable**  
-Supports Order By: ****  
-Show in UI: **HiddenByDefault**  
-
-### AdditionalDataJson
-
-Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4]
-
-Type: **string**  
-Category: **Extensible Data Object**  
-Supported Filters: **NotFilterable**  
-Supports Order By: ****  
-Show in UI: **HiddenByDefault**  
-
 ### DisplayText
 
 Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object.
@@ -321,6 +280,7 @@ Type: **[DeclarationExportSalesInvoices](Regulatory.Saft.DeclarationExportSalesI
 Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
 Show in UI: **ShownByDefault**  
 
 
