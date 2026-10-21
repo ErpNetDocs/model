@@ -108,7 +108,7 @@ Aggregate Tree
 | [PrimeCauseDocument](Crm.Invoicing.InvoiceOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Crm.Invoicing.InvoiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Crm.Invoicing.InvoiceOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Provides default value and filter for the lines. |
+| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Default value and filter for the lines. Used to differenciate the invoice order for each sales order. |
 | [Sequence](Crm.Invoicing.InvoiceOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Crm.Invoicing.InvoiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Invoicing.InvoiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -835,7 +835,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesOrder
 
-Provides default value and filter for the lines.
+Default value and filter for the lines. Used to differenciate the invoice order for each sales order.
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Indexed: **True**  
