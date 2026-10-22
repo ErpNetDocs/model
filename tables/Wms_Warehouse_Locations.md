@@ -16,7 +16,7 @@ One physical location within a warehouse. Locations are the leaf elements of the
 | Name | Type | Description |
 | - | - | --- |
 |[Location_Address](#location_address)|`nvarchar(32)` |The address of the location. Should be unique within the warehouse.|
-|[Location_Kind](#location_kind)|`nvarchar(50)` Allowed: `MovableContainer`, `Other`|Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.|
+|[Location_Kind](#location_kind)|`nvarchar(50)` Allowed: `MovableContainer`, `Other`, `AttachedContainer`|Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.|
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Row_Version](#row_version)|`timestamp` ||
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse containing the location.|
@@ -69,7 +69,7 @@ Specifies the functional kind of the warehouse location. The value can be used t
 
 | Property | Value |
 | - | - |
-|Allowed Values|`MovableContainer`, `Other`|
+|Allowed Values|`MovableContainer`, `Other`, `AttachedContainer`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

@@ -300,6 +300,8 @@
       href: Crm.Pos.Sequences.md
     - name: SequenceSelectors
       href: Crm.Pos.SequenceSelectors.md
+    - name: ServiceProfiles
+      href: Crm.Pos.ServiceProfiles.md
     - name: Terminals
       href: Crm.Pos.Terminals.md
   - name: Presales

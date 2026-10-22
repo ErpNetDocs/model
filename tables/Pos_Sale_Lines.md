@@ -23,7 +23,7 @@ Stores line-level details for items or services sold in a POS transaction. Each 
 |[Execution_Area_Id](#execution_area_id)|`uniqueidentifier` |Route items to the correct kitchen/bar section. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Execution_Changed_At](#execution_changed_at)|`datetime` |Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Execution_Changed_By_Id](#execution_changed_by_id)|`uniqueidentifier` |Which staff member last updated the execution status. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
-|[Execution_Note](#execution_note)|`nvarchar(64)` |Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
+|[Execution_Note](#execution_note)|`nvarchar(256)` |Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Execution_Resource_Id](#execution_resource_id)|`uniqueidentifier` |The resource (table, room, etc.) used to execute the current line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Execution_Stage](#execution_stage)|`char(3)` Allowed: `PND`, `PRP`, `DEL`, `FIN`|Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
 |[Execution_Status_Id](#execution_status_id)|`uniqueidentifier` |User-configurable status of the process. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).|
@@ -347,7 +347,7 @@ Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, �
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
-|Max Length|64|
+|Max Length|256|
 |Order|21|
 |Ownership Reference|no|
 |Pasword|no|
@@ -358,7 +358,7 @@ Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, �
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (Allows NULL)|
+|Type|nvarchar(256) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

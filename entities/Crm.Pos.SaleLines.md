@@ -40,7 +40,7 @@ Aggregate Root:
 | [CreatedAt](Crm.Pos.SaleLines.md#createdat) | datetime __nullable__ | The time when this line was created. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Default(Now)` `Filter(eq;ge;le)` |
 | [DiscountAmount](Crm.Pos.SaleLines.md#discountamount) | [Amount (12, 2)](../data-types.md#amount) | The amount of discount applied to the line. Positive for normal sales, negative for refunds.`Currency: PosSale.SaleCurrency` `Required` `Default(0)` `Filter(eq)` |
 | [ExecutionChangedAt](Crm.Pos.SaleLines.md#executionchangedat) | datetime __nullable__ | Indicates the time of the last execution status change. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq;ge;le)` |
-| [ExecutionNote](Crm.Pos.SaleLines.md#executionnote) | string (64) __nullable__ | Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(like)` |
+| [ExecutionNote](Crm.Pos.SaleLines.md#executionnote) | string (256) __nullable__ | Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(like)` |
 | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) | [ExecutionStage](Crm.Pos.SaleLines.md#executionstage) __nullable__ | Execution status of the line. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(eq)` |
 | [IsVoided](Crm.Pos.SaleLines.md#isvoided) | boolean | Specifies whether the current line was voided. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Required` `Default(false)` `Filter(eq)` |
 | [LineAmount](Crm.Pos.SaleLines.md#lineamount) | [Amount (12, 2)](../data-types.md#amount) | Final total amount for the line after discount and tax. Positive for normal sales, negative for refunds.`Currency: PosSale.SaleCurrency` `Required` `Filter(eq)` |
@@ -126,11 +126,11 @@ Show in UI: **ShownByDefault**
 
 Notes for the kitchen or service team, e.g., “no garlic”, “extra ice”, “medium rare”. Used only for businesses with real-time execution tracking (restaurants, bars, services, etc.).`Filter(like)`
 
-Type: **string (64) __nullable__**  
+Type: **string (256) __nullable__**  
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
-Maximum Length: **64**  
+Maximum Length: **256**  
 Show in UI: **ShownByDefault**  
 
 ### ExecutionStage

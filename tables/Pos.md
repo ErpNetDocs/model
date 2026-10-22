@@ -18,5 +18,6 @@
 * [Pos_Sales](Pos_Sales.md)
 * [Pos_Sequence_Selectors](Pos_Sequence_Selectors.md)
 * [Pos_Sequences](Pos_Sequences.md)
+* [Pos_Service_Profiles](Pos_Service_Profiles.md)
 * [Pos_Terminals](Pos_Terminals.md)
 

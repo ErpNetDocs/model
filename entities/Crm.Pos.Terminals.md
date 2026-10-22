@@ -46,6 +46,7 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [DefaultFiscalPrinter<br />PosDevice](Crm.Pos.Terminals.md#defaultfiscalprinterposdevice) | [Devices](Crm.Pos.Devices.md) (nullable) | The POS Fiscal Device which is set by default in documents when the POS Terminal is selected. |
+| [DefaultServiceProfile](Crm.Pos.Terminals.md#defaultserviceprofile) | [ServiceProfiles](Crm.Pos.ServiceProfiles.md) (nullable) | The service profile to use by default for new sales when this terminal is selected. |
 | [PosLocation](Crm.Pos.Terminals.md#poslocation) | [Locations](Crm.Pos.Locations.md) | The POS location, where the terminal is located. |
 
 
@@ -201,6 +202,16 @@ Show in UI: **HiddenByDefault**
 The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.
 
 Type: **[Devices](Crm.Pos.Devices.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### DefaultServiceProfile
+
+The service profile to use by default for new sales when this terminal is selected.
+
+Type: **[ServiceProfiles](Crm.Pos.ServiceProfiles.md) (nullable)**  
+Indexed: **True**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

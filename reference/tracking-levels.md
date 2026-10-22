@@ -132,6 +132,7 @@ The following table contains default system-specified tracking levels:
 | Crm.Pos.Sales | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Sequences | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.SequenceSelectors | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Pos.ServiceProfiles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Terminals | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Crm.Presales.DealLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Presales.Deals | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |

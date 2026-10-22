@@ -83,6 +83,7 @@ Allowed Values (Logistics.Wms.WarehouseLocationsRepository.LocationKind Enum Mem
 | ---- | --- |
 | MovableContainer | A warehouse location that represents a movable container. Its parent zone can be changed, and the availability in the location moves together with the container.. Stored as 'MovableContainer'. <br /> Database Value: 'MovableContainer' <br /> Model Value: 0 <br /> Domain API Value: 'MovableContainer' |
 | Other | A warehouse location that does not use any of the specifically defined location kinds.. Stored as 'Other'. <br /> Database Value: 'Other' <br /> Model Value: 1 <br /> Domain API Value: 'Other' |
+| AttachedContainer | A warehouse location representing a container that is fixed to a cart, forklift, or other mobile warehouse equipment and is used as one of its storage positions.. Stored as 'AttachedContainer'. <br /> Database Value: 'AttachedContainer' <br /> Model Value: 2 <br /> Domain API Value: 'AttachedContainer' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

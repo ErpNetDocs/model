@@ -988,6 +988,8 @@
     href: Pos_Sequence_Selectors.md
   - name: Pos_Sequences
     href: Pos_Sequences.md
+  - name: Pos_Service_Profiles
+    href: Pos_Service_Profiles.md
   - name: Pos_Terminals
     href: Pos_Terminals.md
 - name: Prd

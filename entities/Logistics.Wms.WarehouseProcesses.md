@@ -28,6 +28,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Logistics.Wms.WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
+  * [Logistics.Wms.WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md)  
 
 ## Attributes
 
@@ -59,6 +60,12 @@ Aggregate Tree
 | [AggregateLastUpdateTimeUtc](Logistics.Wms.WarehouseProcesses.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
 | [AdditionalDataJson](Logistics.Wms.WarehouseProcesses.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
 | [DisplayText](Logistics.Wms.WarehouseProcesses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Steps | [WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md) | List of `WarehouseProcessStep`(Logistics.Wms.WarehouseProcessSteps.md) child objects, based on the `Logistics.Wms.WarehouseProcessStep.WarehouseProcess`(Logistics.Wms.WarehouseProcessSteps.md#warehouseprocess) back reference 
 
 
 ## Attribute Details

@@ -12,6 +12,7 @@ Represents a POS workplace for 1 person, with all the attached devices. (Not to 
 | Name | Type | Description |
 | - | - | --- |
 |[Default_Fiscal_Printer_Pos_Device_Id](#default_fiscal_printer_pos_device_id)|`uniqueidentifier` |The POS Fiscal Device which is set by default in documents when the POS Terminal is selected.|
+|[Default_Service_Profile_Id](#default_service_profile_id)|`uniqueidentifier` |The service profile to use by default for new sales when this terminal is selected.|
 |[Is_Active](#is_active)|`bit` |Represents whether the POS terminal is active and can be chosen from drop-downs for new records.|
 |[Pos_Location_Id](#pos_location_id)|`uniqueidentifier` |The POS location, where the terminal is located.|
 |[Pos_Terminal_Code](#pos_terminal_code)|`nvarchar(16)` |Unique (within the location) code of the POS terminal.|
@@ -54,6 +55,43 @@ The POS Fiscal Device which is set by default in documents when the POS Terminal
 |Visible|yes|
 
 #### Default_Fiscal_Printer_Pos_Device_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### Default_Service_Profile_Id
+
+
+The service profile to use by default for new sales when this terminal is selected.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Service_Profiles](Pos_Service_Profiles.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Default_Service_Profile_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
