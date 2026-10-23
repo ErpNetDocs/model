@@ -50,6 +50,7 @@ Aggregate Tree
 | [IsActive](Logistics.Common.LogisticUnits.md#isactive) | boolean | Indicates whether the logistic unit is currently active.`Required` `Default(true)` `Filter(eq)` `Introduced in version 23.1.2.11` |
 | [MeasuredWeight](Logistics.Common.LogisticUnits.md#measuredweight) | decimal (12, 3) __nullable__ | Actual measured weight of the unit, in the measurement unit, specified in the Logistic Unit Type. NULL means unknown. `Filter(eq;ge;le)` |
 | [Notes](Logistics.Common.LogisticUnits.md#notes) | string (max) __nullable__ | Notes for this LogisticUnit. `Filter(like)` |
+| [SealStatus](Logistics.Common.LogisticUnits.md#sealstatus) | [SealStatus](Logistics.Common.LogisticUnits.md#sealstatus) __nullable__ | Specifies the sealing status of the logistic unit and determines whether its contents can still be modified or have been finalized.`Introduced in version 27.1.1.76` |
 | [SerialCode](Logistics.Common.LogisticUnits.md#serialcode) | string (32) | Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.`Required` `Filter(multi eq;like)` `ORD` |
 
 ## References
@@ -59,6 +60,7 @@ Aggregate Tree
 | [CargoType](Logistics.Common.LogisticUnits.md#cargotype) | [CargoTypes](Logistics.Shipment.CargoTypes.md) (nullable) | General type of the cargo of the logistic unit. NULL means unknown or N/A. |
 | [LogisticUnitType](Logistics.Common.LogisticUnits.md#logisticunittype) | [LogisticUnitTypes](Logistics.Common.LogisticUnitTypes.md) (nullable) | The type of the logistic unit. NULL means the type is currently unknown. |
 | [RepresentedAsProduct](Logistics.Common.LogisticUnits.md#representedasproduct) | [Products](General.Products.Products.md) (nullable) | When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item. |
+| [SourceDocument](Logistics.Common.LogisticUnits.md#sourcedocument) | [Documents](General.Documents.Documents.md) (nullable) | Specifies the document from which the logistic unit was created. |
 
 
 ## System Attributes
@@ -123,6 +125,24 @@ Category: **System**
 Supported Filters: **Like**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### SealStatus
+
+Specifies the sealing status of the logistic unit and determines whether its contents can still be modified or have been finalized.`Introduced in version 27.1.1.76`
+
+Type: **[SealStatus](Logistics.Common.LogisticUnits.md#sealstatus) __nullable__**  
+Category: **System**  
+Allowed values for the `SealStatus`(Logistics.Common.LogisticUnits.md#sealstatus) data attribute  
+Allowed Values (Logistics.Common.LogisticUnitsRepository.SealStatus Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Open | The logistic unit is open and its contents can be modified.. Stored as 'OPN'. <br /> Database Value: 'OPN' <br /> Model Value: 0 <br /> Domain API Value: 'Open' |
+| Sealed | The logistic unit is sealed and its contents are finalized and cannot be modified without reopening the unit.. Stored as 'SLD'. <br /> Database Value: 'SLD' <br /> Model Value: 1 <br /> Domain API Value: 'Sealed' |
+
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### SerialCode
@@ -233,6 +253,15 @@ When the logistic unit is also a tradeable item, specifies the product used to t
 
 Type: **[Products](General.Products.Products.md) (nullable)**  
 Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### SourceDocument
+
+Specifies the document from which the logistic unit was created.
+
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
