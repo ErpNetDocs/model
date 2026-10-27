@@ -4,6 +4,7 @@ uid: Regulatory.Saft
 # Regulatory.Saft Namespace
 
 ## Entities
+- [AccountBalanceCorrections](Regulatory.Saft.AccountBalanceCorrections.md)  
 - [AccountBalances](Regulatory.Saft.AccountBalances.md)  
 - [DeclarationExportAccounts](Regulatory.Saft.DeclarationExportAccounts.md)  
 - [DeclarationExportBankAccounts](Regulatory.Saft.DeclarationExportBankAccounts.md)  

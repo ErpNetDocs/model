@@ -1172,6 +1172,8 @@
 - name: Saft
   href: Saft.md
   items:
+  - name: Saft_Account_Balance_Corrections
+    href: Saft_Account_Balance_Corrections.md
   - name: Saft_Account_Balances
     href: Saft_Account_Balances.md
   - name: Saft_Declaration_Export_Accounts

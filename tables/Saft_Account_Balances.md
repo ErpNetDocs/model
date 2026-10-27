@@ -5,7 +5,7 @@
 
 Entity: [Regulatory.Saft.AccountBalances](~/entities/Regulatory.Saft.AccountBalances.md)
 
-Account balances for SAF-T reporting purpose . Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
+Account balances for SAF-T reporting. Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
 
 ## Summary
 
@@ -82,7 +82,7 @@ Start balance in base currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2) (Allows NULL)|
+|Type|decimal(38, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -148,7 +148,7 @@ Filter date for start of period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date (Allows NULL)|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -158,7 +158,7 @@ Filter date for start of period
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Item_Key
 
@@ -184,7 +184,7 @@ Item_Key
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (Allows NULL)|
+|Type|nvarchar(64)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -214,7 +214,7 @@ Start balance in base currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2) (Allows NULL)|
+|Type|decimal(38, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -244,7 +244,7 @@ Filter date for end of period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date (Allows NULL)|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -254,7 +254,7 @@ Filter date for end of period
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Vouchers_In_Period
 
@@ -280,7 +280,7 @@ Count of Vouchers in period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
+|Type|int|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

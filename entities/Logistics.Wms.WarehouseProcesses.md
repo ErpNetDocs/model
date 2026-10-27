@@ -14,7 +14,7 @@ Introduced In Version: 27.1.1.5
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {WarehouseId}  
+Display Format: {Id}: {WarehouseProcessId}  
 Search Members:   
 Category:  Definitions  
 Show in UI:  ShownByDefault  
@@ -36,6 +36,7 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [ActiveFrom](Logistics.Wms.WarehouseProcesses.md#activefrom) | datetime __nullable__ | Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.`Filter(ge;le)` |
 | [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)` |
+| [DocumentTypeId](Logistics.Wms.WarehouseProcesses.md#documenttypeid) | guid __nullable__ | Specifies the Warehouse Requisition document type for which the process is applicable. `Filter(multi eq)` `Introduced in version 27.1.1.77` |
 | [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)` |
 | [Notes](Logistics.Wms.WarehouseProcesses.md#notes) | string (max) __nullable__ | Additional information or comments about the warehouse process configuration. |
 | [ProcessNo](Logistics.Wms.WarehouseProcesses.md#processno) | int32 | Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51` |
@@ -45,15 +46,14 @@ Aggregate Tree
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Party](Logistics.Wms.WarehouseProcesses.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party. |
-| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse. |
-| [WarehouseRequisition<br />DocumentType](Logistics.Wms.WarehouseProcesses.md#warehouserequisitiondocumenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Specifies the Warehouse Requisition document type for which the process is applicable. |
+| [SystemsDocuments<br />WarehouseProcess](Logistics.Wms.WarehouseProcesses.md#systemsdocumentswarehouseprocess) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Unique identifier of the Warehouse Process. `Required` `Default(New Guid)` `Filter(multi eq;ge;le)` |
+| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | Specifies the managed warehouse for which the warehouse process is applicable. |
 
 
 ## System Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [Id](Logistics.Wms.WarehouseProcesses.md#id) | guid |  |
 | [ObjectVersion](Logistics.Wms.WarehouseProcesses.md#objectversion) | int32 | The latest version of the extensible data object for the aggregate root for the time the object is loaded from the database. Can be used for optimistic locking. |
 | [ExternalId](Logistics.Wms.WarehouseProcesses.md#externalid) | string | The id of the object, when it is imported/synchronized with external system. Used by sync apps to identify the object in external systems. [Filter(multi eq)] [ORD] [Introduced in version 24.1.0.89] |
 | [ExternalSystem](Logistics.Wms.WarehouseProcesses.md#externalsystem) | string | The name of the external system from which the object is imported/synchronized. [Filter(multi eq)] [Introduced in version 24.1.0.89] |
@@ -90,6 +90,15 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+### DocumentTypeId
+
+Specifies the Warehouse Requisition document type for which the process is applicable. `Filter(multi eq)` `Introduced in version 27.1.1.77`
+
+Type: **guid __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### IsActive
 
 Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)`
@@ -122,15 +131,6 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
-
-### Id
-
-Type: **guid**  
-Indexed: **True**  
-Category: **System**  
-Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
-Default Value: **NewGuid**  
-Show in UI: **HiddenByDefault**  
 
 ### ObjectVersion
 
@@ -204,20 +204,22 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
-### Warehouse
+### SystemsDocumentsWarehouseProcess
 
-Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse.
-
-Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Show in UI: **ShownByDefault**  
-
-### WarehouseRequisitionDocumentType
-
-Specifies the Warehouse Requisition document type for which the process is applicable.
+Unique identifier of the Warehouse Process. `Required` `Default(New Guid)` `Filter(multi eq;ge;le)`
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, GreaterThanOrLessThan, EqualsIn**  
+Default Value: **NewGuid**  
+Show in UI: **HiddenByDefault**  
+
+### Warehouse
+
+Specifies the managed warehouse for which the warehouse process is applicable.
+
+Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

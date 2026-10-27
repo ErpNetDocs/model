@@ -146,6 +146,7 @@ Allowed Values (Logistics.Wms.WarehousePoliciesRepository.PolicyKind Enum Member
 | RoutingAlgorithm | RoutingAlgorithm value. Stored as 'RAL'. <br /> Database Value: 'RAL' <br /> Model Value: 19 <br /> Domain API Value: 'RoutingAlgorithm' |
 | CountingSplitLevel | Zone hierarchy level (0 = no split, single order; 1 = root, n > 1 = deeper levels) used to split Warehouse Orders in the reconciliation process.. Stored as 'CSL'. <br /> Database Value: 'CSL' <br /> Model Value: 20 <br /> Domain API Value: 'CountingSplitLevel' |
 | CountingOrderDocumentType | Specifies the Document Type used when generating Warehouse Orders for counting during warehouse reconciliation.. Stored as 'CDT'. <br /> Database Value: 'CDT' <br /> Model Value: 21 <br /> Domain API Value: 'CountingOrderDocumentType' |
+| NextTemporaryLUN | Specifies the next temporary LUN used when a logistic unit is created during the packing process. The numeric part is incremented automatically.. Stored as 'NTL'. <br /> Database Value: 'NTL' <br /> Model Value: 22 <br /> Domain API Value: 'NextTemporaryLUN' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

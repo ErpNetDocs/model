@@ -13,13 +13,13 @@ Contains warehouse process configurations that determine which algorithm is exec
 | - | - | --- |
 |[Active_From](#active_from)|`datetime` |Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.|
 |[Active_To](#active_to)|`datetime` |Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.|
+|[Document_Type_Id](#document_type_id)|`uniqueidentifier` |Specifies the Warehouse Requisition document type for which the process is applicable.|
 |[Is_Active](#is_active)|`bit` |Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments about the warehouse process configuration.|
 |[Party_Id](#party_id)|`uniqueidentifier` |Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party.|
 |[Process_No](#process_no)|`int` |Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.|
-|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse.|
+|[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |Specifies the managed warehouse for which the warehouse process is applicable.|
 |[Warehouse_Process_Id](#warehouse_process_id)|`uniqueidentifier` `PK`|Unique identifier of the Warehouse Process.|
-|[Warehouse_Requisition_Document_Type_Id](#warehouse_requisition_document_type_id)|`uniqueidentifier` |Specifies the Warehouse Requisition document type for which the process is applicable.|
 
 ## Columns
 
@@ -94,6 +94,42 @@ Specifies the date and time until which the warehouse process configuration can 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Document_Type_Id
+
+
+Specifies the Warehouse Requisition document type for which the process is applicable.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Document_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Is_Active
 
@@ -206,6 +242,7 @@ Determines the order in which warehouse process configurations are checked for a
 | Property | Value |
 | - | - |
 |Auto Complete|no|
+|Autoincrement|10|
 |Data Filter|no|
 |Default Value|None|
 |Enter Stop|yes|
@@ -231,7 +268,7 @@ Determines the order in which warehouse process configurations are checked for a
 ### Warehouse_Id
 
 
-Specifies the managed warehouse for which the process is applicable. If empty, the process is not restricted to a specific managed warehouse.
+Specifies the managed warehouse for which the warehouse process is applicable.
 
 | Property | Value |
 | - | - |
@@ -253,7 +290,7 @@ Specifies the managed warehouse for which the process is applicable. If empty, t
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -263,7 +300,7 @@ Specifies the managed warehouse for which the process is applicable. If empty, t
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Warehouse_Process_Id
 
@@ -285,6 +322,7 @@ Unique identifier of the Warehouse Process.
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
+|Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -301,42 +339,5 @@ Unique identifier of the Warehouse Process.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |GreaterThanOrLessThan|None|no|yes|
-
-### Warehouse_Requisition_Document_Type_Id
-
-
-Specifies the Warehouse Requisition document type for which the process is applicable.
-
-| Property | Value |
-| - | - |
-|Auto Complete|no|
-|Data Filter|no|
-|Default Value|None|
-|Enter Stop|yes|
-|Ignore for Insert Order|no|
-|Is Entity Name|no|
-|Max Length|-1|
-|Order|2147483647|
-|Ownership Reference|no|
-|Pasword|no|
-|Picture|no|
-|Primary Key|no|
-|Readonly|no|
-|Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
-|RTF|no|
-|Sortable|no|
-|Summary Type|None|
-|Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
-|UI Memo Editor|no|
-|UI Width|Medium|
-|User Login|no|
-|Visible|yes|
-
-#### Warehouse_Requisition_Document_Type_Id - Supported Filters
-
-| Filter Type | Default | Include Nulls | Hidden by Default |
-| - | - | - | - |
-|Equals|`NULL`|no|no|
 
 

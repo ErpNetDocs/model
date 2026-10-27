@@ -22,8 +22,8 @@ SAF-T Declaration document. Entity: Saft_Declarations (Introduced in version 26.
 |[Period_Month](#period_month)|`int` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`|The month of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.|
 |[Period_Start_Date](#period_start_date)|`date` |Period start date (by document date).|
 |[Period_Year](#period_year)|`date` |The year of the reporting period of the SAF-T declaration. It is used to determine the start and end date of the period and to automatically populate related fields in the declaration.|
-|[Released_End_Time](#released_end_time)|`datetime` |Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.|
-|[Released_Start_Time](#released_start_time)|`datetime` |Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.|
+|[Released_End_Time](#released_end_time)|`datetime` |Monthly declarations use PeriodEndDate plus one day as exclusive upper bound U. Non-Monthly declarations keep the existing calculation.|
+|[Released_Start_Time](#released_start_time)|`datetime` |Monthly declarations use PeriodStartDate (P) at 00:00. Non-Monthly declarations keep the existing calculation.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Saft_Declaration_Id](#saft_declaration_id)|`uniqueidentifier` `PK`|Unique identifier of the declaration/export run.|
 
@@ -287,7 +287,7 @@ The year of the reporting period of the SAF-T declaration. It is used to determi
 ### Released_End_Time
 
 
-Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.
+Monthly declarations use PeriodEndDate plus one day as exclusive upper bound U. Non-Monthly declarations keep the existing calculation.
 
 | Property | Value |
 | - | - |
@@ -323,7 +323,7 @@ Release window end (upper bound for ReleaseTime). This is the export timestamp; 
 ### Released_Start_Time
 
 
-Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.
+Monthly declarations use PeriodStartDate (P) at 00:00. Non-Monthly declarations keep the existing calculation.
 
 | Property | Value |
 | - | - |

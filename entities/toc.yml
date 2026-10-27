@@ -1211,6 +1211,8 @@
   - name: Saft
     href: Regulatory.Saft.md
     items:
+    - name: AccountBalanceCorrections
+      href: Regulatory.Saft.AccountBalanceCorrections.md
     - name: AccountBalances
       href: Regulatory.Saft.AccountBalances.md
     - name: DeclarationExportAccounts

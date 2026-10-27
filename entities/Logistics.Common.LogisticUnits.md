@@ -359,6 +359,19 @@ Domain API Request: **GET**
     Default Value: 0  
 
 
+### GetNextTemporaryLUN
+
+Returns the next temporary LUN for the specified warehouse.             Increments the numeric part of the applicable warehouse policy value             and commits the change in a separate transaction.  
+Return Type: **string**  
+Declaring Type: **[LogisticUnits](Logistics.Common.LogisticUnits.md)**  
+Domain API Request: **POST**  
+
+**Parameters**  
+  * **warehouse**  
+    The warehouse for which to generate a temporary LUN.  
+    Type: [Warehouses](Logistics.Wms.Warehouses.md)  
+
+
 ### GetOrCreateExtensibleDataObject
 
 Gets an existing extensible data object associated with the specified entity, or creates a new one if none exists. The newly created extensible data object is immediately commited to the database.  

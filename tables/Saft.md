@@ -1,5 +1,6 @@
 # Saft
 
+* [Saft_Account_Balance_Corrections](Saft_Account_Balance_Corrections.md)
 * [Saft_Account_Balances](Saft_Account_Balances.md)
 * [Saft_Declaration_Export_Accounts](Saft_Declaration_Export_Accounts.md)
 * [Saft_Declaration_Export_Bank_Accounts](Saft_Declaration_Export_Bank_Accounts.md)
