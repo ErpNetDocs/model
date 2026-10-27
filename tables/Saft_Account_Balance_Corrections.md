@@ -15,9 +15,11 @@ Signed SAF-T balance corrections and export activity grouped by account and full
 |[Closing_Correction_Base](#closing_correction_base)|`decimal(38, 2)` |Closing Correction Base|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise company|
 |[From_Date](#from_date)|`date` |Filter date for start of period|
+|[From_Release_Time](#from_release_time)|`datetime` |Filter date for Release start time|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item_Key|
 |[Opening_Correction_Base](#opening_correction_base)|`decimal(38, 2)` |Opening Correction Base|
 |[To_Date](#to_date)|`date` |Filter date for end of period|
+|[To_Release_Time](#to_release_time)|`datetime` |Filter date for Release end time|
 |[Vouchers_In_Period](#vouchers_in_period)|`int` |Vouchers In Period|
 
 ## Columns
@@ -160,6 +162,42 @@ Filter date for start of period
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### From_Release_Time
+
+
+Filter date for Release start time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### From_Release_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
 ### Item_Key
 
 
@@ -251,6 +289,42 @@ Filter date for end of period
 |Visible|yes|
 
 #### To_Date - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+
+### To_Release_Time
+
+
+Filter date for Release end time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### To_Release_Time - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

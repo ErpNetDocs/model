@@ -404,23 +404,23 @@ Allowed Values (Logistics.Wms.WarehouseOrderLinesRepository.TaskType Enum Member
 
 | Value | Description |
 | ---- | --- |
-| Receive | Receive value. Stored as 'REC'. <br /> Database Value: 'REC' <br /> Model Value: 0 <br /> Domain API Value: 'Receive' |
-| Dispatch | Dispatch value. Stored as 'DIS'. <br /> Database Value: 'DIS' <br /> Model Value: 1 <br /> Domain API Value: 'Dispatch' |
-| Move | Move value. Stored as 'MOV'. <br /> Database Value: 'MOV' <br /> Model Value: 2 <br /> Domain API Value: 'Move' |
-| Label | Label value. Stored as 'LBL'. <br /> Database Value: 'LBL' <br /> Model Value: 3 <br /> Domain API Value: 'Label' |
-| Inspect | Inspect value. Stored as 'INS'. <br /> Database Value: 'INS' <br /> Model Value: 4 <br /> Domain API Value: 'Inspect' |
-| Pack | Pack value. Stored as 'PCK'. <br /> Database Value: 'PCK' <br /> Model Value: 5 <br /> Domain API Value: 'Pack' |
-| Unpack | Unpack value. Stored as 'UPK'. <br /> Database Value: 'UPK' <br /> Model Value: 6 <br /> Domain API Value: 'Unpack' |
-| Kit | Kit value. Stored as 'KIT'. <br /> Database Value: 'KIT' <br /> Model Value: 7 <br /> Domain API Value: 'Kit' |
-| Dekit | Dekit value. Stored as 'DKT'. <br /> Database Value: 'DKT' <br /> Model Value: 8 <br /> Domain API Value: 'Dekit' |
-| Count | Count value. Stored as 'CNT'. <br /> Database Value: 'CNT' <br /> Model Value: 9 <br /> Domain API Value: 'Count' |
-| UserTask | UserTask value. Stored as 'TSK'. <br /> Database Value: 'TSK' <br /> Model Value: 10 <br /> Domain API Value: 'UserTask' |
-| ComponentDispatch | ComponentDispatch value. Stored as 'CDP'. <br /> Database Value: 'CDP' <br /> Model Value: 11 <br /> Domain API Value: 'ComponentDispatch' |
-| ComponentReceive | ComponentReceive value. Stored as 'CRC'. <br /> Database Value: 'CRC' <br /> Model Value: 12 <br /> Domain API Value: 'ComponentReceive' |
-| Assemble | Assemble value. Stored as 'ASM'. <br /> Database Value: 'ASM' <br /> Model Value: 13 <br /> Domain API Value: 'Assemble' |
-| Disassemble | Disassemble value. Stored as 'DSM'. <br /> Database Value: 'DSM' <br /> Model Value: 14 <br /> Domain API Value: 'Disassemble' |
-| Reconciliation | Reconciliation value. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 15 <br /> Domain API Value: 'Reconciliation' |
-| Pick | Warehouse picking task used to collect the required products from warehouse locations according to the Warehouse Order. When Warehouse Orders with this task type are completed, the picked quantities are recorded as executed and the products are prepared for the next warehouse operation.. Stored as 'PIK'. <br /> Database Value: 'PIK' <br /> Model Value: 16 <br /> Domain API Value: 'Pick' |
+| Receive | Receiving products into the managed warehouse.. Stored as 'REC'. <br /> Database Value: 'REC' <br /> Model Value: 0 <br /> Domain API Value: 'Receive' |
+| Dispatch | Dispatching products and issuing them from warehouse stock.. Stored as 'DIS'. <br /> Database Value: 'DIS' <br /> Model Value: 1 <br /> Domain API Value: 'Dispatch' |
+| Move | Moving products or logistic units between warehouse locations.. Stored as 'MOV'. <br /> Database Value: 'MOV' <br /> Model Value: 2 <br /> Domain API Value: 'Move' |
+| Label | Printing and applying the required product labels.. Stored as 'LBL'. <br /> Database Value: 'LBL' <br /> Model Value: 3 <br /> Domain API Value: 'Label' |
+| Inspect | Inspecting products, quantities, and identification details.. Stored as 'INS'. <br /> Database Value: 'INS' <br /> Model Value: 4 <br /> Domain API Value: 'Inspect' |
+| Pack | Packing products into packages or logistic units.. Stored as 'PCK'. <br /> Database Value: 'PCK' <br /> Model Value: 5 <br /> Domain API Value: 'Pack' |
+| Unpack | Unpacking products from packages or logistic units.. Stored as 'UPK'. <br /> Database Value: 'UPK' <br /> Model Value: 6 <br /> Domain API Value: 'Unpack' |
+| Kit | Combining specified components into a composite product.. Stored as 'KIT'. <br /> Database Value: 'KIT' <br /> Model Value: 7 <br /> Domain API Value: 'Kit' |
+| Dekit | Separating a composite product into its components.. Stored as 'DKT'. <br /> Database Value: 'DKT' <br /> Model Value: 8 <br /> Domain API Value: 'Dekit' |
+| Count | Physically counting products at warehouse locations. It does not directly change warehouse stock.. Stored as 'CNT'. <br /> Database Value: 'CNT' <br /> Model Value: 9 <br /> Domain API Value: 'Count' |
+| UserTask | Generic warehouse task for performing a user-defined warehouse operation.. Stored as 'TSK'. <br /> Database Value: 'TSK' <br /> Model Value: 10 <br /> Domain API Value: 'UserTask' |
+| ComponentDispatch | Dispatching components from warehouse stock as part of a composite product process.. Stored as 'CDP'. <br /> Database Value: 'CDP' <br /> Model Value: 11 <br /> Domain API Value: 'ComponentDispatch' |
+| ComponentReceive | Receiving components into warehouse stock as part of a composite product process.. Stored as 'CRC'. <br /> Database Value: 'CRC' <br /> Model Value: 12 <br /> Domain API Value: 'ComponentReceive' |
+| Assemble | Assembling specified components into a finished or semi-finished product.. Stored as 'ASM'. <br /> Database Value: 'ASM' <br /> Model Value: 13 <br /> Domain API Value: 'Assemble' |
+| Disassemble | Disassembling a product into its specified components.. Stored as 'DSM'. <br /> Database Value: 'DSM' <br /> Model Value: 14 <br /> Domain API Value: 'Disassemble' |
+| Reconciliation | Counting and reconciling stock. The confirmed result directly updates warehouse stock.. Stored as 'RCN'. <br /> Database Value: 'RCN' <br /> Model Value: 15 <br /> Domain API Value: 'Reconciliation' |
+| Pick | Collecting the required products from warehouse locations.. Stored as 'PIK'. <br /> Database Value: 'PIK' <br /> Model Value: 16 <br /> Domain API Value: 'Pick' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

@@ -30,9 +30,11 @@ Aggregate Tree
 | ---- | ---- | --- |
 | [EndBalanceBase](Regulatory.Saft.AccountBalances.md#endbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
 | [FromDate](Regulatory.Saft.AccountBalances.md#fromdate) | date | Filter date for start of period`Required` `Filter(eq)` |
+| [FromReleaseTime](Regulatory.Saft.AccountBalances.md#fromreleasetime) | datetime | Filter date for Release start time`Required` `Filter(eq)` `Introduced in version 27.1.1.77` |
 | [ItemKey](Regulatory.Saft.AccountBalances.md#itemkey) | string (64) | Item_Key`Required` `Introduced in version 26.2.1.27` |
 | [StartBalanceBase](Regulatory.Saft.AccountBalances.md#startbalancebase) | decimal (38, 2) | Start balance in base currency`Required` |
 | [ToDate](Regulatory.Saft.AccountBalances.md#todate) | date | Filter date for end of period`Required` `Filter(eq)` |
+| [ToReleaseTime](Regulatory.Saft.AccountBalances.md#toreleasetime) | datetime | Filter date for Release end time`Required` `Filter(eq)` `Introduced in version 27.1.1.77` |
 | [VouchersInPeriod](Regulatory.Saft.AccountBalances.md#vouchersinperiod) | int32 | Count of Vouchers in period`Required` `Introduced in version 26.2.1.27` |
 
 ## References
@@ -65,6 +67,16 @@ Supported Filters: **Equals**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
+### FromReleaseTime
+
+Filter date for Release start time`Required` `Filter(eq)` `Introduced in version 27.1.1.77`
+
+Type: **datetime**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
 ### ItemKey
 
 Item_Key`Required` `Introduced in version 26.2.1.27`
@@ -91,6 +103,16 @@ Show in UI: **ShownByDefault**
 Filter date for end of period`Required` `Filter(eq)`
 
 Type: **date**  
+Category: **System**  
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### ToReleaseTime
+
+Filter date for Release end time`Required` `Filter(eq)` `Introduced in version 27.1.1.77`
+
+Type: **datetime**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
