@@ -558,6 +558,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Bpm.UserBusinessRuleEvents | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.UserBusinessRules | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Config.Config | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
+| Systems.Config.Extensions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.Jobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.Translations | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebHooks | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -569,7 +570,6 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.DocumentVersions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.EntityAttributeDefaultValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.ExtensibleDataObjects | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Systems.Core.Extensions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.FormLayouts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.InstanceChangeRequests | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Notifications | 1 - Track last changes only | 4 - Track object attribute and blob changes |

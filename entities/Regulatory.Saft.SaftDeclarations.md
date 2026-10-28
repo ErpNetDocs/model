@@ -451,7 +451,7 @@ Supports Order By: **True**
 Show in UI: **ShownByDefault**  
 
 Front-End Recalc Expressions:  
-`IIF( ( obj.PeriodYear != null), Convert( DateTime.Now, Object), null)`
+`obj.CalculateReleasedEndTime( obj.PeriodYear, obj.PeriodMonth, obj.DeclarationType, obj.PeriodEndDate, obj.ReleasedEndTime)`
 ### ReleasedStartTime
 
 Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD`
@@ -463,7 +463,7 @@ Supports Order By: **True**
 Show in UI: **ShownByDefault**  
 
 Front-End Recalc Expressions:  
-`obj.Transaction.Query( ).Where( d => ( ( ( ( ( Convert( d.State, Int32) >= 30) AndAlso ( d.Void == False)) AndAlso ( d.EnterpriseCompany == obj.EnterpriseCompany)) AndAlso ( Convert( d.DeclarationType, Int32) == Convert( obj.DeclarationType, Int32))) AndAlso ( d.PeriodEndDate == obj.PeriodStartDate.AddDays( -1)))).OrderByDescending( d => d.ReleasedEndTime).Take( 1).ToList( ).Select( d => d.ReleasedEndTime).FirstOrDefault( ).IfNullThen( new DateTime( DateTime.Now.Year, DateTime.Now.Month, 1))`
+`obj.CalculateReleasedStartTime( obj.PeriodYear, obj.PeriodMonth, obj.DeclarationType, obj.EnterpriseCompany, obj.PeriodStartDate, obj.ReleasedStartTime)`
 ### ReleaseTime
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))

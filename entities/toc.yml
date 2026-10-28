@@ -1343,6 +1343,8 @@
     items:
     - name: Config
       href: Systems.Config.Config.md
+    - name: Extensions
+      href: Systems.Config.Extensions.md
     - name: Jobs
       href: Systems.Config.Jobs.md
     - name: Translations
@@ -1372,8 +1374,6 @@
       href: Systems.Core.EntityAttributeDefaultValues.md
     - name: ExtensibleDataObjects
       href: Systems.Core.ExtensibleDataObjects.md
-    - name: Extensions
-      href: Systems.Core.Extensions.md
     - name: FormLayouts
       href: Systems.Core.FormLayouts.md
     - name: InstanceChangeRequests
