@@ -699,6 +699,8 @@
       href: General.Products.ProductGroups.md
     - name: ProductPictures
       href: General.Products.ProductPictures.md
+    - name: ProductProductTypes
+      href: General.Products.ProductProductTypes.md
     - name: ProductRelations
       href: General.Products.ProductRelations.md
     - name: ProductRelationTypes

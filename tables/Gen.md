@@ -56,6 +56,7 @@
 * [Gen_Product_Group_Required_Properties](Gen_Product_Group_Required_Properties.md)
 * [Gen_Product_Groups](Gen_Product_Groups.md)
 * [Gen_Product_Pictures](Gen_Product_Pictures.md)
+* [Gen_Product_Product_Types](Gen_Product_Product_Types.md)
 * [Gen_Product_Relation_Types](Gen_Product_Relation_Types.md)
 * [Gen_Product_Relations](Gen_Product_Relations.md)
 * [Gen_Product_Supply](Gen_Product_Supply.md)

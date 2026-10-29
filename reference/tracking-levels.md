@@ -296,6 +296,7 @@ The following table contains default system-specified tracking levels:
 | General.Products.ProductGroupRequiredProperties | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductPictures | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| General.Products.ProductProductTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductRelations | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductRelationTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.Products | 2 - Track object changes | 4 - Track object attribute and blob changes |

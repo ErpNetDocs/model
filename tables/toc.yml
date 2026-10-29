@@ -683,6 +683,8 @@
     href: Gen_Product_Groups.md
   - name: Gen_Product_Pictures
     href: Gen_Product_Pictures.md
+  - name: Gen_Product_Product_Types
+    href: Gen_Product_Product_Types.md
   - name: Gen_Product_Relation_Types
     href: Gen_Product_Relation_Types.md
   - name: Gen_Product_Relations
