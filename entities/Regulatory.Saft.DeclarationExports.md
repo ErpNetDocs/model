@@ -14,7 +14,7 @@ Introduced In Version: 27.1.0.81
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {CompanyName}  
+Display Format: {SaftDeclaration.DocumentNo}/{SaftDeclaration.DeclarationType}/{CreatedOn:yyyy-MM-dd HH:mm}  
 Search Members: BeneficialOwnerCountryCode; CompanyName  
 Code Member: BeneficialOwnerCountryCode  
 Name Member: CompanyName  
