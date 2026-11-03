@@ -16,6 +16,7 @@ Maps SAF-T TaxCode for GL entry lines by account, analytic and document type. En
 | Name | Type | Description |
 | - | - | --- |
 |[Account_Id](#account_id)|`uniqueidentifier` |The ERP.net general ledger account for which the SAF-T tax code is defined.|
+|[Amount_Type](#amount_type)|`char(1)` Allowed: `B`, `T`|Specifies whether the mapping applies to a base amount or a tax amount.|
 |[Custom_Property_Id](#custom_property_id)|`uniqueidentifier` |The account analytic custom property used to differentiate the applicable SAF-T tax code.|
 |[Custom_Property_Value](#custom_property_value)|`nvarchar(254)` |The specific value of the selected analytic custom property for which this mapping applies.|
 |[Document_Type_Id](#document_type_id)|`uniqueidentifier` |The ERP.net document type under which this mapping rule should be applied.|
@@ -63,6 +64,43 @@ The ERP.net general ledger account for which the SAF-T tax code is defined.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Amount_Type
+
+
+Specifies whether the mapping applies to a base amount or a tax amount.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`B`, `T`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|T|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|1|
+|Order|9|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(1) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Amount_Type - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Custom_Property_Id
 

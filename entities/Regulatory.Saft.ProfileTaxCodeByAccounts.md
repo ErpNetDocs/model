@@ -45,6 +45,7 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AmountType](Regulatory.Saft.ProfileTaxCodeByAccounts.md#amounttype) | [AmountType](Regulatory.Saft.ProfileTaxCodeByAccounts.md#amounttype) __nullable__ | Specifies whether the mapping applies to a base amount or a tax amount.`Default(&quot;T&quot;)` `Filter(eq)` `Introduced in version 27.1.1.84` |
 | [CustomPropertyValue](Regulatory.Saft.ProfileTaxCodeByAccounts.md#custompropertyvalue) | string (254) __nullable__ | The specific value of the selected analytic custom property for which this mapping applies.`Filter(like)` |
 | [Notes](Regulatory.Saft.ProfileTaxCodeByAccounts.md#notes) | string (max) __nullable__ | Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)` |
 
@@ -69,6 +70,25 @@ Aggregate Root:
 
 
 ## Attribute Details
+
+### AmountType
+
+Specifies whether the mapping applies to a base amount or a tax amount.`Default(&quot;T&quot;)` `Filter(eq)` `Introduced in version 27.1.1.84`
+
+Type: **[AmountType](Regulatory.Saft.ProfileTaxCodeByAccounts.md#amounttype) __nullable__**  
+Category: **System**  
+Allowed values for the `AmountType`(Regulatory.Saft.ProfileTaxCodeByAccounts.md#amounttype) data attribute  
+Allowed Values (Regulatory.Saft.ProfileTaxCodeByAccountsRepository.AmountType Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| Base | Base. Stored as 'B'. <br /> Database Value: 'B' <br /> Model Value: 0 <br /> Domain API Value: 'Base' |
+| Tax | Tax. Stored as 'T'. <br /> Database Value: 'T' <br /> Model Value: 1 <br /> Domain API Value: 'Tax' |
+
+Supported Filters: **Equals**  
+Supports Order By: **False**  
+Default Value: **Tax**  
+Show in UI: **ShownByDefault**  
 
 ### CustomPropertyValue
 
