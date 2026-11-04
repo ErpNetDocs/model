@@ -85,8 +85,8 @@ Aggregate Tree
 | [ReadOnly](Regulatory.Saft.SaftDeclarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReferenceDate](Regulatory.Saft.SaftDeclarations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReferenceDocumentNo](Regulatory.Saft.SaftDeclarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD` |
-| [ReleasedStartTime](Regulatory.Saft.SaftDeclarations.md#releasedstarttime) | datetime __nullable__ | Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD` |
+| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Monthly declarations default to PeriodEndDate at 23:59:59 as the inclusive last second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD` |
+| [ReleasedStartTime](Regulatory.Saft.SaftDeclarations.md#releasedstarttime) | datetime __nullable__ | Monthly declarations use PeriodStartDate (P) at 00:00; when a previous declaration exists, use its inclusive ReleasedEndTime plus one second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD` |
 | [ReleaseTime](Regulatory.Saft.SaftDeclarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [State](Regulatory.Saft.SaftDeclarations.md#state) | [DocumentState](Regulatory.Saft.SaftDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Regulatory.Saft.SaftDeclarations.md#statetagsattribute) | string | Specifies the state of the document. |
@@ -442,7 +442,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReleasedEndTime
 
-Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD`
+Monthly declarations default to PeriodEndDate at 23:59:59 as the inclusive last second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -454,7 +454,7 @@ Front-End Recalc Expressions:
 `obj.CalculateReleasedEndTime( obj.PeriodYear, obj.PeriodMonth, obj.DeclarationType, obj.PeriodEndDate, obj.ReleasedEndTime)`
 ### ReleasedStartTime
 
-Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD`
+Monthly declarations use PeriodStartDate (P) at 00:00; when a previous declaration exists, use its inclusive ReleasedEndTime plus one second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
