@@ -44,6 +44,8 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [RelatedDocument](Logistics.Wms.WarehouseLocations.md#relateddocument) | [Documents](General.Documents.Documents.md) (nullable) | Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation. |
+| [RelatedParty](Logistics.Wms.WarehouseLocations.md#relatedparty) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document. |
 | [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. |
 | [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. |
 
@@ -131,6 +133,24 @@ Show in UI: **HiddenByDefault**
 
 
 ## Reference Details
+
+### RelatedDocument
+
+Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation.
+
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### RelatedParty
+
+Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document.
+
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Warehouse
 
