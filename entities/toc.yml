@@ -1257,6 +1257,8 @@
       href: Regulatory.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts
       href: Regulatory.Saft.ProfileAccounts.md
+    - name: ProfileAssetTaxCategoryByAssetCategories
+      href: Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories.md
     - name: ProfileAssetTransactionTypeByOperationTypes
       href: Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md
     - name: ProfileCompanies

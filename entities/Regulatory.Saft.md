@@ -26,6 +26,7 @@ uid: Regulatory.Saft
 - [ProfileAccountByAssetCategories](Regulatory.Saft.ProfileAccountByAssetCategories.md)  
 - [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
 - [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
+- [ProfileAssetTaxCategoryByAssetCategories](Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories.md)  
 - [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
 - [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
 - [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  

@@ -522,6 +522,7 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Saft.ProfileAccountByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileCompanies | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileMeasurementUnits | 1 - Track last changes only | 4 - Track object attribute and blob changes |
