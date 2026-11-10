@@ -101,6 +101,8 @@ Supports Order By: **False**
 Maximum Length: **254**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( obj.CustomProperty == null), null, obj.CustomPropertyValue)`
 ### Notes
 
 Additional explanation or comments about this mapping rule (e.g., rationale, special cases, internal reference).`Filter(like)`
@@ -163,6 +165,8 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`obj.ClearCustomPropertyValueIfPropertyMissing( obj.CustomPropertyValue, obj.CustomProperty)`
 ### DocumentType
 
 The ERP.net document type under which this mapping rule should be applied.
