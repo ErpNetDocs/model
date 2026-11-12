@@ -13,7 +13,7 @@ Base Table: Ast_Asset_Categories
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Name}  
+Display Format: {Code}:{Name}  
 Search Members: Code; Name  
 Code Member: Code  
 Name Member: Name  
