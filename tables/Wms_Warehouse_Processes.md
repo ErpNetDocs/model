@@ -115,6 +115,7 @@ Specifies the Warehouse Requisition document type for which the process is appli
 |Picture|no|
 |Primary Key|no|
 |Readonly|no|
+|Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|
@@ -322,7 +323,6 @@ Unique identifier of the Warehouse Process.
 |Picture|no|
 |Primary Key|yes (order: 1)|
 |Readonly|no|
-|Referenced Table|[Gen_Document_Types](Gen_Document_Types.md)|
 |RTF|no|
 |Sortable|no|
 |Summary Type|None|

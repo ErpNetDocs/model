@@ -515,7 +515,7 @@ The enterprise company location in which to generate the target document.
 |Allowed Values|`0`, `10`, `20`, `30`, `40`, `50`|
 |Auto Complete|no|
 |Data Filter|no|
-|Default Value|None|
+|Default Value|20|
 |Enter Stop|yes|
 |Ignore for Insert Order|no|
 |Is Entity Name|no|

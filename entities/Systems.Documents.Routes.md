@@ -52,7 +52,7 @@ Aggregate Root:
 | [ConditionStatesBitMask](Systems.Documents.Routes.md#conditionstatesbitmask) | [DocumentStateFlags](Systems.Documents.Routes.md#conditionstatesbitmask) | The system states for which to execute the specified route.`Required` `Default(0)` `Filter(like)` |
 | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | [ConnectedPartyCondition](Systems.Documents.Routes.md#connectedpartycondition) | A - any party; C - connected party: to_party is enterprise company; U - unconnected party - not enterprise company;`Required` `Default(&quot;A&quot;)` |
 | [DeactivationDate](Systems.Documents.Routes.md#deactivationdate) | date __nullable__ | The date until (including) the route is active. The date is matched against the document date of the generating document. Null means the route does not have a deactivation date.`Filter(ge;le)` |
-| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed`Required` |
+| [DestinationState](Systems.Documents.Routes.md#destinationstate) | [DocumentState](Systems.Documents.Routes.md#destinationstate) | 0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed`Required` `Default(20)` |
 | [MasterDocument<br />ActivationDate](Systems.Documents.Routes.md#masterdocumentactivationdate) | date __nullable__ | The date from which (including) the route is active. The date is matched against the document date of the master document.`Filter(ge;le)` `Introduced in version 27.1.1.35` |
 | [MasterDocument<br />DeactivationDate](Systems.Documents.Routes.md#masterdocumentdeactivationdate) | date __nullable__ | The date until which (including) the route is active. The date is matched against the document date of the master document. Null means the route does not have a master document deactivation date.`Filter(ge;le)` `Introduced in version 27.1.1.35` |
 | [NegativeConditionFilterXml](Systems.Documents.Routes.md#negativeconditionfilterxml) | dataaccessfilter __nullable__ | The negative condition should NOT be matched by the document in order to execute the route.`Unit: obj.DocumentType.EntityName` |
@@ -216,7 +216,7 @@ Show in UI: **ShownByDefault**
 
 ### DestinationState
 
-0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed`Required`
+0=New;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed`Required` `Default(20)`
 
 Type: **[DocumentState](Systems.Documents.Routes.md#destinationstate)**  
 Category: **System**  
@@ -235,6 +235,7 @@ Allowed Values (General.Documents.DocumentState Enum Members)
 
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
+Default Value: **20**  
 Show in UI: **ShownByDefault**  
 
 ### MasterDocumentActivationDate
