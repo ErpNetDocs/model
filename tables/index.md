@@ -312,6 +312,7 @@
 
 * [Gen_Administrative_Regions](Gen_Administrative_Regions.md)
 * [Gen_Areas](Gen_Areas.md)
+* [Gen_Brands](Gen_Brands.md)
 * [Gen_Calendar](Gen_Calendar.md)
 * [Gen_Coding_Systems](Gen_Coding_Systems.md)
 * [Gen_Config](Gen_Config.md)

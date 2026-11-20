@@ -113,6 +113,7 @@ Allowed Values (Systems.Config.JobsRepository.JobType Enum Members)
 | InstanceChangesProcessor | InstanceChangesProcessor value. Stored as 'ICP'. <br /> Database Value: 'ICP' <br /> Model Value: 10 <br /> Domain API Value: 'InstanceChangesProcessor' |
 | DeleteExpiredAccessTokens | DeleteExpiredAccessTokens value. Stored as 'DRT'. <br /> Database Value: 'DRT' <br /> Model Value: 11 <br /> Domain API Value: 'DeleteExpiredAccessTokens' |
 | CreateExtensible<br />DataObjects | Create missing extensible data objects (EDO) for non-document entities.. Stored as 'CEO'. <br /> Database Value: 'CEO' <br /> Model Value: 12 <br /> Domain API Value: 'CreateExtensible<br />DataObjects' |
+| DeleteOldSaftExports | Deletes SAF-T exports older than 24 months and failed exports for earlier declarations.. Stored as 'DSE'. <br /> Database Value: 'DSE' <br /> Model Value: 13 <br /> Domain API Value: 'DeleteOldSaftExports' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

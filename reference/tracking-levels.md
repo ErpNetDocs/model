@@ -244,6 +244,7 @@ The following table contains default system-specified tracking levels:
 | General.Activities.ActivityTemplates | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Activities.ActivityTimeIntervals | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Activities.Reminders | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| General.Brands | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Contacts.Companies | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | General.Contacts.CompanyDepartments | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Contacts.CompanyDivisions | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
