@@ -58,6 +58,10 @@ Aggregate Tree
 | [DisplayText](Communities.Social.Comments.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
 
+## Remarks
+
+             Provides AI-assisted task creation from social comments.             
+
 ## Attribute Details
 
 ### CommentText

@@ -6,6 +6,7 @@
 Entity: [Systems.Core.Notifications](~/entities/Systems.Core.Notifications.md)
 
 A single notification of a user. Entity: Cmm_Notifications (Introduced in version 20.1)
+             Provides AI-assisted task creation from notifications and related comments.             
 
 ## Summary
 

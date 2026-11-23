@@ -50,7 +50,7 @@ The cost of the inventory in base currency of the enterprise company.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -80,7 +80,7 @@ The date parameter used to compute the balances.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date|
+|Type|date (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -90,7 +90,7 @@ The date parameter used to compute the balances.
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Enterprise_Company_Id
 
@@ -117,7 +117,7 @@ The enterprise company
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -127,7 +127,7 @@ The enterprise company
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
 
@@ -191,7 +191,7 @@ The cost of the inventory in the products currency.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -222,7 +222,7 @@ The product
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -232,7 +232,7 @@ The product
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 ### Product_Variant_Id
 
@@ -296,7 +296,7 @@ The quantity of the stock received/issued in base measurement unit
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 3)|
+|Type|decimal(38, 3) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -400,7 +400,7 @@ The cost of the inventory in the stores currency.
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2)|
+|Type|decimal(38, 2) (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -431,7 +431,7 @@ The store
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier|
+|Type|uniqueidentifier (Allows NULL)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -441,6 +441,6 @@ The store
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|no|no|
+|Equals|`NULL`|yes|no|
 
 
