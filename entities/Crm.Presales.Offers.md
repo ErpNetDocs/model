@@ -72,6 +72,7 @@ Aggregate Tree
 | [RequiredDeliveryDate](Crm.Presales.Offers.md#requireddeliverydate) | date __nullable__ | When not NULL, specifies required delivery date for all offer lines. When the lines contain different delivery dates, this is NULL.`Filter(ge;le)` |
 | [State](Crm.Presales.Offers.md#state) | [DocumentState](Crm.Presales.Offers.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Crm.Presales.Offers.md#statetagsattribute) | string | Specifies the state of the document. |
+| [TotalLineAmount](Crm.Presales.Offers.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. |
 | [ValidTill](Crm.Presales.Offers.md#validtill) | datetime __nullable__ | Date till which the offer is valid. If not entered - the offer is not time limited`Filter(ge;le)` |
 | [Void](Crm.Presales.Offers.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [VoidReason](Crm.Presales.Offers.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -444,6 +445,16 @@ Show in UI: **HiddenByDefault**
 Specifies the state of the document.
 
 Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+Type: **[Amount](../data-types.md#amount)**  
 Category: **Calculated Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  

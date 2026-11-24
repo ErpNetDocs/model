@@ -22,5 +22,6 @@ uid: Crm.Pos
 - [Sales](Crm.Pos.Sales.md)  
 - [Sequences](Crm.Pos.Sequences.md)  
 - [SequenceSelectors](Crm.Pos.SequenceSelectors.md)  
+- [ServiceProfiles](Crm.Pos.ServiceProfiles.md)  
 - [Terminals](Crm.Pos.Terminals.md)  
 

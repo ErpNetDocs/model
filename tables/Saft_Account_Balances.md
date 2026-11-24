@@ -5,7 +5,7 @@
 
 Entity: [Regulatory.Saft.AccountBalances](~/entities/Regulatory.Saft.AccountBalances.md)
 
-Account balances for SAF-T reporting purpose . Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
+Account balances for SAF-T reporting. Entity: Saft_Account_Balances (Introduced in version 26.2.1.22)
 
 ## Summary
 
@@ -15,9 +15,11 @@ Account balances for SAF-T reporting purpose . Entity: Saft_Account_Balances (In
 |[End_Balance_Base](#end_balance_base)|`decimal(38, 2)` |Start balance in base currency|
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |Enterprise company|
 |[From_Date](#from_date)|`date` |Filter date for start of period|
+|[From_Release_Time](#from_release_time)|`datetime` |Filter date for Release start time|
 |[Item_Key](#item_key)|`nvarchar(64)` |Item_Key|
 |[Start_Balance_Base](#start_balance_base)|`decimal(38, 2)` |Start balance in base currency|
 |[To_Date](#to_date)|`date` |Filter date for end of period|
+|[To_Release_Time](#to_release_time)|`datetime` |Filter date for Release end time|
 |[Vouchers_In_Period](#vouchers_in_period)|`int` |Count of Vouchers in period|
 
 ## Columns
@@ -82,7 +84,7 @@ Start balance in base currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2) (Allows NULL)|
+|Type|decimal(38, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -148,7 +150,7 @@ Filter date for start of period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date (Allows NULL)|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -158,7 +160,43 @@ Filter date for start of period
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
+
+### From_Release_Time
+
+
+Filter date for Release start time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### From_Release_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Item_Key
 
@@ -184,7 +222,7 @@ Item_Key
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|nvarchar(64) (Allows NULL)|
+|Type|nvarchar(64)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -214,7 +252,7 @@ Start balance in base currency
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|decimal(38, 2) (Allows NULL)|
+|Type|decimal(38, 2)|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -244,7 +282,7 @@ Filter date for end of period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|date (Allows NULL)|
+|Type|date|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -254,7 +292,43 @@ Filter date for end of period
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
+
+### To_Release_Time
+
+
+Filter date for Release end time
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|datetime|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### To_Release_Time - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
 
 ### Vouchers_In_Period
 
@@ -280,7 +354,7 @@ Count of Vouchers in period
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|int (Allows NULL)|
+|Type|int|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

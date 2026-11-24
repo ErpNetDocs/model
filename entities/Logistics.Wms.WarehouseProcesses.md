@@ -4,7 +4,7 @@ uid: Logistics.Wms.WarehouseProcesses
 # Logistics.Wms.WarehouseProcesses
 
 
-Contains warehouse process configurations that determine which algorithm is executed. The configurations can optionally be limited by document type, managed warehouse, and validity period. The algorithm defines the applicable conditions, processing steps, and Warehouse Order generation logic.
+Contains warehouse process configurations used to determine which Warehouse Process is applicable to a Warehouse Requisition. Configurations are evaluated in ascending order of Process No. Only the first process that matches all specified criteria is selected; subsequent processes are not considered. More specific configurations should therefore be ordered before more general ones. A configuration can optionally be limited by managed warehouse, party, and validity period, while the Warehouse Requisition document type is required. The execution of the selected process is defined by the steps configured for it.
 
 ## General
 Namespace: [Logistics.Wms](Logistics.Wms.md)  
@@ -14,7 +14,7 @@ Introduced In Version: 27.1.1.5
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {No}  
+Display Format: {Id}: {WarehouseId}  
 Search Members:   
 Category:  Definitions  
 Show in UI:  ShownByDefault  
@@ -28,24 +28,25 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Logistics.Wms.WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
+  * [Logistics.Wms.WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md)  
 
 ## Attributes
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ActiveFrom](Logistics.Wms.WarehouseProcesses.md#activefrom) | datetime __nullable__ | The date and time from which the warehouse process configuration is valid.`Filter(ge;le)` |
-| [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | The date and time until which the warehouse process configuration is valid.`Filter(ge;le)` |
-| [Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm) | [Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm) | The algorithm that defines the conditions, processing steps, and Warehouse Order generation logic of the warehouse process.`Required` `Filter(multi eq)` |
-| [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Indicates whether the warehouse process configuration is active and can be used.`Required` `Default(true)` `Filter(eq)` |
-| [No](Logistics.Wms.WarehouseProcesses.md#no) | int32 | The line number of the warehouse process configuration.`Required` `Filter(multi eq)` |
+| [ActiveFrom](Logistics.Wms.WarehouseProcesses.md#activefrom) | datetime __nullable__ | Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.`Filter(ge;le)` |
+| [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)` |
+| [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)` |
 | [Notes](Logistics.Wms.WarehouseProcesses.md#notes) | string (max) __nullable__ | Additional information or comments about the warehouse process configuration. |
+| [ProcessNo](Logistics.Wms.WarehouseProcesses.md#processno) | int32 | Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Wms.WarehouseProcesses.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | The type of document for which the warehouse process is configured. |
-| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) (nullable) | The managed warehouse for which the warehouse process is configured. |
+| [DocumentType](Logistics.Wms.WarehouseProcesses.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | Specifies the Warehouse Requisition document type for which the process is applicable. |
+| [Party](Logistics.Wms.WarehouseProcesses.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party. |
+| [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | Specifies the managed warehouse for which the warehouse process is applicable. |
 
 
 ## System Attributes
@@ -60,12 +61,18 @@ Aggregate Tree
 | [AdditionalDataJson](Logistics.Wms.WarehouseProcesses.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
 | [DisplayText](Logistics.Wms.WarehouseProcesses.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
 
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Steps | [WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md) | List of `WarehouseProcessStep`(Logistics.Wms.WarehouseProcessSteps.md) child objects, based on the `Logistics.Wms.WarehouseProcessStep.WarehouseProcess`(Logistics.Wms.WarehouseProcessSteps.md#warehouseprocess) back reference 
+
 
 ## Attribute Details
 
 ### ActiveFrom
 
-The date and time from which the warehouse process configuration is valid.`Filter(ge;le)`
+Specifies the date and time from which the warehouse process configuration can be used. If empty, no start date restriction is applied.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -75,7 +82,7 @@ Show in UI: **ShownByDefault**
 
 ### ActiveTo
 
-The date and time until which the warehouse process configuration is valid.`Filter(ge;le)`
+Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -83,44 +90,15 @@ Supported Filters: **GreaterThanOrLessThan**
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
-### Algorithm
-
-The algorithm that defines the conditions, processing steps, and Warehouse Order generation logic of the warehouse process.`Required` `Filter(multi eq)`
-
-Type: **[Algorithm](Logistics.Wms.WarehouseProcesses.md#algorithm)**  
-Category: **System**  
-Allowed values for the `Algorithm`(Logistics.Wms.WarehouseProcesses.md#algorithm) data attribute  
-Allowed Values (Logistics.Wms.WarehouseProcessesRepository.Algorithm Enum Members)  
-
-| Value | Description |
-| ---- | --- |
-| Pick | Executes the picking process by creating and processing the required Warehouse Orders for collecting products from warehouse locations.. Stored as 'PIC'. <br /> Database Value: 'PIC' <br /> Model Value: 0 <br /> Domain API Value: 'Pick' |
-| Pack | Executes the packing process by creating and processing the required Warehouse Orders for packing products into packages or logistic units.. Stored as 'PAC'. <br /> Database Value: 'PAC' <br /> Model Value: 1 <br /> Domain API Value: 'Pack' |
-| Dispatch | Executes the dispatch process by creating and processing the required Warehouse Orders for dispatching goods from warehouse stock.. Stored as 'DIS'. <br /> Database Value: 'DIS' <br /> Model Value: 2 <br /> Domain API Value: 'Dispatch' |
-
-Supported Filters: **Equals, EqualsIn**  
-Supports Order By: **False**  
-Show in UI: **ShownByDefault**  
-
 ### IsActive
 
-Indicates whether the warehouse process configuration is active and can be used.`Required` `Default(true)` `Filter(eq)`
+Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)`
 
 Type: **boolean**  
 Category: **System**  
 Supported Filters: **Equals**  
 Supports Order By: **False**  
 Default Value: **True**  
-Show in UI: **ShownByDefault**  
-
-### No
-
-The line number of the warehouse process configuration.`Required` `Filter(multi eq)`
-
-Type: **int32**  
-Category: **System**  
-Supported Filters: **Equals, EqualsIn**  
-Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Notes
@@ -132,6 +110,17 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### ProcessNo
+
+Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51`
+
+Type: **int32**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **True**  
 Show in UI: **ShownByDefault**  
 
 ### Id
@@ -208,18 +197,27 @@ Show in UI: **HiddenByDefault**
 
 ### DocumentType
 
-The type of document for which the warehouse process is configured.
+Specifies the Warehouse Requisition document type for which the process is applicable.
 
 Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### Party
+
+Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party.
+
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### Warehouse
 
-The managed warehouse for which the warehouse process is configured.
+Specifies the managed warehouse for which the warehouse process is applicable.
 
-Type: **[Warehouses](Logistics.Wms.Warehouses.md) (nullable)**  
+Type: **[Warehouses](Logistics.Wms.Warehouses.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

@@ -11,6 +11,7 @@ uid: Logistics.Wms
 - [WarehouseOrders](Logistics.Wms.WarehouseOrders.md)  
 - [WarehousePolicies](Logistics.Wms.WarehousePolicies.md)  
 - [WarehouseProcesses](Logistics.Wms.WarehouseProcesses.md)  
+- [WarehouseProcessSteps](Logistics.Wms.WarehouseProcessSteps.md)  
 - [WarehouseReconciliationDetails](Logistics.Wms.WarehouseReconciliationDetails.md)  
 - [WarehouseReconciliationLines](Logistics.Wms.WarehouseReconciliationLines.md)  
 - [WarehouseReconciliations](Logistics.Wms.WarehouseReconciliations.md)  

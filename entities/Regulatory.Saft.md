@@ -4,6 +4,7 @@ uid: Regulatory.Saft
 # Regulatory.Saft Namespace
 
 ## Entities
+- [AccountBalanceCorrections](Regulatory.Saft.AccountBalanceCorrections.md)  
 - [AccountBalances](Regulatory.Saft.AccountBalances.md)  
 - [DeclarationExportAccounts](Regulatory.Saft.DeclarationExportAccounts.md)  
 - [DeclarationExportBankAccounts](Regulatory.Saft.DeclarationExportBankAccounts.md)  
@@ -25,6 +26,7 @@ uid: Regulatory.Saft
 - [ProfileAccountByAssetCategories](Regulatory.Saft.ProfileAccountByAssetCategories.md)  
 - [ProfileAccountByProducts](Regulatory.Saft.ProfileAccountByProducts.md)  
 - [ProfileAccounts](Regulatory.Saft.ProfileAccounts.md)  
+- [ProfileAssetTaxCategoryByAssetCategories](Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories.md)  
 - [ProfileAssetTransactionTypeByOperationTypes](Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md)  
 - [ProfileCompanies](Regulatory.Saft.ProfileCompanies.md)  
 - [ProfileMeasurementUnits](Regulatory.Saft.ProfileMeasurementUnits.md)  
@@ -34,9 +36,9 @@ uid: Regulatory.Saft
 - [ProfilePaymentTypes](Regulatory.Saft.ProfilePaymentTypes.md)  
 - [ProfileProductTypes](Regulatory.Saft.ProfileProductTypes.md)  
 - [Profiles](Regulatory.Saft.Profiles.md)  
+- [ProfileStockMovementTypes](Regulatory.Saft.ProfileStockMovementTypes.md)  
 - [ProfileTaxCodeByAccounts](Regulatory.Saft.ProfileTaxCodeByAccounts.md)  
 - [ProfileTaxCodeByDealTypes](Regulatory.Saft.ProfileTaxCodeByDealTypes.md)  
 - [ProfileValuationTypeByValuationModels](Regulatory.Saft.ProfileValuationTypeByValuationModels.md)  
 - [SaftDeclarations](Regulatory.Saft.SaftDeclarations.md)  
-- [StockMovementTypes](Regulatory.Saft.StockMovementTypes.md)  
 

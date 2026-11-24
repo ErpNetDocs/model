@@ -3,7 +3,7 @@
 
 ## Entity
 
-Entity: [Systems.Core.Extensions](~/entities/Systems.Core.Extensions.md)
+Entity: [Systems.Config.Extensions](~/entities/Systems.Config.Extensions.md)
 
 Stores metadata for pluggable application extensions that extend the core functionality of the system. Entity: Sys_Extensions (Introduced in version 26.2.1.40)
 

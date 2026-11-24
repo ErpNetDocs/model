@@ -30,6 +30,7 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 
 Aggregate Tree  
 * [Projects.Agile.Projects](Projects.Agile.Projects.md)  
+  * [Projects.Agile.ProjectStakeholders](Projects.Agile.ProjectStakeholders.md)  
 
 ## Attributes
 
@@ -67,6 +68,12 @@ Aggregate Tree
 | [AggregateLastUpdateTimeUtc](Projects.Agile.Projects.md#aggregatelastupdatetimeutc) | datetime | The exact server time (in UTC) of the last modification of the object represented by this system object. null means that it is unknown. [Filter(ge;le)] [ORD] [Introduced in version 19.1] |
 | [AdditionalDataJson](Projects.Agile.Projects.md#additionaldatajson) | string | Extensible JSON object for storing this entity&apos;s custom or optional attributes. Each application or service must store its data in a separate top-level object identified by the owning application, service, or functional domain. Applications must preserve top-level objects owned by other applications or services. Maximum length: 32,000 characters. [Introduced in version 26.3.100.4] |
 | [DisplayText](Projects.Agile.Projects.md#displaytext) | string | Uses the repository DisplayTextFormat to build the display text from the attributes and references of current object. |
+
+## Child Collections
+
+| Name | Type | Description |
+| ---- | ---- | --- |
+| Stakeholders | [ProjectStakeholders](Projects.Agile.ProjectStakeholders.md) | List of `ProjectStakeholder`(Projects.Agile.ProjectStakeholders.md) child objects, based on the `Projects.Agile.ProjectStakeholder.Project`(Projects.Agile.ProjectStakeholders.md#project) back reference 
 
 
 ## Attribute Details

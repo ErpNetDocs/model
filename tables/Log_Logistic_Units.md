@@ -20,7 +20,9 @@ Composition of products established for transport and/or storage which needs to 
 |[Notes](#notes)|`nvarchar(max)` ||
 |[Represented_As_Product_Id](#represented_as_product_id)|`uniqueidentifier` |When the logistic unit is also a tradeable item, specifies the product used to trade the unit. The product should uniquely identify only one logistic unit. Note that this is different from a logistic unit containing a single item. NULL means that the unit is not a tradeable item.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Seal_Status](#seal_status)|`char(3)` Allowed: `OPN`, `SLD`|Specifies the sealing status of the logistic unit and determines whether its contents can still be modified or have been finalized.|
 |[Serial_Code](#serial_code)|`nvarchar(32)` |Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC.|
+|[Source_Document_Id](#source_document_id)|`uniqueidentifier` |Specifies the document from which the logistic unit was created.|
 
 ## Columns
 
@@ -339,6 +341,37 @@ When the logistic unit is also a tradeable item, specifies the product used to t
 |User Login|no|
 |Visible|no|
 
+### Seal_Status
+
+
+Specifies the sealing status of the logistic unit and determines whether its contents can still be modified or have been finalized.
+
+| Property | Value |
+| - | - |
+|Allowed Values|`OPN`, `SLD`|
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|3|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|char(3) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Serial_Code
 
 
@@ -375,5 +408,42 @@ Unique serial code of the logistic unit. If GS1 coding is used, this is the SSCC
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Source_Document_Id
+
+
+Specifies the document from which the logistic unit was created.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Documents](Gen_Documents.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Source_Document_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 

@@ -56,7 +56,7 @@ Aggregate Tree
 | [MaskLength](Systems.Bpm.CustomProperties.md#masklength) | int16 __nullable__ | Limits te length of the property value to the specified number of characters. Null means no limitation |
 | [Name](Systems.Bpm.CustomProperties.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | The name of this CustomProperty. `Required` `Filter(like)` |
 | [Notes](Systems.Bpm.CustomProperties.md#notes) | string (max) __nullable__ | Notes for this CustomProperty. `Introduced in version 20.1` |
-| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.`Required` `Default(&quot;T&quot;)` |
+| [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | [PropertyType](Systems.Bpm.CustomProperties.md#propertytype) | Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date; ‘R’ - reference.`Required` `Default(&quot;T&quot;)` |
 
 ## References
 
@@ -215,7 +215,7 @@ Show in UI: **ShownByDefault**
 
 ### PropertyType
 
-Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date.`Required` `Default(&quot;T&quot;)`
+Type of property values. 'T' - text; 'P' - picture; 'N' - number; 'D' - date; ‘R’ - reference.`Required` `Default(&quot;T&quot;)`
 
 Type: **[PropertyType](Systems.Bpm.CustomProperties.md#propertytype)**  
 Category: **System**  

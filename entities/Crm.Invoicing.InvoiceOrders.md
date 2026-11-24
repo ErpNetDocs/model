@@ -50,6 +50,7 @@ Aggregate Tree
 | [AdjustmentNumber](Crm.Invoicing.InvoiceOrders.md#adjustmentnumber) | int32 | Consecutive number of the correction that this document is applying to the adjusted document. `Required` `Default(0)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentTime](Crm.Invoicing.InvoiceOrders.md#adjustmenttime) | datetime __nullable__ | Date/time when the document last has been adjusted by corrective document. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [AdjustmentUser](Crm.Invoicing.InvoiceOrders.md#adjustmentuser) | string (64) __nullable__ | The user who adjusted the document. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
+| [AmountToPay](Crm.Invoicing.InvoiceOrders.md#amounttopay) | [Amount](../data-types.md#amount) | The total amount to pay after all lines, discounts, and taxes. |
 | [ApplyDate](Crm.Invoicing.InvoiceOrders.md#applydate) | datetime __nullable__ | Apply date to be passed to the invoice. When not NULL specifies that the VAT entry should be applied for a different period than that specified by the document date.`Filter(ge;le)` |
 | [CompleteTime](Crm.Invoicing.InvoiceOrders.md#completetime) | datetime __nullable__ | Date and time when the document was completed (State set to Completed). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [CreationTime](Crm.Invoicing.InvoiceOrders.md#creationtime) | datetime | Date/Time when the document was created. `Required` `Default(Now)` `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -76,6 +77,7 @@ Aggregate Tree
 | [ReleaseTime](Crm.Invoicing.InvoiceOrders.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [State](Crm.Invoicing.InvoiceOrders.md#state) | [DocumentState](Crm.Invoicing.InvoiceOrders.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Crm.Invoicing.InvoiceOrders.md#statetagsattribute) | string | Specifies the state of the document. |
+| [TotalLineAmount](Crm.Invoicing.InvoiceOrders.md#totallineamount) | [Amount](../data-types.md#amount) | The sum of Line Amounts from all document lines. |
 | [Void](Crm.Invoicing.InvoiceOrders.md#void) | boolean | True if the document is null and void. `Required` `Default(false)` `Filter(eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [VoidReason](Crm.Invoicing.InvoiceOrders.md#voidreason) | string (254) __nullable__ | Reason for voiding the document, entered by the user. `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [VoidTime](Crm.Invoicing.InvoiceOrders.md#voidtime) | datetime __nullable__ | Date/time when the document has become void. `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -106,7 +108,7 @@ Aggregate Tree
 | [PrimeCauseDocument](Crm.Invoicing.InvoiceOrders.md#primecausedocument) | [Documents](General.Documents.Documents.md) (nullable) | The document that is the prime cause for creation of the current document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ResponsiblePerson](Crm.Invoicing.InvoiceOrders.md#responsibleperson) | [Persons](General.Contacts.Persons.md) (nullable) | The person that is responsible for this order or transaction. It could be the sales person, the orderer, etc. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReverseOfDocument](Crm.Invoicing.InvoiceOrders.md#reverseofdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document which the current document is reverse of. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Provides default value and filter for the lines. |
+| [SalesOrder](Crm.Invoicing.InvoiceOrders.md#salesorder) | [SalesOrders](Crm.Sales.SalesOrders.md) (nullable) | Default value and filter for the lines. Used to differenciate the invoice order for each sales order. |
 | [Sequence](Crm.Invoicing.InvoiceOrders.md#sequence) | [Sequences](Systems.Documents.Sequences.md) (nullable) | The sequence that will be used to give new numbers to the documents of this type. `Filter(multi eq)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToCompanyDivision](Crm.Invoicing.InvoiceOrders.md#tocompanydivision) | [CompanyDivisions](General.Contacts.CompanyDivisions.md) (nullable) | The division of the company, receiving the document. null when the document is not received by any specific division. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ToParty](Crm.Invoicing.InvoiceOrders.md#toparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party which should receive the document. `Filter(multi eq)` (Inherited from [Documents](General.Documents.Documents.md)) |
@@ -173,6 +175,16 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **64**  
+Show in UI: **HiddenByDefault**  
+
+### AmountToPay
+
+The total amount to pay after all lines, discounts, and taxes.
+
+Type: **[Amount](../data-types.md#amount)**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
 Show in UI: **HiddenByDefault**  
 
 ### ApplyDate
@@ -477,6 +489,16 @@ Show in UI: **HiddenByDefault**
 Specifies the state of the document.
 
 Type: **string**  
+Category: **Calculated Attributes**  
+Supported Filters: **NotFilterable**  
+Supports Order By: ****  
+Show in UI: **HiddenByDefault**  
+
+### TotalLineAmount
+
+The sum of Line Amounts from all document lines.
+
+Type: **[Amount](../data-types.md#amount)**  
 Category: **Calculated Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: ****  
@@ -813,7 +835,7 @@ Show in UI: **HiddenByDefault**
 
 ### SalesOrder
 
-Provides default value and filter for the lines.
+Default value and filter for the lines. Used to differenciate the invoice order for each sales order.
 
 Type: **[SalesOrders](Crm.Sales.SalesOrders.md) (nullable)**  
 Indexed: **True**  

@@ -30,6 +30,7 @@ Stores header-level information for individual retail transactions processed thr
 |[Sale_Date](#sale_date)|`date` |Represents the business date of the sale (used for aggregations, reporting, accounting). Typically aligns with date when it was closed, not necessarily when it was opened.|
 |[Sale_Kind](#sale_kind)|`char(3)` Allowed: `SAL`, `RET`, `INV`, `CRN`|Kind of POS sale event. Typically it is "Normal sale".|
 |[Sale_Stage](#sale_stage)|`char(3)` Allowed: `NEW`, `FIN`, `IPS`, `IPF`|General stage of the sale. Finalized sales must have matching amounts between header and detail lines.|
+|[Service_Profile_Id](#service_profile_id)|`uniqueidentifier` |The service profile of the sale.|
 |[System_Message](#system_message)|`nvarchar(max)` |System logs and error messages related to the processing of this POS sale.|
 |[Terminal_Id](#terminal_id)|`uniqueidentifier` |Link to specific POS workspace terminal used.|
 |[Total_Amount](#total_amount)|`decimal(14, 2)` |Total gross amount in the sale currency.|
@@ -727,6 +728,43 @@ General stage of the sale. Finalized sales must have matching amounts between he
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|no|
+
+### Service_Profile_Id
+
+
+The service profile of the sale.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Pos_Service_Profiles](Pos_Service_Profiles.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Service_Profile_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### System_Message
 

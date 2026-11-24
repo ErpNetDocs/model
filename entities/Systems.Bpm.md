@@ -6,8 +6,11 @@ uid: Systems.Bpm
 ## Entities
 - [CalculatedAttributeExpressions](Systems.Bpm.CalculatedAttributeExpressions.md)  
 - [CalculatedAttributes](Systems.Bpm.CalculatedAttributes.md)  
+- [CustomEntities](Systems.Bpm.CustomEntities.md)  
+- [CustomEntityTypes](Systems.Bpm.CustomEntityTypes.md)  
 - [CustomProperties](Systems.Bpm.CustomProperties.md)  
 - [CustomPropertyAllowedValues](Systems.Bpm.CustomPropertyAllowedValues.md)  
+- [CustomSubEntities](Systems.Bpm.CustomSubEntities.md)  
 - [Processes](Systems.Bpm.Processes.md)  
 - [PropertiesCategories](Systems.Bpm.PropertiesCategories.md)  
 - [PropertyEnterpriseCompanyFilters](Systems.Bpm.PropertyEnterpriseCompanyFilters.md)  

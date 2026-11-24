@@ -11,10 +11,12 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 
 | Name | Type | Description |
 | - | - | --- |
+|[Added_To_Backlog_By_User_Id](#added_to_backlog_by_user_id)|`uniqueidentifier` Readonly|The user who added the case to the backlog.|
 |[Assigned_To_User_Id](#assigned_to_user_id)|`uniqueidentifier` |The internal user to which the case is assigned.|
 |[Case_Category_Id](#case_category_id)|`uniqueidentifier` |The category of the case. This also determines the workflow for the case.|
 |[Case_Id](#case_id)|`uniqueidentifier` `PK`||
 |[Case_Number](#case_number)|`int` Readonly||
+|[Closed_By_User_Id](#closed_by_user_id)|`uniqueidentifier` Readonly|The user who closed the case.|
 |[Closed_Time_UTC](#closed_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case was closed.|
 |[Consider_Time_UTC](#consider_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to consider state.|
 |[Creation_Time_Utc](#creation_time_utc)|`datetime` Readonly|The exact date and time (in UTC) when the case was created.|
@@ -24,26 +26,68 @@ Case in a project. Used to track work progress. Entity: Apm_Cases (Introduced in
 |[Duplicate_Of_Case_Id](#duplicate_of_case_id)|`uniqueidentifier` |References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.|
 |[Estimated_Time_Hours](#estimated_time_hours)|`decimal(8, 2)` |Estimation of the required work effort in hours.|
 |[In_Progress_Time_UTC](#in_progress_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to in-progress state.|
+|[Marked_Ready_By_User_Id](#marked_ready_by_user_id)|`uniqueidentifier` Readonly|The user who marked the case as ready for execution.|
 |[Owner_User](#owner_user)|`uniqueidentifier` |The user responsible for managing and overseeing the case.|
 |[Parent_Case_Id](#parent_case_id)|`uniqueidentifier` |Specified when this is a sub-case to another case.|
 |[Priority](#priority)|`tinyint` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`|Priority of the case, on a scale from 1 (highest) to 7 (lowest).|
 |[Project_Area_Id](#project_area_id)|`uniqueidentifier` |The are to which the case is assigned.|
 |[Project_Id](#project_id)|`uniqueidentifier` |The project to which the case is assigned.|
 |[Project_Milestone_Id](#project_milestone_id)|`uniqueidentifier` |Determines the milestone for which the case must be resolved.|
+|[Put_On_Hold_By_User_Id](#put_on_hold_by_user_id)|`uniqueidentifier` Readonly|The user who put the case on hold.|
 |[Ready_Time_UTC](#ready_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has become ready for execution.|
+|[Resolved_By_User_Id](#resolved_by_user_id)|`uniqueidentifier` Readonly|The user who marked the case as resolved.|
 |[Resolved_Time_UTC](#resolved_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case was resolved.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Social_Group_Id](#social_group_id)|`uniqueidentifier` |Specified, when the case is assigned to a group of users.|
 |[Specification](#specification)|`nvarchar(max)` |Contains the current working or final version of the case proposal.|
 |[Sprint_Id](#sprint_id)|`uniqueidentifier` |The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work).|
 |[Stakeholder_Party_Id](#stakeholder_party_id)|`uniqueidentifier` |The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).|
+|[Started_By_User_Id](#started_by_user_id)|`uniqueidentifier` Readonly|The user who started work on the case.|
 |[Story_Points](#story_points)|`int` |When not null, represents the estimated effort to complete the case, measured in whole numbers. Used for sprint planning and velocity tracking. Higher values indicate greater complexity or workload.|
+|[Suggested_By_User_Id](#suggested_by_user_id)|`uniqueidentifier` Readonly|The user who suggested the case for consideration.|
 |[System_State](#system_state)|`char(1)` Allowed: `1`, `2`, `3`, `4`, `5`, `6`, `7`, Readonly|The base state of the case.|
 |[Title](#title)|`nvarchar(128)` |Case short title.|
 |[User_State_Id](#user_state_id)|`uniqueidentifier` Readonly|The user-defined sub-state of the case.|
 |[Waiting_Time_UTC](#waiting_time_utc)|`datetime` Readonly|Indicates the time (in UTC) when the case has changed to waiting state.|
 
 ## Columns
+
+### Added_To_Backlog_By_User_Id
+
+
+The user who added the case to the backlog.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|31|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Added_To_Backlog_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Assigned_To_User_Id
 
@@ -186,6 +230,43 @@ The category of the case. This also determines the workflow for the case.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 |Like|None|no|no|
+
+### Closed_By_User_Id
+
+
+The user who closed the case.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|37|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Closed_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Closed_Time_UTC
 
@@ -507,6 +588,43 @@ Indicates the time (in UTC) when the case has changed to in-progress state.
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
 
+### Marked_Ready_By_User_Id
+
+
+The user who marked the case as ready for execution.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|33|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Marked_Ready_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Owner_User
 
 
@@ -729,6 +847,43 @@ Determines the milestone for which the case must be resolved.
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Put_On_Hold_By_User_Id
+
+
+The user who put the case on hold.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|35|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Put_On_Hold_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Ready_Time_UTC
 
 
@@ -764,6 +919,43 @@ Indicates the time (in UTC) when the case has become ready for execution.
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |GreaterThanOrLessThan|None|no|no|
+
+### Resolved_By_User_Id
+
+
+The user who marked the case as resolved.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|36|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Resolved_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Resolved_Time_UTC
 
@@ -976,6 +1168,43 @@ The stakeholder with vested interest in the outcome of the case. Usually used to
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 
+### Started_By_User_Id
+
+
+The user who started work on the case.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|34|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Started_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Story_Points
 
 
@@ -1012,6 +1241,43 @@ When not null, represents the estimated effort to complete the case, measured in
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
 |GreaterThanOrLessThan|None|no|no|
+
+### Suggested_By_User_Id
+
+
+The user who suggested the case for consideration.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|32|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|yes|
+|Referenced Table|[Sec_Users](Sec_Users.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Suggested_By_User_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### System_State
 

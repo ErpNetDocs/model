@@ -13,7 +13,7 @@ Base Table: Crm_Invoice_Lines
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {LineNo}. {Invoice.DocumentNo} {Invoice.DocumentType.TypeName:T}  
+Display Format: {LineNo}: {ProductDescription:T}  
 Search Members: Invoice.DocumentNo  
 Category:  Definitions  
 Show in UI:  ShownByDefault  

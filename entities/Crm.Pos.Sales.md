@@ -63,6 +63,7 @@ Aggregate Tree
 | [OriginalSale](Crm.Pos.Sales.md#originalsale) | [Sales](Crm.Pos.Sales.md) (nullable) | Might be specified when this sale refunds/returns another POS sale (and the original POS sale is in the system). |
 | [PaymentType](Crm.Pos.Sales.md#paymenttype) | [PaymentTypes](Finance.Payments.PaymentTypes.md) (nullable) | Set when there is single payment type (method) for the whole sale. NULL when there are multiple payments. |
 | [SaleCurrency](Crm.Pos.Sales.md#salecurrency) | [Currencies](General.Currencies.Currencies.md) | Reference to the currency in which this POS sale is recorded. |
+| [ServiceProfile](Crm.Pos.Sales.md#serviceprofile) | [ServiceProfiles](Crm.Pos.ServiceProfiles.md) (nullable) | The service profile of the sale. |
 | [Terminal](Crm.Pos.Sales.md#terminal) | [Terminals](Crm.Pos.Terminals.md) | Link to specific POS workspace terminal used. |
 | [VoidedBy](Crm.Pos.Sales.md#voidedby) | [Operators](Crm.Pos.Operators.md) (nullable) | The operator who voided the document. |
 
@@ -412,6 +413,16 @@ Show in UI: **ShownByDefault**
 
 Back-End Default Expression:  
 `obj.Location.EnterpriseCompany.BaseCurrency`
+
+### ServiceProfile
+
+The service profile of the sale.
+
+Type: **[ServiceProfiles](Crm.Pos.ServiceProfiles.md) (nullable)**  
+Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Terminal
 

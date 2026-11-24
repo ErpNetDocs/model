@@ -17,8 +17,10 @@ Contains order for internal warehouse operation or plan for execution of warehou
 | - | - | --- |
 |[Additional_Details_Json](#additional_details_json)|`nvarchar(max)` |Stores additional information for the Warehouse Order in JSON format. The field is intended as a universal container for process-specific data and is populated automatically by the system.|
 |[Document_Id](#document_id)|`uniqueidentifier` ||
+|[From_Warehouse_Zone_Id](#from_warehouse_zone_id)|`uniqueidentifier` |Specifies the source warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose source warehouse locations during execution. If empty, source locations are not limited by a predefined warehouse zone.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Task_Type](#task_type)|`char(3)` Allowed: `REC`, `DIS`, `MOV`, `LBL`, `INS`, `PCK`, `UPK`, `KIT`, `DKT`, `CNT`, `TSK`, `CDP`, `CRC`, `ASM`, `DSM`, `RCN`, `PIK`|The type of the task (operation), which should be performed. REC=Receive; DIS=Dispatch; MOV=Move; LBL=Label; INS=Inspect; PCK=Pack; UPK=Unpack; KIT=Kit; DKT=Dekit; CNT=Count; TSK=User task; CDP=Component dispatch; CRC=Component receive; ASM=Assemble; DSM=Disassemble.|
+|[To_Warehouse_Zone_Id](#to_warehouse_zone_id)|`uniqueidentifier` |Specifies the destination warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose destination warehouse locations during execution. If empty, destination locations are not limited by a predefined warehouse zone.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the order will be executed.|
 |[Warehouse_Order_Id](#warehouse_order_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` |When set, denotes that the whole order is assigned to the specified worker.|
@@ -89,6 +91,43 @@ Stores additional information for the Warehouse Order in JSON format. The field 
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### From_Warehouse_Zone_Id
+
+
+Specifies the source warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose source warehouse locations during execution. If empty, source locations are not limited by a predefined warehouse zone.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### From_Warehouse_Zone_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Row_Version
 
 | Property | Value |
@@ -148,6 +187,43 @@ The type of the task (operation), which should be performed. REC=Receive; DIS=Di
 |Visible|yes|
 
 #### Task_Type - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
+### To_Warehouse_Zone_Id
+
+
+Specifies the destination warehouse zone for the Warehouse Order. When specified, the system uses the selected zone to propose destination warehouse locations during execution. If empty, destination locations are not limited by a predefined warehouse zone.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Wms_Warehouse_Zones](Wms_Warehouse_Zones.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### To_Warehouse_Zone_Id - Supported Filters
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |

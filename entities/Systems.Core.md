@@ -10,8 +10,8 @@ uid: Systems.Core
 - [DocumentJobs](Systems.Core.DocumentJobs.md)  
 - [DocumentPrintImages](Systems.Core.DocumentPrintImages.md)  
 - [DocumentVersions](Systems.Core.DocumentVersions.md)  
+- [EntityAttributeDefaultValues](Systems.Core.EntityAttributeDefaultValues.md)  
 - [ExtensibleDataObjects](Systems.Core.ExtensibleDataObjects.md)  
-- [Extensions](Systems.Core.Extensions.md)  
 - [FormLayouts](Systems.Core.FormLayouts.md)  
 - [InstanceChangeRequests](Systems.Core.InstanceChangeRequests.md)  
 - [Notifications](Systems.Core.Notifications.md)  
@@ -23,5 +23,6 @@ uid: Systems.Core
 - [ObjectVersions](Systems.Core.ObjectVersions.md)  
 - [ReportQueries](Systems.Core.ReportQueries.md)  
 - [Reports](Systems.Core.Reports.md)  
+- [Scripts](Systems.Core.Scripts.md)  
 - [Sequences](Systems.Core.Sequences.md)  
 

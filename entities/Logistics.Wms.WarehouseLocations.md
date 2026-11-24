@@ -37,12 +37,15 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [LocationAddress](Logistics.Wms.WarehouseLocations.md#locationaddress) | string (32) | The address of the location. Should be unique within the warehouse.`Required` `Filter(eq;like)` |
+| [LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) | [LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) __nullable__ | Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.`Filter(multi eq)` `Introduced in version 27.1.1.70` |
 | [Notes](Logistics.Wms.WarehouseLocations.md#notes) | string (max) __nullable__ | Notes for this WarehouseLocation. |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [RelatedDocument](Logistics.Wms.WarehouseLocations.md#relateddocument) | [Documents](General.Documents.Documents.md) (nullable) | Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation. |
+| [RelatedParty](Logistics.Wms.WarehouseLocations.md#relatedparty) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document. |
 | [Warehouse](Logistics.Wms.WarehouseLocations.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | The warehouse containing the location. |
 | [WarehouseZone](Logistics.Wms.WarehouseLocations.md#warehousezone) | [WarehouseZones](Logistics.Wms.WarehouseZones.md) | The zone, which contains the location. |
 
@@ -67,6 +70,25 @@ Category: **System**
 Supported Filters: **Equals, Like**  
 Supports Order By: **False**  
 Maximum Length: **32**  
+Show in UI: **ShownByDefault**  
+
+### LocationKind
+
+Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.`Filter(multi eq)` `Introduced in version 27.1.1.70`
+
+Type: **[LocationKind](Logistics.Wms.WarehouseLocations.md#locationkind) __nullable__**  
+Category: **System**  
+Allowed values for the `LocationKind`(Logistics.Wms.WarehouseLocations.md#locationkind) data attribute  
+Allowed Values (Logistics.Wms.WarehouseLocationsRepository.LocationKind Enum Members)  
+
+| Value | Description |
+| ---- | --- |
+| MovableContainer | A warehouse location that represents a movable container. Its parent zone can be changed, and the availability in the location moves together with the container.. Stored as 'MovableContainer'. <br /> Database Value: 'MovableContainer' <br /> Model Value: 0 <br /> Domain API Value: 'MovableContainer' |
+| Other | A warehouse location that does not use any of the specifically defined location kinds.. Stored as 'Other'. <br /> Database Value: 'Other' <br /> Model Value: 1 <br /> Domain API Value: 'Other' |
+| AttachedContainer | A warehouse location representing a container that is fixed to a cart, forklift, or other mobile warehouse equipment and is used as one of its storage positions.. Stored as 'AttachedContainer'. <br /> Database Value: 'AttachedContainer' <br /> Model Value: 2 <br /> Domain API Value: 'AttachedContainer' |
+
+Supported Filters: **Equals, EqualsIn**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### Notes
@@ -111,6 +133,24 @@ Show in UI: **HiddenByDefault**
 
 
 ## Reference Details
+
+### RelatedDocument
+
+Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation.
+
+Type: **[Documents](General.Documents.Documents.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### RelatedParty
+
+Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document.
+
+Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Warehouse
 

@@ -362,6 +362,8 @@ Supports Order By: **True**
 Maximum Length: **16**  
 Show in UI: **ShownByDefault**  
 
+Front-End Recalc Expressions:  
+`IIF( ( ( ( obj.RegistrationNumber != null) AndAlso ( obj.Country != null)) AndAlso obj.IsVATRegistered), IIF( ( obj.Country.Code == "BG"), ( "BG" + obj.RegistrationNumber), obj.RegistrationNumber), null)`
 ### ResponsiblePersonName
 
 Name of the primary responsible person of the company.`Filter(like)`

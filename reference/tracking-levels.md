@@ -102,6 +102,7 @@ The following table contains default system-specified tracking levels:
 | Crm.Invoicing.InvoicesOptions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.Campaigns | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.CompanySizeClasses | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Marketing.CompetitorProductPrices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.Competitors | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.CompetitorSolutions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Marketing.DistributionChannels | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -131,6 +132,7 @@ The following table contains default system-specified tracking levels:
 | Crm.Pos.Sales | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Sequences | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Crm.Pos.SequenceSelectors | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Crm.Pos.ServiceProfiles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Pos.Terminals | 2 - Track object changes | 4 - Track object attribute and blob changes |
 | Crm.Presales.DealLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Crm.Presales.Deals | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
@@ -242,6 +244,7 @@ The following table contains default system-specified tracking levels:
 | General.Activities.ActivityTemplates | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Activities.ActivityTimeIntervals | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Activities.Reminders | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| General.Brands | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Contacts.Companies | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | General.Contacts.CompanyDepartments | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Contacts.CompanyDivisions | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
@@ -294,6 +297,7 @@ The following table contains default system-specified tracking levels:
 | General.Products.ProductGroupRequiredProperties | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductPictures | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| General.Products.ProductProductTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductRelations | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.ProductRelationTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | General.Products.Products | 2 - Track object changes | 4 - Track object attribute and blob changes |
@@ -382,6 +386,7 @@ The following table contains default system-specified tracking levels:
 | Logistics.Wms.WarehouseOrders | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehousePolicies | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseProcesses | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Logistics.Wms.WarehouseProcessSteps | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliationDetails | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Logistics.Wms.WarehouseReconciliations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
@@ -430,9 +435,11 @@ The following table contains default system-specified tracking levels:
 | Projects.Agile.ProjectGroups | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectMilestones | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.Projects | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Projects.Agile.ProjectStakeholders | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectTypeCaseCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.ProjectTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.Sprints | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Projects.Agile.StakeholderRoles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.TimeEntries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.UserStateCaseCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Projects.Agile.UserStates | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -496,26 +503,27 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Intrastat.DeclarationLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.Declarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Regulatory.Intrastat.DocumentAmountTypeSettings | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportBankAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportCustomers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportMeasurementUnits | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPaymentLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPayments | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPurchaseInvoiceLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportPurchaseInvoices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.DeclarationExportAccounts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportBankAccounts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportCustomers | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportMeasurementUnits | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPaymentLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPayments | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportProducts | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPurchaseInvoiceLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportPurchaseInvoices | 0 - Do not track changes | 0 - Do not track changes |
 | Regulatory.Saft.DeclarationExports | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSalesInvoiceLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSalesInvoices | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportSuppliers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportTaxEntries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportVoucherLines | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.DeclarationExportVouchers | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.DeclarationExportSalesInvoiceLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportSalesInvoices | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportSuppliers | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportTaxEntries | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportVoucherLines | 0 - Do not track changes | 0 - Do not track changes |
+| Regulatory.Saft.DeclarationExportVouchers | 0 - Do not track changes | 0 - Do not track changes |
 | Regulatory.Saft.ProfileAccountByAdditionalAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccountByProducts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileCompanies | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileMeasurementUnits | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -525,11 +533,11 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Saft.ProfilePaymentTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileProductTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.Profiles | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Regulatory.Saft.ProfileStockMovementTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByAccounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileTaxCodeByDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.ProfileValuationTypeByValuationModels | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Saft.SaftDeclarations | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
-| Regulatory.Saft.StockMovementTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypeDealTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.BoxTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Regulatory.Vat.DealTypeDocumentAmounts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -539,8 +547,11 @@ The following table contains default system-specified tracking levels:
 | Regulatory.Vat.Entries | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CalculatedAttributeExpressions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CalculatedAttributes | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomEntityTypes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CustomProperties | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
 | Systems.Bpm.CustomPropertyAllowedValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Bpm.CustomSubEntities | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.Processes | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.PropertiesCategories | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.PropertyEnterpriseCompanyFilters | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -550,6 +561,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Bpm.UserBusinessRuleEvents | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Bpm.UserBusinessRules | 3 - Track object and attribute changes | 4 - Track object attribute and blob changes |
 | Systems.Config.Config | 4 - Track object attribute and blob changes | 4 - Track object attribute and blob changes |
+| Systems.Config.Extensions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.Jobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.Translations | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Config.WebHooks | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -559,8 +571,8 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.DocumentJobs | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentPrintImages | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.DocumentVersions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.EntityAttributeDefaultValues | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.ExtensibleDataObjects | 1 - Track last changes only | 4 - Track object attribute and blob changes |
-| Systems.Core.Extensions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.FormLayouts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.InstanceChangeRequests | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Notifications | 1 - Track last changes only | 4 - Track object attribute and blob changes |
@@ -571,6 +583,7 @@ The following table contains default system-specified tracking levels:
 | Systems.Core.ObjectVersions | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.ReportQueries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Reports | 1 - Track last changes only | 4 - Track object attribute and blob changes |
+| Systems.Core.Scripts | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Core.Sequences | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Documents.DataSourceQueries | 1 - Track last changes only | 4 - Track object attribute and blob changes |
 | Systems.Documents.DataSources | 1 - Track last changes only | 4 - Track object attribute and blob changes |

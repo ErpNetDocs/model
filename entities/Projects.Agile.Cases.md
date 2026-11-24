@@ -61,17 +61,24 @@ Aggregate Tree
 
 | Name | Type | Description |
 | ---- | ---- | --- |
+| [AddedToBacklogByUser](Projects.Agile.Cases.md#addedtobacklogbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who added the case to the backlog. |
 | [AssignedToUser](Projects.Agile.Cases.md#assignedtouser) | [Users](Systems.Security.Users.md) (nullable) | The internal user to which the case is assigned. |
 | [CaseCategory](Projects.Agile.Cases.md#casecategory) | [CaseCategories](Projects.Agile.CaseCategories.md) | The category of the case. This also determines the workflow for the case. |
+| [ClosedByUser](Projects.Agile.Cases.md#closedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who closed the case. |
 | [DuplicateOfCase](Projects.Agile.Cases.md#duplicateofcase) | [Cases](Projects.Agile.Cases.md) (nullable) | References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing. |
+| [MarkedReadyByUser](Projects.Agile.Cases.md#markedreadybyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who marked the case as ready for execution. |
 | [OwnerUser](Projects.Agile.Cases.md#owneruser) | [Users](Systems.Security.Users.md) | The user responsible for managing and overseeing the case. |
 | [Parent](Projects.Agile.Cases.md#parent) | [Cases](Projects.Agile.Cases.md) (nullable) | Specified when this is a sub-case to another case. `Filter(multi eq)` |
 | [Project](Projects.Agile.Cases.md#project) | [Projects](Projects.Agile.Projects.md) | The project to which the case is assigned. |
 | [ProjectArea](Projects.Agile.Cases.md#projectarea) | [ProjectAreas](Projects.Agile.ProjectAreas.md) (nullable) | The area to which the case is assigned. |
 | [ProjectMilestone](Projects.Agile.Cases.md#projectmilestone) | [ProjectMilestones](Projects.Agile.ProjectMilestones.md) (nullable) | Determines the milestone for which the case must be resolved. |
+| [PutOnHoldByUser](Projects.Agile.Cases.md#putonholdbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who put the case on hold. |
+| [ResolvedByUser](Projects.Agile.Cases.md#resolvedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who marked the case as resolved. |
 | [SocialGroup](Projects.Agile.Cases.md#socialgroup) | [Groups](Communities.Social.Groups.md) (nullable) | Specified, when the case is assigned to a group of users. |
 | [Sprint](Projects.Agile.Cases.md#sprint) | [Sprints](Projects.Agile.Sprints.md) (nullable) | The sprint to which the case is currently assigned. Many cases can be linked to the same sprint, but a single case can belong to only one sprint at a time. If the value is NULL, the case is not currently assigned to any sprint (i.e., it is in the backlog and not part of timeboxed work). |
 | [StakeholderParty](Projects.Agile.Cases.md#stakeholderparty) | [Parties](General.Contacts.Parties.md) (nullable) | The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer). |
+| [StartedByUser](Projects.Agile.Cases.md#startedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who started work on the case. |
+| [SuggestedByUser](Projects.Agile.Cases.md#suggestedbyuser) | [Users](Systems.Security.Users.md) (nullable) | The user who suggested the case for consideration. |
 | [UserState](Projects.Agile.Cases.md#userstate) | [UserStates](Projects.Agile.UserStates.md) (nullable) | The user-defined sub-state of the case. |
 
 
@@ -391,6 +398,15 @@ Show in UI: **HiddenByDefault**
 
 ## Reference Details
 
+### AddedToBacklogByUser
+
+The user who added the case to the backlog.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### AssignedToUser
 
 The internal user to which the case is assigned.
@@ -413,6 +429,15 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### ClosedByUser
+
+The user who closed the case.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### DuplicateOfCase
 
 References the original case that this case duplicates. Used to identify and link duplicate cases within the system, ensuring better case management and avoiding redundant processing.
@@ -421,6 +446,15 @@ Type: **[Cases](Projects.Agile.Cases.md) (nullable)**
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  
+
+### MarkedReadyByUser
+
+The user who marked the case as ready for execution.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### OwnerUser
 
@@ -471,6 +505,24 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### PutOnHoldByUser
+
+The user who put the case on hold.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### ResolvedByUser
+
+The user who marked the case as resolved.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### SocialGroup
 
 Specified, when the case is assigned to a group of users.
@@ -495,6 +547,24 @@ Show in UI: **ShownByDefault**
 The stakeholder with vested interest in the outcome of the case. Usually used to denote an important external stakeholder (like Customer).
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### StartedByUser
+
+The user who started work on the case.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### SuggestedByUser
+
+The user who suggested the case for consideration.
+
+Type: **[Users](Systems.Security.Users.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

@@ -32,6 +32,21 @@ An [aggregate](https://docs.erp.net/tech/advanced/concepts/aggregates.html) is a
 Aggregate Tree  
 * [Regulatory.Saft.SaftDeclarations](Regulatory.Saft.SaftDeclarations.md)  
   * [Regulatory.Saft.DeclarationExports](Regulatory.Saft.DeclarationExports.md)  
+    * [Regulatory.Saft.DeclarationExportAccounts](Regulatory.Saft.DeclarationExportAccounts.md)  
+    * [Regulatory.Saft.DeclarationExportBankAccounts](Regulatory.Saft.DeclarationExportBankAccounts.md)  
+    * [Regulatory.Saft.DeclarationExportCustomers](Regulatory.Saft.DeclarationExportCustomers.md)  
+    * [Regulatory.Saft.DeclarationExportMeasurementUnits](Regulatory.Saft.DeclarationExportMeasurementUnits.md)  
+    * [Regulatory.Saft.DeclarationExportPayments](Regulatory.Saft.DeclarationExportPayments.md)  
+      * [Regulatory.Saft.DeclarationExportPaymentLines](Regulatory.Saft.DeclarationExportPaymentLines.md)  
+    * [Regulatory.Saft.DeclarationExportProducts](Regulatory.Saft.DeclarationExportProducts.md)  
+    * [Regulatory.Saft.DeclarationExportPurchaseInvoices](Regulatory.Saft.DeclarationExportPurchaseInvoices.md)  
+      * [Regulatory.Saft.DeclarationExportPurchaseInvoiceLines](Regulatory.Saft.DeclarationExportPurchaseInvoiceLines.md)  
+    * [Regulatory.Saft.DeclarationExportSalesInvoices](Regulatory.Saft.DeclarationExportSalesInvoices.md)  
+      * [Regulatory.Saft.DeclarationExportSalesInvoiceLines](Regulatory.Saft.DeclarationExportSalesInvoiceLines.md)  
+    * [Regulatory.Saft.DeclarationExportSuppliers](Regulatory.Saft.DeclarationExportSuppliers.md)  
+    * [Regulatory.Saft.DeclarationExportTaxEntries](Regulatory.Saft.DeclarationExportTaxEntries.md)  
+    * [Regulatory.Saft.DeclarationExportVouchers](Regulatory.Saft.DeclarationExportVouchers.md)  
+      * [Regulatory.Saft.DeclarationExportVoucherLines](Regulatory.Saft.DeclarationExportVoucherLines.md)  
   * [General.Documents.DocumentAmounts](General.Documents.DocumentAmounts.md)  
     * [General.Documents.DocumentAmountReferencedDocuments](General.Documents.DocumentAmountReferencedDocuments.md)  
   * [General.Documents.DocumentComments](General.Documents.DocumentComments.md)  
@@ -70,8 +85,8 @@ Aggregate Tree
 | [ReadOnly](Regulatory.Saft.SaftDeclarations.md#readonly) | boolean | True - the document is read only; false - the document is not read only. `Required` `Default(false)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReferenceDate](Regulatory.Saft.SaftDeclarations.md#referencedate) | datetime __nullable__ | Indicates the date, when the event, described by the document, actually occurred. Generally, the document should be created at the date of the event. However, if the document is created later than the event, this field contains the date of the actual event. If the field is empty, this means that the document was created at the date of the actual event and Document Date is indicative of the date of the event. Contrast this with CreationTime, which indicates when the document was entered into the system. So, generally: Reference Date &lt;= DocumentDate &lt;= CreationTime. `Default(Today)` `Filter(ge;le)` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [ReferenceDocumentNo](Regulatory.Saft.SaftDeclarations.md#referencedocumentno) | string (20) __nullable__ | The number of the document (issued by the other party), which was the reason for the creation of the current document. The number should be unique within the party documents. `Filter(eq;like)` (Inherited from [Documents](General.Documents.Documents.md)) |
-| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD` |
-| [ReleasedStartTime](Regulatory.Saft.SaftDeclarations.md#releasedstarttime) | datetime __nullable__ | Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD` |
+| [ReleasedEndTime](Regulatory.Saft.SaftDeclarations.md#releasedendtime) | datetime __nullable__ | Monthly declarations default to PeriodEndDate at 23:59:59 as the inclusive last second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD` |
+| [ReleasedStartTime](Regulatory.Saft.SaftDeclarations.md#releasedstarttime) | datetime __nullable__ | Monthly declarations use PeriodStartDate (P) at 00:00; when a previous declaration exists, use its inclusive ReleasedEndTime plus one second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD` |
 | [ReleaseTime](Regulatory.Saft.SaftDeclarations.md#releasetime) | datetime __nullable__ | Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [State](Regulatory.Saft.SaftDeclarations.md#state) | [DocumentState](Regulatory.Saft.SaftDeclarations.md#state) | The current system state of the document. Allowed values: 0=New;5=Corrective;10=Computer Planned;20=Human Planned;30=Released;40=Completed;50=Closed. `Required` `Default(0)` `Filter(multi eq;ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md)) |
 | [StateTagsAttribute](Regulatory.Saft.SaftDeclarations.md#statetagsattribute) | string | Specifies the state of the document. |
@@ -427,7 +442,7 @@ Show in UI: **HiddenByDefault**
 
 ### ReleasedEndTime
 
-Release window end (upper bound for ReleaseTime). This is the export timestamp; updated if re-exported later.`Filter(ge;le)` `ORD`
+Monthly declarations default to PeriodEndDate at 23:59:59 as the inclusive last second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -436,10 +451,10 @@ Supports Order By: **True**
 Show in UI: **ShownByDefault**  
 
 Front-End Recalc Expressions:  
-`IIF( ( obj.PeriodYear != null), Convert( DateTime.Now, Object), null)`
+`obj.CalculateReleasedEndTime( obj.PeriodYear, obj.PeriodMonth, obj.DeclarationType, obj.PeriodEndDate, obj.ReleasedEndTime)`
 ### ReleasedStartTime
 
-Release window start (lower bound for ReleaseTime). Typically equals previous declaration’s ReleaseToTime.`Filter(ge;le)` `ORD`
+Monthly declarations use PeriodStartDate (P) at 00:00; when a previous declaration exists, use its inclusive ReleasedEndTime plus one second. Non-Monthly declarations keep the existing calculation.`Filter(ge;le)` `ORD`
 
 Type: **datetime __nullable__**  
 Category: **System**  
@@ -448,7 +463,7 @@ Supports Order By: **True**
 Show in UI: **ShownByDefault**  
 
 Front-End Recalc Expressions:  
-`obj.Transaction.Query( ).Where( d => ( ( ( ( ( Convert( d.State, Int32) >= 30) AndAlso ( d.Void == False)) AndAlso ( d.EnterpriseCompany == obj.EnterpriseCompany)) AndAlso ( Convert( d.DeclarationType, Int32) == Convert( obj.DeclarationType, Int32))) AndAlso ( d.PeriodEndDate == obj.PeriodStartDate.AddDays( -1)))).OrderByDescending( d => d.ReleasedEndTime).Take( 1).ToList( ).Select( d => d.ReleasedEndTime).FirstOrDefault( ).IfNullThen( new DateTime( DateTime.Now.Year, DateTime.Now.Month, 1))`
+`obj.CalculateReleasedStartTime( obj.PeriodYear, obj.PeriodMonth, obj.DeclarationType, obj.EnterpriseCompany, obj.PeriodStartDate, obj.ReleasedStartTime)`
 ### ReleaseTime
 
 Date and time when the document was released (State set to Released). `Filter(ge;le)` `ReadOnly` (Inherited from [Documents](General.Documents.Documents.md))

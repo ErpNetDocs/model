@@ -6,6 +6,7 @@
 Entity: [Communities.Social.Comments](~/entities/Communities.Social.Comments.md)
 
 User comment to any object in the system. Entity: Cmm_Social_Comments (Introduced in version 20.1)
+             Provides AI-assisted task creation from social comments.             
 
 ## Summary
 

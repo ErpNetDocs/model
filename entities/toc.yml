@@ -237,6 +237,8 @@
       href: Crm.Marketing.Campaigns.md
     - name: CompanySizeClasses
       href: Crm.Marketing.CompanySizeClasses.md
+    - name: CompetitorProductPrices
+      href: Crm.Marketing.CompetitorProductPrices.md
     - name: Competitors
       href: Crm.Marketing.Competitors.md
     - name: CompetitorSolutions
@@ -298,6 +300,8 @@
       href: Crm.Pos.Sequences.md
     - name: SequenceSelectors
       href: Crm.Pos.SequenceSelectors.md
+    - name: ServiceProfiles
+      href: Crm.Pos.ServiceProfiles.md
     - name: Terminals
       href: Crm.Pos.Terminals.md
   - name: Presales
@@ -573,6 +577,8 @@
       href: General.Activities.ActivityTimeIntervals.md
     - name: Reminders
       href: General.Activities.Reminders.md
+  - name: Brands
+    href: General.Brands.md
   - name: Contacts
     href: General.Contacts.md
     items:
@@ -695,6 +701,8 @@
       href: General.Products.ProductGroups.md
     - name: ProductPictures
       href: General.Products.ProductPictures.md
+    - name: ProductProductTypes
+      href: General.Products.ProductProductTypes.md
     - name: ProductRelations
       href: General.Products.ProductRelations.md
     - name: ProductRelationTypes
@@ -923,6 +931,8 @@
       href: Logistics.Wms.WarehousePolicies.md
     - name: WarehouseProcesses
       href: Logistics.Wms.WarehouseProcesses.md
+    - name: WarehouseProcessSteps
+      href: Logistics.Wms.WarehouseProcessSteps.md
     - name: WarehouseReconciliationDetails
       href: Logistics.Wms.WarehouseReconciliationDetails.md
     - name: WarehouseReconciliationLines
@@ -1037,12 +1047,16 @@
       href: Projects.Agile.ProjectMilestones.md
     - name: Projects
       href: Projects.Agile.Projects.md
+    - name: ProjectStakeholders
+      href: Projects.Agile.ProjectStakeholders.md
     - name: ProjectTypeCaseCategories
       href: Projects.Agile.ProjectTypeCaseCategories.md
     - name: ProjectTypes
       href: Projects.Agile.ProjectTypes.md
     - name: Sprints
       href: Projects.Agile.Sprints.md
+    - name: StakeholderRoles
+      href: Projects.Agile.StakeholderRoles.md
     - name: TimeEntries
       href: Projects.Agile.TimeEntries.md
     - name: UserStateCaseCategories
@@ -1201,6 +1215,8 @@
   - name: Saft
     href: Regulatory.Saft.md
     items:
+    - name: AccountBalanceCorrections
+      href: Regulatory.Saft.AccountBalanceCorrections.md
     - name: AccountBalances
       href: Regulatory.Saft.AccountBalances.md
     - name: DeclarationExportAccounts
@@ -1243,6 +1259,8 @@
       href: Regulatory.Saft.ProfileAccountByProducts.md
     - name: ProfileAccounts
       href: Regulatory.Saft.ProfileAccounts.md
+    - name: ProfileAssetTaxCategoryByAssetCategories
+      href: Regulatory.Saft.ProfileAssetTaxCategoryByAssetCategories.md
     - name: ProfileAssetTransactionTypeByOperationTypes
       href: Regulatory.Saft.ProfileAssetTransactionTypeByOperationTypes.md
     - name: ProfileCompanies
@@ -1261,6 +1279,8 @@
       href: Regulatory.Saft.ProfileProductTypes.md
     - name: Profiles
       href: Regulatory.Saft.Profiles.md
+    - name: ProfileStockMovementTypes
+      href: Regulatory.Saft.ProfileStockMovementTypes.md
     - name: ProfileTaxCodeByAccounts
       href: Regulatory.Saft.ProfileTaxCodeByAccounts.md
     - name: ProfileTaxCodeByDealTypes
@@ -1269,8 +1289,6 @@
       href: Regulatory.Saft.ProfileValuationTypeByValuationModels.md
     - name: SaftDeclarations
       href: Regulatory.Saft.SaftDeclarations.md
-    - name: StockMovementTypes
-      href: Regulatory.Saft.StockMovementTypes.md
   - name: Vat
     href: Regulatory.Vat.md
     items:
@@ -1300,10 +1318,16 @@
       href: Systems.Bpm.CalculatedAttributeExpressions.md
     - name: CalculatedAttributes
       href: Systems.Bpm.CalculatedAttributes.md
+    - name: CustomEntities
+      href: Systems.Bpm.CustomEntities.md
+    - name: CustomEntityTypes
+      href: Systems.Bpm.CustomEntityTypes.md
     - name: CustomProperties
       href: Systems.Bpm.CustomProperties.md
     - name: CustomPropertyAllowedValues
       href: Systems.Bpm.CustomPropertyAllowedValues.md
+    - name: CustomSubEntities
+      href: Systems.Bpm.CustomSubEntities.md
     - name: Processes
       href: Systems.Bpm.Processes.md
     - name: PropertiesCategories
@@ -1325,6 +1349,8 @@
     items:
     - name: Config
       href: Systems.Config.Config.md
+    - name: Extensions
+      href: Systems.Config.Extensions.md
     - name: Jobs
       href: Systems.Config.Jobs.md
     - name: Translations
@@ -1350,10 +1376,10 @@
       href: Systems.Core.DocumentPrintImages.md
     - name: DocumentVersions
       href: Systems.Core.DocumentVersions.md
+    - name: EntityAttributeDefaultValues
+      href: Systems.Core.EntityAttributeDefaultValues.md
     - name: ExtensibleDataObjects
       href: Systems.Core.ExtensibleDataObjects.md
-    - name: Extensions
-      href: Systems.Core.Extensions.md
     - name: FormLayouts
       href: Systems.Core.FormLayouts.md
     - name: InstanceChangeRequests
@@ -1376,6 +1402,8 @@
       href: Systems.Core.ReportQueries.md
     - name: Reports
       href: Systems.Core.Reports.md
+    - name: Scripts
+      href: Systems.Core.Scripts.md
     - name: Sequences
       href: Systems.Core.Sequences.md
   - name: Documents

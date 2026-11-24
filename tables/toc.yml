@@ -64,6 +64,8 @@
     href: Apm_Project_Groups.md
   - name: Apm_Project_Milestones
     href: Apm_Project_Milestones.md
+  - name: Apm_Project_Stakeholders
+    href: Apm_Project_Stakeholders.md
   - name: Apm_Project_Type_Case_Categories
     href: Apm_Project_Type_Case_Categories.md
   - name: Apm_Project_Types
@@ -72,6 +74,8 @@
     href: Apm_Projects.md
   - name: Apm_Sprints
     href: Apm_Sprints.md
+  - name: Apm_Stakeholder_Roles
+    href: Apm_Stakeholder_Roles.md
   - name: Apm_Time_Entries
     href: Apm_Time_Entries.md
   - name: Apm_User_State_Case_Categories
@@ -294,6 +298,8 @@
     href: Crm_Campaigns.md
   - name: Crm_Company_Size_Classes
     href: Crm_Company_Size_Classes.md
+  - name: Crm_Competitor_Product_Prices
+    href: Crm_Competitor_Product_Prices.md
   - name: Crm_Competitor_Solutions
     href: Crm_Competitor_Solutions.md
   - name: Crm_Competitors
@@ -569,6 +575,8 @@
     href: Gen_Administrative_Regions.md
   - name: Gen_Areas
     href: Gen_Areas.md
+  - name: Gen_Brands
+    href: Gen_Brands.md
   - name: Gen_Calendar
     href: Gen_Calendar.md
   - name: Gen_Coding_Systems
@@ -677,6 +685,8 @@
     href: Gen_Product_Groups.md
   - name: Gen_Product_Pictures
     href: Gen_Product_Pictures.md
+  - name: Gen_Product_Product_Types
+    href: Gen_Product_Product_Types.md
   - name: Gen_Product_Relation_Types
     href: Gen_Product_Relation_Types.md
   - name: Gen_Product_Relations
@@ -982,6 +992,8 @@
     href: Pos_Sequence_Selectors.md
   - name: Pos_Sequences
     href: Pos_Sequences.md
+  - name: Pos_Service_Profiles
+    href: Pos_Service_Profiles.md
   - name: Pos_Terminals
     href: Pos_Terminals.md
 - name: Prd
@@ -1164,6 +1176,8 @@
 - name: Saft
   href: Saft.md
   items:
+  - name: Saft_Account_Balance_Corrections
+    href: Saft_Account_Balance_Corrections.md
   - name: Saft_Account_Balances
     href: Saft_Account_Balances.md
   - name: Saft_Declaration_Export_Accounts
@@ -1208,6 +1222,8 @@
     href: Saft_Profile_Account_By_Products.md
   - name: Saft_Profile_Accounts
     href: Saft_Profile_Accounts.md
+  - name: Saft_Profile_Asset_Tax_Category_By_Asset_Categories
+    href: Saft_Profile_Asset_Tax_Category_By_Asset_Categories.md
   - name: Saft_Profile_Asset_Transaction_Type_By_Operation_Types
     href: Saft_Profile_Asset_Transaction_Type_By_Operation_Types.md
   - name: Saft_Profile_Companies
@@ -1224,6 +1240,8 @@
     href: Saft_Profile_Payments.md
   - name: Saft_Profile_Product_Types
     href: Saft_Profile_Product_Types.md
+  - name: Saft_Profile_Stock_Movement_Types
+    href: Saft_Profile_Stock_Movement_Types.md
   - name: Saft_Profile_Tax_Code_By_Accounts
     href: Saft_Profile_Tax_Code_By_Accounts.md
   - name: Saft_Profile_Tax_Code_By_Deal_Types
@@ -1232,8 +1250,6 @@
     href: Saft_Profile_Valuation_Type_By_Valuation_Models.md
   - name: Saft_Profiles
     href: Saft_Profiles.md
-  - name: Saft_Stock_Movement_Types
-    href: Saft_Stock_Movement_Types.md
 - name: Scm
   href: Scm.md
   items:
@@ -1367,6 +1383,12 @@
     href: Sys_Calculated_Attributes.md
   - name: Sys_Characteristic_Types
     href: Sys_Characteristic_Types.md
+  - name: Sys_Custom_Entities
+    href: Sys_Custom_Entities.md
+  - name: Sys_Custom_Entity_Types
+    href: Sys_Custom_Entity_Types.md
+  - name: Sys_Custom_Sub_Entities
+    href: Sys_Custom_Sub_Entities.md
   - name: Sys_Data_Exchange_Objects
     href: Sys_Data_Exchange_Objects.md
   - name: Sys_Data_Exchanges
@@ -1383,6 +1405,8 @@
     href: Sys_Domains.md
   - name: Sys_Entities
     href: Sys_Entities.md
+  - name: Sys_Entity_Attribute_Default_Values
+    href: Sys_Entity_Attribute_Default_Values.md
   - name: Sys_Extensions
     href: Sys_Extensions.md
   - name: Sys_External_Applications
@@ -1419,6 +1443,8 @@
     href: Sys_Reports.md
   - name: Sys_Resolved_Conflicts
     href: Sys_Resolved_Conflicts.md
+  - name: Sys_Scripts
+    href: Sys_Scripts.md
   - name: Sys_Sequences
     href: Sys_Sequences.md
   - name: Sys_Subsystems
@@ -1492,6 +1518,8 @@
     href: Wms_Warehouse_Orders.md
   - name: Wms_Warehouse_Policies
     href: Wms_Warehouse_Policies.md
+  - name: Wms_Warehouse_Process_Steps
+    href: Wms_Warehouse_Process_Steps.md
   - name: Wms_Warehouse_Processes
     href: Wms_Warehouse_Processes.md
   - name: Wms_Warehouse_Reconciliation_Details

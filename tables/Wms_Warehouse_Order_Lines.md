@@ -16,6 +16,8 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 
 | Name | Type | Description |
 | - | - | --- |
+|[Cart_Position](#cart_position)|`int` |Specifies the position in the picking cart used to separate and group collected goods during execution. The value identifies a cart position, not a physical container. A null value also represents a separate cart position.|
+|[Fulfillment_Group](#fulfillment_group)|`int` |Specifies the fulfillment group used to separate and group Warehouse Order lines during execution. Lines with the same value belong to the same fulfillment group, while different values identify separate groups. A null value also represents a separate fulfillment group.|
 |[Line_Group_No](#line_group_no)|`int` |Line group number. Indicates which lines are part of the same group e.g. group of components of the same composite product.|
 |[Line_No](#line_no)|`int` |Unique consecutive line number within the order.|
 |[Logistic_Unit_Id](#logistic_unit_id)|`uniqueidentifier` |Logistic unit, which should be used in the operation.|
@@ -40,6 +42,80 @@ A planned task (operation) in a warehouse order. Entity: Wms_Warehouse_Order_Lin
 |[Warehouse_Zone_Id](#warehouse_zone_id)|`uniqueidentifier` |The warehouse zone, in which the operation should be performed. NULL for operations which do not require specific zone.|
 
 ## Columns
+
+### Cart_Position
+
+
+Specifies the position in the picking cart used to separate and group collected goods during execution. The value identifies a cart position, not a physical container. A null value also represents a separate cart position.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Cart_Position - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
+
+### Fulfillment_Group
+
+
+Specifies the fulfillment group used to separate and group Warehouse Order lines during execution. Lines with the same value belong to the same fulfillment group, while different values identify separate groups. A null value also represents a separate fulfillment group.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|int (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Fulfillment_Group - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|GreaterThanOrLessThan|None|no|no|
 
 ### Line_Group_No
 

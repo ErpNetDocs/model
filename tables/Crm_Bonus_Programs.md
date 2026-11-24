@@ -45,6 +45,7 @@ Bonus programs allow automatic adding of new line with bonus product or automati
 |[Enterprise_Company_Id](#enterprise_company_id)|`uniqueidentifier` |When set, specifies that the sales document must be of the specified enterprise company.|
 |[Priority](#priority)|`tinyint` Allowed: `0`, `1`, `2`, `3`, `4`|Priority (1-5) of the bonus program comparative to the other bonus programs. 1 is the lowest priority|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Sum_Quantities_Regardless_Of_Measurement_Unit](#sum_quantities_regardless_of_measurement_unit)|`bit` |When enabled, quantity conditions are evaluated by summing the numeric base quantities of all matching sales order lines, regardless of the products’ base measurement units. No unit conversion is performed.|
 
 ## Columns
 
@@ -1243,5 +1244,35 @@ Priority (1-5) of the bonus program comparative to the other bonus programs. 1 i
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Sum_Quantities_Regardless_Of_Measurement_Unit
+
+
+When enabled, quantity conditions are evaluated by summing the numeric base quantities of all matching sales order lines, regardless of the products’ base measurement units. No unit conversion is performed.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|False|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|bit|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
 
 

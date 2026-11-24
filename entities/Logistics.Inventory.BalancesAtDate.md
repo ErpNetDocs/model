@@ -130,6 +130,7 @@ Type: **[Products](General.Products.Products.md)**
 Category: **System**  
 Inherited From: **Inv_Transaction_Lines_Table.Product_Id**  
 Supported Filters: **Equals, EqualsIn**  
+[Filterable Reference](https://docs.erp.net/dev/domain-api/filterable-references.html): **True**  
 Show in UI: **ShownByDefault**  
 
 ### ProductVariant
