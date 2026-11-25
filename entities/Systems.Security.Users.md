@@ -59,6 +59,7 @@ Aggregate Tree
 | [PhoneNumber](Systems.Security.Users.md#phonenumber) | string (64) __nullable__ | Used only for two-factor authentication. NULL when phone-based two-factor is not used.`Filter(eq;like)` `Introduced in version 18.2` |
 | [PhoneNumberConfirmed](Systems.Security.Users.md#phonenumberconfirmed) | boolean | Indicates whether the Phone Number has been verified.`Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` |
 | [RegistrationMessage](Systems.Security.Users.md#registrationmessage) | string (254) __nullable__ | Message from the user to the registration operator, regarding the desired permissions and assignment.`Introduced in version 22.1.6.61` |
+| [Scope](Systems.Security.Users.md#scope) | string (max) __nullable__ | Optional RFC 6749 scope (space-delimited, case-sensitive permissions) that restricts the user. The effective scope is the intersection with the trusted application's scope. If null or empty, the trusted application's scope applies.`Introduced in version 27.1.2.7` |
 | [TimeZone](Systems.Security.Users.md#timezone) | string (64) __nullable__ | Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.`Introduced in version 27.1.1.11` |
 | [TwoFactorEnabled](Systems.Security.Users.md#twofactorenabled) | boolean | Indicates whether two-factor authentication has been enabled.`Required` `Default(false)` `Filter(eq)` `Introduced in version 18.2` |
 | [UserType](Systems.Security.Users.md#usertype) | [UserType](Systems.Security.Users.md#usertype) | Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login).`Required` `Default(&quot;INT&quot;)` `Filter(multi eq;like)` `Introduced in version 18.2` |
@@ -310,6 +311,17 @@ Supports Order By: **False**
 Maximum Length: **254**  
 Show in UI: **ShownByDefault**  
 
+### Scope
+
+Optional RFC 6749 scope (space-delimited, case-sensitive permissions) that restricts the user. The effective scope is the intersection with the trusted application's scope. If null or empty, the trusted application's scope applies.`Introduced in version 27.1.2.7`
+
+Type: **string (max) __nullable__**  
+Category: **System**  
+Supported Filters: **NotFilterable**  
+Supports Order By: **False**  
+Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
 ### TimeZone
 
 Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.`Introduced in version 27.1.1.11`
@@ -350,6 +362,7 @@ Allowed Values (Systems.Security.UsersRepository.UserType Enum Members)
 | ApplicationUserNoLogin | Application users are used by applications. They do not have a password, but login by providing application credentials.. Stored as 'APP'. <br /> Database Value: 'APP' <br /> Model Value: 4 <br /> Domain API Value: 'ApplicationUserNoLogin' |
 | InvitationInternalNoLogin | InvitationInternalNoLogin value. Stored as 'INI'. <br /> Database Value: 'INI' <br /> Model Value: 5 <br /> Domain API Value: 'InvitationInternalNoLogin' |
 | InvitationExternalNoLogin | InvitationExternalNoLogin value. Stored as 'INE'. <br /> Database Value: 'INE' <br /> Model Value: 6 <br /> Domain API Value: 'InvitationExternalNoLogin' |
+| Agent | An AI agent or agentic platform (such as Operator.net) that accesses the system through a trusted application.. Stored as 'AGT'. <br /> Database Value: 'AGT' <br /> Model Value: 7 <br /> Domain API Value: 'Agent' |
 
 Supported Filters: **Equals, Like, EqualsIn**  
 Supports Order By: **False**  

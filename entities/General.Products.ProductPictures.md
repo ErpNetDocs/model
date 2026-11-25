@@ -99,7 +99,7 @@ Show in UI: **ShownByDefault**
 The actual product picture. Can be NULL if we insert only some comments
 
 Type: **byte[] __nullable__**  
-Category: **System**  
+Category: **Delay Loaded Attributes**  
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Show in UI: **ShownByDefault**  

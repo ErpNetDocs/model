@@ -13,7 +13,6 @@ uid: General
 - [Resources](General.Resources.md)  
 
 ## Entities
-- [Brands](General.Brands.md)  
 - [EnterpriseCompanies](General.EnterpriseCompanies.md)  
 - [Reports](General.Reports.md)  
 

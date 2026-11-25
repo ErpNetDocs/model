@@ -50,7 +50,7 @@ Absolute expiration time of the session. Not empty if the session is created by 
 |Sortable|yes|
 |Summary Type|None|
 |Supports EQUALS_IN|no|
-|Type|datetime (Allows NULL)|
+|Type|datetime|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|

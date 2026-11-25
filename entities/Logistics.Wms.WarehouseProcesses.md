@@ -14,8 +14,9 @@ Introduced In Version: 27.1.1.5
 API access:  ReadWrite  
 
 ## Visualization
-Display Format: {Id}: {WarehouseId}  
-Search Members:   
+Display Format: {ProcessName:T}  
+Search Members: ProcessName  
+Name Member: ProcessName  
 Category:  Definitions  
 Show in UI:  ShownByDefault  
 
@@ -38,13 +39,14 @@ Aggregate Tree
 | [ActiveTo](Logistics.Wms.WarehouseProcesses.md#activeto) | datetime __nullable__ | Specifies the date and time until which the warehouse process configuration can be used. If empty, no end date restriction is applied.`Filter(ge;le)` |
 | [IsActive](Logistics.Wms.WarehouseProcesses.md#isactive) | boolean | Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.`Required` `Default(true)` `Filter(eq)` |
 | [Notes](Logistics.Wms.WarehouseProcesses.md#notes) | string (max) __nullable__ | Additional information or comments about the warehouse process configuration. |
+| [ProcessName](Logistics.Wms.WarehouseProcesses.md#processname) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Specifies a descriptive name used to identify the Warehouse Process.`Required` `Filter(eq;like)` `Introduced in version 27.1.2.7` |
 | [ProcessNo](Logistics.Wms.WarehouseProcesses.md#processno) | int32 | Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.`Required` `ORD` `Introduced in version 27.1.1.51` |
 
 ## References
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [DocumentType](Logistics.Wms.WarehouseProcesses.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable) | Specifies the Warehouse Requisition document type for which the process is applicable. |
+| [DocumentType](Logistics.Wms.WarehouseProcesses.md#documenttype) | [DocumentTypes](Systems.Documents.DocumentTypes.md) | Specifies the Warehouse Requisition document type for which the process is applicable. |
 | [Party](Logistics.Wms.WarehouseProcesses.md#party) | [Parties](General.Contacts.Parties.md) (nullable) | Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party. |
 | [Warehouse](Logistics.Wms.WarehouseProcesses.md#warehouse) | [Warehouses](Logistics.Wms.Warehouses.md) | Specifies the managed warehouse for which the warehouse process is applicable. |
 
@@ -110,6 +112,16 @@ Category: **System**
 Supported Filters: **NotFilterable**  
 Supports Order By: **False**  
 Maximum Length: **2147483647**  
+Show in UI: **ShownByDefault**  
+
+### ProcessName
+
+Specifies a descriptive name used to identify the Warehouse Process.`Required` `Filter(eq;like)` `Introduced in version 27.1.2.7`
+
+Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
 Show in UI: **ShownByDefault**  
 
 ### ProcessNo
@@ -199,7 +211,7 @@ Show in UI: **HiddenByDefault**
 
 Specifies the Warehouse Requisition document type for which the process is applicable.
 
-Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md) (nullable)**  
+Type: **[DocumentTypes](Systems.Documents.DocumentTypes.md)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

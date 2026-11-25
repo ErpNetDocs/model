@@ -17,6 +17,7 @@ Contains warehouse process configurations that determine which algorithm is exec
 |[Is_Active](#is_active)|`bit` |Specifies whether the warehouse process configuration can participate in process selection. Inactive configurations are not considered.|
 |[Notes](#notes)|`nvarchar(max)` |Additional information or comments about the warehouse process configuration.|
 |[Party_Id](#party_id)|`uniqueidentifier` |Specifies the party for which the process is applicable. If empty, the process is not restricted to a specific party.|
+|[Process_Name](#process_name)|`nvarchar(254)` `ML`|Specifies a descriptive name used to identify the Warehouse Process.|
 |[Process_No](#process_no)|`int` |Determines the order in which warehouse process configurations are checked for applicability to the Warehouse Requisition. Configurations with lower numbers are checked first.|
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |Specifies the managed warehouse for which the warehouse process is applicable.|
 |[Warehouse_Process_Id](#warehouse_process_id)|`uniqueidentifier` `PK`|Unique identifier of the Warehouse Process.|
@@ -120,7 +121,7 @@ Specifies the Warehouse Requisition document type for which the process is appli
 |Sortable|no|
 |Summary Type|None|
 |Supports EQUALS_IN|yes|
-|Type|uniqueidentifier (Allows NULL)|
+|Type|uniqueidentifier|
 |UI Memo Editor|no|
 |UI Width|Medium|
 |User Login|no|
@@ -130,7 +131,7 @@ Specifies the Warehouse Requisition document type for which the process is appli
 
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
-|Equals|`NULL`|yes|no|
+|Equals|`NULL`|no|no|
 
 ### Is_Active
 
@@ -234,6 +235,43 @@ Specifies the party for which the process is applicable. If empty, the process i
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|yes|no|
+
+### Process_Name
+
+
+Specifies a descriptive name used to identify the Warehouse Process.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|254|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(254) (MultiLanguage)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Process_Name - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|no|no|
+|Like|None|no|no|
 
 ### Process_No
 

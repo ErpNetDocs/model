@@ -32,11 +32,12 @@ User logins. Entity: Sec_Users
 |[Phone_Number_Confirmed](#phone_number_confirmed)|`bit` |Indicates whether the Phone Number has been verified.|
 |[Registration_Message](#registration_message)|`nvarchar(254)` |Message from the user to the registration operator, regarding the desired permissions and assignment.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Scope](#scope)|`nvarchar(max)` |Optional RFC 6749 scope (space-delimited, case-sensitive permissions) that restricts the user. The effective scope is the intersection with the trusted application's scope. If null or empty, the trusted application's scope applies.|
 |[Time_Zone](#time_zone)|`nvarchar(64)` |Contains the user’s preferred time zone. If left empty, the system uses the time zone detected from the browser environment.|
 |[Two_Factor_Enabled](#two_factor_enabled)|`bit` |Indicates whether two-factor authentication has been enabled.|
 |[User_Id](#user_id)|`uniqueidentifier` `PK`||
 |[User_Name](#user_name)|`nvarchar(254)` `ML`|The full name of the user|
-|[User_Type](#user_type)|`char(3)` Allowed: `INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`|Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login).|
+|[User_Type](#user_type)|`char(3)` Allowed: `INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`, `AGT`|Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login); AGT=Agent (AI agent / agentic platform).|
 |[Voice_Extension_Numbers](#voice_extension_numbers)|`nvarchar(254)` |Comma separated list of internal extension numbers of the voice telephones of the user. Used for VOIP integration|
 |[Windows_User_Name](#windows_user_name)|`nvarchar(128)` |The Windows (Active Directory) user, to which this login is bound. The user will be allowed to login only when the client machine is logged in Active Directory with the specified user.|
 
@@ -773,6 +774,36 @@ Message from the user to the registration operator, regarding the desired permis
 |User Login|no|
 |Visible|no|
 
+### Scope
+
+
+Optional RFC 6749 scope (space-delimited, case-sensitive permissions) that restricts the user. The effective scope is the intersection with the trusted application's scope. If null or empty, the trusted application's scope applies.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|2147483647|
+|Order|2147483647|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(max) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
 ### Time_Zone
 
 
@@ -912,11 +943,11 @@ The full name of the user
 ### User_Type
 
 
-Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No lofin); INI=Invitation Internal (No login); INE=Invitation External (No login).
+Specifies the user type. INT=Internal; EXT=External (community); VIR=Virtual (No login); SYS=System; APP=Application (No login); INI=Invitation Internal (No login); INE=Invitation External (No login); AGT=Agent (AI agent / agentic platform).
 
 | Property | Value |
 | - | - |
-|Allowed Values|`INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`|
+|Allowed Values|`INT`, `EXT`, `VIR`, `SYS`, `APP`, `INI`, `INE`, `AGT`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|INT|

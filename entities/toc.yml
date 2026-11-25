@@ -577,8 +577,6 @@
       href: General.Activities.ActivityTimeIntervals.md
     - name: Reminders
       href: General.Activities.Reminders.md
-  - name: Brands
-    href: General.Brands.md
   - name: Contacts
     href: General.Contacts.md
     items:
@@ -677,6 +675,8 @@
   - name: Products
     href: General.Products.md
     items:
+    - name: Brands
+      href: General.Products.Brands.md
     - name: CodingSystems
       href: General.Products.CodingSystems.md
     - name: CompositeProductComponents

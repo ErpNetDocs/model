@@ -4,6 +4,7 @@ uid: General.Products
 # General.Products Namespace
 
 ## Entities
+- [Brands](General.Products.Brands.md)  
 - [CodingSystems](General.Products.CodingSystems.md)  
 - [CompositeProductComponents](General.Products.CompositeProductComponents.md)  
 - [MeasurementCategories](General.Products.MeasurementCategories.md)  
