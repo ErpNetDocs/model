@@ -18,8 +18,8 @@ One physical location within a warehouse. Locations are the leaf elements of the
 |[Location_Address](#location_address)|`nvarchar(32)` |The address of the location. Should be unique within the warehouse.|
 |[Location_Kind](#location_kind)|`nvarchar(50)` Allowed: `MovableContainer`, `Other`, `AttachedContainer`|Specifies the functional kind of the warehouse location. The value can be used to determine how the location is handled within warehouse processes and operations.|
 |[Notes](#notes)|`nvarchar(max)` ||
-|[Related_Document_Id](#related_document_id)|`uniqueidentifier` |Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation.|
-|[Related_Party_Id](#related_party_id)|`uniqueidentifier` |Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document.|
+|[Related_Document_Id](#related_document_id)|`uniqueidentifier` Readonly|Specifies the document for which the current contents of the warehouse location are being collected or temporarily held. The value is populated during warehouse order execution using the related source or parent document associated with the operation.|
+|[Related_Party_Id](#related_party_id)|`uniqueidentifier` Readonly|Specifies the party associated with the current contents of the warehouse location. The value is populated during warehouse order execution based on the party related to the processed document.|
 |[Row_Version](#row_version)|`timestamp` ||
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse containing the location.|
 |[Warehouse_Location_Id](#warehouse_location_id)|`uniqueidentifier` `PK`||
@@ -147,7 +147,7 @@ Specifies the document for which the current contents of the warehouse location 
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |Referenced Table|[Gen_Documents](Gen_Documents.md)|
 |RTF|no|
 |Sortable|no|
@@ -184,7 +184,7 @@ Specifies the party associated with the current contents of the warehouse locati
 |Pasword|no|
 |Picture|no|
 |Primary Key|no|
-|Readonly|no|
+|Readonly|yes|
 |Referenced Table|[Gen_Parties](Gen_Parties.md)|
 |RTF|no|
 |Sortable|no|
