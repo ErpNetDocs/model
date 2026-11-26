@@ -16,6 +16,7 @@ List of countries, listed by their internet suffix code. Entity: Gen_Countries
 |[Country_Name](#country_name)|`nvarchar(254)` `ML`|Name of the country|
 |[Intrastat_Code](#intrastat_code)|`nvarchar(2)` |This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.|
 |[Row_Version](#row_version)|`timestamp` ||
+|[Saft_Code](#saft_code)|`nvarchar(50)` |Country code used for SAF-T reporting.|
 
 ## Columns
 
@@ -33,7 +34,7 @@ Internet suffix code of the country
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2|
-|Order|2147483647|
+|Order|1|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -70,7 +71,7 @@ Unique country Id
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|0|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -107,7 +108,7 @@ Name of the country
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|254|
-|Order|2147483647|
+|Order|2|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -143,7 +144,7 @@ This code is used when creating the Intrastat Declaration. If the field is empty
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|2|
-|Order|2147483647|
+|Order|4|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -170,7 +171,7 @@ This code is used when creating the Intrastat Declaration. If the field is empty
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|3|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|
@@ -185,5 +186,42 @@ This code is used when creating the Intrastat Declaration. If the field is empty
 |UI Width|Medium|
 |User Login|no|
 |Visible|no|
+
+### Saft_Code
+
+
+Country code used for SAF-T reporting.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|50|
+|Order|5|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|no|
+|Type|nvarchar(50) (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Saft_Code - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+|Like|None|no|no|
 
 

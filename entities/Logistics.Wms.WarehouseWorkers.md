@@ -135,9 +135,7 @@ Allowed Values (Logistics.Wms.WarehouseWorkersRepository.WarehouseWorkerRole Enu
 | Receiver | Receives incoming goods and verifies their products, quantities, identification details, and logistic units.. Stored as 'RVR'. <br /> Database Value: 'RVR' <br /> Model Value: 3 <br /> Domain API Value: 'Receiver' |
 | Handler | Performs internal warehouse movements using material-handling equipment, including putaway, replenishment, and pallet or logistic-unit transfers.. Stored as 'HNR'. <br /> Database Value: 'HNR' <br /> Model Value: 4 <br /> Domain API Value: 'Handler' |
 | Packer | Packs picked products into packages or logistic units and prepares them for shipment or subsequent warehouse processing.. Stored as 'PCR'. <br /> Database Value: 'PCR' <br /> Model Value: 5 <br /> Domain API Value: 'Packer' |
-| Kitter | Collects and verifies the specified components of composite products and confirms their kitting for dispatch according to warehouse orders.. Stored as 'KTR'. <br /> Database Value: 'KTR' <br /> Model Value: 6 <br /> Domain API Value: 'Kitter' |
-| Dekitter | Separates and verifies the components of received composite products and confirms their dekitting according to warehouse orders.. Stored as 'DKR'. <br /> Database Value: 'DKR' <br /> Model Value: 7 <br /> Domain API Value: 'Dekitter' |
-| General | Performs various warehouse tasks without being assigned a single primary specialization.. Stored as 'GNR'. <br /> Database Value: 'GNR' <br /> Model Value: 8 <br /> Domain API Value: 'General' |
+| General | Performs various warehouse tasks without being assigned a single primary specialization.. Stored as 'GNR'. <br /> Database Value: 'GNR' <br /> Model Value: 6 <br /> Domain API Value: 'General' |
 
 Supported Filters: **Equals, EqualsIn**  
 Supports Order By: **False**  

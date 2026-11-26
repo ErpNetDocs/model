@@ -27,7 +27,7 @@ Human or robot worker, which can execute warehouse tasks. Entity: Wms_Warehouse_
 |[Warehouse_Id](#warehouse_id)|`uniqueidentifier` |The warehouse, where the worker works.|
 |[Warehouse_Worker_Id](#warehouse_worker_id)|`uniqueidentifier` `PK`||
 |[Warehouse_Worker_Name](#warehouse_worker_name)|`nvarchar(254)` `ML`|Name of the worker (multi-language).|
-|[Warehouse_Worker_Role](#warehouse_worker_role)|`char(3)` Allowed: `CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `KTR`, `DKR`, `GNR`|Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.|
+|[Warehouse_Worker_Role](#warehouse_worker_role)|`char(3)` Allowed: `CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `GNR`|Specifies the main role of the Warehouse Worker in the managed warehouse. The role is used to identify and filter workers during warehouse management. It does not restrict warehouse order assignment—a worker can also be assigned orders typically performed by another role. CKR=Checker; LBR=Labeler; PKR=Picker; RVR=Receiver; HNR=Handler; PCR=Packer; KTR=Kitter; DKR=Dekitter; GNR=General.|
 
 ## Columns
 
@@ -458,7 +458,7 @@ Specifies the main role of the Warehouse Worker in the managed warehouse. The ro
 
 | Property | Value |
 | - | - |
-|Allowed Values|`CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `KTR`, `DKR`, `GNR`|
+|Allowed Values|`CKR`, `LBR`, `PKR`, `RVR`, `HNR`, `PCR`, `GNR`|
 |Auto Complete|no|
 |Data Filter|no|
 |Default Value|None|

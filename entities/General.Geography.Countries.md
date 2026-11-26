@@ -37,6 +37,7 @@ Aggregate Tree
 | [Code](General.Geography.Countries.md#code) | string (2) | Internet suffix code of the country`Required` `Filter(eq;like)` `ORD` |
 | [IntrastatCode](General.Geography.Countries.md#intrastatcode) | string (2) __nullable__ | This code is used when creating the Intrastat Declaration. If the field is empty, then the value from the 'Code' field is used.`Introduced in version 20.1` |
 | [Name](General.Geography.Countries.md#name) | [MultilanguageString (254)](../data-types.md#multilanguagestring) | Name of the country`Required` `Filter(like)` |
+| [SaftCode](General.Geography.Countries.md#saftcode) | string (50) __nullable__ | Country code used for SAF-T reporting.`Filter(eq;like)` `Introduced in version 27.1.2.9` |
 
 
 ## System Attributes
@@ -85,6 +86,17 @@ Type: **[MultilanguageString (254)](../data-types.md#multilanguagestring)**
 Category: **System**  
 Supported Filters: **Like**  
 Supports Order By: **False**  
+Show in UI: **ShownByDefault**  
+
+### SaftCode
+
+Country code used for SAF-T reporting.`Filter(eq;like)` `Introduced in version 27.1.2.9`
+
+Type: **string (50) __nullable__**  
+Category: **System**  
+Supported Filters: **Equals, Like**  
+Supports Order By: **False**  
+Maximum Length: **50**  
 Show in UI: **ShownByDefault**  
 
 ### Id
