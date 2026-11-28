@@ -50,6 +50,7 @@ Aggregate Root:
 | ---- | ---- | --- |
 | [Document](Logistics.Inventory.TransferOrderLines.md#document) | [TransferOrders](Logistics.Inventory.TransferOrders.md) | The owner document. The parent transfer order. `Required` `Filter(multi eq)` |
 | [FromStoreBin](Logistics.Inventory.TransferOrderLines.md#fromstorebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable |
+| [LineProductType](Logistics.Inventory.TransferOrderLines.md#lineproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line. |
 | [Lot](Logistics.Inventory.TransferOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If non-null, contains the specific lot to use for the movement |
 | [Product](Logistics.Inventory.TransferOrderLines.md#product) | [Products](General.Products.Products.md) | The product which will be transferred |
 | [ProductCode](Logistics.Inventory.TransferOrderLines.md#productcode) | [ProductCodes](General.Products.ProductCodes.md) (nullable) | Selects the product through some of the product codes. |
@@ -240,6 +241,15 @@ Type: **[StoreBins](Logistics.Inventory.StoreBins.md) (nullable)**
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **HiddenByDefault**  
+
+### LineProductType
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
 
 ### Lot
 

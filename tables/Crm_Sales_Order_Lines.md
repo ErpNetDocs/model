@@ -39,6 +39,7 @@ Sales Order Lines represent the individual items or services ordered by a custom
 |[Line_End_Customer_Party_Id](#line_end_customer_party_id)|`uniqueidentifier` |The end customer is the customer of the dealer. It is stored for information purposes only. The end customer may not have customer definition, just party.|
 |[Line_From_Date](#line_from_date)|`date` |When selling a service valid only for a period, denotes the beginning of the period. NULL means that it is unknown or N/A.|
 |[Line_No](#line_no)|`int` |Consecutive number of the line within the sales order|
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Line_Standard_Discount_Percent](#line_standard_discount_percent)|`decimal(7, 6)` Readonly|Standard discount percent for the line. It is calculated by accumulating in cascade the line discounts at all levels.|
 |[Line_Store_Id](#line_store_id)|`uniqueidentifier` |The store which should be used to issue the goods for the line. NULL means to use the store from the header|
 |[Line_To_Date](#line_to_date)|`date` |When selling a service valid only for a period, denotes the end of the period. NULL means that it is unknown or N/A.|
@@ -864,6 +865,43 @@ Consecutive number of the line within the sales order
 | Filter Type | Default | Include Nulls | Hidden by Default |
 | - | - | - | - |
 |Equals|`NULL`|no|yes|
+
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|53|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Line_Standard_Discount_Percent
 
@@ -1855,7 +1893,7 @@ The pre-calculated tax amount for this specific line, captured from the source s
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|52|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

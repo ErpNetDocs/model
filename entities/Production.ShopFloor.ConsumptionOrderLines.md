@@ -47,12 +47,13 @@ Aggregate Root:
 
 | Name | Type | Description |
 | ---- | ---- | --- |
-| [ConsumedQuantityUnit](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of the consumed quantity in the operation. |
+| [ConsumedQuantityUnit](Production.ShopFloor.ConsumptionOrderLines.md#consumedquantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | Measurement unit of the requested quantity. |
 | [ConsumptionOrder](Production.ShopFloor.ConsumptionOrderLines.md#consumptionorder) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
 | [Document](Production.ShopFloor.ConsumptionOrderLines.md#document) | [ConsumptionOrders](Production.ShopFloor.ConsumptionOrders.md) | The owner document. The <see cref="ConsumptionOrder"/> to which this ConsumptionOrderLine belongs. `Required` `Filter(multi eq)` |
-| [Lot](Production.ShopFloor.ConsumptionOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Lot from which to get the material. If not specified (default) - Any lot can be used. |
+| [LineProductType](Production.ShopFloor.ConsumptionOrderLines.md#lineproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line. |
+| [Lot](Production.ShopFloor.ConsumptionOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | If not NULL, specifies that the material has to be consumed from specific lot |
 | [Product](Production.ShopFloor.ConsumptionOrderLines.md#product) | [Products](General.Products.Products.md) | The requested material. |
-| [SerialNumber](Production.ShopFloor.ConsumptionOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | Serial number of the product. NULL means that the serial number is unknown or not applicable. |
+| [SerialNumber](Production.ShopFloor.ConsumptionOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not NULL, specifies that the material has to be consumed with specific serial number |
 | [Store](Production.ShopFloor.ConsumptionOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | The store, from which the material is requested. |
 | [StoreBin](Production.ShopFloor.ConsumptionOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not NULL, specifies that the material has to be consumed from specific store bin |
 | [WorkOrderItemIngredient](Production.ShopFloor.ConsumptionOrderLines.md#workorderitemingredient) | [WorkOrderItemIngredients](Production.ShopFloor.WorkOrderItemIngredients.md) | The Work Order Item Ingredient for which we are ordering materials. |
@@ -213,7 +214,7 @@ Show in UI: **HiddenByDefault**
 
 ### ConsumedQuantityUnit
 
-Measurement unit of the consumed quantity in the operation.
+Measurement unit of the requested quantity.
 
 Type: **[MeasurementUnits](General.Products.MeasurementUnits.md)**  
 Category: **System**  
@@ -243,9 +244,18 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### LineProductType
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### Lot
 
-Lot from which to get the material. If not specified (default) - Any lot can be used.
+If not NULL, specifies that the material has to be consumed from specific lot
 
 Type: **[Lots](Logistics.Inventory.Lots.md) (nullable)**  
 Category: **System**  
@@ -265,7 +275,7 @@ Front-End Recalc Expressions:
 `obj.WorkOrderItemIngredient.Material`
 ### SerialNumber
 
-Serial number of the product. NULL means that the serial number is unknown or not applicable.
+If not NULL, specifies that the material has to be consumed with specific serial number
 
 Type: **[SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable)**  
 Category: **System**  

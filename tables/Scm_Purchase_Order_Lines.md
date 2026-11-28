@@ -21,6 +21,7 @@ Contains detail lines of purchase orders. Entity: Scm_Purchase_Order_Lines
 |[Confirmed_Quantity_Base](#confirmed_quantity_base)|`decimal(18, 3)` Readonly|The theoretical equivalence of Confirmed Quantity in base measurement unit according to the current measurement dimensions of the product.|
 |[Confirmed_Standard_Quantity_Base](#confirmed_standard_quantity_base)|`decimal(18, 3)` Readonly|The theoretical quantity in base measurement unit according to the current measurement dimensions for the product. Used to measure the execution. NULL means to convert the value from Confirmed Quantity using the measurement ratios.|
 |[Line_No](#line_no)|`int` ||
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |When not null, indicates that a specific lot is required to be delivered.|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Parent_Document_Id](#parent_document_id)|`uniqueidentifier` ||
@@ -196,6 +197,43 @@ The theoretical quantity in base measurement unit according to the current measu
 |UI Width|Short|
 |User Login|no|
 |Visible|yes|
+
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|24|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
 

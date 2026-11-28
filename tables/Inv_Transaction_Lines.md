@@ -24,6 +24,7 @@ Details records of Transactions. Each detail contains the movement for one produ
 |[Line_Document_Cost](#line_document_cost)|`decimal(14, 2)` Readonly|The cost of the transaction in the currency of the document|
 |[Line_No](#line_no)|`int` |Line number, unique within the store transaction.|
 |[Line_Product_Cost](#line_product_cost)|`decimal(14, 2)` Readonly|The cost of the transaction in the currency of the product|
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Line_Store_Cost](#line_store_cost)|`decimal(14, 2)` Readonly|The cost of the transaction in the currency of the warehouse|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |If non-null, contains the specific lot to use for the movement|
 |[Notes](#notes)|`nvarchar(254)` ||
@@ -296,6 +297,43 @@ The cost of the transaction in the currency of the product
 |UI Width|100|
 |User Login|no|
 |Visible|no|
+
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|31|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Line_Store_Cost
 

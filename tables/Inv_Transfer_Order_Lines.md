@@ -20,6 +20,7 @@ Details of Transfer Orders. Each line contains order for the movement of one pro
 |[Due_Date_Out](#due_date_out)|`datetime` |When this line of the transfer is scheduled to issue the goods from the source warehouse. Initially copied from the transfer header|
 |[From_Store_Bin_Id](#from_store_bin_id)|`uniqueidentifier` |From which store bin to issue/receive the products. NULL means that the store bin is unknown or not applicable|
 |[Line_Ord](#line_ord)|`int` |Line ordinal position within the transaction. Duplicates are allowed, but not advised|
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |If non-null, contains the specific lot to use for the movement|
 |[Notes](#notes)|`nvarchar(254)` ||
 |[Product_Code_Id](#product_code_id)|`uniqueidentifier` |Selects the product thru some of the product codes.|
@@ -177,6 +178,43 @@ Line ordinal position within the transaction. Duplicates are allowed, but not ad
 |UI Width|Short|
 |User Login|no|
 |Visible|yes|
+
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|19|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Lot_Id
 

@@ -21,6 +21,7 @@ Detail records of output orders. Entity: Prd_Output_Order_Lines
 |[Finished](#finished)|`bit` |1 if this output entry completes the operation. 0 if there might be more entries|
 |[Id](#id)|`uniqueidentifier` `PK`||
 |[Line_Ord](#line_ord)|`int` |Line number within the order|
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Line_Work_Order_Id](#line_work_order_id)|`uniqueidentifier` |The work order for which work is being accounted|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |The lot of the produced product.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -217,6 +218,43 @@ Line number within the order
 |UI Width|Short|
 |User Login|no|
 |Visible|yes|
+
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|25|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
 
 ### Line_Work_Order_Id
 

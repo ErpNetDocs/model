@@ -66,6 +66,7 @@ Aggregate Root:
 | [ExciseProduct](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#exciseproduct) | [ExciseProducts](Regulatory.Excise.ExciseProducts.md) (nullable) | The Excise product code defined by the taxation and customs authorities. |
 | [ExcisePurposeCode](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisepurposecode) | [ExcisePurposeCodes](Regulatory.Excise.ExcisePurposeCodes.md) (nullable) | The Purpose codes specify the different purposes recognized by the authorities for determining the excise rate. |
 | [ExciseQuantityUnit](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#excisequantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Excise Quantity. Copied from the excise product type. |
+| [LineProductType](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#lineproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line. |
 | [Lot](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | Warehouse lot |
 | [MeasuringTransaction](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#measuringtransaction) | [MeasuringTransactions](Regulatory.Excise.MeasuringTransactions.md) (nullable) | Transaction of product input or output, measured with specialized measuring device for excise purposes. |
 | [ParentDocument](Regulatory.Excise.ExciseAdministrativeDocumentLines.md#parentdocument) | [Documents](General.Documents.Documents.md) (nullable) | The document, which the current line executes. Null when the current line does not execute another line. |
@@ -310,6 +311,15 @@ Show in UI: **HiddenByDefault**
 
 Front-End Recalc Expressions:  
 `obj.Product.ExciseProductType.MeasurementUnit`
+### LineProductType
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### Lot
 
 Warehouse lot

@@ -48,6 +48,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Logistics.Procurement.RequisitionLines.md#document) | [Requisitions](Logistics.Procurement.Requisitions.md) | The owner document. The <see cref="Requisition"/> to which this RequisitionLine belongs. `Required` `Filter(multi eq)` |
+| [LineProductType](Logistics.Procurement.RequisitionLines.md#lineproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line. |
 | [Lot](Logistics.Procurement.RequisitionLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | When not null, indicates a specific lot should be purchased. |
 | [Product](Logistics.Procurement.RequisitionLines.md#product) | [Products](General.Products.Products.md) (nullable) | The required product. When null, the product is unknown to the requisitor and only a description is supplied to the purchase department. |
 | [QuantityUnit](Logistics.Procurement.RequisitionLines.md#quantityunit) | [MeasurementUnits](General.Products.MeasurementUnits.md) | The measurement unit of Quantity. |
@@ -204,6 +205,15 @@ The owner document. The <see cref="Requisition"/> to which this RequisitionLine 
 
 Type: **[Requisitions](Logistics.Procurement.Requisitions.md)**  
 Indexed: **True**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
+### LineProductType
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
 Category: **System**  
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  

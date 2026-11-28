@@ -28,6 +28,7 @@ The details of the movement of each excise product for each excise document. Ent
 |[Excise_Quantity](#excise_quantity)|`decimal(12, 3)` |The quantity, converted, for reporting purposes, in the measurement unit of the excise product type.|
 |[Excise_Quantity_Unit_Id](#excise_quantity_unit_id)|`uniqueidentifier` |The measurement unit of Excise Quantity. Copied from the excise product type.|
 |[Line_No](#line_no)|`int` |Consecutive line number within the document.|
+|[Line_Product_Type_Id](#line_product_type_id)|`uniqueidentifier` |The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.|
 |[Lot_Id](#lot_id)|`uniqueidentifier` |Warehouse lot|
 |[Measuring_Transaction_Id](#measuring_transaction_id)|`uniqueidentifier` |Transaction of product input or output, measured with specialized measuring device for excise purposes.|
 |[Notes](#notes)|`nvarchar(max)` ||
@@ -458,6 +459,43 @@ Consecutive line number within the document.
 | - | - | - | - |
 |Equals|`NULL`|no|no|
 
+### Line_Product_Type_Id
+
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+| Property | Value |
+| - | - |
+|Auto Complete|no|
+|Data Filter|no|
+|Default Value|None|
+|Enter Stop|yes|
+|Ignore for Insert Order|no|
+|Is Entity Name|no|
+|Max Length|-1|
+|Order|22|
+|Ownership Reference|no|
+|Pasword|no|
+|Picture|no|
+|Primary Key|no|
+|Readonly|no|
+|Referenced Table|[Gen_Product_Types](Gen_Product_Types.md)|
+|RTF|no|
+|Sortable|no|
+|Summary Type|None|
+|Supports EQUALS_IN|yes|
+|Type|uniqueidentifier (Allows NULL)|
+|UI Memo Editor|no|
+|UI Width|Medium|
+|User Login|no|
+|Visible|yes|
+
+#### Line_Product_Type_Id - Supported Filters
+
+| Filter Type | Default | Include Nulls | Hidden by Default |
+| - | - | - | - |
+|Equals|`NULL`|yes|no|
+
 ### Lot_Id
 
 
@@ -780,7 +818,7 @@ The measurement unit of Quantity.
 |Ignore for Insert Order|no|
 |Is Entity Name|no|
 |Max Length|-1|
-|Order|2147483647|
+|Order|21|
 |Ownership Reference|no|
 |Pasword|no|
 |Picture|no|

@@ -51,6 +51,7 @@ Aggregate Root:
 | Name | Type | Description |
 | ---- | ---- | --- |
 | [Document](Production.ShopFloor.OutputOrderLines.md#document) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The owner document. The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` |
+| [LineProductType](Production.ShopFloor.OutputOrderLines.md#lineproducttype) | [ProductTypes](General.Products.ProductTypes.md) (nullable) | The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line. |
 | [LineWorkOrder](Production.ShopFloor.OutputOrderLines.md#lineworkorder) | [WorkOrders](Production.ShopFloor.WorkOrders.md) | The work order for which work is being accounted |
 | [Lot](Production.ShopFloor.OutputOrderLines.md#lot) | [Lots](Logistics.Inventory.Lots.md) (nullable) | The lot of the produced product. |
 | [OutputOrder](Production.ShopFloor.OutputOrderLines.md#outputorder) | [OutputOrders](Production.ShopFloor.OutputOrders.md) | The <see cref="OutputOrder"/> to which this OutputOrderLine belongs. `Required` `Filter(multi eq)` `Owner` |
@@ -60,8 +61,8 @@ Aggregate Root:
 | [SerialNumber](Production.ShopFloor.OutputOrderLines.md#serialnumber) | [SerialNumbers](Logistics.Inventory.SerialNumbers.md) (nullable) | If not NULL, specifies that the product was (has to be) stored with specific serial number |
 | [Store](Production.ShopFloor.OutputOrderLines.md#store) | [Stores](Logistics.Inventory.Stores.md) (nullable) | Where to output the produced quantity. Can be NULL only if Produced_Quantity = 0 |
 | [StoreBin](Production.ShopFloor.OutputOrderLines.md#storebin) | [StoreBins](Logistics.Inventory.StoreBins.md) (nullable) | If not NULL, specifies that the product was (has to be) stored to specific store bin |
-| [WorkDoneByParty](Production.ShopFloor.OutputOrderLines.md#workdonebyparty) | [Parties](General.Contacts.Parties.md) (nullable) | Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company |
-| [WorkgroupResource](Production.ShopFloor.OutputOrderLines.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | The actual resource used in the production |
+| [WorkDoneByParty](Production.ShopFloor.OutputOrderLines.md#workdonebyparty) | [Parties](General.Contacts.Parties.md) (nullable) | The party (usually employee worker) who has accomplished the work. NULL if unknown or N/A |
+| [WorkgroupResource](Production.ShopFloor.OutputOrderLines.md#workgroupresource) | [WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable) | The resource, which was used to perform the operation. |
 | [WorkOrderItem](Production.ShopFloor.OutputOrderLines.md#workorderitem) | [WorkOrderItems](Production.ShopFloor.WorkOrderItems.md) | The work order item for which this output is recorded. |
 | [WorkOrderItemOperation](Production.ShopFloor.OutputOrderLines.md#workorderitemoperation) | [WorkOrderItemOperations](Production.ShopFloor.WorkOrderItemOperations.md) (nullable) | The operation for which this output is recorded. |
 
@@ -256,6 +257,15 @@ Category: **System**
 Supported Filters: **Equals, EqualsIn**  
 Show in UI: **ShownByDefault**  
 
+### LineProductType
+
+The product type applicable to this line and the document’s enterprise company. Defaults to the type assigned to the product for that enterprise company; if no company-specific mapping exists, the product’s ProductType is used. Used to determine the accounting classification of the line.
+
+Type: **[ProductTypes](General.Products.ProductTypes.md) (nullable)**  
+Category: **System**  
+Supported Filters: **Equals, EqualsIn**  
+Show in UI: **ShownByDefault**  
+
 ### LineWorkOrder
 
 The work order for which work is being accounted
@@ -354,7 +364,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkDoneByParty
 
-Indicates who has done the work. Usualy this is an employee, but also can be an outside person or company
+The party (usually employee worker) who has accomplished the work. NULL if unknown or N/A
 
 Type: **[Parties](General.Contacts.Parties.md) (nullable)**  
 Category: **System**  
@@ -363,7 +373,7 @@ Show in UI: **HiddenByDefault**
 
 ### WorkgroupResource
 
-The actual resource used in the production
+The resource, which was used to perform the operation.
 
 Type: **[WorkgroupResources](Production.Resources.WorkgroupResources.md) (nullable)**  
 Category: **System**  
